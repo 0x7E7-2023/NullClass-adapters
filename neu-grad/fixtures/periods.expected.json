@@ -1,0 +1,27 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "学期代码 20261 是按本机日期推算的（教务没有可查询的「当前学期」接口），请核对导入的是不是本学期",
+    "教务的作息表只到第 8 节，课表里却用到第 11 节，已改用空课的默认节次时间，请在学期设置里核对",
+    "开学日期无法从教务获取，已按最近的周一推算，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-14",
+      "totalWeeks": 18,
+      "courses": [
+        {
+          "name": "研究生英语听说",
+          "teacher": "Sarah",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 11, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "外语楼101" }
+          ]
+        }
+      ]
+    }
+  ]
+}

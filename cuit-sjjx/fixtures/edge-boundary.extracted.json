@@ -1,0 +1,98 @@
+{
+  "semester": "2026-2027学年第二学期",
+  "today": "2026-11-02",
+  "raw": {
+    "rows": [
+      {
+        "courseName": "创新创业实践",
+        "teacherName": "陈曦",
+        "location": "创新楼101",
+        "weekDay": 3,
+        "sections": [1, 2],
+        "weeks": [9],
+        "startTime": "08:20:00",
+        "endTime": "09:05:00"
+      },
+      {
+        "courseName": "毕业设计（论文）",
+        "teacherName": "王磊",
+        "location": "",
+        "weekDay": 1,
+        "sections": [],
+        "weeks": [3],
+        "startTime": "14:50:00",
+        "endTime": "15:35:00"
+      },
+      {
+        "courseName": "综合课程设计",
+        "teacherName": "赵敏",
+        "location": "实训楼203",
+        "weekDay": 2,
+        "sections": [13],
+        "weeks": [1, 2, 3, 4, 5, 6, 7, 8],
+        "startTime": "",
+        "endTime": ""
+      },
+      {
+        "courseName": "跨年周次样例",
+        "teacherName": "孙丽",
+        "location": "工科楼B305",
+        "weekDay": 5,
+        "sections": [3, 4],
+        "weeks": [5, 28, 30, 32, 34],
+        "startTime": "10:20:00",
+        "endTime": "12:00:00"
+      },
+      {
+        "courseName": "整周超限样例",
+        "teacherName": "郑昊",
+        "location": "工科楼B105",
+        "weekDay": 7,
+        "sections": [9, 10],
+        "weeks": [32, 34, 36],
+        "startTime": "17:40:00",
+        "endTime": "19:15:00"
+      },
+      {
+        "courseName": "",
+        "teacherName": "佚名",
+        "location": "未知楼101",
+        "weekDay": 4,
+        "sections": [1],
+        "weeks": [1, 2],
+        "startTime": "",
+        "endTime": ""
+      },
+      {
+        "courseName": "周次全部无效样例",
+        "teacherName": "钱进",
+        "location": "工科楼C201",
+        "weekDay": 2,
+        "sections": [1],
+        "weeks": [],
+        "startTime": "",
+        "endTime": ""
+      },
+      {
+        "courseName": "星期越界样例",
+        "teacherName": "孙权",
+        "location": "工科楼D101",
+        "weekDay": 8,
+        "sections": [1],
+        "weeks": [1, 2],
+        "startTime": "",
+        "endTime": ""
+      },
+      {
+        "courseName": "无节次也无法匹配作息样例",
+        "teacherName": "吴用",
+        "location": "工科楼E101",
+        "weekDay": 3,
+        "sections": [],
+        "weeks": [1],
+        "startTime": "23:50:00",
+        "endTime": ""
+      }
+    ]
+  }
+}

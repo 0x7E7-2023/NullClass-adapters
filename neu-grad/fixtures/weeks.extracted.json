@@ -1,0 +1,76 @@
+{
+  "term": {
+    "code": "20262",
+    "source": "guess",
+    "extractedOn": "2027-03-02"
+  },
+  "jgList": [
+    {
+      "KCMC": "工程伦理",
+      "JGJSXM": "刘洋",
+      "JASMC": "行政楼302",
+      "XQ": 4,
+      "KSJCDM": 1,
+      "JSJCDM": 1,
+      "ZCBH": "11111111"
+    },
+    {
+      "KCMC": "科研方法与写作",
+      "JGJSXM": "陈静",
+      "JASMC": "研教1-201",
+      "XQ": 1,
+      "KSJCDM": 2,
+      "JSJCDM": 3,
+      "ZCBH": "11111111111111110000000011111111"
+    },
+    {
+      "KCMC": "跨学科研讨",
+      "JGJSXM": "赵敏",
+      "JASMC": "研教2-102",
+      "XQ": 3,
+      "KSJCDM": 4,
+      "JSJCDM": 5,
+      "ZCBH": "1010X010"
+    },
+    {
+      "KCMC": "学术诚信讲座",
+      "JGJSXM": "无",
+      "JASMC": "学术报告厅",
+      "XQ": 8,
+      "KSJCDM": 1,
+      "JSJCDM": 1,
+      "ZCBH": "10000000"
+    },
+    {
+      "KCMC": "创新创业实践",
+      "JGJSXM": "孙磊",
+      "JASMC": "创新创业中心",
+      "XQ": 6,
+      "KSJCDM": 5,
+      "JSJCDM": 3,
+      "ZCBH": "10000000"
+    },
+    {
+      "KCMC": "",
+      "JGJSXM": "无",
+      "JASMC": "研教1-201",
+      "XQ": 2,
+      "KSJCDM": 2,
+      "JSJCDM": 2,
+      "ZCBH": "10000000"
+    },
+    {}
+  ],
+  "jcList": [
+    { "DM": "01", "KSSJ": 830, "JSSJ": 915 },
+    { "DM": "02", "KSSJ": 925, "JSSJ": 1010 },
+    { "DM": "03", "KSSJ": 1030, "JSSJ": 1115 },
+    { "DM": "04", "KSSJ": 1125, "JSSJ": 1210 },
+    { "DM": "05", "KSSJ": 1400, "JSSJ": 1445 },
+    { "DM": "06", "KSSJ": 1455, "JSSJ": 1540 },
+    { "DM": "07", "KSSJ": 1550, "JSSJ": 1635 },
+    { "DM": "08", "KSSJ": 1645, "JSSJ": 1730 },
+    { "DM": "09", "KSSJ": 1900, "JSSJ": 1945 },
+    { "DM": "10", "KSSJ": 1955, "JSSJ": 2040 }
+  ]
+}
