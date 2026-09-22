@@ -32,3 +32,35 @@ jobs:
 
       - name: Rhino harness
         run: ./gradlew :importer:test
+
+  # index.json 的 version 变了（对应 tag 不存在）就发 release，空课客户端据此热更新。
+  # zip 用 ADAPTERS_SIGNING_KEY（ECDSA P-256 私钥 PEM）签名；公钥写死在客户端 JwOfficialLibrary。
+  release:
+    needs: harness
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SIGNING_KEY: ${{ secrets.ADAPTERS_SIGNING_KEY }}
+        run: |
+          set -euo pipefail
+          version=$(jq -r '.version // empty' index.json)
+          if ! [[ "$version" =~ ^[0-9]{1,9}(\.[0-9]{1,9}){0,3}$ ]]; then
+            echo "index.json 缺少合法的 version，跳过发布"; exit 0
+          fi
+          if gh release view "v$version" >/dev/null 2>&1; then
+            echo "v$version 已发布，跳过"; exit 0
+          fi
+          mkdir -p dist
+          zip -X -r dist/nullclass-adapters.zip index.json $(jq -r '.adapters[].path' index.json)
+          printf '%s\n' "$SIGNING_KEY" > "$RUNNER_TEMP/key.pem"
+          openssl dgst -sha256 -sign "$RUNNER_TEMP/key.pem" -out dist/nullclass-adapters.zip.sig dist/nullclass-adapters.zip
+          rm -f "$RUNNER_TEMP/key.pem"
+          printf '{"version":"%s"}\n' "$version" > dist/latest.json
+          gh release create "v$version" dist/* --title "适配器库 v$version" --notes "$(jq -r '.adapters | length' index.json) 个适配器" --latest
