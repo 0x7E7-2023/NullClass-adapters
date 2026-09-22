@@ -1,0 +1,103 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第二学期）；要导入别的学期，请在「本科实践教学（管理）平台」切换学期后再点「提取课表」",
+    "教务接口不返回学期起止日期，第 1 周按「第二学期 = 次年 2 月 20 日所在周的周一」推算为 2027-02-15，请在学期管理里核对成学校实际开学日",
+    "学期总周数是适配器按课表里出现的最晚周次（第 36 周）推算的（教务接口不返回学期起止日期），已按载荷上限 30 周截断，如与实际不符可在学期管理里改",
+    "作息时间用的是适配器内置的成都信息工程大学 12 节作息表（第 1 节 08:20-09:05），不是从教务页面读的，请对照教务处公布的作息核对",
+    "有 1 门课的原始数据里没有给出节次编号，已按上课开始时间就近匹配到作息表的相应节次（差在 1 小时以内），请在导入预览里核对节次",
+    "有 1 门课既没有节次编号、开始时间也匹配不到作息表任何一节，已跳过，请反馈",
+    "有 1 行课表数据的星期字段超出周一至周日，已跳过",
+    "有 1 门课的周次数据为空（或全部无效），已跳过，请反馈",
+    "有 1 行课表数据没有课程名称，已跳过，请反馈",
+    "有 1 段周次超出 1-30 周，已截断到 30 周",
+    "有 1 段周次的起始周本身就超过 30 周，已整段丢弃",
+    "有 1 门课的全部周次都超出 1-30 周，已整门跳过（不是教务没排这门课，是周次数据超出了本适配器能处理的范围），请反馈",
+    "课表里用到第 13 节，而内置作息表只到第 12 节：超出部分的时间交给应用的内建时间表，请核对作息"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2027-02-15",
+      "totalWeeks": 30,
+      "periodTimes": [],
+      "courses": [
+        {
+          "name": "创新创业实践",
+          "teacher": "陈曦",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 9,
+              "endWeek": 9,
+              "weekType": "ALL",
+              "location": "创新楼101"
+            }
+          ]
+        },
+        {
+          "name": "毕业设计（论文）",
+          "teacher": "王磊",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 6,
+              "endPeriod": 6,
+              "startWeek": 3,
+              "endWeek": 3,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "综合课程设计",
+          "teacher": "赵敏",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 13,
+              "endPeriod": 13,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "实训楼203"
+            }
+          ]
+        },
+        {
+          "name": "跨年周次样例",
+          "teacher": "孙丽",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 5,
+              "endWeek": 5,
+              "weekType": "ALL",
+              "location": "工科楼B305"
+            },
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 28,
+              "endWeek": 30,
+              "weekType": "EVEN",
+              "location": "工科楼B305"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

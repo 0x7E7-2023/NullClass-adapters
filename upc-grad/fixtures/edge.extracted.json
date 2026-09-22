@@ -1,0 +1,44 @@
+{
+  "now": "2026-10-01",
+  "termHint": "2026-2027学年第一学期",
+  "cells": [
+    {
+      "day": 1,
+      "startSection": 1,
+      "endSection": 2,
+      "text": "工程伦理｛1-16周[教师:高峰,地点:一教101]｝"
+    },
+    {
+      "day": 2,
+      "startSection": 1,
+      "endSection": 1,
+      "text": "项目管理沙盘｛3周[教师:郑爽,地点:创新楼302]｝；专利检索与分析｛3周[教师:郑爽,地点:创新楼302]｝"
+    },
+    {
+      "day": 3,
+      "startSection": 1,
+      "endSection": 2,
+      "text": "工程伦理｛1-16周[教师:高峰,地点:二教203]｝"
+    },
+    {
+      "day": 5,
+      "startSection": 12,
+      "endSection": 13,
+      "text": "毕业答辩预演｛1-4周[教师:马文清,地点:学术报告厅]｝"
+    }
+  ],
+  "calendar": {
+    "rows": [
+      [{ "day": 6, "month": 9 }, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null]
+    ]
+  }
+}

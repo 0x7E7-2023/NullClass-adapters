@@ -1,0 +1,63 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "学期代码 20261 是按本机日期推算的（教务没有可查询的「当前学期」接口），请核对导入的是不是本学期",
+    "教务作息表里有 1 个节次的时间认不出来，已跳过，请在学期设置里核对",
+    "开学日期无法从教务获取，已按最近的周一推算，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-14",
+      "totalWeeks": 18,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:25", "end": "10:10" },
+        { "periodIndex": 3, "start": "10:30", "end": "11:15" },
+        { "periodIndex": 4, "start": "11:25", "end": "12:10" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 7, "start": "15:50", "end": "16:35" },
+        { "periodIndex": 8, "start": "16:45", "end": "17:30" },
+        { "periodIndex": 9, "start": "19:00", "end": "19:45" },
+        { "periodIndex": 10, "start": "19:55", "end": "20:40" }
+      ],
+      "courses": [
+        {
+          "name": "高等数学解题方法论",
+          "teacher": "王芳",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "研教1-101" }
+          ]
+        },
+        {
+          "name": "专业英语",
+          "teacher": "李强",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 15, "weekType": "ODD", "location": "研教2-203" }
+          ]
+        },
+        {
+          "name": "学术论文写作",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 5, "endPeriod": 6, "startWeek": 2, "endWeek": 16, "weekType": "EVEN", "location": "研教3-305" }
+          ]
+        },
+        {
+          "name": "专题讲座",
+          "teacher": "张伟",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 7, "endPeriod": 7, "startWeek": 10, "endWeek": 10, "weekType": "ALL", "location": "学术报告厅" }
+          ]
+        }
+      ]
+    }
+  ]
+}

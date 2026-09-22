@@ -1,0 +1,30 @@
+{
+  "specVersion": 1,
+  "key": "neu-grad",
+  "name": "东北大学（研究生）",
+  "version": "1.0.0",
+  "author": "上游 Vera-zero（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://yjs.neu.edu.cn/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "基本课表（连续周、单双周、落单周、教师留空、作息表混入一条非法时间）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "周次边界与脏数据（位串超 30 周被裁剪、位串非法字符、星期非法、节次颠倒、课名为空、完全空白占位行）",
+      "extracted": "fixtures/weeks.extracted.json",
+      "expected": "fixtures/weeks.expected.json"
+    },
+    {
+      "name": "节次边界（课表用到的节次超出作息表覆盖范围，整张作息表改用默认值）",
+      "extracted": "fixtures/periods.extracted.json",
+      "expected": "fixtures/periods.expected.json"
+    }
+  ]
+}

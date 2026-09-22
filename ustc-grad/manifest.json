@@ -1,0 +1,25 @@
+{
+  "specVersion": 1,
+  "key": "ustc-grad",
+  "name": "中国科学技术大学（研究生）",
+  "version": "1.0.0",
+  "author": "上游 hydrofluoric07（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://yjs1.ustc.edu.cn/gsapp/sys/yjsrzfwapp/dbLogin/main.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "基本课表（连续/单双周/离散周次组合、跨段一一对应、周期边界第 1 与第 13 节）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "边界与降级（时间/周次分段数不一致、无法解析时间地点、缺周次信息、周次超 30 周上限）",
+      "extracted": "fixtures/edge.extracted.json",
+      "expected": "fixtures/edge.expected.json"
+    }
+  ]
+}

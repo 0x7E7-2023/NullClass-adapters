@@ -290,6 +290,30 @@
       "name": "成都信息工程大学",
       "version": "1.0.0",
       "path": "cuit"
+    },
+    {
+      "key": "cuit-sjjx",
+      "name": "成都信息工程大学（本科实践教学平台）",
+      "version": "1.0.0",
+      "path": "cuit-sjjx"
+    },
+    {
+      "key": "neu-grad",
+      "name": "东北大学（研究生）",
+      "version": "1.0.0",
+      "path": "neu-grad"
+    },
+    {
+      "key": "upc-grad",
+      "name": "中国石油大学（华东）（研究生）",
+      "version": "1.0.0",
+      "path": "upc-grad"
+    },
+    {
+      "key": "ustc-grad",
+      "name": "中国科学技术大学（研究生）",
+      "version": "1.0.0",
+      "path": "ustc-grad"
     }
   ]
 }

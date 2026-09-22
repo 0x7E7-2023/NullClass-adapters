@@ -1,0 +1,31 @@
+{
+  "specVersion": 1,
+  "key": "upc-grad",
+  "name": "中国石油大学（华东）（研究生）",
+  "version": "1.0.0",
+  "author": "上游 Haooz（拾光课程表社区，MIT）；移植 NullClass",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://degrees.upc.edu.cn/",
+  "scheduleUrlHint": "https://degrees.upc.edu.cn/Gstudent/Course/StuCourseQuery.aspx",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "基本课表（合成数据：教学日历给出开学日与总周数、页面标题给出学期名、单教师课/双教师同课名/多课同格/缺教室）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "周次写法（合成数据：无教学日历、连续周/离散偶周/离散奇周/反写区间、越界周次丢弃、格式无法识别的课丢弃、学期名按开学日期推算）",
+      "extracted": "fixtures/weeks.extracted.json",
+      "expected": "fixtures/weeks.expected.json"
+    },
+    {
+      "name": "边界（合成数据：教学日历缺星期一导致开学日仍需推算、课表最大周次超过日历总周数需放宽、第12节之后的连堂、同名同师跨天两个课块、同格多门课）",
+      "extracted": "fixtures/edge.extracted.json",
+      "expected": "fixtures/edge.expected.json"
+    }
+  ]
+}

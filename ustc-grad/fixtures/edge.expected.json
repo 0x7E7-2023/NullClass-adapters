@@ -1,0 +1,128 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2026-02-15",
+      "totalWeeks": 30,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "07:50",
+          "end": "08:35"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:40",
+          "end": "09:25"
+        },
+        {
+          "periodIndex": 3,
+          "start": "09:45",
+          "end": "10:30"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:35",
+          "end": "11:20"
+        },
+        {
+          "periodIndex": 5,
+          "start": "11:25",
+          "end": "12:10"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "periodIndex": 7,
+          "start": "14:50",
+          "end": "15:35"
+        },
+        {
+          "periodIndex": 8,
+          "start": "15:55",
+          "end": "16:40"
+        },
+        {
+          "periodIndex": 9,
+          "start": "16:45",
+          "end": "17:30"
+        },
+        {
+          "periodIndex": 10,
+          "start": "17:35",
+          "end": "18:20"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:30",
+          "end": "20:15"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:20",
+          "end": "21:05"
+        },
+        {
+          "periodIndex": 13,
+          "start": "21:10",
+          "end": "21:55"
+        }
+      ],
+      "courses": [
+        {
+          "name": "学科前沿讲座",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 6,
+              "startPeriod": 11,
+              "endPeriod": 13,
+              "startWeek": 1,
+              "endWeek": 5,
+              "weekType": "ODD",
+              "location": "报告厅"
+            },
+            {
+              "dayOfWeek": 7,
+              "startPeriod": 11,
+              "endPeriod": 12,
+              "startWeek": 1,
+              "endWeek": 5,
+              "weekType": "ODD",
+              "location": "报告厅"
+            }
+          ]
+        },
+        {
+          "name": "科研伦理研讨",
+          "teacher": "钱七",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 1,
+              "startWeek": 29,
+              "endWeek": 30,
+              "weekType": "ALL",
+              "location": "教5-101"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "课程「学科前沿讲座」时间分段与周次分段数不一致，周次可能不准确",
+    "课程「选修课X」无法解析上课时间地点（），已跳过",
+    "课程「选修课Y」缺少周次信息，已跳过",
+    "课程「科研伦理研讨」有周次超出空课支持的 30 周上限，已丢弃超出部分"
+  ]
+}

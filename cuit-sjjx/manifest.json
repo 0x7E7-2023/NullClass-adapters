@@ -1,0 +1,26 @@
+{
+  "specVersion": 1,
+  "key": "cuit-sjjx",
+  "name": "成都信息工程大学（本科实践教学平台）",
+  "version": "1.0.0",
+  "author": "上游 igugyj(Pfolg)（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://ywtb.cuit.edu.cn/",
+  "scheduleUrlHint": "https://sjjx.cuit.edu.cn:56443/labms/#/course/my",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["sjjx.cuit.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（接口本身就返回扁平数组，字段清楚：courseName / teacherName / location / weekDay / sections / weeks / startTime / endTime；weekDay 直接是 1-7；weeks 是显式周次数组，按手册 §4.1 切成 ALL/ODD/EVEN 段；教师或教室为空的课要留空 null）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次与节次边界（单周课；sections 为空、按开始时间就近匹配到作息表一节；sections 既空又匹配不到任何一节要整门跳过；courseName 为空、weeks 为空、weekDay 超出 1-7 都要各自跳过并计数；同一课的周次切出「1 段在 30 周以内 + 1 段部分超 30 周截断」两个 block；起始周本身就超过 30 周的整段丢弃、若因此一门课一个 block 都不剩就整门跳过；节次超出内置 12 节作息表要额外提示）",
+      "extracted": "fixtures/edge-boundary.extracted.json",
+      "expected": "fixtures/edge-boundary.expected.json"
+    }
+  ]
+}
