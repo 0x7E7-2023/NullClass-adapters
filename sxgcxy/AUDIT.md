@@ -2,7 +2,7 @@
 
 - 上游快照：`shiguang_warehouse` 的 `resources/SXGCXY/sxgcxy_01.js` + 同目录 `adapters.yaml`（取回日期 2026-09-12）
 - 上游作者 / 维护者：**星河欲转**（MIT）；上游 `import_url` = `https://sxevc.jw.chaoxing.com/admin/login`
-- 移植者：NullClass　审计日期：**2026-09-12**　审计依据：[移植手册 §5](../docs/jw-adapter-porting.md)
+- 移植者：NullClass　审计日期：**2026-09-12**　审计依据：[移植手册 §5](https://github.com/0x7E7-2023/NullClass/blob/main/docs/jw-adapter-porting.md)
 - 平台：**超星（chaoxing）托管教务** —— 不是学校自己的域，见下面「第三方托管域」。
 
 ---

@@ -5,7 +5,7 @@
   `e62554a4034386b893bcd6813c7b2b64f8c730a3`，2026-09-12，MIT）。
 - 上游作者 / 维护者：**glxgo**（取自同目录 `adapters.yaml` 的 `maintainer`）；
   上游 `import_url` = `https://jw1.hustwenhua.net/jwglxt/xtgl/login_slogin.html`。
-- 移植者：NullClass（本次移植由 Claude Code 执行）　审计日期：**2026-09-12**　审计依据：[移植手册 §5](../../docs/jw-adapter-porting.md)。
+- 移植者：NullClass（本次移植由 Claude Code 执行）　审计日期：**2026-09-12**　审计依据：[移植手册 §5](https://github.com/0x7E7-2023/NullClass/blob/main/docs/jw-adapter-porting.md)。
 - **同平台的已移植件：`jw-adapters/zjut`（浙江工业大学）** —— 与它相似度 0.930 的近克隆，
   对照片见 §4。
 

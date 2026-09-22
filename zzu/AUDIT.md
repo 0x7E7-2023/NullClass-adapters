@@ -5,7 +5,7 @@
 | 上游 | [shiguang_warehouse](https://github.com/XingHeYuZhuan/shiguang_warehouse) → `resources/ZZU/zzu.js`（MIT，Copyright 2025 LilyCarry） |
 | 上游快照 | commit `e62554a4034386b893bcd6813c7b2b64f8c730a3`（2026-09-12）；学校名与登录地址取自同目录 `adapters.yaml`（`adapter_name` 郑州大学，`maintainer` LilyCarry） |
 | 上游平台 | 树维 `for-std`（`jwxt.zzu.edu.cn/student/for-std/...`），与上游 `JSTC` / `CUP` / `CUPK` 同一套接口 |
-| 本适配器 | `jw-adapters/zzu/`，按[适配器规范](../../docs/jw-adapter-spec.md) v1 切两段（`extract.js` 只取数 / `parse.js` 纯转换）+ 降 ES5 |
+| 本适配器 | `jw-adapters/zzu/`，按[适配器规范](https://github.com/0x7E7-2023/NullClass/blob/main/docs/jw-adapter-spec.md) v1 切两段（`extract.js` 只取数 / `parse.js` 纯转换）+ 降 ES5 |
 | 移植者 | NullClass（Claude Code 执行） |
 | 审计日期 | 2026-09-12 |
 | 审计范围 | `extract.js`、`parse.js` 全文，`manifest.json` 的 `allowHosts` / `loginUrl` |
@@ -72,7 +72,7 @@
 ## 3. 与 jstc / ustc 的同构性对照
 
 上游四份 for-std 脚本（`ZZU` / `JSTC` / `CUP` / `CUPK`）与本仓库两个 for-std 样本（`jstc`、`ustc`）
-按[测试方案 §3.2](../../docs/jw-adapter-testing.md) 的分层比对。**逐层结论**：
+按[测试方案 §3.2](https://github.com/0x7E7-2023/NullClass/blob/main/docs/jw-adapter-testing.md) 的分层比对。**逐层结论**：
 
 | 层 | ZZU vs JSTC | ZZU/CUP/CUPK vs JSTC | 我们既有的 `ustc` | 本适配器复用了没有 |
 |---|---|---|---|---|
@@ -149,7 +149,7 @@ jstc 移植时给出的结论「ZZU/CUP/CUPK 与 JSTC 同构、与 USTC 不同�
 
 `parse.js` 用「课名 + 分隔符 + 教师」当聚合键，分隔符取 `String.fromCharCode(0)`。
 **不写成源码里的转义序列**：本仓库的工具链会把那种转义落成真的 NUL 字节，文件就被 `grep`/`diff` 当二进制看
-（见[移植手册 §3 第 2 步](../../docs/jw-adapter-porting.md)）。自检过：`jw-adapters/zzu/` 下所有文件的 0x00 字节数为 0。
+（见[移植手册 §3 第 2 步](https://github.com/0x7E7-2023/NullClass/blob/main/docs/jw-adapter-porting.md)）。自检过：`jw-adapters/zzu/` 下所有文件的 0x00 字节数为 0。
 
 ## 6. 第一批审查挖出来的坑，逐条对照
 

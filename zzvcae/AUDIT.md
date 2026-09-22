@@ -12,7 +12,7 @@
   随后在【服务大厅】→【学生课表查询】打开过课表页面后，点击执行导入。」
   —— `loginUrl` 取自这里。
 - **移植者**：0x7E7-2023　**审计日期**：2026-09-17
-- **审计依据**：[移植手册 §5](../docs/jw-adapter-porting.md) 八条 +
+- **审计依据**：[移植手册 §5](https://github.com/0x7E7-2023/NullClass/blob/main/docs/jw-adapter-porting.md) 八条 +
   批次四计划里的 12 条检查表。
 
 ---

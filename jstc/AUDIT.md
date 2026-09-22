@@ -5,7 +5,7 @@
 | 上游 | [shiguang_warehouse](https://github.com/XingHeYuZhuan/shiguang_warehouse) → `resources/JSTC/jstc_01.js`（MIT，Copyright 2025 星河欲转） |
 | 上游快照 | commit `e62554a4034386b893bcd6813c7b2b64f8c730a3`（2026-09-12）；学校名与登录地址取自同目录 `adapters.yaml`（maintainer 星河欲转） |
 | 上游平台 | 树维 `for-std`（`jwxt.jstc.edu.cn/student/for-std/...`），与上游 `ZZU` / `CUP` / `CUPK` 同一套接口 |
-| 本适配器 | `jw-adapters/jstc/`，按[适配器规范](../../docs/jw-adapter-spec.md) v1 切两段（`extract.js` 只取数 / `parse.js` 纯转换）+ 降 ES5 |
+| 本适配器 | `jw-adapters/jstc/`，按[适配器规范](https://github.com/0x7E7-2023/NullClass/blob/main/docs/jw-adapter-spec.md) v1 切两段（`extract.js` 只取数 / `parse.js` 纯转换）+ 降 ES5 |
 | 移植者 | NullClass（Claude Code 执行） |
 | 审计日期 | 2026-09-12 |
 | 审计范围 | `extract.js`、`parse.js` 全文，`manifest.json` 的 `allowHosts` / `loginUrl` |

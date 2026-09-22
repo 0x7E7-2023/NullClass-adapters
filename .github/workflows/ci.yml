@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  harness:
+    runs-on: ubuntu-latest
+    steps:
+      # 回归门写在主仓库的 :importer 里：检出主仓库，再把本仓库放到它的 jw-adapters/ 位置
+      - name: Checkout NullClass
+        uses: actions/checkout@v4
+        with:
+          repository: 0x7E7-2023/NullClass
+          submodules: false
+
+      - name: Checkout adapters
+        uses: actions/checkout@v4
+        with:
+          path: jw-adapters
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Rhino harness
+        run: ./gradlew :importer:test

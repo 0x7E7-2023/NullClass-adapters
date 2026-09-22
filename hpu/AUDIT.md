@@ -12,7 +12,7 @@
   上游自己就写「树维教务系统(eams架构)」。**不是强智** —— 强智走 `/jsxsd/`；此前批次把 `/eams/`
   写成强智的地方，本批统一订正（详见 `docs/impl/2026-09-16-port-adapters-batch4.md`「平台名订正」）。
 - **移植者**：0x7E7-2023　**审计日期**：2026-09-17
-- **审计依据**：[移植手册 §5](../docs/jw-adapter-porting.md) 八条 + [批次四专项检查表 12 条](../docs/impl/2026-09-16-port-adapters-batch4.md)。
+- **审计依据**：[移植手册 §5](https://github.com/0x7E7-2023/NullClass/blob/main/docs/jw-adapter-porting.md) 八条 + [批次四专项检查表 12 条](https://github.com/0x7E7-2023/NullClass/blob/main/docs/impl/2026-09-16-port-adapters-batch4.md)。
 - **同族参照**：`jw-adapters/masu`（同一批次的 `/eams/` 结构，本件按它的两段式骨架写，
   但**编码逐条按 hpu 自己的脚本与用例重写**，没有照抄它的 fixture 期望）。
 

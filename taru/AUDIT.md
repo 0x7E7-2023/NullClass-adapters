@@ -20,7 +20,7 @@
   ① 破折号异体（含新认的「到」）**连同两侧空白**归一成 `-`；② 剩下的空白折成逗号、仍当分段符。
   `week-forms` 补「植物生理学」`1-3周 5-9周` 一行（期望 1-3 与 5-9 两个 block，手推），
   `reportedTotal` 相应 18 → 19；变异 M13 见 §6；其余四对 fixture 的期望值一个字节没动。
-- **审计依据**：[移植手册 §5](../docs/jw-adapter-porting.md) 八条 + [批次三专项检查表 10 条](../docs/impl/2026-09-13-port-adapters-batch3.md)。
+- **审计依据**：[移植手册 §5](https://github.com/0x7E7-2023/NullClass/blob/main/docs/jw-adapter-porting.md) 八条 + [批次三专项检查表 10 条](https://github.com/0x7E7-2023/NullClass/blob/main/docs/impl/2026-09-13-port-adapters-batch3.md)。
 - **已有同族参照**：`jw-adapters/wenhua`（文华学院，同为正方新版 `jwglxt`，本件按它的结构写，
   但**编码逐条按 taru 自己的脚本与用例重写**，没有照抄它的 fixture 期望 —— 见 §5）。
 
