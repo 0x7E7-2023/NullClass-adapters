@@ -8,7 +8,7 @@
 | 移植者 | NullClass 适配器移植（Claude Code agent）　日期 **2026-09-12** |
 | 结论 | **通过**：不碰凭据、不外发、只读课表、无第三方域、无埋点、不写页面。逐条留证见下。 |
 
-同目录 `upc_graduate.js`（研究生管理系统，`degrees.upc.edu.cn`）**不在本次范围**，本审计只覆盖 `upc.js`。
+同目录 `upc_graduate.js`（研究生管理系统，`degrees.upc.edu.cn`）另行移植为 `upc-grad/`，审计见 `upc-grad/AUDIT.md`；本审计只覆盖 `upc.js`。
 
 ## 1. 脚本实际请求了哪些域
 

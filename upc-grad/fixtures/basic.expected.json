@@ -1,0 +1,85 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:50", "end": "09:35" },
+        { "periodIndex": 3, "start": "09:55", "end": "10:40" },
+        { "periodIndex": 4, "start": "10:45", "end": "11:30" },
+        { "periodIndex": 5, "start": "11:35", "end": "12:20" },
+        { "periodIndex": 6, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 7, "start": "14:50", "end": "15:35" },
+        { "periodIndex": 8, "start": "15:55", "end": "16:40" },
+        { "periodIndex": 9, "start": "16:45", "end": "17:30" },
+        { "periodIndex": 10, "start": "19:00", "end": "19:45" },
+        { "periodIndex": 11, "start": "19:50", "end": "20:35" },
+        { "periodIndex": 12, "start": "20:40", "end": "21:25" }
+      ],
+      "courses": [
+        {
+          "name": "高等数学案例分析",
+          "teacher": "王建国",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "研教楼201" }
+          ]
+        },
+        {
+          "name": "研究方法论1班",
+          "teacher": "陈志强",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 14, "endWeek": 14, "weekType": "ALL", "location": "南堂201" }
+          ]
+        },
+        {
+          "name": "研究方法论1班",
+          "teacher": "赵敏",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 15, "endWeek": 16, "weekType": "ALL", "location": "南堂201" }
+          ]
+        },
+        {
+          "name": "学术英语交流",
+          "teacher": "周涛",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "文科楼105" }
+          ]
+        },
+        {
+          "name": "实验室安全教育",
+          "teacher": "吴斌",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 2, "weekType": "ALL", "location": "化工楼B101" }
+          ]
+        },
+        {
+          "name": "专业英语写作",
+          "teacher": "刘晓芳",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 3, "endPeriod": 4, "startWeek": 2, "endWeek": 12, "weekType": "ALL", "location": "东廊302" }
+          ]
+        },
+        {
+          "name": "文献综述与写作",
+          "teacher": "孙丽萍",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 6, "endPeriod": 6, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

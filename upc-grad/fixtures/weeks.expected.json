@@ -1,0 +1,67 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "有 2 个周次超过 30 周上限被丢弃，请核对原始课表（可能是教务数据本身有误）",
+    "有 2 处课程信息因格式无法识别被跳过，请核对原始课表",
+    "开学日期无法从教学日历获取，已按提取当天（2026-03-04）所在周的周一推算，请在「学期管理」里核对",
+    "教学日历未提供总周数，已按课表中出现的最大周次（第 16 周）设定，请在「学期管理」里核对",
+    "教务页面没有直接给出学期名称，已按开学日期推算为「2025-2026学年第二学期」，请核对"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第二学期",
+      "firstDay": "2026-03-02",
+      "totalWeeks": 16,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:50", "end": "09:35" },
+        { "periodIndex": 3, "start": "09:55", "end": "10:40" },
+        { "periodIndex": 4, "start": "10:45", "end": "11:30" },
+        { "periodIndex": 5, "start": "11:35", "end": "12:20" },
+        { "periodIndex": 6, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 7, "start": "14:50", "end": "15:35" },
+        { "periodIndex": 8, "start": "15:55", "end": "16:40" },
+        { "periodIndex": 9, "start": "16:45", "end": "17:30" },
+        { "periodIndex": 10, "start": "19:00", "end": "19:45" },
+        { "periodIndex": 11, "start": "19:50", "end": "20:35" },
+        { "periodIndex": 12, "start": "20:40", "end": "21:25" }
+      ],
+      "courses": [
+        {
+          "name": "离散数学专题",
+          "teacher": "韩磊",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "主楼301" }
+          ]
+        },
+        {
+          "name": "随机过程",
+          "teacher": "韩磊",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 1, "startWeek": 2, "endWeek": 10, "weekType": "EVEN", "location": "主楼301" }
+          ]
+        },
+        {
+          "name": "学术规范与写作",
+          "teacher": "秦岚",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 2, "endPeriod": 2, "startWeek": 1, "endWeek": 9, "weekType": "ODD", "location": "文科楼210" }
+          ]
+        },
+        {
+          "name": "创新创业实践",
+          "teacher": "韩磊",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 1, "startWeek": 14, "endWeek": 16, "weekType": "ALL", "location": "主楼301" }
+          ]
+        }
+      ]
+    }
+  ]
+}

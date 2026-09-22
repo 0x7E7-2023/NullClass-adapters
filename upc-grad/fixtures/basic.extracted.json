@@ -1,0 +1,60 @@
+{
+  "now": "2026-09-06",
+  "termHint": "2026-2027学年第一学期",
+  "cells": [
+    {
+      "day": 1,
+      "startSection": 1,
+      "endSection": 2,
+      "text": "高等数学案例分析｛1-16周[教师:王建国,地点:研教楼201]｝"
+    },
+    {
+      "day": 2,
+      "startSection": 1,
+      "endSection": 2,
+      "text": "研究方法论1班｛14周[教师:陈志强]、15-16周[教师:赵敏][地点:南堂201]｝"
+    },
+    {
+      "day": 4,
+      "startSection": 1,
+      "endSection": 1,
+      "text": "学术英语交流｛1-16周[教师:周涛,地点:文科楼105]｝；实验室安全教育｛1-2周[教师:吴斌,地点:化工楼B101]｝"
+    },
+    {
+      "day": 1,
+      "startSection": 3,
+      "endSection": 4,
+      "text": "专业英语写作｛2-12周[教师:刘晓芳,地点:东廊302]｝"
+    },
+    {
+      "day": 3,
+      "startSection": 6,
+      "endSection": 6,
+      "text": "文献综述与写作｛1-8周[教师:孙丽萍]｝"
+    }
+  ],
+  "calendar": {
+    "rows": [
+      [null, { "day": 7, "month": 9 }, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null]
+    ]
+  }
+}

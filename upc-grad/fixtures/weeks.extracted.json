@@ -1,0 +1,43 @@
+{
+  "now": "2026-03-04",
+  "termHint": null,
+  "cells": [
+    {
+      "day": 1,
+      "startSection": 1,
+      "endSection": 1,
+      "text": "离散数学专题｛1-16周[教师:韩磊,地点:主楼301]｝"
+    },
+    {
+      "day": 2,
+      "startSection": 1,
+      "endSection": 1,
+      "text": "随机过程｛2,4,6,8,10周[教师:韩磊,地点:主楼301]｝"
+    },
+    {
+      "day": 3,
+      "startSection": 2,
+      "endSection": 2,
+      "text": "学术规范与写作｛1,3,5,7,9周[教师:秦岚,地点:文科楼210]｝"
+    },
+    {
+      "day": 4,
+      "startSection": 1,
+      "endSection": 1,
+      "text": "创新创业实践｛16-14周[教师:韩磊,地点:主楼301]｝"
+    },
+    {
+      "day": 5,
+      "startSection": 1,
+      "endSection": 1,
+      "text": "学科前沿讲座｛35-36周[教师:秦岚,地点:文科楼210]｝"
+    },
+    {
+      "day": 6,
+      "startSection": 1,
+      "endSection": 1,
+      "text": "毕业论文中期检查｛见通知｝"
+    }
+  ],
+  "calendar": null
+}

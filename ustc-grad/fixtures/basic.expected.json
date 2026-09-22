@@ -1,0 +1,188 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-30",
+      "totalWeeks": 18,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "07:50",
+          "end": "08:35"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:40",
+          "end": "09:25"
+        },
+        {
+          "periodIndex": 3,
+          "start": "09:45",
+          "end": "10:30"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:35",
+          "end": "11:20"
+        },
+        {
+          "periodIndex": 5,
+          "start": "11:25",
+          "end": "12:10"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "periodIndex": 7,
+          "start": "14:50",
+          "end": "15:35"
+        },
+        {
+          "periodIndex": 8,
+          "start": "15:55",
+          "end": "16:40"
+        },
+        {
+          "periodIndex": 9,
+          "start": "16:45",
+          "end": "17:30"
+        },
+        {
+          "periodIndex": 10,
+          "start": "17:35",
+          "end": "18:20"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:30",
+          "end": "20:15"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:20",
+          "end": "21:05"
+        },
+        {
+          "periodIndex": 13,
+          "start": "21:10",
+          "end": "21:55"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高等数学（研究生)",
+          "teacher": "张三",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教1-101"
+            }
+          ]
+        },
+        {
+          "name": "学术英语",
+          "teacher": "李四、王五",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 6,
+              "endPeriod": 8,
+              "startWeek": 2,
+              "endWeek": 16,
+              "weekType": "EVEN",
+              "location": "西阶2"
+            }
+          ]
+        },
+        {
+          "name": "研究生思想政治理论",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 9,
+              "endPeriod": 10,
+              "startWeek": 1,
+              "endWeek": 3,
+              "weekType": "ALL",
+              "location": "教2-203"
+            },
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 9,
+              "endPeriod": 10,
+              "startWeek": 5,
+              "endWeek": 9,
+              "weekType": "ALL",
+              "location": "教2-203"
+            },
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 9,
+              "endPeriod": 10,
+              "startWeek": 11,
+              "endWeek": 11,
+              "weekType": "ALL",
+              "location": "教2-203"
+            }
+          ]
+        },
+        {
+          "name": "工程伦理",
+          "teacher": "赵六",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "教3-301"
+            },
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 10,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教3-302"
+            }
+          ]
+        },
+        {
+          "name": "国际学术前沿",
+          "teacher": "Prof. Smith",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 7,
+              "startPeriod": 13,
+              "endPeriod": 13,
+              "startWeek": 9,
+              "endWeek": 9,
+              "weekType": "ALL",
+              "location": "国际报告厅"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
