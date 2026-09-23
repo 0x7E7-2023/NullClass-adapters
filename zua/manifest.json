@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "zua",
   "name": "郑州航空工业管理学院",
+  "initial": "Z",
   "version": "1.0.0",
   "author": "上游 xBefore（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",

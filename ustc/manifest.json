@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "ustc",
   "name": "中国科学技术大学",
+  "initial": "Z",
   "version": "1.0.0",
   "author": "NullClass",
   "homepage": "https://github.com/0x7E7-2023/NullClass",

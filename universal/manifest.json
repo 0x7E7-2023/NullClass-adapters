@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "universal",
   "name": "通用适配器",
+  "initial": "T",
   "version": "1.0.0",
   "author": "NullClass",
   "homepage": "https://github.com/0x7E7-2023/NullClass",

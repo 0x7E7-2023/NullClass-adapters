@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "huel",
   "name": "河南财经政法大学",
+  "initial": "H",
   "version": "1.0.0",
   "author": "上游 Mercury（MIT）；移植 NullClass",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",

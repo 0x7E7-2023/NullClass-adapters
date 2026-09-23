@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "zzvcae",
   "name": "郑州汽车工程职业学院",
+  "initial": "Z",
   "version": "1.0.0",
   "author": "上游 Gr11nJ（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",

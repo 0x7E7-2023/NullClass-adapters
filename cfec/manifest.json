@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "cfec",
   "name": "重庆财经学院",
+  "initial": "C",
   "version": "1.0.0",
   "author": "上游 glxgo（MIT）；移植 NullClass",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",

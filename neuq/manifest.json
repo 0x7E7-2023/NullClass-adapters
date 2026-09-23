@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "neuq",
   "name": "东北大学秦皇岛分校",
+  "initial": "D",
   "version": "1.0.0",
   "author": "上游 aryunm（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",

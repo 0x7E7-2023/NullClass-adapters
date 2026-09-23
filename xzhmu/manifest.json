@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "xzhmu",
   "name": "徐州医科大学（研究生）",
+  "initial": "X",
   "version": "1.0.0",
   "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",

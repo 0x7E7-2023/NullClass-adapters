@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "upc-grad",
   "name": "中国石油大学（华东）（研究生）",
+  "initial": "Z",
   "version": "1.0.0",
   "author": "上游 Haooz（拾光课程表社区，MIT）；移植 NullClass",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",

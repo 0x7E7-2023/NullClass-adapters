@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "jstc",
   "name": "江苏旅游职业学院",
+  "initial": "J",
   "version": "1.0.0",
   "author": "上游 星河欲转（MIT）；移植 NullClass",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",

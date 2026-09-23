@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "neau",
   "name": "东北农业大学",
+  "initial": "D",
   "version": "1.0.0",
   "author": "上游 dezige131（MIT）；移植 NullClass",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",

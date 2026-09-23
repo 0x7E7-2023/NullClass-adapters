@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "sxgcxy",
   "name": "山西工程职业学院",
+  "initial": "S",
   "version": "1.0.0",
   "author": "上游 星河欲转（MIT）；移植 NullClass",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",

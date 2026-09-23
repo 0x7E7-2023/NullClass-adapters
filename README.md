@@ -20,7 +20,7 @@ index.json              库索引（列出本仓库所有适配器）
 
 ## 提交一个适配器
 
-1. 复制 `ustc/` 或 `dlutci/`（两个真实学校的适配器）改个 `key`（小写字母/数字/连字符，2-40 字符），改 `manifest.json`；
+1. 复制 `ustc/` 或 `dlutci/`（两个真实学校的适配器）改个 `key`（小写字母/数字/连字符，2-40 字符），改 `manifest.json`（别忘了 `initial`：学校名拼音首字母，多音字按实际读音，如长春 → `C`）；
 2. 写 `extract.js`（DOM 抓取或同源请求）与 `parse.js`；
 3. 在浏览器里跑通，把**脱敏后的** extract 输出与期望载荷放进 `fixtures/`；
 4. 在 `index.json` 里加一条；

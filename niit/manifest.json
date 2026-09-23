@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "niit",
   "name": "南京工业职业技术大学",
+  "initial": "N",
   "version": "1.0.0",
   "author": "上游 nifs1729（MIT）；移植 NullClass",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",

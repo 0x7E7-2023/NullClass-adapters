@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "hunnu",
   "name": "湖南师范大学",
+  "initial": "H",
   "version": "1.0.0",
   "author": "上游 EarOfWheat（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",

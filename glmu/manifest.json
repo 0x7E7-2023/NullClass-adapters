@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "glmu",
   "name": "桂林医科大学",
+  "initial": "G",
   "version": "1.0.0",
   "author": "上游 xhh李（MIT）；移植 NullClass",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",

@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "zjut",
   "name": "浙江工业大学",
+  "initial": "Z",
   "version": "1.0.0",
   "author": "上游 glxgo（MIT）；移植 NullClass",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",

@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "uestc",
   "name": "电子科技大学",
+  "initial": "D",
   "version": "1.0.0",
   "author": "上游 CorunLing（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",

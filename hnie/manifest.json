@@ -2,6 +2,7 @@
   "specVersion": 1,
   "key": "hnie",
   "name": "湖南工程学院",
+  "initial": "H",
   "version": "1.0.0",
   "author": "上游 Mercury（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
