@@ -1,0 +1,67 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期校历，学期总周数按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "教务系统没有给出节次时间，已按适配器内置的 13 节节次时间导入（第 1 节 08:30-09:15），时间可能与学校实际作息不符，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:20", "end": "10:05" },
+        { "periodIndex": 3, "start": "10:20", "end": "11:05" },
+        { "periodIndex": 4, "start": "11:10", "end": "11:55" },
+        { "periodIndex": 5, "start": "12:00", "end": "13:00" },
+        { "periodIndex": 6, "start": "13:10", "end": "13:55" },
+        { "periodIndex": 7, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 8, "start": "14:50", "end": "15:35" },
+        { "periodIndex": 9, "start": "15:50", "end": "16:35" },
+        { "periodIndex": 10, "start": "16:40", "end": "17:25" },
+        { "periodIndex": 11, "start": "18:20", "end": "19:05" },
+        { "periodIndex": 12, "start": "19:10", "end": "19:55" },
+        { "periodIndex": 13, "start": "20:00", "end": "20:45" }
+      ],
+      "courses": [
+        {
+          "name": "临床诊断学",
+          "teacher": "王芳",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 5, "endPeriod": 5, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教学楼1-501" }
+          ]
+        },
+        {
+          "name": "晚间讲座",
+          "teacher": "赵伟",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 13, "endPeriod": 13, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "报告厅" }
+          ]
+        },
+        {
+          "name": "临床技能",
+          "teacher": "刘婷",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 12, "endPeriod": 13, "startWeek": 2, "endWeek": 16, "weekType": "EVEN", "location": "技能楼" }
+          ]
+        },
+        {
+          "name": "免疫学实验",
+          "teacher": "孙丽",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 6, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "实验楼D301" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对成学校实际开学日",
+    "课表里有第 22 周的课，超过适配器内置的 20 周，学期总周数已按 22 周导入，如与实际不符可在学期管理里改",
+    "教务系统没有给出节次时间，已按适配器内置的 13 节节次时间导入（第 1 节 08:30-09:15），时间可能与学校实际作息不符，请在学期管理里核对",
+    "课表用到了作息表里没有的第 14-16 节，已补上时间：第 14-16 节按上一节下课后课间 5 分钟、每节 45 分钟顺推，请在学期管理里核对",
+    "课表用到了第 17 节及以后，顺推的时间会越过当天 23:59，这些节次没有补上时间（课程已导入），请在学期管理里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 22,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:20", "end": "10:05" },
+        { "periodIndex": 3, "start": "10:20", "end": "11:05" },
+        { "periodIndex": 4, "start": "11:10", "end": "11:55" },
+        { "periodIndex": 5, "start": "12:00", "end": "13:00" },
+        { "periodIndex": 6, "start": "13:10", "end": "13:55" },
+        { "periodIndex": 7, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 8, "start": "14:50", "end": "15:35" },
+        { "periodIndex": 9, "start": "15:50", "end": "16:35" },
+        { "periodIndex": 10, "start": "16:40", "end": "17:25" },
+        { "periodIndex": 11, "start": "18:20", "end": "19:05" },
+        { "periodIndex": 12, "start": "19:10", "end": "19:55" },
+        { "periodIndex": 13, "start": "20:00", "end": "20:45" },
+        { "periodIndex": 14, "start": "20:50", "end": "21:35" },
+        { "periodIndex": 15, "start": "21:40", "end": "22:25" },
+        { "periodIndex": 16, "start": "22:30", "end": "23:15" }
+      ],
+      "courses": [
+        {
+          "name": "基础护理",
+          "teacher": "吴洁",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "实训楼A102" }
+          ]
+        },
+        {
+          "name": "急救护理",
+          "teacher": "吴洁",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 13, "endPeriod": 16, "startWeek": 1, "endWeek": 12, "weekType": "ALL", "location": "实训楼A101" }
+          ]
+        },
+        {
+          "name": "夜间值守实习",
+          "teacher": "郑强",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 6, "startPeriod": 17, "endPeriod": 18, "startWeek": 5, "endWeek": 22, "weekType": "ALL", "location": "门诊楼B2" }
+          ]
+        }
+      ]
+    }
+  ]
+}

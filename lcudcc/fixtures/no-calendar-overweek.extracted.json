@@ -1,0 +1,17 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：按上游 LCUDCC/lcudcc.js 实际读取的字段形状编造，课程、教师、教室均为虚构，无真实个人信息。只保证「同样的输入永远得到同样的输出」，不保证解析在真实页面上是对的（见 docs/jw-adapter-testing.md §3）。",
+  "_case": "边界（c）：学期周次校历没有给出总周数（calendar 为 null）+ 课表排到第 22 周 → 总周数按课表抬到 22，警告里不得写成「校历写的一学期是 0 周」；作息接口取不到 → 内置 12 节",
+  "term": { "xnm": "2026", "xqm": "3", "xnmText": "2026-2027", "xqmText": "第一学期" },
+  "today": "2026-09-13",
+  "campusId": "01",
+  "raw": {
+    "kbList": [
+      { "kcmc": "临床技能训练", "xm": "甲老师", "cdmc": "技能楼301", "xqj": "2", "jcs": "1-2", "zcd": "1-22周" },
+      { "kcmc": "内科学", "xm": "乙老师", "cdmc": "教学楼1-201", "xqj": "4", "jcs": "3-4", "zcd": "3-16周" }
+    ],
+    "sjkList": []
+  },
+  "total": null,
+  "periodTimes": null,
+  "calendar": null
+}

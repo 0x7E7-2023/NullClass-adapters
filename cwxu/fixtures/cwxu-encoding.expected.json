@@ -1,0 +1,143 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期校历，学期总周数按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "教务系统没有给出节次时间，已按适配器内置的 11 节节次时间导入（第 1 节 08:00-08:45），时间可能与学校实际作息不符，请在学期管理里核对",
+    "课表用到了作息表里没有的第 12 节，已补上时间：第 12 节按上一节下课后课间 5 分钟、每节 45 分钟顺推，请在学期管理里核对",
+    "有 1 行课表数据不全（缺周次（或周次全超出 1-30 周）1 行、认不出的周次写法如「（3）」），已跳过：教务数据不完整时会出现，如发现少课请反馈",
+    "有 1 处括号里只写了纯数字（如「(1)」「(1-2)」）：那是教学班序号不是周次，已忽略，请核对这几门课的周次"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:10", "end": "10:55" },
+        { "periodIndex": 4, "start": "11:05", "end": "11:50" },
+        { "periodIndex": 5, "start": "13:45", "end": "14:30" },
+        { "periodIndex": 6, "start": "14:40", "end": "15:25" },
+        { "periodIndex": 7, "start": "15:55", "end": "16:40" },
+        { "periodIndex": 8, "start": "16:50", "end": "17:35" },
+        { "periodIndex": 9, "start": "18:45", "end": "19:30" },
+        { "periodIndex": 10, "start": "19:40", "end": "20:25" },
+        { "periodIndex": 11, "start": "20:35", "end": "21:20" },
+        { "periodIndex": 12, "start": "21:25", "end": "22:10" }
+      ],
+      "courses": [
+        {
+          "name": "P1 周数前缀全角冒号",
+          "teacher": "教师甲",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教室P1" }
+          ]
+        },
+        {
+          "name": "P2 周数半角冒号加第字",
+          "teacher": "教师乙",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "教室P2" }
+          ]
+        },
+        {
+          "name": "P3 分隔符全家",
+          "teacher": "教师丙",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 3, "weekType": "ALL", "location": "教室P3" },
+            { "dayOfWeek": 3, "startPeriod": 3, "endPeriod": 4, "startWeek": 5, "endWeek": 7, "weekType": "ALL", "location": "教室P3" },
+            { "dayOfWeek": 3, "startPeriod": 3, "endPeriod": 4, "startWeek": 9, "endWeek": 13, "weekType": "ODD", "location": "教室P3" }
+          ]
+        },
+        {
+          "name": "P4 全角括号与单标记",
+          "teacher": "教师丁",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 15, "weekType": "ODD", "location": "教室P4" }
+          ]
+        },
+        {
+          "name": "P5 单标记在最前全角",
+          "teacher": "教师戊",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 1, "endPeriod": 2, "startWeek": 2, "endWeek": 16, "weekType": "EVEN", "location": "教室P5" }
+          ]
+        },
+        {
+          "name": "P6 单标记在周后无括号",
+          "teacher": "教师己",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 6, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 15, "weekType": "ODD", "location": "教室P6" }
+          ]
+        },
+        {
+          "name": "P7 双标记在最前无括号",
+          "teacher": "教师庚",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 7, "startPeriod": 1, "endPeriod": 2, "startWeek": 2, "endWeek": 14, "weekType": "EVEN", "location": "教室P7" }
+          ]
+        },
+        {
+          "name": "P8 波浪连接周次",
+          "teacher": "教师辛",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "教室P8" }
+          ]
+        },
+        {
+          "name": "P9 至连接周次",
+          "teacher": "教师壬",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 9, "endWeek": 16, "weekType": "ALL", "location": "教室P9" }
+          ]
+        },
+        {
+          "name": "P10 节次用波浪",
+          "teacher": "教师癸",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教室P10" }
+          ]
+        },
+        {
+          "name": "P11 节次用至与第字",
+          "teacher": "教师子",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 7, "endPeriod": 8, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教室P11" }
+          ]
+        },
+        {
+          "name": "P12 第12节的课",
+          "teacher": "教师丑",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 11, "endPeriod": 12, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教室P12" }
+          ]
+        },
+        {
+          "name": "P14 全角波浪连接周次",
+          "teacher": "教师卯",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "教室P14" }
+          ]
+        }
+      ]
+    }
+  ]
+}

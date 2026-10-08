@@ -1,0 +1,19 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：按上游 JHZYEDU/zhengfang.js 实际读取的字段形状（kcmc/xm/cdmc/xqj/jcs/zcd + 响应里的 kbList/sjkList）编造，课程、教师、教室均为虚构，无真实个人信息。只保证「同样的输入永远得到同样的输出」，不保证解析在真实页面上是对的（见 docs/jw-adapter-testing.md §3）。",
+  "_case": "本校专属边界（8 节作息）：教务不给作息表（periodTimes=null）、课表有第 9、10 节晚课（9-10 节）、单独第 9 节（单周）、第 11-12 节（双周），以及跨第 8、9 节的 8-9 节课。期望：第 1-8 节用本校 8 节表，第 9-12 节按适配器内置节次表补齐并在 warnings 里说明；总周数与开学日仍是推算（不给校历）",
+  "term": { "xnm": "2026", "xqm": "3", "xnmText": "2026-2027", "xqmText": "第一学期" },
+  "today": "2026-09-13",
+  "campusId": "01",
+  "raw": {
+    "kbList": [
+      { "kcmc": "数据结构", "xm": "周立", "cdmc": "教学楼1-101", "xqj": "2", "jcs": "9-10", "zcd": "1-16周" },
+      { "kcmc": "电路原理", "xm": "冯晨", "cdmc": "实验楼B301", "xqj": "4", "jcs": "9", "zcd": "1-8周(单)" },
+      { "kcmc": "英语听说", "xm": "", "cdmc": "", "xqj": "5", "jcs": "11-12", "zcd": "2-16周(双)" },
+      { "kcmc": "体育", "xm": "郭峰", "cdmc": "田径场", "xqj": "3", "jcs": "8-9", "zcd": "1-16周" }
+    ],
+    "sjkList": []
+  },
+  "total": null,
+  "periodTimes": null,
+  "calendar": null
+}

@@ -315,6 +315,66 @@
       "name": "中国科学技术大学（研究生）",
       "version": "1.0.0",
       "path": "ustc-grad"
+    },
+    {
+      "key": "haut",
+      "name": "河南工业大学",
+      "version": "1.0.0",
+      "path": "haut"
+    },
+    {
+      "key": "ksu",
+      "name": "喀什大学",
+      "version": "1.0.0",
+      "path": "ksu"
+    },
+    {
+      "key": "sdnu",
+      "name": "山东师范大学",
+      "version": "1.0.0",
+      "path": "sdnu"
+    },
+    {
+      "key": "gzu",
+      "name": "贵州大学",
+      "version": "1.0.0",
+      "path": "gzu"
+    },
+    {
+      "key": "yxhmc",
+      "name": "成都银杏酒店管理学院",
+      "version": "1.0.0",
+      "path": "yxhmc"
+    },
+    {
+      "key": "cauc",
+      "name": "中国民航大学",
+      "version": "1.0.0",
+      "path": "cauc"
+    },
+    {
+      "key": "njtech",
+      "name": "南京工业大学",
+      "version": "1.0.0",
+      "path": "njtech"
+    },
+    {
+      "key": "jhzyedu",
+      "name": "江西航空职业技术学院",
+      "version": "1.0.0",
+      "path": "jhzyedu"
+    },
+    {
+      "key": "cwxu",
+      "name": "无锡学院",
+      "version": "1.0.0",
+      "path": "cwxu"
+    },
+    {
+      "key": "lcudcc",
+      "name": "聊城大学东昌学院",
+      "version": "1.0.0",
+      "path": "lcudcc"
     }
   ]
 }

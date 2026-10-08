@@ -1,0 +1,51 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务校历：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "教务校历写的一学期是 18 周，课表里有第 20 周的课，已按 20 周导入（否则第 19 周起的课放不下）",
+    "教务系统没有给出节次时间，已按适配器内置的 13 节节次时间导入（第 1 节 08:30-09:15），时间可能与学校实际作息不符，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:20", "end": "10:05" },
+        { "periodIndex": 3, "start": "10:20", "end": "11:05" },
+        { "periodIndex": 4, "start": "11:10", "end": "11:55" },
+        { "periodIndex": 5, "start": "12:00", "end": "13:00" },
+        { "periodIndex": 6, "start": "13:10", "end": "13:55" },
+        { "periodIndex": 7, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 8, "start": "14:50", "end": "15:35" },
+        { "periodIndex": 9, "start": "15:50", "end": "16:35" },
+        { "periodIndex": 10, "start": "16:40", "end": "17:25" },
+        { "periodIndex": 11, "start": "18:20", "end": "19:05" },
+        { "periodIndex": 12, "start": "19:10", "end": "19:55" },
+        { "periodIndex": 13, "start": "20:00", "end": "20:45" }
+      ],
+      "courses": [
+        {
+          "name": "中医基础",
+          "teacher": "沈青",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 18, "weekType": "ALL", "location": "教学楼4-402" }
+          ]
+        },
+        {
+          "name": "护理伦理",
+          "teacher": "潘岚",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 3, "endPeriod": 4, "startWeek": 3, "endWeek": 20, "weekType": "ALL", "location": "教学楼4-210" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的学期周次校历：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "学期总周数取自教务校历（18 周），如与实际不符可在学期管理里改",
+    "教务系统没有给出节次时间，已按适配器内置的 12 节节次时间导入（第 1 节 08:00-08:45），时间可能与学校实际作息不符，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 18,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:50", "end": "09:35" },
+        { "periodIndex": 3, "start": "10:05", "end": "10:50" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "13:30", "end": "14:15" },
+        { "periodIndex": 6, "start": "14:20", "end": "15:05" },
+        { "periodIndex": 7, "start": "15:35", "end": "16:20" },
+        { "periodIndex": 8, "start": "16:25", "end": "17:50" },
+        { "periodIndex": 9, "start": "18:30", "end": "19:15" },
+        { "periodIndex": 10, "start": "19:15", "end": "20:05" },
+        { "periodIndex": 11, "start": "20:10", "end": "20:55" },
+        { "periodIndex": 12, "start": "21:00", "end": "21:45" }
+      ],
+      "courses": [
+        {
+          "name": "空气动力学",
+          "teacher": "刘洋",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 18, "weekType": "ALL", "location": "航空楼A101" }
+          ]
+        },
+        {
+          "name": "航空电子基础",
+          "teacher": "陈静",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 3, "endPeriod": 4, "startWeek": 2, "endWeek": 18, "weekType": "EVEN", "location": "教学楼C303" }
+          ]
+        }
+      ]
+    }
+  ]
+}
