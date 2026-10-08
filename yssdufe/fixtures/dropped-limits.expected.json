@@ -1,0 +1,38 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "课表里有第 12 至 13 节，节次时间里没有这几节，已临时补上（19:00 起），请到「学期管理」里核对真实的上下课时间",
+    "有 2 条周次超出 30 周，这些周次没有导入",
+    "有 5 个上课安排没能认出来，已跳过（没认出课名 1 个，没认出周次 1 个，没认出节次 1 个，节次超出 16 节 2 个）。教务页面的写法可能有变化，欢迎反馈。包含：毛泽东思想和中国特色社会主义理论体系概论(2026版)（甲某某）——节次超出 16 节；(没认出课名)——没认出课名；大学生创新创业基础理论与实践(含就业指导)（庚某某）——没认出周次与节次；概率论与数理统计(理工类·第二版)（…"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:15", "end": "10:00" },
+        { "periodIndex": 3, "start": "10:20", "end": "11:05" },
+        { "periodIndex": 4, "start": "11:05", "end": "11:50" },
+        { "periodIndex": 5, "start": "13:30", "end": "14:15" },
+        { "periodIndex": 6, "start": "14:15", "end": "15:00" },
+        { "periodIndex": 7, "start": "15:20", "end": "16:05" },
+        { "periodIndex": 8, "start": "16:05", "end": "16:50" },
+        { "periodIndex": 9, "start": "18:30", "end": "19:15" },
+        { "periodIndex": 10, "start": "19:15", "end": "20:00" },
+        { "periodIndex": 11, "start": "20:10", "end": "21:50" },
+        { "periodIndex": 12, "start": "19:00", "end": "19:45" },
+        { "periodIndex": 13, "start": "20:00", "end": "20:45" }
+      ],
+      "courses": [
+        { "name": "高等数学A(一)", "teacher": "壬某", "note": null, "blocks": [
+          { "dayOfWeek": 1, "startPeriod": 12, "endPeriod": 13, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教1-101" } ] },
+        { "name": "大学英语(一)", "teacher": "子某", "note": null, "blocks": [
+          { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "外语楼B203" } ] }
+      ]
+    }
+  ]
+}

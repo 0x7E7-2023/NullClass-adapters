@@ -1,0 +1,83 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "已按「青岛校区」的节次时间导入（教务页面不提供，三个校区的节次时间不同），请到「学期管理」里核对",
+    "开学日期无法从教务获取，已按最近的周一（2026-10-05）推算，请在「学期管理」里核对",
+    "教务页面不提供学期总周数：已按 20 周起算，请在「学期管理」里核对",
+    "有 1 行没认出节次标题（例：「数据库 赵老师 2-16(周)[07-08节] 综合楼5」），这些行的课只能按格子里写的节次导入，请核对导入结果",
+    "课表里没找到星期几的标题，已按表格的列位置推算星期，课表可能整体错位，请核对导入结果",
+    "有 1 个格子横跨了多天，格里的课只按它覆盖的「第一天」导入，请核对导入结果"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-10-05",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "09:55", "end": "10:40" },
+        { "periodIndex": 4, "start": "10:50", "end": "11:35" },
+        { "periodIndex": 5, "start": "11:35", "end": "12:00" },
+        { "periodIndex": 6, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 7, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 8, "start": "15:55", "end": "16:40" },
+        { "periodIndex": 9, "start": "16:50", "end": "17:35" },
+        { "periodIndex": 10, "start": "18:50", "end": "19:35" },
+        { "periodIndex": 11, "start": "19:45", "end": "20:30" }
+      ],
+      "courses": [
+        {
+          "name": "高等代数",
+          "teacher": "王老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "博学楼A101" }
+          ]
+        },
+        {
+          "name": "大学英语",
+          "teacher": "张老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "外语楼301" }
+          ]
+        },
+        {
+          "name": "计算机网络",
+          "teacher": "李老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 2, "endWeek": 16, "weekType": "ALL", "location": "实验楼C101" }
+          ]
+        },
+        {
+          "name": "体育",
+          "teacher": "刘老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 6, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "操场" }
+          ]
+        },
+        {
+          "name": "程序设计",
+          "teacher": "陈老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 5, "endPeriod": 6, "startWeek": 3, "endWeek": 12, "weekType": "ALL", "location": "机房B1" }
+          ]
+        },
+        {
+          "name": "数据库",
+          "teacher": "赵老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 7, "endPeriod": 8, "startWeek": 2, "endWeek": 16, "weekType": "ALL", "location": "综合楼5" }
+          ]
+        }
+      ]
+    }
+  ]
+}

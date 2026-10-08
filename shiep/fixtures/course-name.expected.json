@@ -1,0 +1,92 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统的一个学期（2026-2027学年第一学期，按教务系统标出的当前学期自动选中）。要导入别的学期，请在教务页面里切到那个学期，再点「提取课表」。",
+    "第 1 周从 2026 年 8 月 31 日开始，依据是教务给出的学期开始日期，请在学期管理里核对成学校实际开学日。",
+    "教务给出的学期起止日期算出总周数为 20 周，如与实际不符请在学期管理里改。",
+    "教务系统没有提供节次时间，已使用上海电力大学默认的节次时间（共 13 节，第 1 节 08:20~09:05），如与学校实际不符请在学期管理里改。",
+    "有 2 个课程名末尾带有英文括号的数字（如「大学物理(2)」），已去掉这部分；中文括号的内容（如「大学英语C读写（1）」）原样保留，请核对。"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:20", "end": "09:05" },
+        { "periodIndex": 2, "start": "09:10", "end": "09:55" },
+        { "periodIndex": 3, "start": "10:10", "end": "10:55" },
+        { "periodIndex": 4, "start": "11:00", "end": "11:45" },
+        { "periodIndex": 5, "start": "11:50", "end": "12:30" },
+        { "periodIndex": 6, "start": "13:20", "end": "14:05" },
+        { "periodIndex": 7, "start": "14:10", "end": "14:55" },
+        { "periodIndex": 8, "start": "15:10", "end": "15:55" },
+        { "periodIndex": 9, "start": "16:00", "end": "16:45" },
+        { "periodIndex": 10, "start": "16:50", "end": "17:30" },
+        { "periodIndex": 11, "start": "18:15", "end": "19:00" },
+        { "periodIndex": 12, "start": "19:05", "end": "19:50" },
+        { "periodIndex": 13, "start": "19:55", "end": "20:35" }
+      ],
+      "courses": [
+        {
+          "name": "C语言程序设计(2)上机",
+          "teacher": "合成教师丁",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 3, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "机房丁104" }
+          ]
+        },
+        {
+          "name": "体育1(篮球)",
+          "teacher": "合成教师戊",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "体育馆戊105" }
+          ]
+        },
+        {
+          "name": "大学物理",
+          "teacher": "合成教师丙",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "教学楼丙103" }
+          ]
+        },
+        {
+          "name": "大学英语C读写（1）",
+          "teacher": "合成教师己",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 3, "endPeriod": 3, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "教学楼己106" }
+          ]
+        },
+        {
+          "name": "形势与政策（四）",
+          "teacher": "合成教师乙",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 3, "endPeriod": 3, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "教学楼乙102" }
+          ]
+        },
+        {
+          "name": "离散数学",
+          "teacher": "合成教师庚",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "教学楼庚107" }
+          ]
+        },
+        {
+          "name": "高等数学A(一)",
+          "teacher": "合成教师甲",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "教学楼甲101" }
+          ]
+        }
+      ]
+    }
+  ]
+}

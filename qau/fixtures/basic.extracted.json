@@ -1,0 +1,71 @@
+{
+  "_note": "合成数据（非真实抓取）：青岛校区；第N,M节行表头；同课相邻节次 1-2 + 3-4 应合并；单双周；同一格两门课用减号分隔；同一格完全重复的一条；缺老师的一门。",
+  "source": "qau-jsxsd-xskb",
+  "pageUrl": "http://jwglxt.qau.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-10-08",
+  "term": { "code": "2026-2027-1", "name": "2026-2027学年第一学期" },
+  "campus": "青岛校区",
+  "cols": 8,
+  "rows": [
+    [
+      { "col": 0, "span": 1, "text": "节次", "parts": [] },
+      { "col": 1, "span": 1, "text": "星期一", "parts": [] },
+      { "col": 2, "span": 1, "text": "星期二", "parts": [] },
+      { "col": 3, "span": 1, "text": "星期三", "parts": [] },
+      { "col": 4, "span": 1, "text": "星期四", "parts": [] },
+      { "col": 5, "span": 1, "text": "星期五", "parts": [] },
+      { "col": 6, "span": 1, "text": "星期六", "parts": [] },
+      { "col": 7, "span": 1, "text": "星期日", "parts": [] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第1,2节", "parts": [] },
+      { "col": 1, "span": 1, "text": "高等数学A 张三 1-16(周)[01-02节] 博学楼A101", "parts": ["高等数学A<br><font title='老师'>张三</font><br><font title='周次(节次)'>1-16(周)[01-02节]</font><br><font title='教室'>博学楼A101</font>"] },
+      { "col": 2, "span": 1, "text": "", "parts": [] },
+      { "col": 3, "span": 1, "text": "大学英语（二） 王芳 1-15(单周)[01-02节] 博学楼B203", "parts": ["大学英语（二）<br><font title='老师'>王芳</font><br><font title='周次(节次)'>1-15(单周)[01-02节]</font><br><font title='教室'>博学楼B203</font>"] },
+      { "col": 4, "span": 1, "text": "", "parts": [] },
+      { "col": 5, "span": 1, "text": "", "parts": [] },
+      { "col": 6, "span": 1, "text": "", "parts": [] },
+      { "col": 7, "span": 1, "text": "", "parts": [] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第3,4节", "parts": [] },
+      { "col": 1, "span": 1, "text": "高等数学A 张三 1-16(周)[03-04节] 博学楼A101", "parts": ["高等数学A<br><font title='老师'>张三</font><br><font title='周次(节次)'>1-16(周)[03-04节]</font><br><font title='教室'>博学楼A101</font>"] },
+      { "col": 2, "span": 1, "text": "计算机应用基础 李强 2-16周(双)[03-04节] 实验楼C305", "parts": ["计算机应用基础<br><font title='老师'>李强</font><br><font title='周次(节次)'>2-16周(双)[03-04节]</font><br><font title='教室'>实验楼C305</font>"] },
+      { "col": 3, "span": 1, "text": "", "parts": [] },
+      { "col": 4, "span": 1, "text": "", "parts": [] },
+      { "col": 5, "span": 1, "text": "", "parts": [] },
+      { "col": 6, "span": 1, "text": "", "parts": [] },
+      { "col": 7, "span": 1, "text": "", "parts": [] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第5,6节", "parts": [] },
+      { "col": 1, "span": 1, "text": "大学物理 1-14(周)[05-06节] 博学楼A301", "parts": ["大学物理<br><font title='周次(节次)'>1-14(周)[05-06节]</font><br><font title='教室'>博学楼A301</font>"] },
+      { "col": 2, "span": 1, "text": "", "parts": [] },
+      { "col": 3, "span": 1, "text": "", "parts": [] },
+      { "col": 4, "span": 1, "text": "", "parts": [] },
+      { "col": 5, "span": 1, "text": "", "parts": [] },
+      { "col": 6, "span": 1, "text": "", "parts": [] },
+      { "col": 7, "span": 1, "text": "", "parts": [] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第7,8节", "parts": [] },
+      { "col": 1, "span": 1, "text": "", "parts": [] },
+      { "col": 2, "span": 1, "text": "", "parts": [] },
+      { "col": 3, "span": 1, "text": "", "parts": [] },
+      { "col": 4, "span": 1, "text": "", "parts": [] },
+      { "col": 5, "span": 1, "text": "中国近现代史纲要 周红 2-18(周)[07-08节] 博学楼D102 中国近现代史纲要 周红 2-18(周)[07-08节] 博学楼D102", "parts": ["中国近现代史纲要<br><font title='老师'>周红</font><br><font title='周次(节次)'>2-18(周)[07-08节]</font><br><font title='教室'>博学楼D102</font>", "中国近现代史纲要<br><font title='老师'>周红</font><br><font title='周次(节次)'>2-18(周)[07-08节]</font><br><font title='教室'>博学楼D102</font>"] },
+      { "col": 6, "span": 1, "text": "", "parts": [] },
+      { "col": 7, "span": 1, "text": "", "parts": [] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第9,10节", "parts": [] },
+      { "col": 1, "span": 1, "text": "", "parts": [] },
+      { "col": 2, "span": 1, "text": "", "parts": [] },
+      { "col": 3, "span": 1, "text": "大学生心理健康教育 赵敏 3-12(周)[09-10节] 大学生活动中心", "parts": ["大学生心理健康教育<br><font title='老师'>赵敏</font><br><font title='周次(节次)'>3-12(周)[09-10节]</font><br><font title='教室'>大学生活动中心</font>"] },
+      { "col": 4, "span": 1, "text": "", "parts": [] },
+      { "col": 5, "span": 1, "text": "", "parts": [] },
+      { "col": 6, "span": 1, "text": "体育 刘磊 1-16(周)[09-10节] 操场 英语口语 陈静 1-8(周)[09-10节] 外语楼201", "parts": ["体育<br><font title='老师'>刘磊</font><br><font title='周次(节次)'>1-16(周)[09-10节]</font><br><font title='教室'>操场</font>-----<br>英语口语<br><font title='老师'>陈静</font><br><font title='周次(节次)'>1-8(周)[09-10节]</font><br><font title='教室'>外语楼201</font>"] },
+      { "col": 7, "span": 1, "text": "", "parts": [] }
+    ]
+  ]
+}

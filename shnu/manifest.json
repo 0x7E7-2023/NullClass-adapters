@@ -1,0 +1,42 @@
+{
+  "specVersion": 1,
+  "key": "shnu",
+  "name": "上海师范大学",
+  "initial": "S",
+  "version": "1.0.0",
+  "author": "上游 FaQxD233（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://course.shnu.edu.cn/",
+  "scheduleUrlHint": "https://course.shnu.edu.cn/eams/courseTableForStd.action",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本路径（页面学期 + 学期起止日期 + 位图第 0 位为 0 + 课程名末尾 ASCII 括号摘掉 + 单双周与连堂合并）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次位图基准对照（第 0 位为 1 被忽略、第 1 位为 1 才是第 1 周、只有第 0 位为 1 的「无可导入周次」）",
+      "extracted": "fixtures/weeks-bitmap.extracted.json",
+      "expected": "fixtures/weeks-bitmap.expected.json"
+    },
+    {
+      "name": "合成用例：课程名括号（末尾 ASCII 括号摘掉、全角括号与中间括号保留）与教室括号",
+      "extracted": "fixtures/course-name.extracted.json",
+      "expected": "fixtures/course-name.expected.json"
+    },
+    {
+      "name": "合成用例：边界（本校专属：位图不在第 5 个引号位、教师来自 actTeachers 多名字、读不到 unitCount 用页面值、第 14 节上限）",
+      "extracted": "fixtures/edge-units.extracted.json",
+      "expected": "fixtures/edge-units.expected.json"
+    },
+    {
+      "name": "合成用例：日历缺失（学期序号 2、学年 2026-2027，起始日期取不到：按第二学期 2 月 20 日推算并写 warnings；无结束日期：总周数用缺省 20）",
+      "extracted": "fixtures/no-calendar.extracted.json",
+      "expected": "fixtures/no-calendar.expected.json"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "_note": "合成用例（非真实教务返回）：课名与教师均为虚构，字段形状取自上游脚本读取的排课字段。校历与节次都为空，走学期推算、开学日推算、节次回落。",
+  "term": {
+    "code": "2026-2027-1",
+    "name": null,
+    "source": "guess"
+  },
+  "today": "2026-09-09",
+  "rows": [
+    {"KCM": "虚构数学甲", "SKXQ": "1", "KSJC": "1", "JSJC": "2", "SKZC": "111111111111111100", "SKJS": "张三/李四", "JASMC": "教1-101", "XXXQDM_DISPLAY": "江北校区"},
+    {"KCM": "虚构英语乙", "SKXQ": "2", "KSJC": "3", "JSJC": "4", "SKZC": "010101010101000000", "SKJS": "王五", "JASMC": "教2-203", "XXXQDM_DISPLAY": ""},
+    {"KCM": "虚构物理丙", "SKXQ": "3", "KSJC": "5", "JSJC": "6", "SKZC": "101010000000000000", "SKJS": "", "JASMC": "", "XXXQDM_DISPLAY": "江东校区"},
+    {"KCM": null, "SKXQ": null, "KSJC": null, "JSJC": null, "SKZC": null, "SKJS": null, "JASMC": null, "XXXQDM_DISPLAY": null},
+    {"KCM": "虚构化学丁", "SKXQ": "4", "KSJC": "1", "JSJC": "2", "SKZC": "000000000000000000", "SKJS": "赵六", "JASMC": "教3-301", "XXXQDM_DISPLAY": "江北校区"},
+    {"KCM": "虚构体育戊", "SKXQ": "5", "KSJC": "9", "JSJC": "10", "SKZC": "111111111111111111", "SKJS": "周八、郑九", "JASMC": "体育馆", "XXXQDM_DISPLAY": "江北校区"},
+    {"KCM": "虚构数学甲", "SKXQ": "3", "KSJC": "3", "JSJC": "4", "SKZC": "111111111111111100", "SKJS": "张三/李四", "JASMC": "教1-101", "XXXQDM_DISPLAY": "江北校区"},
+    {"KCM": "虚构政治己", "SKXQ": "8", "KSJC": "1", "JSJC": "2", "SKZC": "111111111111111111", "SKJS": "钱十", "JASMC": "教1-201", "XXXQDM_DISPLAY": "江北校区"}
+  ],
+  "calendarRows": [],
+  "timeSlotRows": []
+}

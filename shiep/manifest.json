@@ -1,0 +1,47 @@
+{
+  "specVersion": 1,
+  "key": "shiep",
+  "name": "上海电力大学",
+  "initial": "S",
+  "version": "1.0.0",
+  "author": "上游 zt11125（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jw.shiep.edu.cn/eams/index.action",
+  "scheduleUrlHint": "https://jw.shiep.edu.cn/eams/courseTableForStd.action",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本路径（当前学期 + 教务给出学期起止日期 + 位图第 0 位是 0 + 课程名括号保留 + 单双周与连堂合并）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次位图基准对照（第 0 位为 1 的占位、只有第 1 位为 1、第 30 周上限）",
+      "extracted": "fixtures/weeks-bitmap.extracted.json",
+      "expected": "fixtures/weeks-bitmap.expected.json"
+    },
+    {
+      "name": "合成用例：课程名括号的处理（高等数学A(一) / 形势与政策（四）保留，大学物理(2) 摘序号，C语言程序设计(2)上机 不摘）",
+      "extracted": "fixtures/course-name.extracted.json",
+      "expected": "fixtures/course-name.expected.json"
+    },
+    {
+      "name": "合成用例：边界（读不到 unitCount 用课表页兜底 + 裸数字定位 index = 62 + teachers.join(\",\") 表达式教师留空 + 13 节定位 + 教室缺失）",
+      "extracted": "fixtures/edge-units.extracted.json",
+      "expected": "fixtures/edge-units.expected.json"
+    },
+    {
+      "name": "合成用例：第一学期且教务没有给出起止日期（开学日按 9 月 1 日所在周的周一推算并 warn；总周数走适配器内置 20 周；第 20 周的课不抬高总周数）",
+      "extracted": "fixtures/first-term-nodate.extracted.json",
+      "expected": "fixtures/first-term-nodate.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期且教务没有给出起止日期（开学日按 2 月 20 日所在周的周一推算到次年 2 月并 warn；学期名为第二学期）",
+      "extracted": "fixtures/second-term-nodate.extracted.json",
+      "expected": "fixtures/second-term-nodate.expected.json"
+    }
+  ]
+}

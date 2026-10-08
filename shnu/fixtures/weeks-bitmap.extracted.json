@@ -1,0 +1,15 @@
+{
+  "_note": "合成用例：不是真实抓取，课程、教师、教室都是虚构的，不含任何学号姓名。本件：周次位图基准对照（位图第 0 位为 1 时忽略并计数；第 1 位为 1 才是第 1 周；0 位为 1 且 2-16 周的；只有第 0 位为 1、没有任何可导入周次的整门课会被跳过）。学期起始日 2026-09-02 是周三，用于验证开学日取所在周的周一。",
+  "today": "2026-09-17",
+  "semester": {
+    "id": "454",
+    "rawName": "1",
+    "schoolYear": "2026-2027",
+    "startDate": "2026-09-02",
+    "endDate": "2026-12-20",
+    "source": "current"
+  },
+  "unitCountPage": 14,
+  "semesterCalendar": "{semesters:{\"1\":[{id:454,name:\"1\",schoolYear:\"2026-2027\",startDate:\"2026-09-02\",endDate:\"2026-12-20\"}]},semesterId:454}",
+  "courseTable": "<html><body>\n<script type=\"text/javascript\">var unitCount = 14;</script>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nvar actTeachers = [{id:\"T1\",name:\"周敏\"}];\n// 位图第 0 位为 1（占位符，忽略），第 1-3 周为 1\nactivity = new TaskActivity(\"\", \"线性代数\", teachers, \"\", \"教2-201\", \"1111000000000000000000000000000000000000000000000000\");\nindex = 1*unitCount+0;\nindex = 1*unitCount+1;\n</script>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nvar actTeachers = [{id:\"T2\",name:\"孙磊\"}];\n// 位图第 0 位为 0，只有第 1 位为 1：只上第 1 周\nactivity = new TaskActivity(\"\", \"军事理论\", teachers, \"\", \"教3-105\", \"0100000000000000000000000000000000000000000000000000\");\nindex = 2*unitCount+4;\nindex = 2*unitCount+5;\n</script>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nvar actTeachers = [{id:\"T3\",name:\"吴斌\"}];\n// 位图第 0 位为 1，第 2-16 位为 1：0 位忽略，周次是 2-16\nactivity = new TaskActivity(\"\", \"大学物理\", teachers, \"\", \"综合楼C401\", \"1011111111111111100000000000000000000000000000000000\");\nindex = 3*unitCount+6;\n</script>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nvar actTeachers = [{id:\"T4\",name:\"郑晓\"}];\n// 只有第 0 位为 1：没有任何可导入的周次，整门课跳过\nactivity = new TaskActivity(\"\", \"劳动教育\", teachers, \"\", \"体育馆\", \"1000000000000000000000000000000000000000000000000000\");\nindex = 4*unitCount+10;\n</script>\n</body></html>"
+}

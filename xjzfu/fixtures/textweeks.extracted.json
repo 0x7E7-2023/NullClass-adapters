@@ -1,0 +1,48 @@
+{
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期",
+    "source": "api",
+    "firstDay": "2026-09-07",
+    "firstDaySource": "termWeeks",
+    "totalWeeks": 18
+  },
+  "rows": [
+    {
+      "courseName": "离散数学",
+      "dayOfWeek": 1,
+      "beginSection": "1",
+      "endSection": "2",
+      "week": "",
+      "weeksAndTeachers": "1-16周/甲老师[主讲]",
+      "placeName": "教学楼B101"
+    },
+    {
+      "courseName": "数据结构",
+      "dayOfWeek": 2,
+      "beginSection": "3",
+      "endSection": "4",
+      "week": "00000000000000000000",
+      "weeksAndTeachers": "1-17(单周)/乙老师[主讲]",
+      "placeName": ""
+    },
+    {
+      "courseName": "操作系统",
+      "dayOfWeek": 3,
+      "beginSection": 5,
+      "endSection": 6,
+      "week": "",
+      "weeksAndTeachers": "2-16(双周)/丙老师[主讲]",
+      "placeName": "教学楼B205"
+    },
+    {
+      "courseName": "数字电路",
+      "dayOfWeek": 4,
+      "beginSection": "1",
+      "endSection": "2",
+      "week": "000000000000000000",
+      "weeksAndTeachers": "2-3周,5-6周/丁老师[主讲]",
+      "placeName": ""
+    }
+  ]
+}

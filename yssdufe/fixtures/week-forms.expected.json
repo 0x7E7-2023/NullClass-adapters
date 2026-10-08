@@ -1,0 +1,60 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "开学日期无法从教务获取（教学周历的表格结构认不出来），已按最近的周一（2027-03-08）推算，请在「学期管理」里核对",
+    "教务没有给出学期总周数，已按 20 周计，请在「学期管理」里核对",
+    "有 2 处周次里的单双 / 隔周标记认不出来（1-16周(单双)、1-16周隔周），这些周次已按「每周都上」处理，请核对导入结果"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2027-03-08",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:15", "end": "10:00" },
+        { "periodIndex": 3, "start": "10:20", "end": "11:05" },
+        { "periodIndex": 4, "start": "11:05", "end": "11:50" },
+        { "periodIndex": 5, "start": "13:30", "end": "14:15" },
+        { "periodIndex": 6, "start": "14:15", "end": "15:00" },
+        { "periodIndex": 7, "start": "15:20", "end": "16:05" },
+        { "periodIndex": 8, "start": "16:05", "end": "16:50" },
+        { "periodIndex": 9, "start": "18:30", "end": "19:15" },
+        { "periodIndex": 10, "start": "19:15", "end": "20:00" },
+        { "periodIndex": 11, "start": "20:10", "end": "21:50" }
+      ],
+      "courses": [
+        { "name": "高等数学A(一)", "teacher": "壬某", "note": null, "blocks": [
+          { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 15, "weekType": "ODD", "location": "教1-101" } ] },
+        { "name": "大学英语(一)", "teacher": "子某", "note": null, "blocks": [
+          { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 15, "weekType": "ODD", "location": "外语楼B203" } ] },
+        { "name": "线性代数", "teacher": "丑某", "note": null, "blocks": [
+          { "dayOfWeek": 3, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 15, "weekType": "ODD", "location": "教2-305" } ] },
+        { "name": "大学物理", "teacher": "辛某", "note": null, "blocks": [
+          { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 3, "weekType": "ALL", "location": "教1-208" },
+          { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 2, "startWeek": 5, "endWeek": 9, "weekType": "ALL", "location": "教1-208" } ] },
+        { "name": "概率论与数理统计", "teacher": "己某", "note": null, "blocks": [
+          { "dayOfWeek": 5, "startPeriod": 1, "endPeriod": 2, "startWeek": 2, "endWeek": 16, "weekType": "EVEN", "location": "教4-102" } ] },
+        { "name": "数据结构", "teacher": "申某", "note": null, "blocks": [
+          { "dayOfWeek": 6, "startPeriod": 1, "endPeriod": 2, "startWeek": 2, "endWeek": 16, "weekType": "EVEN", "location": "计算机楼A302" } ] },
+        { "name": "计算机组成原理", "teacher": "丙某", "note": null, "blocks": [
+          { "dayOfWeek": 7, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "计算机楼A305" } ] },
+        { "name": "操作系统", "teacher": "亥某", "note": null, "blocks": [
+          { "dayOfWeek": 1, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "计算机楼A201" } ] },
+        { "name": "编译原理", "teacher": "卯某", "note": null, "blocks": [
+          { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 7, "weekType": "ODD", "location": "计算机楼A202" },
+          { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 10, "endWeek": 16, "weekType": "EVEN", "location": "计算机楼A202" } ] },
+        { "name": "软件工程", "teacher": "乙某", "note": null, "blocks": [
+          { "dayOfWeek": 3, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "计算机楼A203" } ] },
+        { "name": "计算机网络", "teacher": "卜某", "note": null, "blocks": [
+          { "dayOfWeek": 4, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "计算机楼A204" } ] },
+        { "name": "数据库原理", "teacher": "癸某", "note": null, "blocks": [
+          { "dayOfWeek": 5, "startPeriod": 3, "endPeriod": 4, "startWeek": 3, "endWeek": 3, "weekType": "ALL", "location": "计算机楼A205" } ] },
+        { "name": "离散数学", "teacher": "未某", "note": null, "blocks": [
+          { "dayOfWeek": 6, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教3-101" } ] }
+      ]
+    }
+  ]
+}

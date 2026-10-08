@@ -1,0 +1,48 @@
+{
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期",
+    "source": "api",
+    "firstDay": "2026-09-09",
+    "firstDaySource": "termWeeks",
+    "totalWeeks": 18
+  },
+  "rows": [
+    {
+      "courseName": "高等数学",
+      "dayOfWeek": 1,
+      "beginSection": "1",
+      "endSection": "2",
+      "week": "111111111111111100",
+      "weeksAndTeachers": "1-16周/张三[主讲]",
+      "placeName": "教学楼A101"
+    },
+    {
+      "courseName": "大学英语",
+      "dayOfWeek": 3,
+      "beginSection": "3",
+      "endSection": "4",
+      "week": "111111111111111111",
+      "weeksAndTeachers": "1-18周/李四[主讲];王五[辅讲]",
+      "placeName": ""
+    },
+    {
+      "courseName": "程序设计",
+      "dayOfWeek": 5,
+      "beginSection": "1",
+      "endSection": "2",
+      "week": "101010101010101010",
+      "weeksAndTeachers": "1-17(单周)/孙七[主讲]",
+      "placeName": "实验楼B202"
+    },
+    {
+      "courseName": "形势与政策",
+      "dayOfWeek": 5,
+      "beginSection": 7,
+      "endSection": 8,
+      "week": "111111110000000000",
+      "weeksAndTeachers": "1-8周/刘八[主讲]",
+      "placeName": "综合楼301"
+    }
+  ]
+}

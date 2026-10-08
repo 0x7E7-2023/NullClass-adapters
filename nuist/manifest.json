@@ -1,0 +1,46 @@
+{
+  "specVersion": 1,
+  "key": "nuist",
+  "name": "南京信息工程大学",
+  "initial": "N",
+  "version": "1.0.0",
+  "author": "上游 wild0408（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwxt.nuist.edu.cn/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（校历与节次都取不到）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：校历可用（节次取自教务，两种时间写法）",
+      "extracted": "fixtures/calendar.extracted.json",
+      "expected": "fixtures/calendar.expected.json"
+    },
+    {
+      "name": "合成用例：边界（周次下标、周日开学、节次回落、周数越界）",
+      "extracted": "fixtures/boundary.extracted.json",
+      "expected": "fixtures/boundary.expected.json"
+    },
+    {
+      "name": "合成用例：教师工号（「姓名/工号」只留姓名，多名去重）",
+      "extracted": "fixtures/teacher.extracted.json",
+      "expected": "fixtures/teacher.expected.json"
+    },
+    {
+      "name": "合成用例：教务给的总周数小于课表周次（提醒写教务原值）",
+      "extracted": "fixtures/total-below.extracted.json",
+      "expected": "fixtures/total-below.expected.json"
+    },
+    {
+      "name": "合成用例：教务没给总周数（按位串长度推算，提醒不提教务原值）",
+      "extracted": "fixtures/total-guess.extracted.json",
+      "expected": "fixtures/total-guess.expected.json"
+    }
+  ]
+}

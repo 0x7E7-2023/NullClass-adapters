@@ -1,0 +1,53 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务没有标出当前学期，已按学期列表第一项（2025-2026学年第二学期）导入，请核对导入的是不是本学期",
+    "课表里有第 12 节，超出了学校作息表的 11 节，节次时间没有写入，已用空课的默认节次时间，请在学期管理里核对",
+    "开学日期无法从教务获取，已按最近的周一推算，请在学期管理里核对",
+    "学期总周数无法从教务获取，已按课表的周次推算为 20 周，请核对"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第二学期",
+      "firstDay": "2026-02-23",
+      "totalWeeks": 20,
+      "courses": [
+        {
+          "name": "大学物理",
+          "teacher": "王教授",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 2, "endWeek": 3, "weekType": "ALL", "location": "物理楼201" },
+            { "dayOfWeek": 4, "startPeriod": 3, "endPeriod": 4, "startWeek": 4, "endWeek": 20, "weekType": "ALL", "location": "物理楼201" }
+          ]
+        },
+        {
+          "name": "程序设计基础",
+          "teacher": "钱二",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 9, "endPeriod": 10, "startWeek": 1, "endWeek": 20, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "体育选项",
+          "teacher": "郑四",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 7, "startPeriod": 11, "endPeriod": 12, "startWeek": 1, "endWeek": 20, "weekType": "ALL", "location": "操场" }
+          ]
+        },
+        {
+          "name": "线性代数",
+          "teacher": "许五",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 6, "startPeriod": 1, "endPeriod": 2, "startWeek": 3, "endWeek": 5, "weekType": "ALL", "location": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

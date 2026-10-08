@@ -1,0 +1,20 @@
+{
+  "now": "2026-09-12",
+  "term": { "code": "2026-2027-1", "name": "2026-2027学年第一学期", "source": "select-selected" },
+  "rows": [
+    [
+      { "text": "节次", "parts": [], "col": 0, "span": 1 },
+      { "text": "星期一", "parts": [], "col": 1, "span": 1 },
+      { "text": "星期二", "parts": [], "col": 2, "span": 1 },
+      { "text": "星期三", "parts": [], "col": 3, "span": 1 },
+      { "text": "星期四", "parts": [], "col": 4, "span": 1 },
+      { "text": "星期五", "parts": [], "col": 5, "span": 1 },
+      { "text": "周末", "parts": [], "col": 6, "span": 2 }
+    ],
+    [
+      { "text": "第一大节(01,02小节)", "parts": [], "col": 0, "span": 1 },
+      { "text": "高数", "parts": ["高数<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)</font><br><font title=\"教室\">A1</font>"], "col": 1, "span": 1 },
+      { "text": "周末课", "parts": ["周末课<br><font title=\"老师\">教师乙</font><br><font title=\"周次(节次)\">1-16(周)</font><br><font title=\"教室\">A2</font>"], "col": 6, "span": 2 }
+    ]
+  ]
+}

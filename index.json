@@ -375,6 +375,66 @@
       "name": "聊城大学东昌学院",
       "version": "1.0.0",
       "path": "lcudcc"
+    },
+    {
+      "key": "shiep",
+      "name": "上海电力大学",
+      "version": "1.0.0",
+      "path": "shiep"
+    },
+    {
+      "key": "nuaa",
+      "name": "南京航空航天大学",
+      "version": "1.0.0",
+      "path": "nuaa"
+    },
+    {
+      "key": "shnu",
+      "name": "上海师范大学",
+      "version": "1.0.0",
+      "path": "shnu"
+    },
+    {
+      "key": "nuist",
+      "name": "南京信息工程大学",
+      "version": "1.0.0",
+      "path": "nuist"
+    },
+    {
+      "key": "xjzfu",
+      "name": "新疆政法学院",
+      "version": "1.0.0",
+      "path": "xjzfu"
+    },
+    {
+      "key": "yssdufe",
+      "name": "山东财经大学燕山学院",
+      "version": "1.0.0",
+      "path": "yssdufe"
+    },
+    {
+      "key": "jxust",
+      "name": "江西理工大学",
+      "version": "1.0.0",
+      "path": "jxust"
+    },
+    {
+      "key": "qau",
+      "name": "青岛农业大学",
+      "version": "1.0.0",
+      "path": "qau"
+    },
+    {
+      "key": "shzq",
+      "name": "上海中侨职业技术大学",
+      "version": "1.0.0",
+      "path": "shzq"
+    },
+    {
+      "key": "fit",
+      "name": "福州理工学院",
+      "version": "1.0.0",
+      "path": "fit"
     }
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "_note": "合成用例：不是真实抓取，课程、教师、教室都是虚构的，不含任何学号姓名。本件：边界（本校专属）。①课表响应里没有 unitCount，用页面值 14（warnings 写明来源）；②周次位图不在第 5 个引号位（quoted[5]），教室取它前一个引号字段；③教师来自 actTeachers 多名字（甲教师,乙教师），且取本活动前一段的最后一条 actTeachers；④第 14 节是作息表上限，不触发超节次提示；⑤只有裸数字 index = 7; 的课无法定位，必须计数并出声；⑥块里没有 actTeachers 的，教师留空（null）。学期起止 2026-09-14 至 2027-01-15，学期名与学年都没给，走「上海师范大学 当前学期」兜底。",
+  "today": "2026-09-17",
+  "semester": {
+    "id": "455",
+    "rawName": "",
+    "schoolYear": "",
+    "startDate": "2026-09-14",
+    "endDate": "2027-01-15",
+    "source": "date"
+  },
+  "unitCountPage": 14,
+  "semesterCalendar": "{semesters:{\"1\":[{id:455,name:\"\",schoolYear:\"\",startDate:\"2026-09-14\",endDate:\"2027-01-15\"}]},semesterId:455}",
+  "courseTable": "<html><body>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nvar actTeachers = [{id:\"E1\",name:\"甲教师\"},{id:\"E2\",name:\"乙教师\"}];\nactivity = new TaskActivity(\"\", \"高等代数\", teachers, \"\", \"\", \"教5-302\", \"011111111\");\nindex = 5*unitCount+12;\nindex = 5*unitCount+13;\n</script>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nvar actTeachers = [{id:\"F1\",name:\"丙教师\"}];\nactivity = new TaskActivity(\"\", \"大学体育\", teachers, \"\", \"\", \"\", \"00000000011\");\nindex = 2*unitCount+0;\nindex = 2*unitCount+1;\n</script>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nactivity = new TaskActivity(\"\", \"选修课程\", teachers, \"\", \"教6-102\", \"010\");\nindex = 7;\n</script>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nactivity = new TaskActivity(\"\", \"体育理论\", teachers, \"\", \"教6-101\", \"001\");\nindex = 6*unitCount+0;\n</script>\n</body></html>"
+}

@@ -1,0 +1,29 @@
+{
+  "now": "2026-09-12",
+  "term": { "code": "2026-2027-1", "name": "2026-2027学年第一学期", "source": "select-selected" },
+  "rows": [
+    [
+      { "text": "节次", "parts": [], "col": 0, "span": 1 },
+      { "text": "星期一", "parts": [], "col": 1, "span": 1 },
+      { "text": "星期二", "parts": [], "col": 2, "span": 1 },
+      { "text": "星期三", "parts": [], "col": 3, "span": 1 },
+      { "text": "星期四", "parts": [], "col": 4, "span": 1 },
+      { "text": "星期五", "parts": [], "col": 5, "span": 1 },
+      { "text": "星期六", "parts": [], "col": 6, "span": 1 },
+      { "text": "星期日", "parts": [], "col": 7, "span": 1 }
+    ],
+    [
+      { "text": "第1-2节", "parts": [], "col": 0, "span": 1 },
+      { "text": "线性代数", "parts": ["线性代数<br><font title=\"老师\">教师子</font><br><font title=\"周次(节次)\">1-16(周)[03-04节]</font><br><font title=\"教室\">Z201</font>"], "col": 1, "span": 1 }
+    ],
+    [
+      { "text": "第9-10节", "parts": [], "col": 0, "span": 1 },
+      { "text": "心理学", "parts": ["心理学<br><font title=\"老师\">教师丑</font><br><font title=\"周次(节次)\">1-16(周)</font><br><font title=\"教室\">Z202</font>"], "col": 2, "span": 1 },
+      { "text": "毕业设计", "parts": ["毕业设计<br><font title=\"老师\">教师寅</font><br><font title=\"周次(节次)\">1-22(周)</font><br><font title=\"教室\">暂无教室</font>"], "col": 4, "span": 1 }
+    ],
+    [
+      { "text": "第11-12节", "parts": [], "col": 0, "span": 1 },
+      { "text": "就业指导", "parts": ["就业指导<br><font title=\"老师\">教师卯</font><br><font title=\"周次(节次)\">1-8(周)</font><br><font title=\"教室\">Z203</font>"], "col": 4, "span": 1 }
+    ]
+  ]
+}

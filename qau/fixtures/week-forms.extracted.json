@@ -1,0 +1,34 @@
+{
+  "_note": "合成数据（非真实抓取）：周次五写法 + 括号里的教学班序号 + 空格分段。节次以行表头为准。",
+  "source": "qau-jsxsd-xskb",
+  "pageUrl": "http://jwglxt.qau.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-10-08",
+  "term": { "code": "2026-2027-1", "name": "2026-2027学年第一学期" },
+  "campus": "青岛校区",
+  "cols": 8,
+  "rows": [
+    [
+      { "col": 0, "span": 1, "text": "节次", "parts": [] },
+      { "col": 1, "span": 1, "text": "星期一", "parts": [] },
+      { "col": 2, "span": 1, "text": "星期二", "parts": [] },
+      { "col": 3, "span": 1, "text": "星期三", "parts": [] },
+      { "col": 4, "span": 1, "text": "星期四", "parts": [] },
+      { "col": 5, "span": 1, "text": "星期五", "parts": [] },
+      { "col": 6, "span": 1, "text": "星期六", "parts": [] },
+      { "col": 7, "span": 1, "text": "星期日", "parts": [] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第1,2节", "parts": [] },
+      { "col": 1, "span": 1, "text": "英语听力 李老师 1-16周(单) 博学楼A101", "parts": ["英语听力<br><font title='老师'>李老师</font><br><font title='周次(节次)'>1-16周(单)</font><br><font title='教室'>博学楼A101</font>"] },
+      { "col": 2, "span": 1, "text": "日语基础 高老师 (双)2-16周 博学楼B102", "parts": ["日语基础<br><font title='老师'>高老师</font><br><font title='周次(节次)'>(双)2-16周</font><br><font title='教室'>博学楼B102</font>"] },
+      { "col": 3, "span": 1, "text": "高等数学B 郑老师 1-16(单周) 博学楼C201", "parts": ["高等数学B<br><font title='老师'>郑老师</font><br><font title='周次(节次)'>1-16(单周)</font><br><font title='教室'>博学楼C201</font>"] },
+      { "col": 4, "span": 1, "text": "数字电路 孙老师 1-3,5-9周 实验楼D301", "parts": ["数字电路<br><font title='老师'>孙老师</font><br><font title='周次(节次)'>1-3,5-9周</font><br><font title='教室'>实验楼D301</font>"] },
+      { "col": 5, "span": 1, "text": "体育（一） (1)5周 操场", "parts": ["体育（一）<br><font title='周次(节次)'>(1)5周</font><br><font title='教室'>操场</font>"] },
+      { "col": 6, "span": 1, "text": "形势与政策 (1-2)7周 大礼堂", "parts": ["形势与政策<br><font title='周次(节次)'>(1-2)7周</font><br><font title='教室'>大礼堂</font>"] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第3,4节", "parts": [] },
+      { "col": 1, "span": 1, "text": "线性代数 周老师 1-16周 双 博学楼A203", "parts": ["线性代数<br><font title='老师'>周老师</font><br><font title='周次(节次)'>1-16周 双</font><br><font title='教室'>博学楼A203</font>"] }
+    ]
+  ]
+}

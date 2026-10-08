@@ -1,0 +1,48 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "已按「平度校区」的节次时间导入（教务页面不提供，三个校区的节次时间不同），请到「学期管理」里核对",
+    "开学日期无法从教务获取，已按最近的周一（2026-10-05）推算，请在「学期管理」里核对",
+    "教务页面不提供学期总周数：已按 20 周起算，请在「学期管理」里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-10-05",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:25", "end": "10:10" },
+        { "periodIndex": 3, "start": "10:20", "end": "11:05" },
+        { "periodIndex": 4, "start": "11:15", "end": "12:00" },
+        { "periodIndex": 5, "start": "12:00", "end": "12:25" },
+        { "periodIndex": 6, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 7, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 8, "start": "15:50", "end": "16:35" },
+        { "periodIndex": 9, "start": "16:45", "end": "17:30" },
+        { "periodIndex": 10, "start": "18:50", "end": "19:35" },
+        { "periodIndex": 11, "start": "19:45", "end": "20:30" }
+      ],
+      "courses": [
+        {
+          "name": "高等数学A",
+          "teacher": "张三",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "博学楼A101" }
+          ]
+        },
+        {
+          "name": "大学英语",
+          "teacher": "王芳",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 7, "endPeriod": 8, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "博学楼B203" }
+          ]
+        }
+      ]
+    }
+  ]
+}

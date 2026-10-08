@@ -1,0 +1,82 @@
+{
+  "specVersion": 1,
+  "key": "nuaa",
+  "name": "南京航空航天大学",
+  "initial": "N",
+  "version": "1.0.0",
+  "author": "上游 kemi-20（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://aao-eas.nuaa.edu.cn/eams/login.action",
+  "scheduleUrlHint": "https://aao-eas.nuaa.edu.cn/eams/courseTableForStd.action",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本路径（页面学期 + 教务起止日期 + 位图第 0 位为 0 + 明故宫/将军路作息 + 单双周与连堂合并 + 教师取自 actTeachers）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次位图基准（第 0 位为 1 的占位符跳过并计数、只有第 1 位为 1、单周与双周）",
+      "extracted": "fixtures/weeks-bitmap.extracted.json",
+      "expected": "fixtures/weeks-bitmap.expected.json"
+    },
+    {
+      "name": "合成用例：课程名原样保留（形势与政策（四）全角括号、大学物理(2) 半角括号、C语言程序设计(2)上机 括号后有内容，都不切；「  离散数学  」两端空白去掉）",
+      "extracted": "fixtures/course-name.extracted.json",
+      "expected": "fixtures/course-name.expected.json"
+    },
+    {
+      "name": "合成用例：边界（读不到 unitCount 按 13 并警告 + 裸数字定位按 13 换算并警告 + 换算越界的裸数字丢弃并警告 + 无 actTeachers 的表达式教师留空 + 教室括号去掉 + 教室为空留空）",
+      "extracted": "fixtures/edge-units.extracted.json",
+      "expected": "fixtures/edge-units.expected.json"
+    },
+    {
+      "name": "合成用例：节次映射（单元 5、6 为午间丢弃并点名课程；单元 1-4 与 7-13 分别映射为第 1-4 节与第 5-11 节）",
+      "extracted": "fixtures/section-map.extracted.json",
+      "expected": "fixtures/section-map.expected.json"
+    },
+    {
+      "name": "合成用例：天目湖校区（教室含「天目湖」，选天目湖作息表，并写明选表依据）",
+      "extracted": "fixtures/campus-tianmuhu.extracted.json",
+      "expected": "fixtures/campus-tianmuhu.expected.json"
+    },
+    {
+      "name": "合成用例：明故宫/将军路校区（教室不含「天目湖」或为空，选另一张作息表）",
+      "extracted": "fixtures/campus-other.extracted.json",
+      "expected": "fixtures/campus-other.expected.json"
+    },
+    {
+      "name": "合成用例：两校区混排（同时出现天目湖与非天目湖的课，取天目湖作息表并额外提醒核对）",
+      "extracted": "fixtures/campus-mixed.extracted.json",
+      "expected": "fixtures/campus-mixed.expected.json"
+    },
+    {
+      "name": "合成用例：教师回落（actTeachers 缺失时字面量 args[1] 回落为教师；表达式留空并出声）与学期名缺失（只提醒学期名）",
+      "extracted": "fixtures/fallback.extracted.json",
+      "expected": "fixtures/fallback.expected.json"
+    },
+    {
+      "name": "合成用例：学期名（rawName 为「第一学期」、学年 2026-2027 → 补成「2026-2027学年第一学期」，不出学期名提醒）",
+      "extracted": "fixtures/term-name-kind.extracted.json",
+      "expected": "fixtures/term-name-kind.expected.json"
+    },
+    {
+      "name": "合成用例：学期名认不出（rawName 为「5」→ 兜底名「南京航空航天大学 2026-2027学年（学期未知）」并出提醒）",
+      "extracted": "fixtures/term-name-unknown.extracted.json",
+      "expected": "fixtures/term-name-unknown.expected.json"
+    },
+    {
+      "name": "合成用例：学期名是原型属性名（rawName 为「constructor」→ 不拼出函数源码，走同一兜底名并出提醒）",
+      "extracted": "fixtures/term-name-proto.extracted.json",
+      "expected": "fixtures/term-name-proto.expected.json"
+    },
+    {
+      "name": "合成用例：开学日推算（教务没给起止日期、rawName 为「第二学期」、学年 2026-2027 → 第 1 周按 2 月 20 日所在周的周一推算为 2027-02-15，总周数取缺省 20 周，学期名补成「2026-2027学年第二学期」）",
+      "extracted": "fixtures/term-start-second.extracted.json",
+      "expected": "fixtures/term-start-second.expected.json"
+    }
+  ]
+}

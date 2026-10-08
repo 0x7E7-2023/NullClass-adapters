@@ -1,0 +1,24 @@
+{
+  "now": "2026-09-12",
+  "term": { "code": "2026-2027-1", "name": "2026-2027学年第一学期", "source": "select-selected" },
+  "rows": [
+    [
+      { "text": "节次", "parts": [], "col": 0, "span": 1 },
+      { "text": "星期一", "parts": [], "col": 1, "span": 1 },
+      { "text": "星期二", "parts": [], "col": 2, "span": 1 },
+      { "text": "星期三", "parts": [], "col": 3, "span": 1 },
+      { "text": "星期四", "parts": [], "col": 4, "span": 1 },
+      { "text": "星期五", "parts": [], "col": 5, "span": 1 },
+      { "text": "星期六", "parts": [], "col": 6, "span": 1 },
+      { "text": "星期日", "parts": [], "col": 7, "span": 1 }
+    ],
+    [
+      { "text": "第1-2节", "parts": [], "col": 0, "span": 1 },
+      { "text": "数据结构", "parts": ["数据结构<br><font title=\"老师\">教师戊</font><br><font title=\"周次(节次)\">1-15(单周)</font><br><font title=\"教室\">Z101</font>"], "col": 1, "span": 1 },
+      { "text": "操作系统", "parts": ["操作系统<br><font title=\"老师\">教师己</font><br><font title=\"周次(节次)\">2-16(双周)</font><br><font title=\"教室\">Z102</font>"], "col": 2, "span": 1 },
+      { "text": "计算机网络", "parts": ["计算机网络<br><font title=\"老师\">教师庚</font><br><font title=\"周次(节次)\">1-8周(单),9-16周(双)</font><br><font title=\"教室\">Z103</font>"], "col": 3, "span": 1 },
+      { "text": "形势与政策", "parts": ["形势与政策<br><font title=\"老师\">教师辛</font><br><font title=\"周次(节次)\">1-16(单双周)</font><br><font title=\"教室\">Z104</font>"], "col": 4, "span": 1 },
+      { "text": "大学物理", "parts": ["大学物理<br><font title=\"老师\">教师壬</font><br><font title=\"周次(节次)\">1-16(周)(1)</font><br><font title=\"教室\">Z105</font>"], "col": 5, "span": 1 }
+    ]
+  ]
+}

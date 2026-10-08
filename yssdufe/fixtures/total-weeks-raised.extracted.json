@@ -1,0 +1,464 @@
+{
+  "_note": "合成数据（非真实抓取）：按本校上游 YSSDUFE/yssdufe_01.js 读取的字段形状编造——强智 /jsxsd/xskb/xskb_list.do 的 #kbtable 课表（首列节次标签 + 星期一…星期日；每格 div.kbcontent 里是「课名<br>font[title=老师/教师、周次(节次)、教室]」），与 /jsxsd/jxzl/jxzl_query 的 #kbtable 教学周历（表头单字 日一二三四五六，日期挂在 td[title] 上）。覆盖：单双周、多段周次、一格两门课、无教师无教室。本用例以 basic 为底，只把大学物理改成 1-21 周（[05-06节]），钉住 B3：课表周次超过周历的 20 周时，总周数抬到 21 周并出声；周历仍是 20 周，其它课不变。",
+  "source": "qz-jsxsd",
+  "pageUrl": "https://ysjw.sdufe.edu.cn:8081/jsxsd/xskb/xskb_list.do",
+  "now": "2026-09-13",
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期"
+  },
+  "cols": 8,
+  "calendar": {
+    "found": true,
+    "rows": [
+      [
+        {
+          "col": 0,
+          "text": "周次"
+        },
+        {
+          "col": 1,
+          "text": "日"
+        },
+        {
+          "col": 2,
+          "text": "一"
+        },
+        {
+          "col": 3,
+          "text": "二"
+        },
+        {
+          "col": 4,
+          "text": "三"
+        },
+        {
+          "col": 5,
+          "text": "四"
+        },
+        {
+          "col": 6,
+          "text": "五"
+        },
+        {
+          "col": 7,
+          "text": "六"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "1"
+        },
+        {
+          "col": 1,
+          "title": "2026年09月06日"
+        },
+        {
+          "col": 2,
+          "title": "2026年09月07日"
+        },
+        {
+          "col": 3,
+          "title": "2026年09月08日"
+        },
+        {
+          "col": 4,
+          "title": "2026年09月09日"
+        },
+        {
+          "col": 5,
+          "title": "2026年09月10日"
+        },
+        {
+          "col": 6,
+          "title": "2026年09月11日"
+        },
+        {
+          "col": 7,
+          "title": "2026年09月12日"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "2"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "3"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "4"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "5"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "6"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "7"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "8"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "9"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "10"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "11"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "12"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "13"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "14"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "15"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "16"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "17"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "18"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "19"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "20"
+        }
+      ]
+    ]
+  },
+  "rows": [
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "节次",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "星期一",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "星期二",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "星期三",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "星期四",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "星期五",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "星期六",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "星期日",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第1-2节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "高等数学A(一) 任课教师:壬某 1-16周[01-02节] 教1-101",
+        "parts": [
+          "高等数学A(一)<br><font title=\"教师\">任课教师:壬某</font><br><font title=\"周次(节次)\">1-16周[01-02节]</font><br><font title=\"教室\">教1-101</font>"
+        ]
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "大学英语(一) 任课教师:子某 1-16周(单)[01-02节] 外语楼B203",
+        "parts": [
+          "大学英语(一)<br><font title=\"教师\">任课教师:子某</font><br><font title=\"周次(节次)\">1-16周(单)[01-02节]</font><br><font title=\"教室\">外语楼B203</font>"
+        ]
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第3-4节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "线性代数 任课教师:丑某 1-8周,10-16周[03-04节] 教2-305",
+        "parts": [
+          "线性代数<br><font title=\"教师\">任课教师:丑某</font><br><font title=\"周次(节次)\">1-8周,10-16周[03-04节]</font><br><font title=\"教室\">教2-305</font>"
+        ]
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "体育(一) 任课教师:巳某 3-17周(单)[03-04节] 体育馆 形势与政策 任课教师:酉某 11-12周[03-04节] 教3-201",
+        "parts": [
+          "体育(一)<br><font title=\"教师\">任课教师:巳某</font><br><font title=\"周次(节次)\">3-17周(单)[03-04节]</font><br><font title=\"教室\">体育馆</font>---------------------形势与政策<br><font title=\"教师\">任课教师:酉某</font><br><font title=\"周次(节次)\">11-12周[03-04节]</font><br><font title=\"教室\">教3-201</font>"
+        ]
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第5-6节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "大学物理 任课教师:辛某 1-21周[05-06节] 教1-208",
+        "parts": [
+          "大学物理<br><font title=\"教师\">任课教师:辛某</font><br><font title=\"周次(节次)\">1-21周[05-06节]</font><br><font title=\"教室\">教1-208</font>"
+        ]
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "概率论与数理统计 任课教师:己某 2-16周(双)[05-06节] 教4-102",
+        "parts": [
+          "概率论与数理统计<br><font title=\"教师\">任课教师:己某</font><br><font title=\"周次(节次)\">2-16周(双)[05-06节]</font><br><font title=\"教室\">教4-102</font>"
+        ]
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第9-10节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "创新创业基础 1-4周[09-10节]",
+        "parts": [
+          "创新创业基础<br><font title=\"周次(节次)\">1-4周[09-10节]</font>"
+        ]
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ]
+  ]
+}

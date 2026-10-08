@@ -1,0 +1,25 @@
+{
+  "_note": "合成数据（非真实抓取）：学期下拉框缺失，学期名与学期号都拿不到，学期名用占位并出声；不许拿适配器名当学期名。",
+  "source": "qau-jsxsd-xskb",
+  "pageUrl": "http://jwglxt.qau.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-10-08",
+  "term": { "code": null, "name": null },
+  "campus": "青岛校区",
+  "cols": 8,
+  "rows": [
+    [
+      { "col": 0, "span": 1, "text": "节次", "parts": [] },
+      { "col": 1, "span": 1, "text": "星期一", "parts": [] },
+      { "col": 2, "span": 1, "text": "星期二", "parts": [] },
+      { "col": 3, "span": 1, "text": "星期三", "parts": [] },
+      { "col": 4, "span": 1, "text": "星期四", "parts": [] },
+      { "col": 5, "span": 1, "text": "星期五", "parts": [] },
+      { "col": 6, "span": 1, "text": "星期六", "parts": [] },
+      { "col": 7, "span": 1, "text": "星期日", "parts": [] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第1,2节", "parts": [] },
+      { "col": 1, "span": 1, "text": "高等数学A 张三 1-16(周) 博学楼A101", "parts": ["高等数学A<br><font title='老师'>张三</font><br><font title='周次(节次)'>1-16(周)</font><br><font title='教室'>博学楼A101</font>"] }
+    ]
+  ]
+}

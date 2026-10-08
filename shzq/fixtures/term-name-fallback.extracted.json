@@ -1,0 +1,17 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程、教师、教室均为虚构，无真实个人信息。页面读不到学年的情况是编的（xnm 与 xnmText 都为空）。",
+  "_case": "学期名兜底：页面读不到学年（xnm 为空、下拉框文本也不是「YYYY-YYYY」）时，学期名用「学校名 + 学期」，不用适配器名；开学日按 today 的周一推算（today 固定为 2026-09-13，周日 → 周一 2026-09-07）；教师与教室拿不到时为 null，不写「未知」",
+  "term": { "xnm": "", "xqm": "3", "xnmText": "", "xqmText": "第一学期" },
+  "today": "2026-09-13",
+  "campusId": "01",
+  "raw": {
+    "kbList": [
+      { "kcmc": "学期名兜底课甲", "xm": "教师甲", "cdmc": "教学楼F-101", "xqj": "2", "jcs": "1-2", "zcd": "1-8周" },
+      { "kcmc": "学期名兜底课乙", "xm": "", "cdmc": "", "xqj": "5", "jcs": "3-4", "zcd": "1-16周(双)" }
+    ],
+    "sjkList": []
+  },
+  "total": null,
+  "periodTimes": null,
+  "calendar": null
+}

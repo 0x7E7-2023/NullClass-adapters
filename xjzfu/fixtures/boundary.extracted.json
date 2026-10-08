@@ -1,0 +1,57 @@
+{
+  "term": {
+    "code": "2025-2026-2",
+    "name": "2025-2026学年第二学期",
+    "source": "api-first",
+    "firstDay": "2026-02-23",
+    "firstDaySource": "guess",
+    "totalWeeks": null
+  },
+  "rows": [
+    {
+      "courseName": "大学物理",
+      "dayOfWeek": 2,
+      "beginSection": "1",
+      "endSection": "2",
+      "week": "01100000000000000000",
+      "weeksAndTeachers": "2-3周/王教授[主讲];赵助教[辅讲]",
+      "placeName": "物理楼201"
+    },
+    {
+      "courseName": "大学物理",
+      "dayOfWeek": 4,
+      "beginSection": "3",
+      "endSection": "4",
+      "week": "00011111111111111111",
+      "weeksAndTeachers": "4-20周/王教授[主讲]",
+      "placeName": "物理楼201"
+    },
+    {
+      "courseName": "程序设计基础",
+      "dayOfWeek": 5,
+      "beginSection": 9,
+      "endSection": 10,
+      "week": "11111111111111111111",
+      "weeksAndTeachers": "1-20周/钱二[主讲];孙三[辅讲]",
+      "placeName": ""
+    },
+    {
+      "courseName": "体育选项",
+      "dayOfWeek": 7,
+      "beginSection": 11,
+      "endSection": 12,
+      "week": "11111111111111111111",
+      "weeksAndTeachers": "1-20周/郑四[主讲]",
+      "placeName": "操场"
+    },
+    {
+      "courseName": "线性代数",
+      "dayOfWeek": 6,
+      "beginSection": 1,
+      "endSection": 2,
+      "week": "",
+      "weeksAndTeachers": "3-5周/许五[主讲]",
+      "placeName": ""
+    }
+  ]
+}

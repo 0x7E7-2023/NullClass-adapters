@@ -1,0 +1,15 @@
+{
+  "_note": "合成 fixture：不是真实抓取。南京航空航天大学的教务账号我们没有，这份数据按上游 NUAA/nuaa_01.js 实际读取的字段形状编出来（结构同 basic）。本件测天目湖校区：三门课的教室都含「天目湖」，整学期选天目湖作息表；「工程制图」一门有两处定位，原始安排计 2 条，合并成一个 1-2 节的块，但天目湖安排数按原始安排计，共 4 条（不按块计）。「天目湖校区教3-205(东)」括号去掉。课程、教师、教室都是虚构的。",
+  "today": "2026-09-17",
+  "semester": {
+    "id": "454",
+    "rawName": "1",
+    "schoolYear": "2026-2027",
+    "startDate": "2026-08-31",
+    "endDate": "2027-01-10",
+    "source": "page"
+  },
+  "unitCountPage": 13,
+  "semesterCalendar": "{semesters:{\"1\":[{id:454,name:\"1\",schoolYear:\"2026-2027\",startDate:\"2026-08-31\",endDate:\"2027-01-10\"}],\"2\":[]},semesterId:454}",
+  "courseTable": "<html><head><title>学生课表</title></head><body><script type=\"text/javascript\">var unitCount = 13;</script><script type=\"text/javascript\">var teachers = [{id:\"E1\",name:\"许一\"}];var actTeachers = [{id:\"E1\",name:\"许一\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"工程制图\", \"\", \"\", \"天目湖校区教3-101\", \"0111111000000000000000000000000000000000000000000\");index = 0*unitCount+0;index = 0*unitCount+1;</script><script type=\"text/javascript\">var teachers = [{id:\"E2\",name:\"胡二\"}];var actTeachers = [{id:\"E2\",name:\"胡二\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"材料力学\", \"\", \"\", \"天目湖校区教3-205(东)\", \"0001111110000000000000000000000000000000000000000000\");index = 2*unitCount+2;</script><script type=\"text/javascript\">var teachers = [{id:\"E3\",name:\"吕三\"}];var actTeachers = [{id:\"E3\",name:\"吕三\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"光学基础\", \"\", \"\", \"天目湖校区教1-301\", \"01111000000000000000000000000000000000000000000000\");index = 3*unitCount+8;</script></body></html>"
+}

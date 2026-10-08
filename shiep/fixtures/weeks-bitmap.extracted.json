@@ -1,0 +1,15 @@
+{
+  "_note": "合成 fixture：不是真实抓取，数据按上游 SHIEP/SHIEP.js 的字段形状编出，课程与教师均为虚构，不含任何学号姓名。本文件专测周次位图：第 0 位占位、只有第 0 位为 1 的活动、第 30 周上限与越界周次丢弃。",
+  "today": "2026-10-08",
+  "semester": {
+    "id": "424",
+    "rawName": "1",
+    "schoolYear": "2026-2027",
+    "startDate": "2026-08-31",
+    "endDate": "2027-01-17",
+    "source": "current"
+  },
+  "unitCountPage": 13,
+  "semesterCalendar": "{yearDom:'',termDom:'',semesters:{},yearIndex:'13',termIndex:'0',semesterId:'424'}",
+  "courseTable": "new CourseTable(); var unitCount = 13; activity = new TaskActivity(\"1101\",\"合成教师丁\",\"C201\",\"线性代数\",\"R201\",\"教学楼A201\",\"11000000000000000000000000000000000\"); index = 1*unitCount+0; activity = new TaskActivity(\"1102\",\"合成教师戊\",\"C202\",\"体育\",\"R202\",\"操场\",\"10000000000000000000000000000000000\"); index = 0*unitCount+4; activity = new TaskActivity(\"1103\",\"合成教师己\",\"C203\",\"数据结构\",\"R203\",\"教学楼B105\",\"00110000000000000000000000000011100\"); index = 3*unitCount+4; "
+}

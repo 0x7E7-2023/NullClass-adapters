@@ -1,0 +1,64 @@
+{
+  "specVersion": 1,
+  "key": "jxust",
+  "name": "江西理工大学",
+  "initial": "J",
+  "version": "1.0.0",
+  "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://authserver.jxust.edu.cn/authserver/login?service=https://jw.jxust.edu.cn/jsxsd/",
+  "scheduleUrlHint": "https://jw.jxust.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jw.jxust.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（表头对齐、一格两门课、节次取行标签）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次单双与括号序号（1-15(单周) / 2-16(双周) / 1-8周(单),9-16周(双) / 单双周 / 括号里的 (1)）",
+      "extracted": "fixtures/weeks-parity.extracted.json",
+      "expected": "fixtures/weeks-parity.expected.json"
+    },
+    {
+      "name": "合成用例：节次边界（格内 [03-04节] 盖过行标签 / 晚上 9–10 节 / 第 11–12 节超出作息表 / 第 22 周抬高总周数）",
+      "extracted": "fixtures/sections.extracted.json",
+      "expected": "fixtures/sections.expected.json"
+    },
+    {
+      "name": "合成用例：周次全都读不出（12 门课 + 1 门正常课，开学提醒保留，块级提醒合成一行）",
+      "extracted": "fixtures/unreadable-weeks.extracted.json",
+      "expected": "fixtures/unreadable-weeks.expected.json"
+    },
+    {
+      "name": "合成用例：表头只认出周一到周五（周六有课、周日表头空、列 8 的备注与对不上星期的课）",
+      "extracted": "fixtures/partial-header.extracted.json",
+      "expected": "fixtures/partial-header.expected.json"
+    },
+    {
+      "name": "合成用例：节次写法（全角冒号时间标签 / [030405节] / [01020304节] / [1-50000000节] 回落标签 / [2026节] 不连续回落标签）",
+      "extracted": "fixtures/period-forms.extracted.json",
+      "expected": "fixtures/period-forms.expected.json"
+    },
+    {
+      "name": "合成用例：合并的「周末」格跨周六周日（课记在两天上，并提醒；表头只认出周一到周五）",
+      "extracted": "fixtures/merged-weekend.extracted.json",
+      "expected": "fixtures/merged-weekend.expected.json"
+    },
+    {
+      "name": "合成用例：节次写法收尾（[1-节] 缺止端回落标签 / [02,31节] 超出 30 整段认不出 / [30-31节] 范围超出 30 回落标签 / [03-05-07节] 不连续回落标签 / 合并格 [2026节] 跨两天只算一门课 / [01-03节] 两个数是起止，读成第 1-3 节）",
+      "extracted": "fixtures/period-edges.extracted.json",
+      "expected": "fixtures/period-edges.expected.json"
+    },
+    {
+      "name": "合成用例：表头只认出周一到周五、周六周日没有课（补推的天没有安排，不提醒）",
+      "extracted": "fixtures/guess-empty.extracted.json",
+      "expected": "fixtures/guess-empty.expected.json"
+    }
+  ]
+}

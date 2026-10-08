@@ -1,0 +1,26 @@
+{
+  "_note": "合成数据（非真实抓取）：有课的格子落在不对应任何星期的列上。表头只到星期日（第 1–7 列），第 8 列的「体育」对不上星期几：计数并点名进 warnings，不静默丢课。周一的高等数学A 1-2 节正常导入。",
+  "source": "qau-jsxsd-xskb",
+  "pageUrl": "http://jwglxt.qau.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-10-08",
+  "term": { "code": "2026-2027-1", "name": "2026-2027学年第一学期" },
+  "campus": "青岛校区",
+  "cols": 9,
+  "rows": [
+    [
+      { "col": 0, "span": 1, "text": "节次", "parts": [] },
+      { "col": 1, "span": 1, "text": "星期一", "parts": [] },
+      { "col": 2, "span": 1, "text": "星期二", "parts": [] },
+      { "col": 3, "span": 1, "text": "星期三", "parts": [] },
+      { "col": 4, "span": 1, "text": "星期四", "parts": [] },
+      { "col": 5, "span": 1, "text": "星期五", "parts": [] },
+      { "col": 6, "span": 1, "text": "星期六", "parts": [] },
+      { "col": 7, "span": 1, "text": "星期日", "parts": [] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第1,2节", "parts": [] },
+      { "col": 1, "span": 1, "text": "高等数学A 张三 1-16(周)[01-02节] 博学楼A101", "parts": ["高等数学A<br><font title='老师'>张三</font><br><font title='周次(节次)'>1-16(周)[01-02节]</font><br><font title='教室'>博学楼A101</font>"] },
+      { "col": 8, "span": 1, "text": "体育 刘老师 1-16(周)[01-02节] 操场", "parts": ["体育<br><font title='老师'>刘老师</font><br><font title='周次(节次)'>1-16(周)[01-02节]</font><br><font title='教室'>操场</font>"] }
+    ]
+  ]
+}

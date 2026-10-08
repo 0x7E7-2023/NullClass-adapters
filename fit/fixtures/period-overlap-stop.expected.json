@@ -1,0 +1,61 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期校历，学期总周数按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "课表用到了作息表里没有的第 11-14 节，已补上时间：第 11-14 节按上一节下课后课间 5 分钟、每节 45 分钟顺推，请在学期管理里核对",
+    "课表用到了第 15 节及以后，顺推的时间会越过当天 23:59，这些节次没有补上时间（课程已导入），请在学期管理里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 7, "start": "16:00", "end": "16:45" },
+        { "periodIndex": 8, "start": "16:55", "end": "17:40" },
+        { "periodIndex": 9, "start": "18:10", "end": "18:55" },
+        { "periodIndex": 10, "start": "19:45", "end": "20:30" },
+        { "periodIndex": 11, "start": "20:35", "end": "21:20" },
+        { "periodIndex": 12, "start": "21:25", "end": "22:10" },
+        { "periodIndex": 13, "start": "22:15", "end": "23:00" },
+        { "periodIndex": 14, "start": "23:05", "end": "23:50" }
+      ],
+      "courses": [
+        {
+          "name": "实验化学",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 11, "endPeriod": 12, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "理化楼201" }
+          ]
+        },
+        {
+          "name": "临床技能",
+          "teacher": "乙老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 13, "endPeriod": 15, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "技能楼302" }
+          ]
+        },
+        {
+          "name": "病理学",
+          "teacher": "丙老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 9, "endPeriod": 10, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教学楼2-101" }
+          ]
+        }
+      ]
+    }
+  ]
+}

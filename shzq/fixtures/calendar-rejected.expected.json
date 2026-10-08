@@ -1,0 +1,75 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第二学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务校历给出的开学日期（2026-09-07）不属于这个学期，已忽略；第 1 周按「第二学期 = 2 月 20 日所在周的周一」推算为 2027-02-15，请在学期管理里核对成学校实际开学日",
+    "教务校历不属于这个学期（见上一条），学期总周数按适配器内置的 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "教务系统没有给出节次时间，已按适配器内置的 12 节节次时间导入（第 1 节 08:35-09:15），时间可能与学校实际作息不符，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2027-02-15",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:35", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:15", "end": "09:55" },
+        { "periodIndex": 3, "start": "10:10", "end": "10:50" },
+        { "periodIndex": 4, "start": "10:50", "end": "11:30" },
+        { "periodIndex": 5, "start": "12:35", "end": "13:15" },
+        { "periodIndex": 6, "start": "13:15", "end": "13:55" },
+        { "periodIndex": 7, "start": "14:10", "end": "14:50" },
+        { "periodIndex": 8, "start": "14:50", "end": "15:30" },
+        { "periodIndex": 9, "start": "15:45", "end": "16:25" },
+        { "periodIndex": 10, "start": "16:25", "end": "17:05" },
+        { "periodIndex": 11, "start": "18:15", "end": "18:55" },
+        { "periodIndex": 12, "start": "18:55", "end": "19:35" }
+      ],
+      "courses": [
+        {
+          "name": "第二学期课甲",
+          "teacher": "教师甲",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教学楼C-101" }
+          ]
+        },
+        {
+          "name": "第二学期课乙",
+          "teacher": "教师乙",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 3, "weekType": "ALL", "location": "教学楼C-102" },
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 5, "endWeek": 9, "weekType": "ALL", "location": "教学楼C-102" }
+          ]
+        },
+        {
+          "name": "第二学期课丙",
+          "teacher": "教师丙",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 3, "endPeriod": 4, "startWeek": 4, "endWeek": 16, "weekType": "EVEN", "location": "教学楼C-103" }
+          ]
+        },
+        {
+          "name": "第二学期课丁",
+          "teacher": "教师丁",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 5, "endPeriod": 6, "startWeek": 13, "endWeek": 16, "weekType": "ALL", "location": "教学楼C-104" }
+          ]
+        },
+        {
+          "name": "第二学期课戊",
+          "teacher": "教师戊",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 1, "endPeriod": 2, "startWeek": 2, "endWeek": 12, "weekType": "EVEN", "location": "教学楼C-105" }
+          ]
+        }
+      ]
+    }
+  ]
+}

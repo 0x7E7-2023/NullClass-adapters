@@ -1,0 +1,67 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "总周数 32 周超过了 30 周，已按 30 周导入，请核对",
+    "教务给的节次时间有不合法的地方（格式不对、结束不晚于开始，或节次号不连续），已整表改用本校 12 节的内置作息，请核对上课时间",
+    "有 1 条排课的节次超出了作息表（共 12 节），已保留，请核对上课时间",
+    "有 1 条排课记录缺少课名、星期、节次或周次，没有导入",
+    "有 2 个周次超过了第 30 周，超出的部分没有导入"
+  ],
+  "terms": [
+    {
+      "name": "南京信息工程大学 2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 30,
+      "periodTimes": [
+        {"periodIndex": 1, "start": "08:00", "end": "08:45"},
+        {"periodIndex": 2, "start": "08:55", "end": "09:40"},
+        {"periodIndex": 3, "start": "10:10", "end": "10:55"},
+        {"periodIndex": 4, "start": "11:05", "end": "11:50"},
+        {"periodIndex": 5, "start": "13:45", "end": "14:30"},
+        {"periodIndex": 6, "start": "14:40", "end": "15:25"},
+        {"periodIndex": 7, "start": "15:55", "end": "16:40"},
+        {"periodIndex": 8, "start": "16:50", "end": "17:35"},
+        {"periodIndex": 9, "start": "18:45", "end": "19:30"},
+        {"periodIndex": 10, "start": "19:40", "end": "20:25"},
+        {"periodIndex": 11, "start": "20:35", "end": "21:20"},
+        {"periodIndex": 12, "start": "21:25", "end": "22:00"}
+      ],
+      "courses": [
+        {
+          "name": "虚构周次甲",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {"dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 1, "weekType": "ALL", "location": "教1-101（江北校区）"}
+          ]
+        },
+        {
+          "name": "虚构周次乙",
+          "teacher": "刘一",
+          "note": null,
+          "blocks": [
+            {"dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 2, "endWeek": 2, "weekType": "ALL", "location": "教2-202"}
+          ]
+        },
+        {
+          "name": "虚构边界丙",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {"dayOfWeek": 3, "startPeriod": 5, "endPeriod": 6, "startWeek": 27, "endWeek": 29, "weekType": "ODD", "location": "江东校区"}
+          ]
+        },
+        {
+          "name": "虚构节次丁",
+          "teacher": "钱十",
+          "note": null,
+          "blocks": [
+            {"dayOfWeek": 5, "startPeriod": 11, "endPeriod": 13, "startWeek": 1, "endWeek": 30, "weekType": "ALL", "location": "教7-101"}
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "now": "2026-09-12",
+  "term": { "code": "2026-2027-1", "name": "2026-2027学年第一学期", "source": "select-selected" },
+  "rows": [
+    [
+      { "text": "节次", "parts": [], "col": 0, "span": 1 },
+      { "text": "星期一", "parts": [], "col": 1, "span": 1 },
+      { "text": "星期二", "parts": [], "col": 2, "span": 1 },
+      { "text": "星期三", "parts": [], "col": 3, "span": 1 },
+      { "text": "星期四", "parts": [], "col": 4, "span": 1 },
+      { "text": "星期五", "parts": [], "col": 5, "span": 1 },
+      { "text": "星期六", "parts": [], "col": 6, "span": 1 },
+      { "text": "星期日", "parts": [], "col": 7, "span": 1 }
+    ],
+    [
+      { "text": "第一大节(01,02小节)", "parts": [], "col": 0, "span": 1 },
+      { "text": "课甲1", "parts": ["课甲1<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">单周</font><br><font title=\"教室\">R1</font>"], "col": 1, "span": 1 },
+      { "text": "课甲2", "parts": ["课甲2<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">单周</font><br><font title=\"教室\">R2</font>"], "col": 2, "span": 1 },
+      { "text": "课甲3", "parts": ["课甲3<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">单周</font><br><font title=\"教室\">R3</font>"], "col": 3, "span": 1 },
+      { "text": "课甲4", "parts": ["课甲4<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">单周</font><br><font title=\"教室\">R4</font>"], "col": 4, "span": 1 }
+    ],
+    [
+      { "text": "第二大节(03,04小节)", "parts": [], "col": 0, "span": 1 },
+      { "text": "课甲5", "parts": ["课甲5<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">单周</font><br><font title=\"教室\">R5</font>"], "col": 1, "span": 1 },
+      { "text": "课甲6", "parts": ["课甲6<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">单周</font><br><font title=\"教室\">R6</font>"], "col": 2, "span": 1 },
+      { "text": "课甲7", "parts": ["课甲7<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">单周</font><br><font title=\"教室\">R7</font>"], "col": 3, "span": 1 },
+      { "text": "课甲8", "parts": ["课甲8<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">单周</font><br><font title=\"教室\">R8</font>"], "col": 4, "span": 1 }
+    ],
+    [
+      { "text": "第三大节(05,06小节)", "parts": [], "col": 0, "span": 1 },
+      { "text": "课甲9", "parts": ["课甲9<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">单周</font><br><font title=\"教室\">R9</font>"], "col": 1, "span": 1 },
+      { "text": "课甲10", "parts": ["课甲10<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">单周</font><br><font title=\"教室\">R10</font>"], "col": 2, "span": 1 },
+      { "text": "课甲11", "parts": ["课甲11<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">单周</font><br><font title=\"教室\">R11</font>"], "col": 3, "span": 1 },
+      { "text": "课甲12", "parts": ["课甲12<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">单周</font><br><font title=\"教室\">R12</font>"], "col": 4, "span": 1 }
+    ],
+    [
+      { "text": "第五大节(09,10小节)", "parts": [], "col": 0, "span": 1 },
+      { "text": "线性代数", "parts": ["线性代数<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)</font><br><font title=\"教室\">Z301</font>"], "col": 1, "span": 1 }
+    ]
+  ]
+}

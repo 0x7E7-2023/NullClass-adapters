@@ -1,0 +1,31 @@
+{
+  "specVersion": 1,
+  "key": "xjzfu",
+  "name": "新疆政法学院",
+  "initial": "X",
+  "version": "1.0.0",
+  "author": "上游 jesse-s4（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwxt.xjzfu.edu.cn/jwapp/sys/homeapp/home/index.html",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（学期编号与开学日来自教务；位串周次；主讲教师；多天多节；作息 1–8 节全覆盖）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：本校专属边界（位串下标 i 即第 i+1 周；主讲/辅讲混排、同一主讲跨时段去重；无校历时开学日推算并告警；第 12 节超出作息表时不写 periodTimes）",
+      "extracted": "fixtures/boundary.extracted.json",
+      "expected": "fixtures/boundary.expected.json"
+    },
+    {
+      "name": "合成用例：文字周次兜底（位串缺失或全 0，周次只能取自文字：1-16周、1-17(单周)、2-16(双周)、2-3周,5-6周）",
+      "extracted": "fixtures/textweeks.extracted.json",
+      "expected": "fixtures/textweeks.expected.json"
+    }
+  ]
+}

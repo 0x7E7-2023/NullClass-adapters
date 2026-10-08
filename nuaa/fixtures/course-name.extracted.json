@@ -1,0 +1,15 @@
+{
+  "_note": "合成 fixture：不是真实抓取。南京航空航天大学的教务账号我们没有，这份数据按上游 NUAA/nuaa_01.js 实际读取的字段形状编出来（结构同 basic）。本件专测课程名：「形势与政策（四）」全角括号、「大学物理(2)」半角括号、「C语言程序设计(2)上机」括号后还有内容，三者都原样保留，不摘括号、不摘序号；「  离散数学  」两端空白只去掉空白。课程、教师、教室都是虚构的，不含任何真实身份信息。",
+  "today": "2026-09-17",
+  "semester": {
+    "id": "454",
+    "rawName": "1",
+    "schoolYear": "2026-2027",
+    "startDate": "2026-08-31",
+    "endDate": "2027-01-10",
+    "source": "page"
+  },
+  "unitCountPage": 13,
+  "semesterCalendar": "{semesters:{\"1\":[{id:445,name:\"1\",schoolYear:\"2025-2026\",startDate:\"2025-08-25\",endDate:\"2026-01-04\"},{id:454,name:\"1\",schoolYear:\"2026-2027\",startDate:\"2026-08-31\",endDate:\"2027-01-10\"}],\"2\":[{id:446,name:\"2\",schoolYear:\"2025-2026\",startDate:\"2026-02-23\",endDate:\"2026-07-05\"}]},semesterId:454}",
+  "courseTable": "<html><head><title>学生课表</title></head><body><script type=\"text/javascript\">var unitCount = 13;</script><script type=\"text/javascript\">var teachers = [{id:\"A1\",name:\"周立\"}];var actTeachers = [{id:\"A1\",name:\"周立\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"形势与政策（四）\", \"\", \"\", \"教1-301\", \"0111111111111111100000000000000000000000000000000\");index = 0*unitCount+0;</script><script type=\"text/javascript\">var teachers = [{id:\"A2\",name:\"孙磊\"}];var actTeachers = [{id:\"A2\",name:\"孙磊\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"大学物理(2)\", \"\", \"\", \"综合楼C401\", \"0111111110000000000000000000000000000000000000000\");index = 1*unitCount+1;</script><script type=\"text/javascript\">var teachers = [{id:\"A3\",name:\"吴斌\"}];var actTeachers = [{id:\"A3\",name:\"吴斌\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"C语言程序设计(2)上机\", \"\", \"\", \"信息楼A305\", \"00000000011111111000000000000000000000000000000000\");index = 2*unitCount+2;</script><script type=\"text/javascript\">var teachers = [{id:\"A4\",name:\"陈敏\"}];var actTeachers = [{id:\"A4\",name:\"陈敏\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"  离散数学  \", \"\", \"\", \"教1-302\", \"0111100000000000000000000000000000000000000000000000\");index = 3*unitCount+3;</script></body></html>"
+}

@@ -1,0 +1,28 @@
+{
+  "now": "2026-09-12",
+  "term": { "code": "2026-2027-1", "name": "2026-2027学年第一学期", "source": "select-selected" },
+  "rows": [
+    [
+      { "text": "节次", "parts": [], "col": 0, "span": 1 },
+      { "text": "星期一", "parts": [], "col": 1, "span": 1 },
+      { "text": "星期二", "parts": [], "col": 2, "span": 1 },
+      { "text": "星期三", "parts": [], "col": 3, "span": 1 },
+      { "text": "星期四", "parts": [], "col": 4, "span": 1 },
+      { "text": "星期五", "parts": [], "col": 5, "span": 1 },
+      { "text": "星期六", "parts": [], "col": 6, "span": 1 },
+      { "text": "星期日", "parts": [], "col": 7, "span": 1 }
+    ],
+    [
+      { "text": "第三大节(05,06小节)", "parts": [], "col": 0, "span": 1 },
+      { "text": "课丁1", "parts": ["课丁1<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[1-节]</font><br><font title=\"教室\">Z1</font>"], "col": 1, "span": 1 },
+      { "text": "课丁2", "parts": ["课丁2<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[02,31节]</font><br><font title=\"教室\">Z2</font>"], "col": 2, "span": 1 },
+      { "text": "课丁4", "parts": ["课丁4<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[03-05-07节]</font><br><font title=\"教室\">Z4</font>"], "col": 3, "span": 1 }
+    ],
+    [
+      { "text": "第一大节(01,02小节)", "parts": [], "col": 0, "span": 1 },
+      { "text": "课丁5", "parts": ["课丁5<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[30-31节]</font><br><font title=\"教室\">Z5</font>"], "col": 4, "span": 1 },
+      { "text": "课丁6", "parts": ["课丁6<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[01-03节]</font><br><font title=\"教室\">Z6</font>"], "col": 5, "span": 1 },
+      { "text": "课丁3", "parts": ["课丁3<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[2026节]</font><br><font title=\"教室\">Z3</font>"], "col": 6, "span": 2 }
+    ]
+  ]
+}

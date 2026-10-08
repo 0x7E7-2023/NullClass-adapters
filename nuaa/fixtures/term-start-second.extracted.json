@@ -1,0 +1,13 @@
+{
+  "_note": "合成 fixture：不是真实抓取，结构按上游 NUAA/nuaa_01.js 实际读取的字段形状编出。本件只钉第二学期的开学日推算：教务没有给出学期起止日期，rawName 为「第二学期」、学年 2026-2027，第 1 周应按「第二学期 2 月 20 日所在周的周一」推算为 2027-02-15，学期总周数取缺省 20 周，学期名补成「2026-2027学年第二学期」。课程、教师、教室都是虚构的。",
+  "today": "2026-09-17",
+  "semester": {
+    "id": "455",
+    "rawName": "第二学期",
+    "schoolYear": "2026-2027",
+    "source": "page"
+  },
+  "unitCountPage": 13,
+  "semesterCalendar": "{semesters:{'2':[{id:455,name:'第二学期',schoolYear:'2026-2027'}]},semesterId:455}",
+  "courseTable": "<html><head><title>学生课表</title></head><body><script type=\"text/javascript\">var teachers = [];activity = new TaskActivity('', '王老师', '', '数据结构', '', '', '教3-101', '011111111');index = 0*unitCount+0;</script></body></html>"
+}

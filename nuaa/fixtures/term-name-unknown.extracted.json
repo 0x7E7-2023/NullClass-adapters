@@ -1,0 +1,15 @@
+{
+  "_note": "合成 fixture：不是真实抓取，结构按上游 NUAA/nuaa_01.js 实际读取的字段形状编出。本件只钉住学期名无法识别的情形：教务返回的 rawName 是「5」，不是第几学期的写法，应走兜底名「南京航空航天大学 2026-2027学年（学期未知）」，并出一条学期名提醒。课程、教师、教室都是虚构的。",
+  "today": "2026-09-17",
+  "semester": {
+    "id": "454",
+    "rawName": "5",
+    "schoolYear": "2026-2027",
+    "startDate": "2026-08-31",
+    "endDate": "2027-01-10",
+    "source": "page"
+  },
+  "unitCountPage": 13,
+  "semesterCalendar": "{semesters:{'1':[{id:454,name:'5',schoolYear:'2026-2027',startDate:'2026-08-31',endDate:'2027-01-10'}]},semesterId:454}",
+  "courseTable": "<html><head><title>学生课表</title></head><body><script type=\"text/javascript\">var teachers = [];activity = new TaskActivity('', '王老师', '', '数据结构', '', '', '教3-101', '011111111');index = 0*unitCount+0;</script></body></html>"
+}

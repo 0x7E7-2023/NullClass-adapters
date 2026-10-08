@@ -1,0 +1,44 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统的一个学期（2026-2027学年第二学期，按课表页上当前选中的学期自动选中）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务没有给出开学日期，开学日按「第二学期 2 月 20 日」推算（依据学年 2026-2027）：所在周的周一为 2027-02-15，不是教务给的，请在学期管理里核对成学校实际开学日",
+    "教务没有给出学期结束日期，学期总周数暂用 20 周，请在学期管理里核对",
+    "作息时间用的是应用内置的上海师范大学 14 节作息表（不是从教务系统读的），如与学校实际作息不符请在学期管理里改"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2027-02-15",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:50", "end": "09:30" },
+        { "periodIndex": 3, "start": "09:45", "end": "10:30" },
+        { "periodIndex": 4, "start": "10:35", "end": "11:15" },
+        { "periodIndex": 5, "start": "11:25", "end": "12:10" },
+        { "periodIndex": 6, "start": "13:00", "end": "13:45" },
+        { "periodIndex": 7, "start": "13:50", "end": "14:30" },
+        { "periodIndex": 8, "start": "14:45", "end": "15:30" },
+        { "periodIndex": 9, "start": "15:35", "end": "16:15" },
+        { "periodIndex": 10, "start": "16:25", "end": "17:10" },
+        { "periodIndex": 11, "start": "18:00", "end": "18:45" },
+        { "periodIndex": 12, "start": "18:50", "end": "19:30" },
+        { "periodIndex": 13, "start": "19:40", "end": "20:25" },
+        { "periodIndex": 14, "start": "20:30", "end": "21:10" }
+      ],
+      "courses": [
+        {
+          "name": "线性代数",
+          "teacher": "吴斌",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "教2-201" }
+          ]
+        }
+      ]
+    }
+  ]
+}

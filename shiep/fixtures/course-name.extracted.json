@@ -1,0 +1,15 @@
+{
+  "_note": "合成 fixture：不是真实抓取，数据按上游 SHIEP/SHIEP.js 的字段形状编出，课程与教师均为虚构，不含任何学号姓名。本文件专测课程名括号：全角括号、课程名自带的括号、末尾的课程号（整数与小数）、课程号之后还有字的括号。",
+  "today": "2026-10-08",
+  "semester": {
+    "id": "424",
+    "rawName": "1",
+    "schoolYear": "2026-2027",
+    "startDate": "2026-08-31",
+    "endDate": "2027-01-17",
+    "source": "current"
+  },
+  "unitCountPage": 13,
+  "semesterCalendar": "{yearDom:'',termDom:'',semesters:{},yearIndex:'13',termIndex:'0',semesterId:'424'}",
+  "courseTable": "new CourseTable(); var unitCount = 13; activity = new TaskActivity(\"1201\",\"合成教师甲\",\"C301\",\"高等数学A(一)\",\"R301\",\"教学楼甲101\",\"011110000000000000000\"); index = 0*unitCount+0; activity = new TaskActivity(\"1202\",\"合成教师乙\",\"C302\",\"形势与政策（四）\",\"R302\",\"教学楼乙102\",\"011110000000000000000\"); index = 0*unitCount+2; activity = new TaskActivity(\"1203\",\"合成教师丙\",\"C303\",\"大学物理(2)\",\"R303\",\"教学楼丙103\",\"011110000000000000000\"); index = 1*unitCount+0; activity = new TaskActivity(\"1204\",\"合成教师丁\",\"C304\",\"C语言程序设计(2)上机\",\"R304\",\"机房丁104\",\"011110000000000000000\"); index = 1*unitCount+2; activity = new TaskActivity(\"1205\",\"合成教师戊\",\"C305\",\"体育1(篮球)\",\"R305\",\"体育馆戊105\",\"011110000000000000000\"); index = 2*unitCount+0; activity = new TaskActivity(\"1206\",\"合成教师己\",\"C306\",\"大学英语C读写（1）\",\"R306\",\"教学楼己106\",\"011110000000000000000\"); index = 2*unitCount+2; activity = new TaskActivity(\"1207\",\"合成教师庚\",\"C307\",\"离散数学(3.1)\",\"R307\",\"教学楼庚107\",\"011110000000000000000\"); index = 3*unitCount+0; "
+}

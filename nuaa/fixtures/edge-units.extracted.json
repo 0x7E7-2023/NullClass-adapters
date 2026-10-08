@@ -1,0 +1,15 @@
+{
+  "_note": "合成 fixture：不是真实抓取。南京航空航天大学的教务账号我们没有，这份数据按上游 NUAA/nuaa_01.js 实际读取的字段形状编出来（结构同 basic）。本件是边界：①课表响应和页面上都读不到 unitCount（按缺省 13 并出声）；②线性代数同一块里两种定位混用，教室「教1-101(东)」括号去掉；③英语听力的 args[1] 是 teachers.join(\",\") 表达式且块里没有 actTeachers，教师留空；④体育教室为空，留空；⑤石头课只有已算好的 index = 100，换算出的星期超出 7，丢弃并出声。课程、教师、教室都是虚构的。",
+  "today": "2026-09-17",
+  "semester": {
+    "id": "454",
+    "rawName": "1",
+    "schoolYear": "2026-2027",
+    "startDate": "2026-08-31",
+    "endDate": "2027-01-10",
+    "source": "page"
+  },
+  "unitCountPage": null,
+  "semesterCalendar": "{semesters:{\"1\":[{id:454,name:\"1\",schoolYear:\"2026-2027\",startDate:\"2026-08-31\",endDate:\"2027-01-10\"}],\"2\":[]},semesterId:454}",
+  "courseTable": "<html><head><title>学生课表</title></head><body><script type=\"text/javascript\">var teachers = [{id:\"B1\",name:\"赵一\"}];var actTeachers = [{id:\"B1\",name:\"赵一\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"线性代数\", \"\", \"\", \"教1-101(东)\", \"011111111000000000000000000000000000000000000000000\");index = 0*unitCount+2;index = 27;</script><script type=\"text/javascript\">var teachers = [{id:\"B2\",name:\"周阳\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"英语听力\", \"\", \"\", \"教2-301\", \"011110000000000000000000000000000000000000000000000\");index = 0*unitCount+0;</script><script type=\"text/javascript\">var teachers = [{id:\"B3\",name:\"钱三\"}];var actTeachers = [{id:\"B3\",name:\"钱三\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"体育\", \"\", \"\", \"\", \"011000000000000000000000000000000000000000000000000\");index = 4*unitCount+8;</script><script type=\"text/javascript\">var teachers = [{id:\"B4\",name:\"孙四\"}];var actTeachers = [{id:\"B4\",name:\"孙四\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"石头课\", \"\", \"\", \"教9-901\", \"011100000000000000000000000000000000000000000000000\");index = 100;</script></body></html>"
+}

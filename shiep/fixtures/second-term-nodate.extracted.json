@@ -1,0 +1,15 @@
+{
+  "_note": "合成 fixture：不是真实抓取。覆盖第二学期且教务没有给出学期起止日期的分支：开学日按 2 月 20 日所在周的周一推算，总周数用适配器内置的 20 周。课程、教师、教室都是虚构的，不含任何学号、姓名。",
+  "today": "2026-10-08",
+  "semester": {
+    "id": "425",
+    "rawName": "2",
+    "schoolYear": "2026-2027",
+    "startDate": null,
+    "endDate": null,
+    "source": "current"
+  },
+  "unitCountPage": 13,
+  "semesterCalendar": "{yearDom:'',termDom:'',semesters:{},yearIndex:'13',termIndex:'1',semesterId:'425'}",
+  "courseTable": "new CourseTable(); var unitCount = 13; activity = new TaskActivity(\"3001\",\"合成教师甲\",\"C101\",\"线性代数\",\"R101\",\"综合楼101\",\"011111111111111110000\"); index = 0*unitCount+0; index = 0*unitCount+1; activity = new TaskActivity(\"3002\",\"合成教师乙\",\"B201\",\"大学物理\",\"R202\",\"实验楼B202\",\"010101010101010100000\"); index = 2*unitCount+2; activity = new TaskActivity(\"3003\",\"合成教师丁\",\"D401\",\"计算机网络\",\"R401\",\"教学楼D401\",\"011111111111111111111\"); index = 4*unitCount+4;"
+}

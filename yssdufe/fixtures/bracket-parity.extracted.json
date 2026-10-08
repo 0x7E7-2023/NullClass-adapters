@@ -1,0 +1,247 @@
+{
+  "_note": "合成数据（非真实抓取）：方括号里的单双标记与全角区间分隔符。「1-16周[单]」的单周标记不许被整段删掉；「1-16周单双」认不出，按每周处理并出声；全角波浪与全角减号的区间照常读。没有周历，开学日期按提取时刻推算。",
+  "source": "qz-jsxsd",
+  "pageUrl": "https://ysjw.sdufe.edu.cn:8081/jsxsd/xskb/xskb_list.do",
+  "now": "2027-03-10",
+  "term": {
+    "code": "2026-2027-2",
+    "name": ""
+  },
+  "cols": 8,
+  "calendar": {
+    "found": false,
+    "rows": []
+  },
+  "rows": [
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "节次",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "星期一",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "星期二",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "星期三",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "星期四",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "星期五",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "星期六",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "星期日",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第1-2节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "高等数学A(一)任课教师:壬某1-16周[单]01-02节教1-101",
+        "parts": [
+          "高等数学A(一)<br><font title='教师'>任课教师:壬某</font><br><font title='周次(节次)'>1-16周[单]</font><br><font title='节次'>01-02节</font><br><font title='教室'>教1-101</font>"
+        ]
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "大学英语(一)任课教师:子某1-16周[单][01-02节]外语楼B203",
+        "parts": [
+          "大学英语(一)<br><font title='教师'>任课教师:子某</font><br><font title='周次(节次)'>1-16周[单][01-02节]</font><br><font title='教室'>外语楼B203</font>"
+        ]
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "线性代数任课教师:丑某1-16周[双]01-02节教2-201",
+        "parts": [
+          "线性代数<br><font title='教师'>任课教师:丑某</font><br><font title='周次(节次)'>1-16周[双]</font><br><font title='节次'>01-02节</font><br><font title='教室'>教2-201</font>"
+        ]
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "概率论与数理统计任课教师:午某1～16周[01-02节]教3-305",
+        "parts": [
+          "概率论与数理统计<br><font title='教师'>任课教师:午某</font><br><font title='周次(节次)'>1～16周[01-02节]</font><br><font title='教室'>教3-305</font>"
+        ]
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "数据结构任课教师:戌某1－16周[01-02节]信息楼A401",
+        "parts": [
+          "数据结构<br><font title='教师'>任课教师:戌某</font><br><font title='周次(节次)'>1－16周[01-02节]</font><br><font title='教室'>信息楼A401</font>"
+        ]
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "操作系统任课教师:戊某1−16周[01-02节]信息楼A402",
+        "parts": [
+          "操作系统<br><font title='教师'>任课教师:戊某</font><br><font title='周次(节次)'>1−16周[01-02节]</font><br><font title='教室'>信息楼A402</font>"
+        ]
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "计算机网络任课教师:辛某1–16周[01-02节]信息楼A403",
+        "parts": [
+          "计算机网络<br><font title='教师'>任课教师:辛某</font><br><font title='周次(节次)'>1–16周[01-02节]</font><br><font title='教室'>信息楼A403</font>"
+        ]
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第3-4节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "离散数学任课教师:卜某1-8周[双],10-16周[单]03-04节教5-101",
+        "parts": [
+          "离散数学<br><font title='教师'>任课教师:卜某</font><br><font title='周次(节次)'>1-8周[双],10-16周[单]</font><br><font title='节次'>03-04节</font><br><font title='教室'>教5-101</font>"
+        ]
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "编译原理任课教师:庚某1—16周[03-04节]教5-102",
+        "parts": [
+          "编译原理<br><font title='教师'>任课教师:庚某</font><br><font title='周次(节次)'>1—16周[03-04节]</font><br><font title='教室'>教5-102</font>"
+        ]
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "软件工程任课教师:己某1~16周[03-04节]教5-103",
+        "parts": [
+          "软件工程<br><font title='教师'>任课教师:己某</font><br><font title='周次(节次)'>1~16周[03-04节]</font><br><font title='教室'>教5-103</font>"
+        ]
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "数字逻辑任课教师:申某1至16周[03-04节]教5-104",
+        "parts": [
+          "数字逻辑<br><font title='教师'>任课教师:申某</font><br><font title='周次(节次)'>1至16周[03-04节]</font><br><font title='教室'>教5-104</font>"
+        ]
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "微机原理任课教师:丁某1到16周[03-04节]教5-105",
+        "parts": [
+          "微机原理<br><font title='教师'>任课教师:丁某</font><br><font title='周次(节次)'>1到16周[03-04节]</font><br><font title='教室'>教5-105</font>"
+        ]
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "大学物理任课教师:甲某1-16周[单双][03-04节]教5-106",
+        "parts": [
+          "大学物理<br><font title='教师'>任课教师:甲某</font><br><font title='周次(节次)'>1-16周[单双][03-04节]</font><br><font title='教室'>教5-106</font>"
+        ]
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "工程制图任课教师:癸某1-16周[03-04节]教5-107",
+        "parts": [
+          "工程制图<br><font title='教师'>任课教师:癸某</font><br><font title='周次(节次)'>1-16周[03-04节]</font><br><font title='教室'>教5-107</font>"
+        ]
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第5-6节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "形势与政策任课教师:辰某1～16周[05～06节]教6-201",
+        "parts": [
+          "形势与政策<br><font title='教师'>任课教师:辰某</font><br><font title='周次(节次)'>1～16周[05～06节]</font><br><font title='教室'>教6-201</font>"
+        ]
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ]
+  ]
+}

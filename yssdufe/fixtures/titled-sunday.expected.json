@@ -1,0 +1,123 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务的教学周历没有标出第 1 周的星期一，开学日期已由第一个日期格（2026-09-06）对齐为周一（2026-09-07），请在「学期管理」里核对",
+    "教务没有给出学期总周数，已按 20 周计，请在「学期管理」里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:30",
+          "end": "09:15"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:15",
+          "end": "10:00"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:20",
+          "end": "11:05"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:05",
+          "end": "11:50"
+        },
+        {
+          "periodIndex": 5,
+          "start": "13:30",
+          "end": "14:15"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:15",
+          "end": "15:00"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:20",
+          "end": "16:05"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:05",
+          "end": "16:50"
+        },
+        {
+          "periodIndex": 9,
+          "start": "18:30",
+          "end": "19:15"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:15",
+          "end": "20:00"
+        },
+        {
+          "periodIndex": 11,
+          "start": "20:10",
+          "end": "21:50"
+        }
+      ],
+      "courses": [
+        {
+          "name": "线性代数",
+          "teacher": "甲某",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教2-101"
+            }
+          ]
+        },
+        {
+          "name": "体育(一)",
+          "teacher": "乙某",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 15,
+              "weekType": "ODD",
+              "location": "体育馆"
+            }
+          ]
+        },
+        {
+          "name": "概率论",
+          "teacher": "丙某",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 7,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 2,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教3-201"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

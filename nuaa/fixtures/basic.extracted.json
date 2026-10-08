@@ -1,0 +1,15 @@
+{
+  "_note": "合成 fixture：不是真实抓取。南京航空航天大学的教务账号我们没有，这份数据按上游 NUAA/nuaa_01.js 实际读取的字段形状编出来：semester 是 extract.js 交出来的选中学期对象（source 为 page，即课表页学期组件给出）；semesterCalendar 是 dataQuery.action 的响应原文（JS 对象字面量）；courseTable 是 courseTableForStd!courseTable.action 的响应形状（unitCount 13；每块 var teachers / var actTeachers / new TaskActivity(...)，课名 args[3]、教室 args[6]、位图 args[7]；index = 星期*unitCount+单元）。课程、教师、教室都是虚构的，不含任何真实身份信息。本件：基本路径（页面学期、教务给出起止日期、位图第 0 位为 0、课名括号保留、单双周与连堂合并、教师取自 actTeachers）。",
+  "today": "2026-09-17",
+  "semester": {
+    "id": "454",
+    "rawName": "1",
+    "schoolYear": "2026-2027",
+    "startDate": "2026-08-31",
+    "endDate": "2027-01-10",
+    "source": "page"
+  },
+  "unitCountPage": 13,
+  "semesterCalendar": "{semesters:{\"1\":[{id:445,name:\"1\",schoolYear:\"2025-2026\",startDate:\"2025-08-25\",endDate:\"2026-01-04\"},{id:454,name:\"1\",schoolYear:\"2026-2027\",startDate:\"2026-08-31\",endDate:\"2027-01-10\"}],\"2\":[{id:446,name:\"2\",schoolYear:\"2025-2026\",startDate:\"2026-02-23\",endDate:\"2026-07-05\"}]},semesterId:454}",
+  "courseTable": "<html><head><title>学生课表</title></head><body><form name=\"courseTableForm\" action=\"/eams/courseTableForStd!courseTable.action\"><input type=\"hidden\" name=\"ids\" value=\"20260001\"/></form><script type=\"text/javascript\">var unitCount = 13;</script><table id=\"manualArrangeCourseTable\"><tr><td class=\"infoTitle\">2026-2027学年第一学期</td></tr></table><script type=\"text/javascript\">var teachers = [{id:\"T1\",name:\"王慧\",age:33}];var actTeachers = [{id:\"T1\",name:\"王慧\",age:33}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"高等数学A(一)\", \"\", \"\", \"教1-101\", \"011111111111111000000000000000000000000000000000\");index = 0*unitCount+0;index = 0*unitCount+1;</script><script type=\"text/javascript\">var teachers = [{id:\"T2\",name:\"李强\",age:41}];var actTeachers = [{id:\"T2\",name:\"李强\",age:41}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"大学英语(一)\", \"\", \"\", \"文理楼B203\", \"01010101010101000000000000000000000000000000000000\");index = 2*unitCount+2;index = 2*unitCount+3;</script><script type=\"text/javascript\">var teachers = [{id:\"T3\",name:\"赵敏\",age:29}];var actTeachers = [{id:\"T3\",name:\"赵敏\",age:29}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"程序设计基础\", \"\", \"\", \"信息楼A305\", \"001010101010101000000000000000000000000000000000\");index = 4*unitCount+7;index = 4*unitCount+8;</script></body></html>"
+}

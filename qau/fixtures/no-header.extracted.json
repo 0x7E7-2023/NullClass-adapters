@@ -1,0 +1,28 @@
+{
+  "_note": "合成数据（非真实抓取）：没有星期表头行，按表宽 8 列推算（第 1 列是节次，第 2-8 列对应周一到周日）；第 7 行一格跨两列（周六、周日）；第 4 行是节次格 rowspan 跨下来的续行（没有节次格，格子从第 1 列起），节次只能从周次字段的方括号里取，并出声。",
+  "source": "qau-jsxsd-xskb",
+  "pageUrl": "http://jwglxt.qau.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-10-08",
+  "term": { "code": "2026-2027-1", "name": "2026-2027学年第一学期" },
+  "campus": "青岛校区",
+  "cols": 8,
+  "rows": [
+    [
+      { "col": 0, "span": 1, "text": "第1,2节", "parts": [] },
+      { "col": 1, "span": 1, "text": "高等代数 王老师 1-16(周)[01-02节] 博学楼A101", "parts": ["高等代数<br><font title='老师'>王老师</font><br><font title='周次(节次)'>1-16(周)[01-02节]</font><br><font title='教室'>博学楼A101</font>"] },
+      { "col": 3, "span": 1, "text": "大学英语 张老师 1-16(周)[01-02节] 外语楼301", "parts": ["大学英语<br><font title='老师'>张老师</font><br><font title='周次(节次)'>1-16(周)[01-02节]</font><br><font title='教室'>外语楼301</font>"] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第3,4节", "parts": [] },
+      { "col": 2, "span": 1, "text": "计算机网络 李老师 2-16(周)[03-04节] 实验楼C101", "parts": ["计算机网络<br><font title='老师'>李老师</font><br><font title='周次(节次)'>2-16(周)[03-04节]</font><br><font title='教室'>实验楼C101</font>"] },
+      { "col": 6, "span": 2, "text": "体育 刘老师 1-16(周)[03-04节] 操场", "parts": ["体育<br><font title='老师'>刘老师</font><br><font title='周次(节次)'>1-16(周)[03-04节]</font><br><font title='教室'>操场</font>"] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第5,6节", "parts": [] },
+      { "col": 5, "span": 1, "text": "程序设计 陈老师 3-12(周)[05-06节] 机房B1", "parts": ["程序设计<br><font title='老师'>陈老师</font><br><font title='周次(节次)'>3-12(周)[05-06节]</font><br><font title='教室'>机房B1</font>"] }
+    ],
+    [
+      { "col": 1, "span": 1, "text": "数据库 赵老师 2-16(周)[07-08节] 综合楼5", "parts": ["数据库<br><font title='老师'>赵老师</font><br><font title='周次(节次)'>2-16(周)[07-08节]</font><br><font title='教室'>综合楼5</font>"] }
+    ]
+  ]
+}

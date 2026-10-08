@@ -1,0 +1,41 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "已按「青岛校区」的节次时间导入（教务页面不提供，三个校区的节次时间不同），请到「学期管理」里核对",
+    "开学日期无法从教务获取，已按最近的周一（2026-10-05）推算，请在「学期管理」里核对",
+    "教务页面不提供学期总周数：已按 20 周起算，请在「学期管理」里核对",
+    "没能识别出学年学期名称，学期名暂用「青岛农业大学学年学期」，请在「学期管理」里改名"
+  ],
+  "terms": [
+    {
+      "name": "青岛农业大学学年学期",
+      "firstDay": "2026-10-05",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "09:55", "end": "10:40" },
+        { "periodIndex": 4, "start": "10:50", "end": "11:35" },
+        { "periodIndex": 5, "start": "11:35", "end": "12:00" },
+        { "periodIndex": 6, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 7, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 8, "start": "15:55", "end": "16:40" },
+        { "periodIndex": 9, "start": "16:50", "end": "17:35" },
+        { "periodIndex": 10, "start": "18:50", "end": "19:35" },
+        { "periodIndex": 11, "start": "19:45", "end": "20:30" }
+      ],
+      "courses": [
+        {
+          "name": "高等数学A",
+          "teacher": "张三",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "博学楼A101" }
+          ]
+        }
+      ]
+    }
+  ]
+}

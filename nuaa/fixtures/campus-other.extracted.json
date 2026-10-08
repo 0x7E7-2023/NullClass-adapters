@@ -1,0 +1,15 @@
+{
+  "_note": "合成 fixture：不是真实抓取。南京航空航天大学的教务账号我们没有，这份数据按上游 NUAA/nuaa_01.js 实际读取的字段形状编出来（结构同 basic）。本件测明故宫/将军路校区：没有一门课的教室含「天目湖」，整学期选明故宫/将军路作息表。「体育」教室为空，按非天目湖计入，导入时教室留空。「将军路校区教4-205(东)」括号去掉。课程、教师、教室都是虚构的。",
+  "today": "2026-09-17",
+  "semester": {
+    "id": "454",
+    "rawName": "1",
+    "schoolYear": "2026-2027",
+    "startDate": "2026-08-31",
+    "endDate": "2027-01-10",
+    "source": "page"
+  },
+  "unitCountPage": 13,
+  "semesterCalendar": "{semesters:{\"1\":[{id:454,name:\"1\",schoolYear:\"2026-2027\",startDate:\"2026-08-31\",endDate:\"2027-01-10\"}],\"2\":[]},semesterId:454}",
+  "courseTable": "<html><head><title>学生课表</title></head><body><script type=\"text/javascript\">var unitCount = 13;</script><script type=\"text/javascript\">var teachers = [{id:\"F1\",name:\"许一\"}];var actTeachers = [{id:\"F1\",name:\"许一\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"机械设计\", \"\", \"\", \"明故宫校区教4-101\", \"01111111111000000000000000000000000000000000000000\");index = 0*unitCount+0;</script><script type=\"text/javascript\">var teachers = [{id:\"F2\",name:\"胡二\"}];var actTeachers = [{id:\"F2\",name:\"胡二\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"电路原理\", \"\", \"\", \"将军路校区教4-205(东)\", \"01111111111000000000000000000000000000000000000000\");index = 1*unitCount+6;</script><script type=\"text/javascript\">var teachers = [{id:\"F3\",name:\"吕三\"}];var actTeachers = [{id:\"F3\",name:\"吕三\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"体育\", \"\", \"\", \"\", \"0111000000000000000000000000000000000000000000000\");index = 4*unitCount+8;</script></body></html>"
+}

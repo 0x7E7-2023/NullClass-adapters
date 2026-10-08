@@ -1,0 +1,15 @@
+{
+  "_note": "合成 fixture：不是真实抓取，数据按上游 SHIEP/SHIEP.js 的字段形状编出，课程与教师均为虚构，不含任何学号姓名。本文件专测边界：课表响应里没有 unitCount 时用课表页的值、同一个活动里两种定位写法（已算好的 index = 62 与 星期*unitCount+节次）、第 13 节定位、教师是拼接表达式、教室为 null。",
+  "today": "2026-10-08",
+  "semester": {
+    "id": "424",
+    "rawName": "1",
+    "schoolYear": "2026-2027",
+    "startDate": "2026-08-31",
+    "endDate": "2027-01-17",
+    "source": "current"
+  },
+  "unitCountPage": 13,
+  "semesterCalendar": "{yearDom:'',termDom:'',semesters:{},yearIndex:'13',termIndex:'0',semesterId:'424'}",
+  "courseTable": "new CourseTable(); activity = new TaskActivity(\"2001\",teachers.join(\",\"),\"C401\",\"数字电路实验\",\"R401\",null,\"011100000000000000000\"); index = 0*unitCount+1; index = 62; activity = new TaskActivity(\"2002\",\"合成教师辛\",\"C402\",\"线性代数\",\"R402\",\"教学楼辛201\",\"000001110000000000000\"); index = 6*unitCount+12; "
+}

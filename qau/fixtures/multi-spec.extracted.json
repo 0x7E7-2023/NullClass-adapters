@@ -1,0 +1,38 @@
+{
+  "_note": "合成数据（非真实抓取）：一格两段周次（空格分段）；一块里两个「周次」字段各写一段（须取并集，周二第1,2节的操作系统：1-8(周) 与 10-16(周)）；各种全角 / 异体区间分隔符（～ － − – —）；表头读不出节次时方括号里的全角波浪节次。",
+  "source": "qau-jsxsd-xskb",
+  "pageUrl": "http://jwglxt.qau.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-10-08",
+  "term": { "code": "2026-2027-1", "name": "2026-2027学年第一学期" },
+  "campus": "青岛校区",
+  "cols": 8,
+  "rows": [
+    [
+      { "col": 0, "span": 1, "text": "节次", "parts": [] },
+      { "col": 1, "span": 1, "text": "星期一", "parts": [] },
+      { "col": 2, "span": 1, "text": "星期二", "parts": [] },
+      { "col": 3, "span": 1, "text": "星期三", "parts": [] },
+      { "col": 4, "span": 1, "text": "星期四", "parts": [] },
+      { "col": 5, "span": 1, "text": "星期五", "parts": [] },
+      { "col": 6, "span": 1, "text": "星期六", "parts": [] },
+      { "col": 7, "span": 1, "text": "星期日", "parts": [] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第1,2节", "parts": [] },
+      { "col": 1, "span": 1, "text": "数据结构 王老师 1-8周 10-16周 博学楼A101", "parts": ["数据结构<br><font title='老师'>王老师</font><br><font title='周次(节次)'>1-8周 10-16周</font><br><font title='教室'>博学楼A101</font>"] },
+      { "col": 2, "span": 1, "text": "操作系统 秦老师 1-8(周) 10-16(周) 博学楼B102", "parts": ["操作系统<br><font title='老师'>秦老师</font><br><font title='周次(节次)'>1-8(周)</font><br><font title='周次(节次)'>10-16(周)</font><br><font title='教室'>博学楼B102</font>"] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第3,4节", "parts": [] },
+      { "col": 3, "span": 1, "text": "计算机网络 李老师 1～16周", "parts": ["计算机网络<br><font title='老师'>李老师</font><br><font title='周次(节次)'>1～16周</font>"] },
+      { "col": 4, "span": 1, "text": "数据库原理 赵老师 1－16周", "parts": ["数据库原理<br><font title='老师'>赵老师</font><br><font title='周次(节次)'>1－16周</font>"] },
+      { "col": 5, "span": 1, "text": "软件工程 钱老师 1−16周", "parts": ["软件工程<br><font title='老师'>钱老师</font><br><font title='周次(节次)'>1−16周</font>"] },
+      { "col": 6, "span": 1, "text": "离散数学 孙老师 1–16周", "parts": ["离散数学<br><font title='老师'>孙老师</font><br><font title='周次(节次)'>1–16周</font>"] },
+      { "col": 7, "span": 1, "text": "编译原理 周老师 1—16周", "parts": ["编译原理<br><font title='老师'>周老师</font><br><font title='周次(节次)'>1—16周</font>"] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第一二节", "parts": [] },
+      { "col": 1, "span": 1, "text": "高等数学B 1-16(周)[05～06节]", "parts": ["高等数学B<br><font title='周次(节次)'>1-16(周)[05～06节]</font>"] }
+    ]
+  ]
+}

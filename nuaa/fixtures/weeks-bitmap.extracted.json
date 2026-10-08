@@ -1,0 +1,15 @@
+{
+  "_note": "合成 fixture：不是真实抓取。南京航空航天大学的教务账号我们没有，这份数据按上游 NUAA/nuaa_01.js 实际读取的字段形状编出来（结构同 basic）。本件专测周次位图：甲 只有第 0 位为 1（没有任何可导入周次，整门跳过并计数）；乙 第 0 位为 1 且第 1 周为 1；丙 第 0 位为 0 只有第 1 周；丁 第 0 位为 1、第 2-16 周为 1；戊 单周 1、3；己 双周 2、4。第 0 位为 1 的活动在 warnings 里计数。课程、教师、教室都是虚构的。",
+  "today": "2026-09-17",
+  "semester": {
+    "id": "454",
+    "rawName": "1",
+    "schoolYear": "2026-2027",
+    "startDate": "2026-08-31",
+    "endDate": "2027-01-10",
+    "source": "page"
+  },
+  "unitCountPage": 13,
+  "semesterCalendar": "{semesters:{\"1\":[{id:445,name:\"1\",schoolYear:\"2025-2026\",startDate:\"2025-08-25\",endDate:\"2026-01-04\"},{id:454,name:\"1\",schoolYear:\"2026-2027\",startDate:\"2026-08-31\",endDate:\"2027-01-10\"}],\"2\":[{id:446,name:\"2\",schoolYear:\"2025-2026\",startDate:\"2026-02-23\",endDate:\"2026-07-05\"}]},semesterId:454}",
+  "courseTable": "<html><head><title>学生课表</title></head><body><script type=\"text/javascript\">var unitCount = 13;</script><script type=\"text/javascript\">var teachers = [{id:\"T1\",name:\"甲师\"}];var actTeachers = [{id:\"T1\",name:\"甲师\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"位图甲\", \"\", \"\", \"教2-200\", \"1000000000000000000000000000000000000000000000000\");index = 1*unitCount+0;</script><script type=\"text/javascript\">var teachers = [{id:\"T2\",name:\"乙师\"}];var actTeachers = [{id:\"T2\",name:\"乙师\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"位图乙\", \"\", \"\", \"教2-201\", \"1100000000000000000000000000000000000000000000000\");index = 0*unitCount+0;</script><script type=\"text/javascript\">var teachers = [{id:\"T3\",name:\"丙师\"}];var actTeachers = [{id:\"T3\",name:\"丙师\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"位图丙\", \"\", \"\", \"教2-202\", \"0100000000000000000000000000000000000000000000000\");index = 2*unitCount+0;</script><script type=\"text/javascript\">var teachers = [{id:\"T4\",name:\"丁师\"}];var actTeachers = [{id:\"T4\",name:\"丁师\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"位图丁\", \"\", \"\", \"教2-203\", \"10111111111111111000000000000000000000000000000000\");index = 3*unitCount+0;</script><script type=\"text/javascript\">var teachers = [{id:\"T5\",name:\"戊师\"}];var actTeachers = [{id:\"T5\",name:\"戊师\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"位图戊\", \"\", \"\", \"教2-204\", \"0101000000000000000000000000000000000000000000000000\");index = 4*unitCount+0;</script><script type=\"text/javascript\">var teachers = [{id:\"T6\",name:\"己师\"}];var actTeachers = [{id:\"T6\",name:\"己师\"}];activity = new TaskActivity(\"\", teachers.join(\",\"), \"\", \"位图己\", \"\", \"\", \"教2-205\", \"0010100000000000000000000000000000000000000000000\");index = 5*unitCount+0;</script></body></html>"
+}

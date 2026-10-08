@@ -1,0 +1,40 @@
+{
+  "_note": "合成数据（非真实抓取）：节次越界、周次越界、表头读不出节次、超长警告；没有节次格的续行里，方括号节次 [12345678节] 越界，同样点名跳过。",
+  "source": "qau-jsxsd-xskb",
+  "pageUrl": "http://jwglxt.qau.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-10-08",
+  "term": { "code": "2026-2027-1", "name": "2026-2027学年第一学期" },
+  "campus": "青岛校区",
+  "cols": 8,
+  "rows": [
+    [
+      { "col": 0, "span": 1, "text": "节次", "parts": [] },
+      { "col": 1, "span": 1, "text": "星期一", "parts": [] },
+      { "col": 2, "span": 1, "text": "星期二", "parts": [] },
+      { "col": 3, "span": 1, "text": "星期三", "parts": [] },
+      { "col": 4, "span": 1, "text": "星期四", "parts": [] },
+      { "col": 5, "span": 1, "text": "星期五", "parts": [] },
+      { "col": 6, "span": 1, "text": "星期六", "parts": [] },
+      { "col": 7, "span": 1, "text": "星期日", "parts": [] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第1,2节", "parts": [] },
+      { "col": 1, "span": 1, "text": "高等数学A 张三 1-16(周) 博学楼A101", "parts": ["高等数学A<br><font title='老师'>张三</font><br><font title='周次(节次)'>1-16(周)</font><br><font title='教室'>博学楼A101</font>"] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第9,10节", "parts": [] },
+      { "col": 3, "span": 1, "text": "操作系统 赵四 1-40(周) 博学楼D101", "parts": ["操作系统<br><font title='老师'>赵四</font><br><font title='周次(节次)'>1-40(周)</font><br><font title='教室'>博学楼D101</font>"] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第17,18节", "parts": [] },
+      { "col": 2, "span": 1, "text": "", "parts": ["一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十<br><font title='周次(节次)'>1-16(周)</font><br><font title='教室'>大学生活动中心</font>"] }
+    ],
+    [
+      { "col": 0, "span": 1, "text": "第一二节", "parts": [] },
+      { "col": 4, "span": 1, "text": "大学物理 1-8(周)[05-06节]", "parts": ["大学物理<br><font title='周次(节次)'>1-8(周)[05-06节]</font><br><font title='教室'>博学楼A301</font>"] }
+    ],
+    [
+      { "col": 6, "span": 1, "text": "体育 刘老师 1-16(周)[12345678节] 操场", "parts": ["体育<br><font title='老师'>刘老师</font><br><font title='周次(节次)'>1-16(周)[12345678节]</font><br><font title='教室'>操场</font>"] }
+    ]
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "_note": "合成用例：不是真实抓取，课程、教师、教室都是虚构的，不含任何学号姓名。本件：日历缺失。学期日历响应为空串，学期只有页面给的 id（460）；学期序号 2、学年 2026-2027，起始日期与结束日期都取不到。预期：开学日按第二学期 2 月 20 日推算，所在周的周一 2027-02-15，写进 warnings；没有结束日期，总周数用缺省 20 周，写进 warnings。",
+  "today": "2026-10-08",
+  "semester": {
+    "id": "460",
+    "rawName": "2",
+    "schoolYear": "2026-2027",
+    "startDate": null,
+    "endDate": null,
+    "source": "page"
+  },
+  "unitCountPage": 14,
+  "semesterCalendar": "",
+  "courseTable": "<html><body>\n<script type=\"text/javascript\">var unitCount = 14;</script>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nvar actTeachers = [{id:\"T4\",name:\"吴斌\"}];\nactivity = new TaskActivity(\"\", \"线性代数\", teachers, \"\", \"教2-201\", \"011111111\");\nindex = 1*unitCount+0;\nindex = 1*unitCount+1;\n</script>\n</body></html>"
+}

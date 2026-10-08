@@ -1,0 +1,15 @@
+{
+  "_note": "合成 fixture：不是真实抓取。上海电力大学的教务账号我们没有，这份数据是按上游 SHIEP/SHIEP.js（快照 ff72d1f0，MIT）读取的字段形状编出来的：semester 是 extract.js 交出来的选中学期对象，semesterCalendar 是学期日历响应的占位原文，courseTable 是 courseTableForStd!courseTable.action 响应形状（var unitCount = N; 加若干条 activity = new TaskActivity(...) 与 index = 星期*unitCount+节次;）。课程、教师、教室都是虚构的，不含任何学号、姓名。它只保证同样的输入永远得到同样的输出，不保证在真实页面上是对的。",
+  "today": "2026-10-08",
+  "semester": {
+    "id": "424",
+    "rawName": "1",
+    "schoolYear": "2026-2027",
+    "startDate": "2026-08-31",
+    "endDate": "2027-01-17",
+    "source": "current"
+  },
+  "unitCountPage": 13,
+  "semesterCalendar": "{yearDom:'',termDom:'',semesters:{},yearIndex:'13',termIndex:'0',semesterId:'424'}",
+  "courseTable": "new CourseTable(); var unitCount = 13; activity = new TaskActivity(\"1001\",\"合成教师甲\",\"C101\",\"高等数学A(1)(2800001.32)\",\"R101\",\"综合楼101\",\"011111111111111110000\"); index = 0*unitCount+0; index = 0*unitCount+1; activity = new TaskActivity(\"1002\",\"合成教师乙\",\"B201\",\"大学物理(2)\",\"R202\",\"实验楼B202\",\"010101010101010100000\"); index = 2*unitCount+2; activity = new TaskActivity(\"1003\",\"合成教师丙\",\"C303\",\"形势与政策（四）\",\"R303\",\"文科楼C305\",\"001010101010101010000\"); index = 4*unitCount+8; index = 4*unitCount+9;"
+}

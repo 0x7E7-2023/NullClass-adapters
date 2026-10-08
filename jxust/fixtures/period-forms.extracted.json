@@ -1,0 +1,46 @@
+{
+  "now": "2026-09-12",
+  "term": { "code": "2026-2027-1", "name": "2026-2027学年第一学期", "source": "select-selected" },
+  "rows": [
+    [
+      { "text": "节次", "parts": [], "col": 0, "span": 1 },
+      { "text": "星期一", "parts": [], "col": 1, "span": 1 },
+      { "text": "星期二", "parts": [], "col": 2, "span": 1 },
+      { "text": "星期三", "parts": [], "col": 3, "span": 1 },
+      { "text": "星期四", "parts": [], "col": 4, "span": 1 },
+      { "text": "星期五", "parts": [], "col": 5, "span": 1 },
+      { "text": "星期六", "parts": [], "col": 6, "span": 1 },
+      { "text": "星期日", "parts": [], "col": 7, "span": 1 }
+    ],
+    [
+      { "text": "第一大节(01,02小节)08：30-10：05", "parts": [], "col": 0, "span": 1 },
+      { "text": "课丙1", "parts": ["课丙1<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)</font><br><font title=\"教室\">A1</font>"], "col": 1, "span": 1 }
+    ],
+    [
+      { "text": "第五大节(09,10小节)", "parts": [], "col": 0, "span": 1 },
+      { "text": "", "parts": [], "col": 1, "span": 1 },
+      { "text": "课丙2", "parts": ["课丙2<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[030405节]</font><br><font title=\"教室\">A2</font>"], "col": 2, "span": 1 }
+    ],
+    [
+      { "text": "第一大节(01,02小节)", "parts": [], "col": 0, "span": 1 },
+      { "text": "", "parts": [], "col": 1, "span": 1 },
+      { "text": "", "parts": [], "col": 2, "span": 1 },
+      { "text": "课丙3", "parts": ["课丙3<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[01020304节]</font><br><font title=\"教室\">A3</font>"], "col": 3, "span": 1 }
+    ],
+    [
+      { "text": "第9-10节", "parts": [], "col": 0, "span": 1 },
+      { "text": "", "parts": [], "col": 1, "span": 1 },
+      { "text": "", "parts": [], "col": 2, "span": 1 },
+      { "text": "", "parts": [], "col": 3, "span": 1 },
+      { "text": "课丙4", "parts": ["课丙4<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[1-50000000节]</font><br><font title=\"教室\">Z401</font>"], "col": 4, "span": 1 }
+    ],
+    [
+      { "text": "第三大节(05,06小节)", "parts": [], "col": 0, "span": 1 },
+      { "text": "", "parts": [], "col": 1, "span": 1 },
+      { "text": "", "parts": [], "col": 2, "span": 1 },
+      { "text": "", "parts": [], "col": 3, "span": 1 },
+      { "text": "", "parts": [], "col": 4, "span": 1 },
+      { "text": "课丙5", "parts": ["课丙5<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[2026节]</font><br><font title=\"教室\">A5</font>"], "col": 5, "span": 1 }
+    ]
+  ]
+}

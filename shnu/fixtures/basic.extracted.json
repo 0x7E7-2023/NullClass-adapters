@@ -1,0 +1,15 @@
+{
+  "_note": "合成用例：不是真实抓取，课程、教师、教室都是虚构的，不含任何学号姓名。课表形状按上游 SHNU/shnu.js 读取的字段形状编写：TaskActivity 引号字段依次为 [1]课程名、[3]教室、[4]位图（第 2 项是空串占位），教师取自本活动前一段的 actTeachers。本件：基本路径（页面学期 + 学期起止日期 + 位图第 0 位为 0 + 课程名末尾 ASCII 括号摘掉 + 单双周与连堂合并）。",
+  "today": "2026-09-17",
+  "semester": {
+    "id": "454",
+    "rawName": "1",
+    "schoolYear": "2026-2027",
+    "startDate": "2026-08-31",
+    "endDate": "2027-01-10",
+    "source": "page"
+  },
+  "unitCountPage": 14,
+  "semesterCalendar": "{semesters:{\"1\":[{id:454,name:\"1\",schoolYear:\"2026-2027\",startDate:\"2026-08-31\",endDate:\"2027-01-10\"}]},semesterId:454}",
+  "courseTable": "<html><body>\n<script type=\"text/javascript\">var unitCount = 14;</script>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nvar actTeachers = [{id:\"T1\",name:\"周敏\"}];\nactivity = new TaskActivity(\"\", \"高等数学A(一)\", teachers, \"\", \"教1-101\", \"0111111111111111000000000000000000000000000000000000\");\nindex = 1*unitCount+0;\nindex = 1*unitCount+1;\n</script>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nvar actTeachers = [{id:\"T2\",name:\"李强\"}];\nactivity = new TaskActivity(\"\", \"大学英语(一)\", teachers, \"\", \"文理楼B203\", \"0101010101010101000000000000000000000000000000000000\");\nindex = 0*unitCount+2;\nindex = 0*unitCount+3;\nindex = 2*unitCount+2;\nindex = 2*unitCount+3;\n</script>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nvar actTeachers = [{id:\"T3\",name:\"赵敏\"}];\nactivity = new TaskActivity(\"\", \"程序设计基础\", teachers, \"\", \"信息楼A305(东)\", \"0110011001100110000000000000000000000000000000000000\");\nindex = 3*unitCount+4;\nindex = 3*unitCount+5;\n</script>\n</body></html>"
+}

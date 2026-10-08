@@ -1,0 +1,15 @@
+{
+  "_note": "合成用例：不是真实抓取，课程、教师、教室都是虚构的，不含任何学号姓名。本件：括号规则。课程名只摘末尾一对 ASCII 括号（数据结构(2) → 数据结构）；全角括号与中间括号保留（英语（听力）、Java(中级)课程）；末尾只摘一对（体育(1)(2) → 体育(1)）。教室去掉所有 ASCII 括号内容（体育馆(老)东厅 → 体育馆东厅）；教室字段为空时留空（null）。",
+  "today": "2026-09-17",
+  "semester": {
+    "id": "454",
+    "rawName": "1",
+    "schoolYear": "2026-2027",
+    "startDate": "2026-08-31",
+    "endDate": "2027-01-10",
+    "source": "page"
+  },
+  "unitCountPage": 14,
+  "semesterCalendar": "{semesters:{\"1\":[{id:454,name:\"1\",schoolYear:\"2026-2027\",startDate:\"2026-08-31\",endDate:\"2027-01-10\"}]},semesterId:454}",
+  "courseTable": "<html><body>\n<script type=\"text/javascript\">var unitCount = 14;</script>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nvar actTeachers = [{id:\"A1\",name:\"张伟\"}];\nactivity = new TaskActivity(\"\", \"数据结构(2)\", teachers, \"\", \"教4-301(西)\", \"0111100000000000000000000000000000000000000000000000\");\nindex = 0*unitCount+8;\nindex = 0*unitCount+9;\n</script>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nvar actTeachers = [{id:\"B1\",name:\"李强\"}];\nactivity = new TaskActivity(\"\", \"英语（听力）\", teachers, \"\", \"文理楼B203\", \"0110000000000000000000000000000000000000000000000000\");\nindex = 4*unitCount+0;\n</script>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nvar actTeachers = [{id:\"C1\",name:\"王芳\"}];\nactivity = new TaskActivity(\"\", \"Java(中级)课程\", teachers, \"\", \"体育馆(老)东厅\", \"0001110000000000000000000000000000000000000000000000\");\nindex = 2*unitCount+2;\n</script>\n<script type=\"text/javascript\">\nvar teachers = new Array();\nvar actTeachers = [{id:\"D1\",name:\"刘洋\"}];\nactivity = new TaskActivity(\"\", \"体育(1)(2)\", teachers, \"\", \"\", \"0100000000000000000000000000000000000000000000000000\");\nindex = 3*unitCount+10;\n</script>\n</body></html>"
+}

@@ -1,0 +1,36 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 22,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:15", "end": "10:00" },
+        { "periodIndex": 3, "start": "10:20", "end": "11:05" },
+        { "periodIndex": 4, "start": "11:05", "end": "11:50" },
+        { "periodIndex": 5, "start": "13:30", "end": "14:15" },
+        { "periodIndex": 6, "start": "14:15", "end": "15:00" },
+        { "periodIndex": 7, "start": "15:20", "end": "16:05" },
+        { "periodIndex": 8, "start": "16:05", "end": "16:50" },
+        { "periodIndex": 9, "start": "18:30", "end": "19:15" },
+        { "periodIndex": 10, "start": "19:15", "end": "20:00" },
+        { "periodIndex": 11, "start": "20:10", "end": "21:50" }
+      ],
+      "courses": [
+        { "name": "高等数学B", "teacher": "壬某", "note": null, "blocks": [
+          { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 15, "weekType": "ODD", "location": "教1-101" } ] },
+        { "name": "大学英语(二)", "teacher": "子某", "note": null, "blocks": [
+          { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 2, "endWeek": 14, "weekType": "EVEN", "location": "外语楼B204" } ] },
+        { "name": "数据结构", "teacher": "申某", "note": null, "blocks": [
+          { "dayOfWeek": 6, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 22, "weekType": "ALL", "location": "计算机楼A302" } ] },
+        { "name": "大学生心理健康", "teacher": "寅某", "note": null, "blocks": [
+          { "dayOfWeek": 5, "startPeriod": 10, "endPeriod": 11, "startWeek": 1, "endWeek": 20, "weekType": "ALL", "location": "教7-301" } ] }
+      ]
+    }
+  ]
+}

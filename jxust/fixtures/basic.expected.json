@@ -1,0 +1,61 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "开学日期教务页面没有给出，已按提取当天所在周的周一（2026-09-07）推算第 1 周，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:20", "end": "10:05" },
+        { "periodIndex": 3, "start": "10:25", "end": "11:10" },
+        { "periodIndex": 4, "start": "11:15", "end": "12:00" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:50", "end": "15:35" },
+        { "periodIndex": 7, "start": "15:55", "end": "16:40" },
+        { "periodIndex": 8, "start": "16:45", "end": "17:30" },
+        { "periodIndex": 9, "start": "19:00", "end": "19:45" },
+        { "periodIndex": 10, "start": "19:50", "end": "20:35" }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "教师甲",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教学楼A101" }
+          ]
+        },
+        {
+          "name": "大学英语",
+          "teacher": "教师乙",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "外语楼201" }
+          ]
+        },
+        {
+          "name": "体育",
+          "teacher": "教师丙",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 1, "endPeriod": 2, "startWeek": 9, "endWeek": 16, "weekType": "ALL", "location": "操场" }
+          ]
+        },
+        {
+          "name": "线性代数",
+          "teacher": "教师丁",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "Z302" }
+          ]
+        }
+      ]
+    }
+  ]
+}

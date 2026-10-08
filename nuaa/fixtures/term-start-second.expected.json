@@ -1,0 +1,41 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了一个学期（2026-2027学年第二学期，由课表页上当前选中的学期给出）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务没有给出这个学期的起止日期，第 1 周按「第二学期 2 月 20 日所在周的周一（2026 学年）」推算为 2027-02-15，请在学期管理里核对成学校实际开学日",
+    "学期总周数按适配器内置的 20 周（教务没有给出学期起止日期），如与实际不符可在学期管理里改",
+    "作息时间用的是明故宫/将军路校区作息表（课表里没有教室含「天目湖」的安排），如与学校实际作息不符请在学期管理里改"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2027-02-15",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:50" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:45" },
+        { "periodIndex": 3, "start": "10:15", "end": "11:05" },
+        { "periodIndex": 4, "start": "11:10", "end": "12:00" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:50" },
+        { "periodIndex": 6, "start": "14:55", "end": "15:45" },
+        { "periodIndex": 7, "start": "16:15", "end": "17:05" },
+        { "periodIndex": 8, "start": "17:10", "end": "18:00" },
+        { "periodIndex": 9, "start": "18:45", "end": "19:35" },
+        { "periodIndex": 10, "start": "19:40", "end": "20:30" },
+        { "periodIndex": 11, "start": "20:35", "end": "21:25" }
+      ],
+      "courses": [
+        {
+          "name": "数据结构",
+          "teacher": "王老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "教3-101" }
+          ]
+        }
+      ]
+    }
+  ]
+}

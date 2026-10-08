@@ -1,0 +1,104 @@
+{
+  "specVersion": 1,
+  "key": "yssdufe",
+  "name": "山东财经大学燕山学院",
+  "initial": "S",
+  "version": "1.0.0",
+  "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://ysjw.sdufe.edu.cn:8081/jsxsd/",
+  "scheduleUrlHint": "https://ysjw.sdufe.edu.cn:8081/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "ysjw.sdufe.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（含单双周、多段周次、一格两门课）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次四写法与教学班序号",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：无星期表头时的网格列对齐（表宽 8，末 7 列为星期）",
+      "extracted": "fixtures/col-align.extracted.json",
+      "expected": "fixtures/col-align.expected.json"
+    },
+    {
+      "name": "合成用例：节次越界、超长警告截断与跳过块点名",
+      "extracted": "fixtures/dropped-limits.extracted.json",
+      "expected": "fixtures/dropped-limits.expected.json"
+    },
+    {
+      "name": "合成用例：方括号里的单双标记与全角区间分隔符",
+      "extracted": "fixtures/bracket-parity.extracted.json",
+      "expected": "fixtures/bracket-parity.expected.json"
+    },
+    {
+      "name": "合成用例：空白分段与全角节次（一格「1-3周 5-9周」读成两块，「[05～06节]」与半角一致）",
+      "extracted": "fixtures/weeks-space-segments.extracted.json",
+      "expected": "fixtures/weeks-space-segments.expected.json"
+    },
+    {
+      "name": "合成用例：本校边界（日历 td[title] 开学日与最大周次、「1-15(单周)[01-02节]」不并成每周、第 11 节）",
+      "extracted": "fixtures/school-boundary.extracted.json",
+      "expected": "fixtures/school-boundary.expected.json"
+    },
+    {
+      "name": "合成用例：周历最大周号 22、课表只到第 16 周，学期总周数只能由周历决定",
+      "extracted": "fixtures/calendar-weeks-only.extracted.json",
+      "expected": "fixtures/calendar-weeks-only.expected.json"
+    },
+    {
+      "name": "合成用例：周历没有「1」标签行，靠第一个日期格（周日）顺延为周一并出声",
+      "extracted": "fixtures/titled-sunday.extracted.json",
+      "expected": "fixtures/titled-sunday.expected.json"
+    },
+    {
+      "name": "合成用例：第 1 周的星期一格写成星期二（对齐到所在周的周一并出声）",
+      "extracted": "fixtures/non-monday-first-day.extracted.json",
+      "expected": "fixtures/non-monday-first-day.expected.json"
+    },
+    {
+      "name": "合成用例：一格缺网格列号（跳过并计数出声，不按数组下标猜列）",
+      "extracted": "fixtures/no-col-cell.extracted.json",
+      "expected": "fixtures/no-col-cell.expected.json"
+    },
+    {
+      "name": "合成用例：学期名缺失但有学期代码（由代码拼出学年学期，不出声）",
+      "extracted": "fixtures/term-name-from-code.extracted.json",
+      "expected": "fixtures/term-name-from-code.expected.json"
+    },
+    {
+      "name": "合成用例：课表页没有学年学期下拉框（学期取教学周历页选中项，出一条提醒）",
+      "extracted": "fixtures/screen-term-missing.extracted.json",
+      "expected": "fixtures/screen-term-missing.expected.json"
+    },
+    {
+      "name": "合成用例：学期名与学期代码都缺失（用「山东财经大学燕山学院当前学期」占位并出声）",
+      "extracted": "fixtures/term-name-placeholder.extracted.json",
+      "expected": "fixtures/term-name-placeholder.expected.json"
+    },
+    {
+      "name": "合成用例：周历日期不带「日」（如 2026年08月31），仍能读出开学日（B1）",
+      "extracted": "fixtures/calendar-no-day-mark.extracted.json",
+      "expected": "fixtures/calendar-no-day-mark.expected.json"
+    },
+    {
+      "name": "合成用例：连排节次连字符（[01-02-03-04节]、[09-10-11节]）取首尾（B2）",
+      "extracted": "fixtures/periods-chain-dash.extracted.json",
+      "expected": "fixtures/periods-chain-dash.expected.json"
+    },
+    {
+      "name": "合成用例：课表周次超过周历周数时抬高总周数并出声（B3）",
+      "extracted": "fixtures/total-weeks-raised.extracted.json",
+      "expected": "fixtures/total-weeks-raised.expected.json"
+    }
+  ]
+}

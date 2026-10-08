@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "key": "qau",
+  "name": "青岛农业大学",
+  "initial": "Q",
+  "version": "1.0.0",
+  "author": "上游 ReGoMark（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://jwglxt.qau.edu.cn/",
+  "scheduleUrlHint": "http://jwglxt.qau.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jwglxt.qau.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（青岛校区，同课相邻节次合并，单双周，一格多门）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法与括号里的教学班序号",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：无星期表头，按网格列号对齐",
+      "extracted": "fixtures/no-header.extracted.json",
+      "expected": "fixtures/no-header.expected.json"
+    },
+    {
+      "name": "合成用例：节次越界（含方括号里的越界节次）、周次越界、表头读不出节次、超长警告",
+      "extracted": "fixtures/dirty-limits.extracted.json",
+      "expected": "fixtures/dirty-limits.expected.json"
+    },
+    {
+      "name": "合成用例：同一格多段周次（单字段空格分段、双字段取并集）与全角、异体区间分隔符",
+      "extracted": "fixtures/multi-spec.extracted.json",
+      "expected": "fixtures/multi-spec.expected.json"
+    },
+    {
+      "name": "合成用例：同一字段两段周次用空格分开（须读成两块），「任课教师:」前缀去掉",
+      "extracted": "fixtures/weeks-space-segments.extracted.json",
+      "expected": "fixtures/weeks-space-segments.expected.json"
+    },
+    {
+      "name": "合成用例：没有校区字段，回落青岛校区并出声",
+      "extracted": "fixtures/campus-fallback.extracted.json",
+      "expected": "fixtures/campus-fallback.expected.json"
+    },
+    {
+      "name": "合成用例：平度校区作息表（与青岛校区不同）",
+      "extracted": "fixtures/campus-pingdu.extracted.json",
+      "expected": "fixtures/campus-pingdu.expected.json"
+    },
+    {
+      "name": "合成用例：相邻节次合并的跨度上限（不超过 4 节）",
+      "extracted": "fixtures/merge-span.extracted.json",
+      "expected": "fixtures/merge-span.expected.json"
+    },
+    {
+      "name": "合成用例：学期下拉框与学期号都缺失，学期名用占位并出声",
+      "extracted": "fixtures/no-term.extracted.json",
+      "expected": "fixtures/no-term.expected.json"
+    },
+    {
+      "name": "合成用例：有课的格子落在不对应星期的列上（第 9 列），计数并点名，不静默丢课",
+      "extracted": "fixtures/unmapped-col.extracted.json",
+      "expected": "fixtures/unmapped-col.expected.json"
+    },
+    {
+      "name": "合成用例：格子里写的节次与行表头「第1,2节」不一致，以格子为准并出声",
+      "extracted": "fixtures/period-conflict.extracted.json",
+      "expected": "fixtures/period-conflict.expected.json"
+    }
+  ]
+}

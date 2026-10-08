@@ -1,0 +1,15 @@
+{
+  "_note": "合成 fixture：不是真实抓取。南京航空航天大学的教务账号我们没有，这份数据按上游 NUAA/nuaa_01.js 实际读取的字段形状编出来（结构同 basic）。本件覆盖三件事：①「数据结构」块没有 actTeachers，args[1] 是字符串字面量 '王老师'，按模板 tjau 回落为教师；②「形势」块没有 actTeachers，args[1] 是 teachers.join 表达式，教师留空并出声；③学期的 rawName 为空（教务没有返回学期名），学期名由程序补上并出声。课程、教师、教室、学期名都是虚构的。",
+  "today": "2026-09-17",
+  "semester": {
+    "id": "455",
+    "rawName": "",
+    "schoolYear": "2026-2027",
+    "startDate": "2026-08-31",
+    "endDate": "2027-01-10",
+    "source": "page"
+  },
+  "unitCountPage": 13,
+  "semesterCalendar": "{semesters:{'1':[{id:455,name:'',schoolYear:'2026-2027',startDate:'2026-08-31',endDate:'2027-01-10'}]},semesterId:455}",
+  "courseTable": "<html><head><title>学生课表</title></head><body><script type=\"text/javascript\">var teachers = [];activity = new TaskActivity('', '王老师', '', '数据结构', '', '', '教3-101', '011111111');index = 0*unitCount+0;</script><script type=\"text/javascript\">var teachers = [];activity = new TaskActivity('', teachers.join(','), '', '形势', '', '', '教5-201', '0111111');index = 1*unitCount+2;</script></body></html>"
+}

@@ -1,0 +1,99 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "已按「青岛校区」的节次时间导入（教务页面不提供，三个校区的节次时间不同），请到「学期管理」里核对",
+    "开学日期无法从教务获取，已按最近的周一（2026-10-05）推算，请在「学期管理」里核对",
+    "教务页面不提供学期总周数：已按 20 周起算，请在「学期管理」里核对",
+    "有 1 行没认出节次标题（例：「第一二节 高等数学B 1-16(周)[05～06节]」），这些行的课只能按格子里写的节次导入，请核对导入结果"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-10-05",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "09:55", "end": "10:40" },
+        { "periodIndex": 4, "start": "10:50", "end": "11:35" },
+        { "periodIndex": 5, "start": "11:35", "end": "12:00" },
+        { "periodIndex": 6, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 7, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 8, "start": "15:55", "end": "16:40" },
+        { "periodIndex": 9, "start": "16:50", "end": "17:35" },
+        { "periodIndex": 10, "start": "18:50", "end": "19:35" },
+        { "periodIndex": 11, "start": "19:45", "end": "20:30" }
+      ],
+      "courses": [
+        {
+          "name": "数据结构",
+          "teacher": "王老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "博学楼A101" },
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 10, "endWeek": 16, "weekType": "ALL", "location": "博学楼A101" }
+          ]
+        },
+        {
+          "name": "操作系统",
+          "teacher": "秦老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "博学楼B102" },
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 10, "endWeek": 16, "weekType": "ALL", "location": "博学楼B102" }
+          ]
+        },
+        {
+          "name": "计算机网络",
+          "teacher": "李老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "数据库原理",
+          "teacher": "赵老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "软件工程",
+          "teacher": "钱老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "离散数学",
+          "teacher": "孙老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 6, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "编译原理",
+          "teacher": "周老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 7, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "高等数学B",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        }
+      ]
+    }
+  ]
+}
