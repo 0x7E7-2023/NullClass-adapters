@@ -1,0 +1,119 @@
+{
+  "term": { "code": "2026-2027-1", "name": null, "source": "api" },
+  "today": "2026-11-09",
+  "rowTotal": null,
+  "rows": [
+    {
+      "KCM": "边界一",
+      "SKXQ": "1",
+      "KSJC": "1",
+      "JSJC": "1",
+      "SKZC": "1000000000000000",
+      "SKJS": "",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": ""
+    },
+    {
+      "KCM": "边界二",
+      "SKXQ": "3",
+      "KSJC": "3",
+      "JSJC": "4",
+      "SKZC": "1010101010101010",
+      "SKJS": "",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": ""
+    },
+    {
+      "KCM": "边界三",
+      "SKXQ": "7",
+      "KSJC": "5",
+      "JSJC": "6",
+      "SKZC": "1111111111111111",
+      "SKJS": "",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": ""
+    },
+    {
+      "KCM": "边界四",
+      "SKXQ": "2",
+      "KSJC": "7",
+      "JSJC": "8",
+      "SKZC": "1000000000000000000000000000000001",
+      "SKJS": "",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": ""
+    },
+    {
+      "KCM": "边界五",
+      "SKXQ": "4",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "1x01",
+      "SKJS": "",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": ""
+    },
+    {
+      "KCM": "",
+      "SKXQ": "5",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "1111",
+      "SKJS": "",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": ""
+    },
+    {
+      "KCM": "边界七",
+      "SKXQ": "8",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "1111",
+      "SKJS": "",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": ""
+    },
+    {
+      "KCM": "边界八",
+      "SKXQ": "1",
+      "KSJC": "5",
+      "JSJC": "3",
+      "SKZC": "1111",
+      "SKJS": "",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": ""
+    },
+    {
+      "KCM": "边界九",
+      "SKXQ": "1",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "0000000000000000",
+      "SKJS": "",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": ""
+    },
+    {
+      "KCM": "边界十一",
+      "SKXQ": "6",
+      "KSJC": "12",
+      "JSJC": "13",
+      "SKZC": "1111",
+      "SKJS": "",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": ""
+    },
+    {
+      "KCM": "",
+      "SKXQ": "",
+      "KSJC": "",
+      "JSJC": "",
+      "SKZC": "",
+      "SKJS": "",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": ""
+    }
+  ],
+  "calendarRows": [],
+  "timeSlotRows": []
+}

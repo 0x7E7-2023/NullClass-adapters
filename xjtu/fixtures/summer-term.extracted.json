@@ -1,0 +1,19 @@
+{
+  "term": { "code": "2025-2026-3", "name": null, "source": "api" },
+  "today": "2026-07-06",
+  "rowTotal": null,
+  "rows": [
+    {
+      "KCM": "暑期实践",
+      "SKXQ": "1",
+      "KSJC": "1",
+      "JSJC": "4",
+      "SKZC": "1111",
+      "SKJS": "孙八",
+      "JASMC": "工程坊",
+      "XXXQDM_DISPLAY": ""
+    }
+  ],
+  "calendarRows": [],
+  "timeSlotRows": []
+}

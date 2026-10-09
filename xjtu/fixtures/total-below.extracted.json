@@ -1,0 +1,27 @@
+{
+  "term": { "code": "2025-2026-2", "name": null, "source": "api" },
+  "today": "2026-03-02",
+  "rowTotal": 5,
+  "rows": [
+    {
+      "KCM": "毕业设计",
+      "SKXQ": "1",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "10000000000000000001",
+      "SKJS": "钱七",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": ""
+    }
+  ],
+  "calendarRows": [
+    {
+      "XN": "2025-2026",
+      "XQ": "2",
+      "XQKSRQ": "2026-02-23 00:00:00",
+      "ZJXZC": "16",
+      "ZZC": "18"
+    }
+  ],
+  "timeSlotRows": []
+}

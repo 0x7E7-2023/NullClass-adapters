@@ -1,0 +1,104 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "没能从教务取到开学日期，已按本机日期推算为 2026-09-07（当前周的周一），请在学期管理里核对",
+    "没能从教务取到总周数，已按课表推算为 16 周，请核对"
+  ],
+  "terms": [
+    {
+      "name": "西安交通大学 2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 16,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:50" },
+        { "periodIndex": 2, "start": "09:00", "end": "09:50" },
+        { "periodIndex": 3, "start": "10:10", "end": "11:00" },
+        { "periodIndex": 4, "start": "11:10", "end": "12:00" },
+        { "periodIndex": 5, "start": "14:30", "end": "15:20" },
+        { "periodIndex": 6, "start": "15:30", "end": "16:20" },
+        { "periodIndex": 7, "start": "16:40", "end": "17:30" },
+        { "periodIndex": 8, "start": "17:40", "end": "18:30" },
+        { "periodIndex": 9, "start": "19:40", "end": "20:30" },
+        { "periodIndex": 10, "start": "20:40", "end": "21:30" },
+        { "periodIndex": 11, "start": "21:40", "end": "22:30" }
+      ],
+      "courses": [
+        {
+          "name": "大学物理",
+          "teacher": "张三",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教1-101"
+            },
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教1-101"
+            }
+          ]
+        },
+        {
+          "name": "大学物理",
+          "teacher": "李四、王五",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 2,
+              "endWeek": 16,
+              "weekType": "EVEN",
+              "location": "教2-202"
+            }
+          ]
+        },
+        {
+          "name": "工程训练",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 6,
+              "startPeriod": 1,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "形势与政策",
+          "teacher": "赵六",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 9,
+              "endPeriod": 10,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教3-305"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
