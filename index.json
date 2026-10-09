@@ -435,6 +435,12 @@
       "name": "福州理工学院",
       "version": "1.0.0",
       "path": "fit"
+    },
+    {
+      "key": "xjtu",
+      "name": "西安交通大学",
+      "version": "1.0.0",
+      "path": "xjtu"
     }
   ]
 }

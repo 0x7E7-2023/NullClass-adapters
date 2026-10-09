@@ -1,0 +1,46 @@
+{
+  "specVersion": 1,
+  "key": "xjtu",
+  "name": "西安交通大学",
+  "initial": "X",
+  "version": "1.0.0",
+  "author": "上游 SDPD、TiaoFeng（MIT）；移植 Stellortus",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://ehall.xjtu.edu.cn/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（校历取不到，周次与总周数按课表推算）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：校历可用（教学周数优先于总周数，开学日按周一对齐）",
+      "extracted": "fixtures/calendar.extracted.json",
+      "expected": "fixtures/calendar.expected.json"
+    },
+    {
+      "name": "合成用例：边界（周次下标、脏行、周次与总周数越界、节次超表、冬季作息）",
+      "extracted": "fixtures/boundary.extracted.json",
+      "expected": "fixtures/boundary.expected.json"
+    },
+    {
+      "name": "合成用例：教师工号（「姓名/工号」只留姓名，多名去重）",
+      "extracted": "fixtures/teacher.extracted.json",
+      "expected": "fixtures/teacher.expected.json"
+    },
+    {
+      "name": "合成用例：教务给的总周数小于课表周次，且记录总数对不上",
+      "extracted": "fixtures/total-below.extracted.json",
+      "expected": "fixtures/total-below.expected.json"
+    },
+    {
+      "name": "合成用例：夏季小学期（学期代码 3，短学期）",
+      "extracted": "fixtures/summer-term.extracted.json",
+      "expected": "fixtures/summer-term.expected.json"
+    }
+  ]
+}

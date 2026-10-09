@@ -1,0 +1,59 @@
+{
+  "term": { "code": "2026-2027-1", "name": null, "source": "api" },
+  "today": "2026-09-07",
+  "rowTotal": null,
+  "rows": [
+    {
+      "KCM": "大学物理",
+      "SKXQ": "1",
+      "KSJC": "3",
+      "JSJC": "4",
+      "SKZC": "1111111111111111",
+      "SKJS": "张三/2024011234",
+      "JASMC": "教1-101",
+      "XXXQDM_DISPLAY": "兴庆校区"
+    },
+    {
+      "KCM": "大学物理",
+      "SKXQ": "3",
+      "KSJC": "3",
+      "JSJC": "4",
+      "SKZC": "1111111111111111",
+      "SKJS": "张三/2024011234",
+      "JASMC": "教1-101",
+      "XXXQDM_DISPLAY": "兴庆校区"
+    },
+    {
+      "KCM": "大学物理",
+      "SKXQ": "5",
+      "KSJC": "3",
+      "JSJC": "4",
+      "SKZC": "0101010101010101",
+      "SKJS": "李四、王五",
+      "JASMC": "教2-202",
+      "XXXQDM_DISPLAY": ""
+    },
+    {
+      "KCM": "工程训练",
+      "SKXQ": "6",
+      "KSJC": "1",
+      "JSJC": "4",
+      "SKZC": "1111111111111111",
+      "SKJS": "2024011234",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": ""
+    },
+    {
+      "KCM": "形势与政策",
+      "SKXQ": "2",
+      "KSJC": "9",
+      "JSJC": "10",
+      "SKZC": "1111111111111111",
+      "SKJS": "赵六, 赵六",
+      "JASMC": "教3-305",
+      "XXXQDM_DISPLAY": "创新港校区"
+    }
+  ],
+  "calendarRows": [],
+  "timeSlotRows": []
+}

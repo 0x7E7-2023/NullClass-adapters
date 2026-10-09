@@ -1,0 +1,39 @@
+{
+  "term": { "code": "2026-2027-1", "name": null, "source": "api" },
+  "today": "2026-09-14",
+  "rowTotal": null,
+  "rows": [
+    {
+      "KCM": "高等数学A(一)",
+      "SKXQ": "1",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "1111111111111111",
+      "SKJS": "张三",
+      "JASMC": "主楼A-101",
+      "XXXQDM_DISPLAY": "兴庆校区"
+    },
+    {
+      "KCM": "大学物理",
+      "SKXQ": "3",
+      "KSJC": "3",
+      "JSJC": "4",
+      "SKZC": "0101010101010101",
+      "SKJS": "李四",
+      "JASMC": "主楼B-203",
+      "XXXQDM_DISPLAY": ""
+    },
+    {
+      "KCM": "大学英语",
+      "SKXQ": "5",
+      "KSJC": "9",
+      "JSJC": "10",
+      "SKZC": "1000000000000001",
+      "SKJS": "",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": ""
+    }
+  ],
+  "calendarRows": [],
+  "timeSlotRows": []
+}
