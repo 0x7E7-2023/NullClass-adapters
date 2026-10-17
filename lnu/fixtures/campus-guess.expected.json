@@ -1,0 +1,62 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务系统没有给出开学日期，第 1 周按提取当天 2026-09-09 所在周的周一推算为 2026-09-07，请在「学期管理」里核对成学校实际开学日",
+    "学期名是推算的：教务没有给出学年学期，已按提取当天 2026-09-09 推为「辽宁大学 2026-2027学年第一学期」，如与实际不符可在导入后重命名",
+    "学期总周数按课表里出现的最大周次（16 周）推定，教务没有给出总周数；校历周数不同的话可在「学期管理」里改",
+    "没能确定你所在的校区，已按课程的上课地点猜是「蒲河校区」，节次时间用这个校区的内置作息表，猜错的话请在「学期管理」里改",
+    "有 1 条安排没有写连续节数，已按连续 2 节导入（这是推算的），涉及：英语听力，请核对这些课的节次",
+    "另有 1 条安排的星期、节次或周次读不出来，已忽略"
+  ],
+  "terms": [
+    {
+      "name": "辽宁大学 2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 16,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:20", "end": "10:05" },
+        { "periodIndex": 3, "start": "10:25", "end": "11:10" },
+        { "periodIndex": 4, "start": "11:15", "end": "12:00" },
+        { "periodIndex": 5, "start": "13:30", "end": "14:15" },
+        { "periodIndex": 6, "start": "14:20", "end": "15:05" },
+        { "periodIndex": 7, "start": "15:25", "end": "16:10" },
+        { "periodIndex": 8, "start": "16:15", "end": "17:00" },
+        { "periodIndex": 9, "start": "17:30", "end": "18:15" },
+        { "periodIndex": 10, "start": "18:20", "end": "19:05" },
+        { "periodIndex": 11, "start": "19:25", "end": "20:10" },
+        { "periodIndex": 12, "start": "20:15", "end": "21:00" }
+      ],
+      "courses": [
+        {
+          "name": "数据结构",
+          "teacher": "孙七",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 7, "weekType": "ODD", "location": "蒲河校区文科楼101" },
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 10, "endWeek": 16, "weekType": "ALL", "location": "蒲河校区文科楼101" }
+          ]
+        },
+        {
+          "name": "英语听力",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 7, "endPeriod": 8, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "蒲河校区外语楼203" }
+          ]
+        },
+        {
+          "name": "线性代数",
+          "teacher": "周八",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "蒲河校区" },
+            { "dayOfWeek": 5, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

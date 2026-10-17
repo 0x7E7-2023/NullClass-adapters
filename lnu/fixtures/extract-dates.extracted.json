@@ -1,0 +1,52 @@
+{
+  "fetchedDate": "2026-09-09",
+  "term": { "text": "2026-2027学年第一学期", "isDefault": true },
+  "campus": "extract",
+  "rq": "20260909",
+  "skzc": "18",
+  "errorMessage": null,
+  "courses": [
+    {
+      "courseName": "高等数学A",
+      "attendClassTeacher": "张三*",
+      "timeAndPlaceList": [
+        { "classDay": "1", "classSessions": "1", "continuingSession": "2", "classWeek": "11111111111111111111", "campusName": "崇山校区", "teachingBuildingName": "崇山校区文科楼", "classroomName": "101" }
+      ]
+    },
+    {
+      "courseName": "程序设计",
+      "attendClassTeacher": "赵六",
+      "timeAndPlaceList": [
+        { "classDay": "3", "classSessions": "9", "continuingSession": "2", "classWeek": "00000000000000111111", "campusName": "崇山校区", "teachingBuildingName": "崇山校区计算机楼", "classroomName": "301" },
+        { "classDay": "4", "classSessions": "11", "continuingSession": "2", "classWeek": "1111111111", "campusName": "崇山校区", "teachingBuildingName": "", "classroomName": "" }
+      ]
+    },
+    {
+      "courseName": "体育",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        { "classDay": "5", "classSessions": "5", "continuingSession": "", "classWeek": "1111111111111111", "campusName": "崇山校区", "teachingBuildingName": "", "classroomName": "" }
+      ]
+    },
+    {
+      "courseName": "军事理论",
+      "attendClassTeacher": "王五",
+      "timeAndPlaceList": [
+        { "classDay": "", "classSessions": "1", "continuingSession": "2", "classWeek": "1111", "campusName": "崇山校区", "teachingBuildingName": "崇山校区文科楼", "classroomName": "201" }
+      ]
+    }
+  ],
+  "slots": [
+    { "jc": "1", "kssj": "0800", "jssj": "0845" },
+    { "jc": "2", "kssj": "0855", "jssj": "0940" },
+    { "jc": "3", "kssj": "1000", "jssj": "1045" },
+    { "jc": "4", "kssj": "1055", "jssj": "1140" },
+    { "jc": "5", "kssj": "1400", "jssj": "1445" },
+    { "jc": "6", "kssj": "1455", "jssj": "1540" },
+    { "jc": "7", "kssj": "1600", "jssj": "1645" },
+    { "jc": "8", "kssj": "1655", "jssj": "1740" },
+    { "jc": "9", "kssj": "1830", "jssj": "1915" },
+    { "jc": "10", "kssj": "1925", "jssj": "2010" },
+    { "jc": "11", "kssj": "2000", "jssj": "1900" }
+  ]
+}

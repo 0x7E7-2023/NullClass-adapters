@@ -1,0 +1,55 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 dlut/extract.js 实际交出去的样子编造，我们没有该校账号。课程、教师、教室、课程编号全部虚构。本例覆盖：一周一次的多周课、单周（ODD）与双周（EVEN）、同一门课两种时段、没有排课的课、教师从课程名单兜底、教室只有 customPlace、教务作息表完整。",
+  "term": {
+    "id": "1001",
+    "label": "2026-2027学年第一学期",
+    "pickedBy": "url"
+  },
+  "semesterCount": 3,
+  "semesterMeta": {
+    "startDate": "2026-09-07",
+    "endDate": "2027-01-10",
+    "nameZh": "2026-2027学年第一学期"
+  },
+  "lessonList": [
+    { "id": 101, "courseName": "高等数学A(1)", "teachers": ["王丽"] },
+    { "id": 102, "courseName": "大学英语(2)", "teachers": ["赵婉"] },
+    { "id": 103, "courseName": "体育(3)", "teachers": [] },
+    { "id": 104, "courseName": "线性代数", "teachers": ["钱进"] }
+  ],
+  "scheduleList": [
+    { "lessonId": 101, "weekday": 1, "startTime": 800, "endTime": 945, "weekIndex": 1, "date": null, "personName": "王丽", "roomName": "教十二-101", "customPlace": null },
+    { "lessonId": 101, "weekday": 1, "startTime": 800, "endTime": 945, "weekIndex": 2, "date": null, "personName": "王丽", "roomName": "教十二-101", "customPlace": null },
+    { "lessonId": 101, "weekday": 1, "startTime": 800, "endTime": 945, "weekIndex": 3, "date": null, "personName": "王丽", "roomName": "教十二-101", "customPlace": null },
+    { "lessonId": 101, "weekday": 1, "startTime": 800, "endTime": 945, "weekIndex": 4, "date": null, "personName": "王丽", "roomName": "教十二-101", "customPlace": null },
+    { "lessonId": 101, "weekday": 1, "startTime": 800, "endTime": 945, "weekIndex": 5, "date": null, "personName": "王丽", "roomName": "教十二-101", "customPlace": null },
+    { "lessonId": 101, "weekday": 1, "startTime": 800, "endTime": 945, "weekIndex": 6, "date": null, "personName": "王丽", "roomName": "教十二-101", "customPlace": null },
+    { "lessonId": 101, "weekday": 1, "startTime": 800, "endTime": 945, "weekIndex": 7, "date": null, "personName": "王丽", "roomName": "教十二-101", "customPlace": null },
+    { "lessonId": 101, "weekday": 1, "startTime": 800, "endTime": 945, "weekIndex": 8, "date": null, "personName": "王丽", "roomName": "教十二-101", "customPlace": null },
+    { "lessonId": 102, "weekday": 3, "startTime": 1005, "endTime": 1140, "weekIndex": 1, "date": null, "personName": null, "roomName": null, "customPlace": "综合楼 B204" },
+    { "lessonId": 102, "weekday": 3, "startTime": 1005, "endTime": 1140, "weekIndex": 3, "date": null, "personName": null, "roomName": null, "customPlace": "综合楼 B204" },
+    { "lessonId": 102, "weekday": 3, "startTime": 1005, "endTime": 1140, "weekIndex": 5, "date": null, "personName": null, "roomName": null, "customPlace": "综合楼 B204" },
+    { "lessonId": 102, "weekday": 3, "startTime": 1005, "endTime": 1140, "weekIndex": 7, "date": null, "personName": null, "roomName": null, "customPlace": "综合楼 B204" },
+    { "lessonId": 104, "weekday": 2, "startTime": 1330, "endTime": 1415, "weekIndex": 2, "date": null, "personName": null, "roomName": "教三-305", "customPlace": null },
+    { "lessonId": 104, "weekday": 2, "startTime": 1330, "endTime": 1415, "weekIndex": 4, "date": null, "personName": null, "roomName": "教三-305", "customPlace": null },
+    { "lessonId": 104, "weekday": 2, "startTime": 1330, "endTime": 1415, "weekIndex": 6, "date": null, "personName": null, "roomName": "教三-305", "customPlace": null },
+    { "lessonId": 104, "weekday": 2, "startTime": 1330, "endTime": 1415, "weekIndex": 8, "date": null, "personName": null, "roomName": "教三-305", "customPlace": null },
+    { "lessonId": 104, "weekday": 4, "startTime": 1800, "endTime": 2025, "weekIndex": 1, "date": null, "personName": "钱进", "roomName": null, "customPlace": "教学楼 A301" },
+    { "lessonId": 104, "weekday": 4, "startTime": 1800, "endTime": 2025, "weekIndex": 2, "date": null, "personName": "钱进", "roomName": null, "customPlace": "教学楼 A301" },
+    { "lessonId": 104, "weekday": 4, "startTime": 1800, "endTime": 2025, "weekIndex": 3, "date": null, "personName": "钱进", "roomName": null, "customPlace": "教学楼 A301" }
+  ],
+  "courseUnitList": [
+    { "indexNo": 1, "startTime": 800, "endTime": 845 },
+    { "indexNo": 2, "startTime": 850, "endTime": 935 },
+    { "indexNo": 3, "startTime": 1005, "endTime": 1050 },
+    { "indexNo": 4, "startTime": 1055, "endTime": 1140 },
+    { "indexNo": 5, "startTime": 1330, "endTime": 1415 },
+    { "indexNo": 6, "startTime": 1420, "endTime": 1505 },
+    { "indexNo": 7, "startTime": 1535, "endTime": 1620 },
+    { "indexNo": 8, "startTime": 1625, "endTime": 1710 },
+    { "indexNo": 9, "startTime": 1800, "endTime": 1845 },
+    { "indexNo": 10, "startTime": 1850, "endTime": 1935 },
+    { "indexNo": 11, "startTime": 1940, "endTime": 2025 },
+    { "indexNo": 12, "startTime": 2030, "endTime": 2115 }
+  ]
+}

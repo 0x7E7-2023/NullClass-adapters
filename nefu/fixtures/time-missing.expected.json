@@ -1,0 +1,47 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务课表的节次时间没能读全，第 1–12 节改用空课默认的节次时间（不是教务给的），请在「学期管理」里核对上下课时间",
+    "课表用到了第 13–14 节，这几节没有时间，已按第 12 节下课后课间 5 分钟、每节 45 分钟顺推补上，请在「学期管理」里核对",
+    "有 1 个上课安排没能导入（节次不在作息表里 1 个）。教务页面的写法可能有变化，欢迎反馈。包含：选修课（钟）——节次不在本作息模式的行标签里"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第一学期",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 18,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 7, "start": "16:00", "end": "16:45" },
+        { "periodIndex": 8, "start": "16:55", "end": "17:40" },
+        { "periodIndex": 9, "start": "18:30", "end": "19:15" },
+        { "periodIndex": 10, "start": "19:25", "end": "20:10" },
+        { "periodIndex": 11, "start": "20:20", "end": "21:05" },
+        { "periodIndex": 12, "start": "21:15", "end": "22:00" },
+        { "periodIndex": 13, "start": "22:05", "end": "22:50" },
+        { "periodIndex": 14, "start": "22:55", "end": "23:40" }
+      ],
+      "courses": [
+        {
+          "name": "数学分析", "teacher": "马", "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教G101" }
+          ]
+        },
+        {
+          "name": "信号与系统", "teacher": "段", "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 13, "endPeriod": 14, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教G104" }
+          ]
+        }
+      ]
+    }
+  ]
+}

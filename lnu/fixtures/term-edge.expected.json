@@ -1,0 +1,48 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务校历给出的开学日期（2026-03-02）不属于所选学期，已忽略；第 1 周按提取当天 2026-03-18 所在周的周一推算为 2026-03-16，请在「学期管理」里核对成学校实际开学日",
+    "课表里有第 34 周的课，超过了空课支持的最多 30 周，学期总周数按 30 周导入，超出的周次见后面的提醒",
+    "没能确定你所在的校区，教务系统也没有给出可用的节次时间，这份课表将按应用默认的节次时间显示，请在「学期管理」里设置节次时间",
+    "教务系统对 1 门课还没有排上课时间地点（通常是还没排课），已跳过：军事训练",
+    "另有 1 条安排的星期、节次或周次读不出来，已忽略",
+    "有安排的周次超出了空课支持的最大 30 周：1 条安排的周次被截断到第 30 周，请核对教务里的周次写法"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第二学期",
+      "firstDay": "2026-03-16",
+      "totalWeeks": 30,
+      "periodTimes": [],
+      "courses": [
+        {
+          "name": "思想道德修养",
+          "teacher": "陈九",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "大学物理",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 3, "endPeriod": 4, "startWeek": 2, "endWeek": 6, "weekType": "ALL", "location": "教学楼A101" },
+            { "dayOfWeek": 4, "startPeriod": 3, "endPeriod": 4, "startWeek": 10, "endWeek": 10, "weekType": "ALL", "location": "教学楼A101" }
+          ]
+        },
+        {
+          "name": "形势与政策",
+          "teacher": "郑十",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 6, "startPeriod": 11, "endPeriod": 12, "startWeek": 1, "endWeek": 30, "weekType": "ALL", "location": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

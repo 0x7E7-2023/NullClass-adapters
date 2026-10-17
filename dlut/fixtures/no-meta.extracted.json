@@ -1,0 +1,21 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 dlut/extract.js 实际交出去的样子编造，我们没有该校账号。课程、教师、教室全部虚构。本例模拟学期接口与作息表都取不到：学期名为空（页面 URL 里的学期号不在下拉框里），开学日按排课记录里最早的日期（2026-09-16，第 3 周）回推到第 1 周周一 2026-08-31，作息表回落内置 12 节，学期名按学年推出，总周数按课表最大周次（第 20 周）。",
+  "term": {
+    "id": "1003",
+    "label": null,
+    "pickedBy": "url"
+  },
+  "semesterCount": 2,
+  "semesterMeta": null,
+  "lessonList": [
+    { "id": 301, "courseName": "工程制图", "teachers": ["周宁"] },
+    { "id": 302, "courseName": "电路原理", "teachers": ["吴越"] }
+  ],
+  "scheduleList": [
+    { "lessonId": 301, "weekday": 3, "startTime": 800, "endTime": 945, "weekIndex": 3, "date": "2026-09-16", "personName": null, "roomName": "工程馆 210", "customPlace": null },
+    { "lessonId": 301, "weekday": 3, "startTime": 800, "endTime": 945, "weekIndex": 20, "date": "2027-01-13", "personName": null, "roomName": "工程馆 210", "customPlace": null },
+    { "lessonId": 302, "weekday": 5, "startTime": 1330, "endTime": 1505, "weekIndex": 1, "date": null, "personName": null, "roomName": null, "customPlace": "实验楼 B106" },
+    { "lessonId": 302, "weekday": 5, "startTime": 1330, "endTime": 1505, "weekIndex": 2, "date": null, "personName": null, "roomName": null, "customPlace": "实验楼 B106" }
+  ],
+  "courseUnitList": null
+}

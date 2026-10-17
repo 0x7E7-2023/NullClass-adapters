@@ -1,0 +1,47 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 dlut/extract.js 实际交出去的样子编造，我们没有该校账号。课程、教师、教室全部虚构。本例专挑节次换算的边界：10:05-11:40 → 第 3-4 节；18:00-20:25 → 第 9-11 节；09:50-10:00 对不上任何节，按开始时间最近的一节（第 3 节）放入并提醒；12:00-12:20 离所有节都超过 60 分钟，跳过并点名；开学日是周三，要对齐到周一；学期接口没有结束日期，总周数按课表最晚周次。",
+  "term": {
+    "id": "1002",
+    "label": "2026-2027学年第一学期",
+    "pickedBy": "selected"
+  },
+  "semesterCount": 1,
+  "semesterMeta": {
+    "startDate": "2026-09-09",
+    "endDate": null,
+    "nameZh": null
+  },
+  "lessonList": [
+    { "id": 201, "courseName": "线性代数B", "teachers": ["钱进"] },
+    { "id": 202, "courseName": "大学物理", "teachers": ["孙立"] },
+    { "id": 203, "courseName": "形势与政策", "teachers": [] }
+  ],
+  "scheduleList": [
+    { "lessonId": 201, "weekday": 1, "startTime": 1005, "endTime": 1140, "weekIndex": 1, "date": null, "personName": "钱进", "roomName": "北一-201", "customPlace": null },
+    { "lessonId": 201, "weekday": 1, "startTime": 1005, "endTime": 1140, "weekIndex": 2, "date": null, "personName": "钱进", "roomName": "北一-201", "customPlace": null },
+    { "lessonId": 201, "weekday": 1, "startTime": 1005, "endTime": 1140, "weekIndex": 3, "date": null, "personName": "钱进", "roomName": "北一-201", "customPlace": null },
+    { "lessonId": 201, "weekday": 1, "startTime": 1005, "endTime": 1140, "weekIndex": 4, "date": null, "personName": "钱进", "roomName": "北一-201", "customPlace": null },
+    { "lessonId": 201, "weekday": 4, "startTime": 1800, "endTime": 2025, "weekIndex": 5, "date": null, "personName": null, "roomName": null, "customPlace": "实验楼 C312" },
+    { "lessonId": 201, "weekday": 4, "startTime": 1800, "endTime": 2025, "weekIndex": 6, "date": null, "personName": null, "roomName": null, "customPlace": "实验楼 C312" },
+    { "lessonId": 201, "weekday": 4, "startTime": 1800, "endTime": 2025, "weekIndex": 7, "date": null, "personName": null, "roomName": null, "customPlace": "实验楼 C312" },
+    { "lessonId": 202, "weekday": 2, "startTime": "09:50", "endTime": "10:00", "weekIndex": 10, "date": null, "personName": null, "roomName": null, "customPlace": "北一楼 大厅" },
+    { "lessonId": 202, "weekday": 2, "startTime": "09:50", "endTime": "10:00", "weekIndex": 11, "date": null, "personName": null, "roomName": null, "customPlace": "北一楼 大厅" },
+    { "lessonId": 202, "weekday": 2, "startTime": "09:50", "endTime": "10:00", "weekIndex": 12, "date": null, "personName": null, "roomName": null, "customPlace": "北一楼 大厅" },
+    { "lessonId": 202, "weekday": 5, "startTime": 1200, "endTime": 1220, "weekIndex": 1, "date": null, "personName": null, "roomName": null, "customPlace": "教学楼 D105" },
+    { "lessonId": 202, "weekday": 5, "startTime": 1200, "endTime": 1220, "weekIndex": 2, "date": null, "personName": null, "roomName": null, "customPlace": "教学楼 D105" }
+  ],
+  "courseUnitList": [
+    { "indexNo": 1, "startTime": "08:00", "endTime": "08:45" },
+    { "indexNo": 2, "startTime": "08:50", "endTime": "09:35" },
+    { "indexNo": 3, "startTime": "10:05", "endTime": "10:50" },
+    { "indexNo": 4, "startTime": "10:55", "endTime": "11:40" },
+    { "indexNo": 5, "startTime": "13:30", "endTime": "14:15" },
+    { "indexNo": 6, "startTime": "14:20", "endTime": "15:05" },
+    { "indexNo": 7, "startTime": "15:35", "endTime": "16:20" },
+    { "indexNo": 8, "startTime": "16:25", "endTime": "17:10" },
+    { "indexNo": 9, "startTime": "18:00", "endTime": "18:45" },
+    { "indexNo": 10, "startTime": "18:50", "endTime": "19:35" },
+    { "indexNo": 11, "startTime": "19:40", "endTime": "20:25" },
+    { "indexNo": 12, "startTime": "20:30", "endTime": "21:15" }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "本次只导入了「大连理工大学 2026-2027学年第一学期」（教务页面上当前打开的学期）；学期列表里还有 1 个学期，需要哪一个就在教务页面上切过去再点「提取课表」。",
+    "教务没有给出开学日期，已按排课日期推算第 1 周为 2026-08-31（周一），请在学期管理里核对成学校实际开学日。",
+    "教务系统没有给出节次时间，第 1~12 节的上下课时间按内置的作息表导入，请在学期管理里核对。",
+    "教务没有给出学期结束日期，学期总周数按课程里最晚的周次取为 20 周，请在学期管理里核对。",
+    "教务没有给出学期名称，已写成「大连理工大学 2026-2027学年第一学期」，可以在学期管理里改成你想要的名字。"
+  ],
+  "terms": [
+    {
+      "name": "大连理工大学 2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:50", "end": "09:35" },
+        { "periodIndex": 3, "start": "10:05", "end": "10:50" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "13:30", "end": "14:15" },
+        { "periodIndex": 6, "start": "14:20", "end": "15:05" },
+        { "periodIndex": 7, "start": "15:35", "end": "16:20" },
+        { "periodIndex": 8, "start": "16:25", "end": "17:10" },
+        { "periodIndex": 9, "start": "18:00", "end": "18:45" },
+        { "periodIndex": 10, "start": "18:50", "end": "19:35" },
+        { "periodIndex": 11, "start": "19:40", "end": "20:25" },
+        { "periodIndex": 12, "start": "20:30", "end": "21:15" }
+      ],
+      "courses": [
+        {
+          "name": "工程制图",
+          "teacher": "周宁",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 1, "endPeriod": 2, "startWeek": 3, "endWeek": 3, "weekType": "ALL", "location": "工程馆 210" },
+            { "dayOfWeek": 3, "startPeriod": 1, "endPeriod": 2, "startWeek": 20, "endWeek": 20, "weekType": "ALL", "location": "工程馆 210" }
+          ]
+        },
+        {
+          "name": "电路原理",
+          "teacher": "吴越",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 2, "weekType": "ALL", "location": "实验楼 B106" }
+          ]
+        }
+      ]
+    }
+  ]
+}

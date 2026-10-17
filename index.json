@@ -441,6 +441,24 @@
       "name": "西安交通大学",
       "version": "1.0.0",
       "path": "xjtu"
+    },
+    {
+      "key": "dlut",
+      "name": "大连理工大学",
+      "version": "1.0.0",
+      "path": "dlut"
+    },
+    {
+      "key": "nefu",
+      "name": "东北林业大学",
+      "version": "1.0.0",
+      "path": "nefu"
+    },
+    {
+      "key": "lnu",
+      "name": "辽宁大学",
+      "version": "1.0.0",
+      "path": "lnu"
     }
   ]
 }

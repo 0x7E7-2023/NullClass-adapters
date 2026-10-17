@@ -1,0 +1,39 @@
+{
+  "fetchedDate": "2026-03-18",
+  "term": { "text": "2025-2026学年第二学期", "isDefault": false },
+  "campus": null,
+  "rq": "20260302",
+  "skzc": "18",
+  "errorMessage": null,
+  "courses": [
+    {
+      "courseName": "思想道德修养",
+      "attendClassTeacher": "陈九",
+      "timeAndPlaceList": [
+        { "classDay": "2", "classSessions": "1", "continuingSession": "2", "classWeek": "1111111111111111", "campusName": "", "teachingBuildingName": "", "classroomName": "" },
+        { "classDay": "2", "classSessions": "1", "continuingSession": "2", "classWeek": "1111111111111111", "campusName": "", "teachingBuildingName": "", "classroomName": "" },
+        { "classDay": "5", "classSessions": "1", "continuingSession": "2", "classWeek": "", "weekDescription": "", "campusName": "", "teachingBuildingName": "", "classroomName": "" }
+      ]
+    },
+    {
+      "courseName": "大学物理",
+      "attendClassTeacher": "**",
+      "timeAndPlaceList": [
+        { "classDay": "4", "classSessions": "3", "continuingSession": "2", "classWeek": "", "weekDescription": "2-6周,10周", "campusName": "", "teachingBuildingName": "教学楼A", "classroomName": "101" }
+      ]
+    },
+    {
+      "courseName": "形势与政策",
+      "attendClassTeacher": "郑十",
+      "timeAndPlaceList": [
+        { "classDay": "6", "classSessions": "11", "continuingSession": "2", "classWeek": "1111111111111111111111111111111111", "campusName": "", "teachingBuildingName": "", "classroomName": "" }
+      ]
+    },
+    {
+      "courseName": "军事训练",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": []
+    }
+  ],
+  "slots": null
+}

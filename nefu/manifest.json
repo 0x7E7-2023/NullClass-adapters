@@ -1,0 +1,44 @@
+{
+  "specVersion": 1,
+  "key": "nefu",
+  "name": "东北林业大学",
+  "initial": "D",
+  "version": "1.0.0",
+  "author": "上游 Chr0n0stasis（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwxt.nefu.edu.cn/jsxsd/",
+  "scheduleUrlHint": "https://jwxt.nefu.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jwxt.nefu.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（一周七列、跨两行的格子、一格两门课、1-5,7-8周[1-2节]、大节行标签推出小节时间、教师留空）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：单双周四写法、节次列表拆两块、单双矛盾跳过并点名、周次超过 30 周截掉并提醒",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：同课合并（同周相邻节次并成一段，只有部分周相邻的不扩到整学期）",
+      "extracted": "fixtures/merge-partial.extracted.json",
+      "expected": "fixtures/merge-partial.expected.json"
+    },
+    {
+      "name": "合成用例：作息模式没有「本部」、表尾有备注、周历取不到（用周次下拉框最大周次与推算开学日，并提醒）",
+      "extracted": "fixtures/fallback-no-calendar.extracted.json",
+      "expected": "fixtures/fallback-no-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：大节行标签没写时间（整张节次时间不交，应用用默认节次；第 13 节起的课提醒；节次不在作息表里的课跳过）",
+      "extracted": "fixtures/time-missing.extracted.json",
+      "expected": "fixtures/time-missing.expected.json"
+    }
+  ]
+}

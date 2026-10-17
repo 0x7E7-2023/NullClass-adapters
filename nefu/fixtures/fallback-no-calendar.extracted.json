@@ -1,0 +1,386 @@
+{
+  "source": "qz-jsxsd",
+  "pageUrl": "https://jwxt.nefu.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-10-17",
+  "loginTitle": false,
+  "loginForm": false,
+  "request": {
+    "xnxq01id": "2026-2027-1",
+    "kbjcmsid": "2",
+    "zc": ""
+  },
+  "selects": {
+    "xnxq01id": {
+      "selected": "2026-2027-1",
+      "options": [
+        {
+          "value": "2026-2027-1",
+          "label": "2026-2027-1"
+        }
+      ]
+    },
+    "kbjcmsid": {
+      "selected": "2",
+      "options": [
+        {
+          "value": "2",
+          "label": "夏季作息"
+        },
+        {
+          "value": "3",
+          "label": "冬季作息"
+        }
+      ]
+    },
+    "zc": {
+      "selected": "",
+      "options": [
+        {
+          "value": "",
+          "label": "全部"
+        },
+        {
+          "value": "1",
+          "label": "第1周"
+        },
+        {
+          "value": "2",
+          "label": "第2周"
+        },
+        {
+          "value": "3",
+          "label": "第3周"
+        },
+        {
+          "value": "4",
+          "label": "第4周"
+        },
+        {
+          "value": "5",
+          "label": "第5周"
+        },
+        {
+          "value": "6",
+          "label": "第6周"
+        },
+        {
+          "value": "7",
+          "label": "第7周"
+        },
+        {
+          "value": "8",
+          "label": "第8周"
+        },
+        {
+          "value": "9",
+          "label": "第9周"
+        },
+        {
+          "value": "10",
+          "label": "第10周"
+        },
+        {
+          "value": "11",
+          "label": "第11周"
+        },
+        {
+          "value": "12",
+          "label": "第12周"
+        },
+        {
+          "value": "13",
+          "label": "第13周"
+        },
+        {
+          "value": "14",
+          "label": "第14周"
+        },
+        {
+          "value": "15",
+          "label": "第15周"
+        },
+        {
+          "value": "16",
+          "label": "第16周"
+        },
+        {
+          "value": "17",
+          "label": "第17周"
+        },
+        {
+          "value": "18",
+          "label": "第18周"
+        },
+        {
+          "value": "19",
+          "label": "第19周"
+        },
+        {
+          "value": "20",
+          "label": "第20周"
+        }
+      ]
+    }
+  },
+  "tables": [
+    {
+      "head": [
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "节次",
+          "lists": []
+        },
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "星期一",
+          "lists": []
+        },
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "星期二",
+          "lists": []
+        },
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "星期三",
+          "lists": []
+        },
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "星期四",
+          "lists": []
+        },
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "星期五",
+          "lists": []
+        },
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "星期六",
+          "lists": []
+        },
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "星期日",
+          "lists": []
+        }
+      ],
+      "body": [
+        [
+          {
+            "name": "timeTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "第一大节 (1、2小节) 08:00~09:35",
+            "lists": []
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "概率论",
+            "lists": [
+              {
+                "size": "1",
+                "items": [
+                  {
+                    "course": true,
+                    "title": "概率论",
+                    "abbr": "老师:许;时间:1-16周[1-2节];地点:教E101"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "name": "timeTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "第二大节 (3、4小节) 10:00~11:35",
+            "lists": []
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          }
+        ]
+      ],
+      "foot": [
+        "周三下午的实践课另行安排",
+        "暑期集中实习（具体时间待定）"
+      ]
+    }
+  ],
+  "calendar": null
+}

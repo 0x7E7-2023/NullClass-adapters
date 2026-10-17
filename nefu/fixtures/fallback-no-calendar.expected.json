@@ -1,0 +1,33 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "开学日期无法从教务获取（教学周历没有取到），已按最近的周一（2026-10-12）推算，请在「学期管理」里核对",
+    "教务的作息模式里没有「本部」，已改用当前选中的「夏季作息」，节次时间请在「学期管理」里核对",
+    "教务课表里有 2 项备注没排具体星期和节次（如「周三下午的实践课另行安排」、「暑期集中实习（具体时间待定）」），这些内容没有导入，请在教务系统里查看",
+    "每大节内的小节时间是按课间 5 分钟推算的，请在「学期管理」里核对",
+    "教务没有给出学期总周数，已按周次选项的最大值（20 周）计，请在「学期管理」里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-10-12",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:50", "end": "09:35" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:50", "end": "11:35" }
+      ],
+      "courses": [
+        {
+          "name": "概率论", "teacher": "许", "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教E101" }
+          ]
+        }
+      ]
+    }
+  ]
+}

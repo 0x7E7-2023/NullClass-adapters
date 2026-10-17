@@ -1,0 +1,53 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "每大节内的小节时间是按课间 5 分钟推算的，请在「学期管理」里核对",
+    "课表里有到第 30 周的课，比学期的 20 周多，学期总周数已按 30 周计，请在「学期管理」里核对",
+    "有 5 个周次超出 30 周，这些周次没有导入",
+    "有 1 个上课安排没能导入（单双周标记自相矛盾 1 个）。教务页面的写法可能有变化，欢迎反馈。包含：矛盾课（周八）——单双周标记自相矛盾"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第二学期",
+      "firstDay": "2026-02-23",
+      "totalWeeks": 30,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:50", "end": "09:35" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:50", "end": "11:35" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:50", "end": "15:35" }
+      ],
+      "courses": [
+        {
+          "name": "计算机网络", "teacher": "赵六", "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 15, "weekType": "ODD", "location": "教C301" }
+          ]
+        },
+        {
+          "name": "操作系统", "teacher": "孙七", "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 5, "endPeriod": 6, "startWeek": 2, "endWeek": 16, "weekType": "EVEN", "location": "教C302" }
+          ]
+        },
+        {
+          "name": "线性代数", "teacher": "吴九", "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教F102" },
+            { "dayOfWeek": 4, "startPeriod": 5, "endPeriod": 5, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教F102" }
+          ]
+        },
+        {
+          "name": "毕业设计", "teacher": "郑十", "note": null,
+          "blocks": [
+            { "dayOfWeek": 6, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 30, "weekType": "ALL", "location": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

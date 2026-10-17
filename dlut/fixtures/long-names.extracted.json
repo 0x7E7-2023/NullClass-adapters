@@ -1,0 +1,45 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 dlut/extract.js 实际交出去的样子编造，我们没有该校账号。课程名为虚构的英文长名（约 70 至 80 字符），专门验证 parse.js 对提醒文字的限长：三门长课名触发「离所有节次超过 60 分钟已跳过」，一门长课名触发「按最近一节放入」，三门没有排课的长课名触发「没排上课时间」，三条提醒合起来若不限长都会超过 200 字。",
+  "term": {
+    "id": "1005",
+    "label": "2026-2027学年第一学期",
+    "pickedBy": "url"
+  },
+  "semesterCount": 1,
+  "semesterMeta": {
+    "startDate": "2026-09-07",
+    "endDate": "2027-01-10",
+    "nameZh": "2026-2027学年第一学期"
+  },
+  "lessonList": [
+    { "id": 501, "courseName": "Advanced Engineering Mathematics Lecture Series Volume Alpha Extended Edition", "teachers": [] },
+    { "id": 502, "courseName": "Principles of Modern Distributed Systems Design and Practical Implementation Lab", "teachers": ["沈禾"] },
+    { "id": 503, "courseName": "Introduction to Probability Theory and Stochastic Processes for Undergraduates", "teachers": ["许知远"] },
+    { "id": 504, "courseName": "Fundamentals of Digital Signal Processing with Laboratory Exercises and Projects", "teachers": ["郑远"] },
+    { "id": 505, "courseName": "Comparative Literature Seminar on Global Narratives and Translation Studies", "teachers": ["陆青"] },
+    { "id": 506, "courseName": "Environmental Chemistry and Sustainable Materials Engineering Workshop Course", "teachers": ["卫澜"] },
+    { "id": 507, "courseName": "Organizational Behaviour and Human Resource Management in Modern Enterprises", "teachers": ["潘宁"] }
+  ],
+  "scheduleList": [
+    { "lessonId": 501, "weekday": 2, "startTime": "09:50", "endTime": "10:00", "weekIndex": 1, "date": null, "personName": null, "roomName": "Hall A", "customPlace": null },
+    { "lessonId": 501, "weekday": 2, "startTime": "09:50", "endTime": "10:00", "weekIndex": 2, "date": null, "personName": null, "roomName": "Hall A", "customPlace": null },
+    { "lessonId": 501, "weekday": 2, "startTime": "09:50", "endTime": "10:00", "weekIndex": 3, "date": null, "personName": null, "roomName": "Hall A", "customPlace": null },
+    { "lessonId": 502, "weekday": 4, "startTime": 1200, "endTime": 1220, "weekIndex": 1, "date": null, "personName": null, "roomName": null, "customPlace": "Lab 3" },
+    { "lessonId": 503, "weekday": 5, "startTime": 1200, "endTime": 1220, "weekIndex": 1, "date": null, "personName": null, "roomName": null, "customPlace": "Room 12" },
+    { "lessonId": 504, "weekday": 1, "startTime": 1200, "endTime": 1220, "weekIndex": 1, "date": null, "personName": null, "roomName": null, "customPlace": "Room 14" }
+  ],
+  "courseUnitList": [
+    { "indexNo": 1, "startTime": 800, "endTime": 845 },
+    { "indexNo": 2, "startTime": 850, "endTime": 935 },
+    { "indexNo": 3, "startTime": 1005, "endTime": 1050 },
+    { "indexNo": 4, "startTime": 1055, "endTime": 1140 },
+    { "indexNo": 5, "startTime": 1330, "endTime": 1415 },
+    { "indexNo": 6, "startTime": 1420, "endTime": 1505 },
+    { "indexNo": 7, "startTime": 1535, "endTime": 1620 },
+    { "indexNo": 8, "startTime": 1625, "endTime": 1710 },
+    { "indexNo": 9, "startTime": 1800, "endTime": 1845 },
+    { "indexNo": 10, "startTime": 1850, "endTime": 1935 },
+    { "indexNo": 11, "startTime": 1940, "endTime": 2025 },
+    { "indexNo": 12, "startTime": 2030, "endTime": 2115 }
+  ]
+}

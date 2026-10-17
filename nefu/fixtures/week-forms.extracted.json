@@ -1,0 +1,657 @@
+{
+  "source": "qz-jsxsd",
+  "pageUrl": "https://jwxt.nefu.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-10-17",
+  "loginTitle": false,
+  "loginForm": false,
+  "request": {
+    "xnxq01id": "2025-2026-2",
+    "kbjcmsid": "1",
+    "zc": ""
+  },
+  "selects": {
+    "xnxq01id": {
+      "selected": "2025-2026-2",
+      "options": [
+        {
+          "value": "2025-2026-2",
+          "label": "2025-2026学年第二学期"
+        },
+        {
+          "value": "2024-2025-1",
+          "label": "2024-2025学年第一学期"
+        }
+      ]
+    },
+    "kbjcmsid": {
+      "selected": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "本部"
+        },
+        {
+          "value": "2",
+          "label": "校区"
+        }
+      ]
+    },
+    "zc": {
+      "selected": "",
+      "options": [
+        {
+          "value": "",
+          "label": "全部"
+        },
+        {
+          "value": "1",
+          "label": "第1周"
+        },
+        {
+          "value": "2",
+          "label": "第2周"
+        },
+        {
+          "value": "3",
+          "label": "第3周"
+        },
+        {
+          "value": "4",
+          "label": "第4周"
+        },
+        {
+          "value": "5",
+          "label": "第5周"
+        },
+        {
+          "value": "6",
+          "label": "第6周"
+        },
+        {
+          "value": "7",
+          "label": "第7周"
+        },
+        {
+          "value": "8",
+          "label": "第8周"
+        },
+        {
+          "value": "9",
+          "label": "第9周"
+        },
+        {
+          "value": "10",
+          "label": "第10周"
+        },
+        {
+          "value": "11",
+          "label": "第11周"
+        },
+        {
+          "value": "12",
+          "label": "第12周"
+        },
+        {
+          "value": "13",
+          "label": "第13周"
+        },
+        {
+          "value": "14",
+          "label": "第14周"
+        },
+        {
+          "value": "15",
+          "label": "第15周"
+        },
+        {
+          "value": "16",
+          "label": "第16周"
+        },
+        {
+          "value": "17",
+          "label": "第17周"
+        },
+        {
+          "value": "18",
+          "label": "第18周"
+        },
+        {
+          "value": "19",
+          "label": "第19周"
+        },
+        {
+          "value": "20",
+          "label": "第20周"
+        }
+      ]
+    }
+  },
+  "tables": [
+    {
+      "head": [
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "节次",
+          "lists": []
+        },
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "星期一",
+          "lists": []
+        },
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "星期二",
+          "lists": []
+        },
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "星期三",
+          "lists": []
+        },
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "星期四",
+          "lists": []
+        },
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "星期五",
+          "lists": []
+        },
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "星期六",
+          "lists": []
+        },
+        {
+          "name": "",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "星期日",
+          "lists": []
+        }
+      ],
+      "body": [
+        [
+          {
+            "name": "timeTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "第一大节 (1、2小节) 08:00~09:35",
+            "lists": []
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "矛盾课",
+            "lists": [
+              {
+                "size": "1",
+                "items": [
+                  {
+                    "course": true,
+                    "title": "矛盾课",
+                    "abbr": "老师:周八;时间:1-16单周(双)[1-2节];地点:教F101"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "线性代数",
+            "lists": [
+              {
+                "size": "1",
+                "items": [
+                  {
+                    "course": true,
+                    "title": "线性代数",
+                    "abbr": "老师:吴九;时间:1-16周[1-2,5节];地点:教F102"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "毕业设计",
+            "lists": [
+              {
+                "size": "1",
+                "items": [
+                  {
+                    "course": true,
+                    "title": "毕业设计",
+                    "abbr": "老师:郑十;时间:1-35周[1-2节];地点:"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "name": "timeTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "第二大节 (3、4小节) 10:00~11:35",
+            "lists": []
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "计算机网络",
+            "lists": [
+              {
+                "size": "1",
+                "items": [
+                  {
+                    "course": true,
+                    "title": "计算机网络",
+                    "abbr": "老师:赵六;时间:1-15单周[3-4节];地点:教C301"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "操作系统",
+            "lists": [
+              {
+                "size": "1",
+                "items": [
+                  {
+                    "course": true,
+                    "title": "操作系统",
+                    "abbr": "老师:孙七;时间:2-16周(双)[5-6节];地点:教C302"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "name": "timeTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "第三大节 (5、6小节) 14:00~15:35",
+            "lists": []
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "kbDataTd",
+            "rowSpan": 1,
+            "colSpan": 1,
+            "text": "",
+            "lists": [
+              {
+                "size": "0",
+                "items": []
+              }
+            ]
+          }
+        ]
+      ],
+      "foot": []
+    }
+  ],
+  "calendar": {
+    "rows": [
+      [
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "周次",
+          "title": ""
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "一",
+          "title": ""
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "二",
+          "title": ""
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "三",
+          "title": ""
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "四",
+          "title": ""
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "五",
+          "title": ""
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "六",
+          "title": ""
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "日",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "1",
+          "title": ""
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "title": "2026年02月23日"
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "title": "2026年02月24日"
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "title": "2026年02月25日"
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "title": "2026年02月26日"
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "title": "2026年02月27日"
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "title": "2026年02月28日"
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "title": "2026年03月01日"
+        }
+      ],
+      [
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "20",
+          "title": ""
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "title": ""
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "title": ""
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "title": ""
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "title": ""
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "title": ""
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "title": ""
+        },
+        {
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "title": ""
+        }
+      ]
+    ]
+  }
+}

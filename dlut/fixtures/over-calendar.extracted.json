@@ -1,0 +1,42 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 dlut/extract.js 实际交出去的样子编造，我们没有该校账号。课程、教师、教室全部虚构。本例专挑校历与课表对不上的情况：学期起始 2025-09-03 是周三（要对齐到周一 09-01），结束 2025-12-21 只能数出 16 周，但课表里有安排在第 20 周，总周数必须抬到 20 周并进 warnings；另有第 31、32 周的安排超出 30 周上限，必须跳过并提醒。作息表用字符串时间（08:00 格式）。",
+  "term": {
+    "id": "1004",
+    "label": "2025-2026学年第一学期",
+    "pickedBy": "url"
+  },
+  "semesterCount": 1,
+  "semesterMeta": {
+    "startDate": "2025-09-03",
+    "endDate": "2025-12-21",
+    "nameZh": "2025-2026学年第一学期"
+  },
+  "lessonList": [
+    { "id": 401, "courseName": "数据结构", "teachers": ["方明"] },
+    { "id": 402, "courseName": "专题讲座", "teachers": ["钱进"] },
+    { "id": 403, "courseName": "毕业设计", "teachers": [] }
+  ],
+  "scheduleList": [
+    { "lessonId": 401, "weekday": 2, "startTime": 800, "endTime": 945, "weekIndex": 1, "date": null, "personName": null, "roomName": null, "customPlace": null },
+    { "lessonId": 401, "weekday": 2, "startTime": 800, "endTime": 945, "weekIndex": 16, "date": null, "personName": null, "roomName": null, "customPlace": null },
+    { "lessonId": 402, "weekday": 3, "startTime": 1330, "endTime": 1505, "weekIndex": 18, "date": null, "personName": null, "roomName": "学术报告厅", "customPlace": null },
+    { "lessonId": 402, "weekday": 3, "startTime": 1330, "endTime": 1505, "weekIndex": 19, "date": null, "personName": null, "roomName": "学术报告厅", "customPlace": null },
+    { "lessonId": 402, "weekday": 3, "startTime": 1330, "endTime": 1505, "weekIndex": 20, "date": null, "personName": null, "roomName": "学术报告厅", "customPlace": null },
+    { "lessonId": 403, "weekday": 6, "startTime": 1800, "endTime": 1845, "weekIndex": 31, "date": null, "personName": null, "roomName": null, "customPlace": "教学楼 E201" },
+    { "lessonId": 403, "weekday": 6, "startTime": 1800, "endTime": 1845, "weekIndex": 32, "date": null, "personName": null, "roomName": null, "customPlace": "教学楼 E201" }
+  ],
+  "courseUnitList": [
+    { "indexNo": 1, "startTime": "08:00", "endTime": "08:45" },
+    { "indexNo": 2, "startTime": "08:50", "endTime": "09:35" },
+    { "indexNo": 3, "startTime": "10:05", "endTime": "10:50" },
+    { "indexNo": 4, "startTime": "10:55", "endTime": "11:40" },
+    { "indexNo": 5, "startTime": "13:30", "endTime": "14:15" },
+    { "indexNo": 6, "startTime": "14:20", "endTime": "15:05" },
+    { "indexNo": 7, "startTime": "15:35", "endTime": "16:20" },
+    { "indexNo": 8, "startTime": "16:25", "endTime": "17:10" },
+    { "indexNo": 9, "startTime": "18:00", "endTime": "18:45" },
+    { "indexNo": 10, "startTime": "18:50", "endTime": "19:35" },
+    { "indexNo": 11, "startTime": "19:40", "endTime": "20:25" },
+    { "indexNo": 12, "startTime": "20:30", "endTime": "21:15" }
+  ]
+}

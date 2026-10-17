@@ -1,0 +1,50 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务给的开学日期（2025-09-03）不是周一，已对齐到当周周一 2025-09-01 作为第 1 周的起点，请在学期管理里核对。",
+    "有 1 段安排在第 30 周以后，超出本应用支持的 30 周，已跳过。",
+    "教务给的学期起止日期只能数出 16 周，但课表里有安排落在第 20 周，学期总周数已按 20 周导入，请在学期管理里核对。"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第一学期",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:50", "end": "09:35" },
+        { "periodIndex": 3, "start": "10:05", "end": "10:50" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "13:30", "end": "14:15" },
+        { "periodIndex": 6, "start": "14:20", "end": "15:05" },
+        { "periodIndex": 7, "start": "15:35", "end": "16:20" },
+        { "periodIndex": 8, "start": "16:25", "end": "17:10" },
+        { "periodIndex": 9, "start": "18:00", "end": "18:45" },
+        { "periodIndex": 10, "start": "18:50", "end": "19:35" },
+        { "periodIndex": 11, "start": "19:40", "end": "20:25" },
+        { "periodIndex": 12, "start": "20:30", "end": "21:15" }
+      ],
+      "courses": [
+        {
+          "name": "数据结构",
+          "teacher": "方明",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 1, "weekType": "ALL", "location": null },
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 16, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "专题讲座",
+          "teacher": "钱进",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 5, "endPeriod": 6, "startWeek": 18, "endWeek": 20, "weekType": "ALL", "location": "学术报告厅" }
+          ]
+        }
+      ]
+    }
+  ]
+}

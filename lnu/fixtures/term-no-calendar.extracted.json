@@ -1,0 +1,18 @@
+{
+  "fetchedDate": "2026-03-18",
+  "term": { "text": "2025-2026学年第二学期", "isDefault": false },
+  "campus": "puhe",
+  "rq": null,
+  "skzc": "18",
+  "errorMessage": null,
+  "courses": [
+    {
+      "courseName": "大学体育",
+      "attendClassTeacher": "钱十一",
+      "timeAndPlaceList": [
+        { "classDay": "7", "classSessions": "3", "continuingSession": "2", "classWeek": "111111111111", "campusName": "蒲河校区", "teachingBuildingName": "蒲河校区体育馆", "classroomName": "1" }
+      ]
+    }
+  ],
+  "slots": null
+}

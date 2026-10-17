@@ -1,0 +1,48 @@
+{
+  "specVersion": 1,
+  "key": "lnu",
+  "name": "辽宁大学",
+  "initial": "L",
+  "version": "1.0.0",
+  "author": "上游 739C1AE2（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://jwstudent.lnu.edu.cn/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jwstudent.lnu.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（选中默认学期，崇山校区内置作息，单双周，同课重复行，无排课课程）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：没有选校区，按课程上课地点猜蒲河校区；没有学期下拉框时推算学期名与开学日；周次只有文字写法、连续节数缺失",
+      "extracted": "fixtures/campus-guess.extracted.json",
+      "expected": "fixtures/campus-guess.expected.json"
+    },
+    {
+      "name": "合成用例：开学日不是周一需对齐，总周数被课表抬高，教务节次时间缺第 11-12 节需补齐，节次时间里有坏行，连续节数为空，周次写错",
+      "extracted": "fixtures/extract-dates.extracted.json",
+      "expected": "fixtures/extract-dates.expected.json"
+    },
+    {
+      "name": "合成用例：非默认学期（校历与学期周数不适用）、没有可用的节次时间、周次超过 30 周被截断、同一安排重复",
+      "extracted": "fixtures/term-edge.extracted.json",
+      "expected": "fixtures/term-edge.expected.json"
+    },
+    {
+      "name": "合成用例：非默认学期且没有开学日，教务的学期周数不适用，按课表最大周次推定总周数",
+      "extracted": "fixtures/term-no-calendar.extracted.json",
+      "expected": "fixtures/term-no-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：三门约 80 字的长课名都缺连续节数（提醒里课名要截短，单条提醒不超过 200 字），另有一门没排课的课点名",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    }
+  ]
+}

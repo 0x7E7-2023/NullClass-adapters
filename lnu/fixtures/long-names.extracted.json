@@ -1,0 +1,58 @@
+{
+  "fetchedDate": "2026-09-09",
+  "term": null,
+  "campus": "chongshan",
+  "rq": null,
+  "skzc": null,
+  "errorMessage": null,
+  "courses": [
+    {
+      "courseName": "甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲",
+      "attendClassTeacher": "周一",
+      "timeAndPlaceList": [
+        {
+          "classDay": "1",
+          "classSessions": "1",
+          "classWeek": "1111",
+          "campusName": "崇山校区",
+          "teachingBuildingName": "",
+          "classroomName": ""
+        }
+      ]
+    },
+    {
+      "courseName": "乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙",
+      "attendClassTeacher": "周二",
+      "timeAndPlaceList": [
+        {
+          "classDay": "2",
+          "classSessions": "3",
+          "classWeek": "1111",
+          "campusName": "崇山校区",
+          "teachingBuildingName": "",
+          "classroomName": ""
+        }
+      ]
+    },
+    {
+      "courseName": "丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙",
+      "attendClassTeacher": "周三",
+      "timeAndPlaceList": [
+        {
+          "classDay": "3",
+          "classSessions": "5",
+          "classWeek": "1111",
+          "campusName": "崇山校区",
+          "teachingBuildingName": "",
+          "classroomName": ""
+        }
+      ]
+    },
+    {
+      "courseName": "军事理论",
+      "attendClassTeacher": "王五",
+      "timeAndPlaceList": []
+    }
+  ],
+  "slots": null
+}

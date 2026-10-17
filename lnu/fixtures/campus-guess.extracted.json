@@ -1,0 +1,36 @@
+{
+  "fetchedDate": "2026-09-09",
+  "term": null,
+  "campus": null,
+  "rq": null,
+  "skzc": null,
+  "errorMessage": null,
+  "courses": [
+    {
+      "courseName": "数据结构",
+      "attendClassTeacher": "孙七 *",
+      "timeAndPlaceList": [
+        { "classDay": "1", "classSessions": "1", "continuingSession": "2", "weekDescription": "1-8周(单),10-16周", "campusName": "蒲河校区", "teachingBuildingName": "蒲河校区文科楼", "classroomName": "蒲河校区文科楼101" }
+      ]
+    },
+    {
+      "courseName": "英语听力",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        { "classDay": "3", "classSessions": "7", "classWeek": "1111111111111111", "campusName": "蒲河校区", "teachingBuildingName": "蒲河校区外语楼", "classroomName": "203" }
+      ]
+    },
+    {
+      "courseName": "线性代数",
+      "attendClassTeacher": "周八",
+      "timeAndPlaceList": [
+        { "classDay": "2", "classSessions": "3", "continuingSession": "2", "classWeek": "1111111100000000", "campusName": "蒲河校区", "teachingBuildingName": "蒲河校区", "classroomName": "蒲河校区" },
+        { "classDay": "5", "classSessions": "1", "continuingSession": "2", "classWeek": "11111111", "campusName": "", "teachingBuildingName": "", "classroomName": "" },
+        { "classDay": "9", "classSessions": "1", "continuingSession": "2", "classWeek": "1111", "campusName": "蒲河校区", "teachingBuildingName": "蒲河校区", "classroomName": "蒲河校区" }
+      ]
+    }
+  ],
+  "slots": [
+    { "jc": "1", "kssj": "0830", "jssj": "0915" }
+  ]
+}

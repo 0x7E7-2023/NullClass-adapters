@@ -1,0 +1,46 @@
+{
+  "fetchedDate": "2026-09-09",
+  "term": { "text": "2026-2027学年第一学期", "isDefault": true },
+  "campus": "chongshan",
+  "rq": "20260907",
+  "skzc": "18",
+  "errorMessage": null,
+  "courses": [
+    {
+      "courseName": "高等数学A",
+      "attendClassTeacher": "张三*",
+      "timeAndPlaceList": [
+        { "classDay": "1", "classSessions": "1", "continuingSession": "2", "classWeek": "1111111111111111", "weekDescription": "1-16周", "campusName": "崇山校区", "teachingBuildingName": "崇山校区文科楼", "classroomName": "101" },
+        { "classDay": "1", "classSessions": "1", "continuingSession": "2", "classWeek": "1111111111111111", "weekDescription": "1-16周", "campusName": "崇山校区", "teachingBuildingName": "崇山校区文科楼", "classroomName": "101" }
+      ]
+    },
+    {
+      "courseName": "大学英语",
+      "attendClassTeacher": "李四",
+      "timeAndPlaceList": [
+        { "classDay": "3", "classSessions": "3", "continuingSession": "2", "classWeek": "0101010101010101", "weekDescription": "2-16周(双)", "campusName": "崇山校区", "teachingBuildingName": "崇山校区外语楼", "classroomName": "203" }
+      ]
+    },
+    {
+      "courseName": "体育",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        { "classDay": "5", "classSessions": "9", "continuingSession": "2", "classWeek": "11111111", "weekDescription": "1-8周", "campusName": "崇山校区", "teachingBuildingName": "", "classroomName": "" }
+      ]
+    },
+    {
+      "courseName": "军事理论",
+      "attendClassTeacher": "王五",
+      "timeAndPlaceList": []
+    },
+    {
+      "courseName": "程序设计",
+      "attendClassTeacher": "赵六",
+      "timeAndPlaceList": [
+        { "classDay": "2", "classSessions": "5", "continuingSession": "2", "classWeek": "0000000011111111", "weekDescription": "9-16周", "campusName": "崇山校区", "teachingBuildingName": "崇山校区计算机楼", "classroomName": "301" },
+        { "classDay": "4", "classSessions": "11", "continuingSession": "2", "classWeek": "1111111100000000", "weekDescription": "1-8周", "campusName": "崇山校区", "teachingBuildingName": "", "classroomName": "" }
+      ]
+    }
+  ],
+  "slots": null
+}

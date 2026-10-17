@@ -1,0 +1,43 @@
+{
+  "specVersion": 1,
+  "key": "dlut",
+  "name": "大连理工大学",
+  "initial": "D",
+  "version": "1.0.0",
+  "author": "上游 dffzcqs78694（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://jxgl.dlut.edu.cn/student/for-std/course-table",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jxgl.dlut.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本——多时段课程（一周一次、单双周）、没有排课的课、教师从课程名单兜底、教室只有 customPlace、教务作息表完整",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：节次边界——10:05-11:40 → 第 3-4 节；18:00-20:25 → 第 9-11 节；09:50-10:00 按最近一节放入；12:00-12:20 离所有节超过 60 分钟跳过并点名；开学日不是周一要对齐；没有结束日期",
+      "extracted": "fixtures/section-edge.extracted.json",
+      "expected": "fixtures/section-edge.expected.json"
+    },
+    {
+      "name": "合成用例：学期起止日期和作息表都取不到——开学日按排课最早日期回推，作息表回落内置 12 节，学期名按学年推出，总周数按课表最大周次",
+      "extracted": "fixtures/no-meta.extracted.json",
+      "expected": "fixtures/no-meta.expected.json"
+    },
+    {
+      "name": "合成用例：课表周次超出校历——校历只数出 16 周，课表排到第 20 周，总周数抬到 20 周并提醒；第 31 周起的安排跳过并提醒",
+      "extracted": "fixtures/over-calendar.extracted.json",
+      "expected": "fixtures/over-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：长课名——三门约 70 字的英文课名分别触发「离节次超过 60 分钟已跳过」「按最近一节放入」「没排上课时间」三条提醒，提醒必须限长（每条 ≤200 字）",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    }
+  ]
+}

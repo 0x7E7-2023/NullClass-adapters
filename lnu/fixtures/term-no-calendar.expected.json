@@ -1,0 +1,41 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务系统没有给出开学日期，第 1 周按提取当天 2026-03-18 所在周的周一推算为 2026-03-16，请在「学期管理」里核对成学校实际开学日",
+    "学期总周数按课表里出现的最大周次（12 周）推定：教务给的周数只对应当前学期，与所选学期对不上，已忽略；校历周数不同的话可在「学期管理」里改",
+    "节次时间用的是你选的「蒲河校区」内置作息表，请在「学期管理」里核对是否与学校作息一致"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第二学期",
+      "firstDay": "2026-03-16",
+      "totalWeeks": 12,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:20", "end": "10:05" },
+        { "periodIndex": 3, "start": "10:25", "end": "11:10" },
+        { "periodIndex": 4, "start": "11:15", "end": "12:00" },
+        { "periodIndex": 5, "start": "13:30", "end": "14:15" },
+        { "periodIndex": 6, "start": "14:20", "end": "15:05" },
+        { "periodIndex": 7, "start": "15:25", "end": "16:10" },
+        { "periodIndex": 8, "start": "16:15", "end": "17:00" },
+        { "periodIndex": 9, "start": "17:30", "end": "18:15" },
+        { "periodIndex": 10, "start": "18:20", "end": "19:05" },
+        { "periodIndex": 11, "start": "19:25", "end": "20:10" },
+        { "periodIndex": 12, "start": "20:15", "end": "21:00" }
+      ],
+      "courses": [
+        {
+          "name": "大学体育",
+          "teacher": "钱十一",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 7, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 12, "weekType": "ALL", "location": "蒲河校区体育馆1" }
+          ]
+        }
+      ]
+    }
+  ]
+}
