@@ -1,0 +1,57 @@
+{
+  "specVersion": 1,
+  "key": "jsei",
+  "name": "江苏电子信息职业学院",
+  "initial": "J",
+  "version": "1.0.0",
+  "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwpd-443.webvpn.jsei.edu.cn/jwglxt/xtgl/login_slogin.html",
+  "scheduleUrlHint": "https://jwpd-443.webvpn.jsei.edu.cn/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["jwpd.jsei.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：本校边界 1 · 节次时间接口取不到 → 整张用上游 11 节表（第 2 节 09:20-10:05、第 11 节 19:55-20:40 钉住）；课表排到第 13 节 → 第 12 节取空课默认节次时间 21:15-22:00、第 13 节顺推 22:05-22:50；校历也取不到 → 开学日推算、总周数 20；含单双周、缺教师、缺教室",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：本校边界 4 · 同课连续节次合并（1-2 与 3-4 合成 1-4）+ 同节次不同周次并集（1-8 周 + 9-16 周合成 1-16 周）+ 完全重复的排课行只留一条；节次时间与校历都取不到 → 11 节表 + 推算开学日",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：本校边界 3 · 教务校历第 1 周的日期不是周一（zs=1 给 2026-09-09 周三）→ 开学日必须回退到那一周的周一 2026-09-07；校历最大周次 18 → 总周数取 18",
+      "extracted": "fixtures/calendar-weekday.extracted.json",
+      "expected": "fixtures/calendar-weekday.expected.json"
+    },
+    {
+      "name": "合成用例：本校边界 2 · 校历取不到 → 开学日推算为 2026-08-31；课表最晚排到第 20 周 → 与内置的 20 周一致，不走抬高分支；节次时间取不到 → 11 节表",
+      "extracted": "fixtures/no-calendar-week20.extracted.json",
+      "expected": "fixtures/no-calendar-week20.expected.json"
+    },
+    {
+      "name": "合成用例：本校边界 5 · 六门超长课名同时缺教师、缺教室 → 一门都不丢（teacher / location 为 null）；提醒按课程名去重汇总，课名截到 20 字、每条不超过 200 字",
+      "extracted": "fixtures/long-name-missing.extracted.json",
+      "expected": "fixtures/long-name-missing.expected.json"
+    },
+    {
+      "name": "合成用例：B1 修正 · 单/双标记按括号相对周次的位置归属 —— 前缀「(单)1-8周,(双)9-16周」与后缀「1-8周(单),9-16周(双)」都解析成 1-7 单周 + 10-16 双周，两个前缀标记不许都并到前一段；另含单独使用的前缀双周与后缀单周",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：上游同源修正（B3）· 「共 N 周」只剥备注本身 —— 「1-15周(单) 共16周」只得到 1-15 单周、「2-14周(双) 共16周」只得到 2-14 双周；「1-8周(共8周),9-16周」两段都在（1-16 每周），「共16周,1-15周(单)」整行不丢课、只得到 1-15 单周",
+      "extracted": "fixtures/weeks-total.extracted.json",
+      "expected": "fixtures/weeks-total.expected.json"
+    },
+    {
+      "name": "合成用例：本校边界 2 的抬高分支 · 校历取不到、课表排到第 22 周 → 总周数从内置的 20 周抬到 22 周并说明；开学日按第一学期锚点推算",
+      "extracted": "fixtures/overweek.extracted.json",
+      "expected": "fixtures/overweek.expected.json"
+    }
+  ]
+}

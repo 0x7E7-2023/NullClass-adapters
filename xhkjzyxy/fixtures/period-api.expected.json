@@ -1,0 +1,47 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年 2学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第二学期 = 2 月 20 日所在周的周一」推算为 2027-02-15，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期校历，学期总周数按 20 周导入（课表里最晚排到第 18 周），如与实际不符可在学期管理里改"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年 2学期",
+      "firstDay": "2027-02-15",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:05", "end": "08:50" },
+        { "periodIndex": 2, "start": "09:00", "end": "09:45" },
+        { "periodIndex": 3, "start": "10:05", "end": "10:50" },
+        { "periodIndex": 4, "start": "11:00", "end": "11:45" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 7, "start": "16:00", "end": "16:45" },
+        { "periodIndex": 8, "start": "16:55", "end": "17:40" },
+        { "periodIndex": 9, "start": "19:00", "end": "19:45" },
+        { "periodIndex": 10, "start": "19:55", "end": "20:40" }
+      ],
+      "courses": [
+        {
+          "name": "数据结构",
+          "teacher": "王五",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 18, "weekType": "ALL", "location": "C401" }
+          ]
+        },
+        {
+          "name": "操作系统",
+          "teacher": "赵六",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 9, "endPeriod": 10, "startWeek": 1, "endWeek": 18, "weekType": "ALL", "location": "C402" }
+          ]
+        }
+      ]
+    }
+  ]
+}

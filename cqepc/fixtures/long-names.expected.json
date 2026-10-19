@@ -1,0 +1,70 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期校历，学期总周数按适配器内置的 20 周导入（课表里最晚排到第 8 周），如与实际不符可在学期管理里改",
+    "教务系统没有给出节次时间，已按适配器内置的 14 节节次时间导入（第 1 节 09:00-09:40），时间可能与学校实际不符，请在学期管理里核对",
+    "教务系统另外给了 3 门集中实践课（航空维修基本技能与安全操作综合实践训练、航空电子线路焊接与检测综合实践教学课程…、航空服务礼仪与客舱应急演练综合实践课程…）：它们没有固定的星期与节次，排不进周课表，请自行在学期里添加",
+    "有 2 门课没有教师、2 门课有安排没写教室（如「航空电子设备维修与故障诊断技术综合实训…、民航客舱服务与应急处置综合演练实训课程…、航空发动机拆装与维护实践教学综合实训课程 等」），已照常导入，可在「编辑课程」里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "09:00", "end": "09:40" },
+        { "periodIndex": 2, "start": "09:50", "end": "10:30" },
+        { "periodIndex": 3, "start": "10:50", "end": "11:30" },
+        { "periodIndex": 4, "start": "11:40", "end": "12:20" },
+        { "periodIndex": 5, "start": "13:00", "end": "13:40" },
+        { "periodIndex": 6, "start": "13:40", "end": "13:50" },
+        { "periodIndex": 7, "start": "14:00", "end": "14:40" },
+        { "periodIndex": 8, "start": "14:50", "end": "15:30" },
+        { "periodIndex": 9, "start": "15:50", "end": "16:30" },
+        { "periodIndex": 10, "start": "16:40", "end": "17:20" },
+        { "periodIndex": 11, "start": "18:30", "end": "19:10" },
+        { "periodIndex": 12, "start": "19:20", "end": "20:00" },
+        { "periodIndex": 13, "start": "20:10", "end": "20:50" },
+        { "periodIndex": 14, "start": "21:00", "end": "21:40" }
+      ],
+      "courses": [
+        {
+          "name": "航空电子设备维修与故障诊断技术综合实训（一）",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "机务实训中心A101" }
+          ]
+        },
+        {
+          "name": "民航客舱服务与应急处置综合演练实训课程（二）",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "乘务训练舱B202" }
+          ]
+        },
+        {
+          "name": "航空发动机拆装与维护实践教学综合实训课程",
+          "teacher": "癸老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "航空物流管理与仓储配送实务操作实训课程（四）",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 7, "endPeriod": 8, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

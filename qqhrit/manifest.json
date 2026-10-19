@@ -1,0 +1,57 @@
+{
+  "specVersion": 1,
+  "key": "qqhrit",
+  "name": "齐齐哈尔工程学院",
+  "initial": "Q",
+  "version": "1.0.0",
+  "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://tysf.qqhrit.com:20261/cas/login",
+  "scheduleUrlHint": "http://jwxt.qqhrit.com:20266/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["jwxt.qqhrit.com"],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 教务作息与学期校历都取到（开学日与总周数取自校历）+ 单双周 + 无教师 + 无教室 + 完全重复行只留一条 + 集中实践课",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：本校边界 · 周末课（周六第 1-2 节、周日第 5-6 节与第 9-11 节）→ 按节次导入并按门数汇总提醒，点名课名；周末作息与主表相同的第 7-8、9-11 节不提醒",
+      "extracted": "fixtures/weekend.extracted.json",
+      "expected": "fixtures/weekend.expected.json"
+    },
+    {
+      "name": "合成用例：本校边界 · 工作日特殊教室（2# 教学楼第 3-4 节、图书馆第 3-4 节、齐三机床第 3-4 节）→ 按节次导入并按门数汇总提醒；2# 教学楼不在第 3-4 节的课不提醒",
+      "extracted": "fixtures/special-room.extracted.json",
+      "expected": "fixtures/special-room.expected.json"
+    },
+    {
+      "name": "合成用例：本校边界 · 作息接口取不到 → 整张用学校内置 11 节（第 5 节 13:30-14:15、第 11 节 19:30-20:15）；课表排到第 13 节 → 第 12 节用空课默认节次时间、第 13 节顺推并说明",
+      "extracted": "fixtures/period-extend.extracted.json",
+      "expected": "fixtures/period-extend.expected.json"
+    },
+    {
+      "name": "合成用例：本校边界 · 校历取不到 → 开学日按第一学期锚点推算；课表最大周次 21 → 总周数由内置 20 周抬到 21 并说明",
+      "extracted": "fixtures/no-calendar-overweek.extracted.json",
+      "expected": "fixtures/no-calendar-overweek.expected.json"
+    },
+    {
+      "name": "合成用例：同课连续节次合并（1-2 节与 3-4 节合成 1-4 节）+ 同节次周次并集（1-8 周与 9-16 周合成 1-16 周）+ 完全重复行只留一条",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 缺教师 / 缺教室 + 周末 / 特殊教室提醒同时出现 → 点名课名各截到 20 字，全部提醒不超过 20 条、每条不超过 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：单/双标记的括号归属与「共 N 周」剥离 · 前缀「(单)1-8周,(双)9-16周」与后缀「1-8周(单),9-16周(双)」都解析成 1-7 单周 + 10-16 双周，两个标记不许都并到前一段；「1-15周(单) 共16周」「1-8周(共8周),9-16周」「共16周,1-15周(单)」只剥备注本身，后面的周次不许丢；独立成段的「单」仍按就近归属",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    }
+  ]
+}

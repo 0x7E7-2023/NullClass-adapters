@@ -1,0 +1,62 @@
+{
+  "specVersion": 1,
+  "key": "xhkjzyxy",
+  "name": "宣化科技职业学院",
+  "initial": "X",
+  "version": "1.0.0",
+  "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://xhkjzyxy.edu.cn:18088/cas/login?service=https%3A%2F%2Fxhkjzyxy.edu.cn%3A8387%2Fsso%2Fjziotlogin",
+  "scheduleUrlHint": "https://xhkjzyxy.edu.cn:8387/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 教务没给节次时间 → 整张用本校 10 节（第 3 节 10:20-11:05、第 9 节 19:00-19:45、第 10 节 19:45-20:30 逐节钉住）；课表排到第 12 节 → 第 11-12 节按 H3 顺推补时间；缺教师、缺教室的课照常导入（值为空）并按类型点名；单双周两种写法（1-16周(单) 与 (单)1-16周）；集中实践课、校历给 20 周",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：边界 · 同一门课连续两行（1-2 节与 3-4 节，其它字段全同）→ 合并为 1-4 节一个安排；同节次不同周次 → 周次并集；完全重复的行只留一条",
+      "extracted": "fixtures/merge-dups.extracted.json",
+      "expected": "fixtures/merge-dups.expected.json"
+    },
+    {
+      "name": "合成用例：边界 · 学期周次校历取不到 → 开学日按第一学期锚点推算；课表最大周次 22 → 学期总周数抬到 22 并说明（不写「校历写的是 0 周」）；节次时间取不到 → 本校 10 节",
+      "extracted": "fixtures/no-calendar-overweek.extracted.json",
+      "expected": "fixtures/no-calendar-overweek.expected.json"
+    },
+    {
+      "name": "合成用例：边界 · 教务校历第 1 周的日期不是周一（第 1 周给 2026-09-09 周三）→ 开学日必须回退到那一周的周一 2026-09-07",
+      "extracted": "fixtures/calendar-weekday.extracted.json",
+      "expected": "fixtures/calendar-weekday.expected.json"
+    },
+    {
+      "name": "合成用例：边界 · 长课名（超过 20 字）且多门课缺教师、缺教室 → 课一门不丢（教师、教室为空），提醒按类型汇总、课名各截到 20 字，每条不超过 200 字",
+      "extracted": "fixtures/long-name-missing.extracted.json",
+      "expected": "fixtures/long-name-missing.expected.json"
+    },
+    {
+      "name": "合成用例：教务节次时间取到（skxxMobile_cxRsdjc 返回 10 节，第 1 节 08:05 起）→ 整张用教务的时间、不再提示内置；第二学期、学期名由学年学期文本拼出",
+      "extracted": "fixtures/period-api.extracted.json",
+      "expected": "fixtures/period-api.expected.json"
+    },
+    {
+      "name": "合成用例：边界 · 教务节次时间不合法（缺第 1 节、第 2 节与第 3 节重叠）→ 整张弃用，改用本校 10 节并说明；课表排到第 15 节 → 第 11-14 节按 H3 顺推，第 15 节越过 23:59 不补并说明",
+      "extracted": "fixtures/period-invalid.extracted.json",
+      "expected": "fixtures/period-invalid.expected.json"
+    },
+    {
+      "name": "合成用例：B1/B3 修正 · 单/双标记按括号相对周次的位置归属 —— 前缀「(单)1-8周,(双)9-16周」与后缀「1-8周(单),9-16周(双)」都保留两段周次（1-7 单周 + 10-16 双周，合并成 1-16 每周）；「1-15周(单) 共16周」「1-8周(共8周),9-16周」「共16周,1-15周(单)」三种位置的「共 N 周」只剥掉备注本身，不吞后面的周次",
+      "extracted": "fixtures/weeks-markers.extracted.json",
+      "expected": "fixtures/weeks-markers.expected.json"
+    },
+    {
+      "name": "合成用例：B2 修正 · 三门超长课名的集中实践课 → 课名各截到 20 字，整条提醒不超过 200 字，末尾「排不进周课表，请自行在学期里添加」不被截掉",
+      "extracted": "fixtures/practice-long-name.extracted.json",
+      "expected": "fixtures/practice-long-name.expected.json"
+    }
+  ]
+}

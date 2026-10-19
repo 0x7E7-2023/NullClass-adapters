@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "key": "cqepc",
+  "name": "重庆航天职业技术学院",
+  "initial": "C",
+  "version": "1.0.0",
+  "author": "上游 yang01（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://jw.cqepc.cn/",
+  "scheduleUrlHint": "http://jw.cqepc.cn/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：本校边界 1 · 作息接口取不到 → 整张用上游 14 节（第 5 节 13:00-13:40、第 6 节 13:40-13:50、第 14 节 21:00-21:40 逐节钉住）；课表排到第 15 节 → 顺推补时间并提醒；校历取不到 → 开学日推算、总周数 20；含单双周、缺教师、缺教室",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：本校边界 2 · 教务作息表只到第 10 节、课表排到第 14 节 → 前 10 节用教务表，第 11-12 节用空课默认节次时间，第 13-14 节顺推，补了哪些写进提醒；含既缺教师又缺教室的课",
+      "extracted": "fixtures/period-short.extracted.json",
+      "expected": "fixtures/period-short.expected.json"
+    },
+    {
+      "name": "合成用例：本校边界 3 · 学期周次校历取不到 → 开学日推算为 2026-08-31；课表最大周次 21 → 总周数从内置 20 周抬到 21 并说明",
+      "extracted": "fixtures/no-calendar-overweek.extracted.json",
+      "expected": "fixtures/no-calendar-overweek.expected.json"
+    },
+    {
+      "name": "合成用例：本校边界 4 · 同课连续节次合并（1-2 与 3-4 合成 1-4）+ 同节次周次并集（1-8 周与 9-16 周合成 1-16 周）+ 完全重复的行只留一条",
+      "extracted": "fixtures/merge-consecutive.extracted.json",
+      "expected": "fixtures/merge-consecutive.expected.json"
+    },
+    {
+      "name": "合成用例：本校边界 5 · 长课名 + 缺教师 / 缺教室：不丢课，教师与教室留空；提醒按类型汇总，点名的课名截到 20 字，每条不超过 200 字；集中实践课也是长课名",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    },
+    {
+      "name": "合成用例：教务校历与作息都取到 · 校历第 1 周日期是周三 → 开学日回退到当周周一 2026-09-07；总周数取校历 18 周；作息用教务给的 14 节",
+      "extracted": "fixtures/calendar-present.extracted.json",
+      "expected": "fixtures/calendar-present.expected.json"
+    },
+    {
+      "name": "合成用例：同源模板缺陷修正 · 单/双标记按括号相对周次的位置归属 —— 前缀「(单)1-8周,(双)9-16周」与后缀「1-8周(单),9-16周(双)」都解析成 1-7 单周 + 10-16 双周；「共 N 周」只剥备注本身 ——「1-15周(单) 共16周」只算 1-15 单周、「1-8周(共8周),9-16周」不许丢掉 9-16 周（合成 1-16 周）、「共16周,1-15周(单)」不许整行丢课（只算 1-15 单周）",
+      "extracted": "fixtures/weeks-markers.extracted.json",
+      "expected": "fixtures/weeks-markers.expected.json"
+    }
+  ]
+}

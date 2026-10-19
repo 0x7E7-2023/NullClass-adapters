@@ -1,0 +1,14 @@
+{
+  "term": { "xnm": "2026", "xqm": "3", "xnmText": "2026-2027", "xqmText": "1" },
+  "today": "2026-10-19",
+  "campusId": "1",
+  "raw": {
+    "kbList": [
+      { "kcmc": "创新创业实践", "xm": "郑九", "cdmc": "B101", "xqj": "3", "jcs": "7-8", "zcd": "1-22周" }
+    ],
+    "sjkList": []
+  },
+  "total": 1,
+  "periodTimes": null,
+  "calendar": null
+}

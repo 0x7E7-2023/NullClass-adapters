@@ -459,6 +459,36 @@
       "name": "辽宁大学",
       "version": "1.0.0",
       "path": "lnu"
+    },
+    {
+      "key": "xhkjzyxy",
+      "name": "宣化科技职业学院",
+      "version": "1.0.0",
+      "path": "xhkjzyxy"
+    },
+    {
+      "key": "hueb",
+      "name": "河北经贸大学",
+      "version": "1.0.0",
+      "path": "hueb"
+    },
+    {
+      "key": "jsei",
+      "name": "江苏电子信息职业学院",
+      "version": "1.0.0",
+      "path": "jsei"
+    },
+    {
+      "key": "cqepc",
+      "name": "重庆航天职业技术学院",
+      "version": "1.0.0",
+      "path": "cqepc"
+    },
+    {
+      "key": "qqhrit",
+      "name": "齐齐哈尔工程学院",
+      "version": "1.0.0",
+      "path": "qqhrit"
     }
   ]
 }

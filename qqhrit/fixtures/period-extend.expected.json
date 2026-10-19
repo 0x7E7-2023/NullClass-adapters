@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的学期周次校历：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "学期总周数取自教务校历（16 周），如与实际不符可在学期管理里改",
+    "教务系统没有给出节次时间，已按学校内置的 11 节节次时间导入（第 1 节 08:00-08:45），可能与学校实际的节次时间不一致，请在学期管理里核对",
+    "课表用到了节次时间之外的第 12-13 节，已补上时间：第 12 节用空课自带的节次时间，第 13 节按上一节下课后课间 5 分钟、每节 45 分钟顺推，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 16,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:20", "end": "11:05" },
+        { "periodIndex": 4, "start": "11:15", "end": "12:00" },
+        { "periodIndex": 5, "start": "13:30", "end": "14:15" },
+        { "periodIndex": 6, "start": "14:25", "end": "15:10" },
+        { "periodIndex": 7, "start": "15:20", "end": "16:05" },
+        { "periodIndex": 8, "start": "16:05", "end": "16:50" },
+        { "periodIndex": 9, "start": "18:00", "end": "18:45" },
+        { "periodIndex": 10, "start": "18:45", "end": "19:30" },
+        { "periodIndex": 11, "start": "19:30", "end": "20:15" },
+        { "periodIndex": 12, "start": "21:15", "end": "22:00" },
+        { "periodIndex": 13, "start": "22:05", "end": "22:50" }
+      ],
+      "courses": [
+        {
+          "name": "毕业设计(一)",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 12, "endPeriod": 13, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "1#教学楼-201" }
+          ]
+        },
+        {
+          "name": "大学英语(三)",
+          "teacher": "乙老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "1#教学楼-202" }
+          ]
+        }
+      ]
+    }
+  ]
+}

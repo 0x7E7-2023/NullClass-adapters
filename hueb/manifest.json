@@ -1,0 +1,57 @@
+{
+  "specVersion": 1,
+  "key": "hueb",
+  "name": "河北经贸大学",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://202-206-194-100.vpn.hueb.edu.cn:8118/jwglxt/xtgl/login_slogin.html",
+  "scheduleUrlHint": "https://202-206-194-100.vpn.hueb.edu.cn:8118/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 作息接口取不到 → 整张用上游 13 节表（第 6 节 14:00-14:45、第 13 节 20:40-21:25 逐节钉住）；校历取不到 → 开学日推算、总周数内置 20 周；课表排到第 15 节 → H3 顺推补 14-15 节；含单双周、无教师、无教室、完全重复行、集中实践课",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：合并 · 同课同日同教室 1-2 与 3-4 两行 → 合并成 1-4 节；同节次不同周次（1-8 与 9-16）→ 周次并集 1-16；完全重复的 3-4 行只留一条",
+      "extracted": "fixtures/merge-consecutive.extracted.json",
+      "expected": "fixtures/merge-consecutive.expected.json"
+    },
+    {
+      "name": "合成用例：校历第 1 周日期不是周一（zs=1 给 2026-09-09 周三）→ 开学日回退到那一周的周一 2026-09-07；教务作息接口给出完整 13 节 → 节次时间用教务的",
+      "extracted": "fixtures/calendar-weekday.extracted.json",
+      "expected": "fixtures/calendar-weekday.expected.json"
+    },
+    {
+      "name": "合成用例：校历取不到 → 推算开学日；课表最大周次 21 → 总周数按课表抬到 21 并说明（不写「校历写的是 0 周」）；作息接口也取不到 → 内置 13 节",
+      "extracted": "fixtures/no-calendar-overweek.extracted.json",
+      "expected": "fixtures/no-calendar-overweek.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 缺教师 / 缺教室 / 教师从 xm 取不到 → 不丢课（teacher / location 为 null）；四门超长课名的集中实践课与两行认不出的周次 → 提醒按类型汇总、点名的课名截到 20 字、每条不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师 / 缺教室 · 两门课没给上课教师、两门课没给上课地点（体育两项都缺且排了两个时段）→ 照常导入（teacher / location 为 null），提醒按类型汇总计数（按课名去重）并点名课名（长课名截到 20 字）",
+      "extracted": "fixtures/missing-fields.extracted.json",
+      "expected": "fixtures/missing-fields.expected.json"
+    },
+    {
+      "name": "合成用例：单/双标记归属与「共 N 周」剥离 · 前缀「(单)1-8周,(双)9-16周」与后缀「1-8周(单),9-16周(双)」都读成 1-7 单周 + 10-16 双周（两个标记不许都并到前一段）；「1-15周(单) 共16周」只读 1-15 单周；「1-8周(共8周),9-16周」只剥括号备注、9-16 周不丢；「共16周,1-15周(单)」只剥开头备注、不整行丢课",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期 · 教务作息与校历都取到（节次时间用教务的、开学日与总周数取自校历）+ 记录总数对账（说 12 条实际 7 行）+ 脏行（缺星期 / 缺节次 / 缺周次）+ 节次多段 + 周次从 0 开始与 31 周各丢一个 + 课表排到第 30 周顶高总周数",
+      "extracted": "fixtures/api-calendar.extracted.json",
+      "expected": "fixtures/api-calendar.expected.json"
+    }
+  ]
+}
