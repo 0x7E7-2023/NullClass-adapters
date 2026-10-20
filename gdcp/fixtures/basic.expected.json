@@ -1,0 +1,184 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "根据教学楼判断你在天河校区上课，第 3、4 节按 10:10 起的节次时间导入，请核对"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第一学期",
+   "firstDay": "2026-09-07",
+   "totalWeeks": 18,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:30",
+     "end": "09:10"
+    },
+    {
+     "periodIndex": 2,
+     "start": "09:15",
+     "end": "09:55"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:10",
+     "end": "10:50"
+    },
+    {
+     "periodIndex": 4,
+     "start": "10:55",
+     "end": "11:35"
+    },
+    {
+     "periodIndex": 5,
+     "start": "14:15",
+     "end": "14:55"
+    },
+    {
+     "periodIndex": 6,
+     "start": "15:00",
+     "end": "15:40"
+    },
+    {
+     "periodIndex": 7,
+     "start": "15:55",
+     "end": "16:35"
+    },
+    {
+     "periodIndex": 8,
+     "start": "16:35",
+     "end": "17:15"
+    },
+    {
+     "periodIndex": 9,
+     "start": "18:05",
+     "end": "18:45"
+    },
+    {
+     "periodIndex": 10,
+     "start": "18:45",
+     "end": "19:25"
+    },
+    {
+     "periodIndex": 11,
+     "start": "19:40",
+     "end": "20:20"
+    },
+    {
+     "periodIndex": 12,
+     "start": "20:20",
+     "end": "21:00"
+    }
+   ],
+   "courses": [
+    {
+     "name": "高等数学A",
+     "teacher": "李某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "A301"
+      }
+     ]
+    },
+    {
+     "name": "大学英语",
+     "teacher": "王某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 15,
+       "weekType": "ODD",
+       "location": "B205"
+      }
+     ]
+    },
+    {
+     "name": "线性代数",
+     "teacher": "赵某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": "C101"
+      }
+     ]
+    },
+    {
+     "name": "数据结构",
+     "teacher": "孙某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 3,
+       "startPeriod": 5,
+       "endPeriod": 6,
+       "startWeek": 2,
+       "endWeek": 16,
+       "weekType": "EVEN",
+       "location": "D402"
+      }
+     ]
+    },
+    {
+     "name": "工程制图",
+     "teacher": "周某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 7,
+       "endPeriod": 8,
+       "startWeek": 1,
+       "endWeek": 4,
+       "weekType": "ALL",
+       "location": "E101"
+      },
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 7,
+       "endPeriod": 8,
+       "startWeek": 6,
+       "endWeek": 9,
+       "weekType": "ALL",
+       "location": "E101"
+      }
+     ]
+    },
+    {
+     "name": "电工实习",
+     "teacher": "吴某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 5,
+       "startPeriod": 9,
+       "endPeriod": 10,
+       "startWeek": 1,
+       "endWeek": 18,
+       "weekType": "ALL",
+       "location": "F11"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

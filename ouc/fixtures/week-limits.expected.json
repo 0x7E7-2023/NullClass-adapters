@@ -1,0 +1,114 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "课表里有到第 30 周的课，比学期的 20 周多，学期总周数已按 30 周计，请在「学期管理」里核对",
+    "有 5 个周次超出 1–30 周，这些周次没有导入",
+    "有 1 处周次里「单」「双」同时出现，已按每周都上处理，请核对导入结果",
+    "有 6 个上课安排没能导入（没认出课名 1 个，周次或节次写法没认出 4 个，没有有效周次 1 个）。教务页面的写法可能有变化，欢迎反馈。包含：反写周次课程A（教师乙）——周次或节次的写法没认出来；分组课程B（教师丙）——周次或节次的写法没认出来；零周课程C（教师丁）——没有有效周次；无时间课程D（教师乙）——周次或节次的写法没认出来；(没认出课名)（教师甲）——没认出课名"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第一学期",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 30,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:50"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:00",
+          "end": "09:50"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:10",
+          "end": "11:00"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:10",
+          "end": "12:00"
+        },
+        {
+          "periodIndex": 5,
+          "start": "13:30",
+          "end": "14:20"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:30",
+          "end": "15:20"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:30",
+          "end": "16:20"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:30",
+          "end": "17:20"
+        },
+        {
+          "periodIndex": 9,
+          "start": "17:30",
+          "end": "18:20"
+        },
+        {
+          "periodIndex": 10,
+          "start": "18:30",
+          "end": "19:20"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:30",
+          "end": "20:20"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:30",
+          "end": "21:20"
+        }
+      ],
+      "courses": [
+        {
+          "name": "热力学",
+          "teacher": "教师甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "楼H"
+            }
+          ]
+        },
+        {
+          "name": "统计学",
+          "teacher": "教师甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 30,
+              "weekType": "ALL",
+              "location": "楼S"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,708 @@
+{
+  "source": "qz-jsxsd-hnu",
+  "pageUrl": "https://hdjw.hnu.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-09-10",
+  "loginTitle": false,
+  "loginForm": false,
+  "term": {
+    "code": "2026-2027-1",
+    "label": "2026-2027-1"
+  },
+  "tables": [
+    {
+      "head": [
+        {
+          "text": ""
+        },
+        {
+          "text": "星期日"
+        },
+        {
+          "text": "星期一"
+        },
+        {
+          "text": "星期二"
+        },
+        {
+          "text": "星期三"
+        },
+        {
+          "text": "星期四"
+        },
+        {
+          "text": "星期五"
+        },
+        {
+          "text": "星期六"
+        }
+      ],
+      "body": [
+        [
+          {
+            "label": true,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": true,
+            "cards": [
+              {
+                "title": "概率论",
+                "details": [
+                  "老师：冯三",
+                  "地点：教H301",
+                  "时间：1-16周 [3-4节]"
+                ]
+              }
+            ]
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          }
+        ]
+      ]
+    }
+  ],
+  "calendar": {
+    "rows": [
+      {
+        "label": "第1周",
+        "cells": [
+          {
+            "text": "09月06日",
+            "title": ""
+          },
+          {
+            "text": "09月07日",
+            "title": ""
+          },
+          {
+            "text": "09月09日",
+            "title": ""
+          },
+          {
+            "text": "09月09日",
+            "title": ""
+          },
+          {
+            "text": "09月10日",
+            "title": ""
+          },
+          {
+            "text": "09月11日",
+            "title": ""
+          },
+          {
+            "text": "09月12日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第2周",
+        "cells": [
+          {
+            "text": "09月13日",
+            "title": ""
+          },
+          {
+            "text": "09月14日",
+            "title": ""
+          },
+          {
+            "text": "09月15日",
+            "title": ""
+          },
+          {
+            "text": "09月16日",
+            "title": ""
+          },
+          {
+            "text": "09月17日",
+            "title": ""
+          },
+          {
+            "text": "09月18日",
+            "title": ""
+          },
+          {
+            "text": "09月19日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第3周",
+        "cells": [
+          {
+            "text": "09月20日",
+            "title": ""
+          },
+          {
+            "text": "09月21日",
+            "title": ""
+          },
+          {
+            "text": "09月22日",
+            "title": ""
+          },
+          {
+            "text": "09月23日",
+            "title": ""
+          },
+          {
+            "text": "09月24日",
+            "title": ""
+          },
+          {
+            "text": "09月25日",
+            "title": ""
+          },
+          {
+            "text": "09月26日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第4周",
+        "cells": [
+          {
+            "text": "09月27日",
+            "title": ""
+          },
+          {
+            "text": "09月28日",
+            "title": ""
+          },
+          {
+            "text": "09月29日",
+            "title": ""
+          },
+          {
+            "text": "09月30日",
+            "title": ""
+          },
+          {
+            "text": "10月01日",
+            "title": ""
+          },
+          {
+            "text": "10月02日",
+            "title": ""
+          },
+          {
+            "text": "10月03日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第5周",
+        "cells": [
+          {
+            "text": "10月04日",
+            "title": ""
+          },
+          {
+            "text": "10月05日",
+            "title": ""
+          },
+          {
+            "text": "10月06日",
+            "title": ""
+          },
+          {
+            "text": "10月07日",
+            "title": ""
+          },
+          {
+            "text": "10月08日",
+            "title": ""
+          },
+          {
+            "text": "10月09日",
+            "title": ""
+          },
+          {
+            "text": "10月10日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第6周",
+        "cells": [
+          {
+            "text": "10月11日",
+            "title": ""
+          },
+          {
+            "text": "10月12日",
+            "title": ""
+          },
+          {
+            "text": "10月13日",
+            "title": ""
+          },
+          {
+            "text": "10月14日",
+            "title": ""
+          },
+          {
+            "text": "10月15日",
+            "title": ""
+          },
+          {
+            "text": "10月16日",
+            "title": ""
+          },
+          {
+            "text": "10月17日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第7周",
+        "cells": [
+          {
+            "text": "10月18日",
+            "title": ""
+          },
+          {
+            "text": "10月19日",
+            "title": ""
+          },
+          {
+            "text": "10月20日",
+            "title": ""
+          },
+          {
+            "text": "10月21日",
+            "title": ""
+          },
+          {
+            "text": "10月22日",
+            "title": ""
+          },
+          {
+            "text": "10月23日",
+            "title": ""
+          },
+          {
+            "text": "10月24日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第8周",
+        "cells": [
+          {
+            "text": "10月25日",
+            "title": ""
+          },
+          {
+            "text": "10月26日",
+            "title": ""
+          },
+          {
+            "text": "10月27日",
+            "title": ""
+          },
+          {
+            "text": "10月28日",
+            "title": ""
+          },
+          {
+            "text": "10月29日",
+            "title": ""
+          },
+          {
+            "text": "10月30日",
+            "title": ""
+          },
+          {
+            "text": "10月31日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第9周",
+        "cells": [
+          {
+            "text": "11月01日",
+            "title": ""
+          },
+          {
+            "text": "11月02日",
+            "title": ""
+          },
+          {
+            "text": "11月03日",
+            "title": ""
+          },
+          {
+            "text": "11月04日",
+            "title": ""
+          },
+          {
+            "text": "11月05日",
+            "title": ""
+          },
+          {
+            "text": "11月06日",
+            "title": ""
+          },
+          {
+            "text": "11月07日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第10周",
+        "cells": [
+          {
+            "text": "11月08日",
+            "title": ""
+          },
+          {
+            "text": "11月09日",
+            "title": ""
+          },
+          {
+            "text": "11月10日",
+            "title": ""
+          },
+          {
+            "text": "11月11日",
+            "title": ""
+          },
+          {
+            "text": "11月12日",
+            "title": ""
+          },
+          {
+            "text": "11月13日",
+            "title": ""
+          },
+          {
+            "text": "11月14日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第11周",
+        "cells": [
+          {
+            "text": "11月15日",
+            "title": ""
+          },
+          {
+            "text": "11月16日",
+            "title": ""
+          },
+          {
+            "text": "11月17日",
+            "title": ""
+          },
+          {
+            "text": "11月18日",
+            "title": ""
+          },
+          {
+            "text": "11月19日",
+            "title": ""
+          },
+          {
+            "text": "11月20日",
+            "title": ""
+          },
+          {
+            "text": "11月21日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第12周",
+        "cells": [
+          {
+            "text": "11月22日",
+            "title": ""
+          },
+          {
+            "text": "11月23日",
+            "title": ""
+          },
+          {
+            "text": "11月24日",
+            "title": ""
+          },
+          {
+            "text": "11月25日",
+            "title": ""
+          },
+          {
+            "text": "11月26日",
+            "title": ""
+          },
+          {
+            "text": "11月27日",
+            "title": ""
+          },
+          {
+            "text": "11月28日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第13周",
+        "cells": [
+          {
+            "text": "11月29日",
+            "title": ""
+          },
+          {
+            "text": "11月30日",
+            "title": ""
+          },
+          {
+            "text": "12月01日",
+            "title": ""
+          },
+          {
+            "text": "12月02日",
+            "title": ""
+          },
+          {
+            "text": "12月03日",
+            "title": ""
+          },
+          {
+            "text": "12月04日",
+            "title": ""
+          },
+          {
+            "text": "12月05日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第14周",
+        "cells": [
+          {
+            "text": "12月06日",
+            "title": ""
+          },
+          {
+            "text": "12月07日",
+            "title": ""
+          },
+          {
+            "text": "12月08日",
+            "title": ""
+          },
+          {
+            "text": "12月09日",
+            "title": ""
+          },
+          {
+            "text": "12月10日",
+            "title": ""
+          },
+          {
+            "text": "12月11日",
+            "title": ""
+          },
+          {
+            "text": "12月12日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第15周",
+        "cells": [
+          {
+            "text": "12月13日",
+            "title": ""
+          },
+          {
+            "text": "12月14日",
+            "title": ""
+          },
+          {
+            "text": "12月15日",
+            "title": ""
+          },
+          {
+            "text": "12月16日",
+            "title": ""
+          },
+          {
+            "text": "12月17日",
+            "title": ""
+          },
+          {
+            "text": "12月18日",
+            "title": ""
+          },
+          {
+            "text": "12月19日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第16周",
+        "cells": [
+          {
+            "text": "12月20日",
+            "title": ""
+          },
+          {
+            "text": "12月21日",
+            "title": ""
+          },
+          {
+            "text": "12月22日",
+            "title": ""
+          },
+          {
+            "text": "12月23日",
+            "title": ""
+          },
+          {
+            "text": "12月24日",
+            "title": ""
+          },
+          {
+            "text": "12月25日",
+            "title": ""
+          },
+          {
+            "text": "12月26日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第17周",
+        "cells": [
+          {
+            "text": "12月27日",
+            "title": ""
+          },
+          {
+            "text": "12月28日",
+            "title": ""
+          },
+          {
+            "text": "12月29日",
+            "title": ""
+          },
+          {
+            "text": "12月30日",
+            "title": ""
+          },
+          {
+            "text": "12月31日",
+            "title": ""
+          },
+          {
+            "text": "01月01日",
+            "title": ""
+          },
+          {
+            "text": "01月02日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第18周",
+        "cells": [
+          {
+            "text": "01月03日",
+            "title": ""
+          },
+          {
+            "text": "01月04日",
+            "title": ""
+          },
+          {
+            "text": "01月05日",
+            "title": ""
+          },
+          {
+            "text": "01月06日",
+            "title": ""
+          },
+          {
+            "text": "01月07日",
+            "title": ""
+          },
+          {
+            "text": "01月08日",
+            "title": ""
+          },
+          {
+            "text": "01月09日",
+            "title": ""
+          }
+        ]
+      }
+    ]
+  }
+}

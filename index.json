@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.10.20.2",
+  "version": "2026.10.20.3",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -579,6 +579,36 @@
       "name": "江苏大学",
       "version": "1.0.0",
       "path": "ujs"
+    },
+    {
+      "key": "qdu",
+      "name": "青岛大学",
+      "version": "1.0.0",
+      "path": "qdu"
+    },
+    {
+      "key": "hnu",
+      "name": "湖南大学",
+      "version": "1.0.0",
+      "path": "hnu"
+    },
+    {
+      "key": "gzst",
+      "name": "广州松田职业学院",
+      "version": "1.0.0",
+      "path": "gzst"
+    },
+    {
+      "key": "gdcp",
+      "name": "广东交通职业技术学院",
+      "version": "1.0.0",
+      "path": "gdcp"
+    },
+    {
+      "key": "ouc",
+      "name": "中国海洋大学",
+      "version": "1.0.0",
+      "path": "ouc"
     }
   ]
 }

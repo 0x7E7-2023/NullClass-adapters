@@ -1,0 +1,175 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "课表里最晚是第 30 周，已把总周数从 20 调到 30 周",
+  "开学日期教务页面没有给出，已按提取当天所在周的周一（2026-09-07）推算第 1 周，请在学期管理里核对",
+  "节次时间按学校公布的 12 节时间导入（第 1 节 08:20-09:00、第 12 节 20:35-21:40），课表页本身不给节次时间，与实际不符时请在学期管理里核对",
+  "有 1 门课的周次超出第 1–30 周的范围，超出的周已忽略（如「截断课」）",
+  "有 2 门课的周次没认出来，已跳过（如「超范围课：35-40周[01-02节]」、「倒序课：8-1周[01-02节]」）",
+  "有 1 门课的周次里「单」「双」同时出现，已按每周都上处理（如「单双课」），请核对",
+  "有 1 门课的周次里带括号备注，备注不是周次，已忽略（如「备注课：(3组)」），请核对周次",
+  "有 1 门课的周次里有段认不出，已忽略那几段（如「部分坏段课：abc」）"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第一学期",
+   "firstDay": "2026-09-07",
+   "totalWeeks": 30,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:20",
+     "end": "09:00"
+    },
+    {
+     "periodIndex": 2,
+     "start": "09:05",
+     "end": "09:45"
+    },
+    {
+     "periodIndex": 3,
+     "start": "09:55",
+     "end": "10:35"
+    },
+    {
+     "periodIndex": 4,
+     "start": "10:45",
+     "end": "11:25"
+    },
+    {
+     "periodIndex": 5,
+     "start": "11:30",
+     "end": "12:10"
+    },
+    {
+     "periodIndex": 6,
+     "start": "14:20",
+     "end": "15:00"
+    },
+    {
+     "periodIndex": 7,
+     "start": "15:05",
+     "end": "15:45"
+    },
+    {
+     "periodIndex": 8,
+     "start": "15:55",
+     "end": "16:35"
+    },
+    {
+     "periodIndex": 9,
+     "start": "16:45",
+     "end": "17:25"
+    },
+    {
+     "periodIndex": 10,
+     "start": "17:30",
+     "end": "18:10"
+    },
+    {
+     "periodIndex": 11,
+     "start": "19:30",
+     "end": "20:35"
+    },
+    {
+     "periodIndex": 12,
+     "start": "20:35",
+     "end": "21:40"
+    }
+   ],
+   "courses": [
+    {
+     "name": "长学期课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 24,
+       "weekType": "ALL",
+       "location": "教室X"
+      }
+     ]
+    },
+    {
+     "name": "截断课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 29,
+       "endWeek": 30,
+       "weekType": "ALL",
+       "location": "教室X"
+      }
+     ]
+    },
+    {
+     "name": "单双课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": "教室X"
+      }
+     ]
+    },
+    {
+     "name": "备注课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 5,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": "教室X"
+      }
+     ]
+    },
+    {
+     "name": "部分坏段课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 7,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 4,
+       "weekType": "ALL",
+       "location": "教室X"
+      },
+      {
+       "dayOfWeek": 7,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 9,
+       "endWeek": 12,
+       "weekType": "ALL",
+       "location": "教室X"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

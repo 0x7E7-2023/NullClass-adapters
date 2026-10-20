@@ -1,0 +1,37 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务的教学周历里第 1 周的第一天写的是 2026-02-25（不是星期日或星期一），开学日期已按它所在那一周的周一（2026-02-23）对齐，请在「学期管理」里核对",
+    "节次时间没有从教务系统读取，已按学校公布的 11 节时间导入（第 1 节 08:00-08:45，第 11 节 20:50-21:35），与实际不符时请在「学期管理」里核对"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第二学期",
+      "firstDay": "2026-02-23",
+      "totalWeeks": 16,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "14:30", "end": "15:15" },
+        { "periodIndex": 6, "start": "15:15", "end": "16:00" },
+        { "periodIndex": 7, "start": "16:10", "end": "16:55" },
+        { "periodIndex": 8, "start": "16:55", "end": "17:40" },
+        { "periodIndex": 9, "start": "19:00", "end": "19:45" },
+        { "periodIndex": 10, "start": "19:55", "end": "20:40" },
+        { "periodIndex": 11, "start": "20:50", "end": "21:35" }
+      ],
+      "courses": [
+        {
+          "name": "高等代数", "teacher": "王二", "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教G201" }
+          ]
+        }
+      ]
+    }
+  ]
+}

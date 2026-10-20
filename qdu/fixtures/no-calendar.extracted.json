@@ -1,0 +1,136 @@
+{
+ "_note": "合成数据（非真实抓取）：教学周历取不到、课表页上没有学年学期下拉框（screenTermMissing）、学期名就是学期代码。开学日按提取日（2026-09-16，周三）所在周的周一 2026-09-14 推算，总周数按 20 周计，三件事都出声。",
+ "source": "qz-jsxsd",
+ "pageUrl": "https://xjw.qdu.edu.cn/jsxsd/xskb/xskb_list.do",
+ "now": "2026-09-16",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027-1"
+ },
+ "screenTermMissing": true,
+ "cols": 8,
+ "calendar": {
+  "found": false,
+  "rows": []
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": -1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": -1,
+    "text": "星期一",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": -1,
+    "text": "星期二",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": -1,
+    "text": "星期三",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": -1,
+    "text": "星期四",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": -1,
+    "text": "星期五",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": -1,
+    "text": "星期六",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": -1,
+    "text": "星期日",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 0,
+    "text": "第一大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": [
+     "管理学原理<br><font title=\"老师\">甲老师</font><br><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br><font title=\"教室\">教9-101</font>"
+    ]
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   }
+  ]
+ ]
+}

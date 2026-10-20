@@ -1,0 +1,374 @@
+{
+ "_note": "合成数据：周历没取到（found 为假）。开学日按提取日期（2026-09-16 星期三）所在周的周一推算，总周数按 20 周；学期名是代码；缺教师 / 缺教室。",
+ "source": "qz-jsxsd",
+ "pageUrl": "https://jw.gdcp.edu.cn/jsxsd/xskb/xskb_list.do",
+ "now": "2026-09-16",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027-1"
+ },
+ "screenTermMissing": false,
+ "cols": 8,
+ "calendar": {
+  "found": false,
+  "rows": []
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "节次",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "星期一",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "星期二",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "星期三",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "星期四",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "星期五",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "星期六",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "星期日",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第一大节(01,02小节)",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "<font>形势与政策</font><br><font title=\"周次(节次)\">1-8(周)[01-02节]</font><br><font title=\"教室\">阶梯教室</font><br><font title=\"教学楼\">9号楼</font><br>"
+    ]
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第二大节(03,04小节)",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第三大节(05,06小节)",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "<font>毕业实习</font><br><font title=\"教师\">孟某</font><br><font title=\"周次(节次)\">1-16(周)[05-06节]</font><br><font title=\"教学楼\">9号楼</font><br>"
+    ]
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "<font>心理健康</font><br><font title=\"周次(节次)\">1-16(周)[05-06节]</font><br><font title=\"教学楼\">9号楼</font><br>"
+    ]
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第四大节(07,08小节)",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第五大节(09,10小节)",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第六大节(11,12小节)",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": []
+   }
+  ]
+ ]
+}

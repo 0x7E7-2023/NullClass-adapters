@@ -1,0 +1,642 @@
+{
+  "source": "qz-jsxsd-hnu",
+  "pageUrl": "https://hdjw.hnu.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-09-20",
+  "loginTitle": false,
+  "loginForm": false,
+  "term": {
+    "code": "2025-2026-2",
+    "label": "2025-2026学年第二学期"
+  },
+  "tables": [
+    {
+      "head": [
+        {
+          "text": ""
+        },
+        {
+          "text": "星期日"
+        },
+        {
+          "text": "星期一"
+        },
+        {
+          "text": "星期二"
+        },
+        {
+          "text": "星期三"
+        },
+        {
+          "text": "星期四"
+        },
+        {
+          "text": "星期五"
+        },
+        {
+          "text": "星期六"
+        }
+      ],
+      "body": [
+        [
+          {
+            "label": true,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": true,
+            "cards": [
+              {
+                "title": "高等代数",
+                "details": [
+                  "老师：王二",
+                  "地点：教G201",
+                  "时间：1-16周 [1-2节]"
+                ]
+              }
+            ]
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          }
+        ]
+      ]
+    }
+  ],
+  "calendar": {
+    "rows": [
+      {
+        "label": "第1周",
+        "cells": [
+          {
+            "text": "02月25日",
+            "title": "2026年02月25日"
+          },
+          {
+            "text": "02月26日",
+            "title": "2026年02月26日"
+          },
+          {
+            "text": "02月27日",
+            "title": "2026年02月27日"
+          },
+          {
+            "text": "02月28日",
+            "title": "2026年02月28日"
+          },
+          {
+            "text": "03月01日",
+            "title": "2026年03月01日"
+          },
+          {
+            "text": "03月02日",
+            "title": "2026年03月02日"
+          },
+          {
+            "text": "03月03日",
+            "title": "2026年03月03日"
+          }
+        ]
+      },
+      {
+        "label": "第2周",
+        "cells": [
+          {
+            "text": "03月04日",
+            "title": ""
+          },
+          {
+            "text": "03月05日",
+            "title": ""
+          },
+          {
+            "text": "03月06日",
+            "title": ""
+          },
+          {
+            "text": "03月07日",
+            "title": ""
+          },
+          {
+            "text": "03月08日",
+            "title": ""
+          },
+          {
+            "text": "03月09日",
+            "title": ""
+          },
+          {
+            "text": "03月10日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第3周",
+        "cells": [
+          {
+            "text": "03月11日",
+            "title": ""
+          },
+          {
+            "text": "03月12日",
+            "title": ""
+          },
+          {
+            "text": "03月13日",
+            "title": ""
+          },
+          {
+            "text": "03月14日",
+            "title": ""
+          },
+          {
+            "text": "03月15日",
+            "title": ""
+          },
+          {
+            "text": "03月16日",
+            "title": ""
+          },
+          {
+            "text": "03月17日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第4周",
+        "cells": [
+          {
+            "text": "03月18日",
+            "title": ""
+          },
+          {
+            "text": "03月19日",
+            "title": ""
+          },
+          {
+            "text": "03月20日",
+            "title": ""
+          },
+          {
+            "text": "03月21日",
+            "title": ""
+          },
+          {
+            "text": "03月22日",
+            "title": ""
+          },
+          {
+            "text": "03月23日",
+            "title": ""
+          },
+          {
+            "text": "03月24日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第5周",
+        "cells": [
+          {
+            "text": "03月25日",
+            "title": ""
+          },
+          {
+            "text": "03月26日",
+            "title": ""
+          },
+          {
+            "text": "03月27日",
+            "title": ""
+          },
+          {
+            "text": "03月28日",
+            "title": ""
+          },
+          {
+            "text": "03月29日",
+            "title": ""
+          },
+          {
+            "text": "03月30日",
+            "title": ""
+          },
+          {
+            "text": "03月31日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第6周",
+        "cells": [
+          {
+            "text": "04月01日",
+            "title": ""
+          },
+          {
+            "text": "04月02日",
+            "title": ""
+          },
+          {
+            "text": "04月03日",
+            "title": ""
+          },
+          {
+            "text": "04月04日",
+            "title": ""
+          },
+          {
+            "text": "04月05日",
+            "title": ""
+          },
+          {
+            "text": "04月06日",
+            "title": ""
+          },
+          {
+            "text": "04月07日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第7周",
+        "cells": [
+          {
+            "text": "04月08日",
+            "title": ""
+          },
+          {
+            "text": "04月09日",
+            "title": ""
+          },
+          {
+            "text": "04月10日",
+            "title": ""
+          },
+          {
+            "text": "04月11日",
+            "title": ""
+          },
+          {
+            "text": "04月12日",
+            "title": ""
+          },
+          {
+            "text": "04月13日",
+            "title": ""
+          },
+          {
+            "text": "04月14日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第8周",
+        "cells": [
+          {
+            "text": "04月15日",
+            "title": ""
+          },
+          {
+            "text": "04月16日",
+            "title": ""
+          },
+          {
+            "text": "04月17日",
+            "title": ""
+          },
+          {
+            "text": "04月18日",
+            "title": ""
+          },
+          {
+            "text": "04月19日",
+            "title": ""
+          },
+          {
+            "text": "04月20日",
+            "title": ""
+          },
+          {
+            "text": "04月21日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第9周",
+        "cells": [
+          {
+            "text": "04月22日",
+            "title": ""
+          },
+          {
+            "text": "04月23日",
+            "title": ""
+          },
+          {
+            "text": "04月24日",
+            "title": ""
+          },
+          {
+            "text": "04月25日",
+            "title": ""
+          },
+          {
+            "text": "04月26日",
+            "title": ""
+          },
+          {
+            "text": "04月27日",
+            "title": ""
+          },
+          {
+            "text": "04月28日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第10周",
+        "cells": [
+          {
+            "text": "04月29日",
+            "title": ""
+          },
+          {
+            "text": "04月30日",
+            "title": ""
+          },
+          {
+            "text": "05月01日",
+            "title": ""
+          },
+          {
+            "text": "05月02日",
+            "title": ""
+          },
+          {
+            "text": "05月03日",
+            "title": ""
+          },
+          {
+            "text": "05月04日",
+            "title": ""
+          },
+          {
+            "text": "05月05日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第11周",
+        "cells": [
+          {
+            "text": "05月06日",
+            "title": ""
+          },
+          {
+            "text": "05月07日",
+            "title": ""
+          },
+          {
+            "text": "05月08日",
+            "title": ""
+          },
+          {
+            "text": "05月09日",
+            "title": ""
+          },
+          {
+            "text": "05月10日",
+            "title": ""
+          },
+          {
+            "text": "05月11日",
+            "title": ""
+          },
+          {
+            "text": "05月12日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第12周",
+        "cells": [
+          {
+            "text": "05月13日",
+            "title": ""
+          },
+          {
+            "text": "05月14日",
+            "title": ""
+          },
+          {
+            "text": "05月15日",
+            "title": ""
+          },
+          {
+            "text": "05月16日",
+            "title": ""
+          },
+          {
+            "text": "05月17日",
+            "title": ""
+          },
+          {
+            "text": "05月18日",
+            "title": ""
+          },
+          {
+            "text": "05月19日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第13周",
+        "cells": [
+          {
+            "text": "05月20日",
+            "title": ""
+          },
+          {
+            "text": "05月21日",
+            "title": ""
+          },
+          {
+            "text": "05月22日",
+            "title": ""
+          },
+          {
+            "text": "05月23日",
+            "title": ""
+          },
+          {
+            "text": "05月24日",
+            "title": ""
+          },
+          {
+            "text": "05月25日",
+            "title": ""
+          },
+          {
+            "text": "05月26日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第14周",
+        "cells": [
+          {
+            "text": "05月27日",
+            "title": ""
+          },
+          {
+            "text": "05月28日",
+            "title": ""
+          },
+          {
+            "text": "05月29日",
+            "title": ""
+          },
+          {
+            "text": "05月30日",
+            "title": ""
+          },
+          {
+            "text": "05月31日",
+            "title": ""
+          },
+          {
+            "text": "06月01日",
+            "title": ""
+          },
+          {
+            "text": "06月02日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第15周",
+        "cells": [
+          {
+            "text": "06月03日",
+            "title": ""
+          },
+          {
+            "text": "06月04日",
+            "title": ""
+          },
+          {
+            "text": "06月05日",
+            "title": ""
+          },
+          {
+            "text": "06月06日",
+            "title": ""
+          },
+          {
+            "text": "06月07日",
+            "title": ""
+          },
+          {
+            "text": "06月08日",
+            "title": ""
+          },
+          {
+            "text": "06月09日",
+            "title": ""
+          }
+        ]
+      },
+      {
+        "label": "第16周",
+        "cells": [
+          {
+            "text": "06月10日",
+            "title": ""
+          },
+          {
+            "text": "06月11日",
+            "title": ""
+          },
+          {
+            "text": "06月12日",
+            "title": ""
+          },
+          {
+            "text": "06月13日",
+            "title": ""
+          },
+          {
+            "text": "06月14日",
+            "title": ""
+          },
+          {
+            "text": "06月15日",
+            "title": ""
+          },
+          {
+            "text": "06月16日",
+            "title": ""
+          }
+        ]
+      }
+    ]
+  }
+}

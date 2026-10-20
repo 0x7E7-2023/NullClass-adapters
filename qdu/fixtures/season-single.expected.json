@@ -1,0 +1,116 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "青岛大学的节次里有 T1（午间）、T2（傍晚）两档，空课把它们放在第 5、10 节，所以教务的第 5 至 8 节在空课里是第 6 至 9 节，第 9 至 11 节是第 11 至 13 节。教务课表里没有这两档的课，需要的话请自己添加；这两档的时间仅供参考"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第三学期",
+   "firstDay": "2027-06-28",
+   "totalWeeks": 4,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:00",
+     "end": "08:50"
+    },
+    {
+     "periodIndex": 2,
+     "start": "09:00",
+     "end": "09:50"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:10",
+     "end": "11:00"
+    },
+    {
+     "periodIndex": 4,
+     "start": "11:10",
+     "end": "12:00"
+    },
+    {
+     "periodIndex": 5,
+     "start": "13:10",
+     "end": "14:00"
+    },
+    {
+     "periodIndex": 6,
+     "start": "14:00",
+     "end": "14:50"
+    },
+    {
+     "periodIndex": 7,
+     "start": "15:00",
+     "end": "15:50"
+    },
+    {
+     "periodIndex": 8,
+     "start": "16:00",
+     "end": "16:50"
+    },
+    {
+     "periodIndex": 9,
+     "start": "17:00",
+     "end": "17:50"
+    },
+    {
+     "periodIndex": 10,
+     "start": "17:50",
+     "end": "18:30"
+    },
+    {
+     "periodIndex": 11,
+     "start": "19:00",
+     "end": "19:50"
+    },
+    {
+     "periodIndex": 12,
+     "start": "20:00",
+     "end": "20:50"
+    },
+    {
+     "periodIndex": 13,
+     "start": "21:00",
+     "end": "21:50"
+    }
+   ],
+   "courses": [
+    {
+     "name": "专业实习",
+     "teacher": "甲老师",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 4,
+       "weekType": "ALL",
+       "location": "实习基地"
+      }
+     ]
+    },
+    {
+     "name": "夜间研讨",
+     "teacher": "乙老师",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 11,
+       "endPeriod": 12,
+       "startWeek": 1,
+       "endWeek": 4,
+       "weekType": "ALL",
+       "location": "教7-101"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

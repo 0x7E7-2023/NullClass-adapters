@@ -1,0 +1,389 @@
+{
+ "_note": "合成数据（非真实抓取）：周次写法。(单)1-8周,(双)9-16周 前缀标记各跟自己那段；1-8周(单)9-16周 后缀紧挨下一段数字；第1-第8周 按一段读；1-8周(共8周),9-16周 只剥「共 8 周」备注、后面的 9-16 周要留；1-16周 双；(1) 是教学班序号；1-16周隔周 / (单双) 认不出出声；(3组) 备注摘掉出声；空白分段；全角数字与括号；全角波浪。",
+ "source": "qz-jsxsd",
+ "pageUrl": "https://xjw.qdu.edu.cn/jsxsd/xskb/xskb_list.do",
+ "now": "2026-09-13",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027学年第一学期"
+ },
+ "screenTermMissing": false,
+ "cols": 8,
+ "calendar": {
+  "found": true,
+  "rows": [
+   [
+    {
+     "col": 0,
+     "text": "周次"
+    },
+    {
+     "col": 1,
+     "text": "日"
+    },
+    {
+     "col": 2,
+     "text": "一"
+    },
+    {
+     "col": 3,
+     "text": "二"
+    },
+    {
+     "col": 4,
+     "text": "三"
+    },
+    {
+     "col": 5,
+     "text": "四"
+    },
+    {
+     "col": 6,
+     "text": "五"
+    },
+    {
+     "col": 7,
+     "text": "六"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "1"
+    },
+    {
+     "col": 1,
+     "title": "2026年09月06日"
+    },
+    {
+     "col": 2,
+     "title": "2026年09月07日"
+    },
+    {
+     "col": 3,
+     "title": "2026年09月08日"
+    },
+    {
+     "col": 4,
+     "title": "2026年09月09日"
+    },
+    {
+     "col": 5,
+     "title": "2026年09月10日"
+    },
+    {
+     "col": 6,
+     "title": "2026年09月11日"
+    },
+    {
+     "col": 7,
+     "title": "2026年09月12日"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "2"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "3"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "4"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "5"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "6"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "7"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "8"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "9"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "10"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "11"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "12"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "13"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "14"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "15"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "16"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "17"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "18"
+    }
+   ]
+  ]
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": -1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": -1,
+    "text": "星期一",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": -1,
+    "text": "星期二",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": -1,
+    "text": "星期三",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": -1,
+    "text": "星期四",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": -1,
+    "text": "星期五",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": -1,
+    "text": "星期六",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": -1,
+    "text": "星期日",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 0,
+    "text": "第一大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": [
+     "周次甲<br><font title=\"老师\">甲老师</font><br><font title=\"周次(节次)\">(单)1-8周,(双)9-16周[01-02节]</font><br><font title=\"教室\">教1-101</font>"
+    ]
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": [
+     "周次乙<br><font title=\"老师\">乙老师</font><br><font title=\"周次(节次)\">1-8周(单)9-16周[01-02节]</font><br><font title=\"教室\">教1-102</font>"
+    ]
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": [
+     "周次丙<br><font title=\"老师\">丙老师</font><br><font title=\"周次(节次)\">第1-第8周[01-02节]</font><br><font title=\"教室\">教1-103</font>"
+    ]
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": [
+     "周次丁<br><font title=\"老师\">丁老师</font><br><font title=\"周次(节次)\">1-8周(共8周),9-16周[01-02节]</font><br><font title=\"教室\">教1-104</font>"
+    ]
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": [
+     "周次戊<br><font title=\"老师\">戊老师</font><br><font title=\"周次(节次)\">1-16周 双[01-02节]</font><br><font title=\"教室\">教1-105</font>"
+    ]
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": [
+     "周次己<br><font title=\"老师\">己老师</font><br><font title=\"周次(节次)\">1-16周(1)[01-02节]</font><br><font title=\"教室\">教1-106</font>"
+    ]
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": [
+     "周次庚<br><font title=\"老师\">庚老师</font><br><font title=\"周次(节次)\">第3周[01-02节]</font><br><font title=\"教室\">教1-107</font>"
+    ]
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 1,
+    "text": "第二大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": [
+     "周次辛<br><font title=\"老师\">辛老师</font><br><font title=\"周次(节次)\">1-16周隔周[03-04节]</font><br><font title=\"教室\">教2-101</font>"
+    ]
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": [
+     "周次壬<br><font title=\"老师\">壬老师</font><br><font title=\"周次(节次)\">1-16周(单双)[03-04节]</font><br><font title=\"教室\">教2-102</font>"
+    ]
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": [
+     "周次癸<br><font title=\"老师\">癸老师</font><br><font title=\"周次(节次)\">1-16周(3组)[03-04节]</font><br><font title=\"教室\">教2-103</font>"
+    ]
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": [
+     "周次子<br><font title=\"老师\">子老师</font><br><font title=\"周次(节次)\">1-3周 5-9周[03-04节]</font><br><font title=\"教室\">教2-104</font>"
+    ]
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": [
+     "周次丑<br><font title=\"老师\">丑老师</font><br><font title=\"周次(节次)\">１－８周（单）[03-04节]</font><br><font title=\"教室\">教2-105</font>"
+    ]
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": [
+     "周次寅<br><font title=\"老师\">寅老师</font><br><font title=\"周次(节次)\">1～16周(双周)[03～04节]</font><br><font title=\"教室\">教2-106</font>"
+    ]
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": []
+   }
+  ]
+ ]
+}

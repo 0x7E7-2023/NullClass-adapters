@@ -1,0 +1,371 @@
+{
+ "_note": "合成数据（非真实抓取）：表里多出来的第 7 行靠方括号定节次。[12-13节] 换算成第 14-15 节，节次时间表里没有，补占位（22:00、23:00 起）并出声；[14-15节] 换算成 16-17 节，超过 15 节上限，跳过并点名；没有课名的块跳过并点名；周次 29-32 超出 30 周的部分丢掉出声，课表里有到第 30 周的课、周历只有 18 周，总周数抬到 30 并出声。",
+ "source": "qz-jsxsd",
+ "pageUrl": "https://xjw.qdu.edu.cn/jsxsd/xskb/xskb_list.do",
+ "now": "2026-09-13",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027学年第一学期"
+ },
+ "screenTermMissing": false,
+ "cols": 8,
+ "calendar": {
+  "found": true,
+  "rows": [
+   [
+    {
+     "col": 0,
+     "text": "周次"
+    },
+    {
+     "col": 1,
+     "text": "日"
+    },
+    {
+     "col": 2,
+     "text": "一"
+    },
+    {
+     "col": 3,
+     "text": "二"
+    },
+    {
+     "col": 4,
+     "text": "三"
+    },
+    {
+     "col": 5,
+     "text": "四"
+    },
+    {
+     "col": 6,
+     "text": "五"
+    },
+    {
+     "col": 7,
+     "text": "六"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "1"
+    },
+    {
+     "col": 1,
+     "title": "2026年09月06日"
+    },
+    {
+     "col": 2,
+     "title": "2026年09月07日"
+    },
+    {
+     "col": 3,
+     "title": "2026年09月08日"
+    },
+    {
+     "col": 4,
+     "title": "2026年09月09日"
+    },
+    {
+     "col": 5,
+     "title": "2026年09月10日"
+    },
+    {
+     "col": 6,
+     "title": "2026年09月11日"
+    },
+    {
+     "col": 7,
+     "title": "2026年09月12日"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "2"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "3"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "4"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "5"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "6"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "7"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "8"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "9"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "10"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "11"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "12"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "13"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "14"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "15"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "16"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "17"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "18"
+    }
+   ]
+  ]
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": -1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": -1,
+    "text": "星期一",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": -1,
+    "text": "星期二",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": -1,
+    "text": "星期三",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": -1,
+    "text": "星期四",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": -1,
+    "text": "星期五",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": -1,
+    "text": "星期六",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": -1,
+    "text": "星期日",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 0,
+    "text": "第一大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": [
+     "超周次课<br><font title=\"老师\">甲老师</font><br><font title=\"周次(节次)\">29-32周[01-02节]</font><br><font title=\"教室\">教11-101</font>"
+    ]
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 6,
+    "text": "第七大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 6,
+    "text": "",
+    "parts": [
+     "深夜加课<br><font title=\"老师\">乙老师</font><br><font title=\"周次(节次)\">1-16周[12-13节]</font><br><font title=\"教室\">教11-102</font>"
+    ]
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 6,
+    "text": "",
+    "parts": [
+     "越界课<br><font title=\"老师\">丙老师</font><br><font title=\"周次(节次)\">1-8周[14-15节]</font><br><font title=\"教室\">教11-103</font>"
+    ]
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": 6,
+    "text": "",
+    "parts": [
+     "<font title=\"老师\">丁老师</font><br><font title=\"周次(节次)\">1-8周[09-10节]</font><br><font title=\"教室\">教11-104</font>"
+    ]
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 6,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": 6,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": 6,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 6,
+    "text": "",
+    "parts": []
+   }
+  ]
+ ]
+}

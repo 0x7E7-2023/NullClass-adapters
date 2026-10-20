@@ -1,0 +1,74 @@
+{
+  "specVersion": 1,
+  "key": "gzst",
+  "name": "广州松田职业学院",
+  "initial": "G",
+  "version": "1.0.0",
+  "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jw.educationgroup.cn/gzstzyxy_jsxsd/",
+  "scheduleUrlHint": "https://jw.educationgroup.cn/gzstzyxy_jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jw.educationgroup.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（表头对齐、一格两门课、相邻两节同课合成一块、格内没写节次取行标签、备注行不影响）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法（1-15(单周) / 2-16(双周) / (单)1-8周,(双)9-16周 / 后缀挨着下一段 / 第1-第8周 / 共 8 周备注只剥备注本身 / 1,3,5 / 括号里的 (1) 序号 / 5至12周 / 1-4周,6-8周）",
+      "extracted": "fixtures/weeks-forms.extracted.json",
+      "expected": "fixtures/weeks-forms.expected.json"
+    },
+    {
+      "name": "合成用例：同课合并（相邻节次合并 / 教室不同不合并 / 完全相同的行去重（1-2、3-4、3-4 合成 1-4）/ 周次交错的行按周次分组再合并 / 周次并集 / [01-02-03-04节] 连排 / 重叠节次不合并 / 周次不同不合并 / 同名不同教师分开）",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：节次时间（第 11、12 节首尾相接 / 第 13–14 节顺推补上 / 第 15 节起越过 23:59 补不了并提醒）",
+      "extracted": "fixtures/periods-h3.extracted.json",
+      "expected": "fixtures/periods-h3.expected.json"
+    },
+    {
+      "name": "合成用例：节次写法与回落（行标签 第1大节(01,02小节) / 第7-8节 / [03-05-07节] 回落标签 / [1,3节] 不连续 / 无标签无节次与 [2026节] 跳过并提醒）",
+      "extracted": "fixtures/periods-labels.extracted.json",
+      "expected": "fixtures/periods-labels.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师 / 缺教室 / 占位教师（指向「编辑课程」）与周次读不出，长课名点名截 20 字、整条不超 200 字",
+      "extracted": "fixtures/fields-long.extracted.json",
+      "expected": "fixtures/fields-long.expected.json"
+    },
+    {
+      "name": "合成用例：周次边界（1-24 周 / 29-34 周截到第 30 周并把总周数抬到 30 / 35-40 周与 8-1 周读不出 / 单双周同时出现 / 括号备注 (3组) / 一段认不出其余照读）",
+      "extracted": "fixtures/weeks-limits.extracted.json",
+      "expected": "fixtures/weeks-limits.expected.json"
+    },
+    {
+      "name": "合成用例：表头只认出周一到周五（周六有课按列序补出并提醒、列 8 的课对不上星期）",
+      "extracted": "fixtures/partial-header.extracted.json",
+      "expected": "fixtures/partial-header.expected.json"
+    },
+    {
+      "name": "合成用例：合并的「周末」格跨周六周日（课记在两天上并提醒）",
+      "extracted": "fixtures/merged-weekend.extracted.json",
+      "expected": "fixtures/merged-weekend.expected.json"
+    },
+    {
+      "name": "合成用例：学期下拉框没标出选中项（只有 2026-2027-2 这种代码，写成「2026-2027学年第二学期」并提醒）",
+      "extracted": "fixtures/term-code.extracted.json",
+      "expected": "fixtures/term-code.expected.json"
+    },
+    {
+      "name": "合成用例：学年学期认不出（学期名用「广州松田职业学院课表」并提醒）",
+      "extracted": "fixtures/term-none.extracted.json",
+      "expected": "fixtures/term-none.expected.json"
+    }
+  ]
+}

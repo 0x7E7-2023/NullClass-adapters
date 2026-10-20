@@ -1,0 +1,64 @@
+{
+  "specVersion": 1,
+  "key": "qdu",
+  "name": "青岛大学",
+  "initial": "Q",
+  "version": "1.0.0",
+  "author": "上游 JellyfisHawthorn（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://xjw.qdu.edu.cn/jsxsd/",
+  "scheduleUrlHint": "https://xjw.qdu.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "xjw.qdu.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（6 个大节行对应空课第 1-2、3-4、6-7、8-9、11-12、13 节；单双周、多段周次、一格两门课、无教师无教室；冬季为主的秋季学期，前 4 周在夏季）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法与单双标记归属（「(单)1-8周,(双)9-16周」前缀各跟自己一段、「1-8周(单)9-16周」后缀紧挨下一段、「第1-第8周」、「1-8周(共8周),9-16周」只剥备注、全角写法、认不出的单双与备注出声）",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：教务节次换算与行位置（[05-07节] → 6-8、[06节] → 7、[09-11节] → 11-13、相邻两行合并、方括号与所在行对不上以行为准、多出来的行靠方括号、缺节次跳过点名；冬季为主的春季学期）",
+      "extracted": "fixtures/period-map.extracted.json",
+      "expected": "fixtures/period-map.expected.json"
+    },
+    {
+      "name": "合成用例：夏季为主的春季学期（放夏季节次时间，提醒第 1-8 周属于冬季、实际早 30 分钟）",
+      "extracted": "fixtures/season-summer.extracted.json",
+      "expected": "fixtures/season-summer.expected.json"
+    },
+    {
+      "name": "合成用例：整学期都在夏季的暑期小学期（不出换季提醒；学期名是代码时改拼成「第三学期」）",
+      "extracted": "fixtures/season-single.extracted.json",
+      "expected": "fixtures/season-single.expected.json"
+    },
+    {
+      "name": "合成用例：长课名的提醒限长（4 门长课名无教师无教室、6 个长课名的上课安排没有周次；课名截 20 字、整条不超过 200 字）",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    },
+    {
+      "name": "合成用例：教学周历取不到且课表页没有学年学期下拉框（开学日按提取日所在周的周一推算、总周数按 20 周计、学期名是代码改拼，各出一条提醒）",
+      "extracted": "fixtures/no-calendar.extracted.json",
+      "expected": "fixtures/no-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：没有星期表头、跨列的格子、缺列号的格子（推断最后 7 列为星期一到日并出声，不按下标猜列）",
+      "extracted": "fixtures/no-header.extracted.json",
+      "expected": "fixtures/no-header.expected.json"
+    },
+    {
+      "name": "合成用例：超出节次时间表（[12-13节] → 第 14-15 节补占位）、节次超限、没课名、周次超过 30 周、总周数抬高",
+      "extracted": "fixtures/extras.extracted.json",
+      "expected": "fixtures/extras.expected.json"
+    }
+  ]
+}

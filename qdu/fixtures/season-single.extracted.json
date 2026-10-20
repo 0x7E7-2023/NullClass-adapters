@@ -1,0 +1,283 @@
+{
+ "_note": "合成数据（非真实抓取）：暑期小学期，2027-06-28 起 4 周，周一依次是 6 月 28 日、7 月 5 日、12 日、19 日，整个学期都在夏季：不出换季提醒，放夏季表。学期名是代码 2026-2027-3，改拼成「第三学期」。",
+ "source": "qz-jsxsd",
+ "pageUrl": "https://xjw.qdu.edu.cn/jsxsd/xskb/xskb_list.do",
+ "now": "2027-06-30",
+ "term": {
+  "code": "2026-2027-3",
+  "name": "2026-2027-3"
+ },
+ "screenTermMissing": false,
+ "cols": 8,
+ "calendar": {
+  "found": true,
+  "rows": [
+   [
+    {
+     "col": 0,
+     "text": "周次"
+    },
+    {
+     "col": 1,
+     "text": "日"
+    },
+    {
+     "col": 2,
+     "text": "一"
+    },
+    {
+     "col": 3,
+     "text": "二"
+    },
+    {
+     "col": 4,
+     "text": "三"
+    },
+    {
+     "col": 5,
+     "text": "四"
+    },
+    {
+     "col": 6,
+     "text": "五"
+    },
+    {
+     "col": 7,
+     "text": "六"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "1"
+    },
+    {
+     "col": 1,
+     "title": "2027年06月27日"
+    },
+    {
+     "col": 2,
+     "title": "2027年06月28日"
+    },
+    {
+     "col": 3,
+     "title": "2027年06月29日"
+    },
+    {
+     "col": 4,
+     "title": "2027年06月30日"
+    },
+    {
+     "col": 5,
+     "title": "2027年07月01日"
+    },
+    {
+     "col": 6,
+     "title": "2027年07月02日"
+    },
+    {
+     "col": 7,
+     "title": "2027年07月03日"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "2"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "3"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "4"
+    }
+   ]
+  ]
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": -1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": -1,
+    "text": "星期一",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": -1,
+    "text": "星期二",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": -1,
+    "text": "星期三",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": -1,
+    "text": "星期四",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": -1,
+    "text": "星期五",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": -1,
+    "text": "星期六",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": -1,
+    "text": "星期日",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 0,
+    "text": "第一大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": [
+     "专业实习<br><font title=\"老师\">甲老师</font><br><font title=\"周次(节次)\">1-4(周)[01-02节]</font><br><font title=\"教室\">实习基地</font>"
+    ]
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 4,
+    "text": "第五大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 4,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 4,
+    "text": "",
+    "parts": [
+     "夜间研讨<br><font title=\"老师\">乙老师</font><br><font title=\"周次(节次)\">1-4(周)[09-10节]</font><br><font title=\"教室\">教7-101</font>"
+    ]
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": 4,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 4,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": 4,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": 4,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 4,
+    "text": "",
+    "parts": []
+   }
+  ]
+ ]
+}

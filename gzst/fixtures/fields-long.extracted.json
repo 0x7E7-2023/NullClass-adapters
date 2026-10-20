@@ -1,0 +1,122 @@
+{
+ "now": "2026-09-12",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027学年第一学期",
+  "source": "select-selected"
+ },
+ "rows": [
+  [
+   {
+    "text": "节次",
+    "parts": [],
+    "col": 0,
+    "span": 1
+   },
+   {
+    "text": "星期一",
+    "parts": [],
+    "col": 1,
+    "span": 1
+   },
+   {
+    "text": "星期二",
+    "parts": [],
+    "col": 2,
+    "span": 1
+   },
+   {
+    "text": "星期三",
+    "parts": [],
+    "col": 3,
+    "span": 1
+   },
+   {
+    "text": "星期四",
+    "parts": [],
+    "col": 4,
+    "span": 1
+   },
+   {
+    "text": "星期五",
+    "parts": [],
+    "col": 5,
+    "span": 1
+   },
+   {
+    "text": "星期六",
+    "parts": [],
+    "col": 6,
+    "span": 1
+   },
+   {
+    "text": "星期日",
+    "parts": [],
+    "col": 7,
+    "span": 1
+   }
+  ],
+  [
+   {
+    "text": "第一大节(01,02小节)",
+    "parts": [],
+    "col": 0,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "甲组数据结构与算法分析及其在大规模工程实践中的综合应用<br><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br><font title=\"教室\">教室X</font>"
+    ],
+    "col": 1,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "乙组数据结构与算法分析及其在大规模工程实践中的综合应用<br><font title=\"老师\">教师乙</font><br><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br><font title=\"教室\"></font>"
+    ],
+    "col": 2,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "丙组数据结构与算法分析及其在大规模工程实践中的综合应用<br><font title=\"老师\">暂无教师</font><br><font title=\"周次(节次)\">1-16(周)[01-02节]</font>"
+    ],
+    "col": 3,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "丁组数据结构与算法分析及其在大规模工程实践中的综合应用<br><font title=\"老师\">教师丁</font><br><font title=\"周次(节次)\">待定[01-02节]</font><br><font title=\"教室\">教室X</font>"
+    ],
+    "col": 4,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "戊组数据结构与算法分析及其在大规模工程实践中的综合应用<br><font title=\"老师\">教师戊</font><br><font title=\"周次(节次)\">[01-02节]</font><br><font title=\"教室\">教室X</font>"
+    ],
+    "col": 5,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "短课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br><font title=\"教室\">教室X</font>"
+    ],
+    "col": 6,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [],
+    "col": 7,
+    "span": 1
+   }
+  ]
+ ]
+}

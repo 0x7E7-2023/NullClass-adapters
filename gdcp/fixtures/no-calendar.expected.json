@@ -1,0 +1,129 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "开学日期无法从教务获取（教学周历取不到或表格结构认不出来），已按最近的周一（2026-09-14）推算，请在「学期管理」里核对",
+  "教务没有给出学期总周数，已按 20 周计，请在「学期管理」里核对",
+  "有 2 门课没给上课教师、2 门课没给上课地点（例如 形势与政策、心理健康、毕业实习）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第一学期",
+   "firstDay": "2026-09-14",
+   "totalWeeks": 20,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:30",
+     "end": "09:10"
+    },
+    {
+     "periodIndex": 2,
+     "start": "09:15",
+     "end": "09:55"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:10",
+     "end": "10:50"
+    },
+    {
+     "periodIndex": 4,
+     "start": "10:55",
+     "end": "11:35"
+    },
+    {
+     "periodIndex": 5,
+     "start": "14:15",
+     "end": "14:55"
+    },
+    {
+     "periodIndex": 6,
+     "start": "15:00",
+     "end": "15:40"
+    },
+    {
+     "periodIndex": 7,
+     "start": "15:55",
+     "end": "16:35"
+    },
+    {
+     "periodIndex": 8,
+     "start": "16:35",
+     "end": "17:15"
+    },
+    {
+     "periodIndex": 9,
+     "start": "18:05",
+     "end": "18:45"
+    },
+    {
+     "periodIndex": 10,
+     "start": "18:45",
+     "end": "19:25"
+    },
+    {
+     "periodIndex": 11,
+     "start": "19:40",
+     "end": "20:20"
+    },
+    {
+     "periodIndex": 12,
+     "start": "20:20",
+     "end": "21:00"
+    }
+   ],
+   "courses": [
+    {
+     "name": "形势与政策",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": "阶梯教室"
+      }
+     ]
+    },
+    {
+     "name": "毕业实习",
+     "teacher": "孟某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 5,
+       "endPeriod": 6,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "心理健康",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 3,
+       "startPeriod": 5,
+       "endPeriod": 6,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

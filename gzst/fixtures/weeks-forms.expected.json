@@ -1,0 +1,293 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "周次括号里的序号（如 (1)）已忽略 1 处，不当作周次",
+  "开学日期教务页面没有给出，已按提取当天所在周的周一（2026-09-07）推算第 1 周，请在学期管理里核对",
+  "节次时间按学校公布的 12 节时间导入（第 1 节 08:20-09:00、第 12 节 20:35-21:40），课表页本身不给节次时间，与实际不符时请在学期管理里核对"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第一学期",
+   "firstDay": "2026-09-07",
+   "totalWeeks": 20,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:20",
+     "end": "09:00"
+    },
+    {
+     "periodIndex": 2,
+     "start": "09:05",
+     "end": "09:45"
+    },
+    {
+     "periodIndex": 3,
+     "start": "09:55",
+     "end": "10:35"
+    },
+    {
+     "periodIndex": 4,
+     "start": "10:45",
+     "end": "11:25"
+    },
+    {
+     "periodIndex": 5,
+     "start": "11:30",
+     "end": "12:10"
+    },
+    {
+     "periodIndex": 6,
+     "start": "14:20",
+     "end": "15:00"
+    },
+    {
+     "periodIndex": 7,
+     "start": "15:05",
+     "end": "15:45"
+    },
+    {
+     "periodIndex": 8,
+     "start": "15:55",
+     "end": "16:35"
+    },
+    {
+     "periodIndex": 9,
+     "start": "16:45",
+     "end": "17:25"
+    },
+    {
+     "periodIndex": 10,
+     "start": "17:30",
+     "end": "18:10"
+    },
+    {
+     "periodIndex": 11,
+     "start": "19:30",
+     "end": "20:35"
+    },
+    {
+     "periodIndex": 12,
+     "start": "20:35",
+     "end": "21:40"
+    }
+   ],
+   "courses": [
+    {
+     "name": "单周课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 15,
+       "weekType": "ODD",
+       "location": "教室X"
+      }
+     ]
+    },
+    {
+     "name": "双周课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 2,
+       "endWeek": 16,
+       "weekType": "EVEN",
+       "location": "教室X"
+      }
+     ]
+    },
+    {
+     "name": "前缀课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 3,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 7,
+       "weekType": "ODD",
+       "location": "教室X"
+      },
+      {
+       "dayOfWeek": 3,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 10,
+       "endWeek": 16,
+       "weekType": "EVEN",
+       "location": "教室X"
+      }
+     ]
+    },
+    {
+     "name": "空格课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 7,
+       "weekType": "ODD",
+       "location": "教室X"
+      },
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 10,
+       "endWeek": 16,
+       "weekType": "EVEN",
+       "location": "教室X"
+      }
+     ]
+    },
+    {
+     "name": "紧挨课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 5,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 7,
+       "weekType": "ODD",
+       "location": "教室X"
+      },
+      {
+       "dayOfWeek": 5,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 10,
+       "endWeek": 16,
+       "weekType": "EVEN",
+       "location": "教室X"
+      }
+     ]
+    },
+    {
+     "name": "第字课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": "教室X"
+      }
+     ]
+    },
+    {
+     "name": "共周课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "教室X"
+      }
+     ]
+    },
+    {
+     "name": "逐周课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 3,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 5,
+       "weekType": "ODD",
+       "location": "教室X"
+      }
+     ]
+    },
+    {
+     "name": "序号课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "教室X"
+      }
+     ]
+    },
+    {
+     "name": "至字课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 6,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 5,
+       "endWeek": 12,
+       "weekType": "ALL",
+       "location": "教室X"
+      }
+     ]
+    },
+    {
+     "name": "两段课",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 7,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 4,
+       "weekType": "ALL",
+       "location": "教室X"
+      },
+      {
+       "dayOfWeek": 7,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 6,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": "教室X"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

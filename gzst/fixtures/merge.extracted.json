@@ -1,0 +1,238 @@
+{
+ "now": "2026-09-12",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027学年第一学期",
+  "source": "select-selected"
+ },
+ "rows": [
+  [
+   {
+    "text": "节次",
+    "parts": [],
+    "col": 0,
+    "span": 1
+   },
+   {
+    "text": "星期一",
+    "parts": [],
+    "col": 1,
+    "span": 1
+   },
+   {
+    "text": "星期二",
+    "parts": [],
+    "col": 2,
+    "span": 1
+   },
+   {
+    "text": "星期三",
+    "parts": [],
+    "col": 3,
+    "span": 1
+   },
+   {
+    "text": "星期四",
+    "parts": [],
+    "col": 4,
+    "span": 1
+   },
+   {
+    "text": "星期五",
+    "parts": [],
+    "col": 5,
+    "span": 1
+   },
+   {
+    "text": "星期六",
+    "parts": [],
+    "col": 6,
+    "span": 1
+   },
+   {
+    "text": "星期日",
+    "parts": [],
+    "col": 7,
+    "span": 1
+   }
+  ],
+  [
+   {
+    "text": "第一大节(01,02小节)",
+    "parts": [],
+    "col": 0,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "合并课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br><font title=\"教室\">教A</font>"
+    ],
+    "col": 1,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "重复课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br><font title=\"教室\">教C</font><br>---------------------<br>重复课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br><font title=\"教室\">教C</font>"
+    ],
+    "col": 2,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "并集课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-8(周)[01-02节]</font><br><font title=\"教室\">教D</font><br>---------------------<br>并集课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">9-16(周)[01-02节]</font><br><font title=\"教室\">教D</font>"
+    ],
+    "col": 3,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "连排课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[01-02-03-04节]</font><br><font title=\"教室\">教E</font>"
+    ],
+    "col": 4,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "重叠课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[01-03节]</font><br><font title=\"教室\">教F</font>"
+    ],
+    "col": 5,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "错周课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-8(周)[01-02节]</font><br><font title=\"教室\">教H</font>"
+    ],
+    "col": 6,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "同名课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br><font title=\"教室\">教G</font>"
+    ],
+    "col": 7,
+    "span": 1
+   }
+  ],
+  [
+   {
+    "text": "第二大节(03,04小节)",
+    "parts": [],
+    "col": 0,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "合并课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[03-04节]</font><br><font title=\"教室\">教A</font>"
+    ],
+    "col": 1,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [],
+    "col": 2,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [],
+    "col": 3,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [],
+    "col": 4,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "重叠课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[03-04节]</font><br><font title=\"教室\">教F</font>"
+    ],
+    "col": 5,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "错周课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">9-16(周)[03-04节]</font><br><font title=\"教室\">教H</font>"
+    ],
+    "col": 6,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "同名课<br><font title=\"老师\">教师乙</font><br><font title=\"周次(节次)\">1-16(周)[03-04节]</font><br><font title=\"教室\">教G</font>"
+    ],
+    "col": 7,
+    "span": 1
+   }
+  ],
+  [
+   {
+    "text": "第三大节(05,06小节)",
+    "parts": [],
+    "col": 0,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "合并课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[05-06节]</font><br><font title=\"教室\">教B</font>"
+    ],
+    "col": 1,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "连续重复课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br><font title=\"教室\">教J</font><br>---------------------<br>连续重复课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[03-04节]</font><br><font title=\"教室\">教J</font><br>---------------------<br>连续重复课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[03-04节]</font><br><font title=\"教室\">教J</font>"
+    ],
+    "col": 2,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "穿插课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-8(周)[01-02节]</font><br><font title=\"教室\">教K</font><br>---------------------<br>穿插课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">9-16(周)[03-04节]</font><br><font title=\"教室\">教K</font><br>---------------------<br>穿插课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-8(周)[03-04节]</font><br><font title=\"教室\">教K</font>"
+    ],
+    "col": 3,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [],
+    "col": 4,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [],
+    "col": 5,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [],
+    "col": 6,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [],
+    "col": 7,
+    "span": 1
+   }
+  ]
+ ]
+}

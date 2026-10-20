@@ -1,0 +1,212 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "根据教学楼判断你在天河校区上课，第 3、4 节按 10:10 起的节次时间导入，请核对",
+  "有 2 门课（例如 D号超长课程名称用于测试提醒限长与截断…、E号超长课程名称用于测试提醒限长与截断…）在 2号楼、运动场 上第 3、4 节：学校给这些楼的上课时间是 10:30-11:10、11:15-11:55，与导入的节次时间不同，请以学校实际为准",
+  "有 2 门课（例如 F号超长课程名称用于测试提醒限长与截断…、G号超长课程名称用于测试提醒限长与截断…）的第 3、4 节分不出是哪一套上课时间（教学楼 实训基地 不在学校公布的各楼名单里），已按 10:10 起的节次时间导入，请核对",
+  "有 1 门课（例如 H号超长课程名称用于测试提醒限长与截断…）的节次从第 8、10、12 节开始或到第 7、9、11 节结束：学校把第 7-8、9-10、11-12 节各当作一整段连堂上课（15:55-17:15、18:05-19:25、19:40-21:00），请以整段时间为准",
+  "有 2 个上课安排没能认出来，已跳过（没认出周次 1 个，没认出节次 1 个）。教务页面的写法可能有变化，欢迎反馈。包含：I号超长课程名称用于测试提醒限长与截断…——没认出周次；J号超长课程名称用于测试提醒限长与截断…——没认出节次",
+  "有 3 门课没给上课教师、2 门课没给上课地点（例如 A号超长课程名称用于测试提醒限长与截断…、C号超长课程名称用于测试提醒限长与截断…、F号超长课程名称用于测试提醒限长与截断… 等）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第一学期",
+   "firstDay": "2026-09-07",
+   "totalWeeks": 18,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:30",
+     "end": "09:10"
+    },
+    {
+     "periodIndex": 2,
+     "start": "09:15",
+     "end": "09:55"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:10",
+     "end": "10:50"
+    },
+    {
+     "periodIndex": 4,
+     "start": "10:55",
+     "end": "11:35"
+    },
+    {
+     "periodIndex": 5,
+     "start": "14:15",
+     "end": "14:55"
+    },
+    {
+     "periodIndex": 6,
+     "start": "15:00",
+     "end": "15:40"
+    },
+    {
+     "periodIndex": 7,
+     "start": "15:55",
+     "end": "16:35"
+    },
+    {
+     "periodIndex": 8,
+     "start": "16:35",
+     "end": "17:15"
+    },
+    {
+     "periodIndex": 9,
+     "start": "18:05",
+     "end": "18:45"
+    },
+    {
+     "periodIndex": 10,
+     "start": "18:45",
+     "end": "19:25"
+    },
+    {
+     "periodIndex": 11,
+     "start": "19:40",
+     "end": "20:20"
+    },
+    {
+     "periodIndex": 12,
+     "start": "20:20",
+     "end": "21:00"
+    }
+   ],
+   "courses": [
+    {
+     "name": "A号超长课程名称用于测试提醒限长与截断逻辑的课",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "L1"
+      }
+     ]
+    },
+    {
+     "name": "B号超长课程名称用于测试提醒限长与截断逻辑的课",
+     "teacher": "丙某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "C号超长课程名称用于测试提醒限长与截断逻辑的课",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 3,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "D号超长课程名称用于测试提醒限长与截断逻辑的课",
+     "teacher": "丁某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "L4"
+      }
+     ]
+    },
+    {
+     "name": "E号超长课程名称用于测试提醒限长与截断逻辑的课",
+     "teacher": "戊某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 5,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "L5"
+      }
+     ]
+    },
+    {
+     "name": "F号超长课程名称用于测试提醒限长与截断逻辑的课",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 6,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "L6"
+      }
+     ]
+    },
+    {
+     "name": "G号超长课程名称用于测试提醒限长与截断逻辑的课",
+     "teacher": "庚某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 7,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "L7"
+      }
+     ]
+    },
+    {
+     "name": "H号超长课程名称用于测试提醒限长与截断逻辑的课",
+     "teacher": "辛某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 8,
+       "endPeriod": 9,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "L8"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

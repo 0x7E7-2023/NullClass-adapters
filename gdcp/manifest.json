@@ -1,0 +1,99 @@
+{
+  "specVersion": 1,
+  "key": "gdcp",
+  "name": "广东交通职业技术学院",
+  "initial": "G",
+  "version": "1.0.0",
+  "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jw.gdcp.edu.cn/",
+  "scheduleUrlHint": "https://jw.gdcp.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jw.gdcp.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 天河校区早班（第 3、4 节 10:10 起）；一格两门课、多段周次、单双周、教学楼带【】与前导零；周历取开学日 2026-09-07 与 18 周",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：晚班为多数 · 花都校区 15 号楼 / 16 号楼第 3、4 节 10:30 起写进节次时间，少数早班的 1 号楼课点名提醒；第 7-8 节整段连堂 15:55-17:15",
+      "extracted": "fixtures/late-majority.extracted.json",
+      "expected": "fixtures/late-majority.expected.json"
+    },
+    {
+      "name": "合成用例：教学楼名带校区后缀 · 「09号楼（天河）」「15号楼（花都）」按后缀定各自的校区，早晚各 1 门取早班并点名晚班那门",
+      "extracted": "fixtures/campus-suffix.extracted.json",
+      "expected": "fixtures/campus-suffix.expected.json"
+    },
+    {
+      "name": "合成用例：校区票数平局且影响时间 · 「操场」按「运动场」算，10 号楼在天河是早班、在花都是晚班，先按名单靠前的天河校区算并说明",
+      "extracted": "fixtures/campus-tie.extracted.json",
+      "expected": "fixtures/campus-tie.expected.json"
+    },
+    {
+      "name": "合成用例：校区票数平局但不影响时间 · 图书馆在天河、花都都是早班，只提示节次时间，不提校区",
+      "extracted": "fixtures/campus-tie-same.extracted.json",
+      "expected": "fixtures/campus-tie-same.expected.json"
+    },
+    {
+      "name": "合成用例：国际校区 · 名单内的「教学楼」早班，名单外的「综合楼」按其他区域晚班",
+      "extracted": "fixtures/campus-international.extracted.json",
+      "expected": "fixtures/campus-international.expected.json"
+    },
+    {
+      "name": "合成用例：分不出上课时间 · 教学楼不在名单里（实训基地）与没写教学楼的课提醒；融新楼只在清远的名单里，按清远的晚班算",
+      "extracted": "fixtures/campus-unknown.extracted.json",
+      "expected": "fixtures/campus-unknown.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法 · 「(单)1-8周,(双)9-16周」「1-8周(单)9-16周」单双归属、「(共8周)」备注、「第1-第8周」、教学班序号「(1)」「(1-2)」、括号备注「(实验)」、「1-16周 双」、「隔周」「(单双)」、全角",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：单双标记后隔「第」与节次写法 · 「(单)第1-第8周,(双)第9-第16周」「1-8周(单)第9-16周」；节次「[01-02小节]」「[5、6节]」「[05,06小节]」「[第7、8节]」",
+      "extracted": "fixtures/di-and-period-forms.extracted.json",
+      "expected": "fixtures/di-and-period-forms.expected.json"
+    },
+    {
+      "name": "合成用例：合并 · 01-02 与 03-04 并成 1-4、第 4 节与第 5 节之间不并、同节次不同周次并集、完全重复只留一条、同名不同教师两门课、课名在裸文本里、05-06 与 07-08 并成 5-8",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：整段连堂的半段与超出 12 节 · 第 8 节开始、第 7 节结束的课点名；第 13-15 节按课间 5 分钟、每节 45 分钟顺推补时间；第 16 节顺推越过 23:59 如实说明",
+      "extracted": "fixtures/half-block-extend.extracted.json",
+      "expected": "fixtures/half-block-extend.expected.json"
+    },
+    {
+      "name": "合成用例：周历取不到 · 开学日按提取日期推算、总周数按 20 周；学期名是代码时拼成「2026-2027学年第一学期」；缺教师 / 缺教室照常导入并汇总提醒",
+      "extracted": "fixtures/no-calendar.extracted.json",
+      "expected": "fixtures/no-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：长课名的提醒不超 200 字 · 超长课名在缺教师 / 缺教室、第 3、4 节上课时间不同、分不出上课时间、半段连堂、没认出的上课安排各条提醒里点名，课名截到 20 字",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    },
+    {
+      "name": "合成用例：周历与课表对齐 · 周历表头「日一…六」且日期写成 2026-08-31，只认星期一格；课表周次超过周历周数时抬高总周数；课表无星期表头按最右 7 列对齐；课表页没有学年学期下拉框",
+      "extracted": "fixtures/calendar-forms.extracted.json",
+      "expected": "fixtures/calendar-forms.expected.json"
+    },
+    {
+      "name": "合成用例：周历没有星期表头 · 只能取第一个带日期的格子，它是星期日，对齐到后一天的星期一并说明",
+      "extracted": "fixtures/calendar-titled-only.extracted.json",
+      "expected": "fixtures/calendar-titled-only.expected.json"
+    },
+    {
+      "name": "合成用例：周历第 1 周「星期一」格上写的日期不是星期一 · 对齐到所在周的周一并说明",
+      "extracted": "fixtures/calendar-offmonday.extracted.json",
+      "expected": "fixtures/calendar-offmonday.expected.json"
+    }
+  ]
+}

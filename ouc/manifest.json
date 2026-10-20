@@ -1,0 +1,89 @@
+{
+  "specVersion": 1,
+  "key": "ouc",
+  "name": "中国海洋大学",
+  "initial": "Z",
+  "version": "1.0.0",
+  "author": "上游 anOsprey（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://id.ouc.edu.cn/sso/login?service=https%3A%2F%2Fjwgl2024.ouc.edu.cn%2F",
+  "scheduleUrlHint": "https://jwgl2024.ouc.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jwgl2024.ouc.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（一周七列、跨两行的格子让下一行少一格、一格两门课、1-8,10-16 周、2-16周(双)、3,5,7 周、教师留空、周历给出开学日与 20 周）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法（「(单)1-8周,(双)9-16周」标记各归各段、「1-8周(单) 9-16周」后缀紧挨下一段、「第1-第8周」、「1-8周(共8周),9-16周」只剥备注、1-15单周、1-16(单)周、节次列表拆两块）",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：认不出的写法与边界（单双同时出现按每周、1-35 周截到 30 周、区间写反 / 括号备注 / 第 0 周 / 缺时间 / 缺课名 / 节次超限各自跳过并点名，点名只列前 5 个，整条提醒截到 200 字）",
+      "extracted": "fixtures/week-limits.extracted.json",
+      "expected": "fixtures/week-limits.expected.json"
+    },
+    {
+      "name": "合成用例：同课合并（相邻节次并成一段、只有部分周相邻的不扩到整学期、重叠节次合并、重复卡片去重）",
+      "extracted": "fixtures/merge-partial.extracted.json",
+      "expected": "fixtures/merge-partial.expected.json"
+    },
+    {
+      "name": "合成用例：本校专属（请求的是页面自己选中的作息方案，第一大节 08:30 开始 → 西海岸节次时间，不用问但提醒作息方案不同；春季学期周历按星期日排第一列，日期的星期几对出周一）",
+      "extracted": "fixtures/calendar-sunday-first.extracted.json",
+      "expected": "fixtures/calendar-sunday-first.expected.json"
+    },
+    {
+      "name": "合成用例：本校专属（页面自己选中的作息方案：名称与第一大节时间互相矛盾 → 判断不了，按用户在提问里选的西海岸校区）",
+      "extracted": "fixtures/campus-asked.extracted.json",
+      "expected": "fixtures/campus-asked.expected.json"
+    },
+    {
+      "name": "合成用例：本校专属（页面自己选中的作息方案，名称写了鱼山校区 → 崂山/鱼山节次时间，不用问）",
+      "extracted": "fixtures/campus-label.extracted.json",
+      "expected": "fixtures/campus-label.expected.json"
+    },
+    {
+      "name": "合成用例：本校专属（请求的是上游写死的作息方案：名称写了西海岸、第一大节 08:30 也不能判校区，按用户在提问里选的崂山/鱼山，无校区提醒）",
+      "extracted": "fixtures/campus-const-mode.extracted.json",
+      "expected": "fixtures/campus-const-mode.expected.json"
+    },
+    {
+      "name": "合成用例：秋季学期周历按星期日排第一列（8月31日、9月1日）：开学日 2025-09-01，不能推成下一年的 8 月 31 日",
+      "extracted": "fixtures/calendar-sunday-fall.extracted.json",
+      "expected": "fixtures/calendar-sunday-fall.expected.json"
+    },
+    {
+      "name": "合成用例：周历第 1 周一行里两个日期推出不同的周一 → 不采用，开学日按最近周一推算并提醒",
+      "extracted": "fixtures/calendar-conflict.extracted.json",
+      "expected": "fixtures/calendar-conflict.expected.json"
+    },
+    {
+      "name": "合成用例：没有星期表头（按课程列从左到右当作星期一到日并提醒）、周历日期写在 title 里、页面有两张课表、作息方案编号对不上、校区没法判断按崂山/鱼山并提醒",
+      "extracted": "fixtures/header-missing.extracted.json",
+      "expected": "fixtures/header-missing.expected.json"
+    },
+    {
+      "name": "合成用例：周历取不到（开学日按最近周一推算、总周数取课表最大周次）、学期名取不到用占位、表尾两条备注点名、校区没法判断",
+      "extracted": "fixtures/no-calendar.extracted.json",
+      "expected": "fixtures/no-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：节次超出学校公布的 12 节（第 13–15 节顺推补上时间，第 16 节越过 23:59 说明），学期名由代码拼出",
+      "extracted": "fixtures/period-extend.extracted.json",
+      "expected": "fixtures/period-extend.expected.json"
+    },
+    {
+      "name": "合成用例：超长课名的提醒不超 200 字（7 个无效上课安排点名前 5 个、4 门缺教师的课点名前 3 个，课名各截到 20 字）",
+      "extracted": "fixtures/long-name.extracted.json",
+      "expected": "fixtures/long-name.expected.json"
+    }
+  ]
+}

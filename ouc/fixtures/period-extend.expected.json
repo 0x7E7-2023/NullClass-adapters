@@ -1,0 +1,111 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "课表用到了第 13–15 节，学校公布的节次时间只有 12 节，这几节已按上一节下课后课间 5 分钟、每节 45 分钟顺推补上，请在「学期管理」里核对",
+    "课表用到了第 16 节及以后，顺推的时间会越过当天 23:59，这些节次没有补上时间（课程已导入），请在「学期管理」里补上"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第一学期",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:50"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:00",
+          "end": "09:50"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:10",
+          "end": "11:00"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:10",
+          "end": "12:00"
+        },
+        {
+          "periodIndex": 5,
+          "start": "13:30",
+          "end": "14:20"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:30",
+          "end": "15:20"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:30",
+          "end": "16:20"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:30",
+          "end": "17:20"
+        },
+        {
+          "periodIndex": 9,
+          "start": "17:30",
+          "end": "18:20"
+        },
+        {
+          "periodIndex": 10,
+          "start": "18:30",
+          "end": "19:20"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:30",
+          "end": "20:20"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:30",
+          "end": "21:20"
+        },
+        {
+          "periodIndex": 13,
+          "start": "21:25",
+          "end": "22:10"
+        },
+        {
+          "periodIndex": 14,
+          "start": "22:15",
+          "end": "23:00"
+        },
+        {
+          "periodIndex": 15,
+          "start": "23:05",
+          "end": "23:50"
+        }
+      ],
+      "courses": [
+        {
+          "name": "实验课",
+          "teacher": "教师甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 11,
+              "endPeriod": 16,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "实验楼101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "source": "qz-jsxsd-hnu",
+  "pageUrl": "https://hdjw.hnu.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-03-04",
+  "loginTitle": false,
+  "loginForm": false,
+  "term": {
+    "code": "2025-2026-2",
+    "label": "",
+    "assumed": true
+  },
+  "tables": [
+    {
+      "head": [
+        {
+          "text": ""
+        },
+        {
+          "text": "星期日"
+        },
+        {
+          "text": "星期一"
+        },
+        {
+          "text": "星期二"
+        },
+        {
+          "text": "星期三"
+        },
+        {
+          "text": "星期四"
+        },
+        {
+          "text": "星期五"
+        },
+        {
+          "text": "星期六"
+        }
+      ],
+      "body": [
+        [
+          {
+            "label": true,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": true,
+            "cards": [
+              {
+                "title": "大学物理",
+                "details": [
+                  "老师：郑一",
+                  "地点：教F101",
+                  "时间：1-22周 [1-2节]"
+                ]
+              }
+            ]
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          },
+          {
+            "label": false,
+            "rowSpan": 1,
+            "colSpan": 1,
+            "hasText": false,
+            "cards": []
+          }
+        ]
+      ]
+    }
+  ],
+  "calendar": null
+}

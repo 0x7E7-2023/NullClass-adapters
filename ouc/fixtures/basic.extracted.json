@@ -1,0 +1,1043 @@
+{
+  "source": "qz-jsxsd-weekly",
+  "pageUrl": "https://jwgl2024.ouc.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-10-20",
+  "loginTitle": false,
+  "loginForm": false,
+  "term": {
+    "code": "2025-2026-1",
+    "label": "2025-2026-1"
+  },
+  "echoTerm": "2025-2026-1",
+  "mode": {
+    "requested": "16FD8C2BE55E15F9E0630100007FF6B5",
+    "fallback": false,
+    "selected": "16FD8C2BE55E15F9E0630100007FF6B5",
+    "label": "本科生课表",
+    "clock": "08:00"
+  },
+  "campus": {
+    "asked": true,
+    "index": 0
+  },
+  "tableCount": 1,
+  "table": {
+    "head": [
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "节次"
+      },
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "星期一"
+      },
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "星期二"
+      },
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "星期三"
+      },
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "星期四"
+      },
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "星期五"
+      },
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "星期六"
+      },
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "星期日"
+      }
+    ],
+    "rows": [
+      [
+        {
+          "name": "timeTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "第一大节 (1、2小节) 08:00-09:50",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": [
+            {
+              "title": "高等数学",
+              "text": "高等数学 老师:张三;时间:1-8周,10-16周[01-02节];地点:教A101"
+            },
+            {
+              "title": "大学英语",
+              "text": "大学英语 老师:李四;时间:2-16周(双)[01-02节];地点:外语楼301"
+            }
+          ]
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": [
+            {
+              "title": "体育",
+              "text": "体育 老师:;时间:1-16周[01-02节];地点:操场"
+            }
+          ]
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        }
+      ],
+      [
+        {
+          "name": "timeTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "第二大节 (3、4小节) 10:10-12:00",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 2,
+          "colSpan": 1,
+          "text": "",
+          "cards": [
+            {
+              "title": "数据结构",
+              "text": "数据结构 老师:王五;时间:1-16周[03-04节];地点:教B202"
+            }
+          ]
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        }
+      ],
+      [
+        {
+          "name": "timeTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "第三大节 (5、6小节) 13:30-15:20",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": [
+            {
+              "title": "线性代数",
+              "text": "线性代数 老师:赵六;时间:1-8周[05-06节];地点:教A202"
+            }
+          ]
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": [
+            {
+              "title": "程序设计",
+              "text": "程序设计 老师:孙七;时间:3,5,7周[05-06节];地点:信息楼305"
+            }
+          ]
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        }
+      ],
+      [
+        {
+          "name": "timeTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "第四大节 (7、8小节) 16:30-18:20",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        }
+      ]
+    ],
+    "foot": []
+  },
+  "calendar": {
+    "rows": [
+      [
+        {
+          "text": "周次",
+          "title": ""
+        },
+        {
+          "text": "一",
+          "title": ""
+        },
+        {
+          "text": "二",
+          "title": ""
+        },
+        {
+          "text": "三",
+          "title": ""
+        },
+        {
+          "text": "四",
+          "title": ""
+        },
+        {
+          "text": "五",
+          "title": ""
+        },
+        {
+          "text": "六",
+          "title": ""
+        },
+        {
+          "text": "日",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第1周",
+          "title": ""
+        },
+        {
+          "text": "9月1日",
+          "title": ""
+        },
+        {
+          "text": "2",
+          "title": ""
+        },
+        {
+          "text": "3",
+          "title": ""
+        },
+        {
+          "text": "4",
+          "title": ""
+        },
+        {
+          "text": "5",
+          "title": ""
+        },
+        {
+          "text": "6",
+          "title": ""
+        },
+        {
+          "text": "7",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第2周",
+          "title": ""
+        },
+        {
+          "text": "8",
+          "title": ""
+        },
+        {
+          "text": "9",
+          "title": ""
+        },
+        {
+          "text": "10",
+          "title": ""
+        },
+        {
+          "text": "11",
+          "title": ""
+        },
+        {
+          "text": "12",
+          "title": ""
+        },
+        {
+          "text": "13",
+          "title": ""
+        },
+        {
+          "text": "14",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第3周",
+          "title": ""
+        },
+        {
+          "text": "15",
+          "title": ""
+        },
+        {
+          "text": "16",
+          "title": ""
+        },
+        {
+          "text": "17",
+          "title": ""
+        },
+        {
+          "text": "18",
+          "title": ""
+        },
+        {
+          "text": "19",
+          "title": ""
+        },
+        {
+          "text": "20",
+          "title": ""
+        },
+        {
+          "text": "21",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第4周",
+          "title": ""
+        },
+        {
+          "text": "22",
+          "title": ""
+        },
+        {
+          "text": "23",
+          "title": ""
+        },
+        {
+          "text": "24",
+          "title": ""
+        },
+        {
+          "text": "25",
+          "title": ""
+        },
+        {
+          "text": "26",
+          "title": ""
+        },
+        {
+          "text": "27",
+          "title": ""
+        },
+        {
+          "text": "28",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第5周",
+          "title": ""
+        },
+        {
+          "text": "29",
+          "title": ""
+        },
+        {
+          "text": "30",
+          "title": ""
+        },
+        {
+          "text": "1",
+          "title": ""
+        },
+        {
+          "text": "2",
+          "title": ""
+        },
+        {
+          "text": "3",
+          "title": ""
+        },
+        {
+          "text": "4",
+          "title": ""
+        },
+        {
+          "text": "5",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第6周",
+          "title": ""
+        },
+        {
+          "text": "6",
+          "title": ""
+        },
+        {
+          "text": "7",
+          "title": ""
+        },
+        {
+          "text": "8",
+          "title": ""
+        },
+        {
+          "text": "9",
+          "title": ""
+        },
+        {
+          "text": "10",
+          "title": ""
+        },
+        {
+          "text": "11",
+          "title": ""
+        },
+        {
+          "text": "12",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第7周",
+          "title": ""
+        },
+        {
+          "text": "13",
+          "title": ""
+        },
+        {
+          "text": "14",
+          "title": ""
+        },
+        {
+          "text": "15",
+          "title": ""
+        },
+        {
+          "text": "16",
+          "title": ""
+        },
+        {
+          "text": "17",
+          "title": ""
+        },
+        {
+          "text": "18",
+          "title": ""
+        },
+        {
+          "text": "19",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第8周",
+          "title": ""
+        },
+        {
+          "text": "20",
+          "title": ""
+        },
+        {
+          "text": "21",
+          "title": ""
+        },
+        {
+          "text": "22",
+          "title": ""
+        },
+        {
+          "text": "23",
+          "title": ""
+        },
+        {
+          "text": "24",
+          "title": ""
+        },
+        {
+          "text": "25",
+          "title": ""
+        },
+        {
+          "text": "26",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第9周",
+          "title": ""
+        },
+        {
+          "text": "27",
+          "title": ""
+        },
+        {
+          "text": "28",
+          "title": ""
+        },
+        {
+          "text": "29",
+          "title": ""
+        },
+        {
+          "text": "30",
+          "title": ""
+        },
+        {
+          "text": "31",
+          "title": ""
+        },
+        {
+          "text": "1",
+          "title": ""
+        },
+        {
+          "text": "2",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第10周",
+          "title": ""
+        },
+        {
+          "text": "3",
+          "title": ""
+        },
+        {
+          "text": "4",
+          "title": ""
+        },
+        {
+          "text": "5",
+          "title": ""
+        },
+        {
+          "text": "6",
+          "title": ""
+        },
+        {
+          "text": "7",
+          "title": ""
+        },
+        {
+          "text": "8",
+          "title": ""
+        },
+        {
+          "text": "9",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第11周",
+          "title": ""
+        },
+        {
+          "text": "10",
+          "title": ""
+        },
+        {
+          "text": "11",
+          "title": ""
+        },
+        {
+          "text": "12",
+          "title": ""
+        },
+        {
+          "text": "13",
+          "title": ""
+        },
+        {
+          "text": "14",
+          "title": ""
+        },
+        {
+          "text": "15",
+          "title": ""
+        },
+        {
+          "text": "16",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第12周",
+          "title": ""
+        },
+        {
+          "text": "17",
+          "title": ""
+        },
+        {
+          "text": "18",
+          "title": ""
+        },
+        {
+          "text": "19",
+          "title": ""
+        },
+        {
+          "text": "20",
+          "title": ""
+        },
+        {
+          "text": "21",
+          "title": ""
+        },
+        {
+          "text": "22",
+          "title": ""
+        },
+        {
+          "text": "23",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第13周",
+          "title": ""
+        },
+        {
+          "text": "24",
+          "title": ""
+        },
+        {
+          "text": "25",
+          "title": ""
+        },
+        {
+          "text": "26",
+          "title": ""
+        },
+        {
+          "text": "27",
+          "title": ""
+        },
+        {
+          "text": "28",
+          "title": ""
+        },
+        {
+          "text": "29",
+          "title": ""
+        },
+        {
+          "text": "30",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第14周",
+          "title": ""
+        },
+        {
+          "text": "1",
+          "title": ""
+        },
+        {
+          "text": "2",
+          "title": ""
+        },
+        {
+          "text": "3",
+          "title": ""
+        },
+        {
+          "text": "4",
+          "title": ""
+        },
+        {
+          "text": "5",
+          "title": ""
+        },
+        {
+          "text": "6",
+          "title": ""
+        },
+        {
+          "text": "7",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第15周",
+          "title": ""
+        },
+        {
+          "text": "8",
+          "title": ""
+        },
+        {
+          "text": "9",
+          "title": ""
+        },
+        {
+          "text": "10",
+          "title": ""
+        },
+        {
+          "text": "11",
+          "title": ""
+        },
+        {
+          "text": "12",
+          "title": ""
+        },
+        {
+          "text": "13",
+          "title": ""
+        },
+        {
+          "text": "14",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第16周",
+          "title": ""
+        },
+        {
+          "text": "15",
+          "title": ""
+        },
+        {
+          "text": "16",
+          "title": ""
+        },
+        {
+          "text": "17",
+          "title": ""
+        },
+        {
+          "text": "18",
+          "title": ""
+        },
+        {
+          "text": "19",
+          "title": ""
+        },
+        {
+          "text": "20",
+          "title": ""
+        },
+        {
+          "text": "21",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第17周",
+          "title": ""
+        },
+        {
+          "text": "22",
+          "title": ""
+        },
+        {
+          "text": "23",
+          "title": ""
+        },
+        {
+          "text": "24",
+          "title": ""
+        },
+        {
+          "text": "25",
+          "title": ""
+        },
+        {
+          "text": "26",
+          "title": ""
+        },
+        {
+          "text": "27",
+          "title": ""
+        },
+        {
+          "text": "28",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第18周",
+          "title": ""
+        },
+        {
+          "text": "29",
+          "title": ""
+        },
+        {
+          "text": "30",
+          "title": ""
+        },
+        {
+          "text": "31",
+          "title": ""
+        },
+        {
+          "text": "1",
+          "title": ""
+        },
+        {
+          "text": "2",
+          "title": ""
+        },
+        {
+          "text": "3",
+          "title": ""
+        },
+        {
+          "text": "4",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第19周",
+          "title": ""
+        },
+        {
+          "text": "5",
+          "title": ""
+        },
+        {
+          "text": "6",
+          "title": ""
+        },
+        {
+          "text": "7",
+          "title": ""
+        },
+        {
+          "text": "8",
+          "title": ""
+        },
+        {
+          "text": "9",
+          "title": ""
+        },
+        {
+          "text": "10",
+          "title": ""
+        },
+        {
+          "text": "11",
+          "title": ""
+        }
+      ],
+      [
+        {
+          "text": "第20周",
+          "title": ""
+        },
+        {
+          "text": "12",
+          "title": ""
+        },
+        {
+          "text": "13",
+          "title": ""
+        },
+        {
+          "text": "14",
+          "title": ""
+        },
+        {
+          "text": "15",
+          "title": ""
+        },
+        {
+          "text": "16",
+          "title": ""
+        },
+        {
+          "text": "17",
+          "title": ""
+        },
+        {
+          "text": "18",
+          "title": ""
+        }
+      ]
+    ]
+  }
+}

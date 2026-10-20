@@ -1,0 +1,118 @@
+{
+ "now": "2026-09-12",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027学年第一学期",
+  "source": "select-selected"
+ },
+ "rows": [
+  [
+   {
+    "text": "节次",
+    "parts": [],
+    "col": 0,
+    "span": 1
+   },
+   {
+    "text": "星期一",
+    "parts": [],
+    "col": 1,
+    "span": 1
+   },
+   {
+    "text": "星期二",
+    "parts": [],
+    "col": 2,
+    "span": 1
+   },
+   {
+    "text": "星期三",
+    "parts": [],
+    "col": 3,
+    "span": 1
+   },
+   {
+    "text": "星期四",
+    "parts": [],
+    "col": 4,
+    "span": 1
+   },
+   {
+    "text": "星期五",
+    "parts": [],
+    "col": 5,
+    "span": 1
+   },
+   {
+    "text": "星期六",
+    "parts": [],
+    "col": 6,
+    "span": 1
+   },
+   {
+    "text": "星期日",
+    "parts": [],
+    "col": 7,
+    "span": 1
+   }
+  ],
+  [
+   {
+    "text": "晚上",
+    "parts": [],
+    "col": 0,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "晚课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[11-12节]</font><br><font title=\"教室\">教学楼B</font>"
+    ],
+    "col": 1,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "九十课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[09-10节]</font><br><font title=\"教室\">教学楼B</font>"
+    ],
+    "col": 2,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "十三课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[13-14节]</font><br><font title=\"教室\">教学楼B</font>"
+    ],
+    "col": 3,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "十五课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-16(周)[15-16节]</font><br><font title=\"教室\">教学楼B</font>"
+    ],
+    "col": 4,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [],
+    "col": 5,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [],
+    "col": 6,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [],
+    "col": 7,
+    "span": 1
+   }
+  ]
+ ]
+}

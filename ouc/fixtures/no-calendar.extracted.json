@@ -1,0 +1,138 @@
+{
+  "source": "qz-jsxsd-weekly",
+  "pageUrl": "https://jwgl2024.ouc.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-10-20",
+  "loginTitle": false,
+  "loginForm": false,
+  "term": {
+    "code": "2025",
+    "label": ""
+  },
+  "echoTerm": null,
+  "mode": {
+    "requested": "16FD8C2BE55E15F9E0630100007FF6B5",
+    "fallback": false,
+    "selected": null,
+    "label": "",
+    "clock": ""
+  },
+  "campus": {
+    "asked": false,
+    "index": null
+  },
+  "tableCount": 1,
+  "table": {
+    "head": [
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "节次"
+      },
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "星期一"
+      },
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "星期二"
+      },
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "星期三"
+      },
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "星期四"
+      },
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "星期五"
+      },
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "星期六"
+      },
+      {
+        "rowSpan": 1,
+        "colSpan": 1,
+        "text": "星期日"
+      }
+    ],
+    "rows": [
+      [
+        {
+          "name": "timeTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "第一大节 (1、2小节) 08:00-09:50",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": [
+            {
+              "title": "海洋地质学",
+              "text": "海洋地质学 老师:教师甲;时间:1-14周[01-02节];地点:地质楼101"
+            }
+          ]
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        },
+        {
+          "name": "kbDataTd",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "text": "",
+          "cards": []
+        }
+      ]
+    ],
+    "foot": [
+      "实习实训 未排课",
+      "毕业设计 未排课"
+    ]
+  },
+  "calendar": null
+}

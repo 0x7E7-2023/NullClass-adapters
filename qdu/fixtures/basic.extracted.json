@@ -1,0 +1,623 @@
+{
+ "_note": "合成数据（非真实抓取）：青岛大学强智课表（6 个大节行 + 星期表头）。覆盖：行序号对应节次（第 3 行的 05-06 节是空课第 6-7 节，第 6 行的第 11 节是第 13 节）、单双周、多段周次、一格两门课、无教师无教室、冬季为主的学期（9 月 7 日起前 4 周在夏季）。",
+ "source": "qz-jsxsd",
+ "pageUrl": "https://xjw.qdu.edu.cn/jsxsd/xskb/xskb_list.do",
+ "now": "2026-09-13",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027学年第一学期"
+ },
+ "screenTermMissing": false,
+ "cols": 8,
+ "calendar": {
+  "found": true,
+  "rows": [
+   [
+    {
+     "col": 0,
+     "text": "周次"
+    },
+    {
+     "col": 1,
+     "text": "日"
+    },
+    {
+     "col": 2,
+     "text": "一"
+    },
+    {
+     "col": 3,
+     "text": "二"
+    },
+    {
+     "col": 4,
+     "text": "三"
+    },
+    {
+     "col": 5,
+     "text": "四"
+    },
+    {
+     "col": 6,
+     "text": "五"
+    },
+    {
+     "col": 7,
+     "text": "六"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "1"
+    },
+    {
+     "col": 1,
+     "title": "2026年09月06日"
+    },
+    {
+     "col": 2,
+     "title": "2026年09月07日"
+    },
+    {
+     "col": 3,
+     "title": "2026年09月08日"
+    },
+    {
+     "col": 4,
+     "title": "2026年09月09日"
+    },
+    {
+     "col": 5,
+     "title": "2026年09月10日"
+    },
+    {
+     "col": 6,
+     "title": "2026年09月11日"
+    },
+    {
+     "col": 7,
+     "title": "2026年09月12日"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "2"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "3"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "4"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "5"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "6"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "7"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "8"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "9"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "10"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "11"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "12"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "13"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "14"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "15"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "16"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "17"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "18"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "19"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "20"
+    }
+   ]
+  ]
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": -1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": -1,
+    "text": "星期一",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": -1,
+    "text": "星期二",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": -1,
+    "text": "星期三",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": -1,
+    "text": "星期四",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": -1,
+    "text": "星期五",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": -1,
+    "text": "星期六",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": -1,
+    "text": "星期日",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 0,
+    "text": "第一大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": [
+     "高等数学<br><font title=\"老师\">任课教师:甲老师</font><br><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br><font title=\"教室\">教1-101</font>"
+    ]
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": [
+     "大学英语<br><font title=\"老师\">乙老师</font><br><font title=\"周次(节次)\">1-15(单周)[01-02节]</font><br><font title=\"教室\">外语楼A201</font>"
+    ]
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 1,
+    "text": "第二大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": [
+     "线性代数<br><font title=\"老师\">丙老师</font><br><font title=\"周次(节次)\">2-16(双周)[03-04节]</font><br><font title=\"教室\">教2-203</font>"
+    ]
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": [
+     "程序设计基础<br><font title=\"老师\">丁老师</font><br><font title=\"周次(节次)\">1-8(周)[03-04节]</font><br><font title=\"教室\">信息楼305</font>---------------------<br>数据结构<br><font title=\"老师\">戊老师</font><br><font title=\"周次(节次)\">10-16(周)[03-04节]</font><br><font title=\"教室\">信息楼305</font>"
+    ]
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 2,
+    "text": "第三大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 2,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 2,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": 2,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 2,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": 2,
+    "text": "",
+    "parts": [
+     "大学物理<br><font title=\"老师\">己老师</font><br><font title=\"周次(节次)\">1-3,5-9(周)[05-06节]</font><br><font title=\"教室\">理科楼B101</font>"
+    ]
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": 2,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 2,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 3,
+    "text": "第四大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 3,
+    "text": "",
+    "parts": [
+     "体育<br><font title=\"周次(节次)\">1-16(周)[07-08节]</font>"
+    ]
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 3,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": 3,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 3,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": 3,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": 3,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 3,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 4,
+    "text": "第五大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 4,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 4,
+    "text": "",
+    "parts": [
+     "创新创业基础<br><font title=\"老师\">庚老师</font><br><font title=\"周次(节次)\">4-11(周)[09-10节]</font><br><font title=\"教室\">教3-305</font>"
+    ]
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": 4,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 4,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": 4,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": 4,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 4,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 5,
+    "text": "第六大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 5,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 5,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": 5,
+    "text": "",
+    "parts": [
+     "形势与政策<br><font title=\"老师\">辛老师</font><br><font title=\"周次(节次)\">3-6(周)[11节]</font><br><font title=\"教室\">教4-102</font>"
+    ]
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 5,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": 5,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": 5,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 5,
+    "text": "",
+    "parts": []
+   }
+  ]
+ ]
+}

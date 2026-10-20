@@ -1,0 +1,124 @@
+{
+ "now": "2026-09-12",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027学年第一学期",
+  "source": "select-selected"
+ },
+ "rows": [
+  [
+   {
+    "text": "节次",
+    "parts": [],
+    "col": 0,
+    "span": 1
+   },
+   {
+    "text": "星期一",
+    "parts": [],
+    "col": 1,
+    "span": 1
+   },
+   {
+    "text": "星期二",
+    "parts": [],
+    "col": 2,
+    "span": 1
+   },
+   {
+    "text": "星期三",
+    "parts": [],
+    "col": 3,
+    "span": 1
+   },
+   {
+    "text": "星期四",
+    "parts": [],
+    "col": 4,
+    "span": 1
+   },
+   {
+    "text": "星期五",
+    "parts": [],
+    "col": 5,
+    "span": 1
+   },
+   {
+    "text": "星期六",
+    "parts": [],
+    "col": 6,
+    "span": 1
+   },
+   {
+    "text": "星期日",
+    "parts": [],
+    "col": 7,
+    "span": 1
+   }
+  ],
+  [
+   {
+    "text": "第一大节(01,02小节)",
+    "parts": [],
+    "col": 0,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "长学期课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-24周[01-02节]</font><br><font title=\"教室\">教室X</font>"
+    ],
+    "col": 1,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "截断课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">29-34周[01-02节]</font><br><font title=\"教室\">教室X</font>"
+    ],
+    "col": 2,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "超范围课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">35-40周[01-02节]</font><br><font title=\"教室\">教室X</font>"
+    ],
+    "col": 3,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "单双课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-8周(单双周)[01-02节]</font><br><font title=\"教室\">教室X</font>"
+    ],
+    "col": 4,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "备注课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-8周(3组)[01-02节]</font><br><font title=\"教室\">教室X</font>"
+    ],
+    "col": 5,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "倒序课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">8-1周[01-02节]</font><br><font title=\"教室\">教室X</font>"
+    ],
+    "col": 6,
+    "span": 1
+   },
+   {
+    "text": "",
+    "parts": [
+     "部分坏段课<br><font title=\"老师\">教师甲</font><br><font title=\"周次(节次)\">1-4周,abc,9-12周[01-02节]</font><br><font title=\"教室\">教室X</font>"
+    ],
+    "col": 7,
+    "span": 1
+   }
+  ]
+ ]
+}

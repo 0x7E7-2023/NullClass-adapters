@@ -1,0 +1,361 @@
+{
+ "_note": "合成数据（非真实抓取）：没有星期表头行（8 列，最后 7 列推断为星期一到日，出声）；会计学所在格没有列号（跳过并计数，整门课不导入）；体育（选项）的格子跨 2 列（星期五、星期六），同时放进这两天并出声。",
+ "source": "qz-jsxsd",
+ "pageUrl": "https://xjw.qdu.edu.cn/jsxsd/xskb/xskb_list.do",
+ "now": "2026-09-13",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027学年第一学期"
+ },
+ "screenTermMissing": false,
+ "cols": 8,
+ "calendar": {
+  "found": true,
+  "rows": [
+   [
+    {
+     "col": 0,
+     "text": "周次"
+    },
+    {
+     "col": 1,
+     "text": "日"
+    },
+    {
+     "col": 2,
+     "text": "一"
+    },
+    {
+     "col": 3,
+     "text": "二"
+    },
+    {
+     "col": 4,
+     "text": "三"
+    },
+    {
+     "col": 5,
+     "text": "四"
+    },
+    {
+     "col": 6,
+     "text": "五"
+    },
+    {
+     "col": 7,
+     "text": "六"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "1"
+    },
+    {
+     "col": 1,
+     "title": "2026年09月06日"
+    },
+    {
+     "col": 2,
+     "title": "2026年09月07日"
+    },
+    {
+     "col": 3,
+     "title": "2026年09月08日"
+    },
+    {
+     "col": 4,
+     "title": "2026年09月09日"
+    },
+    {
+     "col": 5,
+     "title": "2026年09月10日"
+    },
+    {
+     "col": 6,
+     "title": "2026年09月11日"
+    },
+    {
+     "col": 7,
+     "title": "2026年09月12日"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "2"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "3"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "4"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "5"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "6"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "7"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "8"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "9"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "10"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "11"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "12"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "13"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "14"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "15"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "16"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "17"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "18"
+    }
+   ]
+  ]
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 0,
+    "text": "第一大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": [
+     "国际贸易<br><font title=\"老师\">甲老师</font><br><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br><font title=\"教室\">教10-101</font>"
+    ]
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 0,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 1,
+    "text": "第二大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": [
+     "会计学<br><font title=\"老师\">乙老师</font><br><font title=\"周次(节次)\">1-16(周)[03-04节]</font><br><font title=\"教室\">教10-102</font>"
+    ]
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 1,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "seq": 3,
+    "text": "第四大节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "seq": 3,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "seq": 3,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "seq": 3,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "seq": 3,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 2,
+    "seq": 3,
+    "text": "",
+    "parts": [
+     "体育（选项）<br><font title=\"老师\">丙老师</font><br><font title=\"周次(节次)\">1-16(周)[07-08节]</font><br><font title=\"教室\">体育馆</font>"
+    ]
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "seq": 3,
+    "text": "",
+    "parts": []
+   }
+  ]
+ ]
+}
