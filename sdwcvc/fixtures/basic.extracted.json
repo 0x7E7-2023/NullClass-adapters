@@ -1,0 +1,9 @@
+{
+  "today": "2025-10-15",
+  "semesterId": "101",
+  "semesterOptions": "<option value=\"100\">2024-2025-2</option>\n<option value=\"101\" selected=\"selected\">2025-2026-1</option>",
+  "courseDigest": "unitCount = 12;\nvar teachers = [{name:\"张老师\"},{name:\"李老师\"}];\nvar actTeachers = [{name:\"张老师\"},{name:\"李老师\"}];\nnew TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001(A0101.01)\",\"高等数学(A0101.01)\",\"1019\",\"教学楼A101(东)\",\"01111111111111111\");\nindex = 0*unitCount+0;\nindex = 0*unitCount+1;\nindex = 2*unitCount+2;\nindex = 2*unitCount+3;\nvar teachers = [{name:\"王老师\"}];\nvar actTeachers = [{name:\"王老师\"}];\nnew TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001(A0101.01)\",\"大学英语(一)<sup style='color:red'>重修</sup>\",\"1019\",\"外语楼203\",\"0101010101010101\");\nindex = 1*unitCount+4;\nindex = 1*unitCount+5;\nnew TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001(A0101.01)\",\"大学英语(一)\",\"1019\",\"外语楼205\",\"00101010101010101\");\nindex = 3*unitCount+0;\nindex = 3*unitCount+1;\nvar teachers = [{name:\"赵老师\"},{name:\"赵老师\"}];\nvar actTeachers = [{name:\"赵老师\"},{name:\"赵老师\"}];\nnew TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001(A0101.01)\",\"体育(3)\",\"1019\",\"操场\",\"01111111111111111\");\nindex = 4*unitCount+2;\nindex = 4*unitCount+3;\nvar teachers = [{name:\"钱老师\"}];\nvar actTeachers = [{name:\"钱老师\"}];\nnew TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001(A0101.01)\",\"程序设计基础(CS101.01)\",\"1019\",\"实验楼305\",\"0001111111111111111\");\nindex = 0*unitCount+4;\nindex = 0*unitCount+5;\nindex = 4*unitCount+6;\nindex = 4*unitCount+7;",
+  "activityCount": 5,
+  "calendarTerm": "2025-2026 1",
+  "calendarRange": "Sep 1, 2025 ~ Jan 18, 2026 (20)"
+}

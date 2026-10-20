@@ -1,0 +1,23 @@
+{
+  "term": {
+    "code": "2026-2027-1",
+    "name": null,
+    "source": "guess"
+  },
+  "today": "2026-09-10",
+  "rowTotal": 1,
+  "rows": [
+    {
+      "KBID": "G1",
+      "KCM": "信号与系统",
+      "SKXQ": 4,
+      "KSJC": 3,
+      "JSJC": 4,
+      "SKZC": "1111111111111111",
+      "SKJS": "吴老师",
+      "JASMC": "教4-401"
+    }
+  ],
+  "changeRows": [],
+  "calendarRows": []
+}

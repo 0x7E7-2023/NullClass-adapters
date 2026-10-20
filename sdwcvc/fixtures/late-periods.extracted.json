@@ -1,0 +1,9 @@
+{
+  "today": "2025-10-15",
+  "semesterId": "101",
+  "semesterOptions": "<option value=\"100\">2024-2025-2</option>\n<option value=\"101\" selected=\"selected\">2025-2026-1</option>",
+  "courseDigest": "unitCount = 14;\nvar teachers = [{name:\"甲老师\"}];\nvar actTeachers = [{name:\"甲老师\"}];\nnew TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001(A0101.01)\",\"晚间实验\",\"1019\",\"实验楼101\",\"011111111\");\nindex = 0*unitCount+10;\nindex = 0*unitCount+11;\nindex = 0*unitCount+12;\nindex = 0*unitCount+13;\nvar teachers = [{name:\"乙老师\"}];\nvar actTeachers = [{name:\"乙老师\"}];\nnew TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001(A0101.01)\",\"异常课\",\"1019\",\"教6-101\",\"011111111\");\nindex = 7*unitCount+0;\nindex = 0*unitCount+14;\nindex = 0*unitCount+0;\nindex = 28;",
+  "activityCount": 2,
+  "calendarTerm": "2025-2026 1",
+  "calendarRange": "2025-09-01 ~ 2026-01-18 (20)"
+}

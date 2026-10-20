@@ -1,0 +1,9 @@
+{
+  "today": "2025-10-15",
+  "semesterId": "101",
+  "semesterOptions": "",
+  "courseDigest": "var teachers = [{name:\"甲老师\"}];\nvar actTeachers = [{name:\"甲老师\"}];\nnew TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001(A0101.01)\",\"课程甲\",\"1019\",\"教5-101\",\"01111111111\");\nindex = 1*unitCount+0;\nindex = 1*unitCount+1;\nvar teachers = [{name:\"乙老师\"}];\nvar actTeachers = [{name:\"乙老师\"}];\nnew TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001(A0101.01)\",\"课程乙\",\"1019\",\"教5-102\",\"01111111111\");\nindex = 3*14+4;\nindex = 3*14+5;\nvar teachers = [{name:\"丙老师\"}];\nvar actTeachers = [{name:\"丙老师\"}];\nnew TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001(A0101.01)\",\"课程丙\",\"1019\",\"教5-103\",\"01111111111\");\nindex = 62;\nindex = 2*unitCount+0;\nvar teachers = [{name:\"丁老师\"}];\nvar actTeachers = [{name:\"丁老师\"}];\nnew TaskActivity(a,b,\"1\",\"课程丁\",\"1\",\"教5-104\",\"01111111111\");",
+  "activityCount": 4,
+  "calendarTerm": "",
+  "calendarRange": ""
+}

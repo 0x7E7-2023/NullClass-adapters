@@ -1,0 +1,95 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务给的学期总周数是 16 周，但课表里有第 18 周的课，已按 18 周导入，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年1学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 18,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:50",
+          "end": "09:35"
+        },
+        {
+          "periodIndex": 3,
+          "start": "09:55",
+          "end": "10:40"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:45",
+          "end": "11:30"
+        },
+        {
+          "periodIndex": 5,
+          "start": "11:35",
+          "end": "12:20"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:20",
+          "end": "15:05"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:10",
+          "end": "15:55"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:15",
+          "end": "17:00"
+        },
+        {
+          "periodIndex": 9,
+          "start": "17:05",
+          "end": "17:50"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:00",
+          "end": "19:45"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:50",
+          "end": "20:35"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:40",
+          "end": "21:25"
+        }
+      ],
+      "courses": [
+        {
+          "name": "实习周",
+          "teacher": "钱老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 18,
+              "weekType": "ALL",
+              "location": "教1-201"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

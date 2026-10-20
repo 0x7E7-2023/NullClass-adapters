@@ -1,0 +1,59 @@
+{
+  "specVersion": 1,
+  "key": "sdwcvc",
+  "name": "山东水利职业学院",
+  "initial": "S",
+  "version": "1.0.0",
+  "author": "上游 小漫君（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://sso.sdwcvc.cn/",
+  "scheduleUrlHint": "https://jw.sdwcvc.edu.cn/eams/courseTableForStd.action",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jw.sdwcvc.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（教务当前学期 2025-2026-1、教学周历英文日期 Sep 1, 2025 ~ Jan 18, 2026 (20) 且学期格与所选学期一致、连续两节并成 1-2 节、同一门课跨两天、一个教师声明块里两位教师与两条活动、课名带课程代码与 sup 标签、教室带括号原样保留、学校统一作息 10 节）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次切段（位图 1-7 单周接 10-16 双周 → 单周段与双周段各归各的；1-3 每周接 5、7 → 每周段与单周段；落单的一周；同一门课同节次不同周次不合并；跨周节次连续性按每周各自合并）",
+      "extracted": "fixtures/week-runs.extracted.json",
+      "expected": "fixtures/week-runs.expected.json"
+    },
+    {
+      "name": "合成用例：位图脏数据（第 0 位为 1 → 不产出第 0 周只写提醒；31 位以后的周次超出上限丢弃并写提醒；位图里夹杂非 0/1 字符；一位都没有的活动；参数不足 7 个的活动；TaskActivity 数量对账）",
+      "extracted": "fixtures/dirty-bitmap.extracted.json",
+      "expected": "fixtures/dirty-bitmap.expected.json"
+    },
+    {
+      "name": "合成用例：教学周历起始日是周三 → 回退到那一周的周一并写提醒；周数 32 超过 30 → 按 30 周并说明；课表里有第 24 周的课也不超；校历学期格与所选学期一致",
+      "extracted": "fixtures/calendar-nonmonday.extracted.json",
+      "expected": "fixtures/calendar-nonmonday.expected.json"
+    },
+    {
+      "name": "合成用例：教学周历属于另一个学期（学期格是 2024-2025-2）→ 校历被忽略、第二学期按 2 月 20 日所在周的周一推算开学日；总周数取课表最晚周次；纯数字日期的写法也认",
+      "extracted": "fixtures/calendar-mismatch.extracted.json",
+      "expected": "fixtures/calendar-mismatch.expected.json"
+    },
+    {
+      "name": "合成用例：学期列表和教学周历都取不到 → 学期名按导入日期推、开学日按 9 月 1 日所在周的周一推、总周数取课表最晚周次；index 写成 5 * 14 + 2 和已算好的裸数字 62（缺 unitCount 的那门读不了并计数）",
+      "extracted": "fixtures/no-semester.extracted.json",
+      "expected": "fixtures/no-semester.expected.json"
+    },
+    {
+      "name": "合成用例：用到第 11-14 节（学校公布 10 节 → 第 11、12、13 节顺推补时间、第 14 节顺推越过 23:59 补不了只写提醒）；节次超过 unitCount 的下标计数丢弃；星期落在第 8 天的下标计数丢弃",
+      "extracted": "fixtures/late-periods.extracted.json",
+      "expected": "fixtures/late-periods.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师 / 缺教室汇总 + 长课名（每门课名 60 字，点名截到 20 字，整条提醒不超 200 字）；课名为空的活动按「未知课程」；课程名后缀是短数字或中文括号时保留",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    }
+  ]
+}

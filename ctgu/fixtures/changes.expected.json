@@ -1,0 +1,231 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "已按教务系统里的调课、停课记录调整了 5 处上课安排（其中 2 处只去掉了原来的上课周次，没有排新的上课时间），请核对调整后的课表",
+    "有 3 条调课、停课记录没能对上课表里原来的课，没有应用，请在教务系统里核对",
+    "有 1 条调课记录没给调课后的教室，暂时沿用了原来的教室，请核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年1学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 18,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:50",
+          "end": "09:35"
+        },
+        {
+          "periodIndex": 3,
+          "start": "09:55",
+          "end": "10:40"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:45",
+          "end": "11:30"
+        },
+        {
+          "periodIndex": 5,
+          "start": "11:35",
+          "end": "12:20"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:20",
+          "end": "15:05"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:10",
+          "end": "15:55"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:15",
+          "end": "17:00"
+        },
+        {
+          "periodIndex": 9,
+          "start": "17:05",
+          "end": "17:50"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:00",
+          "end": "19:45"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:50",
+          "end": "20:35"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:40",
+          "end": "21:25"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "张三",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "教1-101"
+            },
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 6,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教1-101"
+            },
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 6,
+              "endPeriod": 7,
+              "startWeek": 5,
+              "endWeek": 5,
+              "weekType": "ALL",
+              "location": "教1-303"
+            }
+          ]
+        },
+        {
+          "name": "大学英语",
+          "teacher": "李四",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 6,
+              "weekType": "ALL",
+              "location": "外语楼203"
+            },
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 9,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "外语楼203"
+            },
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 7,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "外语楼203"
+            }
+          ]
+        },
+        {
+          "name": "程序设计",
+          "teacher": "王五",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 6,
+              "endPeriod": 7,
+              "startWeek": 1,
+              "endWeek": 12,
+              "weekType": "ALL",
+              "location": "机房1"
+            }
+          ]
+        },
+        {
+          "name": "体育",
+          "teacher": "赵六",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 8,
+              "endPeriod": 9,
+              "startWeek": 1,
+              "endWeek": 2,
+              "weekType": "ALL",
+              "location": "体育馆"
+            },
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 8,
+              "endPeriod": 9,
+              "startWeek": 4,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "体育馆"
+            }
+          ]
+        },
+        {
+          "name": "线性代数",
+          "teacher": "孙七",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 9,
+              "weekType": "ALL",
+              "location": "教2-202"
+            },
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 11,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教2-202"
+            }
+          ]
+        },
+        {
+          "name": "心理健康",
+          "teacher": "何老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 10,
+              "endPeriod": 11,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "教6-601"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

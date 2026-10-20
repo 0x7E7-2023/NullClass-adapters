@@ -1,0 +1,82 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "已按教务的调课、停课记录调整课表（共 6 条），请核对调课后的上课时间",
+    "有 1 条调课、停课记录对不上课表里的原课（例如 不存在的课），没有应用，请对照教务系统核对",
+    "有 1 条调课记录没给出完整的新上课时间，只停掉了原来的课，没有排新课，请对照教务系统核对",
+    "有 1 条调课记录没给出新的教师或教室，已沿用调课前的，请核对",
+    "有 1 处调课记录的周次格式认不出，相关部分没有应用，请对照教务系统核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 18,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:40" },
+        { "periodIndex": 2, "start": "08:45", "end": "09:25" },
+        { "periodIndex": 3, "start": "09:40", "end": "10:20" },
+        { "periodIndex": 4, "start": "10:35", "end": "11:15" },
+        { "periodIndex": 5, "start": "11:20", "end": "12:00" },
+        { "periodIndex": 6, "start": "13:30", "end": "14:10" },
+        { "periodIndex": 7, "start": "14:15", "end": "14:55" },
+        { "periodIndex": 8, "start": "15:10", "end": "15:50" },
+        { "periodIndex": 9, "start": "15:55", "end": "16:35" },
+        { "periodIndex": 10, "start": "18:30", "end": "19:10" },
+        { "periodIndex": 11, "start": "19:20", "end": "20:00" },
+        { "periodIndex": 12, "start": "20:10", "end": "20:50" }
+      ],
+      "courses": [
+        {
+          "name": "概率论",
+          "teacher": "张三",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "教学楼A101" },
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 10, "endWeek": 16, "weekType": "ALL", "location": "教学楼A101" },
+            { "dayOfWeek": 4, "startPeriod": 5, "endPeriod": 6, "startWeek": 11, "endWeek": 11, "weekType": "ALL", "location": "教学楼A408" }
+          ]
+        },
+        {
+          "name": "数据结构",
+          "teacher": "李四",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "教学楼B202" },
+            { "dayOfWeek": 4, "startPeriod": 3, "endPeriod": 4, "startWeek": 7, "endWeek": 16, "weekType": "ALL", "location": "教学楼B202" },
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教学楼B203" }
+          ]
+        },
+        {
+          "name": "线性代数",
+          "teacher": "王五",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 2, "weekType": "ALL", "location": "教学楼C303" },
+            { "dayOfWeek": 1, "startPeriod": 5, "endPeriod": 6, "startWeek": 4, "endWeek": 16, "weekType": "ALL", "location": "教学楼C303" }
+          ]
+        },
+        {
+          "name": "大学物理",
+          "teacher": "赵六",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 6, "weekType": "ALL", "location": "物理楼D1" },
+            { "dayOfWeek": 5, "startPeriod": 1, "endPeriod": 2, "startWeek": 8, "endWeek": 16, "weekType": "ALL", "location": "物理楼D1" },
+            { "dayOfWeek": 5, "startPeriod": 1, "endPeriod": 2, "startWeek": 7, "endWeek": 7, "weekType": "ALL", "location": "物理楼D9" }
+          ]
+        },
+        {
+          "name": "离散数学",
+          "teacher": "周九",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 9, "endPeriod": 10, "startWeek": 1, "endWeek": 12, "weekType": "ALL", "location": "教学楼F1" }
+          ]
+        }
+      ]
+    }
+  ]
+}

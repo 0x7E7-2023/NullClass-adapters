@@ -1,0 +1,56 @@
+{
+  "specVersion": 1,
+  "key": "njnu",
+  "name": "南京师范大学",
+  "initial": "N",
+  "version": "1.0.0",
+  "author": "上游 aryunm（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://authserver.nnu.edu.cn/authserver/login?service=https://hsnnu.nnu.edu.cn/login",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["ehallapp.nnu.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（校历可用、没有调课；位串切段：连续 / 单周 / 双周 / 落单；教师「姓名/工号」与多名、教室缺失）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：调课与停课（停掉周次、同一教学班另一天的课不受影响、调到新时间、只改教室、新教师教室沿用旧的、串联调课、对不上原课、没给新时间）",
+      "extracted": "fixtures/changes.extracted.json",
+      "expected": "fixtures/changes.expected.json"
+    },
+    {
+      "name": "合成用例：降级（学期推算、校历与调课记录都取不到：开学日按今天推算、总周数 20）",
+      "extracted": "fixtures/degraded.extracted.json",
+      "expected": "fixtures/degraded.expected.json"
+    },
+    {
+      "name": "合成用例：开学日与总周数边界（开学日不是周一、校历总周数小于课表周次）",
+      "extracted": "fixtures/calendar-edge.extracted.json",
+      "expected": "fixtures/calendar-edge.expected.json"
+    },
+    {
+      "name": "合成用例：校历总周数超过 30 周（按 30 周导入并提醒）",
+      "extracted": "fixtures/calendar-clamp.extracted.json",
+      "expected": "fixtures/calendar-clamp.expected.json"
+    },
+    {
+      "name": "合成用例：节次超出 12 节（逐节顺推补时间、顺推越过 23:59 的不补）",
+      "extracted": "fixtures/late-periods.extracted.json",
+      "expected": "fixtures/late-periods.expected.json"
+    },
+    {
+      "name": "合成用例：坏数据（缺课名 / 星期 / 节次、位串格式不对、周次超过 30 周、占位行）",
+      "extracted": "fixtures/bad-rows.extracted.json",
+      "expected": "fixtures/bad-rows.expected.json"
+    },
+    {
+      "name": "合成用例：长课名（带课名的提醒课名截 20 字、点名最多 3 门、整条不超 200 字）",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    }
+  ]
+}

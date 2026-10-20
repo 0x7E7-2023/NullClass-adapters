@@ -1,0 +1,9 @@
+{
+  "today": "2025-10-15",
+  "semesterId": "101",
+  "semesterOptions": "<option value=\"100\">2025-2026-1</option>\n<option value=\"101\" selected=\"selected\">2025-2026-2</option>",
+  "courseDigest": "unitCount = 12;\nvar teachers = [{name:\"甲老师\"}];\nvar actTeachers = [{name:\"甲老师\"}];\nnew TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001(A0101.01)\",\"操作系统\",\"1019\",\"教4-101\",\"01111111111111111\");\nindex = 1*unitCount+0;\nindex = 1*unitCount+1;",
+  "activityCount": 1,
+  "calendarTerm": "2025-2026 1",
+  "calendarRange": "2025-09-01 ~ 2026-01-18 (20)"
+}

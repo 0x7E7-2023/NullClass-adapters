@@ -1,0 +1,32 @@
+{
+  "term": {
+    "code": "2026-2027-1",
+    "name": null,
+    "source": "guess"
+  },
+  "today": "2026-10-20",
+  "changeRows": null,
+  "calendarRows": [],
+  "rows": [
+    {
+      "KBID": "D1",
+      "KCM": "高等数学",
+      "SKJS": "张三",
+      "JASMC": "仙林教学楼101",
+      "SKXQ": "1",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "11111111111111110000"
+    },
+    {
+      "KBID": "D2",
+      "KCM": "大学英语",
+      "SKJS": "",
+      "JASMC": "敏行楼203",
+      "SKXQ": "3",
+      "KSJC": "3",
+      "JSJC": "4",
+      "SKZC": "10101010101010100000"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年1学期",
+    "source": "api"
+  },
+  "today": "2026-09-08",
+  "rowTotal": null,
+  "rows": [
+    {
+      "KBID": "R1",
+      "KCM": "毕业设计指导",
+      "SKXQ": 3,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "0011111111111111111111",
+      "SKJS": "郑老师",
+      "JASMC": "教5-501"
+    }
+  ],
+  "changeRows": null,
+  "calendarRows": []
+}

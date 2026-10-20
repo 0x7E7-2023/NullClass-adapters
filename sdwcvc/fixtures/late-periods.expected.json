@@ -1,0 +1,131 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "这次导入的是教务系统当前学期（2025-2026学年第一学期）的课表；其它学期暂时不能导入",
+    "开学日期取自教务系统的教学周历：第 1 周从 2025-09-01 开始，请在学期管理里核对",
+    "学期总周数取自教务系统的教学周历（20 周），如与实际不符可在学期管理里改",
+    "节次时间用的是学校公布的节次时间（共 10 节，第 1 节 08:15-09:00），不是从教务系统读取的，请对照学校通知核对",
+    "课表用到了第 11-13 节，学校公布的节次时间没有覆盖，已补上：第 11-13 节按上一节下课后课间 5 分钟、每节 45 分钟顺推，请在学期管理里核对",
+    "课表用到了第 14 节及以后，顺推的时间会越过当天 23:59，这些节次没有补上时间（课程已导入），请在学期管理里补上",
+    "有上课安排没能导入（星期超出周一到周日 1 处、节次超出范围 1 处），请在教务系统里核对课表"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第一学期",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:15",
+          "end": "09:00"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:10",
+          "end": "09:55"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:10",
+          "end": "10:55"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:05",
+          "end": "11:50"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:30",
+          "end": "15:15"
+        },
+        {
+          "periodIndex": 6,
+          "start": "15:25",
+          "end": "16:10"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:20",
+          "end": "17:05"
+        },
+        {
+          "periodIndex": 8,
+          "start": "17:15",
+          "end": "18:00"
+        },
+        {
+          "periodIndex": 9,
+          "start": "19:30",
+          "end": "20:15"
+        },
+        {
+          "periodIndex": 10,
+          "start": "20:25",
+          "end": "21:10"
+        },
+        {
+          "periodIndex": 11,
+          "start": "21:15",
+          "end": "22:00"
+        },
+        {
+          "periodIndex": 12,
+          "start": "22:05",
+          "end": "22:50"
+        },
+        {
+          "periodIndex": 13,
+          "start": "22:55",
+          "end": "23:40"
+        }
+      ],
+      "courses": [
+        {
+          "name": "异常课",
+          "teacher": "乙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 1,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "教6-101"
+            },
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 1,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "教6-101"
+            }
+          ]
+        },
+        {
+          "name": "晚间实验",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 11,
+              "endPeriod": 14,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "实验楼101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

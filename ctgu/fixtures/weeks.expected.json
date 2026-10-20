@@ -1,0 +1,234 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [],
+  "terms": [
+    {
+      "name": "2026-2027学年1学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:50",
+          "end": "09:35"
+        },
+        {
+          "periodIndex": 3,
+          "start": "09:55",
+          "end": "10:40"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:45",
+          "end": "11:30"
+        },
+        {
+          "periodIndex": 5,
+          "start": "11:35",
+          "end": "12:20"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:20",
+          "end": "15:05"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:10",
+          "end": "15:55"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:15",
+          "end": "17:00"
+        },
+        {
+          "periodIndex": 9,
+          "start": "17:05",
+          "end": "17:50"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:00",
+          "end": "19:45"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:50",
+          "end": "20:35"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:40",
+          "end": "21:25"
+        }
+      ],
+      "courses": [
+        {
+          "name": "全周课",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "教1-101"
+            }
+          ]
+        },
+        {
+          "name": "连续加双周",
+          "teacher": "乙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "教1-102"
+            },
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 6,
+              "endWeek": 10,
+              "weekType": "EVEN",
+              "location": "教1-102"
+            }
+          ]
+        },
+        {
+          "name": "连续单周连续",
+          "teacher": "丙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 5,
+              "endPeriod": 5,
+              "startWeek": 2,
+              "endWeek": 3,
+              "weekType": "ALL",
+              "location": "教1-103"
+            },
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 5,
+              "endPeriod": 5,
+              "startWeek": 5,
+              "endWeek": 9,
+              "weekType": "ODD",
+              "location": "教1-103"
+            },
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 5,
+              "endPeriod": 5,
+              "startWeek": 10,
+              "endWeek": 11,
+              "weekType": "ALL",
+              "location": "教1-103"
+            }
+          ]
+        },
+        {
+          "name": "数据结构",
+          "teacher": "丁老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教2-201"
+            },
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教2-202"
+            }
+          ]
+        },
+        {
+          "name": "落单一周",
+          "teacher": "戊老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 6,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 18,
+              "endWeek": 18,
+              "weekType": "ALL",
+              "location": "教3-301"
+            }
+          ]
+        },
+        {
+          "name": "周日补课",
+          "teacher": "己老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 7,
+              "startPeriod": 1,
+              "endPeriod": 3,
+              "startWeek": 1,
+              "endWeek": 3,
+              "weekType": "ALL",
+              "location": "教3-302"
+            }
+          ]
+        },
+        {
+          "name": "单周后落单",
+          "teacher": "庚老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 8,
+              "endPeriod": 9,
+              "startWeek": 3,
+              "endWeek": 5,
+              "weekType": "ODD",
+              "location": "教3-303"
+            },
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 8,
+              "endPeriod": 9,
+              "startWeek": 6,
+              "endWeek": 6,
+              "weekType": "ALL",
+              "location": "教3-303"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

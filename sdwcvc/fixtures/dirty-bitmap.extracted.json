@@ -1,0 +1,9 @@
+{
+  "today": "2025-10-15",
+  "semesterId": "101",
+  "semesterOptions": "<option value=\"100\">2024-2025-2</option>\n<option value=\"101\" selected=\"selected\">2025-2026-1</option>",
+  "courseDigest": "unitCount = 12;\nvar teachers = [{name:\"甲老师\"}];\nvar actTeachers = [{name:\"甲老师\"}];\nnew TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001(A0101.01)\",\"好课A\",\"1019\",\"教2-101\",\"111\");\nindex = 0*unitCount+0;\nindex = 0*unitCount+1;\nvar teachers = [{name:\"乙老师\"}];\nvar actTeachers = [{name:\"乙老师\"}];\nnew TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001(A0101.01)\",\"好课B\",\"1019\",\"教2-102\",\"01000x0000000000000000000000100111000000\");\nindex = 1*unitCount+0;\nindex = 1*unitCount+1;\nvar teachers = [{name:\"丙老师\"}];\nvar actTeachers = [{name:\"丙老师\"}];\nnew TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001(A0101.01)\",\"好课C\",\"1019\",\"教2-103\",\"01111111111111111\");\nindex = 2*unitCount+0;\nindex = 2*unitCount+1;\nvar teachers = [{name:\"丁老师\"}];\nvar actTeachers = [{name:\"丁老师\"}];\nnew TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001(A0101.01)\",\"空位图课\",\"1019\",\"教2-104\",\"000000\");\nindex = 3*unitCount+0;\nvar teachers = [{name:\"戊老师\"}];\nvar actTeachers = [{name:\"戊老师\"}];\nnew TaskActivity(a,b,\"1\",\"参数不足课\");\nindex = 4*unitCount+0;",
+  "activityCount": 7,
+  "calendarTerm": "2025-2026 1",
+  "calendarRange": "Sep 1, 2025 ~ Jan 18, 2026 (20)"
+}

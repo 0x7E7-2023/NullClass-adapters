@@ -1,0 +1,122 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务系统没有给出学期名，已按导入日期推成「山东水利职业学院 2025-2026学年第一学期」，请到学期管理里核对",
+    "这次导入的是教务系统当前学期（山东水利职业学院 2025-2026学年第一学期）的课表；其它学期暂时不能导入",
+    "教务系统没有给出可用的教学周历，开学日期按「没有学期信息，按 2025 年 9 月 1 日所在周的周一」推算为 2025-09-01，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期总周数，已按课表里最晚的第 10 周导入，如校历不同请在学期管理里调整",
+    "节次时间用的是学校公布的节次时间（共 10 节，第 1 节 08:15-09:00），不是从教务系统读取的，请对照学校通知核对",
+    "有上课安排没能导入（读不出星期和节次 2 处），请在教务系统里核对课表"
+  ],
+  "terms": [
+    {
+      "name": "山东水利职业学院 2025-2026学年第一学期",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 10,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:15",
+          "end": "09:00"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:10",
+          "end": "09:55"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:10",
+          "end": "10:55"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:05",
+          "end": "11:50"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:30",
+          "end": "15:15"
+        },
+        {
+          "periodIndex": 6,
+          "start": "15:25",
+          "end": "16:10"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:20",
+          "end": "17:05"
+        },
+        {
+          "periodIndex": 8,
+          "start": "17:15",
+          "end": "18:00"
+        },
+        {
+          "periodIndex": 9,
+          "start": "19:30",
+          "end": "20:15"
+        },
+        {
+          "periodIndex": 10,
+          "start": "20:25",
+          "end": "21:10"
+        }
+      ],
+      "courses": [
+        {
+          "name": "课程甲",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 10,
+              "weekType": "ALL",
+              "location": "教5-101"
+            }
+          ]
+        },
+        {
+          "name": "课程丙",
+          "teacher": "丙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 1,
+              "startWeek": 1,
+              "endWeek": 10,
+              "weekType": "ALL",
+              "location": "教5-103"
+            }
+          ]
+        },
+        {
+          "name": "课程乙",
+          "teacher": "乙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 1,
+              "endWeek": 10,
+              "weekType": "ALL",
+              "location": "教5-102"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

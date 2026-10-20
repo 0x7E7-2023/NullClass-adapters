@@ -1,0 +1,134 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "这次导入的是教务系统当前学期（2025-2026学年第一学期）的课表；其它学期暂时不能导入",
+    "开学日期取自教务系统的教学周历：第 1 周从 2025-09-01 开始，请在学期管理里核对",
+    "教学周历写的一学期是 20 周，但课表里有第 28 周的课，已按 28 周导入（否则那几周的课放不下），请在学期管理里核对",
+    "节次时间用的是学校公布的节次时间（共 10 节，第 1 节 08:15-09:00），不是从教务系统读取的，请对照学校通知核对",
+    "有上课安排没能导入（信息不全 1 条、没有上课周次 1 条），请在教务系统里核对课表",
+    "教务系统的课表里有 7 条上课安排，只读到 5 条，请核对课表",
+    "有课程标了「第 0 周」上课，这一周已忽略，请在导入预览里核对周次",
+    "有 3 个周次超出第 1-30 周，已忽略，请核对课表",
+    "有课程的上课周次里有 1 处读不懂的标记，已跳过，请核对周次"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第一学期",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 28,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:15",
+          "end": "09:00"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:10",
+          "end": "09:55"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:10",
+          "end": "10:55"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:05",
+          "end": "11:50"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:30",
+          "end": "15:15"
+        },
+        {
+          "periodIndex": 6,
+          "start": "15:25",
+          "end": "16:10"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:20",
+          "end": "17:05"
+        },
+        {
+          "periodIndex": 8,
+          "start": "17:15",
+          "end": "18:00"
+        },
+        {
+          "periodIndex": 9,
+          "start": "19:30",
+          "end": "20:15"
+        },
+        {
+          "periodIndex": 10,
+          "start": "20:25",
+          "end": "21:10"
+        }
+      ],
+      "courses": [
+        {
+          "name": "好课A",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 2,
+              "weekType": "ALL",
+              "location": "教2-101"
+            }
+          ]
+        },
+        {
+          "name": "好课B",
+          "teacher": "乙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 1,
+              "weekType": "ALL",
+              "location": "教2-102"
+            },
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 28,
+              "endWeek": 28,
+              "weekType": "ALL",
+              "location": "教2-102"
+            }
+          ]
+        },
+        {
+          "name": "好课C",
+          "teacher": "丙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教2-103"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
