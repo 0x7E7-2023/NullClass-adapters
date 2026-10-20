@@ -1,0 +1,54 @@
+{
+  "specVersion": 1,
+  "key": "aufe",
+  "name": "安徽财经大学",
+  "initial": "A",
+  "version": "1.0.0",
+  "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://all.aufe.edu.cn",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jwcxk2.aufe.edu.cn",
+    "jwcxk2-aufe-edu-cn.vpn2.aufe.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（当前学期、教务节次时间 12 节含 sessionName 缺失与中文写法、开学日取校历、总周数取教务、单双周、同节次连续两节不同周次不并、连堂拆两行合并、同节次周次拆两行合并、完全重复行、多位教师、课名笔误写法、缺教师缺教室汇总）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：零散周次集合（1-4 周 + 双周段 + 13-15 周；单周 + 单独一周，不并错单双周归属）、classWeek 全 0 / 含非法字符 / 缺失的安排计入读不出来、星期或节次越界、连续节数缺失按 1 节、没排课的课、没有课程名",
+      "extracted": "fixtures/weeks-edge.extracted.json",
+      "expected": "fixtures/weeks-edge.expected.json"
+    },
+    {
+      "name": "合成用例：非当前学期（用户在课表页选了历史学期）：教务的开学日和总周数不适用，按提取日与课表最大周次推算",
+      "extracted": "fixtures/term-other.extracted.json",
+      "expected": "fixtures/term-other.expected.json"
+    },
+    {
+      "name": "合成用例：校历和节次时间都取不到、学期名只剩「(当前)」标记：学期名按提取日推算（1 月属于上一学年第一学期）、没有节次时间交给应用默认、教务给的总周数 35 非法按课表推定、缺教师汇总",
+      "extracted": "fixtures/no-meta.extracted.json",
+      "expected": "fixtures/no-meta.expected.json"
+    },
+    {
+      "name": "合成用例：开学日不是周一需对齐、节次时间只到第 8 节（第 9-12 节用空课默认补、第 13-14 节顺推补、第 15 节越过 23:59 补不了）、节次时间有重复行与坏行、课表第 24 周超过教务给的 20 周需抬高总周数",
+      "extracted": "fixtures/slots-extend.extracted.json",
+      "expected": "fixtures/slots-extend.expected.json"
+    },
+    {
+      "name": "合成用例：课表有第 32 周的课，总周数压到 30 周：跨界安排截断、整条落在 30 周之后的安排与课程丢弃并提醒",
+      "extracted": "fixtures/clamp.extracted.json",
+      "expected": "fixtures/clamp.expected.json"
+    },
+    {
+      "name": "合成用例：四门约 80 字的长课名都缺连续节数、缺教师、缺教室（提醒里课名要截短、超过 3 门写「等 N 门」，单条提醒不超过 200 字），另有长课名的没排课课和读不出安排的课点名",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    }
+  ]
+}

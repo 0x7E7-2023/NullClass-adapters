@@ -1,0 +1,49 @@
+{
+  "fetchedDate": "2026-09-10",
+  "term": { "text": "2026-2027学年秋(当前)", "isCurrent": true },
+  "rq": "20260901",
+  "zs": "20",
+  "slots": [
+    { "sessionName": "1", "djjc": 1, "startTime": "0800", "endTime": "0845" },
+    { "sessionName": "2", "djjc": 2, "startTime": "0855", "endTime": "0940" },
+    { "sessionName": "3", "djjc": 3, "startTime": "1000", "endTime": "1045" },
+    { "sessionName": "4", "djjc": 4, "startTime": "1055", "endTime": "1140" },
+    { "sessionName": "5", "djjc": 5, "startTime": "1400", "endTime": "1445" },
+    { "sessionName": "6", "djjc": 6, "startTime": "1455", "endTime": "1540" },
+    { "sessionName": "7", "djjc": 7, "startTime": "1600", "endTime": "1645" },
+    { "sessionName": "8", "djjc": 8, "startTime": "1655", "endTime": "1740" },
+    { "sessionName": "3", "djjc": 3, "startTime": "1030", "endTime": "1115" },
+    { "sessionName": "11", "djjc": 11, "startTime": "2500", "endTime": "2545" },
+    { "sessionName": "12", "djjc": 12, "startTime": "1200", "endTime": "1100" }
+  ],
+  "courses": [
+    {
+      "courseName": "专业实践",
+      "attendClassTeacher": "刘*",
+      "timeAndPlaceList": [
+        { "classDay": 1, "classSessions": 1, "continuingSession": 2, "classWeek": "111111111111111111111111", "campusName": "龙湖校区", "teachingBuildingName": "实训楼", "classroomName": "101" }
+      ]
+    },
+    {
+      "courseName": "晚间选修",
+      "attendClassTeacher": "马*",
+      "timeAndPlaceList": [
+        { "classDay": 3, "classSessions": 9, "continuingSession": 4, "classWeek": "111111111111111100000000", "campusName": "龙湖校区", "teachingBuildingName": "教学楼A座", "classroomName": "401" }
+      ]
+    },
+    {
+      "courseName": "夜间实验",
+      "attendClassTeacher": "杨*",
+      "timeAndPlaceList": [
+        { "classDay": 5, "classSessions": 13, "continuingSession": 2, "classWeek": "111111110000000000000000", "campusName": "龙湖校区", "teachingBuildingName": "实验楼", "classroomName": "701" }
+      ]
+    },
+    {
+      "courseName": "深夜实验",
+      "attendClassTeacher": "郭*",
+      "timeAndPlaceList": [
+        { "classDay": 6, "classSessions": 15, "continuingSession": 1, "classWeek": "111111110000000000000000", "campusName": "龙湖校区", "teachingBuildingName": "实验楼", "classroomName": "702" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "开学日期取自教务系统的校历：第 1 周从 2026-08-31 开始，请在「学期管理」里核对成学校实际开学日",
+    "课表里有第 32 周的课，超过了空课支持的最多 30 周，学期总周数按 30 周导入，超出的周次见后面的提醒",
+    "有安排的周次超出了空课支持的最大 30 周：1 条安排的周次被截断到第 30 周，2 条安排整条落在第 30 周之后，已丢弃，课程：超长周课，请核对教务里的周次写法"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年秋",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 30,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" }
+      ],
+      "courses": [
+        {
+          "name": "长周课",
+          "teacher": "甲",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "龙湖校区教学楼A座501" },
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 29, "endWeek": 30, "weekType": "ALL", "location": "龙湖校区教学楼A座501" }
+          ]
+        },
+        {
+          "name": "普通课",
+          "teacher": "丙",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "龙湖校区教学楼A座503" }
+          ]
+        }
+      ]
+    }
+  ]
+}

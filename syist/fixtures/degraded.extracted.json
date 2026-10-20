@@ -1,0 +1,35 @@
+{
+  "term": {
+    "code": "2027-2028-2",
+    "name": null,
+    "source": "guess"
+  },
+  "today": "2028-03-01",
+  "rowTotal": 2,
+  "rows": [
+    {
+      "KBID": "D1",
+      "KCM": "毕业设计",
+      "SKXQ": 1,
+      "KSJC": 13,
+      "JSJC": 14,
+      "SKZC": "1111111111111111111111",
+      "SKJS": "庄十一",
+      "JASMC": "综合楼"
+    },
+    {
+      "KBID": "D2",
+      "KCM": "论文写作",
+      "SKXQ": 2,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "11111111",
+      "SKJS": "",
+      "JASMC": ""
+    }
+  ],
+  "experimentRows": null,
+  "changeRows": null,
+  "calendarRows": [],
+  "timeSlotRows": []
+}

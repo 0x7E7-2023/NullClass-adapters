@@ -1,0 +1,23 @@
+{
+  "fetchedDate": "2027-01-05",
+  "term": { "text": "(当前)", "isCurrent": true },
+  "rq": null,
+  "zs": "35",
+  "slots": null,
+  "courses": [
+    {
+      "courseName": "大学物理",
+      "attendClassTeacher": "陈*",
+      "timeAndPlaceList": [
+        { "classDay": 2, "classSessions": 1, "continuingSession": 2, "classWeek": "111111111100000000000000", "campusName": "龙湖校区", "teachingBuildingName": "理科楼", "classroomName": "301" }
+      ]
+    },
+    {
+      "courseName": "计算机基础",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        { "classDay": 4, "classSessions": 3, "continuingSession": 2, "classWeek": "111111111100000000000000", "campusName": "龙湖校区", "teachingBuildingName": "机房楼", "classroomName": "B101" }
+      ]
+    }
+  ]
+}

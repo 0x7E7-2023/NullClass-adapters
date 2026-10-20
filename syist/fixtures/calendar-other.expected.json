@@ -1,0 +1,93 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [],
+  "terms": [
+    {
+      "name": "沈阳科技学院 2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 19,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:20",
+          "end": "09:05"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:10",
+          "end": "09:55"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:10",
+          "end": "10:55"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:00",
+          "end": "11:45"
+        },
+        {
+          "periodIndex": 5,
+          "start": "13:30",
+          "end": "14:15"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:20",
+          "end": "15:05"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:15",
+          "end": "16:00"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:05",
+          "end": "16:50"
+        },
+        {
+          "periodIndex": 9,
+          "start": "17:20",
+          "end": "18:05"
+        },
+        {
+          "periodIndex": 10,
+          "start": "18:15",
+          "end": "19:00"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:10",
+          "end": "19:55"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:05",
+          "end": "20:50"
+        }
+      ],
+      "courses": [
+        {
+          "name": "大学物理",
+          "teacher": "甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 12,
+              "weekType": "ALL",
+              "location": "理科楼101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

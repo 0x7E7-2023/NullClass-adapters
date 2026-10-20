@@ -1,0 +1,143 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "有 4 门课没给上课教师、4 门课没给上课地点（例如 二十字课名甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲、二十一字课名乙乙乙乙乙乙乙乙乙乙乙乙乙…、超长课名丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙…）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 16,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:20",
+          "end": "09:05"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:10",
+          "end": "09:55"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:10",
+          "end": "10:55"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:00",
+          "end": "11:45"
+        },
+        {
+          "periodIndex": 5,
+          "start": "13:30",
+          "end": "14:15"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:20",
+          "end": "15:05"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:15",
+          "end": "16:00"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:05",
+          "end": "16:50"
+        },
+        {
+          "periodIndex": 9,
+          "start": "17:20",
+          "end": "18:05"
+        },
+        {
+          "periodIndex": 10,
+          "start": "18:15",
+          "end": "19:00"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:10",
+          "end": "19:55"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:05",
+          "end": "20:50"
+        }
+      ],
+      "courses": [
+        {
+          "name": "二十字课名甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "二十一字课名乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "超长课名丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "综合实实实实实实实实实实实实实实实实实实实实实实实实实实实实 - 项目丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

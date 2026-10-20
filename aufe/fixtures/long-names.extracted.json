@@ -1,0 +1,117 @@
+{
+  "fetchedDate": "2026-09-10",
+  "term": {
+    "text": "2026-2027学年秋(当前)",
+    "isCurrent": true
+  },
+  "rq": "20260831",
+  "zs": "20",
+  "slots": [
+    {
+      "sessionName": "1",
+      "djjc": 1,
+      "startTime": "0800",
+      "endTime": "0845"
+    },
+    {
+      "sessionName": "2",
+      "djjc": 2,
+      "startTime": "0855",
+      "endTime": "0940"
+    },
+    {
+      "sessionName": "3",
+      "djjc": 3,
+      "startTime": "1000",
+      "endTime": "1045"
+    },
+    {
+      "sessionName": "4",
+      "djjc": 4,
+      "startTime": "1055",
+      "endTime": "1140"
+    }
+  ],
+  "courses": [
+    {
+      "courseName": "甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        {
+          "classDay": 1,
+          "classSessions": 1,
+          "continuingSession": "",
+          "classWeek": "111111111111111100000000",
+          "campusName": "",
+          "teachingBuildingName": "",
+          "classroomName": ""
+        }
+      ]
+    },
+    {
+      "courseName": "乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        {
+          "classDay": 2,
+          "classSessions": 1,
+          "continuingSession": "",
+          "classWeek": "111111111111111100000000",
+          "campusName": "",
+          "teachingBuildingName": "",
+          "classroomName": ""
+        }
+      ]
+    },
+    {
+      "courseName": "丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        {
+          "classDay": 3,
+          "classSessions": 1,
+          "continuingSession": "",
+          "classWeek": "111111111111111100000000",
+          "campusName": "",
+          "teachingBuildingName": "",
+          "classroomName": ""
+        }
+      ]
+    },
+    {
+      "courseName": "丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        {
+          "classDay": 4,
+          "classSessions": 1,
+          "continuingSession": "",
+          "classWeek": "111111111111111100000000",
+          "campusName": "",
+          "teachingBuildingName": "",
+          "classroomName": ""
+        }
+      ]
+    },
+    {
+      "courseName": "戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": []
+    },
+    {
+      "courseName": "己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        {
+          "classDay": 9,
+          "classSessions": 1,
+          "continuingSession": "",
+          "classWeek": "111111111111111100000000",
+          "campusName": "",
+          "teachingBuildingName": "",
+          "classroomName": ""
+        }
+      ]
+    }
+  ]
+}

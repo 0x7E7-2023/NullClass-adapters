@@ -1,0 +1,169 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统里当前的学期（2026-2027学年第一学期）；要导入别的学期，请先在教务系统的课表页面里切到那个学期，再点「提取课表」",
+    "开学日期取自教务系统：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "教务系统没有给出节次时间，已按学校公布的 10 节节次时间导入（第 1 节 08:00-08:50），时间可能与学校实际的节次时间不符，请在学期管理里核对",
+    "有 2 门课教务系统给出的上课时间与导入的节次时间对不上（例如 起点不符课乙、终点不符课丙）：已按节次导入，请与教务系统核对这几门课的上课时间"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:50"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:00",
+          "end": "09:50"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:10",
+          "end": "11:00"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:10",
+          "end": "12:00"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:00",
+          "end": "14:50"
+        },
+        {
+          "periodIndex": 6,
+          "start": "15:00",
+          "end": "15:50"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:10",
+          "end": "17:00"
+        },
+        {
+          "periodIndex": 8,
+          "start": "17:10",
+          "end": "18:00"
+        },
+        {
+          "periodIndex": 9,
+          "start": "19:00",
+          "end": "19:50"
+        },
+        {
+          "periodIndex": 10,
+          "start": "20:00",
+          "end": "20:50"
+        }
+      ],
+      "courses": [
+        {
+          "name": "时间相符课甲",
+          "teacher": "老师甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教学楼A101"
+            }
+          ]
+        },
+        {
+          "name": "起点不符课乙",
+          "teacher": "老师乙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教学楼A102"
+            }
+          ]
+        },
+        {
+          "name": "终点不符课丙",
+          "teacher": "老师丙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 7,
+              "endPeriod": 8,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教学楼A103"
+            }
+          ]
+        },
+        {
+          "name": "时间相符课丁",
+          "teacher": "老师丁",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教学楼A104"
+            }
+          ]
+        },
+        {
+          "name": "没带时间课戊",
+          "teacher": "老师戊",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教学楼A105"
+            }
+          ]
+        },
+        {
+          "name": "只带起点课己",
+          "teacher": "老师己",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教学楼A106"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

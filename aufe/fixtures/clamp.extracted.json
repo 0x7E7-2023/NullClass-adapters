@@ -1,0 +1,36 @@
+{
+  "fetchedDate": "2026-09-10",
+  "term": { "text": "2026-2027学年秋(当前)", "isCurrent": true },
+  "rq": "20260831",
+  "zs": "20",
+  "slots": [
+    { "sessionName": "1", "djjc": 1, "startTime": "0800", "endTime": "0845" },
+    { "sessionName": "2", "djjc": 2, "startTime": "0855", "endTime": "0940" },
+    { "sessionName": "3", "djjc": 3, "startTime": "1000", "endTime": "1045" },
+    { "sessionName": "4", "djjc": 4, "startTime": "1055", "endTime": "1140" }
+  ],
+  "courses": [
+    {
+      "courseName": "长周课",
+      "attendClassTeacher": "甲*",
+      "timeAndPlaceList": [
+        { "classDay": 1, "classSessions": 1, "continuingSession": 2, "classWeek": "11111111000000000000000000001111", "campusName": "龙湖校区", "teachingBuildingName": "教学楼A座", "classroomName": "501" },
+        { "classDay": 3, "classSessions": 3, "continuingSession": 2, "classWeek": "00000000000000000000000000000011", "campusName": "龙湖校区", "teachingBuildingName": "教学楼A座", "classroomName": "501" }
+      ]
+    },
+    {
+      "courseName": "超长周课",
+      "attendClassTeacher": "乙*",
+      "timeAndPlaceList": [
+        { "classDay": 2, "classSessions": 1, "continuingSession": 2, "classWeek": "00000000000000000000000000000011", "campusName": "龙湖校区", "teachingBuildingName": "教学楼A座", "classroomName": "502" }
+      ]
+    },
+    {
+      "courseName": "普通课",
+      "attendClassTeacher": "丙*",
+      "timeAndPlaceList": [
+        { "classDay": 4, "classSessions": 1, "continuingSession": 2, "classWeek": "111111111111111100000000", "campusName": "龙湖校区", "teachingBuildingName": "教学楼A座", "classroomName": "503" }
+      ]
+    }
+  ]
+}

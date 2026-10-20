@@ -1,0 +1,54 @@
+{
+  "specVersion": 1,
+  "key": "gxmu",
+  "name": "广西医科大学",
+  "initial": "G",
+  "version": "1.0.0",
+  "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://cas.gxmu.edu.cn/lyuapServer/login",
+  "scheduleUrlHint": "https://jwxt.gxmu.edu.cn/new/student/xsgrkb/week.page",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jwxt.gxmu.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 节次时间 12 节（第 3 节 10:05-10:45、第 6 节 14:30-15:10）；连续节次 1-2 + 3-4 合并成 1-4；奇数周 / 偶数周 / 分段周次（1-8、10-16）；周次是逗号数字列表；开学日取教务的第 1 周日期 2026-08-31；页面选中的学期",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：教务默认学期 + 开学日推算 · 教务没给学期名与第 1 周日期 → 学期名由代码 202601 推出、开学日按 9 月 1 日所在周的周一推算为 2026-08-31 并说明；课表最晚第 18 周，总周数仍按 20 周",
+      "extracted": "fixtures/estimate.extracted.json",
+      "expected": "fixtures/estimate.expected.json"
+    },
+    {
+      "name": "合成用例：用户改选的第二学期 + 开学日不属于这个学期 · 教务给的开学日 2025-09-01 离第二学期太远 → 忽略，按 2 月 20 日所在周的周一推算为 2026-02-16 并说明",
+      "extracted": "fixtures/second-term.extracted.json",
+      "expected": "fixtures/second-term.expected.json"
+    },
+    {
+      "name": "合成用例：按日期推算的学期 + 节次超出节次时间表 · 课表用到第 13-15 节（按上一节下课后课间 5 分钟、每节 40 分钟顺推 21:15-21:55 / 22:00-22:40 / 22:45-23:25）、第 16 节（越过 23:59 补不了）；课表最晚第 23 周 → 总周数抬到 23 并说明",
+      "extracted": "fixtures/late-periods.extracted.json",
+      "expected": "fixtures/late-periods.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法与单/双标记 · 「(单)1-8周,(双)9-16周」「1-15周(单) 共16周」「1-8周(共8周),9-16周」「第1-第8周」「共16周,1-15周(单)」「1-8周(单) 9-16周(双)」「1～16周」，「共N周」只剥备注本身、标记各归各段",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：周次与节次的边界 · 逗号数字列表里夹着 0 和 31（都超出 1-30 周 → 丢弃并提醒）、不连续周次 1,2,3,5,6 切成两段、星期 7；教学班序号括号「(1)」与备注括号「(3组)」；没给结束节次 → 按只上第一节导入并提醒；同一门课同一时段两处不同教室各自一块",
+      "extracted": "fixtures/edge-weeks.extracted.json",
+      "expected": "fixtures/edge-weeks.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 缺教师 / 缺教室 → 照常导入（teacher / location 为 null，不写「未知教师」「未知地点」）、提醒按类型汇总并点名课名截到 20 字；缺课名 / 缺星期 / 节次颠倒 / 开始节次不合法 / 认不出的周次各一行被跳过并说明；没给结束节次的长课名点名；完全相同的行去重；每条提醒不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    }
+  ]
+}

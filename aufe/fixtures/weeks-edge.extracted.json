@@ -1,0 +1,84 @@
+{
+  "fetchedDate": "2026-09-10",
+  "term": { "text": "2026-2027学年春（当前学期）", "isCurrent": true },
+  "rq": "20260831",
+  "zs": "18",
+  "slots": [
+    { "sessionName": "1", "djjc": 1, "startTime": "0800", "endTime": "0845" },
+    { "sessionName": "2", "djjc": 2, "startTime": "0855", "endTime": "0940" },
+    { "sessionName": "3", "djjc": 3, "startTime": "1000", "endTime": "1045" },
+    { "sessionName": "4", "djjc": 4, "startTime": "1055", "endTime": "1140" },
+    { "sessionName": "5", "djjc": 5, "startTime": "1400", "endTime": "1445" },
+    { "sessionName": "6", "djjc": 6, "startTime": "1455", "endTime": "1540" },
+    { "sessionName": "7", "djjc": 7, "startTime": "1600", "endTime": "1645" },
+    { "sessionName": "8", "djjc": 8, "startTime": "1655", "endTime": "1740" }
+  ],
+  "courses": [
+    {
+      "courseName": "综合A",
+      "attendClassTeacher": "甲*",
+      "timeAndPlaceList": [
+        { "classDay": 1, "classSessions": 1, "continuingSession": 2, "classWeek": "111101010100111000000000", "campusName": "龙湖校区", "teachingBuildingName": "综合楼", "classroomName": "101" }
+      ]
+    },
+    {
+      "courseName": "综合B",
+      "attendClassTeacher": "乙*",
+      "timeAndPlaceList": [
+        { "classDay": 2, "classSessions": 3, "continuingSession": 2, "classWeek": "101011000000000000000000", "campusName": "龙湖校区", "teachingBuildingName": "综合楼", "classroomName": "102" }
+      ]
+    },
+    {
+      "courseName": "综合C",
+      "attendClassTeacher": "丙*",
+      "timeAndPlaceList": [
+        { "classDay": 3, "classSessions": 3, "continuingSession": 2, "classWeek": "000000000000000000000000", "campusName": "龙湖校区", "teachingBuildingName": "综合楼", "classroomName": "103" },
+        { "classDay": 3, "classSessions": 5, "continuingSession": 2, "classWeek": "12-16", "campusName": "龙湖校区", "teachingBuildingName": "综合楼", "classroomName": "103" },
+        { "classDay": 3, "classSessions": 7, "continuingSession": 2, "campusName": "龙湖校区", "teachingBuildingName": "综合楼", "classroomName": "103" },
+        { "classDay": 3, "classSessions": 1, "continuingSession": 2, "classWeek": "111111111111111100000000", "campusName": "龙湖校区", "teachingBuildingName": "综合楼", "classroomName": "103" }
+      ]
+    },
+    {
+      "courseName": "综合D",
+      "attendClassTeacher": "丁*",
+      "timeAndPlaceList": [
+        { "classDay": 8, "classSessions": 1, "continuingSession": 2, "classWeek": "111111111111111100000000", "campusName": "龙湖校区", "teachingBuildingName": "综合楼", "classroomName": "104" },
+        { "classDay": 2, "classSessions": 0, "continuingSession": 2, "classWeek": "111111111111111100000000", "campusName": "龙湖校区", "teachingBuildingName": "综合楼", "classroomName": "104" }
+      ]
+    },
+    {
+      "courseName": "综合E",
+      "attendClassTeacher": "戊*",
+      "timeAndPlaceList": [
+        { "classDay": 4, "classSessions": 5, "continuingSession": "", "classWeek": "111111111111111100000000", "campusName": "龙湖校区", "teachingBuildingName": "综合楼", "classroomName": "105" },
+        { "classDay": 5, "classSessions": 7, "continuingSession": null, "classWeek": "111111111111111100000000", "campusName": "龙湖校区", "teachingBuildingName": "综合楼", "classroomName": "105" }
+      ]
+    },
+    {
+      "courseName": "综合F",
+      "attendClassTeacher": "庚*",
+      "timeAndPlaceList": [
+        { "classDay": 6, "classSessions": 3, "continuingSession": "0", "classWeek": "111111111111111100000000", "campusName": "龙湖校区", "teachingBuildingName": "综合楼", "classroomName": "106" }
+      ]
+    },
+    {
+      "courseName": "综合G",
+      "attendClassTeacher": "辛*",
+      "timeAndPlaceList": []
+    },
+    {
+      "courseName": "",
+      "attendClassTeacher": "壬*",
+      "timeAndPlaceList": [
+        { "classDay": 1, "classSessions": 7, "continuingSession": 2, "classWeek": "111111111111111100000000", "campusName": "龙湖校区", "teachingBuildingName": "综合楼", "classroomName": "108" }
+      ]
+    },
+    {
+      "courseName": "综合I",
+      "attendClassTeacher": "己*",
+      "timeAndPlaceList": [
+        { "classDay": 7, "classSessions": 7, "continuingSession": 2, "classWeek": "000000000000000001000000", "campusName": "龙湖校区", "teachingBuildingName": "综合楼", "classroomName": "107" }
+      ]
+    }
+  ]
+}

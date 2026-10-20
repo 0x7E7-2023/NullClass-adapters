@@ -1,0 +1,301 @@
+{
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期",
+    "source": "api"
+  },
+  "today": "2026-09-10",
+  "rowTotal": 5,
+  "rows": [
+    {
+      "KBID": "K100",
+      "KCM": "高等数学",
+      "SKXQ": 1,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "1111111111111111",
+      "SKJS": "甲老师",
+      "JASMC": "A101"
+    },
+    {
+      "KBID": "K200",
+      "KCM": "大学英语",
+      "SKXQ": 3,
+      "KSJC": 3,
+      "JSJC": 4,
+      "SKZC": "1111111111111111",
+      "SKJS": "乙老师",
+      "JASMC": "B101"
+    },
+    {
+      "KBID": "K300",
+      "KCM": "体育",
+      "SKXQ": 5,
+      "KSJC": 5,
+      "JSJC": 6,
+      "SKZC": "1111111111111111",
+      "SKJS": "丙老师",
+      "JASMC": "操场"
+    },
+    {
+      "KBID": "K400",
+      "KCM": "马克思主义原理",
+      "SKXQ": 4,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "1111111111111111",
+      "SKJS": "戊老师",
+      "JASMC": "C1"
+    },
+    {
+      "KBID": "K500",
+      "KCM": "毛泽东思想概论",
+      "SKXQ": 1,
+      "KSJC": 3,
+      "JSJC": 4,
+      "SKZC": "1111111111111111",
+      "SKJS": "己老师",
+      "JASMC": "D1"
+    }
+  ],
+  "experimentRows": [
+    {
+      "KBID": "K600",
+      "KCM": "物理实验",
+      "SYXMMC": "单摆",
+      "SKXQ": 3,
+      "KSJC": 5,
+      "JSJC": 6,
+      "SKZC": "011111111",
+      "SKJS": "庚老师",
+      "JASMC": "实验楼1"
+    }
+  ],
+  "changeRows": [
+    {
+      "KBID": "K100",
+      "KCM": "高等数学",
+      "SQSJ": "2026-09-19 08:00:00",
+      "TKLXDM": "01",
+      "SKZC": "1",
+      "SKXQ": 6,
+      "KSJC": 1,
+      "JSJC": 2,
+      "YSKJS": "",
+      "JASMC": "",
+      "XSKZC": "1",
+      "XSKXQ": 1,
+      "XKSJC": 1,
+      "XJSJC": 2
+    },
+    {
+      "KBID": "",
+      "KCM": "高等数学",
+      "SQSJ": "2026-09-18 08:00:00",
+      "TKLXDM": "01",
+      "SKZC": "01",
+      "SKXQ": 1,
+      "KSJC": 1,
+      "JSJC": 2,
+      "YSKJS": "",
+      "JASMC": ""
+    },
+    {
+      "KBID": "K999",
+      "KCM": "不存在的课",
+      "SQSJ": "2026-09-17 08:00:00",
+      "TKLXDM": "02",
+      "SKZC": "01",
+      "SKXQ": 1,
+      "KSJC": 1,
+      "JSJC": 2,
+      "YSKJS": "",
+      "JASMC": ""
+    },
+    {
+      "KBID": "K600",
+      "KCM": "物理实验",
+      "SQSJ": "2026-09-16 08:00:00",
+      "TKLXDM": "01",
+      "SKZC": "0001",
+      "SKXQ": 3,
+      "KSJC": 5,
+      "JSJC": 6,
+      "YSKJS": "庚老师",
+      "JASMC": "实验楼1",
+      "XSKZC": "0001",
+      "XSKXQ": 5,
+      "XKSJC": 7,
+      "XJSJC": 8,
+      "XJASMC": "实验楼2",
+      "XSKJS": ""
+    },
+    {
+      "KBID": "K500",
+      "KCM": "毛泽东思想概论",
+      "SQSJ": "2026-09-15 08:00:00",
+      "TKLXDM": "01",
+      "SKZC": "000001",
+      "SKXQ": 1,
+      "KSJC": 3,
+      "JSJC": 4,
+      "YSKJS": "己老师",
+      "JASMC": "D1",
+      "XSKZC": "000001",
+      "XSKXQ": null,
+      "XKSJC": null,
+      "XJSJC": null
+    },
+    {
+      "KBID": "K400",
+      "KCM": "马克思主义原理",
+      "SQSJ": "2026-09-14 08:00:00",
+      "TKLXDM": "04",
+      "SKZC": "001",
+      "SKXQ": 4,
+      "KSJC": 1,
+      "JSJC": 2,
+      "YSKJS": "戊老师",
+      "JASMC": "C1",
+      "XSKZC": "001",
+      "XSKXQ": 5,
+      "XKSJC": 1,
+      "XJSJC": 2,
+      "XJASMC": "C2"
+    },
+    {
+      "KBID": "K300",
+      "KCM": "体育",
+      "SQSJ": "2026-09-13 08:00:00",
+      "TKLXDM": "03",
+      "SKZC": "0000000001",
+      "SKXQ": 5,
+      "KSJC": 5,
+      "JSJC": 6,
+      "YSKJS": "丙老师",
+      "JASMC": "操场",
+      "XSKZC": "0000000001",
+      "XSKXQ": 4,
+      "XKSJC": 5,
+      "XJSJC": 6,
+      "XJASMC": "",
+      "XSKJS": "丁老师"
+    },
+    {
+      "KBID": "K100",
+      "KCM": "高等数学",
+      "SQSJ": "2026-09-12 10:00:00",
+      "TKLXDM": "01",
+      "SKZC": "00001",
+      "SKXQ": 2,
+      "KSJC": 3,
+      "JSJC": 4,
+      "YSKJS": "甲老师",
+      "JASMC": "A202",
+      "XSKZC": "00001",
+      "XSKXQ": 3,
+      "XKSJC": 6,
+      "XJSJC": 7,
+      "XJASMC": "A303",
+      "XSKJS": "甲老师"
+    },
+    {
+      "KBID": "K200",
+      "KCM": "大学英语",
+      "SQSJ": "2026-09-11 08:00:00",
+      "TKLXDM": "02",
+      "SKZC": "00000001",
+      "SKXQ": 3,
+      "KSJC": 3,
+      "JSJC": 4,
+      "YSKJS": "乙老师",
+      "JASMC": "B101"
+    },
+    {
+      "KBID": "K100",
+      "KCM": "高等数学",
+      "SQSJ": "2026-09-10 09:00:00",
+      "TKLXDM": "01",
+      "SKZC": "00001",
+      "SKXQ": 1,
+      "KSJC": 1,
+      "JSJC": 2,
+      "YSKJS": "甲老师",
+      "JASMC": "A101",
+      "XSKZC": "00001",
+      "XSKXQ": 2,
+      "XKSJC": 3,
+      "XJSJC": 4,
+      "XJASMC": "A202",
+      "XSKJS": "甲老师"
+    }
+  ],
+  "calendarRows": [
+    {
+      "XQKSRQ": "2026-09-07 00:00:00",
+      "ZZC": "18"
+    }
+  ],
+  "timeSlotRows": [
+    {
+      "DM": "1",
+      "KSSJ": "08:20",
+      "JSSJ": "09:05"
+    },
+    {
+      "DM": "2",
+      "KSSJ": "09:10",
+      "JSSJ": "09:55"
+    },
+    {
+      "DM": "3",
+      "KSSJ": "10:10",
+      "JSSJ": "10:55"
+    },
+    {
+      "DM": "4",
+      "KSSJ": "11:00",
+      "JSSJ": "11:45"
+    },
+    {
+      "DM": "5",
+      "KSSJ": "13:30",
+      "JSSJ": "14:15"
+    },
+    {
+      "DM": "6",
+      "KSSJ": "14:20",
+      "JSSJ": "15:05"
+    },
+    {
+      "DM": "7",
+      "KSSJ": "15:15",
+      "JSSJ": "16:00"
+    },
+    {
+      "DM": "8",
+      "KSSJ": "16:05",
+      "JSSJ": "16:50"
+    },
+    {
+      "DM": "9",
+      "KSSJ": "17:20",
+      "JSSJ": "18:05"
+    },
+    {
+      "DM": "10",
+      "KSSJ": "18:15",
+      "JSSJ": "19:00"
+    },
+    {
+      "DM": "11",
+      "KSSJ": "19:10",
+      "JSSJ": "19:55"
+    },
+    {
+      "DM": "12",
+      "KSSJ": "20:05",
+      "JSSJ": "20:50"
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "已按教务系统里的调课、停课记录调整了 7 处上课安排（其中 3 处只去掉了原来的上课周次，没有排新的上课时间），请核对调整后的课表",
+    "有 3 条调课、停课记录没能对上课表里原来的课，没有应用，请在教务系统里核对",
+    "有 1 条调课记录没给调课后的教室，暂时沿用了原来的教室，请核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 18,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:20",
+          "end": "09:05"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:10",
+          "end": "09:55"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:10",
+          "end": "10:55"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:00",
+          "end": "11:45"
+        },
+        {
+          "periodIndex": 5,
+          "start": "13:30",
+          "end": "14:15"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:20",
+          "end": "15:05"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:15",
+          "end": "16:00"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:05",
+          "end": "16:50"
+        },
+        {
+          "periodIndex": 9,
+          "start": "17:20",
+          "end": "18:05"
+        },
+        {
+          "periodIndex": 10,
+          "start": "18:15",
+          "end": "19:00"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:10",
+          "end": "19:55"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:05",
+          "end": "20:50"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "A101"
+            },
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 6,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "A101"
+            },
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 6,
+              "endPeriod": 7,
+              "startWeek": 5,
+              "endWeek": 5,
+              "weekType": "ALL",
+              "location": "A303"
+            }
+          ]
+        },
+        {
+          "name": "大学英语",
+          "teacher": "乙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 7,
+              "weekType": "ALL",
+              "location": "B101"
+            },
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 9,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "B101"
+            }
+          ]
+        },
+        {
+          "name": "体育",
+          "teacher": "丙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 1,
+              "endWeek": 9,
+              "weekType": "ALL",
+              "location": "操场"
+            },
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 11,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "操场"
+            }
+          ]
+        },
+        {
+          "name": "马克思主义原理",
+          "teacher": "戊老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 2,
+              "weekType": "ALL",
+              "location": "C1"
+            },
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 4,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "C1"
+            }
+          ]
+        },
+        {
+          "name": "毛泽东思想概论",
+          "teacher": "己老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 5,
+              "weekType": "ALL",
+              "location": "D1"
+            },
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 7,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "D1"
+            }
+          ]
+        },
+        {
+          "name": "物理实验 - 单摆",
+          "teacher": "庚老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 2,
+              "endWeek": 3,
+              "weekType": "ALL",
+              "location": "实验楼1"
+            },
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 5,
+              "endWeek": 9,
+              "weekType": "ALL",
+              "location": "实验楼1"
+            },
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 7,
+              "endPeriod": 8,
+              "startWeek": 4,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "实验楼2"
+            }
+          ]
+        },
+        {
+          "name": "体育",
+          "teacher": "丁老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 10,
+              "endWeek": 10,
+              "weekType": "ALL",
+              "location": "操场"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

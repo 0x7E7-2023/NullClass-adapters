@@ -1,0 +1,114 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务给的学期总周数是 40 周，超过了应用支持的 30 周，已按 30 周导入，请核对",
+    "教务系统说这个学期有 12 条排课记录，实际只取到 10 条，课表可能不完整，请重新提取或反馈",
+    "有 7 条排课记录缺少课名、星期、节次或周次（或节次不在 1-20 之间），没有导入",
+    "有 3 个周次超过了第 30 周，超出的部分没有导入"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 30,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:20",
+          "end": "09:05"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:10",
+          "end": "09:55"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:10",
+          "end": "10:55"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:00",
+          "end": "11:45"
+        },
+        {
+          "periodIndex": 5,
+          "start": "13:30",
+          "end": "14:15"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:20",
+          "end": "15:05"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:15",
+          "end": "16:00"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:05",
+          "end": "16:50"
+        },
+        {
+          "periodIndex": 9,
+          "start": "17:20",
+          "end": "18:05"
+        },
+        {
+          "periodIndex": 10,
+          "start": "18:15",
+          "end": "19:00"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:10",
+          "end": "19:55"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:05",
+          "end": "20:50"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "A"
+            }
+          ]
+        },
+        {
+          "name": "大学体育",
+          "teacher": "乙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 2,
+              "weekType": "ALL",
+              "location": "B"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

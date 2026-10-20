@@ -1,0 +1,30 @@
+{
+  "fetchedDate": "2026-09-10",
+  "term": { "text": "2025-2026学年春", "isCurrent": false },
+  "rq": "20260831",
+  "zs": "20",
+  "slots": [
+    { "sessionName": "1", "djjc": 1, "startTime": "0800", "endTime": "0845" },
+    { "sessionName": "2", "djjc": 2, "startTime": "0855", "endTime": "0940" },
+    { "sessionName": "3", "djjc": 3, "startTime": "1000", "endTime": "1045" },
+    { "sessionName": "4", "djjc": 4, "startTime": "1055", "endTime": "1140" },
+    { "sessionName": "5", "djjc": 5, "startTime": "1400", "endTime": "1445" },
+    { "sessionName": "6", "djjc": 6, "startTime": "1455", "endTime": "1540" }
+  ],
+  "courses": [
+    {
+      "courseName": "管理学",
+      "attendClassTeacher": "钱*",
+      "timeAndPlaceList": [
+        { "classDay": 1, "classSessions": 1, "continuingSession": 2, "classWeek": "111111111111110000000000", "campusName": "龙湖校区", "teachingBuildingName": "文博楼", "classroomName": "201" }
+      ]
+    },
+    {
+      "courseName": "经济学",
+      "attendClassTeacher": "孙*",
+      "timeAndPlaceList": [
+        { "classDay": 3, "classSessions": 3, "continuingSession": 2, "classWeek": "111111111111000000000000", "campusName": "龙湖校区", "teachingBuildingName": "文博楼", "classroomName": "202" }
+      ]
+    }
+  ]
+}

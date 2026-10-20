@@ -1,0 +1,81 @@
+{
+  "specVersion": 1,
+  "key": "syist",
+  "name": "沈阳科技学院",
+  "initial": "S",
+  "version": "1.0.0",
+  "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://jwxt.syist.edu.cn:30334/jwapp/sys/emaphome/portal/index.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（校历行没带学年学期、教务给了学期名与节次时间；教师「姓名/工号」只留姓名、多名去重；理论课与实验课一起导入，实验课名拼成「课名 - 实验项目」、实验课教师取自教师名字段；缺教师缺地点汇总提醒；第 1 周与第 16 周落单成两段）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次位串切段（连续段、中间断开、连续加单周、双周加落单、双周段、落单一周、周日、同一门课两个教室两个安排、完全重复的行去重）",
+      "extracted": "fixtures/weeks.extracted.json",
+      "expected": "fixtures/weeks.expected.json"
+    },
+    {
+      "name": "合成用例：合并（节次首尾相接的合成一段且与给出顺序无关、中间隔一节不合并、教室不同不合并、周次段不同不合并、同节次的周次并集 1-8 + 9-16 与单周 + 双周、并集后再合并节次、单周段节次相接、同名不同教师是两门课）",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：实验课与教师来源（实验项目名为空只用课名、课名为空只用项目名、重复的实验行去重；理论课教师字段没有或全是工号时改用教师名字段，教师字段有姓名时不用教师名字段；教师两个字段都没有）",
+      "extracted": "fixtures/experiment.extracted.json",
+      "expected": "fixtures/experiment.expected.json"
+    },
+    {
+      "name": "合成用例：调课与停课（教务按申请时间倒序给，连续两次调同一节课；停课只去周次；换教师；没给新教室沿用旧教室；实验课调课后课名仍带实验项目；类型不是调课或没给完整新时间的只去周次；对不上原课的三条）",
+      "extracted": "fixtures/changes.extracted.json",
+      "expected": "fixtures/changes.expected.json"
+    },
+    {
+      "name": "合成用例：校历有多行（其它学期的行与同一学期的两行，学期序号有字符串也有数字，取第一行匹配的；开学日是周三要回退到周一；教务没给学期名用「沈阳科技学院 + 学年学期」）",
+      "extracted": "fixtures/calendar-other.extracted.json",
+      "expected": "fixtures/calendar-other.expected.json"
+    },
+    {
+      "name": "合成用例：什么都没取到（学期按日期推算、校历与节次时间都没取到回落备用的 12 节、实验课与调课记录没取到、课表排到第 22 周把总周数抬高、第 13-14 节顺推补时间）",
+      "extracted": "fixtures/degraded.extracted.json",
+      "expected": "fixtures/degraded.expected.json"
+    },
+    {
+      "name": "合成用例：教务节次时间只有 10 节（乱序、不带冒号的写法），课表用到第 11-14 节，前三节按课间 10 分钟、每节 45 分钟顺推补时间，第 14 节越过 23:59 补不了，课照常导入",
+      "extracted": "fixtures/slots-short.extracted.json",
+      "expected": "fixtures/slots-short.expected.json"
+    },
+    {
+      "name": "合成用例：教务节次时间里有一节结束早于开始，整表改用备用的节次时间并提醒",
+      "extracted": "fixtures/slots-bad.extracted.json",
+      "expected": "fixtures/slots-bad.expected.json"
+    },
+    {
+      "name": "合成用例：教务节次时间缺第 5 节（节次号不连续），整表改用备用的节次时间并提醒",
+      "extracted": "fixtures/slots-gap.extracted.json",
+      "expected": "fixtures/slots-gap.expected.json"
+    },
+    {
+      "name": "合成用例：脏数据（缺课名、星期 8、周次非位串、周次全零、节次倒挂、节次 25、没有课名的实验行、占位空行、超过 30 周的周次、校历总周数 40 压到 30、记录总数对不上）",
+      "extracted": "fixtures/dirty.extracted.json",
+      "expected": "fixtures/dirty.expected.json"
+    },
+    {
+      "name": "合成用例：校历总周数 16 小于课表第 18 周（抬高到 18 并写教务原值）",
+      "extracted": "fixtures/raised.extracted.json",
+      "expected": "fixtures/raised.expected.json"
+    },
+    {
+      "name": "合成用例：长课名（正好 20 字不截、21 字截成 19 字加省略号、60 字以上、实验课名拼接后超长）加缺教师缺地点，提醒里点名的课名截到 20 字、整条不超过 200 字",
+      "extracted": "fixtures/long-name.extracted.json",
+      "expected": "fixtures/long-name.expected.json"
+    }
+  ]
+}
