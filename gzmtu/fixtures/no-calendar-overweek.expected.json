@@ -1,0 +1,48 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第二学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第二学期 = 2 月 20 日所在周的周一」推算为 2027-02-15，请在学期管理里核对成学校实际开学日",
+    "课表里有第 21 周的课，超过 20 周，学期总周数已按 21 周导入，如与实际不符可在学期管理里改",
+    "教务系统没有给出节次时间，已按适配器内置的 10 节节次时间导入（第 1 节 08:10-08:55），时间可能与学校实际作息不符，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2027-02-15",
+      "totalWeeks": 21,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:10", "end": "08:55" },
+        { "periodIndex": 2, "start": "09:05", "end": "09:50" },
+        { "periodIndex": 3, "start": "10:10", "end": "10:55" },
+        { "periodIndex": 4, "start": "11:05", "end": "11:50" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 7, "start": "16:00", "end": "16:45" },
+        { "periodIndex": 8, "start": "16:55", "end": "17:40" },
+        { "periodIndex": 9, "start": "18:40", "end": "19:25" },
+        { "periodIndex": 10, "start": "19:35", "end": "20:20" }
+      ],
+      "courses": [
+        {
+          "name": "船舶结构",
+          "teacher": "丙老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 21, "weekType": "ALL", "location": "教学楼A" }
+          ]
+        },
+        {
+          "name": "海事法规",
+          "teacher": "丁老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 7, "endPeriod": 8, "startWeek": 19, "endWeek": 21, "weekType": "ALL", "location": "教学楼B" }
+          ]
+        }
+      ]
+    }
+  ]
+}

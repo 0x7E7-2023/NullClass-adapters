@@ -1,0 +1,53 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第二学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第二学期 = 2 月 20 日所在周的周一」推算为 2027-02-15，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期校历，学期总周数按 20 周导入（课表里最晚排到第 18 周），如与实际不符可在学期管理里改",
+    "没选校区，已按广州、云浮校区的节次时间导入；中山校区的同学请在学期管理里改节次时间"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2027-02-15",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:10" },
+        { "periodIndex": 2, "start": "09:20", "end": "10:00" },
+        { "periodIndex": 3, "start": "10:10", "end": "10:50" },
+        { "periodIndex": 4, "start": "11:00", "end": "11:40" },
+        { "periodIndex": 5, "start": "11:50", "end": "12:30" },
+        { "periodIndex": 6, "start": "12:40", "end": "13:20" },
+        { "periodIndex": 7, "start": "14:00", "end": "14:40" },
+        { "periodIndex": 8, "start": "14:50", "end": "15:30" },
+        { "periodIndex": 9, "start": "15:40", "end": "16:20" },
+        { "periodIndex": 10, "start": "16:30", "end": "17:10" },
+        { "periodIndex": 11, "start": "17:20", "end": "18:00" },
+        { "periodIndex": 12, "start": "18:10", "end": "18:50" },
+        { "periodIndex": 13, "start": "19:00", "end": "19:40" },
+        { "periodIndex": 14, "start": "19:50", "end": "20:30" },
+        { "periodIndex": 15, "start": "20:40", "end": "21:20" }
+      ],
+      "courses": [
+        {
+          "name": "生物化学",
+          "teacher": "壬老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 12, "weekType": "ALL", "location": "教学楼D102" }
+          ]
+        },
+        {
+          "name": "药事管理",
+          "teacher": "癸老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 18, "weekType": "ALL", "location": "教学楼D201" }
+          ]
+        }
+      ]
+    }
+  ]
+}

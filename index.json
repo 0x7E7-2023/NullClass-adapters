@@ -489,6 +489,36 @@
       "name": "齐齐哈尔工程学院",
       "version": "1.0.0",
       "path": "qqhrit"
+    },
+    {
+      "key": "zwu",
+      "name": "浙江万里学院",
+      "version": "1.0.0",
+      "path": "zwu"
+    },
+    {
+      "key": "xust",
+      "name": "西安科技大学",
+      "version": "1.0.0",
+      "path": "xust"
+    },
+    {
+      "key": "gzmtu",
+      "name": "广州航海学院",
+      "version": "1.0.0",
+      "path": "gzmtu"
+    },
+    {
+      "key": "gdust",
+      "name": "广东科技学院",
+      "version": "1.0.0",
+      "path": "gdust"
+    },
+    {
+      "key": "gdpu",
+      "name": "广东药科大学",
+      "version": "1.0.0",
+      "path": "gdpu"
     }
   ]
 }

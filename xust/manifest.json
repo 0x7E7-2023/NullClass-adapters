@@ -1,0 +1,49 @@
+{
+  "specVersion": 1,
+  "key": "xust",
+  "name": "西安科技大学",
+  "initial": "X",
+  "version": "1.0.0",
+  "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://jwsso.xust.edu.cn/frontend/center_portal/home/index.html",
+  "scheduleUrlHint": "http://59.74.174.150/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "59.74.174.150"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 节次时间接口取不到 → 整张用上游 10 节表（第 3 节 10:05-10:55、第 9 节 19:00-19:50 逐节钉住）；课表排到第 11-12 节 → H3 顺推补时间并写 warnings；校历取不到 → 推算开学日、总周数内置 20 周；缺教师、缺教室照常导入；完全重复行只留一条；集中实践课只点课名",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：校历第 1 周日期不是周一（zs=1 给 2026-09-09 周三）→ 开学日回退到那一周的周一 2026-09-07，总周数取校历的 18 周；节次时间接口给的包在信封里的 10 节表 → 用教务的；同课 1-2 与 3-4 合并成 1-4 节；「第3-4节」能认；周次为空的一行计入跳过",
+      "extracted": "fixtures/calendar-weekday.extracted.json",
+      "expected": "fixtures/calendar-weekday.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期 · 校历取不到 → 按第二学期锚点推算开学日 2027-02-15 并说明；课表最大周次 21 → 总周数抬到 21 并说明；作息接口只给 1-8 节 → 9-12 节用空课默认的节次时间补齐并说明；「17-21周(单)」读成单周",
+      "extracted": "fixtures/no-calendar-overweek.extracted.json",
+      "expected": "fixtures/no-calendar-overweek.expected.json"
+    },
+    {
+      "name": "合成用例：逐课特殊上课时间 · 教室含「体」或 9-18 号楼且覆盖第 3-4 节的课进提醒（体育馆 3-4、1-12-305 1-4 节）；1-8-101、2-19-201（8、19 号楼）与体育馆 5-6 节、教室为空的不进提醒；课照常导入、节次不变",
+      "extracted": "fixtures/special-room.extracted.json",
+      "expected": "fixtures/special-room.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒 · 四门特殊时间课（课名超 20 字）点名截到 20 字并加「等」；超长课名的缺教师 / 缺教室按类型汇总；四门超长集中实践课点名截断；两行认不出的周次按类型计数、写法点名；每条提醒不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：单/双标记与「共 N 周」· 前缀「(单)1-8周,(双)9-16周」与后缀「1-8周(单),9-16周(双)」都读成 1-7 单周 + 10-16 双周；「1-15周(单) 共16周」只读 1-15 单周；「1-8周(共8周),9-16周」与「共16周,1-15周(单)」只剥备注；「1-16(单周)」与「1-3,5-9周」照读",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    }
+  ]
+}

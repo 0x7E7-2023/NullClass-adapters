@@ -1,0 +1,164 @@
+# 安全审计 —— 广东科技学院（正方教务 jwglxt 根路径，经学校 WebVPN 路径前缀访问，校内网络可直连）
+
+审计对象：`jw-adapters/gdust/` 下的 `extract.js` / `parse.js` / `manifest.json`，以及它们移植自的上游脚本
+`shiguang_warehouse` 的 `GDUST/gdust.js`（快照 commit `19a65bf07a3e998fcfc69cee692387cdc0523c1a`，2026-10-19 22:41 拉取，MIT，作者 星河欲转；本校脚本最后一次修改 `80e30cf`，2026-09-23）。
+上游的 `adapters.yaml` 同目录，`maintainer` 为「星河欲转」，`import_url` 为 WebVPN 的 CAS 登录地址（即 `manifest.loginUrl`）。
+
+审计方式：逐行读上游脚本 + 逐行读移植件，跑移植手册 §5 的静态扫描，用 Node 桩跑 `extract.js` 的地址拼接（不联网），并用 `check.js` 的 Rhino 实跑与四处变异测试 `parse.js`。
+
+## 0. 静态扫描结果（2026-10-20 运行，扫描命令未入库）
+
+- 网络调用：`extract.js` 只有一处 `fetch(url, options)`，位于 `request` 函数（第 85 行起，`fetch` 在第 96 行）。第 91 行的 `X-Requested-With: XMLHttpRequest` 是请求头字符串，不是 XHR 对象。`parse.js` 没有任何网络调用。
+- 绝对 URL：`parse.js` 与 `extract.js` 的文件头各有一处 `https://github.com/XingHeYuZhuan/shiguang_warehouse`，是上游出处注释，代码里没有绝对地址。
+- 主机字面量：代码里没有写死的主机名。`extract.js` 第 39 行 `VPN_DEFAULT = 'vpn-12-o1-172.16.254.1'` 是查询串片段（不是主机），仅在 WebVPN 地址的查询串里找不到 `vpn-…` 片段时使用。
+- 凭据、本地存储、Cookie、`eval` / `new Function`、`sendBeacon` / `WebSocket` / `EventSource` / `new Image`、`innerHTML` / `appendChild` / `.submit` / `.click(`：全部无命中。
+- ES5：`=>`、反引号、`let `、`const `、`class `、`async`、`await`、展开符、模板串、`for...of`、`Set` / `Map`、`Array.from`、`padStart`、`includes` / `startsWith`、可选链、`??`、后行断言、命名分组：全部无命中。第 323 行的 `(?=[0-9])` 是前行断言（ES3 即支持），不在禁止之列。`check.js` 的 ES5 检查通过。
+- 控制字节与 BOM：`parse.js`、`extract.js`、`manifest.json` 与 `fixtures/` 下 12 个文件，无控制字节。（文件统一 CRLF，与模板一致。）
+- 学生可见文字：`parse.js` 的 `warn(...)` 与 `throw` 的文字里没有「接口」「载荷」「上游」「脚本」「字段」「课程块」「组件」「模板」「HTTP」「JSON」「DOM」「HTML」「null」「undefined」「学期设置」「作息表」。`extract.js` 的报错同样不含这些词。
+- 模板残留：`gdust/` 下全目录检索「河北」「hueb」「HUEB」「202-206」「Haooz」「lcudcc」「8118」「13 节」「作息表」，本文件外零命中。本文件在 §4 的对比语境里有意提到模板目录名。
+
+## 1. 请求域与请求清单（与代码逐条对应）
+
+上游 `GDUST/gdust.js` 的请求只有一条课表 POST，而且是两个写死的地址依次尝试（第 176–179 行 `targetUrls`，第 181 行起的循环，第 183 行 `fetch`）：
+
+- WebVPN 入口：`https://webvpn.gdust.edu.cn/http/77726476706e69737468656265737421a1a013d2766626022b5cc7fd/kbcx/xskbcx_cxXsgrkb.html?vpn-12-o1-172.16.254.1&gnmkdm=N2151`
+- 校内直连入口：`http://172.16.254.1/kbcx/xskbcx_cxXsgrkb.html?gnmkdm=N2151`
+
+上游没有请求学年学期页、没有请求学期周次校历、没有请求节次时间（第 201–202 行直接写 `semesterStartDate: null`、`semesterTotalWeeks: 20`）。
+
+移植件不写死任何地址：请求的前缀由**当前页面的路径**决定（`prefixOf`，`extract.js` 第 49 行）：取当前路径里最早出现的 `/kbcx/` 或 `/xtgl/`，它之前的那段就是前缀。WebVPN 下是 `/http/<十六进制>`，校内直连为空；主机用 `window.location.origin`。**只打当前页面所在的那一个主机**，不再依次尝试两个入口（跨主机请求会被宿主沙箱拦下，见 §5 第 2 条）。
+
+WebVPN 查询串（`vpnPart`，第 63 行）：当前路径以 `/http/` 或 `/https/` 开头时，沿用当前查询串里形如 `vpn-数字-o数字-…` 的片段（到 `&` 或结尾为止）；找不到就用上游的默认值 `vpn-12-o1-172.16.254.1`。校内直连不带这个片段。
+
+| 谁 | 方法 | 地址（`<前缀>` 与 `[vpn片段&]` 按上面的规则拼） | 干什么 | 取不到时 |
+|---|---|---|---|---|
+| extract.js | GET | `<origin><前缀>/kbcx/xskbcx_cxXskbcxIndex.html?[vpn片段&]gnmkdm=N2151&layout=default` | 读课表页上的学年学期下拉框（`#xnm` / `#xqm`）。**页面上已有这两个下拉框时跳过** | 报错：「没读到学年学期…请重新登录并打开「信息查询 - 学生课表查询」后再点「提取课表」」；网络错误报「连不上教务系统…」 |
+| extract.js | POST | `<origin><前缀>/kbcx/xskbcx_cxXsgrkb.html?[vpn片段&]gnmkdm=N2151`，体 `xnm=…&xqm=…&kzlx=ck&xsdm=&kclbdm=` | 取课表 JSON：`kbList` 排课行、`sjkList` 集中实践课、可能有的记录总数。请求体与上游逐字一致（`xnm` / `xqm` 改为读下拉框的值） | 报错（非 2xx 报「教务系统返回错误（代码 N）」；返回内容不是带 `kbList` 的 JSON 报「没有返回课表数据」）。**这条是必需的，失败就不导入** |
+| extract.js | POST | `<origin><前缀>/kbcx/xskbcx_cxRjc.html?[vpn片段&]gnmkdm=N2151`，体 `xnm=…&xqm=…&xqh_id=<课表行里的校区号>` | 取节次时间。上游没有这条请求，是移植时按批次九公共说明多取的 | 交 `null`，parse 回落到本校上游的 10 节表并写进 `warnings` |
+| extract.js | POST | `<origin><前缀>/kbcx/xskbcxZccx_cxZcByXnxq.html?[vpn片段&]gnmkdm=N2154`，体 `xnm=…&xqm=…` | 取学期周次校历，定开学日与总周数。上游没有这条请求，移植时多取 | 交 `null`，parse 推算开学日、总周数按 20 周并写进 `warnings` |
+
+与上游的差别：
+
+- 上游先弹「请输入起始学年」的输入框，再弹「第一学期 / 第二学期」选择框，学期码写死成 `3` / `12`（第 161–163 行）。移植件改成读页面上的 `#xnm` / `#xqm`，不向用户问任何东西；页面上读不到才取一次学年学期页（`currentTerm`，第 175 行，`DOMParser` 离线解析，不插入当前页面）。
+- 上游的 WebVPN 地址与校内直连地址都写死在脚本里；移植件用当前页面的前缀拼地址，网关换映射或换路径时不用改代码。
+- 两条附加请求（节次时间、校历）失败不影响导入：`optionalJson`（第 218 行）把任何失败都吞成 `null`，由 parse.js 回落，回落会出现在导入预览的 `warnings` 里。
+- 请求头统一带 `Content-Type`、`X-Requested-With`、`Accept`，不带任何自定义令牌。`credentials: 'include'` 让 WebView 按同源规则带 Cookie；脚本既不读 Cookie，也不把它发到别处。
+- `parse.js` 不发任何请求（CI 里用 Rhino 实跑，是纯函数）。
+
+### 1.1 extract.js 桩跑结果（Node 桩，不联网；桩脚本在临时目录，未入库）
+
+桩里的 `fetch` 只记录 `方法 + 地址 + 请求体`，并对课表返回带学生信息（`xsxx`、学号、姓名、学院、`xh_id`）的响应，检查交出去的字符串里没有这些内容。
+
+| 场景 | 拼出的地址（请求体见下） | 结论 |
+|---|---|---|
+| 1 WebVPN 课表页（带 `?vpn-12-o1-172.16.254.1&gnmkdm=N2151&layout=default`） | `https://webvpn.gdust.edu.cn/http/77726476…7fd/kbcx/xskbcx_cxXsgrkb.html?vpn-12-o1-172.16.254.1&gnmkdm=N2151`；`…/kbcx/xskbcx_cxRjc.html?vpn-12-o1-172.16.254.1&gnmkdm=N2151`；`…/kbcx/xskbcxZccx_cxZcByXnxq.html?vpn-12-o1-172.16.254.1&gnmkdm=N2154` | 页面已有下拉框，不发 GET；3 条 POST；学生信息未带出 |
+| 2 WebVPN 课表页但查询串没有 vpn 片段（`?gnmkdm=N2151&layout=default`） | 同上三条，片段补成上游默认 `vpn-12-o1-172.16.254.1` | 补上了默认片段 |
+| 3 WebVPN 菜单页 `/http/<hex>/xtgl/index_initMenu.html?vpn-12-o1-172.16.254.1&gnmkdm=index`（页面上没有下拉框） | 先 GET `…/kbcx/xskbcx_cxXskbcxIndex.html?vpn-12-o1-172.16.254.1&gnmkdm=N2151&layout=default`，再 3 条 POST | 前缀取到 `/http/<hex>`（菜单页上的 `/xtgl/` 标记），学期从课表首页取到 |
+| 4 校内直连课表页 `http://172.16.254.1/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default` | `http://172.16.254.1/kbcx/xskbcx_cxXsgrkb.html?gnmkdm=N2151`；`…/xskbcx_cxRjc.html?gnmkdm=N2151`；`…/xskbcxZccx_cxZcByXnxq.html?gnmkdm=N2154`（无 vpn 片段，前缀为空） | 与上游校内入口的路径一致 |
+| 5 WebVPN 首页 `https://webvpn.gdust.edu.cn/` | 不发请求 | 同步抛出「请先进入教务系统、打开课表页后再点「提取课表」」 |
+| 6 CAS 页 `https://webvpn.gdust.edu.cn/https/<hex>/cas/?service=…` | 不发请求 | 同步抛出「当前打开的是登录页。请先登录教务系统…」 |
+| 7 WebVPN `/login` 页 | 不发请求 | 同上，「请先登录」 |
+
+请求体：课表 `xnm=2026&xqm=12&kzlx=ck&xsdm=&kclbdm=`；节次时间 `xnm=2026&xqm=12&xqh_id=01`；校历 `xnm=2026&xqm=12`。
+
+场景 5–7 是同步 `throw`（与模板的登录页判断一致）。宿主要把 IIFE 的同步异常当成失败提示处理，不能只接 Promise 的 reject。
+
+## 2. 读了什么、交出什么（逐字段）
+
+| 数据 | 从哪来 | 是否带出 |
+|---|---|---|
+| 学年学期（`xnm` / `xqm` 与下拉框文本） | 课表页的 `#xnm` / `#xqm`，或学年学期页 HTML（`DOMParser` 离线解析） | 带出（学期名要用） |
+| 排课行 `kbList` | 课表接口 | 带出**白名单字段**：`kcmc`、`xm`、`cdmc`、`xqj`、`jcs`、`zcd`、`xqh_id`（`KB_FIELDS`，`extract.js` 第 238 行，`pickFields` 第 241 行）。`xqh_id` 是校区号，只用来拼节次时间请求，不含个人信息 |
+| 集中实践课 `sjkList` | 课表接口 | 只带 `kcmc`（`PRACTICE_FIELDS`，第 239 行）。它没有固定星期与节次，排不进周课表，但不能吞掉：写进 `warnings` 让用户自己加 |
+| 节次时间 | cxRjc | 带出（载荷的 `periodTimes`），取不到为 `null` |
+| 学期周次校历 | cxZcByXnxq | 交给 parse 只用来算开学日与总周数，不进载荷 |
+| 记录总数（响应里有才有） | 课表接口 | 只用于对账，不进载荷 |
+| 学生个人信息（课表响应里夹带的 `xsxx`、学号、姓名、学院、`xh_id` 等） | 课表接口 | **不带出，也不进 fixture**：`extract.js` 只按白名单挑字段，桩跑（场景 1–4）检查交出去的字符串里检索不到 |
+
+`parse.js` 实际读的字段：排课行 `kcmc` / `xm` / `cdmc` / `xqj` / `jcs` / `zcd`（`xqh_id` 不参与解析）；实践课 `kcmc`；`periodTimes` 的 `jcmc` / `jc` 与 `qssj` / `jssj`；`calendar` 的 `zs` / `zsmc` 与 `zrq` / `zcrq` / `rq` / `ksrq`；`total`；`today`；`term.*`。
+
+不读的东西：`password` / `pwd` / 登录表单、本地存储与 Cookie、成绩（`/cjcx/*`）、学籍、个人信息、缴费，以及任何其它模块的接口。
+
+## 3. 移植手册 §5 八条逐条
+
+| # | 检查项 | 结论 |
+|---|---|---|
+| 1 | 不碰凭据 | **过**。没有密码读取、没有登录表单、没有本地存储访问。唯一的「凭据」是浏览器自带的会话 Cookie，脚本既不读它也不外发。上游的公告弹窗（`showAlert`，第 127–129 行）、学年输入框（`showPrompt`，第 136–141 行）、学期选择框（`showSingleSelection`，第 147–151 行）都没有移植 |
+| 2 | 不外发 | **过**。全部 `fetch` 都在 `extract.js` 的 `request` 里，地址由 `origin` 加上当前页面的前缀拼成。没有 `sendBeacon` / `WebSocket` / `EventSource` / `new Image().src` / 隐藏表单，也没有第三方域 |
+| 3 | 请求域可控 | **过**。请求主机只有一个，即用户当前打开的教务页面所在的主机。`allowHosts` 为 `["172.16.254.1"]`：校内直连时页面就在这个主机上，宿主靠它给这个 origin 注入桥。WebVPN 主机与 `loginUrl` 同源，按规则不用列。代码里没有写死的主机名 |
+| 4 | 只读课表 | **过**。四条请求全部落在 `/kbcx/*`（学年学期页、课表、节次时间、学期周次校历），不碰成绩、学籍、个人信息、缴费。课表响应里夹带的学生信息一律不带出；节次时间与校历是学校公共数据 |
+| 5 | 不埋点 | **过**。没有统计、上报、遥测，没有图片打点 |
+| 6 | 不 eval 远程代码 | **过**。没有 `eval` / `new Function`。只对教务自己的响应做 `JSON.parse`（`jsonOf`，第 130 行，失败返回 `null`） |
+| 7 | 不写页面 | **过**。`extract.js` 只读 `#xnm` / `#xqm` 的值。学年学期页用 `fetch` + `DOMParser`，离线解析，不插入当前页面，不改表单，不触发提交或点击。上游的桥调用全部没有移植 |
+| 8 | 不依赖用户输入之外的秘密 | **过**。没有硬编码的密钥、令牌或他人学号。脚本里的常量只有菜单号 `N2151` / `N2154`、查询串默认片段 `vpn-12-o1-172.16.254.1`，都是页面上可见的参数 |
+
+## 4. 与模板 hueb 的差异（模板目录只读，本件未改动）
+
+1. **地址由当前页面路径决定**：模板的 `jwBase()` 只认 `/jwglxt/`，本件认 `/kbcx/` 与 `/xtgl/`，前缀可以是空（根路径）或 `/http/<hex>`（WebVPN）。WebVPN 查询串 `vpn-…` 片段由 `vpnPart()` 处理（模板没有）。
+2. **进入教务前的拦截**：找不到 `/kbcx/` 或 `/xtgl/` 时（WebVPN 首页、门户页）同步抛「请先进入教务系统…」，不发请求；登录页 / CAS 页 / WebVPN `/login` 页抛「请先登录」（`loginHint`，第 77 行）。WebVPN 根上发请求会打到 WebVPN 自己身上，所以必须拦住。
+3. **节次时间表**：模板的学校表是 13 节，本件是上游 `TimeSlots` 的 10 节（`parse.js` 第 55–66 行，逐节照抄）。空课默认 12 节表（`BUILTIN_PERIOD_TIMES`，第 70 行）保留，只用于 H3 口径里超出 10 节的逐节补时间。本件的顺推结果：第 11 节 21:10–21:55、第 12 节 22:00–22:45（内置表第 11 节开始 20:20 早于第 10 节下课 21:05，接不上，所以顺推）。
+4. **学期名兜底带学校名**：学年读不出来时用「广东科技学院 第 X 学期」，不用适配器名（`parse.js` 第 230 行 `termName`）。
+5. **交出去的行做字段白名单**：模板把 `kbList` 行原样交出；本件只挑七个字段，`sjkList` 只挑 `kcmc`（`pickFields`，第 241 行）。
+6. **缺教师 / 缺教室有汇总提醒**：模板把这两类课照常导入为 `null` 后一声不吭；本件按课名去重计数（`missingTeacherCourses` / `missingLocationCourses`），在跳过的行之后汇总成一条提醒，点名最多 3 门课，指向「编辑课程」（`parse.js` 第 916–933 行）。
+7. **提醒里点名的课名截到 20 字**：`shortName`（第 100 行）用于集中实践课、缺教师 / 缺教室的课名与「认不出的周次写法」；整条提醒再经 `warn()`（第 194 行）收口到 200 字。
+8. **周次解析修两处模板缺陷**（与模板同批统一）：① 单/双括号按相邻关系先归属（`weeksOf` 第 323–326 行）；② 剥离「共 N 周」只剥备注本身（第 315 行，`/共\s*[0-9]+\s*周?/g`）。`fixtures/week-markers` 钉住这两点。
+9. **上游没有合并**：上游 `parseJsonData` 每行直接输出一门课（第 54 行起），不做同课合并。本件沿用模板的两阶段合并（`mergeStageOne` 第 608 行、`mergeStageTwo` 第 624 行）与完全重复行去重（`dropExactDuplicates`，第 560 行），这是对上游的改动，见 §5 第 8 条。
+10. 其余层（周次四写法与括号序号、节次多写法、开学日回退周一与可信度判断、总周数收紧、H3 补时间、warnings 收口、取数对账）与模板一致。
+
+## 5. 上游里删掉 / 改掉的东西及理由
+
+1. **删掉「拾光」桥调用**：`shiguangBridgePromise.showAlert`（第 129 行）/ `showPrompt`（第 139 行）/ `showSingleSelection`（第 150 行）/ `saveImportedCourses`（第 220 行）/ `savePresetTimeSlots`（第 250 行）/ `saveCourseConfig`（第 304 行）与 `shiguangBridge.showToast`（多处，含第 212 行）、`notifyTaskCompletion`（第 317 行）。空课里由宿主负责保存，适配器只交载荷；这些桥在空课里不存在。
+2. **删掉两个入口依次尝试**：上游 `targetUrls`（第 176–179 行）把 WebVPN 地址与校内直连地址写死，循环尝试（第 181 行起）。移植件只打当前页面所在的那一个。理由：跨主机请求会被宿主沙箱拦下，「依次尝试」在沙箱里只会多出一个失败请求；前缀由当前路径决定，两个入口的路径都能覆盖。
+3. **删掉学年输入与学期选择**：上游 `validateYearInput`（第 116 行）、`getAcademicYear`（第 136 行）、`selectSemester`（第 147 行）与 `getSemesterCode`（第 161–163 行，学期码写死 `3` / `12`）。改成读页面上的 `#xnm` / `#xqm`（移植手册 §3 第 1 步）。
+4. **整行丢课改为计数**：上游 `parseJsonData` 第 68–70 行要求 `kcmc` / `xm` / `cdmc` / `xqj` / `jcs` / `zcd` 六个字段全非空，缺教师或缺教室的课整行丢掉。移植件只要求课名、星期、节次、周次；教师与教室没有就留 `null`，跳过的行按原因计数写进 `warnings`，缺教师 / 缺教室的已导入课也汇总计数（`fixtures/long-warnings` 与 `fixtures/basic` 钉住）。
+5. **周次解析修正**：上游 `parseWeeks`（第 9 行起）只认 `/(\d+)-(\d+)周/` 与 `/^(\d+)周/`，`1-16(单周)` 一个都匹配不上，整段周次塌成空数组、这门课被静默丢掉；括号里的教学班序号（如 `(1)`）会被当成周次。移植件认四种写法、先摘括号序号，摘掉的东西计数写进 `warnings`。
+6. **节次解析放宽**：上游 `jcs.split('-')` 认不出 `第9-10节`、`1,2`、两位一拼的 `0102`，多段只取首尾。移植件按 `sectionsOf`（`parse.js` 第 424 行）处理，多段按最大跨度放入并在 `warnings` 里说明。
+7. **开学日与总周数**：上游写死 `semesterStartDate: null`、`semesterTotalWeeks: 20`（第 201–202 行），从不请求校历。移植件多取一次校历，开学日回退到那一周的周一（`plausibleStart`，第 262 行判断日期是否落在本学期的合理窗口内），总周数优先用校历，课表里更晚的周次会把总周数抬上去，抬了都写进 `warnings`。
+8. **同课合并**：上游不合并，同一门课的多行原样输出。移植件沿用模板的两阶段合并（§4 第 9 条）。这是改动，合并不改任何一周的安排，只合并首尾相接的节次与同节次周次的并集（`fixtures/merge-consecutive` 钉住）。
+9. **作息**：上游的 `TimeSlots`（第 231 行起）是写死的 10 节表，且只在导入成功后存为预设（第 244–250 行）。移植件先请求 cxRjc；取不到才用这张 10 节表（逐节照抄），并把「用的是内置节次时间」写进 `warnings`。
+10. **主机不写死**：上游两个 URL 都带 `https://webvpn.gdust.edu.cn/http/77726476…` 与 `http://172.16.254.1`。移植件改成当前页面的前缀 + `origin`，`extract.js` 代码里没有任何主机名。
+11. **学生信息**：上游把整个课表响应交给解析函数，不涉及外发；移植件按字段白名单挑，`xsxx` 与学号等一律不交出去。
+
+## 6. 变异测试记录
+
+变异改的是**副本**：每个副本在临时目录里是整目录复制（目录名同样是 `gdust`，否则 `check.js` 会因 `manifest.key` 与目录名不一致报错），只替换副本的 `parse.js`，真文件没有被变异脚本写过。每条替换要求恰好命中 1 次。每个副本跑 `check.js`，记录哪些 fixture 变红。
+
+| 变异 | 改了什么（真文件行号） | 变红的 fixture | 变红的表现 |
+|---|---|---|---|
+| M1 | 第 65 行学校节次表第 10 节开始时间 `20:20` 改为 `20:30` | 5：basic、merge-consecutive、no-calendar-overweek、long-warnings、week-markers | 第 10 节的 `start` 实际 `20:30`、期望 `20:20`。这 5 个用例都在取不到节次时间时整张用学校表，所以都会红。calendar-weekday 不红：它的节次时间来自教务接口 |
+| M2 | 第 315 行「共 N 周」剥离改回「从第一个共删到行尾」（`/共.*$/`） | 1：week-markers | `管理学` 的 `共16周,1-15周(单)` 整行被丢、`1-8周(共8周),9-16周` 的 9–16 周丢失，课程数与周次都变 |
+| M3 | 第 323–325 行删掉「前缀单双标记先归属」的替换 | 1：week-markers | `(单)1-8周,(双)9-16周` 被并成 1–16 每周都上，并多出「单双同时出现」的提醒 |
+| M4 | 第 50 行顺推课间 `EXTEND_BREAK_MINUTES = 5` 改为 `15` | 1：basic | 第 11–12 节从 21:10–21:55 / 22:00–22:45 变成 21:20–22:05 / 22:20–23:05 |
+
+**还原校验**：变异前后 `parse.js` 的 SHA-256 一致（`786f1ab31fe13a91…`，变异脚本只写副本）。真文件跑 `check.js` 结果 `RESULT: PASS`，6 个 fixture 全部 MATCH。
+
+## 7. fixtures 与自检
+
+6 对合成用例（`_note` 里写明是编造的，课程、教师、教室均为虚构，无真实个人信息）：
+
+| 用例 | 覆盖什么 |
+|---|---|
+| `basic` | 节次时间取不到 → 上游 10 节表逐节钉住（第 5 节 14:40–15:25、第 10 节 20:20–21:05）；课表排到第 11–12 节 → H3 顺推补时间并写 warnings；校历取不到 → 推算开学日 2026-08-31、总周数 20 周；单双周、无教师、无教室、完全重复行、集中实践课 |
+| `merge-consecutive` | 同课同日同教室 1-2 与 3-4 合并成 1-4；1-8 周与 9-16 周取并集为 1-16；完全重复的 3-4 行只留一条 |
+| `calendar-weekday` | 校历第 1 周给周三 2026-09-09 → 开学日回退到周一 2026-09-07；节次时间接口给出完整 10 节 → 用教务的；节次写成「第3-4节」与「9-10」两种写法 |
+| `no-calendar-overweek` | 第二学期；校历取不到 → 推算开学日 2026-02-16（2 月 20 日所在周的周一）；课表最大周次 21 → 总周数抬到 21 并写明；节次时间取不到 → 内置 10 节 |
+| `long-warnings` | 两门超长课名（21 字与 23 字）缺教室、一门短课名缺教室、体育缺教师 → 不丢课（`null`）、按类型汇总、点名的课名截到 20 字并指向「编辑课程」；集中实践课四门，首个课名 28 字；两行认不出的周次写法；每条提醒不超 200 字 |
+| `week-markers` | 单/双标记归属与「共 N 周」剥离：`(单)1-8周,(双)9-16周` 与 `1-8周(单),9-16周(双)` 都读成 1–7 单周 + 10–16 双周；`1-15周(单) 共16周` 只读 1–15 单周；`1-8周(共8周),9-16周` 只剥括号备注、9–16 周不丢；`共16周,1-15周(单)` 只剥开头备注、不整行丢课 |
+
+自检：`node .test/port-batch5/tools/check.js D:/NullClass/jw-adapters/gdust` 最后一行 `RESULT: PASS`，6 个 fixture 全部 MATCH。期望值是先按代码逻辑手工推演写入的，再由自检比对，没有把 `parse.js` 的输出直接存成期望。
+
+## 8. 没能确定的事与已知风险（我们没有本校账号，真机没验过）
+
+1. **真实部署未验证**：广东科技学院是否有 cxRjc（节次时间）与 cxZcByXnxq（学期周次校历）两个菜单，没有账号无法验证。取不到就是 `null`，回落并写 `warnings`，不影响导入。
+2. **WebVPN 路径与查询串**取自上游脚本：`/http/77726476…7fd`（课表）与 `vpn-12-o1-172.16.254.1`（查询串默认片段）。脚本会优先沿用当前页面的 `vpn-…` 片段与前缀，但若学校更换 WebVPN 映射或改了路径，`loginUrl` 与 `scheduleUrlHint` 两行要跟着改。
+3. **同步抛错**：WebVPN 首页、CAS 页、登录页、门户页都是**同步**抛出提示（§1.1 场景 5–7）。宿主若只接 Promise 的 reject，这几种情况的提示会丢。模板的登录页判断也是同样写法，宿主是否按同步异常处理这些提示，本件没有验证，需要确认。
+4. **课表接口的真实响应形状**：fixture 是合成的（按上游脚本实际读取的字段形状编），只保证同样的输入永远得到同样的输出，**不保证解析在真实页面上是对的**。拿到真实响应后替换 fixture 并重跑 `check.js`，是最高优先级。
+5. **节次时间表来自上游 `TimeSlots`**，逐节照抄，没有与学校实际作息核对过。教务节次时间接口取得到时以教务为准；取不到时导入预览会提示核对。
+6. **开学日推算的锚点**（第一学期 9 月 1 日所在周的周一、第二学期 2 月 20 日所在周的周一）是模板通用规则，未核对广东科技学院的实际开学日。推算结果都写进了 `warnings`，请学生核对。
+7. **学期只能是页面上选中的那个**：要导入别的学期，用户要先在教务页面里切换再点「提取课表」。上游的学期选择框没有移植（§5 第 3 条）。
+8. **`allowHosts` 只写了 `172.16.254.1`**：这是任务卡给定的值，理由见 §3 第 3 条。若校内直连的地址变化，这一行要跟着改。
+
+## 9. 签名
+
+移植与审计：0x7E7-2023（haiku 移植，2026-10-20）。
+上游出处：`shiguang_warehouse` → `resources/GDUST/gdust.js`（快照 commit `19a65bf07a3e998fcfc69cee692387cdc0523c1a`，2026-10-19 拉取；本校脚本最后修改 `80e30cf`，2026-09-23，MIT，作者 星河欲转）。

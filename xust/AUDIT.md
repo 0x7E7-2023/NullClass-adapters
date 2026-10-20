@@ -1,0 +1,140 @@
+# 安全审计 —— 西安科技大学（正方教务新版 jwglxt，教务在学校 IP 上，http）
+
+## 0. 出处
+
+- 上游：`shiguang_warehouse` 的 `XUST/xust_01.js`（MIT），维护者（adapters.yaml 的 maintainer）`星河欲转`。
+  仓库 https://github.com/XingHeYuZhuan/shiguang_warehouse
+- 上游快照 `19a65bf07a3e998fcfc69cee692387cdc0523c1a`（2026-10-19 拉取）；本校脚本最后一次修改 `80e30cf`（2026-09-23，已用 `git log` 核对）。
+- 模板：`hueb`（批次八，已审计）。逐课特殊上课时间的处理参照 `qqhrit`（批次八，按移植手册 §4.4 丢自定义时间、按类型汇总进 warnings）。
+- 移植：0x7E7-2023（haiku 移植，2026-10-20）。
+
+## 1. 请求域与请求清单（与代码逐条对应）
+
+**允许主机**：`manifest.json` 的 `allowHosts` 只有 `59.74.174.150`（精确 IP，无通配）。
+所有请求都由 `extract.js` 里的 `jwBase()` 拼成**当前页面的同源地址**，主机名不写死在脚本里。
+
+`loginUrl` 是学校单点门户 `jwsso.xust.edu.cn`，只是学生手工登录的入口；**extract.js 从不请求门户主机**，所以它不进 `allowHosts`。
+
+| # | 方法 | 地址（`<base>` = 当前页面 origin + `/jwglxt`） | 干什么 | 取不到时怎么办 |
+|---|---|---|---|---|
+| 1 | GET | `<base>/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default` | 读课表首页的 `#xnm` / `#xqm` 下拉框（页面上已有时不发） | 抛出大白话错误（登录状态可能失效 / 请先打开课表页），不导入 |
+| 2 | POST | `<base>/kbcx/xskbcx_cxXsgrkb.html?gnmkdm=N2151`，体 `xnm=…&xqm=…&kzlx=ck&xsdm=&kclbdm=` | 取整学期排课（JSON） | 非 2xx 或格式不对：抛错，不导入 |
+| 3 | POST | `<base>/kbcx/xskbcx_cxRjc.html?gnmkdm=N2151`，体 `xnm=…&xqm=…&xqh_id=<课表行里的校区号>` | 取节次时间（作息） | 返回 `null`，`parse.js` 回落到上游写死的 10 节表并写 warnings |
+| 4 | POST | `<base>/kbcx/xskbcxZccx_cxZcByXnxq.html?gnmkdm=N2154`，体 `xnm=…&xqm=…` | 取学期周次校历（开学日、总周数） | 返回 `null`，`parse.js` 按推算开学日、总周数 20 周，并写 warnings |
+
+- 第 3、4 项的 `optionalJson` 吞掉一切错误（包括 HTTP 错误、网络错误、非 JSON），只让附加信息缺席，不让导入失败。
+- 门户页（路径里没有 `/jwglxt/`，`onPortalPage`）与教务登录页（`login_slogin.html`，`onLoginPage`）：**不发任何请求**，直接抛大白话提示。
+- 没有 POST 到任何其它地址，没有 POST 到门户，没有成绩、学籍、缴费、个人信息接口。
+
+## 2. 读了什么、交出去什么（逐字段）
+
+**读了什么**
+
+- 页面：`#xnm` / `#xqm` 下拉框的 `option` 的 `value`、`textContent`、`selected`（只读，不写、不提交）。
+- 课表接口 `kbList` 每行：`kcmc`、`xm`、`cdmc`、`xqj`、`jcs`、`zcd`、`xqh_id`（其余字段不读、不带出）。
+- 课表接口 `sjkList` 每行：`kcmc`。
+- 课表接口的记录总数（若响应里有 `total` / `totalResult` / `totalCount` / `count`，只取数字）。
+- 作息接口行：`jcmc` / `jc`、`qssj`、`jssj`。
+- 校历接口行：`zs` / `zsmc`、`zrq` / `zcrq` / `rq` / `ksrq`。
+
+**交出去什么**（`extract.js` 返回的 JSON 字符串）
+
+| 字段 | 内容 |
+|---|---|
+| `term` | `{ xnm, xqm, xnmText, xqmText }`：学年学期代码与页面上显示的文字 |
+| `today` | 本地日期 `yyyy-MM-dd`（推算开学日用） |
+| `campusId` | 第一条有校区号的课表行的 `xqh_id`（取作息用），没有则空串 |
+| `raw.kbList` | 白名单 7 个字段：`kcmc`、`xm`、`cdmc`、`xqj`、`jcs`、`zcd`、`xqh_id` |
+| `raw.sjkList` | 白名单 1 个字段：`kcmc` |
+| `total` | 记录总数（数字）或 `null` |
+| `periodTimes` | 白名单 4 个字段：`jcmc`、`jc`、`qssj`、`jssj`；取不到为 `null` |
+| `calendar` | 白名单 6 个字段：`zs`、`zsmc`、`zrq`、`zcrq`、`rq`、`ksrq`；取不到为 `null` |
+
+**不交出去**：`xsxx`（学生信息对象）、学号、姓名、学院、响应里的其它字段一律不带出，也不进 fixture。
+`periodTimes` / `calendar` 的白名单是本件相对模板的改进（见第 4 节）。
+
+## 3. 移植手册 §5 八条逐条结论
+
+| # | 检查项 | 结论 |
+|---|---|---|
+| 1 | 不碰凭据 | 合格。不读 `password` / 令牌 / `localStorage` / `cookie`。`credentials: 'include'` 只让浏览器自带的同源 cookie 随请求走，脚本本身不读取。 |
+| 2 | 不外发 | 合格。`fetch` 只有 `request()` 一处，地址全部由 `jwBase()` 拼成同源地址；没有 `XMLHttpRequest` / `sendBeacon` / `WebSocket` / 图片上报。 |
+| 3 | 请求域可控 | 合格。`allowHosts` 只有一个精确 IP，无通配；脚本不写死主机。 |
+| 4 | 只读课表 | 合格。只请求课表、作息、校历三类只读查询（POST 表单只是传参方式）。 |
+| 5 | 不埋点 | 合格。没有统计、上报、遥测。 |
+| 6 | 不 eval 远程代码 | 合格。没有 `eval` / `new Function`；`parse.js` 只对 `__ncInput` 做 `JSON.parse`。 |
+| 7 | 不写页面 | 合格。`extract.js` 只读 DOM（`querySelector` / `options`），不写 DOM、不改表单、不点击、不提交；课表首页 HTML 用 `DOMParser` 解析成离屏文档，不挂到页面上。 |
+| 8 | 不依赖用户输入之外的秘密 | 合格。`xnm` / `xqm` 来自页面，没有硬编码学号、令牌或他人信息。 |
+
+## 4. 与模板 hueb 的差异
+
+| 层 | hueb（模板） | xust（本件） |
+|---|---|---|
+| 入口 | WebVPN 映射主机 `202-206-194-100.vpn.hueb.edu.cn:8118`，路径带 `/jwglxt/` | 教务在学校 IP `59.74.174.150` 上，http，无 WebVPN 前缀；登录页在门户主机上 |
+| 非教务页判断 | 只判 `login_slogin.html` | 在此之上增加门户页判断（路径里没有 `/jwglxt/`），给「请先从学校门户进入教务系统」的提示 |
+| 作息内置表 | 上游 13 节表（`SCHOOL_PERIOD_TIMES`） | 上游 10 节表（逐节照抄 `XUST/xust_01.js` 的 `TimeSlots`） |
+| 逐课特殊上课时间 | 无（只有 `qqhrit` 有） | 新增 `specialTimeOf` / `noteSpecialTime`：照上游 `applyCustomTime` 判定，只写提醒，课照常按平时节次导入 |
+| 附加接口交出去的内容 | 作息、校历响应整包交出 | 只留白名单字段（`periodTimes` / `calendar` 经 `rowListOf` + `pickFields`） |
+| 周次 / 节次 / 合并 / H3 补时间 / 提醒限长 | 模板实现 | 原样保留（只改了注释、常量与提醒措辞里的学校名） |
+
+## 5. 上游里删掉 / 改掉的东西及理由
+
+| 上游 | 本件 | 理由 |
+|---|---|---|
+| `showAlert` 开场、`showPrompt` 输入起始学年（`validateYearInput`）、`showSingleSelection` 选学期 | 删；改为读页面上的 `#xnm` / `#xqm` | 拾光的桥能力；公共说明第 2 条：不弹窗，读下拉框 |
+| 学期码写死 `3` / `12`（`getSemesterCode`） | 改为读下拉框的 `value`（parse 侧 `termKind` 仍认 3 / 12 / 16 作兜底） | 学期码以页面为准 |
+| 请求地址写死 `http://59.74.174.150/jwglxt/...` | 改为 `window.location.origin` 拼出的同源地址 | 公共说明第 1 条：主机不写死 |
+| `if (!rawCourse.xm \|\| !rawCourse.cdmc …) continue` 严格过滤 | 放宽：只要求课名、星期、节次、周次；缺教师 / 教室照常导入 | 公共说明第 4 条；缺失数量按类型汇总进 warnings |
+| 逐课 `applyCustomTime` 直接改课程的时间 | 不改全局表；按类型汇总成一条提醒，课按平时节次导入 | 载荷只有学期级节次表（手册 §4.4） |
+| 上游 `parseWeeks` 简单版 | 模板的周次解析（覆盖「(单)」前缀、括号、混排） | 批次七、八审计的修正，保持模板 |
+| 整个 `kbList` 原样交给解析（含 `xsxx` 等字段） | 只带白名单字段 | 公共说明第 3 条、移植手册 §5 第 4 条 |
+| `[...new Set(weeks)]`、`for...of`、`async/await`、箭头函数、模板串、`Array.from` 等 | 改为 ES5 写法 | CI 跑 Rhino 1.8.0，只支持 ES5 |
+| 没有结果时 `window.shiguangBridge.showToast("未能获取课表数据…")` 后返回 `null` | 没有解析到课程时抛出大白话错误「这个学期没有解析到任何课程…」 | 桥能力不移植；错误原样显示给学生 |
+| 保存、预设时间段导入（`savePresetTimeSlots`）、`saveCourseConfig`、`notifyTaskCompletion` | 全部不移植 | 空课由宿主保存，适配器只交载荷（模板同） |
+| 开学日与总周数：上游不取校历，`semesterStartDate: null`、总周数 20 | 多取校历（N2154），取不到才推算并写 warnings；总周数内置 20 | 手册 §4.2：有校历用校历，没有就推算并说明 |
+
+## 6. 变异测试记录
+
+在临时副本（`C:/Users/23703/AppData/Local/Temp/xust-port9/mut/`）上逐处改坏 `parse.js`，每处跑一次自检；正式目录未被改动。
+
+| 编号 | 改坏哪一处 | 变红的用例 |
+|---|---|---|
+| M1 | `specialTimeOf`：去掉「节次起点不超过第 4 节」的判断（只剩「终点不小于第 3 节」） | `special-room`（体育馆 5-6 节被误计入） |
+| M2 | `specialTimeOf` 的楼号正则：`(9\|1[0-8])` 改成 `(8\|9\|1[0-8])`（把 8 号楼也算进去） | `special-room`（1-8-101 被误计入） |
+| M3 | `weeksOf` 的「共 N 周」剥离：`/共\s*[0-9]+\s*周?/g` 改成 `/共.*$/g`（整行吞掉） | `week-markers`（课D、课E 的周次被吞） |
+| M4 | `weeksOf` 的单/双标记前缀折叠：前瞻 `(?=[0-9])` 改成 `(?=[0-9]{9})`（前缀标记不再归属） | `week-markers`（课A、课B 的单双周错位） |
+| M5 | `shortName` 的课名上限：`NAME_TEXT_LIMIT` 20 改成 30（长课名不截断） | `long-warnings`（点名课名超过 20 字） |
+| M6 | H3 顺推的课间：`EXTEND_BREAK_MINUTES` 5 改成 6 | `basic`（第 11-12 节的时间错位） |
+
+全部六处都让对应用例变红。变异只在临时副本上做，正式目录从未被改动；正式目录自检仍为 `RESULT: PASS`。
+
+## 7. fixtures 与自检
+
+共 6 对（均为合成数据，课程、教师、教室虚构，无真实姓名、学号）：
+
+1. `basic`：节次时间接口取不到 → 上游 10 节逐节钉住（第 3 节 10:05-10:55、第 9 节 19:00-19:50）；课表排到第 11-12 节 → H3 顺推；校历取不到 → 推算开学日（2026-08-31）、总周数 20；缺教师、缺教室照常导入；完全重复行只留一条；集中实践课只点课名。
+2. `calendar-weekday`：校历第 1 周日期是周三 → 开学日回退到周一 2026-09-07；节次接口给的包在信封里 → 用教务的；同课 1-2 与 3-4 合并成 1-4 节；节次写成「第3-4节」能认；周次为空的一行计入跳过。
+3. `no-calendar-overweek`：第二学期 → 锚点推算开学日 2027-02-15；课表最大周次 21 → 总周数抬到 21 并说明；节次接口只给 1-8 节 → 9-12 节用空课默认的节次时间补齐并说明；「17-21周(单)」读成单周。
+4. `special-room`：逐课特殊上课时间的判定（体育馆 3-4 与 1-12-305 1-4 进提醒；1-8-101、2-19-201、体育馆 5-6、教室为空不进提醒），课本身节次不变。
+5. `long-warnings`：长课名提醒（四门特殊时间课点名 3 门、课名截到 20 字加「等」；超长课名的缺教师 / 缺地点按类型汇总；超长集中实践课点名截断；两行周次读不出（一行缺周次、一行写法认不出），按类型计数并点名写法）。
+6. `week-markers`：单/双标记与「共 N 周」：前缀与后缀两种写法、括号备注、「1-16(单周)」、「1-3,5-9周」。
+
+每对的期望值都是先按规范与代码逻辑手工推出来的，再与自检比对；未把 `parse.js` 的输出直接存成 expected。`manifest.json` 的 `fixtures` 共 6 条，名称均以「合成用例：」开头。
+
+自检：`node .test/port-batch5/tools/check.js D:/NullClass/jw-adapters/xust` → `RESULT: PASS`。
+
+## 8. 没能确定的事与已知风险（我们没有本校账号，真机没验过）
+
+- **真机未验证**：没有本校账号，所有请求路径、请求体、字段名都照上游脚本与正方标准接口写，未在真实教务系统上跑过。extract.js 只在 Node 桩里跑过（`/jwglxt/` 同源拼接、四个请求的地址与请求体、门户与登录页不发请求、校历 500 时回落为 null），见报告。
+- **明文 http**：教务系统是 `http://` 的公网 IP，课表数据在网络上是明文传输。这是学校部署的情况，适配器无法改变；提醒学生在可信网络中使用。
+- **主机可能变更**：`59.74.174.150` 是上游写死的地址；学校改 IP 后 `allowHosts`、`scheduleUrlHint` 都要跟着改。
+- **特殊上课时间规则**：照上游写的两个固定时间（第 3 节 10:25-11:15、第 4 节 11:20-12:10）与楼号规则判定；上游自己的描述是「已适配西区差异时间」，学校若改了规则，提醒会不准。提醒文字里的时间是写死的。
+- **节次时间表**：内置 10 节表来自上游 2026-09-23 版本的脚本，可能与学校现行作息不符；教务作息接口（N2151 的 `cxRjc`）在本校是否可用未知，取不到就回落内置表并提醒学生核对。
+- **校历接口**：N2154 的 `cxZcByXnxq` 在本校是否可用未知；取不到就推算开学日（第一学期 9 月 1 日所在周的周一，第二学期 2 月 20 日所在周的周一）并提醒核对。
+- **学期码假设**：假定 `xqm` 为正方标准代码（3 / 12 / 16）；页面下拉框的文字「第一学期」「第二学期」「第三学期」用于学期名。
+- **只导入当前选中的学期**：页面上选中哪个学期就导哪个，提醒里写明了。
+- **白名单主机**：`loginUrl` 的门户主机不在 `allowHosts` 里，因为脚本不请求它；若学校把教务接口挪到别的主机上，这里要同步加。
+
+## 9. 签名
+
+0x7E7-2023（haiku 移植，2026-10-20）

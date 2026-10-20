@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "key": "zwu",
+  "name": "浙江万里学院",
+  "initial": "Z",
+  "version": "1.0.0",
+  "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://ehall.zwu.edu.cn/_layouts/15/ZWUWSBS/BSDT/HomePage.aspx",
+  "scheduleUrlHint": "https://jw.zwu.edu.cn/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["jw.zwu.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 10 月导入走冬令时 14 节表（第 6 节 13:30-14:15、第 14 节 21:20-22:05），并写出换季提醒（夏令时第 6、10 节起止）；单周/双周、同课连续节次合并、缺教师与缺教室各一门，校历给出开学日",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：6 月导入走夏令时 14 节表（第 6 节 14:00-14:45、第 10 节 18:30-19:15），换季提醒改写成「从当年 10 月 1 日起换用冬令时」；校历第 1 周只给 zcrq 字段",
+      "extracted": "fixtures/summer.extracted.json",
+      "expected": "fixtures/summer.expected.json"
+    },
+    {
+      "name": "合成用例：today 缺失 → 节次时间按冬令时导入并说明「今天的日期没有读到」；校历取不到 → 开学日推算为 2026-08-31（9 月 1 日所在周的周一），总周数 20",
+      "extracted": "fixtures/today-missing.extracted.json",
+      "expected": "fixtures/today-missing.expected.json"
+    },
+    {
+      "name": "合成用例：课表排到第 15、16、17 节 → 第 15、16 节按第 14 节下课后顺推补上、第 17 节越过 23:59 不补并说明；校历第 1 周只给 ksrq 且是周三（2026-09-02）→ 开学日回退到周一 2026-08-31",
+      "extracted": "fixtures/period-overflow.extracted.json",
+      "expected": "fixtures/period-overflow.expected.json"
+    },
+    {
+      "name": "合成用例：单/双标记归属与「共 N 周」备注剥离 —— 前缀「(单)1-8周,(双)9-16周」、后缀「1-8周(单),9-16周(双)」、「1-15周(单) 共16周」、「1-8周(共8周),9-16周」，并钉住教学班序号「(1)」不当周次",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 缺教师 / 缺教室 —— 六门超长课名同时缺教师、缺教室，一门都不丢（teacher / location 为 null），提醒按课程名汇总、课名截到 20 字、每条不超过 200 字，并指向「编辑课程」",
+      "extracted": "fixtures/long-name-missing.extracted.json",
+      "expected": "fixtures/long-name-missing.expected.json"
+    },
+    {
+      "name": "合成用例：同课合并 —— 线性代数 1-2 节与 3-4 节（同为 1-8 周）连续合成 1-4、完全重复的排课行只留一条、同节次 1-8 周与 9-16 周取并集；校历第 1 周只给 rq 字段（「日期/日期」形式），开学日取 2026-09-07",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    }
+  ]
+}
