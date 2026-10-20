@@ -1,0 +1,14 @@
+{
+  "_note": "合成 fixture（1.1.0 跟进上游）：教务首页「当前教学周 3 / 20」+ 服务器日期 2027-03-16 倒推出 2027-03-01（第二学期），而教务当前学期是 2026-2027 第一学期 → 不用这条，开学日按第一学期规则推算（2026-08-31），总周数取课表最大周次 16。",
+  "url": "http://jwgl2018.xatu.edu.cn/eams/courseTableForStd.action",
+  "today": "2027-03-16",
+  "tagId": "semesterBar20826294511Semester",
+  "currentSemesterId": "20261",
+  "semesterRaw": "{semesters:{\"2026-2027\":[{id:20261,schoolYear:\"2026-2027\",name:\"1\"},{id:20262,schoolYear:\"2026-2027\",name:\"2\"}]},semesterId:20261}",
+  "courseTableHtml": "\nvar unitCount = 14;\n<script type=\"text/javascript\">\nvar teachers = [{id:\"t1\",name:\"李华\",color:\"#000000\"}];\nactivity = new TaskActivity(\"1\",\"李华\",\"20001(B0101.01)\",\"程序设计基础\",\"\",\"教1-301\",\"0111111111111111100\");\nindex = 1*unitCount+4;\nindex = 1*unitCount+5;\n</script>\n",
+  "homeWeek": {
+    "week": "3",
+    "total": "/ 20",
+    "serverDate": "2027-03-16"
+  }
+}

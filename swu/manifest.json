@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "key": "swu",
+  "name": "西南大学",
+  "initial": "X",
+  "version": "1.0.0",
+  "author": "上游 小漫君（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://i.swu.edu.cn/",
+  "scheduleUrlHint": "https://jw.swu.edu.cn/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["jw.swu.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 节次时间取不到 → 内置 14 节逐节（第 5 节 12:10-12:55、第 14 节 21:10-21:55）；「第7周」「1~16周」「1至8周」「1,3,5周」「2，4，6周」（全角逗号）「1-15周（单）」（全角括号）各一门；校历取到 → 开学日 2026-09-07、总周数 20",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：备注 · 重修标记与选课备注按「 | 」拼接；同课同教师两行备注取并集（重修 | 选修 | 英语限选，选修不重复）；只有空白的备注与缺字段的备注都是 null；周次原文不进备注",
+      "extracted": "fixtures/note-merge.extracted.json",
+      "expected": "fixtures/note-merge.expected.json"
+    },
+    {
+      "name": "合成用例：单/双标记 · 前缀「(单)1-8周,(双)9-16周」与「1-15周(单) 共16周」「共16周,1-15周(单)」「1-8周(共8周),9-16周」，「共N周」只剥备注本身、标记各归各段",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：每周起始日 · qsxqj=7（周日），校历第 1 周为周一 2026-09-07 → 开学日回退到周日 2026-09-06；课表最晚第 18 周与校历 18 周一致，不抬高总周数",
+      "extracted": "fixtures/calendar-sunday.extracted.json",
+      "expected": "fixtures/calendar-sunday.expected.json"
+    },
+    {
+      "name": "合成用例：校历取不到 · 开学日按 9 月 1 日所在周推算为 2026-08-31（qsxqj 缺省按周一）；课表最晚第 23 周 → 总周数抬到 23 并说明；节次时间内置 14 节",
+      "extracted": "fixtures/no-calendar-overweek.extracted.json",
+      "expected": "fixtures/no-calendar-overweek.expected.json"
+    },
+    {
+      "name": "合成用例：节次时间接口返回 12 节（信封 {rows:[…]}）→ 采用教务的 12 节；课表用到第 13 节，教务表没有覆盖，按上一节下课后顺推补上并说明",
+      "extracted": "fixtures/api-periods.extracted.json",
+      "expected": "fixtures/api-periods.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 缺教师 / 缺教室 → 照常导入（teacher / location 为 null）、提醒按类型汇总计数、点名课名截到 20 字；集中实践课四门（只点名前三门、课名截断）；缺节次与认不出的周次各一行被跳过并说明；每条提醒不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    }
+  ]
+}

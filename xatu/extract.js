@@ -4,7 +4,8 @@
     //
     // 移植自 shiguang_warehouse 的 XATU/myschool.js
     //   https://github.com/XingHeYuZhuan/shiguang_warehouse  （MIT，上游 maintainer 晨熯）
-    //   上游快照 e62554a4034386b893bcd6813c7b2b64f8c730a3（2026-09-12）
+    //   上游快照 e62554a4034386b893bcd6813c7b2b64f8c730a3（2026-09-12）；
+    //   1.1.0 跟进上游 b91e3fa（2026-10-10）/ 983137a（2026-10-18）：多取一次教务首页的「当前教学周」（见 ⑧）
     //   上游文件头自称「基于天津农学院适配脚本」—— 同族的 tjau / hfnu 与本件在解析那段确实是
     //   逐字克隆（同样的 powerSplit → parseTaskActivities → 位图 → idxRegex），只有主机、
     //   作息表、提示语不同。移植时按本校自己的主机与作息另外造用例，没有照抄邻件的期望值。
@@ -31,11 +32,15 @@
     //      JSON.parse 解析（该校该接口就是一份 JSON）。
     //   ⑦ 学生标识 ids 是接口自己的参数（上游同款，进请求体、不出站），parse.js 不需要它，
     //      载荷里也不会出现。学号不落进任何交出去的数据。
+    //   ⑧ 1.1.0：上游改为从教务首页（homeExt!main.action）的「当前教学周 N / M」与响应头 Date 倒推开学日。
+    //      这里照样取一次首页，但**只交出**那三个值（第几周、「/ M」那段文字、北京时间的服务器日期），
+    //      首页其余内容（姓名等）一概不交；倒推与学期核对在 parse.js 里做。取不到交 null，不影响导入。
     //
-    // 取数方式：同源请求，三条，全部打在本校教务主机上（地址都由 window.location.origin 拼出来）：
+    // 取数方式：同源请求，四条，全部打在本校教务主机上（地址都由 window.location.origin 拼出来）：
     //   ① GET  /eams/courseTableForStd.action?sf_request_type=ajax          → 学号 ids + 学期栏 tagId
     //   ② POST /eams/dataQuery.action?sf_request_type=ajax                  → 学期列表（原样交出）
     //   ③ POST /eams/courseTableForStd!courseTable.action?sf_request_type=ajax → 课表页全文
+    //   ④ GET  /eams/homeExt!main.action?sf_request_type=ajax               → 当前教学周（可选，只交三个值）
     // 登录全程由用户在 WebView 里手工完成，本脚本不读、不存、不上报任何账号信息，
     // 也不碰成绩 / 学籍 / 个人信息等其它接口。
 
@@ -73,7 +78,7 @@
         return fetch(url, options).then(function (response) {
             if (response.status < 200 || response.status >= 300) {
                 throw new Error(
-                    '教务系统返回 HTTP ' + response.status +
+                    '教务系统返回错误（代码 ' + response.status + '）' +
                     '：登录状态可能已失效，请重新登录后再点「提取课表」'
                 );
             }
@@ -125,11 +130,64 @@
         return now.getFullYear() + '-' + pad(now.getMonth() + 1) + '-' + pad(now.getDate());
     }
 
+    function clean(value) {
+        return text(value).replace(/^\s+|\s+$/g, '');
+    }
+
+    function pad2(n) {
+        return (n < 10 ? '0' : '') + n;
+    }
+
+    // 服务器日期（响应头 Date）→ 北京时间的 yyyy-MM-dd；读不到给 null（parse.js 退回 today）
+    function beijingDateOf(header) {
+        var time = Date.parse(text(header));
+        if (!isFinite(time)) return null;
+        var d = new Date(time + 8 * 3600000);
+        return d.getUTCFullYear() + '-' + pad2(d.getUTCMonth() + 1) + '-' + pad2(d.getUTCDate());
+    }
+
+    // ⑧ 教务首页里的「当前教学周」：<strong>当前教学周</strong> 的父元素里，span 是第几周、i 是「/ 总周数」
+    // （与上游 inferCurrentSemester 读的位置一致）。首页 HTML 只在这里离线解析，不插入当前页面，也不交出去。
+    function homeWeekOf(html, dateHeader) {
+        if (typeof DOMParser === 'undefined') return null;
+        var doc = new DOMParser().parseFromString(text(html), 'text/html');
+        var strongs = doc.querySelectorAll('strong');
+        for (var i = 0; i < strongs.length; i++) {
+            if (clean(strongs[i].textContent) !== '当前教学周') continue;
+            var box = strongs[i].parentElement;
+            if (!box) return null;
+            var span = box.querySelector('span');
+            var mark = box.querySelector('i');
+            return {
+                week: span ? clean(span.textContent).substring(0, 20) : '',
+                total: mark ? clean(mark.textContent).substring(0, 20) : '',
+                serverDate: beijingDateOf(dateHeader)
+            };
+        }
+        return null;
+    }
+
+    function fetchHomeWeek() {
+        return fetch(eamsBase() + '/homeExt!main.action?sf_request_type=ajax', {
+            method: 'GET',
+            credentials: 'include',
+            headers: { 'X-Requested-With': 'XMLHttpRequest', 'Accept': '*/*' }
+        }).then(function (response) {
+            if (response.status < 200 || response.status >= 300) return null;
+            var dateHeader = response.headers && response.headers.get ? response.headers.get('Date') : null;
+            return response.text().then(function (html) {
+                return homeWeekOf(html, dateHeader);
+            });
+        }).then(null, function () {
+            return null;
+        });
+    }
+
     return get(eamsBase() + '/courseTableForStd.action?sf_request_type=ajax').then(function (entryHtml) {
         var params = paramsFromEntry(entryHtml);
         if (!params) {
             throw new Error(
-                '没能识别教务参数（学号 / 学期栏）：登录状态可能已失效，' +
+                '没能读到课表页的信息：登录状态可能已失效，' +
                 '请重新登录教务系统后再点「提取课表」'
             );
         }
@@ -142,14 +200,17 @@
                     encodeURIComponent(params.currentSemesterId) + '&ids=' + encodeURIComponent(params.ids);
                 return post(eamsBase() + '/courseTableForStd!courseTable.action?sf_request_type=ajax', body)
                     .then(function (courseTableHtml) {
-                        return JSON.stringify({
-                            url: text(window.location ? window.location.href : ''),
-                            today: todayIso(),
-                            // 学号是接口自己的参数（进请求体），parse.js 用不到它，也不交出去
-                            tagId: params.tagId,
-                            currentSemesterId: params.currentSemesterId,
-                            semesterRaw: text(semesterRaw),
-                            courseTableHtml: text(courseTableHtml)
+                        return fetchHomeWeek().then(function (homeWeek) {
+                            return JSON.stringify({
+                                url: text(window.location ? window.location.href : ''),
+                                today: todayIso(),
+                                // 学号是接口自己的参数（进请求体），parse.js 用不到它，也不交出去
+                                tagId: params.tagId,
+                                currentSemesterId: params.currentSemesterId,
+                                semesterRaw: text(semesterRaw),
+                                courseTableHtml: text(courseTableHtml),
+                                homeWeek: homeWeek
+                            });
                         });
                     });
             });

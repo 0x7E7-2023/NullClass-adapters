@@ -1,0 +1,156 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "有课程的教师没能直接读出，已改用课表里列出的任课教师，请核对教师",
+    "开学日期按教务首页显示的「当前教学周：第 7 周」推算为 2026-09-07，请在学期管理里核对",
+    "节次时间按西安工业大学的上课时间导入（不是从教务系统读取的），请对照学校通知核对",
+    "教3楼第 3-4 节的实际上课时间是 10:10-11:40，课表里按 10:20-12:00 显示，涉及 1 门课（「线性代数」），请以学校安排为准",
+    "只导入了教务当前选中的这个学期（2026-2027学年第一学期），需要其它学期请在教务系统里切到那个学期再提取一次"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 18,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:20",
+          "end": "09:05"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:15",
+          "end": "10:00"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:20",
+          "end": "11:05"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:15",
+          "end": "12:00"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:55",
+          "end": "15:40"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:00",
+          "end": "16:45"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:55",
+          "end": "17:40"
+        },
+        {
+          "periodIndex": 9,
+          "start": "18:10",
+          "end": "18:55"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:05",
+          "end": "19:50"
+        },
+        {
+          "periodIndex": 11,
+          "start": "20:00",
+          "end": "20:45"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:55",
+          "end": "21:40"
+        }
+      ],
+      "courses": [
+        {
+          "name": "线性代数",
+          "teacher": "王芳",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教3-201"
+            }
+          ]
+        },
+        {
+          "name": "线性代数习题课",
+          "teacher": "刘洋",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 1,
+              "startWeek": 2,
+              "endWeek": 16,
+              "weekType": "EVEN",
+              "location": "教3-201"
+            }
+          ]
+        },
+        {
+          "name": "大学物理",
+          "teacher": "孙强",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 1,
+              "endPeriod": 1,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教2-105"
+            },
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 2,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教2-105"
+            }
+          ]
+        },
+        {
+          "name": "体育理论",
+          "teacher": "陈刚",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教30-101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

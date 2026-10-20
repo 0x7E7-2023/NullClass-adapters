@@ -1,0 +1,14 @@
+{
+  "_note": "合成 fixture（1.1.0 跟进上游）：学期列表为空、首页没给服务器日期 → 用 today 2026-10-20 与「当前教学周 7 / 18」倒推 2026-09-07（没有学期可比对，直接用），总周数 18；学期名按导入日期推；教室恰好是「教3」、第 3-4 节 → 提醒；教师为空 → null。",
+  "url": "http://jwgl2018.xatu.edu.cn/eams/courseTableForStd.action",
+  "today": "2026-10-20",
+  "tagId": "semesterBar20826294511Semester",
+  "currentSemesterId": "",
+  "semesterRaw": "",
+  "courseTableHtml": "\nvar unitCount = 14;\n<script type=\"text/javascript\">\nvar teachers = [{id:\"t1\",name:\"\",color:\"#000000\"}];\nactivity = new TaskActivity(\"1\",\"\",\"30001(C0101.01)\",\"工程制图\",\"\",\"教3\",\"0111111100000000000\");\nindex = 3*unitCount+2;\nindex = 3*unitCount+3;\n</script>\n",
+  "homeWeek": {
+    "week": "7",
+    "total": "/ 18",
+    "serverDate": null
+  }
+}

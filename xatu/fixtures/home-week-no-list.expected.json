@@ -1,0 +1,100 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务没有给出可用的学期列表，学期名、开学日与总周数都只能推算，请逐项核对",
+    "教务没有给出学期名，已按导入日期推成「西安工业大学 2026-2027学年第一学期」，请到学期管理里核对",
+    "开学日期按教务首页显示的「当前教学周：第 7 周」推算为 2026-09-07，请在学期管理里核对",
+    "节次时间按西安工业大学的上课时间导入（不是从教务系统读取的），请对照学校通知核对",
+    "教3楼第 3-4 节的实际上课时间是 10:10-11:40，课表里按 10:20-12:00 显示，涉及 1 门课（「工程制图」），请以学校安排为准",
+    "只导入了教务当前选中的这个学期（西安工业大学 2026-2027学年第一学期），需要其它学期请在教务系统里切到那个学期再提取一次"
+  ],
+  "terms": [
+    {
+      "name": "西安工业大学 2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 18,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:20",
+          "end": "09:05"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:15",
+          "end": "10:00"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:20",
+          "end": "11:05"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:15",
+          "end": "12:00"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:55",
+          "end": "15:40"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:00",
+          "end": "16:45"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:55",
+          "end": "17:40"
+        },
+        {
+          "periodIndex": 9,
+          "start": "18:10",
+          "end": "18:55"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:05",
+          "end": "19:50"
+        },
+        {
+          "periodIndex": 11,
+          "start": "20:00",
+          "end": "20:45"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:55",
+          "end": "21:40"
+        }
+      ],
+      "courses": [
+        {
+          "name": "工程制图",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 7,
+              "weekType": "ALL",
+              "location": "教3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

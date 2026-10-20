@@ -1,0 +1,97 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务首页显示的当前教学周属于 2026-2027 学年第二学期，与导入的学期不同，开学日期已按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对",
+    "节次时间按西安工业大学的上课时间导入（不是从教务系统读取的），请对照学校通知核对",
+    "只导入了教务当前选中的这个学期（2026-2027学年第一学期），需要其它学期请在教务系统里切到那个学期再提取一次"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 16,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:20",
+          "end": "09:05"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:15",
+          "end": "10:00"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:20",
+          "end": "11:05"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:15",
+          "end": "12:00"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:55",
+          "end": "15:40"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:00",
+          "end": "16:45"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:55",
+          "end": "17:40"
+        },
+        {
+          "periodIndex": 9,
+          "start": "18:10",
+          "end": "18:55"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:05",
+          "end": "19:50"
+        },
+        {
+          "periodIndex": 11,
+          "start": "20:00",
+          "end": "20:45"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:55",
+          "end": "21:40"
+        }
+      ],
+      "courses": [
+        {
+          "name": "程序设计基础",
+          "teacher": "李华",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教1-301"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -3,7 +3,7 @@
   "key": "xatu",
   "name": "西安工业大学",
   "initial": "X",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "上游 晨熯（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "http://jwgl2018.xatu.edu.cn",
@@ -37,6 +37,21 @@
       "name": "合成用例：第二学期 + 教务学期日历第 1 周从周三 2026-02-25 开始 → 开学日必须回退到那一周的周一 2026-02-23（手册 §4.3）；学期名用教务的学年学期拼成「2025-2026学年第二学期」",
       "extracted": "fixtures/second-term.extracted.json",
       "expected": "fixtures/second-term.expected.json"
+    },
+    {
+      "name": "合成用例：学期列表不带起止日期 → 开学日按教务首页「当前教学周 7 / 18」与服务器日期倒推、总周数取 18；同一块两条活动各用自己的 actTeachers；同课两个教学班（课程序号不同）不并成一块；教3楼第 3-4 节提醒实际时间，教30 不算",
+      "extracted": "fixtures/home-week.extracted.json",
+      "expected": "fixtures/home-week.expected.json"
+    },
+    {
+      "name": "合成用例：教务首页的当前教学周倒推出第二学期，与教务当前学期（第一学期）对不上 → 不用，开学日按第一学期规则推算并说明",
+      "extracted": "fixtures/home-week-mismatch.extracted.json",
+      "expected": "fixtures/home-week-mismatch.expected.json"
+    },
+    {
+      "name": "合成用例：没有学期列表、首页没给服务器日期 → 用导入日期与当前教学周倒推开学日；学期名按导入日期推；教室恰好是「教3」第 3-4 节 → 提醒",
+      "extracted": "fixtures/home-week-no-list.extracted.json",
+      "expected": "fixtures/home-week-no-list.expected.json"
     }
   ]
 }

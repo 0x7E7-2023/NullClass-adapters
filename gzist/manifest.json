@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "key": "gzist",
+  "name": "广州理工学院",
+  "initial": "G",
+  "version": "1.0.0",
+  "author": "上游 YT-O5（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://ids.gzist.edu.cn/lyuapServer/login?service=http%3A%2F%2Fjw.gzist.edu.cn%2Fsso%2Flyiotlogin",
+  "scheduleUrlHint": "http://jw.gzist.edu.cn/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["jw.gzist.edu.cn", "webvpn.gzist.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 周次写法（周数：前缀、顿号分段、(单) 后缀、2-16单周）+ 校历第 1 周周一开学 + 内置 12 节逐节钉住 + 排到第 13 节顺推补时间 + 缺教师 / 缺教室照常导入 + 集中实践课 + 完全重复行只留一条",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：节次边界 · 第9-10节 / 0102 两位一拼 / 11-12节 / 1,2 逗号 / 1-2,5-6 多段提醒；第 9-12 节相接合并；第二学期无校历 → 推算 2026-02-16；课表 total 写 12 条实际 7 行 → 对账提醒",
+      "extracted": "fixtures/boundary-periods.extracted.json",
+      "expected": "fixtures/boundary-periods.expected.json"
+    },
+    {
+      "name": "合成用例：单/双标记归属与「共 N 周」备注 · (单)1-8周,(双)9-16周 与后缀写法都读成单周 1-7 + 双周 10-16；1-15周（单）共16周；1-8周(共8周),9-16周 不丢 9-16；共16周,1-15周(单) 不整行丢；(1) 教学班序号与 (实验) 备注各提醒一次",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：校历第 1 周给周三（zcrq 带时分秒）→ 开学日回退到那一周的周一 2026-09-07；同名不同教师的两门课各自成课；校历总周数 20 周",
+      "extracted": "fixtures/calendar-weekday.extracted.json",
+      "expected": "fixtures/calendar-weekday.expected.json"
+    },
+    {
+      "name": "合成用例：无校历 → 夏季学期按 7 月 1 日所在周的周一推算 2026-06-29；课表最大第 22 周 → 总周数抬到 22 并说明；31 周丢弃并提醒；「第一到十六周」「待定」「另行安排」三行认不出，跳过并点名写法",
+      "extracted": "fixtures/no-calendar-overweek.extracted.json",
+      "expected": "fixtures/no-calendar-overweek.expected.json"
+    },
+    {
+      "name": "合成用例：带课名的提醒不超 200 字 · 两门超 20 字的课名分别缺教师、缺教室，体育两项都缺；四门超长集中实践课只点名前三门；三行认不出的周次；课名统一截到 20 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：合并 · 线性代数 1-2 与 3-4 同周相接合成 1-4；完全重复的行（两处）只留一条；同节次不同周次不合并；大学物理同节次两个周次段取并集 1-16",
+      "extracted": "fixtures/merge-dedupe.extracted.json",
+      "expected": "fixtures/merge-dedupe.expected.json"
+    }
+  ]
+}

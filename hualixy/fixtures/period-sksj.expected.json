@@ -1,0 +1,43 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第二学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第二学期 = 2 月 20 日往前回退到周一」推算为 2027-02-15，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期校历，学期总周数按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "课表用到了第 5 节，现有的节次时间没有覆盖，已补上：第 5 节按上一节下课后课间 5 分钟、每节 45 分钟顺推，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2027-02-15",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "14:30", "end": "15:15" },
+        { "periodIndex": 5, "start": "15:20", "end": "16:05" }
+      ],
+      "courses": [
+        {
+          "name": "大学物理",
+          "teacher": "壬老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "物理楼301" }
+          ]
+        },
+        {
+          "name": "程序设计",
+          "teacher": "癸老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 4, "endPeriod": 5, "startWeek": 3, "endWeek": 10, "weekType": "ALL", "location": "机房201" }
+          ]
+        }
+      ]
+    }
+  ]
+}

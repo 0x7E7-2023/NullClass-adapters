@@ -3,7 +3,8 @@
     //
     // 移植自 shiguang_warehouse 的 XATU/myschool.js
     //   https://github.com/XingHeYuZhuan/shiguang_warehouse  （MIT，上游 maintainer 晨熯）
-    //   上游快照 e62554a4034386b893bcd6813c7b2b64f8c730a3（2026-09-12）
+    //   上游快照 e62554a4034386b893bcd6813c7b2b64f8c730a3（2026-09-12）；
+    //   1.1.0 跟进上游 b91e3fa（2026-10-10）与 983137a（2026-10-18），快照 19a65bf，改动见文件头末尾 ⑮–⑲
     //
     // 上游把取数与解析揉在同一个自执行脚本里；这里只做纯转换（不碰页面、不发请求，CI 里用 Rhino 实跑），
     // 取数全部在 extract.js。上游解析那段的核心三件（powerSplit / mergeContinuousLessons /
@@ -47,11 +48,24 @@
     //      是逐数组比对的。这里改成按码位比较，课程顺序按首次出现的活动排（载荷语义与顺序无关）。
     //   ⑭ 周次集合先按极大段切（步长 1 → ALL、步长 2 → 单/双周），一个活动可以切出多个 block
     //      —— 手册 §4.1，与同族其它移植件同一口径。
+    //
+    // 1.1.0 跟进上游（b91e3fa / 983137a）：
+    //   ⑮ 开学日多一条来源：学期日历没给起止日期时，用教务首页「当前教学周 N / 共 M 周」与服务器日期倒推
+    //      第 1 周周一、总周数取 M（上游 inferCurrentSemester）。倒推出的学年学期与教务当前学期对不上就不用
+    //      （上游同样只在「所选学期就是当前学期」时用）。推算值照例写进 warnings。
+    //   ⑯ 合并键加课程序号（args[2] 末尾括号里那段）：同名同师同教室同星期、但序号不同的两个教学班不再
+    //      并成一块。上游还把序号拼进了课名，这里不拼（课名保持教务原样）。
+    //   ⑰ 教师按活动取：同一块里多条活动各自前面有自己的 actTeachers 时，每条用自己的（上游 983137a）；
+    //      活动前面找不到就沿用上一条的，再找不到退回整块的姓名（1.0.0 的口径）。
+    //   ⑱ 教 3 楼第 3-4 节：上游把这类课改成 10:10-11:40 的自定义时间。载荷没有单节自定义时间，
+    //      按手册 §4.4 照常按节次放入，另写一条 warnings 说明实际时间。
+    //   ⑲ 提醒与报错改成大白话（docs/ux-writing.md），不再出现 unitCount、位图、上游脚本这类词。
 
     var data = JSON.parse(typeof __ncInput === 'undefined' ? '{}' : __ncInput);
     var courseHtml = rawText(data.courseTableHtml);
     var todayIso = text(data.today);
     var currentSemesterId = text(data.currentSemesterId);
+    var homeWeek = data.homeWeek && typeof data.homeWeek === 'object' ? data.homeWeek : null;
 
     // 复合键（课名 + 教师 + 教室 + 星期）的分隔符取 NUL。用 String.fromCharCode 取，
     // 源码里既不出现控制字符、也不出现 unicode 转义序列（第一批有两个适配器把转义序列
@@ -92,7 +106,7 @@
         if (line.length > MAX_WARNING_CHARS) line = line.substring(0, MAX_WARNING_CHARS - 1) + '…';
         if (warnings.indexOf(line) >= 0) return;
         if (warnings.length >= MAX_WARNINGS - 1) {
-            var tail = '另有说明因为超出上限没有显示，请把这份课表反馈给适配器作者';
+            var tail = '另有几条提醒没有显示；如发现课表有误，请反馈给我们';
             if (warnings.indexOf(tail) < 0) warnings.push(tail);
             return;
         }
@@ -250,6 +264,16 @@
         return names.join(',');
     }
 
+    // 一段代码里最后一个 actTeachers 数组的姓名（⑰：上游 983137a 按活动取教师）
+    function actTeachersOf(segment) {
+        var re = /actTeachers\s*=\s*\[([\s\S]*?)\]/g;
+        var m;
+        var last = null;
+        while ((m = re.exec(rawText(segment))) !== null) last = m[1];
+        if (last === null) return '';
+        return teacherNamesOf(last);
+    }
+
     // 上游的原写法（只取第一个 actTeachers 的 name），回退用
     function firstTeacherOf(block) {
         var m = /actTeachers\s*=\s*\[\s*\{[\s\S]*?name\s*:\s*(?:"([^"]*)"|'([^']*)')/.exec(rawText(block));
@@ -363,9 +387,14 @@
             }
             if (!found.length) continue;
 
-            var teacher = teacherNamesOf(block) || firstTeacherOf(block) || '';
+            var blockTeacher = teacherNamesOf(block) || firstTeacherOf(block) || '';
+            var carriedTeacher = '';
             for (var a = 0; a < found.length; a++) {
                 activities++;
+                // ⑰ 这条活动前面（上一条活动之后）有自己的 actTeachers 就用它，没有就沿用上一条的
+                var ownActTeachers = actTeachersOf(block.substring(a > 0 ? found[a - 1].end : 0, found[a].start));
+                if (ownActTeachers) carriedTeacher = ownActTeachers;
+                var teacher = carriedTeacher || blockTeacher;
                 var args = powerSplit(found[a].argsRaw);
                 if (args.length < 7) {
                     activitiesSkipped++;
@@ -384,8 +413,12 @@
                 var ownTeacher = text(args[1]);
                 var teacherName = (ownTeacher && !looksLikeExpression(ownTeacher)) ? ownTeacher : teacher;
                 if (looksLikeExpression(ownTeacher)) {
-                    warn('教师的写法是「' + ownTeacher.substring(0, 40) + '」这类表达式，已改取课表里教师数组中的姓名，请核对教师');
+                    warn('有课程的教师没能直接读出，已改用课表里列出的任课教师，请核对教师');
                 }
+
+                // ⑯ 课程序号：args[2] 末尾括号里那段（「12345(A0101.01)」→「A0101.01」），只进合并键
+                var sequenceMatch = /\(([^()]*)\)$/.exec(text(args[2]));
+                var sequence = sequenceMatch ? sequenceMatch[1] : '';
 
                 var weeks = weeksOfBitmap(args[6]);
                 if (!weeks.length) {
@@ -409,6 +442,7 @@
                     if (!(section >= 1 && section <= MAX_PERIOD)) { droppedSection++; continue; }
                     activityLessons.push({
                         name: name,
+                        sequence: sequence,
                         teacher: teacherName || null,
                         position: position,
                         day: day,
@@ -422,7 +456,7 @@
     }
 
     // ---------- 全局合并（上游 mergeContinuousLessons 的语义，实现换成 ES5 数组） ----------
-    // 上游先按 (课名|教师|地点|星期) 分组，把「哪一周上哪几节」摊平成一个 50 x 节次 的矩阵
+    // 上游先按 (课程序号|课名|教师|地点|星期) 分组（序号是 1.1.0 跟进的，⑯），把「哪一周上哪几节」摊平成一个 50 x 节次 的矩阵
     // （用 Set 去重），再把每一周里的**连续节次**合并成块，最后按 (星期, 起始节, 课名) 排序输出。
     // 这里逐字对应，只是把 Set 换成对象、把排序键补全（上游的键在并列时依赖排序稳定性）。
     function mergeContinuous(lessons) {
@@ -434,7 +468,7 @@
 
         for (i = 0; i < lessons.length; i++) {
             var lesson = lessons[i];
-            var key = lesson.name + SEP + (lesson.teacher || '') + SEP + (lesson.position || '') + SEP + lesson.day;
+            var key = lesson.sequence + SEP + lesson.name + SEP + (lesson.teacher || '') + SEP + (lesson.position || '') + SEP + lesson.day;
             if (!groups[key]) {
                 groups[key] = {
                     name: lesson.name,
@@ -690,6 +724,52 @@
         return (year - 1) + '-' + year + '学年第二学期';
     }
 
+    // ---------- 开学日：教务首页的当前教学周（⑮，上游 inferCurrentSemester） ----------
+    // homeWeek = { week: 「当前教学周」旁 span 的文字, total: 旁边 i 的文字（形如「/ 18」）, serverDate: 服务器日期（北京时间） }。
+    // 第 1 周周一 = 服务器日期所在周的周一往前推 (week - 1) 周；倒推出的周一在 7 月及以后算秋季（第一学期），
+    // 否则算春季（第二学期，学年取上一年）。返回 null 表示没有可用的当前教学周；usable 为假表示学期对不上。
+    function termNumberOf(value) {
+        var label = text(value);
+        if (/^(第)?(1|一)(学期)?$/.test(label) || label.indexOf('秋') >= 0) return '1';
+        if (/^(第)?(2|二)(学期)?$/.test(label) || label.indexOf('春') >= 0) return '2';
+        return '';
+    }
+
+    function homeWeekStart(semester) {
+        if (!homeWeek) return null;
+        var weekText = text(homeWeek.week);
+        var totalMatch = /\/\s*(\d+)/.exec(text(homeWeek.total));
+        if (!/^\d+$/.test(weekText) || !totalMatch) return null;
+        var week = parseInt(weekText, 10);
+        var total = parseInt(totalMatch[1], 10);
+        if (week < 1 || week > total || total > 53) return null;
+        var reference = isoOfAny(homeWeek.serverDate) || isoOfAny(todayIso);
+        if (!reference) return null;
+        var monday = mondayOfIso(reference);
+        var start = new Date(Date.UTC(
+            parseInt(monday.substring(0, 4), 10),
+            parseInt(monday.substring(5, 7), 10) - 1,
+            parseInt(monday.substring(8, 10), 10)
+        ) - (week - 1) * 7 * 86400000);
+        var autumn = start.getUTCMonth() >= 6;
+        var year = start.getUTCFullYear() - (autumn ? 0 : 1);
+        var result = {
+            week: week,
+            firstDay: isoOf(start),
+            totalWeeks: total >= 1 && total <= MAX_WEEK ? total : null,
+            schoolYear: year + '-' + (year + 1),
+            term: autumn ? '1' : '2',
+            usable: true
+        };
+        // 教务当前学期已知时，学年学期必须对得上（上游只在所选学期就是当前学期时用）
+        if (semester) {
+            var sameYear = text(semester.schoolYear) === result.schoolYear;
+            var sameTerm = termNumberOf(semester.term) === result.term;
+            if (!sameYear || !sameTerm) result.usable = false;
+        }
+        return result;
+    }
+
     // ---------- 开学日（⑨） ----------
     function guessedFirstDay(semester) {
         var anchorYear = null;
@@ -770,8 +850,8 @@
     }
     if (unitCountGuessed) {
         warn(
-            '课表页里没读到每天节次数（unitCount），已按缺省值 ' + DEFAULT_UNIT_COUNT +
-            ' 节/天解析（上游脚本同款缺省值）；节次与星期可能整体错位，请在导入预览里核对'
+            '课表页里没读到每天的节数，已按每天 ' + DEFAULT_UNIT_COUNT +
+            ' 节读取；如果导入预览里星期和节次整体错位，请反馈给我们'
         );
     }
 
@@ -780,11 +860,8 @@
 
     if (!merged.length) {
         throw new Error(
-            '本学期没有解析到任何课程（识别到 ' + activities + ' 条排课活动：' +
-            activitiesSkipped + ' 条参数不足、' + activitiesWithoutIndex + ' 条找不到节次、' +
-            activitiesWithoutWeeks + ' 条没有周次、' + droppedDay + ' 条星期越界、' +
-            droppedSection + ' 条节次越界）。' +
-            '可能是这个学期还没排课，或教务系统改了课表页格式'
+            '这个学期没有读到任何课程（课表里有 ' + activities + ' 条上课安排，都没法读出星期、节次或周次）。' +
+            '可能是这个学期还没排课；如果教务系统里能看到课，请反馈给我们'
         );
     }
 
@@ -846,59 +923,92 @@
     }
 
     var firstDay = current && current.startDate ? mondayOfIso(current.startDate) : null;
+    var homeTotalWeeks = null;
     if (firstDay) {
         if (firstDay !== current.startDate) {
             warn('教务的学期起始日 ' + current.startDate + ' 不是周一，第 1 周已按那一周的周一 ' + firstDay + ' 开始，请在学期管理里核对');
         }
     } else {
-        var guess = guessedFirstDay(current);
-        firstDay = guess.iso;
-        warn('开学日期无法从教务获取，已按「' + guess.rule + '」推算为 ' + firstDay + '，请在学期管理里核对');
+        var fromHome = homeWeekStart(current);
+        if (fromHome && fromHome.usable) {
+            firstDay = fromHome.firstDay;
+            homeTotalWeeks = fromHome.totalWeeks;
+            warn('开学日期按教务首页显示的「当前教学周：第 ' + fromHome.week + ' 周」推算为 ' + firstDay + '，请在学期管理里核对');
+        } else {
+            var guess = guessedFirstDay(current);
+            firstDay = guess.iso;
+            if (fromHome) {
+                warn('教务首页显示的当前教学周属于 ' + fromHome.schoolYear + ' 学年第' + KIND_CN[fromHome.term] + '学期，与导入的学期不同，' +
+                    '开学日期已按「' + guess.rule + '」推算为 ' + firstDay + '，请在学期管理里核对');
+            } else {
+                warn('开学日期无法从教务获取，已按「' + guess.rule + '」推算为 ' + firstDay + '，请在学期管理里核对');
+            }
+        }
     }
     var totalWeeks = null;
     if (current && current.startDate && current.endDate) {
         var span = daysBetween(current.startDate, current.endDate);
         if (span !== null && span >= 0) totalWeeks = Math.floor(span / 7) + 1;
     }
+    if (totalWeeks === null && homeTotalWeeks !== null) totalWeeks = homeTotalWeeks;
     if (!(totalWeeks >= 1) || totalWeeks > MAX_WEEK) totalWeeks = null;
     if (totalWeeks === null) {
         totalWeeks = maxWeek >= 1 ? maxWeek : FALLBACK_TOTAL_WEEKS;
     }
     if (totalWeeks < maxWeek) {
-        warn('课表里有第 ' + maxWeek + ' 周的课，学期总周数已从 ' + totalWeeks + ' 抬到 ' + maxWeek + '，请核对学期设置');
+        warn('课表里有第 ' + maxWeek + ' 周的课，学期总周数已从 ' + totalWeeks + ' 周改成 ' + maxWeek + ' 周，请在学期管理里核对');
         totalWeeks = maxWeek;
     }
     if (totalWeeks > MAX_WEEK) totalWeeks = MAX_WEEK;
 
     var periods = periodTimesFor(maxPeriodUsed);
     if (periods.added > 0) {
-        warn('课表用到了内置作息表没有的第 ' + (SCHOOL_PERIOD_TIMES.length + 1) + '-' + (SCHOOL_PERIOD_TIMES.length + periods.added) + ' 节，已按每节 45 分钟顺推补上，请核对上课时间');
+        var addedRange = (SCHOOL_PERIOD_TIMES.length + 1) + (periods.added > 1 ? '-' + (SCHOOL_PERIOD_TIMES.length + periods.added) : '');
+        warn('课表用到了第 ' + addedRange + ' 节，学校的节次时间里没有' + (periods.added > 1 ? '这几节' : '这一节') + '，已按每节 45 分钟、课间 5 分钟往后推算，请核对上课时间');
     }
-    warn('作息时间来自适配器内置的西安工业大学作息表（非教务系统读取），请对照教务处公布的作息核对');
+    warn('节次时间按西安工业大学的上课时间导入（不是从教务系统读取的），请对照学校通知核对');
+
+    // ⑱ 教 3 楼第 3-4 节的实际时间（上游 adjustTeachingBuilding3Courses 的口径：教室含「教3」、恰好第 3-4 节）
+    var building3Names = [];
+    for (var b3 = 0; b3 < merged.length; b3++) {
+        var m3 = merged[b3];
+        if (m3.startSection !== 3 || m3.endSection !== 4) continue;
+        if (!/教3([^0-9]|$)/.test(text(m3.position))) continue;
+        if (building3Names.indexOf(m3.name) < 0) building3Names.push(m3.name);
+    }
+    if (building3Names.length) {
+        var shown = [];
+        for (var b3n = 0; b3n < building3Names.length && b3n < 3; b3n++) {
+            var n3 = building3Names[b3n];
+            shown.push('「' + (n3.length > 20 ? n3.substring(0, 20) + '…' : n3) + '」');
+        }
+        warn('教3楼第 3-4 节的实际上课时间是 10:10-11:40，课表里按 10:20-12:00 显示，涉及 ' + building3Names.length +
+            ' 门课（' + shown.join('、') + (building3Names.length > 3 ? ' 等' : '') + '），请以学校安排为准');
+    }
 
     if (zeroBitSeen) {
-        warn('周次位图里第 0 位是 1：按同族约定（位图下标即周次、下标 0 是占位符）已忽略，未产出「第 0 周」，请在导入预览里核对周次');
+        warn('有课程标了「第 0 周」上课，这一周已忽略，请在导入预览里核对周次');
     }
     if (droppedOverflowWeeks > 0) {
         warn('有 ' + droppedOverflowWeeks + ' 个周次超出 1-' + MAX_WEEK + ' 周，已丢弃，请核对课表');
     }
     if (junkBitmapChars > 0) {
-        warn('周次位图里有 ' + junkBitmapChars + ' 个不是 0/1 的字符，已跳过，请核对课表');
+        warn('有课程的上课周次里有 ' + junkBitmapChars + ' 处读不懂的标记，已跳过，请核对周次');
     }
     if (activitiesSkipped > 0) {
-        warn('有 ' + activitiesSkipped + ' 条排课活动的参数不足 7 个（教务课表格式可能变过），已跳过，请核对课表');
+        warn('有 ' + activitiesSkipped + ' 条上课安排信息不全，已跳过，请在教务系统里核对');
     }
     if (activitiesWithoutWeeks > 0) {
-        warn('有 ' + activitiesWithoutWeeks + ' 条排课活动没有周次（位图全 0 或为空），已跳过，请在教务系统里核对');
+        warn('有 ' + activitiesWithoutWeeks + ' 条上课安排没有上课周次，已跳过，请在教务系统里核对');
     }
     if (activitiesWithoutIndex > 0) {
-        warn('有 ' + activitiesWithoutIndex + ' 条排课活动找不到节次（index），已跳过，请在教务系统里核对');
+        warn('有 ' + activitiesWithoutIndex + ' 条上课安排没有节次，已跳过，请在教务系统里核对');
     }
     if (droppedDay > 0) {
-        warn('有 ' + droppedDay + ' 条排课活动算出的星期不在 1-7（节次数 unitCount 可能与实际不符），已丢弃，请核对课表');
+        warn('有 ' + droppedDay + ' 条上课安排的星期超出了周一到周日，已跳过，请核对课表');
     }
     if (droppedSection > 0) {
-        warn('有 ' + droppedSection + ' 条排课活动算出的节次超出 1-' + MAX_PERIOD + ' 节，已丢弃，请核对课表');
+        warn('有 ' + droppedSection + ' 条上课安排的节次超出了第 1-' + MAX_PERIOD + ' 节，已跳过，请核对课表');
     }
     warn('只导入了教务当前选中的这个学期（' + termName + '），需要其它学期请在教务系统里切到那个学期再提取一次');
 

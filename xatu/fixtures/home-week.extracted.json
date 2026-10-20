@@ -1,0 +1,14 @@
+{
+  "_note": "合成 fixture（1.1.0 跟进上游）：课名、教师、教室、日期均为虚构。覆盖：学期列表不带起止日期 → 开学日按教务首页「当前教学周 7 / 18」与服务器日期 2026-10-20 倒推为 2026-09-07、总周数取 18；同一块里两条活动各自前面有 actTeachers（第二条教师写成 actTeacherName.join 表达式 → 取它自己的刘洋，不是整块的两人）；大学物理两个教学班（课程序号 A0201.01 / A0201.02）同师同教室同星期第 1、2 节 → 不并成 1-2 节；教3-201 第 3-4 节 → 提醒实际时间；教30-101 第 3-4 节不算教3楼。",
+  "url": "http://jwgl2018.xatu.edu.cn/eams/courseTableForStd.action",
+  "today": "2026-10-20",
+  "tagId": "semesterBar20826294511Semester",
+  "currentSemesterId": "20261",
+  "semesterRaw": "{semesters:{\"2026-2027\":[{id:20261,schoolYear:\"2026-2027\",name:\"1\"},{id:20262,schoolYear:\"2026-2027\",name:\"2\"}]},semesterId:20261}",
+  "courseTableHtml": "\nvar unitCount = 14;\n<script type=\"text/javascript\">\nvar teachers = [{id:\"t1\",name:\"王芳\",color:\"#000000\"},{id:\"t2\",name:\"刘洋\",color:\"#000000\"}];\nvar actTeachers = [{id:\"t1\",name:\"王芳\",lab:false}];\nactivity = new TaskActivity(\"1\",\"王芳\",\"10001(A0101.01)\",\"线性代数\",\"\",\"教3-201\",\"0111111111111111100\");\nindex = 0*unitCount+2;\nindex = 0*unitCount+3;\nvar actTeachers = [{id:\"t2\",name:\"刘洋\",lab:false}];\nactivity = new TaskActivity(\"2\",actTeacherName.join(\",\"),\"10002(A0102.01)\",\"线性代数习题课\",\"\",\"教3-201\",\"0010101010101010100\");\nindex = 2*unitCount+0;\n</script>\n<script type=\"text/javascript\">\nvar teachers = [{id:\"t3\",name:\"孙强\",color:\"#000000\"}];\nactivity = new TaskActivity(\"3\",\"孙强\",\"10003(A0201.01)\",\"大学物理\",\"\",\"教2-105\",\"0111111111111111100\");\nindex = 3*unitCount+0;\n</script>\n<script type=\"text/javascript\">\nvar teachers = [{id:\"t3\",name:\"孙强\",color:\"#000000\"}];\nactivity = new TaskActivity(\"4\",\"孙强\",\"10004(A0201.02)\",\"大学物理\",\"\",\"教2-105\",\"0111111111111111100\");\nindex = 3*unitCount+1;\n</script>\n<script type=\"text/javascript\">\nvar teachers = [{id:\"t4\",name:\"陈刚\",color:\"#000000\"}];\nactivity = new TaskActivity(\"5\",\"陈刚\",\"10005(A0301.01)\",\"体育理论\",\"\",\"教30-101\",\"0111111111111111100\");\nindex = 4*unitCount+2;\nindex = 4*unitCount+3;\n</script>\n",
+  "homeWeek": {
+    "week": "7",
+    "total": "/ 18",
+    "serverDate": "2026-10-20"
+  }
+}

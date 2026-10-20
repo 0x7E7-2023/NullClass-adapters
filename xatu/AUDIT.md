@@ -28,7 +28,7 @@ grep -nE "fetch\(|XMLHttpRequest|sendBeacon|new WebSocket|\.src\s*=|localStorage
 
 ## 1. 请求域与请求清单（本节必须与代码一致，不许写得比代码窄）
 
-上游三条 `fetch` 全部写死 `http://jwgl2018.xatu.edu.cn/eams/…`。移植件**不沿用绝对地址**，改成
+上游的 `fetch`（1.0.0 时三条，上游 10-10 起四条）全部写死 `http://jwgl2018.xatu.edu.cn/eams/…`。移植件**不沿用绝对地址**，改成
 当前页面的 origin + 上下文路径 `/eams` 拼（`originOf()` + `eamsBase()`），所以两个脚本请求的主机
 只有**用户当前所在的那一个教务主机**（`http(s)://jwgl2018.xatu.edu.cn`，即 `loginUrl` 的主机）。
 **`allowHosts` 留空**，不写通配。
@@ -42,8 +42,9 @@ WebVPN 前缀下（例如 `/webvpn/eams/...`），请求跟着用户实际打开
 | extract.js | GET | `<origin><前缀>/eams/courseTableForStd.action?sf_request_type=ajax` | 探测学号 `ids`、学期栏 `tagId`，以及学期栏那个元素的 `value`（当前学期 id）。与上游同一条、同一组正则 | 报错并提示重新登录 |
 | extract.js | POST | `<origin><前缀>/eams/dataQuery.action?sf_request_type=ajax` | 取学期列表（`tagId=…&dataType=semesterCalendar`，请求体与上游逐字一致）。**原文原样交出，不在取数期解析** | 交空串，parse.js 回落到推算并在 warnings 里说明 |
 | extract.js | POST | `<origin><前缀>/eams/courseTableForStd!courseTable.action?sf_request_type=ajax` | 取课表页全文（`ignoreHead=1&setting.kind=std&semester.id=…&ids=…`，与上游逐字一致） | 报错并提示重新登录 |
+| extract.js | GET | `<origin><前缀>/eams/homeExt!main.action?sf_request_type=ajax` | （1.1.0）教务首页：只读「当前教学周」那一格的第几周、「/ 总周数」文字，以及响应头 `Date`（换成北京时间日期）。与上游 `getCurrentSemesterConfig` 同一条 | 交 `null`（非 2xx、网络错误、找不到那一格都是），parse.js 回落到推算 |
 
-- 三条请求**全部来自上游** XATU/myschool.js：路径、方法、请求体逐字一致，本件**没有新增任何接口**。
+- 四条请求**全部来自上游** XATU/myschool.js（首页那条是上游 `b91e3fa` 加的）：路径、方法、请求体逐字一致，本件**没有新增任何上游没有的接口**。
   唯一差别是主机由 `window.location` 拼出来，不再写死。
 - 请求头只带 `Content-Type` / `X-Requested-With` / `Accept`，**不带任何自定义令牌**；
   Cookie 由 WebView 自己按同源规则带上，脚本不读也不写它。
@@ -55,10 +56,11 @@ WebVPN 前缀下（例如 `/webvpn/eams/...`），请求跟着用户实际打开
 |---|---|---|
 | 探测页 HTML | `bg.form.addInput(form,"ids","…")` 里的学号、`id="semesterBar…Semester"` 的 tagId 与它的 `value` | tagId、当前学期 id、以及 `url`（当前页面地址，便于排错）。**学号只用于拼请求体，不进交出去的 JSON** |
 | 学期列表响应 | `semesters` 里的 `id` / `schoolYear` / `name` / `startDate` / `endDate`；`semesterId` | 整份原文（**它是学校的公共校历**：学期号 + 起止日期，不含个人信息） |
-| 课表页响应 | 全文 HTML（内嵌 `var teachers = […]` 与 `activity = new TaskActivity(…)` 脚本块） | 全文原样交出；parse.js 只取课名 / 教师 / 教室 / 周次位图 / `index` |
+| 课表页响应 | 全文 HTML（内嵌 `var teachers = […]` 与 `activity = new TaskActivity(…)` 脚本块） | 全文原样交出；parse.js 只取课名 / 教师 / 教室 / 课程序号 / 周次位图 / `index` |
+| 教务首页响应（1.1.0） | 用 `DOMParser` 离线解析（不插入当前页面），只找 `<strong>当前教学周</strong>` 的父元素里的 `span` 与 `i` | `homeWeek: { week, total, serverDate }` 三个短字符串（各截 20 字）。**首页其余内容（姓名、学号等）不交出去**；冒烟里首页埋了姓名、学号、身份证号，`homeWeek` 里都没有 |
 
 **载出的载荷里不出现学号**：`parse.js` 只读 `data.semesterRaw` / `data.courseTableHtml` /
-`data.today` / `data.currentSemesterId`，`ids` 连交出去都没有（桩测试实测：交出的 JSON 里
+`data.today` / `data.currentSemesterId` / `data.homeWeek`，`ids` 连交出去都没有（桩测试实测：交出的 JSON 里
 不含 `20230001` 这类值）。
 
 ## 2. 移植手册 §5 八条逐条
@@ -68,7 +70,7 @@ WebVPN 前缀下（例如 `/webvpn/eams/...`），请求跟着用户实际打开
 | 1 | 不碰凭据 | **过**。两个脚本都没有 `password` / `pwd` / 登录表单读取，也没有 `localStorage` / `sessionStorage` / `document.cookie` 访问（静态扫描无命中，见上）。唯一的「凭据」是浏览器自带会话 Cookie，脚本既不读它也不把它发到别处。学号 `ids` 是探测页里公开的表单参数（接口自己要求的值），只进请求体，不落进任何交出去的数据 |
 | 2 | 不外发 | **过**。全部 `fetch` 都在 `extract.js` 里（一处，被 `request()` 复用），地址全部由 `window.location.origin` + 上下文路径拼成；没有 `sendBeacon` / `WebSocket` / `EventSource` / `new Image().src` / 隐藏表单，也没有任何第三方域 |
 | 3 | 请求域可控 | **过**。请求主机只有一个：`loginUrl` 的主机 `jwgl2018.xatu.edu.cn`（`loginUrl` 给的是 http，`extract.js` 不在页面里跳转、只按当前 origin 拼地址，所以走 http 还是 https 由用户实际打开的那个地址决定）。`allowHosts` 留空，不写通配 |
-| 4 | 只读课表 | **过**。三条请求全部落在 `/eams/courseTableForStd*.action` 与 `/eams/dataQuery.action`（课表页、学期列表、课表数据），**不碰成绩、学籍、个人信息、缴费**等任何其它接口。学期列表是学校的公共数据 |
+| 4 | 只读课表 | **过**。四条请求全部落在 `/eams/courseTableForStd*.action`、`/eams/dataQuery.action` 与 `/eams/homeExt!main.action`（课表页、学期列表、课表数据、教务首页的当前教学周），**不碰成绩、学籍、个人信息、缴费**等任何其它接口。学期列表是学校的公共数据 |
 | 5 | 不埋点 | **过**。没有统计 / 上报 / 遥测，也没有 `img` 打点 |
 | 6 | 不 eval 远程代码 | **过，而且这里修了一处上游的违规**。上游 `XATU/myschool.js` 第 212 行是 `Function(\`return (${raw});\`)()` —— 把 `semesterCalendar` 接口返回的字符串**当代码执行**，命中本条第 6 条（表达式来自网络）。移植件**没有搬这一行**：`extract.js` 把原文原样交出去，`parse.js` 用「按 `id` 锚点做花括号配平切块 + 逐字段正则」只**读字段**，一行取回来的代码都不执行（`parse.js` 里连 `eval` / `new Function` 都没有，见静态扫描）。两个脚本里对网络数据的唯一解析手段是 `JSON.parse`（只用于 `__ncInput`，那是宿主给的字符串） |
 | 7 | 不写页面 | **过**。`extract.js` 只**读**页面字符串（探测页的 HTML 是 `fetch` 回来的文本，不在当前文档上；脚本从不碰 `document`）。上游的 `showToast` / `showSingleSelection` / `notifyTaskCompletion` / `saveImportedCourses` / `savePresetTimeSlots` 这类桥调用**全部没有移植**，既不写 DOM、不改表单、也不触发提交或点击 |
@@ -131,14 +133,16 @@ WebVPN 前缀下（例如 `/webvpn/eams/...`），请求跟着用户实际打开
 9. **`index` 两种写法都认**：`index = 5*unitCount+2` 与已算好的裸数字 `index = 62`（同族 hpu 两种
    都认）。**禁止 `eval` / `new Function`**，只用正则（手册 §5 第 6 条）。
 10. **`unitCount` 读不到时出声**：上游静默用缺省 14；本件用同一个缺省值，但**同时**写一条 warning。
-11. **开学日 / 总周数 / 学期名**：上游不管这三件事。本件用 `semesterCalendar` 的学期起止日期
-     回退到那一周的周一（手册 §4.3）、按起止日期算总周数；拿不到就推算，**推算值一定进 warnings**。
+11. **开学日 / 总周数 / 学期名**：上游 1.0.0 时不管这三件事（10-10 起上游改为按教务首页的当前教学周倒推，
+     本件 1.1.0 跟进，见 §10）。本件先用 `semesterCalendar` 的学期起止日期回退到那一周的周一（手册 §4.3）、
+     按起止日期算总周数；没有起止日期就按当前教学周倒推；都拿不到就推算，**推算值一定进 warnings**。
     学期名用教务的学年学期（「2026-2027学年第一学期」），拿不到用「西安工业大学 + 学年学期」——
     不用适配器名当学期名。
-12. **没有搬上游的「教 3 楼 3-4 节改自定义时间」那段**：`adjustTeachingBuilding3Courses` 会把
-    `/教3/` 且恰好 3-4 节的课标成 `isCustomTime` + 10:10–11:40。我们的载荷没有 `isCustomTime`
-    这一层（手册 §4.4 的两种情况都不适用：这些课有明确的节次，只是时间被学校单独改过），
-    悄悄改时间会让课表与教务不一致，所以本件不搬、也不静默丢这条信息 —— 它记在 §8 的待确认项里。
+12. **上游的「教 3 楼 3-4 节改自定义时间」按手册 §4.4 处理**：`adjustTeachingBuilding3Courses`（10-18 起并进
+    `mergeContinuousLessons`）会把 `/教3/` 且恰好 3-4 节的课标成 `isCustomTime` + 10:10–11:40。我们的载荷没有
+    单节自定义时间，这些课照常按第 3-4 节放入（显示 10:20–12:00）；1.0.0 只在本文档里记了一笔，
+    **1.1.0 起写一条 warnings** 点名涉及的课（课名截 20 字、最多点名 3 门）并说明实际时间。
+    判据比上游略严：`教3` 后面紧跟数字（`教30-101`）不算。
 13. **排序确定性**：上游 `merged.sort` 用 `localeCompare` 排中文课名，Rhino 与 V8 的结果未必一致，
     而 fixture 是逐数组比对的。本件改成按码位比较，并把次级键（结束节、起始周、教师、教室）补齐，
     不依赖排序算法的稳定性。
@@ -200,7 +204,7 @@ WebVPN 前缀下（例如 `/webvpn/eams/...`），请求跟着用户实际打开
     `__ncOcrGrid` / `__ncSelect` 等全局名），所以「`*.` 通配会被 `JwOriginRules` 跳过、
     拿不到桥」这条对本件不构成影响。
 11. **`warnings` 上限**：**过**。`warn()` 逐条截断到 200 字（超出补「…」），去重，条数到 19 条时
-    改推一条「另有说明因为超出上限没有显示…」。五条用例实测（详见 §6.1 表）：
+    改推一条「另有几条提醒没有显示…」（1.1.0 改的措辞）。1.0.0 的五条用例实测（详见 §6.1 表）：
     **3 / 7 / 2 / 8 / 3 条**，最长 71 字，都在限内。
 12. **每件都要做变异测试**：**过**。18 处变异里 17 处让用例变红，第 18 处（`timeOf` 那一侧）
     无法从黑盒观察、已如实记录，清单见 §6.2。
@@ -323,9 +327,9 @@ WebVPN 前缀下（例如 `/webvpn/eams/...`），请求跟着用户实际打开
   不会写 warning（`basic` / `course-name` / `fallbacks` 就是这个情形）。
 - **教务说「学期还没开始」时本件仍会导入**：`totalWeeks` 抬到课表最晚周次并写 warning，
   用户能在导入预览里看到。反过来（课表里全部课程都很早结束、教务给的周数更长）保持教务的值。
-- **上游的「教 3 楼第 3-4 节改 10:10–11:40」没有搬**（§4 第 12 条）。本校 `/教3/` 的课时间若确实
-  被学校单独调整过，课表上显示的会是内置作息表的 10:20–11:05，**比实际早 10 分钟**。这是**已知
-  偏差**，真机上核对一次即可确认；若要补，位置在 `periodTimesFor` 之后、组装 block 之前。
+- **上游的「教 3 楼第 3-4 节改 10:10–11:40」只能提醒、不能改时间**（§4 第 12 条）。课表上这两节显示的是
+  内置节次时间的 10:20–12:00（开始晚 10 分钟、结束晚 20 分钟），1.1.0 起导入预览里有一条提醒说明实际时间。
+  （1.0.0 版本文写成「比实际早 10 分钟」是错的，已更正。）
 - **`unitCount` 缺省 14 是从上游继承的**：页面读不到时用它（并出声）。若本校实际是别的节数，
   节次与星期会整体错位 —— warning 里已经点明「节次与星期可能整体错位」。
 - **没有真机验证**：无账号。真实页面上要确认的是：探测页的 `bg.form.addInput(form,"ids","…")`
@@ -338,3 +342,48 @@ WebVPN 前缀下（例如 `/webvpn/eams/...`），请求跟着用户实际打开
 - 上游作者：`晨熯`（shiguang_warehouse，MIT）
 - 移植：`0x7E7-2023`
 - 日期：2026-09-17
+
+## 10. 1.1.0：跟进上游 `b91e3fa`（2026-10-10）与 `983137a`（2026-10-18）
+
+上游快照 `19a65bf`（2026-10-19）。移植时的快照 `e62554a` 已不在上游历史里（上游 09-23 整库重建，`80e30cf`），
+`80e30cf` 里的 `XATU/myschool.js` 与本件移植时的脚本一致，所以以 `80e30cf..19a65bf` 的净差异为准：
+
+| 上游改动 | 本件 |
+|---|---|
+| `inferCurrentSemester` + `getCurrentSemesterConfig`：教务首页「当前教学周 N / M」+ 响应头 `Date`（北京时间）倒推第 1 周周一，总周数 M；倒推出的学年学期与所选学期不同就不用 | **跟进**。extract.js 只交三个值（§1）；parse.js `homeWeekStart`：学期日历没给起止日期时才用；教务当前学期已知时学年、学期都要对上，对不上写一条说明并回落推算；学期列表都没有时直接用。周 N 超出 1..M 或 M > 53 视为没有 |
+| 合并键加课程序号 `courseSequence`（`args[2]` 末尾括号） | **跟进**，只进合并键（`mergeContinuous`），不像上游那样拼进课名 |
+| 教师按活动取（每条活动前面的 `actTeachers`） | **跟进**（`actTeachersOf`）：活动前（上一条活动之后）有 `actTeachers` 就用它，没有沿用上一条，再没有退回整块姓名；`args[1]` 是字面量时仍优先用它 |
+| 学分（课表页「学分」列，按课程序号对） | 不跟：载荷没有学分字段 |
+| 学期选择显示「秋季 / 春季」、默认选当前学期 | 不涉及：本件不弹窗 |
+| `request` 15 秒超时 | 不跟：宿主有统一超时 |
+| 可选导入考试安排（`b91e3fa` 加，`983137a` 删） | 不涉及 |
+| 教 3 楼第 3-4 节自定义时间（两版都在） | 改成提醒（§4 第 12 条） |
+
+同时把提醒与报错改成大白话（`docs/ux-writing.md`）：不再出现 `unitCount`、「位图」「上游脚本」「作息表」「学期设置」
+「适配器」「表达式」「数组」这类词，状态码写成「教务系统返回错误（代码 N）」。旧用例只改了提醒文字，其余期望值不变。
+
+新增用例（期望值按上面的规则手推，再与 `parse.js` 比对，三条全部 MATCH）：
+
+| 文件 | 覆盖 |
+|---|---|
+| `home-week` | 学期列表无起止日期 → 「第 7 周 / 18」+ 服务器日期 2026-10-20 倒推 2026-09-07、总周数 18；同块两条活动各用自己的 `actTeachers`（第二条的 `args[1]` 是表达式 → 刘洋，不是「王芳,刘洋」）；大学物理两个课程序号同师同教室同星期第 1、2 节 → 两个 block 而不是 1-2 节；教3-201 第 3-4 节提醒，教30-101 不提醒 |
+| `home-week-mismatch` | 倒推出 2027-03-01（2026-2027 第二学期）而教务当前学期是第一学期 → 不用，按第一学期规则推算 2026-08-31 并说明 |
+| `home-week-no-list` | 没有学期列表、首页没有服务器日期 → 用 `today` 倒推、直接用；学期名按导入日期推；教室恰好是「教3」→ 提醒；教师为空 → null |
+
+变异测试（临时副本，原件未动，`check.js` 重跑 PASS）：
+
+| 编号 | 改坏哪一处 | 变红的用例 |
+|---|---|---|
+| X1 | 合并键去掉课程序号 | `home-week` |
+| X2 | 教师一律取整块姓名 | `home-week` |
+| X3 | 不核对倒推出的学年学期 | `home-week-mismatch` |
+| X4 | 「教3」判据去掉数字边界 | `home-week` |
+| X5 | 倒推多减一周 | `home-week`、`home-week-no-list` |
+
+浏览器冒烟（`.test/xatu-110/smoke.py`，Playwright 假教务站，不联网）：四条请求依次是课表入口、学期列表、课表、首页；
+首页响应头 `Tue, 20 Oct 2026 17:30:00 GMT` → `serverDate` 2026-10-21（北京时间已过零点），倒推 2026-09-07；
+首页返回 500 → `homeWeek` 为 null、开学日回落推算；首页里埋的姓名、学号、身份证号不出现在 `homeWeek` 里。
+
+真机仍未验证：首页「当前教学周」那一格的实际标记（`strong` / `span` / `i`）是照上游代码写的，上游作者是本校开发者。
+
+签名：0x7E7-2023（2026-10-20，跟进上游）
