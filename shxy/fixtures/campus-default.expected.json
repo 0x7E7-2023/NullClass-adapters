@@ -1,0 +1,104 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "导入的是你选的学期（2026-2027学年第一学期）",
+    "教务系统给出的开学日期（2025-09-01）不属于这个学期，已忽略；第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "没能确定你所在的校区，节次时间先按老校区（厚德楼）导入；另一个校区（新校区 / 崇德楼）第 3、4、7、8 节的时间不同，如你不在老校区，请在学期管理里核对节次时间"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:10",
+          "end": "08:55"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:00",
+          "end": "09:45"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:15",
+          "end": "11:00"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:05",
+          "end": "11:50"
+        },
+        {
+          "periodIndex": 5,
+          "start": "13:45",
+          "end": "14:30"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:35",
+          "end": "15:20"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:40",
+          "end": "16:25"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:30",
+          "end": "17:15"
+        },
+        {
+          "periodIndex": 9,
+          "start": "18:30",
+          "end": "19:15"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:20",
+          "end": "20:05"
+        }
+      ],
+      "courses": [
+        {
+          "name": "大学语文",
+          "teacher": "教师甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "主楼101"
+            }
+          ]
+        },
+        {
+          "name": "体育",
+          "teacher": "教师乙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "操场"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

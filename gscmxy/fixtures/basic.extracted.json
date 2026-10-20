@@ -1,0 +1,75 @@
+{
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期",
+    "source": "api"
+  },
+  "today": "2026-09-10",
+  "rowTotal": 5,
+  "rows": [
+    {
+      "KBID": "K001",
+      "KCM": "高等数学",
+      "SKXQ": 1,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "1111111111111111",
+      "SKJS": "张三/2008010010",
+      "JASMC": "教1-101",
+      "XXXQDM_DISPLAY": "兰州校区"
+    },
+    {
+      "KBID": "K002",
+      "KCM": "大学英语",
+      "SKXQ": "3",
+      "KSJC": "3",
+      "JSJC": "4",
+      "SKZC": "101010101010101",
+      "SKJS": "李四,王五",
+      "JASMC": "外语楼203",
+      "XXXQDM_DISPLAY": "兰州校区"
+    },
+    {
+      "KBID": "K003",
+      "KCM": "体育",
+      "SKXQ": 5,
+      "KSJC": 5,
+      "JSJC": 6,
+      "SKZC": "0101010101010101",
+      "SKJS": "赵六",
+      "JASMC": "体育馆",
+      "XXXQDM_DISPLAY": ""
+    },
+    {
+      "KBID": "K004",
+      "KCM": "形势与政策",
+      "SKXQ": 7,
+      "KSJC": 9,
+      "JSJC": 10,
+      "SKZC": "1000000000000001",
+      "SKJS": "",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": "安宁校区"
+    },
+    {
+      "KBID": "K005",
+      "KCM": "物理实验",
+      "SKXQ": 2,
+      "KSJC": 5,
+      "JSJC": 6,
+      "SKZC": "0011111111",
+      "SKJS": "孙七",
+      "JASMC": "兰州校区实验楼305",
+      "XXXQDM_DISPLAY": "兰州校区"
+    }
+  ],
+  "changeRows": [],
+  "calendarRows": [
+    {
+      "XN": "2026-2027",
+      "XQ": "1",
+      "XQKSRQ": "2026-09-07 00:00:00",
+      "ZZC": "18"
+    }
+  ]
+}

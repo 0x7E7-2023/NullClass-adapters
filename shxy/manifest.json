@@ -1,0 +1,56 @@
+{
+  "specVersion": 1,
+  "key": "shxy",
+  "name": "绥化学院",
+  "initial": "S",
+  "version": "1.0.0",
+  "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://jwgl.shxy.edu.cn/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 教室都在厚德楼 → 判定老校区，节次时间 10 节（第 3 节 10:15-11:00、第 8 节 16:30-17:15）；按教室拆课（同一门课 1-8 周在 201、9-16 周在 305）；连续节次合并；开学日取教务的第 1 周日期 2026-08-31；页面选中的学期",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：新校区 · 教室都在崇德楼 → 新校区节次时间（第 3 节 10:30-11:15、第 7 节 15:55-16:40）；教务默认学期；日期接口取不到 → 开学日按 9 月 1 日所在周推算为 2026-08-31 并说明；学期名由代码拼出",
+      "extracted": "fixtures/new-campus.extracted.json",
+      "expected": "fixtures/new-campus.expected.json"
+    },
+    {
+      "name": "合成用例：校区判断不了 · 厚德楼与崇德楼的课都有，用户在提问里选了新校区 → 按新校区节次时间；第二学期按 2 月 20 日所在周推算开学日 2026-02-16；按日期推算的学期",
+      "extracted": "fixtures/campus-asked.extracted.json",
+      "expected": "fixtures/campus-asked.expected.json"
+    },
+    {
+      "name": "合成用例：校区判断不了且没问到答案 · 教室里没有楼名、也没有校区回答 → 按上游默认的老校区并说明；教务给的开学日不属于这个学期 → 忽略并推算；用户改选的学期",
+      "extracted": "fixtures/campus-default.extracted.json",
+      "expected": "fixtures/campus-default.expected.json"
+    },
+    {
+      "name": "合成用例：教室与周次的边界 · 没带周次的教室名「A-101」不读成第 101 周；教室名里带「-」（实验楼A-3-5）；教室为空 → 地点 null；zc 有而教室记录没有的周次用 jxcdmc 补上；教室记录里有 zc 之外的周次 → 按教室记录并提醒；教室周次 45 超上限丢弃；兜底路径：jxcdmc2 空 → 周次取 zc、教室取 jxcdmc",
+      "extracted": "fixtures/room-weeks.extracted.json",
+      "expected": "fixtures/room-weeks.expected.json"
+    },
+    {
+      "name": "合成用例：单/双标记 · 兜底路径的 zc 写成「(单)1-8周,(双)9-16周」「1-15周(单) 共16周」「1-8周(共8周),9-16周」「第1-第8周」，「共N周」只剥备注本身、标记各归各段",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：节次超出节次时间表 · 老校区 10 节，课表用到第 11-12 节（用空课默认时间）、第 13-14 节（顺推）、第 15 节（越过 23:59 补不了）；课表最晚第 23 周 → 总周数抬到 23 并说明",
+      "extracted": "fixtures/late-periods.extracted.json",
+      "expected": "fixtures/late-periods.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 缺教师 / 缺教室 → 照常导入（teacher / location 为 null）、提醒按类型汇总并点名课名截到 20 字；缺课名 / 缺星期 / 节次不合法 / 认不出的周次各一行被跳过并说明；完全相同的行去重；每条提醒不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    }
+  ]
+}

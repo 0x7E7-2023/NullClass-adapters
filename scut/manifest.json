@@ -1,0 +1,82 @@
+{
+  "specVersion": 1,
+  "key": "scut",
+  "name": "华南理工大学",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 dezige131（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://xsjw2018-jw.webvpn.scut.edu.cn/",
+  "scheduleUrlHint": "https://xsjw2018-jw.webvpn.scut.edu.cn/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 教务节次时间给了 13 节，第 12、13 节结束晚于 21:35 → 丢掉，表里只留 11 节（第 11 节 20:10-20:55 钉住）；校历第 1 周 2026-09-07、共 20 周；单双周、两段周次、缺教师、缺教室、完全重复行、集中实践课各一",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：21:35 边界与补节次 · 第 12 节恰好 21:35 结束保留、第 13 节被丢掉；第 1 节写成 8:50-9:35（不补零）不被误丢；重复一行时间相同只留一条；课表用到第 13-15 节 → 13、14 节顺推（21:40-22:25、22:30-23:15）、15 节越过 23:59 补不了",
+      "extracted": "fixtures/late-periods.extracted.json",
+      "expected": "fixtures/late-periods.expected.json"
+    },
+    {
+      "name": "合成用例：节次时间与校历都取不到 · 整张用空课默认 12 节并提醒（第 1 节 08:00-08:45、第 12 节 21:15-22:00）；开学日推算为 2026-08-31、总周数 20；课表排到第 14 节 → 13、14 节顺推",
+      "extracted": "fixtures/rjc-missing.extracted.json",
+      "expected": "fixtures/rjc-missing.expected.json"
+    },
+    {
+      "name": "合成用例：节次时间只给到第 8 节且带一行读不懂、一行隔着缺口 → 只认第 1-8 节；课表用到第 9-10 节 → 用空课默认表里的 18:30-19:15、19:25-20:10",
+      "extracted": "fixtures/rjc-short.extracted.json",
+      "expected": "fixtures/rjc-short.expected.json"
+    },
+    {
+      "name": "合成用例：同一节号给了两个不同的时间（多校区混在一起）→ 不猜，整张回落到空课默认 12 节并说明原因",
+      "extracted": "fixtures/rjc-conflict.extracted.json",
+      "expected": "fixtures/rjc-conflict.expected.json"
+    },
+    {
+      "name": "合成用例：单/双标记 · 前缀「(单)1-8周,(双)9-16周」与后缀「1-8周(单),9-16周(双)」都读成 1-7 单 + 10-16 双（上游整串套标记会让整行消失）；「1-8周,10-16周(单)」只有后一段是单周；「共16周」在末尾 / 开头、「(共8周)」在括号里都只剥备注本身；「第1-第8周」；教学班序号、括号备注、「单双周」各提醒一次",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：相邻周次段的单/双后缀 · 「1-8周(单) 9-16周(双)」→ 1-7 单 + 10-16 双；「1-8周(单)9-16周」→ 1-9 单 + 10-16 每周；「1-16周(单) 17-18周」→ 1-17 单 + 18 每周",
+      "extracted": "fixtures/week-adjacent.extracted.json",
+      "expected": "fixtures/week-adjacent.expected.json"
+    },
+    {
+      "name": "合成用例：每周起始日 · qsxqj=7（周日），校历第 1 周为周一 2026-09-07 → 开学日回退到周日 2026-09-06 并说明；校历 18 周与课表最晚周次一致，不抬高总周数",
+      "extracted": "fixtures/calendar-sunday.extracted.json",
+      "expected": "fixtures/calendar-sunday.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期（下拉框写「2」、代号 12）+ 校历取不到 → 开学日推算为 2026-02-16；课表最晚第 21 周 → 总周数按 21 周导入并说明",
+      "extracted": "fixtures/no-calendar-overweek.extracted.json",
+      "expected": "fixtures/no-calendar-overweek.expected.json"
+    },
+    {
+      "name": "合成用例：脏数据 · 缺课程名 / 星期 8 / 节次为空 / 节次 21-22 / 周次 31-40 各一行跳过并按原因计数；周次「0-3」丢掉第 0 周；节次「第9-10节」「5,6」「0304」「1-2,5-6」；记录总数 12 与实际 9 行对账",
+      "extracted": "fixtures/dirty-rows.extracted.json",
+      "expected": "fixtures/dirty-rows.expected.json"
+    },
+    {
+      "name": "合成用例：合并与去重 · 同课 1-2 与 3-4 合并成 1-4；同节次同周次但教师不同（教室相同）或教室不同的两行都保留（上游会丢一行）；完全相同的两行只留一条；1-8 周与 9-16 周取并集；节次重叠的两行不合并",
+      "extracted": "fixtures/merge-dedupe.extracted.json",
+      "expected": "fixtures/merge-dedupe.expected.json"
+    },
+    {
+      "name": "合成用例：教室写「未排地点」（含前后空格）→ 教室为 null 并计入缺教室汇总；同课 1-2 与 3-4 两行都未排地点仍合成 1-4 节；缺教师 4 门，提醒点名最多三门",
+      "extracted": "fixtures/no-room.extracted.json",
+      "expected": "fixtures/no-room.expected.json"
+    },
+    {
+      "name": "合成用例：提醒限长 · 4 门超长课名的集中实践课、缺教师 / 缺教室的超长课名、认不出的超长周次文字、超长括号备注 → 课名与示例文字截到 20 字，每条提醒不超过 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    }
+  ]
+}

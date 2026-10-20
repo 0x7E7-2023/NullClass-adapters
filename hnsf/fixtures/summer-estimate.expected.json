@@ -1,0 +1,104 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "没有从教务系统读到当前学期，已按今天的日期推算为 2026-2027学年第一学期。如果这不是你要导入的学期，请先在教务系统的课表页面里切到正确的学期，再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "教务系统没有提供节次时间，已按你选择的「建设东路校区 / 平原湖校区 · 夏季作息」导入（第 1 节 08:00-08:45），请与学校公布的节次时间核对，不一致可在学期管理里改"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:55",
+          "end": "09:40"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:10",
+          "end": "10:55"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:05",
+          "end": "11:50"
+        },
+        {
+          "periodIndex": 5,
+          "start": "15:00",
+          "end": "15:45"
+        },
+        {
+          "periodIndex": 6,
+          "start": "15:55",
+          "end": "16:40"
+        },
+        {
+          "periodIndex": 7,
+          "start": "17:10",
+          "end": "17:55"
+        },
+        {
+          "periodIndex": 8,
+          "start": "18:05",
+          "end": "18:50"
+        },
+        {
+          "periodIndex": 9,
+          "start": "20:00",
+          "end": "20:45"
+        },
+        {
+          "periodIndex": 10,
+          "start": "20:55",
+          "end": "21:40"
+        }
+      ],
+      "courses": [
+        {
+          "name": "线性代数",
+          "teacher": "孙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "理科楼201"
+            }
+          ]
+        },
+        {
+          "name": "大学物理",
+          "teacher": "吴老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 9,
+              "endPeriod": 10,
+              "startWeek": 1,
+              "endWeek": 15,
+              "weekType": "ODD",
+              "location": "理科楼305"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

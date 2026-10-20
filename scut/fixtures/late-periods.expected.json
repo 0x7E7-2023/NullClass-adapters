@@ -1,0 +1,125 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的学期周次校历：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "学期总周数取自教务校历（20 周），如与实际不符可在学期管理里改",
+    "课表用到了第 13-14 节，现有的节次时间没有覆盖，已补上：第 13-14 节按上一节下课后课间 5 分钟、每节 45 分钟顺推，请在学期管理里核对",
+    "课表用到了第 15 节及以后，顺推的时间会越过当天 23:59，这些节次没有补上时间（课程已导入），请在学期管理里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:50",
+          "end": "09:35"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:40",
+          "end": "10:25"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:40",
+          "end": "11:25"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:30",
+          "end": "12:15"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:50",
+          "end": "15:35"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:50",
+          "end": "16:35"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:40",
+          "end": "17:25"
+        },
+        {
+          "periodIndex": 9,
+          "start": "18:30",
+          "end": "19:15"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:20",
+          "end": "20:05"
+        },
+        {
+          "periodIndex": 11,
+          "start": "20:10",
+          "end": "20:55"
+        },
+        {
+          "periodIndex": 12,
+          "start": "21:00",
+          "end": "21:35"
+        },
+        {
+          "periodIndex": 13,
+          "start": "21:40",
+          "end": "22:25"
+        },
+        {
+          "periodIndex": 14,
+          "start": "22:30",
+          "end": "23:15"
+        }
+      ],
+      "courses": [
+        {
+          "name": "夜间实验",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 12,
+              "endPeriod": 13,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "实验楼D101"
+            }
+          ]
+        },
+        {
+          "name": "加课",
+          "teacher": "乙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 14,
+              "endPeriod": 15,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "教学楼A401"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

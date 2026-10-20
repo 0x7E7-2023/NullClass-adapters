@@ -1,0 +1,97 @@
+{
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期",
+    "source": "api"
+  },
+  "today": "2026-09-10",
+  "rowTotal": 7,
+  "rows": [
+    {
+      "KBID": "K1",
+      "KCM": "高等数学",
+      "SKXQ": 1,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "11111111",
+      "SKJS": "张三",
+      "JASMC": "教1-101",
+      "XXXQDM_DISPLAY": "兰州校区"
+    },
+    {
+      "KBID": "K1",
+      "KCM": "高等数学",
+      "SKXQ": 4,
+      "KSJC": 3,
+      "JSJC": 4,
+      "SKZC": "11111111",
+      "SKJS": "张三",
+      "JASMC": "教1-101",
+      "XXXQDM_DISPLAY": "安宁校区"
+    },
+    {
+      "KBID": "K2",
+      "KCM": "大学英语",
+      "SKXQ": 2,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "11111111",
+      "SKJS": "李四",
+      "JASMC": "  教2-201 ",
+      "XXXQDM_DISPLAY": "  兰州校区 "
+    },
+    {
+      "KBID": "K3",
+      "KCM": "化学",
+      "SKXQ": 3,
+      "KSJC": 5,
+      "JSJC": 6,
+      "SKZC": "11111111",
+      "SKJS": "王五",
+      "JASMC": "安宁校区理化楼B101",
+      "XXXQDM_DISPLAY": "安宁校区"
+    },
+    {
+      "KBID": "K4",
+      "KCM": "绘画",
+      "SKXQ": 5,
+      "KSJC": 5,
+      "JSJC": 6,
+      "SKZC": "11111111",
+      "SKJS": "赵六",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": "兰州校区"
+    },
+    {
+      "KBID": "K5",
+      "KCM": "体育",
+      "SKXQ": 5,
+      "KSJC": 7,
+      "JSJC": 8,
+      "SKZC": "11111111",
+      "SKJS": "孙七",
+      "JASMC": "操场",
+      "XXXQDM_DISPLAY": null
+    },
+    {
+      "KBID": "K1",
+      "KCM": "高等数学",
+      "SKXQ": 1,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "11111111",
+      "SKJS": "张三",
+      "JASMC": "教1-101",
+      "XXXQDM_DISPLAY": "兰州校区"
+    }
+  ],
+  "changeRows": [],
+  "calendarRows": [
+    {
+      "XN": "2026-2027",
+      "XQ": "1",
+      "XQKSRQ": "2026-09-07 00:00:00",
+      "ZZC": "17"
+    }
+  ]
+}

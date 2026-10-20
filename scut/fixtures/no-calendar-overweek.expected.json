@@ -1,0 +1,92 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2025-2026学年第二学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第二学期 = 2 月 20 日所在周的第一天」推算为 2026-02-16，请在学期管理里核对成学校实际开学日",
+    "课表里有第 21 周的课，超过 20 周，学期总周数已按 21 周导入，如与实际不符可在学期管理里改"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第二学期",
+      "firstDay": "2026-02-16",
+      "totalWeeks": 21,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:50",
+          "end": "09:35"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:40",
+          "end": "10:25"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:40",
+          "end": "11:25"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:30",
+          "end": "12:15"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:50",
+          "end": "15:35"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:50",
+          "end": "16:35"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:40",
+          "end": "17:25"
+        },
+        {
+          "periodIndex": 9,
+          "start": "18:30",
+          "end": "19:15"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:20",
+          "end": "20:05"
+        },
+        {
+          "periodIndex": 11,
+          "start": "20:10",
+          "end": "20:55"
+        }
+      ],
+      "courses": [
+        {
+          "name": "毕业论文指导",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 21,
+              "weekType": "ALL",
+              "location": "教学楼A501"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

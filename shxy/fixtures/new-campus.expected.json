@@ -1,0 +1,120 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "导入的是教务系统默认的学期（2026-2027学年第一学期）；要导入别的学期，请先在教务课表页里切换到那个学期，再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 18 周），如与实际不符可在学期管理里改",
+    "你的课都排在崇德楼，节次时间已按新校区（崇德楼）导入；两个校区第 3、4、7、8 节的时间不同，如不是你所在的校区，请在学期管理里核对节次时间"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:10",
+          "end": "08:55"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:00",
+          "end": "09:45"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:30",
+          "end": "11:15"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:20",
+          "end": "12:05"
+        },
+        {
+          "periodIndex": 5,
+          "start": "13:45",
+          "end": "14:30"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:35",
+          "end": "15:20"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:55",
+          "end": "16:40"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:45",
+          "end": "17:30"
+        },
+        {
+          "periodIndex": 9,
+          "start": "18:30",
+          "end": "19:15"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:20",
+          "end": "20:05"
+        }
+      ],
+      "courses": [
+        {
+          "name": "数据结构",
+          "teacher": "教师甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "崇德楼A101"
+            }
+          ]
+        },
+        {
+          "name": "英语",
+          "teacher": "教师乙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 7,
+              "endPeriod": 8,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "崇德楼B202"
+            }
+          ]
+        },
+        {
+          "name": "大学物理",
+          "teacher": "教师丙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 1,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 18,
+              "weekType": "ALL",
+              "location": "崇德楼实验室"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

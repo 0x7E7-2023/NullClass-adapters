@@ -1,0 +1,71 @@
+{
+  "specVersion": 1,
+  "key": "gscmxy",
+  "name": "甘肃财贸职业学院",
+  "initial": "G",
+  "version": "1.0.0",
+  "author": "上游 ShallowY（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwxt.gscmxy.edu.cn/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（校历可用、教务给了学期名；教师「姓名/工号」只留姓名、多名去重；教室拼上校区、教室名已带校区不重复拼、没有校区只写教室；只有校区没有教室地点留空；缺教师缺地点汇总提醒；第 1 周与第 16 周落单成两段）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次位串切段（连续段、双周段、单周段、落单一周、周日、同一门课两条排课合并成一门课两个安排、完全重复的行去重）",
+      "extracted": "fixtures/weeks.extracted.json",
+      "expected": "fixtures/weeks.expected.json"
+    },
+    {
+      "name": "合成用例：校区边界（同一门课同一教室名在两个校区、教室与校区前后有空白、教室名里已带校区名、校区为空值、只有校区没有教室、相同排课去重）",
+      "extracted": "fixtures/campus.extracted.json",
+      "expected": "fixtures/campus.expected.json"
+    },
+    {
+      "name": "合成用例：校历有多行（其它学期的行与同一学期的两行，取第一行匹配的；开学日是周三要回退到周一；教务没给学期名用「甘肃财贸职业学院 + 学年学期」）",
+      "extracted": "fixtures/calendar-other.extracted.json",
+      "expected": "fixtures/calendar-other.expected.json"
+    },
+    {
+      "name": "合成用例：学期、开学日、总周数都是推算的（春季学期，总周数用上游的 20 周）",
+      "extracted": "fixtures/guess.extracted.json",
+      "expected": "fixtures/guess.expected.json"
+    },
+    {
+      "name": "合成用例：调课与停课（教务按申请时间倒序给，连续两次调同一节课；调课换教师、换教室、换校区；没给新教室沿用旧教室并补用原课校区；停课只去周次；对不上原课的记录与课表行、记录的节次都对不上；只给了周次没给新时间的调课）",
+      "extracted": "fixtures/changes.extracted.json",
+      "expected": "fixtures/changes.expected.json"
+    },
+    {
+      "name": "合成用例：没有校历、课表排到第 22 周（总周数抬高）、调课记录没取到",
+      "extracted": "fixtures/no-calendar-raised.extracted.json",
+      "expected": "fixtures/no-calendar-raised.expected.json"
+    },
+    {
+      "name": "合成用例：节次超出学校公布的 10 节（第 11-13 节按课间 10 分钟、每节 40 分钟顺推补时间，第 14 节越过 23:59 补不了，课照常导入）",
+      "extracted": "fixtures/periods.extracted.json",
+      "expected": "fixtures/periods.expected.json"
+    },
+    {
+      "name": "合成用例：脏数据（缺课名、星期 8、周次非位串、周次全零、节次倒挂、节次 25、占位空行、超过 30 周的周次、校历总周数 40 压到 30、记录总数对不上）",
+      "extracted": "fixtures/dirty.extracted.json",
+      "expected": "fixtures/dirty.expected.json"
+    },
+    {
+      "name": "合成用例：校历总周数 16 小于课表第 18 周（抬高到 18 并写教务原值）",
+      "extracted": "fixtures/raised.extracted.json",
+      "expected": "fixtures/raised.expected.json"
+    },
+    {
+      "name": "合成用例：长课名（60 字以上）加缺教师缺地点，提醒里点名的课名截到 20 字、整条不超过 200 字",
+      "extracted": "fixtures/long-name.extracted.json",
+      "expected": "fixtures/long-name.expected.json"
+    }
+  ]
+}

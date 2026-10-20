@@ -1,0 +1,119 @@
+{
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期",
+    "source": "api"
+  },
+  "today": "2026-09-10",
+  "rowTotal": 12,
+  "rows": [
+    {
+      "KBID": "K1",
+      "KCM": "高等数学",
+      "SKXQ": 1,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "11111111",
+      "SKJS": "张三",
+      "JASMC": "教1-101",
+      "XXXQDM_DISPLAY": "兰州校区"
+    },
+    {
+      "KBID": "K2",
+      "KCM": "",
+      "SKXQ": 1,
+      "KSJC": 3,
+      "JSJC": 4,
+      "SKZC": "11111111",
+      "SKJS": "李四",
+      "JASMC": "教1-102",
+      "XXXQDM_DISPLAY": "兰州校区"
+    },
+    {
+      "KBID": "K3",
+      "KCM": "缺星期合法性",
+      "SKXQ": 8,
+      "KSJC": 3,
+      "JSJC": 4,
+      "SKZC": "11111111",
+      "SKJS": "李四",
+      "JASMC": "教1-102",
+      "XXXQDM_DISPLAY": "兰州校区"
+    },
+    {
+      "KBID": "K4",
+      "KCM": "周次不是位串",
+      "SKXQ": 2,
+      "KSJC": 3,
+      "JSJC": 4,
+      "SKZC": "1-8周",
+      "SKJS": "李四",
+      "JASMC": "教1-102",
+      "XXXQDM_DISPLAY": "兰州校区"
+    },
+    {
+      "KBID": "K5",
+      "KCM": "周次全零",
+      "SKXQ": 2,
+      "KSJC": 5,
+      "JSJC": 6,
+      "SKZC": "0000",
+      "SKJS": "李四",
+      "JASMC": "教1-102",
+      "XXXQDM_DISPLAY": "兰州校区"
+    },
+    {
+      "KBID": "K6",
+      "KCM": "节次倒挂",
+      "SKXQ": 3,
+      "KSJC": 5,
+      "JSJC": 3,
+      "SKZC": "11111111",
+      "SKJS": "李四",
+      "JASMC": "教1-102",
+      "XXXQDM_DISPLAY": "兰州校区"
+    },
+    {
+      "KBID": "K7",
+      "KCM": "节次二十五",
+      "SKXQ": 3,
+      "KSJC": 5,
+      "JSJC": 25,
+      "SKZC": "11111111",
+      "SKJS": "李四",
+      "JASMC": "教1-102",
+      "XXXQDM_DISPLAY": "兰州校区"
+    },
+    {
+      "KBID": "",
+      "KCM": "",
+      "SKXQ": "",
+      "KSJC": "",
+      "JSJC": "",
+      "SKZC": "",
+      "SKJS": "",
+      "JASMC": "",
+      "XXXQDM_DISPLAY": ""
+    },
+    {
+      "KBID": "K9",
+      "KCM": "国学",
+      "SKXQ": 3,
+      "KSJC": 3,
+      "JSJC": 4,
+      "SKZC": "1111000000000000000000000000111111",
+      "SKJS": "李四",
+      "JASMC": "综合楼",
+      "XXXQDM_DISPLAY": ""
+    }
+  ],
+  "changeRows": [],
+  "calendarRows": [
+    {
+      "XN": "2026-2027",
+      "XQ": "1",
+      "XQKSRQ": "2026-09-07 00:00:00",
+      "ZZC": "40"
+    }
+  ]
+}

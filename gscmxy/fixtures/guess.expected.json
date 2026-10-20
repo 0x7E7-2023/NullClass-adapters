@@ -1,0 +1,87 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "没能从教务获取当前学期，已按本机日期推算为 2026-2027学年第二学期，请核对导入的是不是本学期",
+    "没能从教务取到开学日期，已按本机日期推算为 2027-03-01（当前周的周一），请在学期管理里核对",
+    "没能从教务取到学期总周数，已按 20 周导入，如与实际不符可在学期管理里改"
+  ],
+  "terms": [
+    {
+      "name": "甘肃财贸职业学院 2026-2027学年第二学期",
+      "firstDay": "2027-03-01",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:50",
+          "end": "09:30"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:40",
+          "end": "10:20"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:50",
+          "end": "11:30"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:40",
+          "end": "12:20"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:30",
+          "end": "15:10"
+        },
+        {
+          "periodIndex": 6,
+          "start": "15:20",
+          "end": "16:00"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:20",
+          "end": "17:00"
+        },
+        {
+          "periodIndex": 8,
+          "start": "17:10",
+          "end": "17:50"
+        },
+        {
+          "periodIndex": 9,
+          "start": "19:30",
+          "end": "20:10"
+        },
+        {
+          "periodIndex": 10,
+          "start": "20:20",
+          "end": "21:00"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "张三",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教1-101(兰州校区)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

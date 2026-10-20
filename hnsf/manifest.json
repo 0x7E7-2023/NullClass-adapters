@@ -1,0 +1,72 @@
+{
+  "specVersion": 1,
+  "key": "hnsf",
+  "name": "河南师范大学",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwc.htu.edu.cn/",
+  "scheduleUrlHint": "https://jwc.htu.edu.cn/new/student/xsgrkb/week.page",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 选了非夏季作息、第 1 周日期取到 → 开学日 2026-09-07、总周数 20；连堂、隔周单 / 双周、同一上课安排的单周行与双周行合并成每周、分段周次 1-8 与 10-17、一门课两处上课地点、完全重复的行只留一条",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：学期按日期推算 + 夏季作息 · 教务没给学期名与第 1 周日期 → 学期名由代码 202601 推出、开学日按 9 月 1 日所在周的周一推算为 2026-08-31 并提醒；夏季作息第 5 节 15:00",
+      "extracted": "fixtures/summer-estimate.extracted.json",
+      "expected": "fixtures/summer-estimate.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期 + 创新港校区 · 第 1 周日期 2027-02-22 取自教务；课表排到第 22 周 → 总周数抬到 22 并说明；第 11-12 节超出 10 节表，空课默认 11 节 20:20 接得上就用，第 12 节 21:15 同理",
+      "extracted": "fixtures/second-term-campus.extracted.json",
+      "expected": "fixtures/second-term-campus.expected.json"
+    },
+    {
+      "name": "合成用例：非夏季作息下课表用到第 11-14 节 · 第 11-13 节按上一节下课后顺推（21:15-22:00、22:05-22:50、22:55-23:40），第 14 节会越过 23:59 补不上并如实说明；周次写成区间 1-8",
+      "extracted": "fixtures/late-periods.extracted.json",
+      "expected": "fixtures/late-periods.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法与单/双标记 · 前缀「(单)1-8周,(双)9-16周」、「1-15周(单) 共16周」「共16周,1-15周(单)」「1-8周(共8周),9-16周」（共 N 周只剥备注本身）、「第1-第8周」、「1-8周(单) 9-16周(双)」（相邻段标记各归各段）、「1,3,5周」、全角逗号与括号、「第7周」「1~16周」「1至8周」；没选节次时间 → 默认第一张表并提醒",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：周次与行异常 · 教学班序号括号、备注括号、单/双同写、周次越界（25-32 只留 25-30、99 整行丢）、孤立「单」标记，以及缺课名 / 星期不合法 / 节次起大于止 / 周次为空的行被跳过并分类计数；总周数抬到 30",
+      "extracted": "fixtures/week-anomalies.extracted.json",
+      "expected": "fixtures/week-anomalies.expected.json"
+    },
+    {
+      "name": "合成用例：没选节次时间时按排课行的上课时间判断 · 两门课的起止时间只和夏季作息吻合 → 自动用夏季作息并说明；学期按日期推算为第二学期，开学日按 2 月 20 日所在周的周一推算为 2027-02-15",
+      "extracted": "fixtures/row-times-auto.extracted.json",
+      "expected": "fixtures/row-times-auto.expected.json"
+    },
+    {
+      "name": "合成用例：所选节次时间与排课行的上课时间对不上 · 选了非夏季作息，两门课的上课时间（含带秒与不带秒两种写法）却与创新港校区一致 → 点名并提示可改选；没带上课时间的课不参与核对",
+      "extracted": "fixtures/row-times-mismatch.extracted.json",
+      "expected": "fixtures/row-times-mismatch.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 缺教师 / 缺教室 + 不同周次地点不同 · 缺教师 3 门、缺教室 2 门照常导入（teacher / location 为 null）、提醒按类型汇总计数且点名的课名截到 20 字；不同教室的 jxcdmc2 判断（相同教室不算）；认不出周次的长文字被跳过；每条提醒不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：教务给的第 1 周日期不属于这个学期 · 2026-02-09 离第一学期的 9 月初太远 → 忽略，开学日按推算的 2026-08-31 并说明",
+      "extracted": "fixtures/start-rejected.extracted.json",
+      "expected": "fixtures/start-rejected.expected.json"
+    },
+    {
+      "name": "合成用例：标成周一的日期实际是周二 · 2026-09-08（带时间部分）→ 回退到当周周一 2026-09-07 并说明",
+      "extracted": "fixtures/start-adjusted.extracted.json",
+      "expected": "fixtures/start-adjusted.expected.json"
+    }
+  ]
+}
