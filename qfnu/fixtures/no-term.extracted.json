@@ -1,0 +1,386 @@
+{
+ "_note": "合成数据：课表页和周历页都读不到学年学期、周历也取不到：学期名用「学校名 + 当前学期」占位，开学日按提取日（2026-03-04，星期三）推算为 2026-03-02。",
+ "source": "qz-jsxsd",
+ "pageUrl": "http://zhjw.qfnu.edu.cn/jsxsd/xskb/xskb_list.do",
+ "now": "2026-03-04",
+ "term": {
+  "code": null,
+  "name": null
+ },
+ "screenTermMissing": true,
+ "cols": 8,
+ "calendar": {
+  "found": false,
+  "rows": []
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "head": true
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "星期一",
+    "parts": [],
+    "head": true
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "星期二",
+    "parts": [],
+    "head": true
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "星期三",
+    "parts": [],
+    "head": true
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "星期四",
+    "parts": [],
+    "head": true
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "星期五",
+    "parts": [],
+    "head": true
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "星期六",
+    "parts": [],
+    "head": true
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "星期日",
+    "parts": [],
+    "head": true
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第一大节(01,02小节)",
+    "parts": [],
+    "head": true
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "高等数学<br><font title=\"教师\">李某</font><br><font title=\"周次(节次)\">1-16周[01-02节]</font><br><font title=\"教室\">A301</font><br>"
+    ]
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第二大节(03,04小节)",
+    "parts": [],
+    "head": true
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "大学英语<br><font title=\"教师\">王某</font><br><font title=\"周次(节次)\">2-16周(双)[03-04节]</font><br><font title=\"教室\">B205</font><br>"
+    ]
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第三大节(05,06小节)",
+    "parts": [],
+    "head": true
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第四大节(07,08小节)",
+    "parts": [],
+    "head": true
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第五大节(09,10小节)",
+    "parts": [],
+    "head": true
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第六大节(11,12小节)",
+    "parts": [],
+    "head": true
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": []
+   }
+  ]
+ ]
+}

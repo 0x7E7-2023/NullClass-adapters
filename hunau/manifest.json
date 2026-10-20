@@ -1,0 +1,66 @@
+{
+  "specVersion": 1,
+  "key": "hunau",
+  "name": "湖南农业大学",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 salt-fishes（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://webvpn.hunau.edu.cn/login?cas_login=true",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表 · 节次时间取课表行标题（第二大节写成 10:10-11:50 → 第 3 节 10:10-10:55、第 4 节 11:05-11:50，与写死表不同）；明细（kbcontent）与简表（kbcontent1）并存时只留明细，简表里教室写法不同也不重复；教师后连写的职称去掉（教授 / 副教授 / 讲师 / 助教 / 其他），多人逗号分隔；教室末尾的「[05-06]节」去掉；一格两门课；单周 / 双周；同课相邻两大节合成 1-4 节；只有简表的格子没写节次 → 取行标签（第四大节 = 第 7-8 节）、教师留空并提醒；周历表头是「日一二…」，开学日取星期一那一列 2026-08-31",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：课表页没写节次时间 + 周历取不到 · 行标签只有「(01,02小节)」没有时间 → 整张用写死的 12 节表（第 1 节 08:00-08:45、第 12 节 22:15-23:00）并提醒；方括号写 [13-14节] → 第 13 节顺推 23:10-23:55，第 14 节越过 23:59 补不了并提醒；格内没写节次取行标签括号里的小节号；周历取不到 → 开学日按提取当天所在周的周一推算并提醒",
+      "extracted": "fixtures/times-fallback.extracted.json",
+      "expected": "fixtures/times-fallback.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法 · 「1-15(单周)」「2-16(双周)」；「(单)1-8周,(双)9-16周」→ 1-7 单 + 10-16 双（标记跟着自己那一段走，不是整格按双周）；「1-8周(单) 9-16周(双)」与「1-8周(单)9-16周(双)」（后缀挨着下一段）同样；「第1-第8周」是一个区间；「1-8周(共8周),9-16周」只剥备注，仍是 1-16；「1,3,5(周)」→ 单周；「1-16周(1)」括号数字是序号并计数提醒；「5至12周」；「1-4周,6-8周」两段；「1-16周 双」被空白隔开的标记并回前一段；周历表头是「星期一…」、首列「第1周」、日期写在 title 的 yyyy-MM-dd",
+      "extracted": "fixtures/weeks-forms.extracted.json",
+      "expected": "fixtures/weeks-forms.expected.json"
+    },
+    {
+      "name": "合成用例：周历没有星期表头 · 第 1 周那一行的第一个日期格是星期日（2026-08-30）→ 按上游取该行第二格并顺延到星期一 2026-08-31，并提醒到学期管理里核对",
+      "extracted": "fixtures/calendar-nohead.extracted.json",
+      "expected": "fixtures/calendar-nohead.expected.json"
+    },
+    {
+      "name": "合成用例：周历里星期一那一格写的不是星期一 · 表头「一二…日」、日期只写在格子文字里（没有 title），第 1 周星期一写成 2026年09月02日（星期三）→ 对齐到所在周的周一 2026-08-31 并提醒",
+      "extracted": "fixtures/calendar-offday.extracted.json",
+      "expected": "fixtures/calendar-offday.expected.json"
+    },
+    {
+      "name": "合成用例：星期表头只认出 5 天 + 合并的周末格 · 周六、周日两列按列序补出并提醒（受影响的 3 条安排），跨周六周日的合并格里的课同时记在两天并提醒；学期下拉框没标出选中项（取第一项 2025-2026-2，学期名写成「2025-2026学年第二学期」）并提醒；周历取不到 → 按提取当天推算开学日",
+      "extracted": "fixtures/partial-header.extracted.json",
+      "expected": "fixtures/partial-header.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 各类问题的提醒限长 · 5 门 25 字左右的课名：缺教师 / 缺教室合并成一条（点名课名截到 20 字），周次写「待定」认不出、29-34 周截到 30 周并把总周数抬到 30、方括号 [2026节] 读不出节次按行标签对应，各自一条，每条都不超过 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：页面只写了一部分节次时间 · 前四个大节有时间、第五大节写成 19:30-22:00（按时长是 3 小节，不采用）、第六大节没写 → 第 9-12 节用写死表补上，课表用到了第 9-10 节，提醒这两节是补的",
+      "extracted": "fixtures/times-partial.extracted.json",
+      "expected": "fixtures/times-partial.expected.json"
+    },
+    {
+      "name": "合成用例：页面写的节次时间前后对不上 · 第二大节写成 09:00-10:40（比第一大节结束还早）→ 整张改用写死的 12 节表并提醒",
+      "extracted": "fixtures/times-conflict.extracted.json",
+      "expected": "fixtures/times-conflict.expected.json"
+    },
+    {
+      "name": "合成用例：简表与明细的取舍 · 简表里与明细课名和周次都相同的块丢掉，简表独有的块（17-18 周、另一间教室）照常导入且教师留空；整格只有简表的两门课（用破折号分隔）取行标签 → 第 3-4 节；周次与节次分写在两个 font 里（「周次」「节次」）；课名里的「[实验]」不当节次；页面上找不到学年学期下拉框 → 学期取教务默认学期并提醒；三门课缺教师合并成一条提醒",
+      "extracted": "fixtures/brief-detail.extracted.json",
+      "expected": "fixtures/brief-detail.expected.json"
+    }
+  ]
+}

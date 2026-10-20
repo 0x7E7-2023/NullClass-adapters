@@ -1,0 +1,241 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "教务系统没有给出节次时间，已先用应用自带的 12 节节次时间导入（第 1 节 08:00-08:45、第 12 节 21:15-22:00），与学校实际上下课时间不同时请在「学期管理」里改成学校的节次时间"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第一学期",
+   "firstDay": "2026-09-07",
+   "totalWeeks": 18,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:00",
+     "end": "08:45"
+    },
+    {
+     "periodIndex": 2,
+     "start": "08:55",
+     "end": "09:40"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:00",
+     "end": "10:45"
+    },
+    {
+     "periodIndex": 4,
+     "start": "10:55",
+     "end": "11:40"
+    },
+    {
+     "periodIndex": 5,
+     "start": "14:00",
+     "end": "14:45"
+    },
+    {
+     "periodIndex": 6,
+     "start": "14:55",
+     "end": "15:40"
+    },
+    {
+     "periodIndex": 7,
+     "start": "16:00",
+     "end": "16:45"
+    },
+    {
+     "periodIndex": 8,
+     "start": "16:55",
+     "end": "17:40"
+    },
+    {
+     "periodIndex": 9,
+     "start": "18:30",
+     "end": "19:15"
+    },
+    {
+     "periodIndex": 10,
+     "start": "19:25",
+     "end": "20:10"
+    },
+    {
+     "periodIndex": 11,
+     "start": "20:20",
+     "end": "21:05"
+    },
+    {
+     "periodIndex": 12,
+     "start": "21:15",
+     "end": "22:00"
+    }
+   ],
+   "courses": [
+    {
+     "name": "数据库",
+     "teacher": "孙某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "S101"
+      }
+     ]
+    },
+    {
+     "name": "容器课",
+     "teacher": "甲某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 1,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "T1"
+      }
+     ]
+    },
+    {
+     "name": "操作系统",
+     "teacher": "乙某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 3,
+       "endPeriod": 6,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "U1"
+      }
+     ]
+    },
+    {
+     "name": "同格分段",
+     "teacher": "丁某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 1,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "K1"
+      }
+     ]
+    },
+    {
+     "name": "同格隔段",
+     "teacher": "丁某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 5,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "K2"
+      },
+      {
+       "dayOfWeek": 5,
+       "startPeriod": 5,
+       "endPeriod": 6,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "K2"
+      }
+     ]
+    },
+    {
+     "name": "网络",
+     "teacher": "何某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 3,
+       "startPeriod": 7,
+       "endPeriod": 8,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "N1"
+      }
+     ]
+    },
+    {
+     "name": "英语",
+     "teacher": "甲老师",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 5,
+       "startPeriod": 7,
+       "endPeriod": 8,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "E1"
+      }
+     ]
+    },
+    {
+     "name": "分教室课",
+     "teacher": "丙某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 6,
+       "startPeriod": 7,
+       "endPeriod": 8,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": "X"
+      },
+      {
+       "dayOfWeek": 6,
+       "startPeriod": 7,
+       "endPeriod": 8,
+       "startWeek": 9,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "Y"
+      }
+     ]
+    },
+    {
+     "name": "英语",
+     "teacher": "乙老师",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 5,
+       "startPeriod": 9,
+       "endPeriod": 10,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "E2"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

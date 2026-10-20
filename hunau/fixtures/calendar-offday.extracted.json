@@ -1,0 +1,485 @@
+{
+ "now": "2026-09-12",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027-1",
+  "source": "select-selected"
+ },
+ "calendar": {
+  "found": true,
+  "rows": [
+   [
+    {
+     "col": 0,
+     "text": "周次"
+    },
+    {
+     "col": 1,
+     "text": "一"
+    },
+    {
+     "col": 2,
+     "text": "二"
+    },
+    {
+     "col": 3,
+     "text": "三"
+    },
+    {
+     "col": 4,
+     "text": "四"
+    },
+    {
+     "col": 5,
+     "text": "五"
+    },
+    {
+     "col": 6,
+     "text": "六"
+    },
+    {
+     "col": 7,
+     "text": "日"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "1"
+    },
+    {
+     "col": 1,
+     "text": "2026年09月02日"
+    },
+    {
+     "col": 2,
+     "text": "2026年09月03日"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "2"
+    },
+    {
+     "col": 1,
+     "text": "2026年09月09日"
+    },
+    {
+     "col": 2,
+     "text": "2026年09月10日"
+    }
+   ]
+  ]
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "星期一",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "星期二",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "星期三",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "星期四",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "星期五",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "星期六",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "星期日",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第一大节 08:00-09:40",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "大学语文<br/><font title=\"老师\">陈十三</font><br/><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br/><font title=\"教室\">文科楼A1</font><br/>"
+    ],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第二大节 10:05-11:45",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第三大节 14:30-16:10",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第四大节 16:35-18:15",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第五大节 19:30-21:10",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第六大节 21:20-23:00",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ]
+ ]
+}

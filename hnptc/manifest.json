@@ -1,0 +1,102 @@
+{
+  "specVersion": 1,
+  "key": "hnptc",
+  "name": "湖南邮电职业技术学院",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 小漫君（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://jx.hnxyjf.com:10081/jsxsd/",
+  "scheduleUrlHint": "http://jx.hnxyjf.com:10081/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 简表（无教师、无方括号）与详表同格，按课名 + 周次 + 教室择优留详表；一格两门课（减号分隔）；单周 / 双周；多段周次 1-8,10-17；程序设计第 5-6 节与第 7-8 节相邻并成 5-8；周历 18 周、第 1 周星期一 2026-09-07 → 开学日；学期名取代码拼成「2026-2027学年第一学期」",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法与单/双标记归属（每段各判）—— 1-8周(单) / (单)1-8周,(双)9-16周 / 第1-第8周 / 1-8周(共8周),9-16周（只剥备注）/ 1~8,10~16 / 1,3,5周 / 1-8周(单)9-16周(双)（后缀紧挨下一段）/ 1-16周 双 / 2-16(双周) / 全角数字括号 / 1-3,5-9 / 第3周 / 1至8周",
+      "extracted": "fixtures/weeks-forms.extracted.json",
+      "expected": "fixtures/weeks-forms.expected.json"
+    },
+    {
+      "name": "合成用例：周次里的备注与不正常写法 —— (1) 教学班序号、(实验) 括号备注、1-40周 超过 30 周的部分丢弃、(单双) 与 隔周 认不出 → 每周都上并提醒；周历 20 周而课表到第 30 周 → 总周数抬到 30",
+      "extracted": "fixtures/weeks-notes.extracted.json",
+      "expected": "fixtures/weeks-notes.expected.json"
+    },
+    {
+      "name": "合成用例：简表与详表择优 —— 只有简表的课节次取本行表头（01~02节 / 第3~4节 / 第5-6小节）；简表在前或在后都留详表；数据结构第 1-2 节与第 3-4 节并成 1-4；表头里认不出节次（7、8节）且课里也没写 → 丢弃并点名；完全相同的两份只留一条；同一教师的两份候选里带方括号的（01-04节）分数高，节次取它而不取本行表头的 1-2 节；缺教师汇总提醒",
+      "extracted": "fixtures/dedupe.extracted.json",
+      "expected": "fixtures/dedupe.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师 / 缺教室 / 两者都缺照常导入（null）；没有课名、没有周次、周次认不出、没有节次、节次超过 20 节各自计数并点名；方括号里读不出节次（[上午]）回落本行表头；多位教师原样保留；块里没有带标题的 font 时按整块文字认周次",
+      "extracted": "fixtures/messy.extracted.json",
+      "expected": "fixtures/messy.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 同类问题多门课 —— 4 门长课名缺教师且缺教室、3 门长课名周次认不出、1 个很长的括号备注：提醒按类型汇总、点名课名和备注截到 20 字、每条不超过 200 字，并指向「编辑课程」",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    },
+    {
+      "name": "合成用例：课表排到第 11-14 节（学校只公布 10 节）—— 第 11-13 节在第 10 节下课后顺推补上（21:15-22:00 / 22:05-22:50 / 22:55-23:40），第 14 节顺推会越过 23:59 不补并说明",
+      "extracted": "fixtures/period-overflow.extracted.json",
+      "expected": "fixtures/period-overflow.expected.json"
+    },
+    {
+      "name": "合成用例：周历取不到 —— 开学日按提取日期（2026-09-16 星期三）所在周的周一 2026-09-14 推算，总周数取课表里最晚的第 16 周，各出一条提醒",
+      "extracted": "fixtures/cal-none.extracted.json",
+      "expected": "fixtures/cal-none.expected.json"
+    },
+    {
+      "name": "合成用例：周历表头是「日一二三四五六」（星期日在前）—— 按表头认出星期一在第 2 列，开学日 2026-09-07，不把星期日当开学日；周历 20 周",
+      "extracted": "fixtures/cal-sunday-first.extracted.json",
+      "expected": "fixtures/cal-sunday-first.expected.json"
+    },
+    {
+      "name": "合成用例：周历第 1 周「一」那一格上的日期是 2026-09-08（星期二）—— 不采用原值，对齐到所在周的周一 2026-09-07 并提醒",
+      "extracted": "fixtures/cal-offmonday.extracted.json",
+      "expected": "fixtures/cal-offmonday.expected.json"
+    },
+    {
+      "name": "合成用例：周历没有星期表头 —— 按上游口径取第 1 周那一行里第一个带日期的格子（星期一 2026-09-07），不出开学日提醒；周历 18 周",
+      "extracted": "fixtures/cal-no-header.extracted.json",
+      "expected": "fixtures/cal-no-header.expected.json"
+    },
+    {
+      "name": "合成用例：周历没有星期表头且第一个日期格是星期日 2026-09-06 —— 开学日取后一天的星期一 2026-09-07 并提醒；课表到第 18 周而周历只有 16 周 → 总周数抬到 18",
+      "extracted": "fixtures/cal-titled-sunday.extracted.json",
+      "expected": "fixtures/cal-titled-sunday.expected.json"
+    },
+    {
+      "name": "合成用例：课表顶部没有星期标题 —— 按最右边 7 列推断并提醒；一个 colspan=2 的格子跨了星期三、星期四 → 课同时放进两天并提醒；课表页上找不到学年学期下拉框；第二学期，周历第 1 周星期一 2027-03-01，学期名由代码拼出",
+      "extracted": "fixtures/no-header.extracted.json",
+      "expected": "fixtures/no-header.expected.json"
+    },
+    {
+      "name": "合成用例：合并 —— 同课 1-8 周与 9-16 周同节次并成 1-16；完全重复只留一条；同名不同教师两门课；同课不同周换教室是同一门课的两块；第 3-4 节与第 5-6 节（隔着午饭）不并；第 5-6 节与第 7-8 节并成 5-8；第 7-8 节与第 9-10 节（隔着晚饭）不并",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：节次分段 —— 同格同名同教师同周同教室、明写节次不同的两块（[01-02节] 与 [05-06节]，本行表头 01~06节）不能并成一块；另一门课 [01-02节] + [03-04节] 相邻并成 1-4，行表头补出的简表并进它，不多出重复课",
+      "extracted": "fixtures/period-split.extracted.json",
+      "expected": "fixtures/period-split.expected.json"
+    },
+    {
+      "name": "合成用例：补空 —— 同一门课的两份候选一方缺教师 / 教室，视为可合并并取非空的一方，不多出空教师空教室的重复课（先完整后残缺、先残缺后完整、一方缺教室一方缺教师）",
+      "extracted": "fixtures/fill-empty.extracted.json",
+      "expected": "fixtures/fill-empty.expected.json"
+    },
+    {
+      "name": "合成用例：周历格子没有 title，日期写在格子文字里（2026年09月07日）—— title 优先、文字兜底，开学日 2026-09-07；周历 18 周",
+      "extracted": "fixtures/cal-text-date.extracted.json",
+      "expected": "fixtures/cal-text-date.expected.json"
+    }
+  ]
+}

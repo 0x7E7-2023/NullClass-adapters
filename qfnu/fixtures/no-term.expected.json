@@ -1,0 +1,115 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "开学日期无法从教务获取（教学周历取不到或表格结构认不出来），已按最近的周一（2026-03-02）推算，请在「学期管理」里核对",
+  "没能识别出学年学期（课表页的「学年学期」下拉框认不出来），学期名已用「曲阜师范大学当前学期」占位，请在「学期管理」里改名",
+  "课表页上找不到「学年学期」下拉框，无法确认屏幕上的课表是哪一学期，导入的是教务默认选中的学期（曲阜师范大学当前学期），请核对是否是要导入的那一学期",
+  "教务没有给出学期总周数，已按 20 周计，请在「学期管理」里核对",
+  "教务系统没有给出节次时间，已先用应用自带的 12 节节次时间导入（第 1 节 08:00-08:45、第 12 节 21:15-22:00），与学校实际上下课时间不同时请在「学期管理」里改成学校的节次时间"
+ ],
+ "terms": [
+  {
+   "name": "曲阜师范大学当前学期",
+   "firstDay": "2026-03-02",
+   "totalWeeks": 20,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:00",
+     "end": "08:45"
+    },
+    {
+     "periodIndex": 2,
+     "start": "08:55",
+     "end": "09:40"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:00",
+     "end": "10:45"
+    },
+    {
+     "periodIndex": 4,
+     "start": "10:55",
+     "end": "11:40"
+    },
+    {
+     "periodIndex": 5,
+     "start": "14:00",
+     "end": "14:45"
+    },
+    {
+     "periodIndex": 6,
+     "start": "14:55",
+     "end": "15:40"
+    },
+    {
+     "periodIndex": 7,
+     "start": "16:00",
+     "end": "16:45"
+    },
+    {
+     "periodIndex": 8,
+     "start": "16:55",
+     "end": "17:40"
+    },
+    {
+     "periodIndex": 9,
+     "start": "18:30",
+     "end": "19:15"
+    },
+    {
+     "periodIndex": 10,
+     "start": "19:25",
+     "end": "20:10"
+    },
+    {
+     "periodIndex": 11,
+     "start": "20:20",
+     "end": "21:05"
+    },
+    {
+     "periodIndex": 12,
+     "start": "21:15",
+     "end": "22:00"
+    }
+   ],
+   "courses": [
+    {
+     "name": "高等数学",
+     "teacher": "李某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "A301"
+      }
+     ]
+    },
+    {
+     "name": "大学英语",
+     "teacher": "王某",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 3,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 2,
+       "endWeek": 16,
+       "weekType": "EVEN",
+       "location": "B205"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,147 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "课表里最晚是第 30 周，已把总周数从 20 调到 30 周",
+  "有 2 门课没给上课教师、1 门课没给上课地点（例如 跨境电子商务数据分析与运营实践综合项目…、人工智能与大数据技术在现代农业中的综合…）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上",
+  "有 1 门课的周次没认出来，已跳过（如「农业经济管理学科前沿问题与政策分析研讨…：待定」）",
+  "有 1 门课的周次超出第 1–30 周的范围，超出的周已忽略（如「植物保护学专业综合实习与田间调查实践课…」）",
+  "有 1 门课的节次写法认不出，已按所在行的节次对应（如「动物营养与饲料科学前沿技术应用与实践课…」），请核对"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第一学期",
+   "firstDay": "2026-08-31",
+   "totalWeeks": 30,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:00",
+     "end": "08:45"
+    },
+    {
+     "periodIndex": 2,
+     "start": "08:55",
+     "end": "09:40"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:05",
+     "end": "10:50"
+    },
+    {
+     "periodIndex": 4,
+     "start": "11:00",
+     "end": "11:45"
+    },
+    {
+     "periodIndex": 5,
+     "start": "14:30",
+     "end": "15:15"
+    },
+    {
+     "periodIndex": 6,
+     "start": "15:25",
+     "end": "16:10"
+    },
+    {
+     "periodIndex": 7,
+     "start": "16:35",
+     "end": "17:20"
+    },
+    {
+     "periodIndex": 8,
+     "start": "17:30",
+     "end": "18:15"
+    },
+    {
+     "periodIndex": 9,
+     "start": "19:30",
+     "end": "20:15"
+    },
+    {
+     "periodIndex": 10,
+     "start": "20:25",
+     "end": "21:10"
+    },
+    {
+     "periodIndex": 11,
+     "start": "21:20",
+     "end": "22:05"
+    },
+    {
+     "periodIndex": 12,
+     "start": "22:15",
+     "end": "23:00"
+    }
+   ],
+   "courses": [
+    {
+     "name": "跨境电子商务数据分析与运营实践综合项目训练课程设计",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "植物保护学专业综合实习与田间调查实践课程第四期",
+     "teacher": "乙老师",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 29,
+       "endWeek": 30,
+       "weekType": "ALL",
+       "location": "y教室"
+      }
+     ]
+    },
+    {
+     "name": "人工智能与大数据技术在现代农业中的综合应用研究进展专题讲座",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": "农学楼301"
+      }
+     ]
+    },
+    {
+     "name": "动物营养与饲料科学前沿技术应用与实践课程综合设计",
+     "teacher": "丙老师",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 5,
+       "startPeriod": 5,
+       "endPeriod": 6,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "z教室"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

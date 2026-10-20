@@ -1,0 +1,424 @@
+{
+ "now": "2026-09-16",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027-1",
+  "source": "select-selected"
+ },
+ "calendar": {
+  "found": false,
+  "rows": []
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "星期一",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "星期二",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "星期三",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "星期四",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "星期五",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "星期六",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "星期日",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第一大节(01,02小节)",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "概率统计<br/><font title=\"老师\">孙八讲师</font><br/><font title=\"周次(节次)\">1-18(周)</font><br/><font title=\"教室\">教学楼B201</font><br/>"
+    ],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第二大节(03,04小节)",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第三大节(05,06小节)",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第四大节(07,08小节)",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第五大节(09,10小节)",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第六大节(11,12小节)",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "社会实践<br/><font title=\"老师\">吴九</font><br/><font title=\"周次(节次)\">1-4周[13-14节]</font><br/><font title=\"教室\">XX基地</font><br/>"
+    ],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ]
+ ]
+}

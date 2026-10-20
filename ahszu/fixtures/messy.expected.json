@@ -1,0 +1,250 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "没能从教务页面读到当前学期，已按今天的日期判断为「2026-2027学年第一学期」；如果不是你要的学期，请在教务系统里切到那个学期再点「提取课表」",
+  "课表页面里没有开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对成学校实际开学日",
+  "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+  "有 4 条课程内容没能读成课程（找不到方括号里的节次 1 条、周次认不出或全超出 1-30 周 1 条、节次认不出 2 条），已跳过，例如 「只有备注」「周次不明」「节次坏」：如发现少课请反馈",
+  "有 1 门课所在的格子超出了星期一到星期日的范围（认不出是星期几），这些课已跳过：如发现少课请反馈",
+  "有 1 个格子里有文字，但排版和预期不一样（如「备注：见通知」），这些格子没有导入：如发现少课请反馈",
+  "有 2 门课没给上课教师、2 门课没给上课地点（例如 缺教师课、缺教室课、师地全缺）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上",
+  "有 2 门课在节次或地点后面还有别的文字（如「备注文字」），这部分没有导入"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第一学期",
+   "firstDay": "2026-08-31",
+   "totalWeeks": 20,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:05",
+     "end": "08:50"
+    },
+    {
+     "periodIndex": 2,
+     "start": "09:00",
+     "end": "09:45"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:05",
+     "end": "10:50"
+    },
+    {
+     "periodIndex": 4,
+     "start": "11:00",
+     "end": "11:45"
+    },
+    {
+     "periodIndex": 5,
+     "start": "14:40",
+     "end": "15:25"
+    },
+    {
+     "periodIndex": 6,
+     "start": "15:35",
+     "end": "16:20"
+    },
+    {
+     "periodIndex": 7,
+     "start": "16:30",
+     "end": "17:15"
+    },
+    {
+     "periodIndex": 8,
+     "start": "17:25",
+     "end": "18:10"
+    },
+    {
+     "periodIndex": 9,
+     "start": "19:00",
+     "end": "19:45"
+    },
+    {
+     "periodIndex": 10,
+     "start": "19:55",
+     "end": "20:40"
+    },
+    {
+     "periodIndex": 11,
+     "start": "20:50",
+     "end": "21:35"
+    }
+   ],
+   "courses": [
+    {
+     "name": "缺教师课",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "教学楼A"
+      }
+     ]
+    },
+    {
+     "name": "缺教室课",
+     "teacher": "孙老师",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "师地全缺",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 5,
+       "endPeriod": 6,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "双师课",
+     "teacher": "师甲、师乙",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 7,
+       "endPeriod": 8,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "实验楼1"
+      }
+     ]
+    },
+    {
+     "name": "后缀课",
+     "teacher": "师丙",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 9,
+       "endPeriod": 10,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": "楼B"
+      }
+     ]
+    },
+    {
+     "name": "多行课",
+     "teacher": "师丁",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 10,
+       "endPeriod": 11,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": "楼C"
+      }
+     ]
+    },
+    {
+     "name": "大学英语[A]",
+     "teacher": "李四",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "B202"
+      }
+     ]
+    },
+    {
+     "name": "全角括号课",
+     "teacher": "师戊",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": "楼D"
+      }
+     ]
+    },
+    {
+     "name": "分段节次",
+     "teacher": "师己",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 4,
+       "weekType": "ALL",
+       "location": "楼E"
+      },
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 5,
+       "endPeriod": 6,
+       "startWeek": 1,
+       "endWeek": 4,
+       "weekType": "ALL",
+       "location": "楼E"
+      }
+     ]
+    },
+    {
+     "name": "第节字样",
+     "teacher": "师庚",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": "楼F"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

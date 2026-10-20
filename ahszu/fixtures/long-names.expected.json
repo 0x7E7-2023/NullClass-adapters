@@ -1,0 +1,177 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "只导入了教务页面上当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请先在教务系统里切到那个学期再点「提取课表」",
+  "课表页面里没有开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对成学校实际开学日",
+  "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+  "有 2 条课程内容没能读成课程（找不到方括号里的节次 1 条、周次认不出或全超出 1-30 周 1 条），已跳过，例如 「这是一门名字特别特别长而且没有写节次信…」「另一门名字同样特别特别长而且周次写得认…」：如发现少课请反馈",
+  "有 1 个格子里有文字，但排版和预期不一样（如「这个格子里有一小段说明文字但没有课程」），这些格子没有导入：如发现少课请反馈",
+  "有 3 门课没给上课教师、3 门课没给上课地点（例如 面向对象程序设计与数据结构综合实践课程…、中国近现代史纲要与当代中国社会主义建设…、大学生职业生涯规划与就业创业指导综合训…）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上",
+  "有 1 门课在节次或地点后面还有别的文字（如「很长的后缀说明文字很长的后缀说明文字很…」），这部分没有导入",
+  "有 1 处周次里的括号备注（如「(备注内容备注内容备注内容备注内容备注…」）不是周次，已忽略，请核对这几门课的周次"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第一学期",
+   "firstDay": "2026-08-31",
+   "totalWeeks": 20,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:05",
+     "end": "08:50"
+    },
+    {
+     "periodIndex": 2,
+     "start": "09:00",
+     "end": "09:45"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:05",
+     "end": "10:50"
+    },
+    {
+     "periodIndex": 4,
+     "start": "11:00",
+     "end": "11:45"
+    },
+    {
+     "periodIndex": 5,
+     "start": "14:40",
+     "end": "15:25"
+    },
+    {
+     "periodIndex": 6,
+     "start": "15:35",
+     "end": "16:20"
+    },
+    {
+     "periodIndex": 7,
+     "start": "16:30",
+     "end": "17:15"
+    },
+    {
+     "periodIndex": 8,
+     "start": "17:25",
+     "end": "18:10"
+    },
+    {
+     "periodIndex": 9,
+     "start": "19:00",
+     "end": "19:45"
+    },
+    {
+     "periodIndex": 10,
+     "start": "19:55",
+     "end": "20:40"
+    },
+    {
+     "periodIndex": 11,
+     "start": "20:50",
+     "end": "21:35"
+    }
+   ],
+   "courses": [
+    {
+     "name": "面向对象程序设计与数据结构综合实践课程设计（实验班）",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "中国近现代史纲要与当代中国社会主义建设专题研讨课程（慕课）",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "楼1"
+      }
+     ]
+    },
+    {
+     "name": "大学生职业生涯规划与就业创业指导综合训练课程第二学期",
+     "teacher": "师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 5,
+       "endPeriod": 6,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "人工智能与机器学习基础及其在工程领域中的综合应用实训",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 7,
+       "endPeriod": 8,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "后面跟着很长很长说明文字的综合素质拓展选修课程名称",
+     "teacher": "师丙",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 9,
+       "endPeriod": 10,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": "楼3"
+      }
+     ]
+    },
+    {
+     "name": "周次备注写得非常非常长的跨学科综合素质拓展选修课程",
+     "teacher": "师丁",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 10,
+       "endPeriod": 11,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": "楼4"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

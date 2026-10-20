@@ -1,0 +1,588 @@
+{
+ "now": "2026-09-12",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027-1",
+  "source": "select-selected"
+ },
+ "calendar": {
+  "found": true,
+  "rows": [
+   [
+    {
+     "col": 0,
+     "text": "周次"
+    },
+    {
+     "col": 1,
+     "text": "日"
+    },
+    {
+     "col": 2,
+     "text": "一"
+    },
+    {
+     "col": 3,
+     "text": "二"
+    },
+    {
+     "col": 4,
+     "text": "三"
+    },
+    {
+     "col": 5,
+     "text": "四"
+    },
+    {
+     "col": 6,
+     "text": "五"
+    },
+    {
+     "col": 7,
+     "text": "六"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "1"
+    },
+    {
+     "col": 1,
+     "text": "30",
+     "title": "2026年08月30"
+    },
+    {
+     "col": 2,
+     "text": "31",
+     "title": "2026年08月31"
+    },
+    {
+     "col": 3,
+     "text": "1",
+     "title": "2026年09月01"
+    },
+    {
+     "col": 4,
+     "text": "2",
+     "title": "2026年09月02"
+    },
+    {
+     "col": 5,
+     "text": "3",
+     "title": "2026年09月03"
+    },
+    {
+     "col": 6,
+     "text": "4",
+     "title": "2026年09月04"
+    },
+    {
+     "col": 7,
+     "text": "5",
+     "title": "2026年09月05"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "2"
+    },
+    {
+     "col": 1,
+     "text": "6",
+     "title": "2026年09月06"
+    },
+    {
+     "col": 2,
+     "text": "7",
+     "title": "2026年09月07"
+    },
+    {
+     "col": 3,
+     "text": "8",
+     "title": "2026年09月08"
+    },
+    {
+     "col": 4,
+     "text": "9",
+     "title": "2026年09月09"
+    },
+    {
+     "col": 5,
+     "text": "10",
+     "title": "2026年09月10"
+    },
+    {
+     "col": 6,
+     "text": "11",
+     "title": "2026年09月11"
+    },
+    {
+     "col": 7,
+     "text": "12",
+     "title": "2026年09月12"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "3"
+    },
+    {
+     "col": 1,
+     "text": "13",
+     "title": "2026年09月13"
+    },
+    {
+     "col": 2,
+     "text": "14",
+     "title": "2026年09月14"
+    },
+    {
+     "col": 3,
+     "text": "15",
+     "title": "2026年09月15"
+    },
+    {
+     "col": 4,
+     "text": "16",
+     "title": "2026年09月16"
+    },
+    {
+     "col": 5,
+     "text": "17",
+     "title": "2026年09月17"
+    },
+    {
+     "col": 6,
+     "text": "18",
+     "title": "2026年09月18"
+    },
+    {
+     "col": 7,
+     "text": "19",
+     "title": "2026年09月19"
+    }
+   ]
+  ]
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "星期一",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "星期二",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "星期三",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "星期四",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "星期五",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "星期六",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "星期日",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第一大节 08:00-09:40",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "跨境电子商务数据分析与运营实践综合项目训练课程设计<br/><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br/>"
+    ],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "农业经济管理学科前沿问题与政策分析研讨课程第三期<br/><font title=\"老师\">甲老师</font><br/><font title=\"周次(节次)\">待定</font><br/><font title=\"教室\">x教室</font><br/>"
+    ],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "植物保护学专业综合实习与田间调查实践课程第四期<br/><font title=\"老师\">乙老师</font><br/><font title=\"周次(节次)\">29-34周[01-02节]</font><br/><font title=\"教室\">y教室</font><br/>"
+    ],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第二大节 10:05-11:45",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "人工智能与大数据技术在现代农业中的综合应用研究进展专题讲座<br/><font title=\"周次(节次)\">1-8(周)[03-04节]</font><br/><font title=\"教室\">农学楼301</font><br/>"
+    ],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第三大节 14:30-16:10",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "动物营养与饲料科学前沿技术应用与实践课程综合设计<br/><font title=\"老师\">丙老师</font><br/><font title=\"周次(节次)\">1-16(周)[2026节]</font><br/><font title=\"教室\">z教室</font><br/>"
+    ],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第四大节 16:35-18:15",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第五大节 19:30-21:10",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第六大节 21:20-23:00",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ]
+ ]
+}

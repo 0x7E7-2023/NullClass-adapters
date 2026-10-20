@@ -1,0 +1,152 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "节次时间按学校公布的 2025-2026 学年作息导入，学校如有调整，请在「学期管理」里核对",
+  "有 3 个上课安排没能认出来，已跳过（没认出周次 3 个）。教务页面的写法可能有变化，欢迎反馈。包含：戊超长课程名称超长课程名称超长课程名称…——没认出周次；己超长课程名称超长课程名称超长课程名称…——没认出周次；庚超长课程名称超长课程名称超长课程名称…——没认出周次",
+  "有 4 门课没给上课教师、4 门课没给上课地点（例如 甲超长课程名称超长课程名称超长课程名称…、乙超长课程名称超长课程名称超长课程名称…、丙超长课程名称超长课程名称超长课程名称… 等）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上",
+  "有 1 处周次里的括号备注（如「(这是一段特别特别特别特别长的括号备注…」）不是周次，已忽略，请核对这几门课的周次"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第一学期",
+   "firstDay": "2026-09-07",
+   "totalWeeks": 18,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:30",
+     "end": "09:15"
+    },
+    {
+     "periodIndex": 2,
+     "start": "09:25",
+     "end": "10:10"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:25",
+     "end": "11:10"
+    },
+    {
+     "periodIndex": 4,
+     "start": "11:20",
+     "end": "12:05"
+    },
+    {
+     "periodIndex": 5,
+     "start": "14:00",
+     "end": "14:45"
+    },
+    {
+     "periodIndex": 6,
+     "start": "14:55",
+     "end": "15:40"
+    },
+    {
+     "periodIndex": 7,
+     "start": "15:50",
+     "end": "16:35"
+    },
+    {
+     "periodIndex": 8,
+     "start": "16:45",
+     "end": "17:30"
+    },
+    {
+     "periodIndex": 9,
+     "start": "19:30",
+     "end": "20:15"
+    },
+    {
+     "periodIndex": 10,
+     "start": "20:25",
+     "end": "21:10"
+    }
+   ],
+   "courses": [
+    {
+     "name": "甲超长课程名称超长课程名称超长课程名称超长课程名称超长课程名称",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "乙超长课程名称超长课程名称超长课程名称超长课程名称超长课程名称",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "丙超长课程名称超长课程名称超长课程名称超长课程名称超长课程名称",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 3,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "丁超长课程名称超长课程名称超长课程名称超长课程名称超长课程名称",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "备注很长的课",
+     "teacher": "甲老师",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "教学楼Y2"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

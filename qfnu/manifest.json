@@ -1,0 +1,99 @@
+{
+  "specVersion": 1,
+  "key": "qfnu",
+  "name": "曲阜师范大学",
+  "initial": "Q",
+  "version": "1.0.0",
+  "author": "上游 Yumu-banxia（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://zhjw.qfnu.edu.cn/jsxsd/",
+  "scheduleUrlHint": "http://zhjw.qfnu.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "zhjw.qfnu.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（每格简表加详表两份、一格两门课、单双周、多段周次、周历 18 周；教务不给节次时间，用应用自带的 12 节并提醒）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：简表与详表择优（简表没教室并入详表、只有简表按所在行定节次、详表读不出周次不重复报丢块、同格两位教师都留、简表详表教室不同各留一条）",
+      "extracted": "fixtures/summary-forms.extracted.json",
+      "expected": "fixtures/summary-forms.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法与单双标记归属（「(单)1-8周,(双)9-16周」前缀各跟自己一段、「1-8周(单)9-16周」后缀紧挨下一段、「(单)第1-第8周」、「共8周」只剥备注、「第1-第8周」、全角序号与括号备注、隔周与(单双)认不出出声、第 31 周丢弃）",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：节次写法与按行推算（[01-02小节]、【01-02节】、[5、6节]、[第7,8节]、[0910节]、[09-11节]；周次节次分在两个标签；整块文字里找带「周」字的一行；方括号读不出或没有时按行首标签推算并提醒；标签 `(01,02,03,04小节)` 得 1-4、`(09,10,11小节)` 得 9-11）",
+      "extracted": "fixtures/period-forms.extracted.json",
+      "expected": "fixtures/period-forms.expected.json"
+    },
+    {
+      "name": "合成用例：相邻节次合并与周次并集（同一格里同课同师同周同教室、节次不同的两块：[01-02节] 与 [03-04节] 并成 1-4、与 [05-06节] 是两段；01-02 与 03-04 并成 1-4、03-04 与 05-06 并成 3-6、被包含的并入、同节次 1-8 周与 9-16 周取并集、重复块去重、同名不同教师两门课、同节次不同教室各留一条）",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：长课名的提醒限长（4 个长课名的上课安排没有周次、6 门长课名的课没教师没教室；课名截 20 字、整条不超过 200 字）",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    },
+    {
+      "name": "合成用例：周历表头「日一二三四五六」（第 1 周的星期一在第三列，开学日 2026-09-07，16 周）",
+      "extracted": "fixtures/calendar-sunday-first.extracted.json",
+      "expected": "fixtures/calendar-sunday-first.expected.json"
+    },
+    {
+      "name": "合成用例：周历没有星期表头（取第 1 周紧挨周号的格子，是星期日 2026-09-06，对齐到后一天的星期一并提醒）",
+      "extracted": "fixtures/calendar-titled-only.extracted.json",
+      "expected": "fixtures/calendar-titled-only.expected.json"
+    },
+    {
+      "name": "合成用例：周历第 1 周「星期一」格上的日期不是星期一（2026-09-09 对齐到所在周的周一并提醒）",
+      "extracted": "fixtures/calendar-offmonday.extracted.json",
+      "expected": "fixtures/calendar-offmonday.expected.json"
+    },
+    {
+      "name": "合成用例：教学周历取不到（开学日按提取日所在周的周一推算、总周数按 20 周计、学期名由代码拼成「第二学期」，各出一条提醒）",
+      "extracted": "fixtures/no-calendar.extracted.json",
+      "expected": "fixtures/no-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：课表里有第 18 周的课而周历只有 16 周（总周数抬高并提醒）",
+      "extracted": "fixtures/weeks-raised.extracted.json",
+      "expected": "fixtures/weeks-raised.expected.json"
+    },
+    {
+      "name": "合成用例：课表页和周历页都读不到学年学期（学期名用「曲阜师范大学当前学期」占位、屏幕上的课表属于哪一学期无法确认，各出一条提醒）",
+      "extracted": "fixtures/no-term.extracted.json",
+      "expected": "fixtures/no-term.expected.json"
+    },
+    {
+      "name": "合成用例：课表顶部没有星期标题（按最右边 7 列推断）、跨两列的格子、缺列号的格子、落在节次标签列的有课格子",
+      "extracted": "fixtures/no-header.extracted.json",
+      "expected": "fixtures/no-header.expected.json"
+    },
+    {
+      "name": "合成用例：课表用到第 13-16 节（第 13、14 节顺推补节次时间、第 15 节起越过 23:59 补不了）与超过 20 节的上课安排（跳过并点名）",
+      "extracted": "fixtures/h3-extend.extracted.json",
+      "expected": "fixtures/h3-extend.expected.json"
+    },
+    {
+      "name": "合成用例：字段写法（课名没有汉字 / 带 &amp; / 套在链接里 / 写在没有 title 的标签里；教师标题「老师」「教师姓名」、教室标题「地点」「教室名称」；去掉「任课教师:」前缀与教室末尾的节次尾巴；「未知教师」当没有；一块里两个周次字段；学期名是教务给的整句）",
+      "extracted": "fixtures/field-forms.extracted.json",
+      "expected": "fixtures/field-forms.expected.json"
+    },
+    {
+      "name": "合成用例：四种认不出的上课安排（没课名、周次读不出、所在行没有节次又没写方括号、节次超过 20 节）跳过并点名，正常课照常导入",
+      "extracted": "fixtures/dropped-blocks.extracted.json",
+      "expected": "fixtures/dropped-blocks.expected.json"
+    }
+  ]
+}

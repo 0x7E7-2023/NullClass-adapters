@@ -1,0 +1,589 @@
+{
+ "now": "2027-03-03",
+ "term": {
+  "code": "2026-2027-2",
+  "name": "2026-2027-2",
+  "source": "page-default"
+ },
+ "calendar": {
+  "found": true,
+  "rows": [
+   [
+    {
+     "col": 0,
+     "text": "周次"
+    },
+    {
+     "col": 1,
+     "text": "日"
+    },
+    {
+     "col": 2,
+     "text": "一"
+    },
+    {
+     "col": 3,
+     "text": "二"
+    },
+    {
+     "col": 4,
+     "text": "三"
+    },
+    {
+     "col": 5,
+     "text": "四"
+    },
+    {
+     "col": 6,
+     "text": "五"
+    },
+    {
+     "col": 7,
+     "text": "六"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "1"
+    },
+    {
+     "col": 1,
+     "text": "28",
+     "title": "2027年02月28"
+    },
+    {
+     "col": 2,
+     "text": "1",
+     "title": "2027年03月01"
+    },
+    {
+     "col": 3,
+     "text": "2",
+     "title": "2027年03月02"
+    },
+    {
+     "col": 4,
+     "text": "3",
+     "title": "2027年03月03"
+    },
+    {
+     "col": 5,
+     "text": "4",
+     "title": "2027年03月04"
+    },
+    {
+     "col": 6,
+     "text": "5",
+     "title": "2027年03月05"
+    },
+    {
+     "col": 7,
+     "text": "6",
+     "title": "2027年03月06"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "2"
+    },
+    {
+     "col": 1,
+     "text": "7",
+     "title": "2027年03月07"
+    },
+    {
+     "col": 2,
+     "text": "8",
+     "title": "2027年03月08"
+    },
+    {
+     "col": 3,
+     "text": "9",
+     "title": "2027年03月09"
+    },
+    {
+     "col": 4,
+     "text": "10",
+     "title": "2027年03月10"
+    },
+    {
+     "col": 5,
+     "text": "11",
+     "title": "2027年03月11"
+    },
+    {
+     "col": 6,
+     "text": "12",
+     "title": "2027年03月12"
+    },
+    {
+     "col": 7,
+     "text": "13",
+     "title": "2027年03月13"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "3"
+    },
+    {
+     "col": 1,
+     "text": "14",
+     "title": "2027年03月14"
+    },
+    {
+     "col": 2,
+     "text": "15",
+     "title": "2027年03月15"
+    },
+    {
+     "col": 3,
+     "text": "16",
+     "title": "2027年03月16"
+    },
+    {
+     "col": 4,
+     "text": "17",
+     "title": "2027年03月17"
+    },
+    {
+     "col": 5,
+     "text": "18",
+     "title": "2027年03月18"
+    },
+    {
+     "col": 6,
+     "text": "19",
+     "title": "2027年03月19"
+    },
+    {
+     "col": 7,
+     "text": "20",
+     "title": "2027年03月20"
+    }
+   ]
+  ]
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "星期一",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "星期二",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "星期三",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "星期四",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "星期五",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "星期六",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "星期日",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第一大节 08:00-09:40",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "有机化学<br/><font title=\"老师\">教师甲</font><br/><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br/><font title=\"教室\">化学楼101</font><br/>"
+    ],
+    "briefParts": [
+     "有机化学<br/><font title=\"周次(节次)\">1-16(周)</font><br/><font title=\"教室\">化学楼101</font>",
+     "有机化学<br/><font title=\"周次(节次)\">17-18(周)</font><br/><font title=\"教室\">化学楼102</font>"
+    ]
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第二大节 10:05-11:45",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": [
+     "高分子化学<br/><font title=\"周次(节次)\">1-8(周)</font><br/><font title=\"教室\">化学楼201</font><br/>---------------------<br/>仪器分析<br/><font title=\"周次(节次)\">9-16(周)</font><br/><font title=\"教室\">化学楼202</font>"
+    ]
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第三大节 14:30-16:10",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "数理统计<br/><font title=\"老师\">教师乙</font><br/><font title=\"周次\">1-16(周)</font><br/><font title=\"节次\">[05-06节]</font><br/><font title=\"教室\">理学楼301</font><br/>"
+    ],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "[实验]生物化学<br/><font title=\"老师\">教师丙</font><br/><font title=\"周次(节次)\">1-16(周)</font><br/><font title=\"教室\">生科楼5</font><br/>"
+    ],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第四大节 16:35-18:15",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第五大节 19:30-21:10",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第六大节 21:20-23:00",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ]
+ ]
+}

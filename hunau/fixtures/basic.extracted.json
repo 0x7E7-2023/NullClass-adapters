@@ -1,0 +1,594 @@
+{
+ "now": "2026-09-12",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027-1",
+  "source": "select-selected"
+ },
+ "calendar": {
+  "found": true,
+  "rows": [
+   [
+    {
+     "col": 0,
+     "text": "周次"
+    },
+    {
+     "col": 1,
+     "text": "日"
+    },
+    {
+     "col": 2,
+     "text": "一"
+    },
+    {
+     "col": 3,
+     "text": "二"
+    },
+    {
+     "col": 4,
+     "text": "三"
+    },
+    {
+     "col": 5,
+     "text": "四"
+    },
+    {
+     "col": 6,
+     "text": "五"
+    },
+    {
+     "col": 7,
+     "text": "六"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "1"
+    },
+    {
+     "col": 1,
+     "text": "30",
+     "title": "2026年08月30"
+    },
+    {
+     "col": 2,
+     "text": "31",
+     "title": "2026年08月31"
+    },
+    {
+     "col": 3,
+     "text": "1",
+     "title": "2026年09月01"
+    },
+    {
+     "col": 4,
+     "text": "2",
+     "title": "2026年09月02"
+    },
+    {
+     "col": 5,
+     "text": "3",
+     "title": "2026年09月03"
+    },
+    {
+     "col": 6,
+     "text": "4",
+     "title": "2026年09月04"
+    },
+    {
+     "col": 7,
+     "text": "5",
+     "title": "2026年09月05"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "2"
+    },
+    {
+     "col": 1,
+     "text": "6",
+     "title": "2026年09月06"
+    },
+    {
+     "col": 2,
+     "text": "7",
+     "title": "2026年09月07"
+    },
+    {
+     "col": 3,
+     "text": "8",
+     "title": "2026年09月08"
+    },
+    {
+     "col": 4,
+     "text": "9",
+     "title": "2026年09月09"
+    },
+    {
+     "col": 5,
+     "text": "10",
+     "title": "2026年09月10"
+    },
+    {
+     "col": 6,
+     "text": "11",
+     "title": "2026年09月11"
+    },
+    {
+     "col": 7,
+     "text": "12",
+     "title": "2026年09月12"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "3"
+    },
+    {
+     "col": 1,
+     "text": "13",
+     "title": "2026年09月13"
+    },
+    {
+     "col": 2,
+     "text": "14",
+     "title": "2026年09月14"
+    },
+    {
+     "col": 3,
+     "text": "15",
+     "title": "2026年09月15"
+    },
+    {
+     "col": 4,
+     "text": "16",
+     "title": "2026年09月16"
+    },
+    {
+     "col": 5,
+     "text": "17",
+     "title": "2026年09月17"
+    },
+    {
+     "col": 6,
+     "text": "18",
+     "title": "2026年09月18"
+    },
+    {
+     "col": 7,
+     "text": "19",
+     "title": "2026年09月19"
+    }
+   ]
+  ]
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "星期一",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "星期二",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "星期三",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "星期四",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "星期五",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "星期六",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "星期日",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第一大节 08:00-09:40",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "高等数学<br/><font title=\"老师\">张三教授</font><br/><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br/><font title=\"教室\">教学楼A101</font><br/>"
+    ],
+    "briefParts": [
+     "高等数学<br/><font title=\"周次(节次)\">1-16(周)</font><br/><font title=\"教室\">A101</font>"
+    ]
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "大学英语<br/><font title=\"老师\">李四副教授,王五讲师</font><br/><font title=\"周次(节次)\">1-8(周)[01-02节]</font><br/><font title=\"教室\">外语楼201</font><br/>---------------------<br/>体育<br/><font title=\"老师\">赵六其他</font><br/><font title=\"周次(节次)\">9-16(周)[01-02节]</font><br/><font title=\"教室\">操场</font><br/>"
+    ],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第二大节 10:10-11:50",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "高等数学<br/><font title=\"老师\">张三教授</font><br/><font title=\"周次(节次)\">1-16(周)[03-04节]</font><br/><font title=\"教室\">教学楼A101</font><br/>"
+    ],
+    "briefParts": [
+     "高等数学<br/><font title=\"周次(节次)\">1-16(周)</font><br/><font title=\"教室\">教学楼A101</font>"
+    ]
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "线性代数<br/><font title=\"老师\">周小红其他</font><br/><font title=\"周次(节次)\">1-15(单周)[03-04节]</font><br/><font title=\"教室\">Z302</font><br/>"
+    ],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第三大节 14:30-16:10",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "大学物理<br/><font title=\"老师\">钱七助教</font><br/><font title=\"周次(节次)\">2-16(双周)[05-06节]</font><br/><font title=\"教室\">物理楼203[05-06]节</font><br/>"
+    ],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第四大节 16:35-18:15",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": [
+     "程序设计<br/><font title=\"周次(节次)\">1-16(周)</font><br/><font title=\"教室\">机房B</font>"
+    ]
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第五大节 19:30-21:10",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第六大节 21:20-23:00",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "briefParts": []
+   }
+  ]
+ ]
+}

@@ -1,0 +1,59 @@
+{
+  "specVersion": 1,
+  "key": "xmcu",
+  "name": "厦门城市职业学院",
+  "initial": "X",
+  "version": "1.0.0",
+  "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://eone-443.webvpn.xmcu.edu.cn/",
+  "scheduleUrlHint": "https://jws-443.webvpn.xmcu.edu.cn/xmcsjw/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jws-443.webvpn.xmcu.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 周一至周五的课、单周 / 双周、分段周次 1-8,10-17、一格叠两门课、第 10-11 节（11 节表最后两节，19:15-20:00 / 20:00-20:45）；周课表给出周一 08-31 → 开学日 2026-08-31、学期名取教务学期列表里的名字",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期且学期是按日期判断的（source=guess）并如实说明；学期列表没取到 → 学期名由学年学期推出；周课表日期在次年（02-22）→ 开学日 2027-02-22；星期日的课；课表最晚排到第 18 周",
+      "extracted": "fixtures/second-term.extracted.json",
+      "expected": "fixtures/second-term.expected.json"
+    },
+    {
+      "name": "合成用例：今天的学期不在学期列表里改用列表第一个（source=list-first）并说明；周课表里的日期没有一个是周一 → 不采用，改按「9 月 1 日所在周的周一」推算 2026-08-31 并提醒",
+      "extracted": "fixtures/start-bad.extracted.json",
+      "expected": "fixtures/start-bad.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法与单/双标记归属（上游按逗号分段，不认「单」「双」「周」字，这里每段各带各的标记）—— 1-8周(单) / (单)1-8周,(双)9-16周 / 第1-第8周 / 1-3,5-9 双（只有后一段是双周）/ 1-4,10 单（单独一周不受标记影响）/ 1-8周(共8周),9-16周 / 1,3,5周 / 1 - 16 周 / 1~8,10~16 / 单双同写 / 教学班序号 (1) / 1-8 单,9-16 双 / (3组) 备注 / 0-2,30-33 超范围丢弃；课表最晚第 30 周 → 总周数 30",
+      "extracted": "fixtures/weeks-forms.extracted.json",
+      "expected": "fixtures/weeks-forms.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师、缺教室、两者都缺照常导入（null）；两行教师合并；课名带方括号；全角方括号；节次 [1-2,5-6] 分两段 / [第3-4节]；节次后面或地点后面还有别的文字；找不到节次 / 周次认不出 / 节次认不出（1a、25-26）/ 星期格超过 7 / 有文字却没有课程 div 的格子，各自计数说明；周课表没给日期 → 推算开学日",
+      "extracted": "fixtures/messy.extracted.json",
+      "expected": "fixtures/messy.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 缺教师 / 缺教室 + 读不出的长课名 + 很长的后缀文字 + 很长的括号备注 —— 提醒按类型汇总、点名课名和原文截到 20 字、每条不超过 200 字，并指向「编辑课程」",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    },
+    {
+      "name": "合成用例：课表排到第 12-15 节 —— 第 12-14 节在第 11 节下课后顺推补上（20:50-21:35 / 21:40-22:25 / 22:30-23:15），第 15 节顺推会越过 23:59 不补并说明；周课表里的周一日期（12-07）不在合理月份 → 不采用，推算开学日",
+      "extracted": "fixtures/period-overflow.extracted.json",
+      "expected": "fixtures/period-overflow.expected.json"
+    },
+    {
+      "name": "合成用例：合并（上游做法）—— 1-2 节 + 3-4 节连堂合成一块、完全重复的课只留一条、同课 1-8 周与 9-16 周并成 1-16 周、节次重叠 1-3 + 3-4 合成 1-4、同课节次错位按周切段（1-2 节第 1-4 周 / 1-4 节第 5-8 周 / 3-4 节第 9-12 周）、同名不同教师是两门课、同课换教室是同一门课的两块；第二学期周课表没给日期 → 推算开学日 2026-02-16",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    }
+  ]
+}

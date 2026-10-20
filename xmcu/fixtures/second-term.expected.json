@@ -1,0 +1,124 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "没能从教务页面读到当前学期，已按今天的日期判断为「2026-2027学年第二学期」；如果不是你要的学期，请在教务系统里切到那个学期再点「提取课表」",
+  "第 1 周的开始日期（2027-02-22）是从教务系统第 1 周的周课表里读出来的，没法向你确认，请在学期管理里核对是不是学校实际的开学日",
+  "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 18 周），如与实际不符可在学期管理里改"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第二学期",
+   "firstDay": "2027-02-22",
+   "totalWeeks": 20,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:15",
+     "end": "09:00"
+    },
+    {
+     "periodIndex": 2,
+     "start": "09:05",
+     "end": "09:50"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:15",
+     "end": "11:00"
+    },
+    {
+     "periodIndex": 4,
+     "start": "11:05",
+     "end": "11:50"
+    },
+    {
+     "periodIndex": 5,
+     "start": "14:00",
+     "end": "14:45"
+    },
+    {
+     "periodIndex": 6,
+     "start": "14:50",
+     "end": "15:35"
+    },
+    {
+     "periodIndex": 7,
+     "start": "16:00",
+     "end": "16:45"
+    },
+    {
+     "periodIndex": 8,
+     "start": "16:50",
+     "end": "17:35"
+    },
+    {
+     "periodIndex": 9,
+     "start": "18:30",
+     "end": "19:15"
+    },
+    {
+     "periodIndex": 10,
+     "start": "19:15",
+     "end": "20:00"
+    },
+    {
+     "periodIndex": 11,
+     "start": "20:00",
+     "end": "20:45"
+    }
+   ],
+   "courses": [
+    {
+     "name": "数据库",
+     "teacher": "吴十",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 7,
+       "endPeriod": 8,
+       "startWeek": 3,
+       "endWeek": 17,
+       "weekType": "ODD",
+       "location": "机房2"
+      }
+     ]
+    },
+    {
+     "name": "数据结构",
+     "teacher": "周九",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 18,
+       "weekType": "ALL",
+       "location": "机房1"
+      }
+     ]
+    },
+    {
+     "name": "社团活动",
+     "teacher": "郑一",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 7,
+       "startPeriod": 9,
+       "endPeriod": 10,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "活动室"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
