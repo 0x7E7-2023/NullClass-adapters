@@ -1,0 +1,67 @@
+{
+  "specVersion": 1,
+  "key": "gdou",
+  "name": "广东海洋大学",
+  "initial": "G",
+  "version": "1.0.0",
+  "author": "上游 Mccurtain（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jw.gdou.edu.cn/",
+  "scheduleUrlHint": "https://jw.gdou.edu.cn/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 校历第 1 周周一开学、总周数取校历 16 周；「（公选）艺术鉴赏」规范成「艺术鉴赏(公选)」；明德楼 3-4 / 7-8 命中连堂特殊时间（提醒点名两门课）、实验楼与教学楼不命中；缺教师 / 缺教室照常导入；集中实践课；完全重复行只留一条；排到第 12 节 → 顺推补第 11-12 节",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：特殊场地的连堂时间 · 广学楼 3-4、明德楼 7-8、实验楼 3-4、「网球场（实验楼东面）」3-4 命中（共 5 门，提醒只点名按课名排序的前 3 门）；节次不是整段连堂的（1-2、5-6、3-5）不命中；明德楼 1-2 + 3-4 合成 1-4 不命中；第 3 节与第 4 节分两行写的同一门课合成 3-4 后命中；单独一节（第 4 节）不是整段连堂 → 不命中",
+      "extracted": "fixtures/special-venues.extracted.json",
+      "expected": "fixtures/special-venues.expected.json"
+    },
+    {
+      "name": "合成用例：楼名简写与室外关键词 · 实验楼 3-4、楼名简写「实506-1计算机（2）室」7-8、「网球场（实验楼东面）」3-4、「田径场南面」7-8（室外关键词）、广学楼 3-4 命中（共 5 门）；实验楼 3-5 不命中；「实验室101」不含「实验楼」也不是「实+数字」→ 不命中；实验楼 1-2 + 3-4 合成 1-4 不命中",
+      "extracted": "fixtures/special-outdoor.extracted.json",
+      "expected": "fixtures/special-outdoor.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期 · 校历取不到 → 开学日按 2 月 20 日所在周的周一推算为 2027-02-15、总周数按 20 周并说明；广学楼 3-4、实验楼 7-8、「篮球场」3-4（球场关键词）命中连堂特殊时间，实验楼 1-2 不命中",
+      "extracted": "fixtures/no-calendar.extracted.json",
+      "expected": "fixtures/no-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：单/双标记归属与「共 N 周」剥离 · 前缀「(单)1-8周,(双)9-16周」与后缀「1-8周(单),9-16周(双)」都读成 1-7 单周 + 10-16 双周（两个标记不许都并到前一段）；「1-15周(单) 共16周」只读 1-15 单周；「1-8周(共8周),9-16周」只剥括号备注、9-16 周不丢；「共16周,1-15周(单)」只剥开头备注；「第1-第8周」；全角「（单）3-9周」；(1) 教学班序号与 (3组) 备注各提醒一次；空格分段；单双同写按每周都上并提醒",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：相邻段的单/双标记归属 · 「1-8周(单) 9-16周(双)」读成单周 1-7 + 双周 10-16；「1-8周(单)9-16周」读成单周 1-7 + 9-16 每周；「1-16周(单) 17-18周」读成单周 1-15 + 17-18 每周（后缀不许挂到下一段）；逗号后的前缀「(双)9-16周」仍归后一段",
+      "extracted": "fixtures/week-adjacent.extracted.json",
+      "expected": "fixtures/week-adjacent.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 · 五门超长课名（缺教师 / 缺教室 / 连堂特殊时间 / 集中实践课，点名最多 3 门、课名截到 20 字）加一行缺课名、三行认不出的超长周次原文 → 每条提醒都不超 200 字；连堂特殊时间提醒里的场地说法最长",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：校历边界 · 第 1 周日期写成「2027年3月3日」（周三，年月日写法）且排在数组中间 → 开学日回退到当周周一 2027-03-01；校历写 18 周而课表排到第 20 周 → 总周数抬到 20 并说明",
+      "extracted": "fixtures/calendar-edge.extracted.json",
+      "expected": "fixtures/calendar-edge.expected.json"
+    },
+    {
+      "name": "合成用例：校历是别的学期的（第 1 周 2026-02-23，离 9 月 1 日差了半年）→ 忽略这份校历，开学日推算为 2026-08-31、总周数按 20 周，并各说明一次",
+      "extracted": "fixtures/calendar-foreign.extracted.json",
+      "expected": "fixtures/calendar-foreign.expected.json"
+    },
+    {
+      "name": "合成用例：合并与边界 · 同课 1-2 + 3-4 合成 1-4；同节次 1-8 周 + 9-16 周周次并集；完全重复行只留一条；节次写法 第9-10节 / 0102 / 1-2,5-6（多段提醒）；第 14 节顺推越过 23:59 → 补到第 13 节并说明；四种不全的行按原因计数跳过；总数写 20 条实际 14 行 → 对账提醒；校历取不到 → 推算",
+      "extracted": "fixtures/merge-boundary.extracted.json",
+      "expected": "fixtures/merge-boundary.expected.json"
+    }
+  ]
+}

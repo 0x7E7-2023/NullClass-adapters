@@ -1,0 +1,169 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的学期周次校历：第 1 周从 2026-08-31 开始，请在学期管理里核对",
+    "学期总周数取自教务校历（20 周），如与实际不符可在学期管理里改",
+    "节次时间按今天（2026-09-13）所在的夏令时导入（第 1 节 08:00、第 5 节 14:00、第 9 节 19:00）；若是冬令时，第 5 节 13:30、第 9 节 18:30。学校 4 月 7 日起用夏令时、10 月 7 日起用冬令时，导入后不会自动换季，请在学期管理里核对",
+    "这个学期的课跨过换季日：第 6 周（10 月 7 日）起学校从夏令时换成冬令时，节次时间只能写一种（现为夏令时），换季之后的课上课时间会对不上，请到时在学期管理里改节次时间或重新导入",
+    "教务系统另外给了 1 门集中实践课（军事技能训练 1-2周）：它们没有固定的星期与节次，排不进周课表，请自行在学期里添加",
+    "有 1 门课没给上课教师、1 门课没给上课地点（例如 体育、物理实验）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:55",
+          "end": "09:40"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:00",
+          "end": "10:45"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:55",
+          "end": "11:40"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:55",
+          "end": "15:40"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:00",
+          "end": "16:45"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:55",
+          "end": "17:40"
+        },
+        {
+          "periodIndex": 9,
+          "start": "19:00",
+          "end": "19:45"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:55",
+          "end": "20:40"
+        },
+        {
+          "periodIndex": 11,
+          "start": "20:50",
+          "end": "21:35"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教学楼A101"
+            }
+          ]
+        },
+        {
+          "name": "大学英语",
+          "teacher": "乙老师",
+          "note": "重修 | 分级教学B班",
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 15,
+              "weekType": "ODD",
+              "location": "主A楼301"
+            }
+          ]
+        },
+        {
+          "name": "体育",
+          "teacher": "戊老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 9,
+              "endPeriod": 10,
+              "startWeek": 2,
+              "endWeek": 16,
+              "weekType": "EVEN",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "物理实验",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 7,
+              "endWeek": 7,
+              "weekType": "ALL",
+              "location": "实验楼C201"
+            }
+          ]
+        },
+        {
+          "name": "程序设计",
+          "teacher": "己老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 7,
+              "endPeriod": 8,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "京江2号楼2101"
+            },
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 7,
+              "endPeriod": 8,
+              "startWeek": 10,
+              "endWeek": 17,
+              "weekType": "ALL",
+              "location": "京江2号楼2101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

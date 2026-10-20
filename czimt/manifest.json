@@ -3,7 +3,7 @@
   "key": "czimt",
   "name": "常州机电职业技术学院",
   "initial": "C",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 ShallowY（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://webapp.czimt.edu.cn",
@@ -13,6 +13,11 @@
   "parse": "parse.js",
   "allowHosts": ["jwc.czmec.cn"],
   "fixtures": [
+    {
+      "name": "合成用例：相邻周次段的单/双后缀 · 「1-8周(单) 9-16周(双)」→ 1-7 单 + 10-16 双；「1-8周(单)9-16周」→ 1-9 单 + 10-16 每周；「1-16周(单) 17-18周」→ 1-17 单 + 18 每周（周次集合分别为 1-7 单 + 10-16 双 / 1-7 单 + 9-16 每周 / 1-15 单 + 17-18 每周；不再并成一段）",
+      "extracted": "fixtures/week-adjacent.extracted.json",
+      "expected": "fixtures/week-adjacent.expected.json"
+    },
     {
       "name": "合成用例：基本 · 节次时间接口取不到 → 整张用本校 12 节表（第 5 节 13:45-14:25、第 12 节 20:20-21:00 逐节钉住）；校历取不到 → 开学日推算、总周数内置 20 周；课表排到第 13 节 → 顺推补时间并说明；教室+校区拼成「教室(校区)」、只有校区没有教室 → 地点为空并计入缺教室；课名拼上学时标记，同一门课理论 / 实验是两门；缺教师照常导入；集中实践课",
       "extracted": "fixtures/basic.extracted.json",

@@ -3,7 +3,7 @@
   "key": "qqhrit",
   "name": "齐齐哈尔工程学院",
   "initial": "Q",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "http://tysf.qqhrit.com:20261/cas/login",
@@ -13,6 +13,11 @@
   "parse": "parse.js",
   "allowHosts": ["jwxt.qqhrit.com"],
   "fixtures": [
+    {
+      "name": "合成用例：相邻周次段的单/双后缀 · 「1-8周(单) 9-16周(双)」→ 1-7 单 + 10-16 双；「1-8周(单)9-16周」→ 1-9 单 + 10-16 每周；「1-16周(单) 17-18周」→ 1-17 单 + 18 每周（周次集合分别为 1-7 单 + 10-16 双 / 1-7 单 + 9-16 每周 / 1-15 单 + 17-18 每周；不再并成一段）",
+      "extracted": "fixtures/week-adjacent.extracted.json",
+      "expected": "fixtures/week-adjacent.expected.json"
+    },
     {
       "name": "合成用例：基本 · 教务作息与学期校历都取到（开学日与总周数取自校历）+ 单双周 + 无教师 + 无教室 + 完全重复行只留一条 + 集中实践课",
       "extracted": "fixtures/basic.extracted.json",

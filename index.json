@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.10.20.1",
+  "version": "2026.10.20.2",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -463,13 +463,13 @@
     {
       "key": "xhkjzyxy",
       "name": "宣化科技职业学院",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "xhkjzyxy"
     },
     {
       "key": "hueb",
       "name": "河北经贸大学",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "hueb"
     },
     {
@@ -481,13 +481,13 @@
     {
       "key": "cqepc",
       "name": "重庆航天职业技术学院",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "cqepc"
     },
     {
       "key": "qqhrit",
       "name": "齐齐哈尔工程学院",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "qqhrit"
     },
     {
@@ -499,56 +499,86 @@
     {
       "key": "xust",
       "name": "西安科技大学",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "xust"
     },
     {
       "key": "gzmtu",
       "name": "广州航海学院",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "gzmtu"
     },
     {
       "key": "gdust",
       "name": "广东科技学院",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "gdust"
     },
     {
       "key": "gdpu",
       "name": "广东药科大学",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "gdpu"
     },
     {
       "key": "czimt",
       "name": "常州机电职业技术学院",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "czimt"
     },
     {
       "key": "swu",
       "name": "西南大学",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "swu"
     },
     {
       "key": "shufezj",
       "name": "上海财经大学浙江学院",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "shufezj"
     },
     {
       "key": "gzist",
       "name": "广州理工学院",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "gzist"
     },
     {
       "key": "hualixy",
       "name": "广州华立学院",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "hualixy"
+    },
+    {
+      "key": "swfu",
+      "name": "西南林业大学",
+      "version": "1.0.0",
+      "path": "swfu"
+    },
+    {
+      "key": "dzu",
+      "name": "德州学院",
+      "version": "1.0.0",
+      "path": "dzu"
+    },
+    {
+      "key": "njcit",
+      "name": "南京信息职业技术学院",
+      "version": "1.0.0",
+      "path": "njcit"
+    },
+    {
+      "key": "gdou",
+      "name": "广东海洋大学",
+      "version": "1.0.0",
+      "path": "gdou"
+    },
+    {
+      "key": "ujs",
+      "name": "江苏大学",
+      "version": "1.0.0",
+      "path": "ujs"
     }
   ]
 }

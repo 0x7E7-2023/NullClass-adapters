@@ -1,0 +1,62 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期校历，学期总周数按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "节次时间没有从教务系统取，已按学校公布的 13 节节次时间导入（第 1 节 08:00-08:45、第 13 节 20:55-21:40，第 5 节是 25 分钟的短节），与学校实际不符时请在学期管理里核对",
+    "教务系统另外给了 4 门集中实践课（创新创业训练与学科竞赛实践（第一阶段）…、毕业实习与社会实践综合报告撰写、专业认知与工程实践 等）：它们没有固定的星期与节次，排不进周课表，请自行在学期里添加",
+    "有 3 行课表数据不全（缺周次（或周次全超出 1-30 周）3 行、认不出的周次写法如「第一到十六周」「待定」「另行安排」），已跳过：教务数据不完整时会出现，如发现少课请反馈",
+    "有 2 门课没给上课教师、2 门课没给上课地点（例如 工程制图与计算机辅助设计综合训练课程设…、大学计算机基础与程序设计实践训练综合课…、体育）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "11:50", "end": "12:15" },
+        { "periodIndex": 6, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 7, "start": "14:50", "end": "15:35" },
+        { "periodIndex": 8, "start": "15:55", "end": "16:40" },
+        { "periodIndex": 9, "start": "16:45", "end": "17:30" },
+        { "periodIndex": 10, "start": "18:20", "end": "19:05" },
+        { "periodIndex": 11, "start": "19:10", "end": "19:55" },
+        { "periodIndex": 12, "start": "20:05", "end": "20:50" },
+        { "periodIndex": 13, "start": "20:55", "end": "21:40" }
+      ],
+      "courses": [
+        {
+          "name": "工程制图与计算机辅助设计综合训练课程设计报告", "teacher": null, "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教学楼D301" }
+          ]
+        },
+        {
+          "name": "大学计算机基础与程序设计实践训练综合课程（上）", "teacher": "甲老师", "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "大学英语", "teacher": "乙老师", "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教学楼B205" }
+          ]
+        },
+        {
+          "name": "体育", "teacher": null, "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 5, "endPeriod": 6, "startWeek": 2, "endWeek": 16, "weekType": "EVEN", "location": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

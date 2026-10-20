@@ -1,0 +1,110 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第二学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的学期周次校历：第 1 周从 2027-02-21 开始（教务设置每周从周日开始，已按此回退），请在学期管理里核对",
+    "学期总周数取自教务校历（18 周），如与实际不符可在学期管理里改",
+    "节次时间按今天（2027-04-07）所在的夏令时导入（第 1 节 08:00、第 5 节 14:00、第 9 节 19:00）；若是冬令时，第 5 节 13:30、第 9 节 18:30。学校 4 月 7 日起用夏令时、10 月 7 日起用冬令时，导入后不会自动换季，请在学期管理里核对",
+    "这个学期的课跨过换季日：第 7 周（4 月 7 日）起学校从冬令时换成夏令时，节次时间只能写一种（现为夏令时），换季之前的课上课时间会对不上，请到时在学期管理里改节次时间或重新导入"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2027-02-21",
+      "totalWeeks": 18,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:55",
+          "end": "09:40"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:00",
+          "end": "10:45"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:55",
+          "end": "11:40"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:55",
+          "end": "15:40"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:00",
+          "end": "16:45"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:55",
+          "end": "17:40"
+        },
+        {
+          "periodIndex": 9,
+          "start": "19:00",
+          "end": "19:45"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:55",
+          "end": "20:40"
+        },
+        {
+          "periodIndex": 11,
+          "start": "20:50",
+          "end": "21:35"
+        }
+      ],
+      "courses": [
+        {
+          "name": "大学物理",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教学楼A101"
+            }
+          ]
+        },
+        {
+          "name": "概率统计",
+          "teacher": "乙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 7,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教学楼A102"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

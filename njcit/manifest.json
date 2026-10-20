@@ -1,0 +1,72 @@
+{
+  "specVersion": 1,
+  "key": "njcit",
+  "name": "南京信息职业技术学院",
+  "initial": "N",
+  "version": "1.0.0",
+  "author": "上游 astraumbra（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jw.njcit.cn/sso/lyiotlogin",
+  "scheduleUrlHint": "https://jw.njcit.cn/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：相邻周次段的单/双后缀 · 「1-8周(单) 9-16周(双)」→ 1-7 单 + 10-16 双；「1-8周(单)9-16周」→ 1-9 单 + 10-16 每周；「1-16周(单) 17-18周」→ 1-17 单 + 18 每周（周次集合分别为 1-7 单 + 10-16 双 / 1-7 单 + 9-16 每周 / 1-15 单 + 17-18 每周；不再并成一段）",
+      "extracted": "fixtures/week-adjacent.extracted.json",
+      "expected": "fixtures/week-adjacent.expected.json"
+    },
+    {
+      "name": "合成用例：基本 · 教务节次时间没有数据 → 整张用空课默认 12 节并提醒；校历没有数据 → 开学日推算为 2026-08-31（9 月 1 日往前回退到周一）、总周数 20 周；课表排到第 15 节 → 第 13、14 节顺推补上，第 15 节越过 23:59 不补并说明；单双周、无教师、无教室、完全重复行、集中实践课",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：教务节次时间带秒（08:00:00）、节次号在 jcmc → 截成 HH:mm 用教务的 4 节；校历 rq 是「起/止」区间串，第 1 周取「/」前的 2026-09-07，总周数取校历最大周次 18；课表用到第 5、6 节 → 空课默认表里同号的节次接得上并说明；1-2 节与 3-4 节合并成 1-4 节",
+      "extracted": "fixtures/period-api.extracted.json",
+      "expected": "fixtures/period-api.expected.json"
+    },
+    {
+      "name": "合成用例：教务节次时间两节重叠（第 2 节 08:40 早于第 1 节 08:45 下课）→ 整张弃用，改用空课默认 12 节并提醒",
+      "extracted": "fixtures/period-overlap.extracted.json",
+      "expected": "fixtures/period-overlap.expected.json"
+    },
+    {
+      "name": "合成用例：教务节次时间缺第 3 节（只有 1、2、4 节，不是从第 1 节起连续）→ 整张弃用，改用空课默认 12 节并提醒",
+      "extracted": "fixtures/period-gap.extracted.json",
+      "expected": "fixtures/period-gap.expected.json"
+    },
+    {
+      "name": "合成用例：每周起始日 qsxqj = 7，校历第 1 周为周三 2026-09-09 → 开学日回退到周日 2026-09-06；单双周三种写法（前缀「(单)1-8周,(双)9-16周」、后缀「1-15周(单) 共16周」、「1-8周(共8周),9-16周」）各自正确归属；节次时间取不到 → 空课默认 12 节",
+      "extracted": "fixtures/calendar-sunday.extracted.json",
+      "expected": "fixtures/calendar-sunday.expected.json"
+    },
+    {
+      "name": "合成用例：校历第 1 周的日期是上一学年的 → 忽略校历的日期与周数，开学日推算为 2026-08-31、总周数 20 周，各说明一条（教务节次时间给全 8 节，不出现节次时间提醒）",
+      "extracted": "fixtures/calendar-other-term.extracted.json",
+      "expected": "fixtures/calendar-other-term.expected.json"
+    },
+    {
+      "name": "合成用例：校历从第 2 周开始、没有第 1 周 → 不拿第一行顶替，开学日推算为 2026-08-31 并说明；总周数取校历最大周次 19",
+      "extracted": "fixtures/calendar-no-week1.extracted.json",
+      "expected": "fixtures/calendar-no-week1.expected.json"
+    },
+    {
+      "name": "合成用例：校历与 qsxqj 都没有 → 推算开学日 2026-08-31；课表最大周次 21 → 总周数抬到 21 并说明；括号里的教学班序号「(1)」与备注「(3组)」整组摘掉、不当周次，各提醒一条",
+      "extracted": "fixtures/no-calendar-overweek.extracted.json",
+      "expected": "fixtures/no-calendar-overweek.expected.json"
+    },
+    {
+      "name": "合成用例：单/双标记归属与周次写法 · 前缀「(单)1-8周,(双)9-16周」与后缀「1-8周(单),9-16周(双)」都读成 1-7 单周 + 10-16 双周；「1-15周(单) 共16周」只读 1-15 单周；「第1-第8周」读成 1-8 周；「1-8周(共8周),9-16周」只剥括号备注；「共16周,1-15周(单)」只剥开头备注；「1-16(单周)」标记在括号里也读成单周",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 缺教师 / 缺教室 → 不丢课（teacher / location 为 null）；四门超长课名的集中实践课 → 提醒按类型汇总、点名的课名截到 20 字、每条不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    }
+  ]
+}

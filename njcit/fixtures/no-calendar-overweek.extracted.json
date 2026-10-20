@@ -1,0 +1,47 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 实际交出去的样子（白名单字段 kcmc/xm/cdmc/xqj/jcs/zcd/xqh_id 与 sjkList 的 kcmc、节次时间的 jcmc/qssj/jssj、校历的 zs/zsmc/rq），课程、教师、教室均为虚构，无真实个人信息。",
+  "_case": "校历与 qsxqj 都没有 → 开学日按 9 月 1 日推算、回退到周一 2026-08-31；课表最大周次 21 → 总周数抬到 21 并说明；括号里的教学班序号「(1)」与备注「(3组)」整组摘掉、不当周次，各提醒一条",
+  "term": {
+    "xnm": "2026",
+    "xqm": "3",
+    "xnmText": "2026-2027",
+    "xqmText": "第一学期"
+  },
+  "today": "2026-09-13",
+  "qsxqj": null,
+  "raw": {
+    "kbList": [
+      {
+        "kcmc": "嵌入式系统",
+        "xm": "巳老师",
+        "cdmc": "实验楼A1",
+        "xqj": "2",
+        "jcs": "7-8",
+        "zcd": "1-21周",
+        "xqh_id": "01"
+      },
+      {
+        "kcmc": "计算方法",
+        "xm": "午老师",
+        "cdmc": "教学楼4-101",
+        "xqj": "6",
+        "jcs": "1-2",
+        "zcd": "(1)1-16周",
+        "xqh_id": "01"
+      },
+      {
+        "kcmc": "数值分析",
+        "xm": "未老师",
+        "cdmc": "教学楼4-102",
+        "xqj": "4",
+        "jcs": "3-4",
+        "zcd": "1-8周(3组)",
+        "xqh_id": "01"
+      }
+    ],
+    "sjkList": []
+  },
+  "total": null,
+  "periodTimes": null,
+  "calendar": null
+}

@@ -1,0 +1,64 @@
+{
+  "specVersion": 1,
+  "key": "ujs",
+  "name": "江苏大学",
+  "initial": "J",
+  "version": "1.0.0",
+  "author": "上游 洛初 Github@gongfuture（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwxt.ujs.edu.cn/sso/jziotlogin",
+  "scheduleUrlHint": "https://jwxt.ujs.edu.cn/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "webvpn.ujs.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 今天在夏令时 → 预设 11 节夏表逐节钉住（提醒里带冬令时的第 5、9 节）；校历第 1 周 2026-08-31 共 20 周；学期文本「1」+ 代号 3 → 第一学期；重修 / 选课备注进 note；缺教师、缺教室照常导入；主A楼、京江（A 楼 + 本部）不算上课时间偏差；上课周跨 10 月 7 日换冬令时提醒；实践课带起止周",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：冬令时 + 教学楼偏差判定 · 三江楼 / 讲堂群 / 北固主A楼计入「上课时间不一样」提醒（按课名排序点名前三），三山楼 1-2 节 / 北固非收录楼 / 空教室不计；同课 1-2 与 3-4 合并成 1-4 后才比较；第 12 节触发补时间；第二学期跨 4 月 7 日换夏令时提醒",
+      "extracted": "fixtures/winter-buildings.extracted.json",
+      "expected": "fixtures/winter-buildings.expected.json"
+    },
+    {
+      "name": "合成用例：按今天日期判断令时，今天恰为 10 月 7 日 → 冬令时；开学在夏令时、今天在冬令时 → 换季提醒写「换季之前」；每周起始日缺省按周一；校历 18 周",
+      "extracted": "fixtures/smart-winter-boundary.extracted.json",
+      "expected": "fixtures/smart-winter-boundary.expected.json"
+    },
+    {
+      "name": "合成用例：夏季学期（学期文本「3」+ 代号 16）整个学期在夏令时但今天（3 月）在冬令时、按冬令时导入 → 「整体对不上」提醒；总周数取校历 4 周；按冬令时比较，三江楼 3-4 节算偏差；缺教室照常导入",
+      "extracted": "fixtures/summer-term-mismatch.extracted.json",
+      "expected": "fixtures/summer-term-mismatch.expected.json"
+    },
+    {
+      "name": "合成用例：单/双标记归属与「共 N 周」备注 · (单)1-8周,(双)9-16周 读成单周 1-7 + 双周 10-16；1-15周(单)共16周；1-8周(共8周),9-16周 不丢后半段；共16周,1-15周(单) 不整行丢；第1-第8周；2-16(双周) 标记跟在数字后",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：紧挨的单/双标记归属 · 标记前紧挨数字或「周」（允许空白）按后缀归前一段，段首才当前缀：1-8周(单) 9-16周(双) 读成单 1-7 + 双 10-16；1-8周(单)9-16周 与 1-16周(单) 17-18周 后一段每周都上；1-8周,(双)9-16周 逗号后是前缀；1-8周 (双)9-16周 空白隔开仍按后缀",
+      "extracted": "fixtures/week-adjacent.extracted.json",
+      "expected": "fixtures/week-adjacent.expected.json"
+    },
+    {
+      "name": "合成用例：带课名的提醒不超 200 字 · 五门超 20 字的课名分别缺教师 / 缺教室 / 上课时间偏差，点名统一截到 20 字；四门超长实践课（起止周超 12 字截短）只点名前三门；缺节次、周次认不出（点名「待定」）各一行被跳过；记录总数与行数对账",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：每周起始日 qsxqj=\"7\"（字符串）→ 校历周一 2027-02-22 回退到周日 2027-02-21 并写进提醒；今天恰为 4 月 7 日 → 夏令时；开学在冬令时 → 换季提醒写「换季之前」",
+      "extracted": "fixtures/calendar-sunday.extracted.json",
+      "expected": "fixtures/calendar-sunday.expected.json"
+    },
+    {
+      "name": "合成用例：校历取不到 → 开学日推算 2026-08-31 并提醒；课表最晚第 23 周 → 总周数抬到 23；夏令时 11 节下课 21:35，第 12-13 节顺推补时间（空课默认第 12 节接不上），第 14 节越过 23:59 不补并说明",
+      "extracted": "fixtures/no-calendar-overweek.extracted.json",
+      "expected": "fixtures/no-calendar-overweek.expected.json"
+    }
+  ]
+}

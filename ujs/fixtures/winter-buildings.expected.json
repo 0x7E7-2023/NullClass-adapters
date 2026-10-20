@@ -1,0 +1,214 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第二学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的学期周次校历：第 1 周从 2027-02-22 开始，请在学期管理里核对",
+    "学期总周数取自教务校历（20 周），如与实际不符可在学期管理里改",
+    "节次时间按今天（2027-03-01）所在的冬令时导入（第 1 节 08:00、第 5 节 13:30、第 9 节 18:30）；若是夏令时，第 5 节 14:00、第 9 节 19:00。学校 4 月 7 日起用夏令时、10 月 7 日起用冬令时，导入后不会自动换季，请在学期管理里核对",
+    "这个学期的课跨过换季日：第 7 周（4 月 7 日）起学校从冬令时换成夏令时，节次时间只能写一种（现为冬令时），换季之后的课上课时间会对不上，请到时在学期管理里改节次时间或重新导入",
+    "有 4 门课（例如 工程力学、文学鉴赏、机械制图）所在教学楼（三江楼、三山楼、讲堂群，或北固校区）的上课时间和课表上的节次时间不一样：课表按主校区的节次时间显示，请以学校通知的实际上课时间为准",
+    "课表用到了第 12 节，现有的节次时间没有覆盖，已补上：第 12 节用空课默认的节次时间，请在学期管理里核对",
+    "有 1 门课没给上课地点（例如 书法）：已照常导入，上课地点暂时空着，可在「编辑课程」里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2027-02-22",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:55",
+          "end": "09:40"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:00",
+          "end": "10:45"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:55",
+          "end": "11:40"
+        },
+        {
+          "periodIndex": 5,
+          "start": "13:30",
+          "end": "14:15"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:25",
+          "end": "15:10"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:30",
+          "end": "16:15"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:25",
+          "end": "17:10"
+        },
+        {
+          "periodIndex": 9,
+          "start": "18:30",
+          "end": "19:15"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:25",
+          "end": "20:10"
+        },
+        {
+          "periodIndex": 11,
+          "start": "20:20",
+          "end": "21:05"
+        },
+        {
+          "periodIndex": 12,
+          "start": "21:15",
+          "end": "22:00"
+        }
+      ],
+      "courses": [
+        {
+          "name": "机械制图",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "三江楼102"
+            }
+          ]
+        },
+        {
+          "name": "电路分析",
+          "teacher": "乙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "三江楼201"
+            }
+          ]
+        },
+        {
+          "name": "文学鉴赏",
+          "teacher": "丙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "讲堂群B座"
+            }
+          ]
+        },
+        {
+          "name": "工程力学",
+          "teacher": "丁老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 7,
+              "endPeriod": 8,
+              "startWeek": 1,
+              "endWeek": 18,
+              "weekType": "ALL",
+              "location": "北固 主A楼203"
+            }
+          ]
+        },
+        {
+          "name": "大学物理",
+          "teacher": "戊老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "三山楼105"
+            }
+          ]
+        },
+        {
+          "name": "体育",
+          "teacher": "己老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 7,
+              "endPeriod": 8,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "北固实验楼101"
+            }
+          ]
+        },
+        {
+          "name": "书法",
+          "teacher": "庚老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 9,
+              "endPeriod": 10,
+              "startWeek": 2,
+              "endWeek": 16,
+              "weekType": "EVEN",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "英语听说",
+          "teacher": "辛老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 11,
+              "endPeriod": 12,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "三江楼301"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

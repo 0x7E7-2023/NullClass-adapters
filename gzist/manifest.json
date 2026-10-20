@@ -3,7 +3,7 @@
   "key": "gzist",
   "name": "广州理工学院",
   "initial": "G",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 YT-O5（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://ids.gzist.edu.cn/lyuapServer/login?service=http%3A%2F%2Fjw.gzist.edu.cn%2Fsso%2Flyiotlogin",
@@ -13,6 +13,11 @@
   "parse": "parse.js",
   "allowHosts": ["jw.gzist.edu.cn", "webvpn.gzist.edu.cn"],
   "fixtures": [
+    {
+      "name": "合成用例：相邻周次段的单/双后缀 · 「1-8周(单) 9-16周(双)」→ 1-7 单 + 10-16 双；「1-8周(单)9-16周」→ 1-9 单 + 10-16 每周；「1-16周(单) 17-18周」→ 1-17 单 + 18 每周（周次集合分别为 1-7 单 + 10-16 双 / 1-7 单 + 9-16 每周 / 1-15 单 + 17-18 每周；不再并成一段）",
+      "extracted": "fixtures/week-adjacent.extracted.json",
+      "expected": "fixtures/week-adjacent.expected.json"
+    },
     {
       "name": "合成用例：基本 · 周次写法（周数：前缀、顿号分段、(单) 后缀、2-16单周）+ 校历第 1 周周一开学 + 内置 12 节逐节钉住 + 排到第 13 节顺推补时间 + 缺教师 / 缺教室照常导入 + 集中实践课 + 完全重复行只留一条",
       "extracted": "fixtures/basic.extracted.json",

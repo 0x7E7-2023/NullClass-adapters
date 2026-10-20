@@ -1,0 +1,49 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 实际交出去的样子（白名单字段 kcmc/xm/cdmc/xqj/jcs/zcd/xqh_id 与 sjkList 的 kcmc、节次时间的 jcmc/qssj/jssj、校历的 zs/zsmc/rq），课程、教师、教室均为虚构，无真实个人信息。",
+  "_case": "教务节次时间两行重叠（第 2 节 08:40 开始，早于第 1 节 08:45 下课）→ 整张弃用，改用空课默认 12 节并提醒；课表用到第 11-12 节，按默认表的时间照用，不需顺推",
+  "term": {
+    "xnm": "2026",
+    "xqm": "3",
+    "xnmText": "2026-2027",
+    "xqmText": "第一学期"
+  },
+  "today": "2026-09-13",
+  "qsxqj": null,
+  "raw": {
+    "kbList": [
+      {
+        "kcmc": "数据结构",
+        "xm": "子老师",
+        "cdmc": "信息楼101",
+        "xqj": "3",
+        "jcs": "1-2",
+        "zcd": "1-8周",
+        "xqh_id": "01"
+      },
+      {
+        "kcmc": "操作系统",
+        "xm": "丑老师",
+        "cdmc": "信息楼102",
+        "xqj": "4",
+        "jcs": "11-12",
+        "zcd": "1-8周",
+        "xqh_id": "01"
+      }
+    ],
+    "sjkList": []
+  },
+  "total": null,
+  "periodTimes": [
+    {
+      "jcmc": "1",
+      "qssj": "08:00",
+      "jssj": "08:45"
+    },
+    {
+      "jcmc": "2",
+      "qssj": "08:40",
+      "jssj": "09:25"
+    }
+  ],
+  "calendar": null
+}
