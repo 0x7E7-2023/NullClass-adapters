@@ -3,8 +3,8 @@
     //
     // 移植自 shiguang_warehouse 的 GDOU/gdou.js
     //   https://github.com/XingHeYuZhuan/shiguang_warehouse  （MIT，作者 Mccurtain）
-    //   上游快照 19a65bf07a3e998fcfc69cee692387cdc0523c1a（2026-10-19 拉取，2026-10-20 复核）
-    //   本校脚本最后一次修改 0ed4caa（2026-10-08）
+    //   上游快照 e15c6274ac347c9642da890504651a9b4e374391（2026-10-26 拉取；首次移植时的快照是 19a65bf）
+    //   本校脚本最后一次修改 3976cfa（2026-10-25，PR #892，作者 Mccurtain，上游版本号 2.2）
     //   同目录的阳江校区脚本 gdouyj.js / gdouyj2.js 不在本件范围内
     //
     // 上游在同一段脚本里算周次、拼课程、存配置；这里只做纯转换（不碰页面、不发请求，CI 用 Rhino 实跑），
@@ -37,6 +37,7 @@
     //      见 mergeStageOne / mergeStageTwo。先把每行收成 entry 再合并，不丢课、不改任何一周的安排
     //   ⑪ 上游的导出流程（开场弹窗、学年学期与校区选择弹窗、saveImportedCourses / saveCourseConfig / savePresetTimeSlots、
     //      showToast / notifyTaskCompletion）全部不移植：这些是「拾光」的桥能力，空课由宿主负责保存，适配器只交载荷
+    //   ⑫ 1.1.0 跟进上游 3976cfa：室外场地关键词由「球场」改为「场」（上游 outdoorKeywords），匹克场、运动场、田径场等不含「球」字的场地也算室外场地
     var data = JSON.parse(typeof __ncInput === 'undefined' ? '{}' : __ncInput);
     var term = data.term || {};
     var raw = data.raw || {};
@@ -76,12 +77,12 @@
 
     // 特殊场地（上游 CAMPUS_CONFIGS 里湖光、海滨两个校区的规则并集）：venues 是整栋楼（教室文本里包含即命中，
     // 如「实验楼」命中「实验楼301」「网球场（实验楼东面）」；广学楼、明德楼属湖光，实验楼属海滨），
-    // patterns 是楼名简写（海滨「实」+房间号 = 实验楼简写，如「实506-1计算机（2）室」），outdoor 是海滨的室外场地关键词；
+    // patterns 是楼名简写（海滨「实」+房间号 = 实验楼简写，如「实506-1计算机（2）室」），outdoor 是海滨的室外场地关键词（「场」通用覆盖网球场 / 匹克场 / 田径场等各类场地，方向词覆盖「XX（实验楼东面）」这类括号写法）；
     // venueText 是写进提醒里的场地说法
     var SPECIAL_VENUES = {
         venues: ['广学楼', '明德楼', '实验楼'],
         patterns: [/^实[0-9]/],
-        outdoor: ['球场', '东面', '南面', '西面', '北面'],
+        outdoor: ['场', '东面', '南面', '西面', '北面'],
         venueText: '广学楼、明德楼、实验楼及球场等室外场地'
     };
 

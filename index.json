@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.10.20.7",
+  "version": "2026.10.26",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -571,7 +571,7 @@
     {
       "key": "gdou",
       "name": "广东海洋大学",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "gdou"
     },
     {
@@ -729,6 +729,42 @@
       "name": "湖南农业大学",
       "version": "1.0.0",
       "path": "hunau"
+    },
+    {
+      "key": "gdou-wfw",
+      "name": "广东海洋大学（校外通道）",
+      "version": "1.0.0",
+      "path": "gdou-wfw"
+    },
+    {
+      "key": "zust",
+      "name": "浙江科技大学",
+      "version": "1.0.0",
+      "path": "zust"
+    },
+    {
+      "key": "ynufe",
+      "name": "云南财经大学",
+      "version": "1.0.0",
+      "path": "ynufe"
+    },
+    {
+      "key": "nenu",
+      "name": "东北师范大学",
+      "version": "1.0.0",
+      "path": "nenu"
+    },
+    {
+      "key": "csu",
+      "name": "中南大学",
+      "version": "1.0.0",
+      "path": "csu"
+    },
+    {
+      "key": "gzhmu",
+      "name": "广州医科大学",
+      "version": "1.0.0",
+      "path": "gzhmu"
     }
   ]
 }

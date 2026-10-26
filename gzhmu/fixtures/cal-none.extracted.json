@@ -1,0 +1,154 @@
+{
+ "_note": "合成数据：周历取不到：开学日按提取日期（2026-09-16 星期三）所在周的周一推算，总周数取课表里最晚的第 16 周",
+ "now": "2026-09-16",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027-1"
+ },
+ "screenTermMissing": false,
+ "cols": 8,
+ "calendar": {
+  "found": false,
+  "rows": []
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "星期一",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "星期二",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "星期三",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "星期四",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "星期五",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "星期六",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "星期日",
+    "th": true,
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "(01,02小节)08:30-09:55",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "<font>高等数学</font><br/><font title=\"教师\">王老师</font><br/><font title=\"周次(节次)\">1-16周[01-02节]</font><br/><font title=\"教室\">教学楼A101</font><br/>"
+    ]
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "(03,04小节)10:05-11:30",
+    "th": true,
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "(05,06小节)11:35-13:00",
+    "th": true,
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "(07,08小节)13:00-14:40",
+    "th": true,
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "(09,10小节)14:45-16:15",
+    "th": true,
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "(11,12小节)16:20-17:45",
+    "th": true,
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "(13,14小节)17:45-19:10",
+    "th": true,
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "(15,16小节)19:15-20:40",
+    "th": true,
+    "parts": []
+   }
+  ]
+ ]
+}

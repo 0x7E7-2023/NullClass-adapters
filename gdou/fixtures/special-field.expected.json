@@ -1,0 +1,153 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的学期周次校历：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "学期总周数取自教务校历（16 周），如与实际不符可在学期管理里改",
+    "节次时间没有从教务系统取，已按本校固定的 10 节时间导入（第 1 节 08:10-08:55、第 10 节 20:25-21:10），与学校实际不符时请在学期管理里核对",
+    "有 3 门课（例如 健美操、匹克球、足球）在广学楼、明德楼、实验楼及球场等室外场地上第 3-4 节或第 7-8 节：学校给这两段连堂另排了上课时间（第 3-4 节 10:05-11:35、第 7-8 节 16:25-17:50），与课表里显示的节次时间略有出入，请以学校实际为准"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 16,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:10",
+          "end": "08:55"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:00",
+          "end": "09:45"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:15",
+          "end": "11:00"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:05",
+          "end": "11:50"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:30",
+          "end": "15:15"
+        },
+        {
+          "periodIndex": 6,
+          "start": "15:20",
+          "end": "16:05"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:30",
+          "end": "17:15"
+        },
+        {
+          "periodIndex": 8,
+          "start": "17:20",
+          "end": "18:05"
+        },
+        {
+          "periodIndex": 9,
+          "start": "19:30",
+          "end": "20:15"
+        },
+        {
+          "periodIndex": 10,
+          "start": "20:25",
+          "end": "21:10"
+        }
+      ],
+      "courses": [
+        {
+          "name": "健美操",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "运动场"
+            }
+          ]
+        },
+        {
+          "name": "匹克球",
+          "teacher": "乙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 7,
+              "endPeriod": 8,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "匹克场"
+            }
+          ]
+        },
+        {
+          "name": "足球",
+          "teacher": "丙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "足球场"
+            }
+          ]
+        },
+        {
+          "name": "体育理论",
+          "teacher": "丁老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "体育馆"
+            }
+          ]
+        },
+        {
+          "name": "体能训练",
+          "teacher": "戊老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 3,
+              "endPeriod": 5,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "运动场"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

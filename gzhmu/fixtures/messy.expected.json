@@ -1,0 +1,181 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "节次时间按学校教务处公布的作息导入，学校如有调整，请在「学期管理」里核对",
+  "有 3 个上课安排没能认出来，已跳过（没认出课名 1 个，没认出周次 1 个，没认出节次 1 个）。教务页面的写法可能有变化，欢迎反馈。包含：(没认出课名)——没认出课名；周次不明课——没认出周次；无节次课——没认出节次",
+  "有 3 门课没给上课教师、3 门课没给上课地点（例如 缺教师课、双缺课、无标题课 等）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第一学期",
+   "firstDay": "2026-09-07",
+   "totalWeeks": 18,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:30",
+     "end": "09:10"
+    },
+    {
+     "periodIndex": 2,
+     "start": "09:15",
+     "end": "09:55"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:05",
+     "end": "10:45"
+    },
+    {
+     "periodIndex": 4,
+     "start": "10:50",
+     "end": "11:30"
+    },
+    {
+     "periodIndex": 5,
+     "start": "11:35",
+     "end": "12:15"
+    },
+    {
+     "periodIndex": 6,
+     "start": "12:20",
+     "end": "13:00"
+    },
+    {
+     "periodIndex": 7,
+     "start": "13:00",
+     "end": "13:40"
+    },
+    {
+     "periodIndex": 8,
+     "start": "14:00",
+     "end": "14:40"
+    },
+    {
+     "periodIndex": 9,
+     "start": "14:45",
+     "end": "15:25"
+    },
+    {
+     "periodIndex": 10,
+     "start": "15:35",
+     "end": "16:15"
+    },
+    {
+     "periodIndex": 11,
+     "start": "16:20",
+     "end": "17:00"
+    },
+    {
+     "periodIndex": 12,
+     "start": "17:05",
+     "end": "17:45"
+    },
+    {
+     "periodIndex": 13,
+     "start": "17:45",
+     "end": "18:25"
+    },
+    {
+     "periodIndex": 14,
+     "start": "18:30",
+     "end": "19:10"
+    },
+    {
+     "periodIndex": 15,
+     "start": "19:15",
+     "end": "19:55"
+    },
+    {
+     "periodIndex": 16,
+     "start": "20:00",
+     "end": "20:40"
+    }
+   ],
+   "courses": [
+    {
+     "name": "缺教师课",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "教室R1"
+      }
+     ]
+    },
+    {
+     "name": "缺教室课",
+     "teacher": "甲老师",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "双缺课",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 3,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "无标题课",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "多教师课",
+     "teacher": "甲老师,乙老师",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 5,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "教室R4"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

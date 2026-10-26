@@ -1,0 +1,102 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "教务的教学周历每周从星期日算起，第 1 周从 2026-09-06（星期日）开始，周次按这个日子起算，请在「学期管理」里核对",
+  "节次时间按学校校历公布的上课时间导入（2024-2025 学年起一致），学校如有调整，请在「学期管理」里核对"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第一学期",
+   "firstDay": "2026-09-06",
+   "totalWeeks": 16,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:00",
+     "end": "08:45"
+    },
+    {
+     "periodIndex": 2,
+     "start": "08:55",
+     "end": "09:40"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:00",
+     "end": "10:45"
+    },
+    {
+     "periodIndex": 4,
+     "start": "10:55",
+     "end": "11:40"
+    },
+    {
+     "periodIndex": 5,
+     "start": "14:00",
+     "end": "14:45"
+    },
+    {
+     "periodIndex": 6,
+     "start": "14:55",
+     "end": "15:40"
+    },
+    {
+     "periodIndex": 7,
+     "start": "16:00",
+     "end": "16:45"
+    },
+    {
+     "periodIndex": 8,
+     "start": "16:55",
+     "end": "17:40"
+    },
+    {
+     "periodIndex": 9,
+     "start": "19:00",
+     "end": "19:45"
+    },
+    {
+     "periodIndex": 10,
+     "start": "19:55",
+     "end": "20:40"
+    }
+   ],
+   "courses": [
+    {
+     "name": "操作系统",
+     "teacher": "吴老师",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "三教201"
+      }
+     ]
+    },
+    {
+     "name": "毛泽东思想概论",
+     "teacher": "郑老师",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 7,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "三教202"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

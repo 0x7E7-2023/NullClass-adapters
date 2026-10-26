@@ -1,0 +1,126 @@
+{
+ "_note": "合成数据：周历取不到 —— 开学日按提取日期（2026-09-16 星期三）所在周的周一 2026-09-14 推算，总周数取课表里最晚的第 16 周，各出一条提醒。",
+ "now": "2026-09-16",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027-1"
+ },
+ "cols": 8,
+ "calendar": {
+  "found": false,
+  "rows": []
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "",
+    "parts": [],
+    "th": true
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "星期日",
+    "parts": [],
+    "th": true
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "星期一",
+    "parts": [],
+    "th": true
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "星期二",
+    "parts": [],
+    "th": true
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "星期三",
+    "parts": [],
+    "th": true
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "星期四",
+    "parts": [],
+    "th": true
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "星期五",
+    "parts": [],
+    "th": true
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "星期六",
+    "parts": [],
+    "th": true
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "1,2",
+    "parts": [],
+    "th": true
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "离散数学<br/><font title=\"老师\">何老师</font><br/><font title=\"周次(节次)\">1-16(周)</font><br/><font title=\"教室\">四教101</font>"
+    ]
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": []
+   }
+  ]
+ ]
+}

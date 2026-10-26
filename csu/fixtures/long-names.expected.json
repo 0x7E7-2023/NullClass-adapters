@@ -1,0 +1,136 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "节次时间按学校校历公布的上课时间导入（2024-2025 学年起一致），学校如有调整，请在「学期管理」里核对",
+  "有 2 个上课安排没能认出来，已跳过（没认出周次 2 个）。教务页面的写法可能有变化，欢迎反馈。包含：计算机辅助设计与制造一体化工程应用实践…——没认出周次；大学生职业生涯规划与就业创业指导全过程…——没认出周次",
+  "有 4 门课没给上课教师、4 门课没给上课地点（例如 中南大学国际化创新创业实践与跨学科研究…、面向新工科人才培养的智能制造系统集成与…、生命科学前沿技术与公共卫生管理交叉研究… 等）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上",
+  "有 1 处周次里的括号备注（如「(这是一个非常非常非常长的括号备注文字…」）不是周次，已忽略，请核对这几门课的周次"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第一学期",
+   "firstDay": "2026-09-07",
+   "totalWeeks": 18,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:00",
+     "end": "08:45"
+    },
+    {
+     "periodIndex": 2,
+     "start": "08:55",
+     "end": "09:40"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:00",
+     "end": "10:45"
+    },
+    {
+     "periodIndex": 4,
+     "start": "10:55",
+     "end": "11:40"
+    },
+    {
+     "periodIndex": 5,
+     "start": "14:00",
+     "end": "14:45"
+    },
+    {
+     "periodIndex": 6,
+     "start": "14:55",
+     "end": "15:40"
+    },
+    {
+     "periodIndex": 7,
+     "start": "16:00",
+     "end": "16:45"
+    },
+    {
+     "periodIndex": 8,
+     "start": "16:55",
+     "end": "17:40"
+    },
+    {
+     "periodIndex": 9,
+     "start": "19:00",
+     "end": "19:45"
+    },
+    {
+     "periodIndex": 10,
+     "start": "19:55",
+     "end": "20:40"
+    }
+   ],
+   "courses": [
+    {
+     "name": "中南大学国际化创新创业实践与跨学科研究方法论专题讲座第一讲",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "面向新工科人才培养的智能制造系统集成与工程伦理综合实训项目",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "生命科学前沿技术与公共卫生管理交叉研究方法导论高级研讨课程",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 3,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "数字人文视野下的区域历史文化遗产保护与可持续发展对策研究",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

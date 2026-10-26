@@ -1,0 +1,122 @@
+{
+  "specVersion": 1,
+  "key": "ynufe",
+  "name": "云南财经大学",
+  "initial": "Y",
+  "version": "1.0.0",
+  "author": "上游 AxelPLN（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://xjwis.ynufe.edu.cn/jsxsd/",
+  "scheduleUrlHint": "https://xjwis.ynufe.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 龙泉校区（安宁模式没有课）；一格两门课（10 个减号分隔）；单周 / 双周；教室写在标题为「地点」的 font 里；多段周次 1-8,10-17；周历 18 周、第 1 周星期一 2026-09-07 → 开学日；学期名由代码拼成「2026-2027学年第一学期」",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法与单/双标记归属（每段各判）—— 1-8周(单) / (单)1-8周,(双)9-16周 / 第1-第8周 / 1-8周(共8周),9-16周（只剥备注）/ 1,3,5周 / 1-8周(单)9-16周(双)（后缀紧挨下一段）",
+      "extracted": "fixtures/weeks-forms.extracted.json",
+      "expected": "fixtures/weeks-forms.expected.json"
+    },
+    {
+      "name": "合成用例：周次里的备注与不正常写法 —— (实验) 括号备注、(1) 教学班序号、1-40周 超过 30 周的部分丢弃、(单双) 与 隔周 认不出 → 每周都上并提醒；周历 20 周而课表到第 30 周 → 总周数抬到 30",
+      "extracted": "fixtures/weeks-notes.extracted.json",
+      "expected": "fixtures/weeks-notes.expected.json"
+    },
+    {
+      "name": "合成用例：校区 · 安宁模式有课（没有龙泉选项）→ 安宁校区 13 节作息（第 1 节 08:20，第 13 节结束 21:20），提醒说明判断依据",
+      "extracted": "fixtures/campus-anning.extracted.json",
+      "expected": "fixtures/campus-anning.expected.json"
+    },
+    {
+      "name": "合成用例：校区 · 两边都有课、用户在提问里选了安宁校区 → 安宁 13 节",
+      "extracted": "fixtures/campus-asked-anning.extracted.json",
+      "expected": "fixtures/campus-asked-anning.expected.json"
+    },
+    {
+      "name": "合成用例：校区 · 两边都有课、用户在提问里选了龙泉校区 → 龙泉 14 节",
+      "extracted": "fixtures/campus-asked-longquan.extracted.json",
+      "expected": "fixtures/campus-asked-longquan.expected.json"
+    },
+    {
+      "name": "合成用例：校区 · 两边都有课、宿主不能提问或用户取消 → 按上游口径取安宁 13 节并提醒请核对",
+      "extracted": "fixtures/campus-both-default.extracted.json",
+      "expected": "fixtures/campus-both-default.expected.json"
+    },
+    {
+      "name": "合成用例：校区 · 时间模式下拉框里没有安宁校区选项 → 龙泉 14 节并提醒",
+      "extracted": "fixtures/campus-no-option.extracted.json",
+      "expected": "fixtures/campus-no-option.expected.json"
+    },
+    {
+      "name": "合成用例：校区 · 探测安宁校区的请求失败 → 龙泉 14 节并提醒",
+      "extracted": "fixtures/campus-probe-failed.extracted.json",
+      "expected": "fixtures/campus-probe-failed.expected.json"
+    },
+    {
+      "name": "合成用例：格子上的星期标注（div 的 name 里的星期）· 乙在第 3 列但标注星期二 → 按标注放并提醒；无标注按列；同一格两段课各按自己的标注；跨两列无标注 → 放进两天并提醒；跨两列有标注 → 只放标注那天",
+      "extracted": "fixtures/day-hint.extracted.json",
+      "expected": "fixtures/day-hint.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师 / 缺教室 / 两者都缺照常导入（null）；没有课名、没有周次、周次认不出、没有节次、节次超过 20 节各自计数并点名；方括号里读不出节次（[上午]）回落本行表头；多位教师原样保留；教务没给校区 → 龙泉；第二学期，周历第 1 周星期一 2027-03-01",
+      "extracted": "fixtures/messy.extracted.json",
+      "expected": "fixtures/messy.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 同类问题多门课 —— 4 门长课名缺教师且缺教室、3 门长课名周次认不出、1 个很长的括号备注：提醒按类型汇总、点名课名和备注截到 20 字、每条不超过 200 字，并指向「编辑课程」",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    },
+    {
+      "name": "合成用例：龙泉校区只有 14 节，课表排到第 15、16 节 —— 第 15 节顺推补上（22:30-23:10），第 16 节顺推会越过 23:59 不补并说明",
+      "extracted": "fixtures/period-overflow-longquan.extracted.json",
+      "expected": "fixtures/period-overflow-longquan.expected.json"
+    },
+    {
+      "name": "合成用例：安宁校区只有 13 节，课表排到第 14-15 节 —— 顺推补上（21:30-22:10 / 22:20-23:00）",
+      "extracted": "fixtures/period-overflow-anning.extracted.json",
+      "expected": "fixtures/period-overflow-anning.expected.json"
+    },
+    {
+      "name": "合成用例：合并 · 同课同天同节次同教室的周次取并集（1-8 + 9-16 → 1-16）；完全重复只留一条；同名同教师不同教室是同一门课的两块；同名不同教师两门课；相邻节次第 1-2 与第 3-4 节不并成 1-4（上游不并）；分隔线 5 / 6 / 10 个减号",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：周历取不到 —— 开学日按提取日期（2026-09-16 星期三）所在周的周一 2026-09-14 推算，总周数取课表里最晚的第 16 周，各出一条提醒",
+      "extracted": "fixtures/cal-none.extracted.json",
+      "expected": "fixtures/cal-none.expected.json"
+    },
+    {
+      "name": "合成用例：周历第 1 周「一」那一格上的日期是 2026-09-08（星期二）—— 不采用原值，对齐到所在周的周一 2026-09-07 并提醒",
+      "extracted": "fixtures/cal-offmonday.extracted.json",
+      "expected": "fixtures/cal-offmonday.expected.json"
+    },
+    {
+      "name": "合成用例：周历表头是「日一二三四五六」（星期日在前）—— 按表头认出星期一在第 2 列，开学日 2026-09-07，不把星期日当开学日；周历 20 周",
+      "extracted": "fixtures/cal-sunday-first.extracted.json",
+      "expected": "fixtures/cal-sunday-first.expected.json"
+    },
+    {
+      "name": "合成用例：周历格子的 title 写成「2026年09月07」（没有「日」字，上游的正则就是这个形状）—— 开学日 2026-09-07；周历 18 周",
+      "extracted": "fixtures/cal-title-nodayword.extracted.json",
+      "expected": "fixtures/cal-title-nodayword.expected.json"
+    },
+    {
+      "name": "合成用例：周历格子没有 title，日期写在格子文字里（2026年09月07日）—— title 优先、文字兜底，开学日 2026-09-07；周历 18 周",
+      "extracted": "fixtures/cal-text-date.extracted.json",
+      "expected": "fixtures/cal-text-date.expected.json"
+    },
+    {
+      "name": "合成用例：课表顶部没有星期标题 —— 按最右边 7 列推断并提醒；课表页上找不到学年学期 → 学期名用「云南财经大学当前学期」占位并提醒；格子没有星期标注",
+      "extracted": "fixtures/no-header.extracted.json",
+      "expected": "fixtures/no-header.expected.json"
+    }
+  ]
+}

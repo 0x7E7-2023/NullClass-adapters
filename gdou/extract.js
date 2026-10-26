@@ -3,8 +3,8 @@
     //
     // 移植自 shiguang_warehouse 的 GDOU/gdou.js
     //   https://github.com/XingHeYuZhuan/shiguang_warehouse  （MIT，作者 Mccurtain）
-    //   上游快照 19a65bf07a3e998fcfc69cee692387cdc0523c1a（2026-10-19 拉取，2026-10-20 复核）
-    //   本校脚本最后一次修改 0ed4caa（2026-10-08）
+    //   上游快照 e15c6274ac347c9642da890504651a9b4e374391（2026-10-26 拉取；首次移植时的快照是 19a65bf）
+    //   本校脚本最后一次修改 3976cfa（2026-10-25，PR #892，作者 Mccurtain，上游版本号 2.2）
     //   同目录的阳江校区脚本 gdouyj.js / gdouyj2.js 不在本件范围内
     // 移植改动：
     //   ① ES6 → ES5（异步写法改成 then 链，去掉模板串、箭头函数与块级声明关键字）
@@ -13,7 +13,8 @@
     //      取到的页面里也读不到就报错，不再用写死的学期码。要导入别的学期，用户在教务页面里切一下再点「提取课表」
     //   ③ 主机不写死：上游把 https://jw.gdou.edu.cn 写进每一条请求。这里全部由 window.location.origin 加上当前路径里
     //      /kbcx/ 或 /xtgl/ 之前的那一段前缀拼出同源地址（直连时前缀为空；经网关访问时原样保留）。
-    //      当前地址里找不到这两个标志（门户首页、统一认证页）就不发任何请求，直接提示先进入教务系统
+    //      当前地址里找不到这两个标志时，再认一次反代前缀（上游 getScheduleBase 的兜底）；仍认不出（门户首页、统一认证页）
+    //      就不发任何请求，直接提示先进入教务系统
     //   ④ 只取数：排课行（kbList）只带 kcmc / xm / cdmc / xqj / jcs / zcd 六个字段，集中实践课（sjkList）只带课名，学期周次校历照取；
     //      响应里夹带的学生信息（xsxx、学号、姓名、学院等）一律不带出；周次、节次解析与课程合并全部挪到 parse.js
     //   ⑤ 不请求节次时间：上游不用教务的节次时间接口，直接把写死的 10 节表存成预设；这里同样不请求，
@@ -21,6 +22,8 @@
     //   ⑥ 请求头：每个请求统一带 Content-Type、X-Requested-With 与 Accept（上游课表请求只带 Content-Type）；
     //      课表请求体与上游逐字一致（xnm / xqm / kzlx=ck / xsdm= / kclbdm=），参数值经 encodeURIComponent，数字不变
     //   ⑦ 上游的开场弹窗、校区选择弹窗、saveImportedCourses / saveCourseConfig / savePresetTimeSlots、showToast / notifyTaskCompletion 全部不移植
+    //   ⑧ 1.1.0 跟进上游 3976cfa：路径里没有 /kbcx/ 与 /xtgl/ 时，增加反代前缀兜底识别（拼接态 /https://主机、哈希态 /http/<串>），
+    //      停在教务系统的非课表页（例如经学校通道打开的教务根页）也能拼出同源地址；室外场地关键词的变化在 parse.js
     //
     // 取数方式：同源请求，最多三个，全部打在当前教务页面所在的主机上（地址由 window.location.origin 加上路径前缀拼出来，
     // 不写死主机名，也不写死端口）。<前缀> 直连时为空：
@@ -50,7 +53,7 @@
     }
 
     // 教务的路径前缀：取当前路径里最早出现的 /kbcx/ 或 /xtgl/，前面那一段就是前缀（直连为空串，经网关访问时原样保留）。
-    // 两个标志都没有（门户首页、统一认证页）返回 null，调用方直接报错、不发请求
+    // 两个标志和反代前缀都没有（门户首页、统一认证页）返回 null，调用方直接报错、不发请求
     function prefixOf() {
         var path = pathOf();
         var marks = ['/kbcx/', '/xtgl/'];
@@ -59,8 +62,10 @@
             var found = path.indexOf(marks[i]);
             if (found >= 0 && (at < 0 || found < at)) at = found;
         }
-        if (at < 0) return null;
-        return path.substring(0, at);
+        if (at >= 0) return path.substring(0, at);
+        // 兜底：停在反代的非课表页时，直接取反代前缀（拼接态 /https://jw.gdou.edu.cn，哈希态 /http/<串>）
+        var proxy = path.match(/^\/(?:https?:\/\/[^\/]+|(?:http|https|https-443)\/[^\/]+)/i);
+        return proxy ? proxy[0] : null;
     }
 
     // 拼教务地址：<前缀>/kbcx/<页面>?gnmkdm=…[附加参数]

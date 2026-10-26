@@ -1,0 +1,78 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的学期周次校历：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "学期总周数取自教务校历（20 周），如与实际不符可在学期管理里改",
+    "有 6 门课没有教师姓名（如「第一门超长课程名称测测测测测测测测测测…」「第二门超长课程名称测测测测测测测测测测…」「第三门超长课程名称测测测测测测测测测测…」等），已按不显示教师导入，请核对",
+    "有 6 门课没有上课教室（如「第一门超长课程名称测测测测测测测测测测…」「第二门超长课程名称测测测测测测测测测测…」「第三门超长课程名称测测测测测测测测测测…」等），已按不显示教室导入，请核对",
+    "有 1 处周次里的括号备注（如「(备备备备备备备备备备备备备备备备备备备备备备备备备备备备备备备备备备备备备备备备)」）不是周次，已忽略，请核对这几门课的周次"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:50", "end": "09:35" },
+        { "periodIndex": 3, "start": "09:50", "end": "10:35" },
+        { "periodIndex": 4, "start": "10:40", "end": "11:25" },
+        { "periodIndex": 5, "start": "11:30", "end": "12:15" },
+        { "periodIndex": 6, "start": "13:30", "end": "14:15" },
+        { "periodIndex": 7, "start": "14:20", "end": "15:05" },
+        { "periodIndex": 8, "start": "15:20", "end": "16:05" },
+        { "periodIndex": 9, "start": "16:10", "end": "16:55" },
+        { "periodIndex": 10, "start": "18:30", "end": "19:15" },
+        { "periodIndex": 11, "start": "19:20", "end": "20:05" },
+        { "periodIndex": 12, "start": "20:10", "end": "20:55" }
+      ],
+      "courses": [
+        {
+          "name": "第一门超长课程名称测测测测测测测测测测测测测测测测测测测测", "teacher": null, "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "第二门超长课程名称测测测测测测测测测测测测测测测测测测测测", "teacher": null, "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "第三门超长课程名称测测测测测测测测测测测测测测测测测测测测", "teacher": null, "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "第四门超长课程名称测测测测测测测测测测测测测测测测测测测测", "teacher": null, "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "第五门超长课程名称测测测测测测测测测测测测测测测测测测测测", "teacher": null, "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "第六门超长课程名称测测测测测测测测测测测测测测测测测测测测", "teacher": null, "note": null,
+          "blocks": [
+            { "dayOfWeek": 6, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "备注课", "teacher": "甲老师", "note": null,
+          "blocks": [
+            { "dayOfWeek": 7, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "小和山校区 教1-101" }
+          ]
+        }
+      ]
+    }
+  ]
+}

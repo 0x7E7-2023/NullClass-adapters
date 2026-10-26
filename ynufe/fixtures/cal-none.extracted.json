@@ -1,0 +1,97 @@
+{
+ "_note": "合成数据：周历取不到：开学日按提取日期（2026-09-16 星期三）所在周的周一 2026-09-14 推算，总周数取课表里最晚的第 16 周，各出一条提醒",
+ "now": "2026-09-16",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027-1"
+ },
+ "cols": 8,
+ "calendar": {
+  "found": false,
+  "rows": []
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "星期一",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "星期二",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "星期三",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "星期四",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "星期五",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "星期六",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "星期日",
+    "th": true,
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "第1-2节",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "日历课<br/><font title=\"老师\">周老师</font><br/><font title=\"周次(节次)\">1-16周[01-02节]</font><br/><font title=\"教室\">教学楼G1</font><br/>"
+    ],
+    "hints": [
+     1
+    ]
+   }
+  ]
+ ],
+ "campus": {
+  "id": "longquan",
+  "how": "noAnning"
+ }
+}

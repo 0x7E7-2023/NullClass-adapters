@@ -1,0 +1,85 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "导入的是教务页面里选中的学期（2026-2027学年第一学期）；要导入别的学期，请先在教务页面里切换到那个学期，再点「提取课表」",
+    "开学日期取自教务系统：第 1 周从 2026-08-31 开始，请在学期管理里核对",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 2 周），如与实际不符可在学期管理里改",
+    "课表用到了第 5-6 节，现有的节次时间没有覆盖，已补上：第 5-6 节按上一节下课后课间 5 分钟、每节 45 分钟顺推，请在学期管理里核对",
+    "课表用到了第 7 节及以后，顺推的时间会越过当天 23:59，这些节次没有补上时间（课程已导入），请在学期管理里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:55",
+          "end": "09:40"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:00",
+          "end": "10:45"
+        },
+        {
+          "periodIndex": 4,
+          "start": "21:00",
+          "end": "22:15"
+        },
+        {
+          "periodIndex": 5,
+          "start": "22:20",
+          "end": "23:05"
+        },
+        {
+          "periodIndex": 6,
+          "start": "23:10",
+          "end": "23:55"
+        }
+      ],
+      "courses": [
+        {
+          "name": "夜间实验",
+          "teacher": "吴老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 1,
+              "endWeek": 2,
+              "weekType": "ALL",
+              "location": "实验楼A"
+            }
+          ]
+        },
+        {
+          "name": "夜间讨论",
+          "teacher": "郑老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 7,
+              "endPeriod": 8,
+              "startWeek": 1,
+              "endWeek": 2,
+              "weekType": "ALL",
+              "location": "实验楼B"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

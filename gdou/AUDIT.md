@@ -1,7 +1,7 @@
 # 安全审计 —— 广东海洋大学（本部）（正方教务 V9 新版 jwglxt，根路径部署）
 
 审计对象：`jw-adapters/gdou/` 下的 `extract.js` / `parse.js` / `manifest.json`，以及它们移植自的上游脚本
-`shiguang_warehouse` 的 `GDOU/gdou.js`（快照 commit `19a65bf07a3e998fcfc69cee692387cdc0523c1a`，2026-10-19 拉取，2026-10-20 复核仍是最新；
+`shiguang_warehouse` 的 `GDOU/gdou.js`（首次移植快照 commit `19a65bf07a3e998fcfc69cee692387cdc0523c1a`，2026-10-19 拉取；1.1.0 起跟进到 `e15c627`，见 §10，2026-10-20 复核仍是最新；
 `git log -1 -- resources/GDOU/gdou.js` 得 `0ed4caa`（2026-10-08）；任务卡写的 `1592e3e` 是整个 `GDOU/` 目录的最后提交，改的是阳江脚本，与本校脚本不矛盾；
 MIT，作者 Mccurtain，上游版本号 2.0）。
 
@@ -194,4 +194,29 @@ extract.js 在 Chromium（Playwright，假教务站，全部请求被拦截，�
 ## 9. 签名
 
 移植与审计：0x7E7-2023（sonnet 移植，2026-10-20）。
-上游出处：`shiguang_warehouse` → `resources/GDOU/gdou.js`（快照 commit `19a65bf07a3e998fcfc69cee692387cdc0523c1a`，2026-10-19 拉取；本校脚本最后修改 `0ed4caa`，2026-10-08，MIT，作者 Mccurtain）。
+上游出处：`shiguang_warehouse` → `resources/GDOU/gdou.js`（首次移植快照 commit `19a65bf07a3e998fcfc69cee692387cdc0523c1a`，2026-10-19 拉取；1.1.0 起跟进到 `e15c627`，见 §10；本校脚本最后修改 `0ed4caa`，2026-10-08，MIT，作者 Mccurtain）。
+
+## 10. 1.1.0 跟进上游 3976cfa（2026-10-26）
+
+上游提交 `3976cfa`（2026-10-25，PR #892，作者 Mccurtain，`GDOU/gdou.js` 版本 2.0 → 2.2）；快照 `e15c6274ac347c9642da890504651a9b4e374391`（2026-10-26 拉取）。
+`git diff 19a65bf e15c627 -- resources/GDOU/` 逐块读过，实质改动三块：
+
+| 上游改动 | 本件做法 |
+|---|---|
+| 室外场地关键词 `球场` → `场`（覆盖匹克场、运动场、田径场、足球场等） | **跟**：`parse.js` `SPECIAL_VENUES.outdoor` 第一项改 `场`。旧 fixture 里含「场」字的教室只有篮球场 / 网球场（实验楼东面）/ 田径场南面，原本就命中，10 对旧期望一个字未改。新增 `fixtures/special-field` 钉住 |
+| 新增 `getScheduleBase` / `buildScheduleUrl`：按 pathname 推导反代前缀；除 `/kbcx/` 锚点外，兜底识别反代前缀（`/https://主机`、`/http/<串>`） | **跟（只补兜底）**：`extract.js` `prefixOf()` 原有 `/kbcx/`、`/xtgl/` 双锚点；两个锚点都找不到时再用上游同款正则取反代前缀，仍认不出才返回 null、不发请求。直连行为不变；请求仍全部同源，请求清单（§1）不变 |
+| `parseSelectOptions` 重构、请求挪进 try、错误 toast 提示「校外通道」 | **不跟**：下拉默认项的读法与本件 `readSelect` 等价（浏览器里 `select.value` 就是被选中项）；toast 是拾光桥能力，空课不用 |
+
+**变异测试（1.1.0 新增）**
+
+| 变异 | 结果 |
+|---|---|
+| M11：`outdoor` 第一项改回 `球场` | `special-field` 变红（只剩「足球场」命中，提醒由 3 门变 1 门，运动场、匹克场的课没有被点名） |
+| M12：`prefixOf()` 兜底分支改成永远返回 null（改真文件、跑完立刻还原） | 冒烟 `gdou-proxy-root`、`gdou-hash-home` 变红（报「请先登录并进入教务系统」，没发请求） |
+
+冒烟：`D:/NullClass/.test/port-batch17/gdou/smoke.py`（gdou 10 个场景：课表页、教务首页、网关前缀、代理拼接态课表页、代理根页、哈希态两种、过期、登录页、门户根），全部 OK。
+还原后自检 `RESULT: PASS`（11 对 fixture），冒烟 18/18 OK。
+
+**风险**：兜底正则对反代前缀的形态是上游给的三种，没有真机验证；认错前缀时请求会 404，报「教务系统返回错误（代码 404）」，不会丢课或写错数据。
+
+签名：0x7E7-2023（sonnet 移植，2026-10-26）。

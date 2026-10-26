@@ -3,7 +3,7 @@
   "key": "gdou",
   "name": "广东海洋大学",
   "initial": "G",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "上游 Mccurtain（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://jw.gdou.edu.cn/",
@@ -27,6 +27,11 @@
       "name": "合成用例：楼名简写与室外关键词 · 实验楼 3-4、楼名简写「实506-1计算机（2）室」7-8、「网球场（实验楼东面）」3-4、「田径场南面」7-8（室外关键词）、广学楼 3-4 命中（共 5 门）；实验楼 3-5 不命中；「实验室101」不含「实验楼」也不是「实+数字」→ 不命中；实验楼 1-2 + 3-4 合成 1-4 不命中",
       "extracted": "fixtures/special-outdoor.extracted.json",
       "expected": "fixtures/special-outdoor.expected.json"
+    },
+    {
+      "name": "合成用例：室外场地关键词「场」（1.1.0 跟进上游）· 运动场 3-4、匹克场 7-8、足球场 3-4 命中（共 3 门，都是旧的「球场」关键词认不出的写法）；体育馆 3-4 不含「场」不命中；运动场 3-5 区间不对不命中",
+      "extracted": "fixtures/special-field.extracted.json",
+      "expected": "fixtures/special-field.expected.json"
     },
     {
       "name": "合成用例：第二学期 · 校历取不到 → 开学日按 2 月 20 日所在周的周一推算为 2027-02-15、总周数按 20 周并说明；广学楼 3-4、实验楼 7-8、「篮球场」3-4（球场关键词）命中连堂特殊时间，实验楼 1-2 不命中",
