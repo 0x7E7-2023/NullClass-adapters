@@ -1,0 +1,142 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的学期周次校历：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "学期总周数取自教务校历（16 周），如与实际不符可在学期管理里改",
+    "教务系统另外给了 4 门集中实践课（毕业设计（论文）与毕业实习综合训练环节…、认识实习与生产实习以及企业现场参观学习…、课程设计与专业综合实践以及创新创业训练… 等）：它们没有固定的星期与节次，排不进周课表，请自行在学期里添加",
+    "有 2 行课表数据不全（缺星期（或星期不在 1-7）1 行、缺周次（或周次全超出 1-30 周）1 行、认不出的周次写法如「每周一三五上午第一二节课另行通知待定后…」），已跳过：教务数据不完整时会出现，如发现少课请反馈",
+    "有 6 门课没有教师姓名（如「高级程序设计语言与软件工程综合实践课程…」「面向对象分析与设计方法及统一建模语言应…」「数字信号处理与现代通信系统原理综合实验…」等），已按不显示教师导入，请核对",
+    "有 6 门课没有上课教室（如「高级程序设计语言与软件工程综合实践课程…」「面向对象分析与设计方法及统一建模语言应…」「数字信号处理与现代通信系统原理综合实验…」等），已按不显示教室导入，请核对",
+    "有 1 处周次里的括号备注（如「(一实验室安排的特殊时间说明及相关注意…」）不是周次，已忽略，请核对这几门课的周次"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 16,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:30",
+          "end": "09:15"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:20",
+          "end": "10:05"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:25",
+          "end": "11:10"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:15",
+          "end": "12:00"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高级程序设计语言与软件工程综合实践课程设计（第一部分）",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "面向对象分析与设计方法及统一建模语言应用技术研究",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "数字信号处理与现代通信系统原理综合实验及课程设计",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "工程力学与材料力学基础理论及典型结构受力分析方法",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "计算机网络体系结构与网络协议设计分析综合训练课程",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "电力系统自动化与智能电网调度运行控制技术综合实训",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 6,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

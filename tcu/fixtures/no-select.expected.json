@@ -1,0 +1,43 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "开学日期取自教务系统的校历：第 1 周从 2026-08-31 开始，请在「学期管理」里核对成学校实际开学日",
+    "学期名是推算的：教务没有给出学年学期，已按提取当天 2026-09-14 推为「天津城建大学 2026-2027学年第一学期」，如与实际不符可在导入后重命名",
+    "学期总周数取自教务系统（18 周），如与实际不符可在「学期管理」里改"
+  ],
+  "terms": [
+    {
+      "name": "天津城建大学 2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 18,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:55", "end": "15:40" }
+      ],
+      "courses": [
+        {
+          "name": "电路分析",
+          "teacher": "吴十",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 2, "endWeek": 17, "weekType": "ALL", "location": "实验楼B-201" }
+          ]
+        },
+        {
+          "name": "工程制图",
+          "teacher": "郑十一",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 15, "weekType": "ODD", "location": "教学楼C座" }
+          ]
+        }
+      ]
+    }
+  ]
+}

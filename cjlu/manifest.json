@@ -1,0 +1,72 @@
+{
+  "specVersion": 1,
+  "key": "cjlu",
+  "name": "中国计量大学",
+  "initial": "Z",
+  "version": "1.0.0",
+  "author": "上游 salt-fishes, ying-ck（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwxt.cjlu.edu.cn/xtgl/login_slogin.html",
+  "scheduleUrlHint": "https://jwxt.cjlu.edu.cn/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 单校区、校历 20 周（第 1 周周一 2026-09-07）与节次时间取得到 → 开学日取校历、总周数 20、节次时间用教务给的；单周 / 双周、缺教师、缺教室、星期日、集中实践课一门；地点只写教室名",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：本校专属 · 多校区 → 课数最多的下沙校区作基础（只给 9 节、第 2 节重复一条只留一条）；江干校区 1-2 节时间相同不提醒、3-4 节不同要提醒；桐乡校区节次时间取不到也提醒；校历取不到 → 推算开学日 2026-08-31；第 10-12 节用学校常用的节次时间补、第 13 节顺推",
+      "extracted": "fixtures/multi-campus.extracted.json",
+      "expected": "fixtures/multi-campus.expected.json"
+    },
+    {
+      "name": "合成用例：本校专属 · 第二学期（下拉框文字 2、代码 12）；校历与基础校区节次时间都取不到 → 推算开学日 2027-02-15、整张用学校常用的 12 节；课表用到第 13-17 节 → 第 13-16 节顺推补上，第 17 节越过 23:59 不补",
+      "extracted": "fixtures/fallback.extracted.json",
+      "expected": "fixtures/fallback.expected.json"
+    },
+    {
+      "name": "合成用例：本校专属 · 课表里没有校区号 → 节次时间不带校区号取一次；校历只给「第N周」写法、第 1 周起日写在 ksrq 且是周三 → 回退周一 2026-09-07；校历 34 周连续 → 总周数钳到 30；节次写在 jc 字段",
+      "extracted": "fixtures/calendar-forms.extracted.json",
+      "expected": "fixtures/calendar-forms.expected.json"
+    },
+    {
+      "name": "合成用例：本校专属 · 校历第 1 周日期属于别的学期 → 忽略校历，推算开学日 2026-08-31，总周数也不用校历的 18 周",
+      "extracted": "fixtures/calendar-other-term.extracted.json",
+      "expected": "fixtures/calendar-other-term.expected.json"
+    },
+    {
+      "name": "合成用例：本校专属 · 校历 12 周而课表有第 16 周的课 → 总周数抬到 16 并说明；开学日取校历",
+      "extracted": "fixtures/calendar-raise.extracted.json",
+      "expected": "fixtures/calendar-raise.expected.json"
+    },
+    {
+      "name": "合成用例：本校专属 · 校历周次不连续（缺第 5 周）→ 照上游不用它定总周数，按 20 周并说明；开学日仍取校历第 1 周",
+      "extracted": "fixtures/calendar-gap.extracted.json",
+      "expected": "fixtures/calendar-gap.expected.json"
+    },
+    {
+      "name": "合成用例：本校专属 · 周次写法与单/双标记归属 —— 第1-第8周 / (单)1-8周,(双)9-16周 / 1-8周(共8周),9-16周 / 1-4周(单)5-8周(双) / (3组) 备注 / (1) 教学班序号 / 0-2,30-33 超范围丢弃 / 1,3,5周 / 1 - 16 周 / 1~8,10~16 / (单双周) 同写；课表最晚第 30 周 → 总周数抬到 30",
+      "extracted": "fixtures/weeks-forms.extracted.json",
+      "expected": "fixtures/weeks-forms.expected.json"
+    },
+    {
+      "name": "合成用例：数据不全 · 缺教师、缺教室、两者都缺；缺课名 / 星期 8 / 节次 1a / 周次认不出各计一行；节次 1-2,5-6 按最大跨度；第9-10节；节次写在 jc 字段的一行；实践课四门只点前三门；记录总数大于取到的行数",
+      "extracted": "fixtures/messy.extracted.json",
+      "expected": "fixtures/messy.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 · 六门 29 字的课名同时缺教师、缺教室 → 提醒按课名汇总、点名课名截到 20 字、每条不超过 200 字；四门约 60 字课名的集中实践课、认不出的长周次原文、长括号备注原文也都截到 20 字，提醒不被硬截",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    },
+    {
+      "name": "合成用例：合并 · 1-2 节 + 3-4 节连堂合成 1-4；完全重复的行只留一条；同课 1-8 周与 9-16 周并成 1-16 周；不同校区、教室都为空的两节课不合并（这时地点缺失只算缺教室）",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    }
+  ]
+}

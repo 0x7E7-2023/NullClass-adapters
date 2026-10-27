@@ -1,0 +1,83 @@
+{
+  "fetchedDate": "2026-09-10",
+  "term": {
+    "text": "2026-2027学年秋(当前)",
+    "isDefault": true
+  },
+  "rq": "20260831",
+  "skzc": "20",
+  "slots": [
+    {
+      "jc": "1",
+      "kssj": "0800",
+      "jssj": "0845"
+    },
+    {
+      "jc": "2",
+      "kssj": "0855",
+      "jssj": "0940"
+    },
+    {
+      "jc": "3",
+      "kssj": "1000",
+      "jssj": "1045"
+    },
+    {
+      "jc": "4",
+      "kssj": "1055",
+      "jssj": "1140"
+    }
+  ],
+  "courses": [
+    {
+      "courseName": "长周课",
+      "attendClassTeacher": "甲*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 1,
+          "classSessions": 1,
+          "continuingSession": 2,
+          "classWeek": "11111111000000000000000000001111",
+          "teachingBuildingName": "教学楼A座",
+          "classroomName": "501"
+        },
+        {
+          "classDay": 3,
+          "classSessions": 3,
+          "continuingSession": 2,
+          "classWeek": "00000000000000000000000000000011",
+          "teachingBuildingName": "教学楼A座",
+          "classroomName": "501"
+        }
+      ]
+    },
+    {
+      "courseName": "超长周课",
+      "attendClassTeacher": "乙*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 2,
+          "classSessions": 1,
+          "continuingSession": 2,
+          "classWeek": "00000000000000000000000000000011",
+          "teachingBuildingName": "教学楼A座",
+          "classroomName": "502"
+        }
+      ]
+    },
+    {
+      "courseName": "普通课",
+      "attendClassTeacher": "丙*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 4,
+          "classSessions": 1,
+          "continuingSession": 2,
+          "classWeek": "111111111111111100000000",
+          "teachingBuildingName": "教学楼A座",
+          "classroomName": "503"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务校历给出的开学日期（2026-08-31）只对应当前学期，不属于所选学期，已忽略；第 1 周按提取当天 2026-09-10 所在周的周一推算为 2026-09-07，请在「学期管理」里核对成学校实际开学日",
+    "导入的是「2025-2026学年春」的课表，它不是教务默认显示的学期；如果不是你要的学期，请先在教务系统的课表页里选好学期，再点「提取课表」",
+    "学期总周数按课表里出现的最大周次（14 周）推定：教务给的周数只对应当前学期，与所选学期对不上，已忽略；校历周数不同的话可在「学期管理」里改"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年春",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 14,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:55", "end": "15:40" }
+      ],
+      "courses": [
+        {
+          "name": "管理学",
+          "teacher": "钱",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 14, "weekType": "ALL", "location": "文博楼201" }
+          ]
+        },
+        {
+          "name": "经济学",
+          "teacher": "孙",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 12, "weekType": "ALL", "location": "文博楼202" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出可用的学期校历，学期总周数按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "有 2 门课在其它校区上课（如「书法」「田径」），那里的节次时间与下沙校区不同或没取到，已按下沙校区的节次时间显示，实际上下课时间请以教务为准",
+    "课表用到了第 10-13 节，已有的节次时间没有覆盖，已补上时间：第 10-12 节用学校常用的节次时间，第 13 节按上一节下课后课间 5 分钟、每节 45 分钟顺推，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:50",
+          "end": "09:35"
+        },
+        {
+          "periodIndex": 3,
+          "start": "09:55",
+          "end": "10:40"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:45",
+          "end": "11:30"
+        },
+        {
+          "periodIndex": 5,
+          "start": "11:35",
+          "end": "12:20"
+        },
+        {
+          "periodIndex": 6,
+          "start": "13:30",
+          "end": "14:15"
+        },
+        {
+          "periodIndex": 7,
+          "start": "14:20",
+          "end": "15:05"
+        },
+        {
+          "periodIndex": 8,
+          "start": "15:15",
+          "end": "16:00"
+        },
+        {
+          "periodIndex": 9,
+          "start": "16:05",
+          "end": "16:50"
+        },
+        {
+          "periodIndex": 10,
+          "start": "18:00",
+          "end": "18:45"
+        },
+        {
+          "periodIndex": 11,
+          "start": "18:50",
+          "end": "19:35"
+        },
+        {
+          "periodIndex": 12,
+          "start": "19:40",
+          "end": "20:25"
+        },
+        {
+          "periodIndex": 13,
+          "start": "20:30",
+          "end": "21:15"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高等数学A",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教1-101"
+            }
+          ]
+        },
+        {
+          "name": "大学英语",
+          "teacher": "乙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教2-305"
+            }
+          ]
+        },
+        {
+          "name": "数据结构",
+          "teacher": "丙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 10,
+              "endPeriod": 11,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "教3-201"
+            }
+          ]
+        },
+        {
+          "name": "软件工程",
+          "teacher": "丁老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 12,
+              "endPeriod": 13,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "教3-202"
+            }
+          ]
+        },
+        {
+          "name": "物理实验",
+          "teacher": "戊老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 2,
+              "endWeek": 16,
+              "weekType": "EVEN",
+              "location": "实验楼101"
+            }
+          ]
+        },
+        {
+          "name": "艺术鉴赏",
+          "teacher": "己老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "江教201"
+            }
+          ]
+        },
+        {
+          "name": "书法",
+          "teacher": "庚老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "江教305"
+            }
+          ]
+        },
+        {
+          "name": "田径",
+          "teacher": "辛老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "操场"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.10.26",
+  "version": "2026.10.27",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -765,6 +765,36 @@
       "name": "广州医科大学",
       "version": "1.0.0",
       "path": "gzhmu"
+    },
+    {
+      "key": "gztcme",
+      "name": "贵州机电职业技术学院",
+      "version": "1.0.0",
+      "path": "gztcme"
+    },
+    {
+      "key": "hebeu",
+      "name": "河北工程大学",
+      "version": "1.0.0",
+      "path": "hebeu"
+    },
+    {
+      "key": "cjlu",
+      "name": "中国计量大学",
+      "version": "1.0.0",
+      "path": "cjlu"
+    },
+    {
+      "key": "jxfu",
+      "name": "江西飞行学院",
+      "version": "1.0.0",
+      "path": "jxfu"
+    },
+    {
+      "key": "tcu",
+      "name": "天津城建大学",
+      "version": "1.0.0",
+      "path": "tcu"
     }
   ]
 }

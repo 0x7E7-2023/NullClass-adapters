@@ -1,0 +1,57 @@
+{
+  "specVersion": 1,
+  "key": "hebeu",
+  "name": "河北工程大学",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 Nanawwa（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwglxxfwpt.hebeu.edu.cn/xtgl/login_slogin.html",
+  "scheduleUrlHint": "https://jwglxxfwpt.hebeu.edu.cn/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 节次时间与校历都取不到 → 整张用学校公布的 10 节（第 1 节 08:30-09:15、第 10 节 19:50-20:35 逐节钉住）、开学日推算 2026-08-31、总周数 20；学期下拉框文字「1」按代号 3 认成第一学期；课表排到第 12 节 → 第 11、12 节顺推补时间；含单双周、缺教师、缺教室、只有 jc 的行、一门集中实践课",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：教务节次时间与校历都取到 · 「午休」这类非数字节次跳过、重复节次只留一条、带秒时间取 HH:mm；校历第 1 周是周三 → 开学日回退到周一 2027-03-01、总周数 16；教务只给到第 8 节、课表用到第 9-10 节 → 取空课默认节次时间；记录总数对账（说 9 条实际 8 行）；脏行（缺星期、缺周次）计数；同课相邻节次合并、10-16 周与 1-8 周拆成两段",
+      "extracted": "fixtures/api-calendar.extracted.json",
+      "expected": "fixtures/api-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：校历第 1 周那一行没有日期、第 2 周起有（带时间）→ 按第 2 周日期往前推 7 天得开学日 2026-09-07 并提醒；校历周次写成「第 N 周」、1-12 连续 → 总周数 12",
+      "extracted": "fixtures/cal-week1-empty.extracted.json",
+      "expected": "fixtures/cal-week1-empty.expected.json"
+    },
+    {
+      "name": "合成用例：校历周次不连续（缺第 9 周）→ 不采用校历周数、总周数按 20 周并提醒；节次时间接口给了开始晚于结束的行 → 整张作废、回落学校公布 10 节",
+      "extracted": "fixtures/cal-bad-weeks.extracted.json",
+      "expected": "fixtures/cal-bad-weeks.expected.json"
+    },
+    {
+      "name": "合成用例：校历取不到、课表排到第 22 周 → 总周数从 20 抬到 22 并说明；夏季学期开学日按 7 月 1 日所在周的周一推算 2027-06-28",
+      "extracted": "fixtures/overweek.extracted.json",
+      "expected": "fixtures/overweek.expected.json"
+    },
+    {
+      "name": "合成用例：单/双标记归属与「共 N 周」剥离 · 前缀「(单)1-8周,(双)9-16周」与后缀「1-8周(单),9-16周(双)」都读成 1-7 单周 + 10-16 双周；「1-15周(单) 共16周」只读 1-15 单周；「1-8周(共8周),9-16周」只剥备注、9-16 周不丢；「共16周,1-15周(单)」不整行丢课；「第1-第8周,(单)第9-第16周」去掉「第」后 1-8 每周 + 9-15 单周",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：合并 · 同课同教室相邻的 1-2 与 3-4 两行 → 合并成 1-4 节；1-8 周与 9-16 周同节次 → 周次并集 1-16；完全重复的行只留一条；同课不同教室的相邻节次不合并",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒不超 200 字 · 六门超长课名都缺教师、缺教室（一门不丢）；四门超长课名的集中实践课；星期不对、周次认不出（原文很长）、周次括号备注（原文很长）→ 提醒按类型汇总、课名与原文截到 20 字、整条不超过 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    }
+  ]
+}

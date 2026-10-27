@@ -1,0 +1,120 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了「2025-2026-1」；要导入别的学期，请先在教务「我的课表」页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的第 1 周日期：2025-09-01，请在学期管理里核对",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 6 周），如与实际不符可在学期管理里改",
+    "课表用到了第 12-13 节，学校公布的节次时间没有覆盖，已补上：第 12-13 节按上一节下课后课间 5 分钟、每节 45 分钟顺推，请在学期管理里核对",
+    "课表用到了第 14 节及以后，顺推的时间会越过当天 23:59，这些节次没有补上时间（课程已导入），请在学期管理里补上"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026-1",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:55",
+          "end": "09:40"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:00",
+          "end": "10:45"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:55",
+          "end": "11:40"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:55",
+          "end": "15:40"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:55",
+          "end": "16:40"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:50",
+          "end": "17:35"
+        },
+        {
+          "periodIndex": 9,
+          "start": "19:00",
+          "end": "19:45"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:55",
+          "end": "20:40"
+        },
+        {
+          "periodIndex": 11,
+          "start": "20:50",
+          "end": "21:35"
+        },
+        {
+          "periodIndex": 12,
+          "start": "21:40",
+          "end": "22:25"
+        },
+        {
+          "periodIndex": 13,
+          "start": "22:30",
+          "end": "23:15"
+        }
+      ],
+      "courses": [
+        {
+          "name": "夜间飞行理论",
+          "teacher": "王教官",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 11,
+              "endPeriod": 13,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "模拟机房"
+            }
+          ]
+        },
+        {
+          "name": "夜航复习",
+          "teacher": "李教官",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 6,
+              "startPeriod": 13,
+              "endPeriod": 14,
+              "startWeek": 5,
+              "endWeek": 6,
+              "weekType": "ALL",
+              "location": "教4-401"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
