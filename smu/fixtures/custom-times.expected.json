@@ -1,0 +1,75 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "导入的是教务页面里选中的学期（2026-2027学年第一学期）；要导入别的学期，请先在教务页面里切换到那个学期，再点「提取课表」",
+    "开学日期取自教务校历：第 1 周从 2026-08-31 开始，请在学期管理里核对",
+    "学期总周数取自教务校历（18 周）",
+    "有 2 门课（例如 病理学、组织学）教务给的上课时间与学校公布的节次时间不一样，课表按节次显示，请以教务系统为准核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 18,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:40" },
+        { "periodIndex": 2, "start": "08:45", "end": "09:25" },
+        { "periodIndex": 3, "start": "09:50", "end": "10:30" },
+        { "periodIndex": 4, "start": "10:35", "end": "11:15" },
+        { "periodIndex": 5, "start": "11:20", "end": "12:00" },
+        { "periodIndex": 6, "start": "14:30", "end": "15:10" },
+        { "periodIndex": 7, "start": "15:15", "end": "15:55" },
+        { "periodIndex": 8, "start": "16:15", "end": "16:55" },
+        { "periodIndex": 9, "start": "17:00", "end": "17:40" },
+        { "periodIndex": 10, "start": "19:30", "end": "20:10" },
+        { "periodIndex": 11, "start": "20:15", "end": "20:55" },
+        { "periodIndex": 12, "start": "21:00", "end": "21:40" },
+        { "periodIndex": 13, "start": "21:45", "end": "22:25" }
+      ],
+      "courses": [
+        {
+          "name": "生理学",
+          "teacher": "教师乙",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教学楼A1" }
+          ]
+        },
+        {
+          "name": "生化学",
+          "teacher": "教师辛",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 10, "endPeriod": 11, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教学楼A2" }
+          ]
+        },
+        {
+          "name": "病理学",
+          "teacher": "教师己",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 12, "endPeriod": 12, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教学楼A3" }
+          ]
+        },
+        {
+          "name": "组织学",
+          "teacher": "教师壬",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 13, "endPeriod": 13, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教学楼A4" }
+          ]
+        },
+        {
+          "name": "内科学",
+          "teacher": "教师癸",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 9, "endPeriod": 10, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教学楼A5" }
+          ]
+        }
+      ]
+    }
+  ]
+}

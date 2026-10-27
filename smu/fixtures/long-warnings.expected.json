@@ -1,0 +1,84 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "导入的是教务页面里选中的学期（2026-2027学年第一学期）；要导入别的学期，请先在教务页面里切换到那个学期，再点「提取课表」",
+    "开学日期取自教务校历：第 1 周从 2026-08-31 开始，请在学期管理里核对",
+    "学期总周数取自教务校历（16 周）",
+    "有 4 门课没给上课教师、4 门课没给上课地点（例如 一二三四五六七八九十甲乙丙丁戊己庚辛壬…、甲乙丙丁戊己庚辛壬癸子丑寅卯辰巳午未申…、子丑寅卯辰巳午未申酉一二三四五六七八九…）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上",
+    "有 2 门课没给结束节次（例如 大小多少轻重快慢远近深浅宽窄厚薄粗细长…、东西南北中发春夏秋冬梅兰竹菊琴棋书画诗…），已按只上开始的那一节导入，请核对这几门课的节次"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 16,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:40" },
+        { "periodIndex": 2, "start": "08:45", "end": "09:25" },
+        { "periodIndex": 3, "start": "09:50", "end": "10:30" },
+        { "periodIndex": 4, "start": "10:35", "end": "11:15" },
+        { "periodIndex": 5, "start": "11:20", "end": "12:00" },
+        { "periodIndex": 6, "start": "14:30", "end": "15:10" },
+        { "periodIndex": 7, "start": "15:15", "end": "15:55" },
+        { "periodIndex": 8, "start": "16:15", "end": "16:55" },
+        { "periodIndex": 9, "start": "17:00", "end": "17:40" },
+        { "periodIndex": 10, "start": "19:30", "end": "20:10" },
+        { "periodIndex": 11, "start": "20:15", "end": "20:55" },
+        { "periodIndex": 12, "start": "21:00", "end": "21:40" },
+        { "periodIndex": 13, "start": "21:45", "end": "22:25" }
+      ],
+      "courses": [
+        {
+          "name": "一二三四五六七八九十甲乙丙丁戊己庚辛壬癸子丑寅卯辰巳午未申酉",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "甲乙丙丁戊己庚辛壬癸子丑寅卯辰巳午未申酉戌亥一二三四五六七八九十",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "子丑寅卯辰巳午未申酉一二三四五六七八九十甲乙丙丁戊己庚辛壬癸",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "春夏秋冬东南西北上下左右前后内外中间大小长短高低甲乙丙丁戊己",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 7, "endPeriod": 8, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "大小多少轻重快慢远近深浅宽窄厚薄粗细长短方圆斜直曲折弯平正反",
+          "teacher": "教师A",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 9, "endPeriod": 9, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "教学楼X1" }
+          ]
+        },
+        {
+          "name": "东西南北中发春夏秋冬梅兰竹菊琴棋书画诗酒花茶月风雪云雨霜露雷",
+          "teacher": "教师B",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 6, "startPeriod": 9, "endPeriod": 9, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "教学楼X2" }
+          ]
+        }
+      ]
+    }
+  ]
+}

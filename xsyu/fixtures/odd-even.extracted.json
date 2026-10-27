@@ -1,0 +1,15 @@
+{
+  "term": { "code": "2026-2027-1", "text": "" },
+  "campus": { "xqid": "1", "xqmc": "雁塔校区" },
+  "askedCampus": null,
+  "rows": [
+    { "kcmc": "程序设计", "tmc": "<a>甲</a>", "croommc": "<a>实验楼A301</a>", "xingqi": "1", "djc": "1", "zcstr": "1-16周(双)", "xqid": "1", "xqmc": "雁塔校区" },
+    { "kcmc": "程序设计", "tmc": "<a>甲</a>", "croommc": "<a>实验楼A301</a>", "xingqi": "1", "djc": "2", "zcstr": "1-15周(单)", "xqid": "1", "xqmc": "雁塔校区" },
+    { "kcmc": "形势与政策", "tmc": "<a>乙</a>", "croommc": "<a>教3-101</a>", "xingqi": "2", "djc": "5", "zcstr": "(单)1-8周,(双)9-16周", "xqid": "1", "xqmc": "雁塔校区" },
+    { "kcmc": "体育", "tmc": "<a>丙</a>", "croommc": "<a>操场</a>", "xingqi": "3", "djc": "1", "zcstr": "(单)1-8周(双)9-16周", "xqid": "1", "xqmc": "雁塔校区" },
+    { "kcmc": "数学分析", "tmc": "<a>丁</a>", "croommc": "<a>教1-102</a>", "xingqi": "4", "djc": "3", "zcstr": "1-8周(单)9-16周(双)", "xqid": "1", "xqmc": "雁塔校区" },
+    { "kcmc": "英语", "tmc": "<a>戊</a>", "croommc": "<a>教4</a>", "xingqi": "4", "djc": "6", "zcstr": "1-8周(共8周),9-16周", "xqid": "1", "xqmc": "雁塔校区" }
+  ],
+  "slots": [],
+  "weeks": []
+}

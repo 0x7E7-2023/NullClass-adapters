@@ -1,0 +1,12 @@
+{
+  "term": { "code": "2026-2027-1", "text": "2026-2027学年第一学期" },
+  "campus": { "xqid": "1", "xqmc": "雁塔校区" },
+  "askedCampus": null,
+  "rows": [
+    { "kcmc": "<a href=\"#\">数据结构</a>", "tmc": "<a>刘一</a>", "croommc": "<a>教3-201</a>", "xingqi": "2", "djc": "1", "zcstr": "1-8", "xqid": "1", "xqmc": "雁塔校区" },
+    { "kcmc": "<a href=\"#\">数据结构</a>", "tmc": "<a>刘一</a>", "croommc": "<a>教3-201</a>", "xingqi": "2", "djc": "1", "zcstr": "1-8", "xqid": "1", "xqmc": "雁塔校区" },
+    { "kcmc": "<a href=\"#\">数据结构</a>", "tmc": "<a>刘一</a>", "croommc": "<a>教3-201</a>", "xingqi": "2", "djc": "2", "zcstr": "1-8", "xqid": "1", "xqmc": "雁塔校区" }
+  ],
+  "slots": [],
+  "weeks": []
+}

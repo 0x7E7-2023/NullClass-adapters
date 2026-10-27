@@ -1,0 +1,88 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第二学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务校历给出的开学日期（2026-09-07）不属于这个学期，已忽略；第 1 周按「第二学期 = 2 月 20 日所在周的周一」推算为 2027-02-15，请在学期管理里核对成学校实际开学日",
+    "课表里有第 22 周的课，超过 20 周，学期总周数已按 22 周导入，如与实际不符可在学期管理里改",
+    "教务系统没有给出节次时间，已按默认的 12 节节次时间导入（第 1 节 08:00-08:45），时间可能与学校实际作息不符，请在学期管理里核对",
+    "课表用到了第 13-14 节，现有的节次时间没有覆盖，已按上一节下课后课间 5 分钟、每节 45 分钟顺推补上，请在学期管理里核对",
+    "课表用到了第 15 节及以后，顺推的时间会越过当天 23:59，这些节次没有补上时间（课程已导入），请在学期管理里补上",
+    "教务系统说这个学期有 8 条排课记录，实际只取到 6 条，课表可能不完整，请重试或反馈",
+    "有 1 行课表的节次写成了多段（例如「1-2,5-6」），已按最大跨度放入（中间几节也算上），请核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2027-02-15",
+      "totalWeeks": 22,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 7, "start": "16:00", "end": "16:45" },
+        { "periodIndex": 8, "start": "16:55", "end": "17:40" },
+        { "periodIndex": 9, "start": "18:30", "end": "19:15" },
+        { "periodIndex": 10, "start": "19:25", "end": "20:10" },
+        { "periodIndex": 11, "start": "20:20", "end": "21:05" },
+        { "periodIndex": 12, "start": "21:15", "end": "22:00" },
+        { "periodIndex": 13, "start": "22:05", "end": "22:50" },
+        { "periodIndex": 14, "start": "22:55", "end": "23:40" }
+      ],
+      "courses": [
+        {
+          "name": "数学分析",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 18, "weekType": "ALL", "location": "教学楼1" }
+          ]
+        },
+        {
+          "name": "英语视听",
+          "teacher": "乙老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 6, "startWeek": 2, "endWeek": 22, "weekType": "EVEN", "location": "教学楼2" }
+          ]
+        },
+        {
+          "name": "体育",
+          "teacher": "丙老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 15, "endPeriod": 15, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "操场" }
+          ]
+        },
+        {
+          "name": "化学实验",
+          "teacher": "丁老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 13, "endPeriod": 14, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "实验楼" }
+          ]
+        },
+        {
+          "name": "线性代数",
+          "teacher": "戊老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 18, "weekType": "ALL", "location": "教学楼5" }
+          ]
+        },
+        {
+          "name": "思政",
+          "teacher": "己老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 6, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 18, "weekType": "ALL", "location": "教学楼6" }
+          ]
+        }
+      ]
+    }
+  ]
+}

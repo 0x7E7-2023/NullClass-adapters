@@ -1,0 +1,76 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统里当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「9 月 1 日之后的第一个周一」推算为 2026-09-07，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期总周数，按 20 周导入（课表里最晚排到第 8 周），如与实际不符可在学期管理里改",
+    "教务系统没有给出节次时间，已按默认的 12 节节次时间导入（第 1 节 08:00-08:45），时间可能与学校实际作息不符，请在学期管理里核对",
+    "有 4 门课没有教师信息（例如 大学物理实验与近代物理前沿专题研讨课程…、形式语言与自动机理论及其在编译器中的应…、数字信号处理原理与基于MATLAB的仿… 等），教师可在本门课的「编辑课程」里补充",
+    "有 3 门课没有教室信息（例如 大学物理实验与近代物理前沿专题研讨课程…、形式语言与自动机理论及其在编译器中的应…、面向对象程序设计与软件工程实践综合训练…），教室可在本门课的「编辑课程」里补充"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 7, "start": "16:00", "end": "16:45" },
+        { "periodIndex": 8, "start": "16:55", "end": "17:40" },
+        { "periodIndex": 9, "start": "18:30", "end": "19:15" },
+        { "periodIndex": 10, "start": "19:25", "end": "20:10" },
+        { "periodIndex": 11, "start": "20:20", "end": "21:05" },
+        { "periodIndex": 12, "start": "21:15", "end": "22:00" }
+      ],
+      "courses": [
+        {
+          "name": "大学物理实验与近代物理前沿专题研讨课程（实验班）",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "形式语言与自动机理论及其在编译器中的应用课程",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "面向对象程序设计与软件工程实践综合训练（二）",
+          "teacher": "某老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "数字信号处理原理与基于MATLAB的仿真实践教学",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "实验楼C101" }
+          ]
+        },
+        {
+          "name": "计算方法与数值分析的基础理论及其工程应用实践",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 2, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "教6-1" }
+          ]
+        }
+      ]
+    }
+  ]
+}

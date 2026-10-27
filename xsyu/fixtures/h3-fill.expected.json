@@ -1,0 +1,65 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统里当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "学期总周数取自教务校历（16 周），如与实际不符可在学期管理里改",
+    "课表用到了节次时间表里没有的第 9-12 节，已补上时间：第 9-12 节用默认的节次时间，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 16,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 7, "start": "16:00", "end": "16:45" },
+        { "periodIndex": 8, "start": "16:55", "end": "17:40" },
+        { "periodIndex": 9, "start": "18:30", "end": "19:15" },
+        { "periodIndex": 10, "start": "19:25", "end": "20:10" },
+        { "periodIndex": 11, "start": "20:20", "end": "21:05" },
+        { "periodIndex": 12, "start": "21:15", "end": "22:00" }
+      ],
+      "courses": [
+        {
+          "name": "物理",
+          "teacher": "张伟",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 8, "endPeriod": 8, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教2-301" }
+          ]
+        },
+        {
+          "name": "化学",
+          "teacher": "李娜",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 9, "endPeriod": 9, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教2-302" }
+          ]
+        },
+        {
+          "name": "生物",
+          "teacher": "王芳",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 10, "endPeriod": 10, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "教2-303" }
+          ]
+        },
+        {
+          "name": "计算机",
+          "teacher": "周强",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 11, "endPeriod": 12, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "实验楼B202" }
+          ]
+        }
+      ]
+    }
+  ]
+}

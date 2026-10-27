@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "key": "lyu",
+  "name": "临沂大学",
+  "initial": "L",
+  "version": "1.0.0",
+  "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://sdp.lyu.edu.cn/https/webvpn3146b55e2aeee09087ebc4ebe6dbd770/jwglxt/xtgl/login_slogin.html",
+  "scheduleUrlHint": "https://sdp.lyu.edu.cn/https/webvpn3146b55e2aeee09087ebc4ebe6dbd770/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 校历取不到 → 推算开学日 2026-08-31（9 月 1 日所在周的周一）、总周数内置 20 周；节次时间用空课内置 12 节，课表排到第 14 节 → 第 13-14 节顺推补上；含单双周、教师为空、地点为空、完全重复的排课行",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法与单双标记归属 · 前缀「(单)1-8周,(双)9-16周」与后缀「1-8周(单),9-16周(双)」都读成 1-7 单 + 10-16 双；「1-16(单周)」「第1-第8周」「1-3,5-9周」「1-8周(3组)」「1-16周(1)」「共16周,1-15周(单)」「1-15周(单) 共16周」各自读对",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：校历第 1 周日期是周三（2026-09-09）→ 开学日回退到那一周的周一 2026-09-07；校历给出 18 周，课表最晚第 18 周 → 总周数取 18，不抬高",
+      "extracted": "fixtures/calendar-weekday.extracted.json",
+      "expected": "fixtures/calendar-weekday.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置 + 后置单双标记（jxfu 型）· 「(单)1-8周(双)9-16周」「1-8周(单)9-16周(双)」「1-8周(单) 9-16周(双)」三门都读成 1-7 单 + 10-16 双；前置标记开头时后一个标记归下一段，不退化成 1-16 每周",
+      "extracted": "fixtures/week-glued.extracted.json",
+      "expected": "fixtures/week-glued.expected.json"
+    },
+    {
+      "name": "合成用例：同课合并 · 1-2 节与 3-4 节首尾相接合成 1-4；完全重复的 3-4 行只留一条；同节次不同周次（1-8 周与 9-16 周）周次并集 1-16；节次相接但周次不同的两行不合并",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 缺教师 / 缺教室 · 六门 22-23 字的课名（其中三门同时缺教师和教室）→ 不丢课（teacher / location 为 null）；提醒按类型汇总计数、点名课名截到 20 字；认不出的长周次原文、长括号备注原文也截短，每条不超过 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期 · 校历第 1 周日期（2026-09-07）不属于第二学期 → 忽略校历、开学日推算为 2027-02-15，总周数不用校历；课表最晚第 22 周 → 抬到 22 周并说明；第 13-14 节顺推、第 15 节越过 23:59 说明；一行 1-2,5-6 节多段；教务记录数 8 与取到的 6 行对账",
+      "extracted": "fixtures/second-term.extracted.json",
+      "expected": "fixtures/second-term.expected.json"
+    }
+  ]
+}

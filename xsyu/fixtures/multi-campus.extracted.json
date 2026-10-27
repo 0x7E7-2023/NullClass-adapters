@@ -1,0 +1,16 @@
+{
+  "term": { "code": "2026-2027-1", "text": "2026-2027学年第一学期" },
+  "campus": { "xqid": "1", "xqmc": "雁塔校区" },
+  "askedCampus": null,
+  "rows": [
+    { "kcmc": "高级英语", "tmc": "<a>吴九</a>", "croommc": "<a>教1-201</a>", "xingqi": "1", "djc": "1", "zcstr": "1-22", "xqid": "1", "xqmc": "雁塔校区" },
+    { "kcmc": "信号与系统", "tmc": "<a>郑十</a>", "croommc": "<a>教1-202</a>", "xingqi": "2", "djc": "2", "zcstr": "1-22", "xqid": "1", "xqmc": "雁塔校区" },
+    { "kcmc": "日语", "tmc": "<a>冯一</a>", "croommc": "<a>鄠邑楼</a>", "xingqi": "3", "djc": "1", "zcstr": "1-22", "xqid": "2", "xqmc": "鄠邑校区" },
+    { "kcmc": "体育", "tmc": "<a>卫五</a>", "croommc": "<a>操场</a>", "xingqi": "5", "djc": "3", "zcstr": "1-22", "xqid": "1", "xqmc": "雁塔校区" }
+  ],
+  "slots": [],
+  "weeks": [
+    { "zc": 1, "minrq": "2027-03-01 00:00:00" },
+    { "zc": 2, "minrq": "2027-03-08 00:00:00" }
+  ]
+}

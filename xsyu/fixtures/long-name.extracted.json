@@ -1,0 +1,14 @@
+{
+  "term": { "code": "2026-2027-1", "text": "2026-2027学年第一学期" },
+  "campus": { "xqid": "", "xqmc": "" },
+  "askedCampus": null,
+  "rows": [
+    { "kcmc": "大学物理实验与近代物理前沿专题研讨课程（实验班）", "tmc": "", "croommc": "", "xingqi": "1", "djc": "1", "zcstr": "1-8" },
+    { "kcmc": "形式语言与自动机理论及其在编译器中的应用课程", "tmc": "", "croommc": "", "xingqi": "2", "djc": "1", "zcstr": "1-8" },
+    { "kcmc": "面向对象程序设计与软件工程实践综合训练（二）", "tmc": "<a>某老师</a>", "croommc": "", "xingqi": "3", "djc": "1", "zcstr": "1-8" },
+    { "kcmc": "数字信号处理原理与基于MATLAB的仿真实践教学", "tmc": "", "croommc": "<a>实验楼C101</a>", "xingqi": "4", "djc": "1", "zcstr": "1-8" },
+    { "kcmc": "计算方法与数值分析的基础理论及其工程应用实践", "tmc": "", "croommc": "<a>教6-1</a>", "xingqi": "5", "djc": "2", "zcstr": "1-8" }
+  ],
+  "slots": [],
+  "weeks": []
+}

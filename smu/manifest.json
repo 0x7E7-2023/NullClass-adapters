@@ -1,0 +1,57 @@
+{
+  "specVersion": 1,
+  "key": "smu",
+  "name": "南方医科大学",
+  "initial": "N",
+  "version": "1.0.0",
+  "author": "上游 NekoJackie（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://zhjw.smu.edu.cn/",
+  "scheduleUrlHint": "https://zhjw.smu.edu.cn/new/student/xsgrkb/week.page",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 校本部节次时间；连续节次 1-2 + 3-4 合并成 1-4；单周 + 分段周次各一段；奇数周（单周行）；周次 1-16 整学期；缺教师与教室照常导入并汇总；开学日取校历第 1 周的周一 2026-08-31；总周数取校历 16 周；页面选中的学期",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：校区 · 顺德校区的课多于校本部，基础校区取顺德（第 1-9 节用顺德节次时间）；一门校本部的课第 1-9 节时间不同 → 点名提醒；一门校区编号认不出的课 → 按基础校区导入并提醒；学期来自教务默认项（第二学期）、没有校历 → 开学日推算为 2026-02-16、总周数按 20 周",
+      "extracted": "fixtures/campus-shunde.extracted.json",
+      "expected": "fixtures/campus-shunde.expected.json"
+    },
+    {
+      "name": "合成用例：自定义时间核对 · 开始节次 ≥10 的课，教务时间与节次时间一致的不提醒；结束时间对不上、开始时间对不上的各一门 → 按课名汇总提醒、课表仍按节次放入；开始节次 9 的课不核对；校历总周数 18",
+      "extracted": "fixtures/custom-times.extracted.json",
+      "expected": "fixtures/custom-times.expected.json"
+    },
+    {
+      "name": "合成用例：教室周次 jxcdmc2 · 「A101-1,A101-2,A101-4,B202-3,B202-5」按教室分组，同一门课两个教室各自的周次；「X-0」「Y-40」周次超界丢弃并计数；写法不对的「坏段」→ 这一行整行回落到 zc 与 jxcdmc，并提醒",
+      "extracted": "fixtures/room-weeks.extracted.json",
+      "expected": "fixtures/room-weeks.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法 · 「(单)1-8周,(双)9-16周」两段各归各；无逗号前置「(单)1-8周(双)9-16周」、带空格前置「(单)1-8周 (双)9-16周」、后置无逗号「1-8周(单)9-16周(双)」三种各一门；「1-8周(共8周),10-12周」只剥备注；「第1-第8周」；「1-6周(双) 9-12周(单)」后置标记；「(3组)」备注、「(1)」序号计数提醒；「1-16周(单双周)」同时写单双计数提醒；「xx」认不出计入缺周次；「1,40」超界丢弃计数",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：带课名的提醒限长 · 六门 30 字长课名，四门缺教师与教室、两门没给结束节次：每条提醒点名的课名截到 20 字，整条不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：校历开学日不属于这个学期 · 校历给的第 1 周是 2026-02-16（离第一学期太远）→ 忽略，按 9 月 1 日所在周的周一推算为 2026-08-31；没有校区编号 → 按校本部导入并提醒；校历总周数 18",
+      "extracted": "fixtures/rejected-start.extracted.json",
+      "expected": "fixtures/rejected-start.expected.json"
+    },
+    {
+      "name": "合成用例：节次时间顺推 · 校本部节次时间只到第 13 节，课表用到第 13 节（教务时间与节次时间一致）、第 14-15 节按课间 5 分钟、每节 40 分钟顺推，第 16 节起越过 23:59 补不上并提醒",
+      "extracted": "fixtures/extend.extracted.json",
+      "expected": "fixtures/extend.expected.json"
+    }
+  ]
+}

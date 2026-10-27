@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "key": "xsyu",
+  "name": "西安石油大学",
+  "initial": "X",
+  "version": "1.0.0",
+  "author": "上游 dr1am1（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jiaowu.xsyu.edu.cn/admin/login",
+  "scheduleUrlHint": "https://jiaowu.xsyu.edu.cn/admin/pkgl/xskb/queryKbForXsd",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（教务给节次时间、给周次表；连堂合并、逗号枚举、职称括号、畸形括号教师、待定教室、超出 30 周的周次、空课名行）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：单双周写法（「1-16周(双)」、段首标记不被并到上一段、无逗号前置标记、后置标记、「共 8 周」备注剥离；教务不给周次表与节次时间）",
+      "extracted": "fixtures/odd-even.extracted.json",
+      "expected": "fixtures/odd-even.expected.json"
+    },
+    {
+      "name": "合成用例：节次超出教务节次表（逐节补齐：空课默认表里能补的用默认时间，其余顺推）",
+      "extracted": "fixtures/h3-fill.extracted.json",
+      "expected": "fixtures/h3-fill.expected.json"
+    },
+    {
+      "name": "合成用例：校区名来自用户选择、节次超出校区表时顺推（教务不给节次时间）",
+      "extracted": "fixtures/campus-asked.extracted.json",
+      "expected": "fixtures/campus-asked.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒不超 200 字（多门缺教师、缺教室的长课名课程，校区名与节次时间都认不出）",
+      "extracted": "fixtures/long-name.extracted.json",
+      "expected": "fixtures/long-name.expected.json"
+    },
+    {
+      "name": "合成用例：跨校区课程、教务校历开学日对不上学期、总周数超过 20 周",
+      "extracted": "fixtures/multi-campus.extracted.json",
+      "expected": "fixtures/multi-campus.expected.json"
+    },
+    {
+      "name": "合成用例：同一节的完全重复行（同课同天同周次同教室，节次 1、1、2）吸收进连堂，只出一段 1-2 节",
+      "extracted": "fixtures/dup-rows.extracted.json",
+      "expected": "fixtures/dup-rows.expected.json"
+    }
+  ]
+}

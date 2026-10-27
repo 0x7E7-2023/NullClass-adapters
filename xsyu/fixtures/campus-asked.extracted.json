@@ -1,0 +1,14 @@
+{
+  "term": { "code": "2026-2027-2", "text": "2026-2027学年第二学期" },
+  "campus": { "xqid": "", "xqmc": "" },
+  "askedCampus": "明德校区",
+  "rows": [
+    { "kcmc": "高等代数", "tmc": "<a>郑一</a>", "croommc": "<a>教5-102</a>", "xingqi": "1", "djc": "9", "zcstr": "1-16" },
+    { "kcmc": "数据库原理", "tmc": "<a>钱二</a>", "croommc": "<a>教5-103</a>", "xingqi": "2", "djc": "10", "zcstr": "1-16" },
+    { "kcmc": "操作系统", "tmc": "<a>孙三</a>", "croommc": "<a>教5-104</a>", "xingqi": "3", "djc": "11", "zcstr": "1-16" },
+    { "kcmc": "编译原理", "tmc": "<a>赵四</a>", "croommc": "<a>教5-105</a>", "xingqi": "3", "djc": "12", "zcstr": "1-16" },
+    { "kcmc": "体育", "tmc": "<a>周五</a>", "croommc": "<a>操场</a>", "xingqi": "4", "djc": "3", "zcstr": "1-16" }
+  ],
+  "slots": [],
+  "weeks": []
+}
