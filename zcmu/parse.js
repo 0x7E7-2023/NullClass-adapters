@@ -175,6 +175,12 @@
     function weeksOf(source) {
         // 两步归一（见上）：① 破折号连同两侧空白 → 半角 '-'；② 剩下的空白 → 逗号（分段符）
         var whole = text(source).replace(WEEK_DASH, '-').replace(/\s+/g, ',');
+        // 无逗号前置单双标记（「(单)1-8周(双)9-16周」）：本段以前置标记开头时，第二个标记是下一段的前缀，前面补逗号隔开
+        whole = whole.replace(/[(（]([单双])周?[)）](?=[0-9])/g, function (all, mark, offset, s) {
+            var before = s.substring(0, offset);
+            if (!/[0-9周]$/.test(before)) return all;
+            return /^[(（][单双]/.test(before.split(/[,，;；、]/).pop()) ? ',' + all : all;
+        });
         var seen = {};
         var weeks = [];
         var segments = whole.split(/[,，;；、]/);

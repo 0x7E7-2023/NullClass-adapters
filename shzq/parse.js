@@ -316,7 +316,7 @@
         // 括号先于删「周」处理：只有数字 / 逗号的是教学班序号，整组摘掉（"(1)"、"(1-2)"、"( 1 - 2 )"）；
         // 带了备注字的（如「(3组)」）是备注，整组摘掉并计数提醒；其余（「(1-16周)」「(单)」）保留内容。
         // 剩下落单的括号换成逗号、不删：删掉的话「1-16周(1,2」的 16 会和后面的数字粘成 161
-        cleaned = cleaned.replace(/\(([^()]*)\)/g, function (all, inner) {
+        cleaned = cleaned.replace(/\(([^()]*)\)/g, function (all, inner, offset, whole) {
             if (/^[0-9\s,-]+$/.test(inner) && /[0-9]/.test(inner)) {
                 serialGroups++;
                 return ',';
@@ -325,6 +325,12 @@
                 noteGroups++;
                 if (!noteSample) noteSample = all;
                 return ',';
+            }
+            // 无逗号前置单双标记：夹在两段中间、前面的段以前置标记开头时（「(单)1-8周(双)9-16周」的第二个标记）是下一段的前缀，贴到后面那一段上
+            var beforeMark = whole.substring(0, offset);
+            if (/^[单双]周?$/.test(inner) && /^[0-9]/.test(whole.substring(offset + all.length))) {
+                if (!/[0-9周]\s*$/.test(beforeMark)) return ',' + inner;
+                if (/^\([单双]/.test(beforeMark.replace(/\s+$/, '').split(/[,\s]+/).pop())) return ',' + inner;
             }
             return ',' + inner + ',';
         });

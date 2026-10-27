@@ -372,6 +372,9 @@
                 var followsWeeks = /^[0-9周]$/.test(before);
                 var leadsWeeks = /^[0-9]$/.test(after);
                 if (!followsWeeks && leadsWeeks) return inner;   // 前缀标记：直接贴到后面那一段上
+                // 夹在两段中间的标记：本段以前置标记开头时（「(单)1-8周(双)9-16周」的第二个标记）它是下一段的前缀，前面补逗号隔开
+                if (followsWeeks && leadsWeeks &&
+                    /^\([单双]/.test(whole.substring(0, offset).replace(/\s+$/, '').split(/[,\s]+/).pop())) return ',' + inner;
             }
             return ',' + inner + ',';
         });

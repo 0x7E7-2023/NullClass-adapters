@@ -3,7 +3,7 @@
   "key": "cqepc",
   "name": "重庆航天职业技术学院",
   "initial": "C",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "上游 yang01（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "http://jw.cqepc.cn/",
@@ -52,6 +52,11 @@
       "name": "合成用例：同源模板缺陷修正 · 单/双标记按括号相对周次的位置归属 —— 前缀「(单)1-8周,(双)9-16周」与后缀「1-8周(单),9-16周(双)」都解析成 1-7 单周 + 10-16 双周；「共 N 周」只剥备注本身 ——「1-15周(单) 共16周」只算 1-15 单周、「1-8周(共8周),9-16周」不许丢掉 9-16 周（合成 1-16 周）、「共16周,1-15周(单)」不许整行丢课（只算 1-15 单周）",
       "extracted": "fixtures/weeks-markers.extracted.json",
       "expected": "fixtures/weeks-markers.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

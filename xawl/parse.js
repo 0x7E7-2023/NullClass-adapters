@@ -236,6 +236,12 @@
         //    空白仍保留分段语义，所以 "1-16周 双"（标记用空格分开）与 "1-3周 5-9周" 都还是两段，
         //    "1-16周" 这类标准写法结果不变。
         cleaned = cleaned.replace(/\s*[-~至—－−–～]\s*/g, '-');
+        // 无逗号前置单双标记（「(单)1-8周(双)9-16周」）：夹在两段中间、本段以前置标记开头的标记是下一段的前缀，前面补逗号隔开
+        cleaned = cleaned.replace(/[(（]([单双])周?[)）](?=\s*[0-9])/g, function (all, mark, offset, whole) {
+            var before = whole.substring(0, offset);
+            if (!/[0-9周]\s*$/.test(before)) return all;
+            return /^[(（][单双]/.test(before.replace(/\s+$/, '').split(/[,，、;；\s]+/).pop()) ? ',' + all : all;
+        });
         cleaned = cleaned.replace(/周/g, '');
         var withoutSerials = cleaned.replace(
             /[(（]\s*[0-9]+\s*(?:[-~至—－−–～]\s*[0-9]+\s*)?[)）]/g, ''

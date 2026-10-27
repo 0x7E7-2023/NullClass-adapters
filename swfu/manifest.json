@@ -3,7 +3,7 @@
   "key": "swfu",
   "name": "西南林业大学",
   "initial": "X",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://jw.swfu.edu.cn/jwglxt/xtgl/login_slogin.html",
@@ -62,6 +62,11 @@
       "name": "合成用例：长课名 + 缺教师 / 缺教室 → 照常导入（teacher / location 为 null）、提醒按类型汇总计数、点名课名截到 20 字；集中实践课四门（只点名前三门、课名截断）；缺节次与认不出的周次各一行被跳过并说明；每条提醒不超 200 字",
       "extracted": "fixtures/long-warnings.extracted.json",
       "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

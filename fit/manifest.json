@@ -3,7 +3,7 @@
   "key": "fit",
   "name": "福州理工学院",
   "initial": "F",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "http://oaa.fitedu.net/jwglxt/xtgl/login_slogin.html",
@@ -67,6 +67,11 @@
       "name": "合成用例：边界（g）· 周次括号七写法 (1-16周)、（1-16周）、1-16周(1,2)、1-16周(3组)、(1)1-16周、未闭合的 1-16周(1,2、1-16周(3 → 都读成第 1-16 周；序号与备注各计一个数写进提醒",
       "extracted": "fixtures/weeks-brackets.extracted.json",
       "expected": "fixtures/weeks-brackets.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

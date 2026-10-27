@@ -3,7 +3,7 @@
   "key": "gdou",
   "name": "广东海洋大学",
   "initial": "G",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "上游 Mccurtain（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://jw.gdou.edu.cn/",
@@ -67,6 +67,11 @@
       "name": "合成用例：合并与边界 · 同课 1-2 + 3-4 合成 1-4；同节次 1-8 周 + 9-16 周周次并集；完全重复行只留一条；节次写法 第9-10节 / 0102 / 1-2,5-6（多段提醒）；第 14 节顺推越过 23:59 → 补到第 13 节并说明；四种不全的行按原因计数跳过；总数写 20 条实际 14 行 → 对账提醒；校历取不到 → 推算",
       "extracted": "fixtures/merge-boundary.extracted.json",
       "expected": "fixtures/merge-boundary.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

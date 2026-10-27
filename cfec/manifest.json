@@ -3,7 +3,7 @@
   "key": "cfec",
   "name": "重庆财经学院",
   "initial": "C",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 glxgo（MIT）；移植 NullClass",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "http://jwmis.cfec.edu.cn/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
@@ -32,6 +32,11 @@
       "name": "合成用例：脏数据与集中实践课（缺星期/缺节次/周次全超限、节次多段与两位一拼、作息只回 4 节需补足、sjkList 实践课）",
       "extracted": "fixtures/dirty-rows.extracted.json",
       "expected": "fixtures/dirty-rows.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

@@ -3,7 +3,7 @@
   "key": "gdpu",
   "name": "广东药科大学",
   "initial": "G",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://webvpn.gdpu.edu.cn/https/77726476706e69737468656265737421f3f652d220347845300d8db9d6562d/lyuapServer/login?service=https%3A%2F%2Fjwsys.gdpu.edu.cn%2Fsso%2Flyiotlogin",
@@ -47,6 +47,11 @@
       "name": "合成用例：单/双标记归属与「共 N 周」剥离 · 「(单)1-8周,(双)9-16周」与「1-8周(单),9-16周(双)」都读成 1-7 单周 + 10-16 双周；「1-15周(单) 共16周」只读 1-15 单周；「共16周,1-15周(单)」只剥开头备注；「1-8周(共8周),9-16周」只剥括号备注、9-16 周不丢",
       "extracted": "fixtures/week-markers.extracted.json",
       "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

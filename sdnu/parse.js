@@ -291,7 +291,7 @@
         cleaned = cleaned.replace(/\s*[-～－−–—~至到]\s*/g, '-');
         cleaned = fullWidthToHalf(cleaned);
         // ③ 第一步（必须在删「周」之前）：每一对括号先按内容分类，整组在这里处理
-        cleaned = cleaned.replace(/\(([^()]*)\)/g, function (all, inner) {
+        cleaned = cleaned.replace(/\(([^()]*)\)/g, function (all, inner, offset, whole) {
             if (/^[0-9\s,-]+$/.test(inner) && /[0-9]/.test(inner)) {
                 serialGroups++;
                 return ',';
@@ -300,6 +300,13 @@
                 noteGroups++;
                 if (!noteSample) noteSample = all;
                 return ',';
+            }
+            // 无逗号前置单双标记修正（2026-10-27）：标记后面紧跟数字时，它是下一段的前缀，直接贴到后面那一段上，不补后逗号；
+            // 前面紧挨「周」「数字」的只在本段以前置标记开头时才算（「(单)1-8周(双)9-16周」的 "(双)"），否则仍是上一段的后缀
+            var beforeMark = whole.substring(0, offset).replace(/\s+$/, '');
+            if (/[单双]/.test(inner) && /^\s*[0-9]/.test(whole.substring(offset + all.length))) {
+                if (!/[0-9周]$/.test(beforeMark)) return ',' + inner;
+                if (/^\([单双]/.test(beforeMark.split(/[,\s]+/).pop())) return ',' + inner;
             }
             return ',' + inner + ',';
         });

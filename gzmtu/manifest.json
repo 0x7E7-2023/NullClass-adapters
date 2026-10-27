@@ -3,7 +3,7 @@
   "key": "gzmtu",
   "name": "广州航海学院",
   "initial": "G",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "上游 weiwei221206（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "http://jwx.gzmtu.edu.cn/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
@@ -57,6 +57,11 @@
       "name": "合成用例：第二学期 · 教务作息（12 节）与校历都取到（节次时间用教务的，开学日回退到周一、总周数取自校历）+ 记录总数对账（说 12 条实际 6 行）+ 脏行（缺星期 / 缺节次 / 缺周次）+ 节次多段 + 周次 0 与 31 各丢一个 + 课表排到第 30 周顶高总周数",
       "extracted": "fixtures/api-second-term.extracted.json",
       "expected": "fixtures/api-second-term.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

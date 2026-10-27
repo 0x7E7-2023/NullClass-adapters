@@ -300,6 +300,13 @@
             cleaned = cleaned.replace(/[(（][0-9]+-[0-9]+[)）]/g, '');
         }
         cleaned = cleaned.replace(/[(（][0-9]+[)）]/g, '');
+        cleaned = cleaned.replace(/[(（]([单双])[)）](?=[0-9])/g, function (all, mark, offset, whole) {
+            // 无逗号前置单双标记：标记后面紧跟数字时，前面没有周次（段首或分隔符之后）或前面的段以前置标记开头，它就是下一段的前缀（「(单)1-8周(双)9-16周」的第二个标记），贴到后面那一段上
+            var beforeMark = whole.substring(0, offset);
+            if (!/[0-9]\s*$/.test(beforeMark)) return mark;
+            if (/^[(（][单双]/.test(beforeMark.replace(/\s+$/, '').split(/[,，\s]+/).pop())) return ',' + mark;
+            return all;
+        });
         cleaned = cleaned.replace(/[(（]/g, '').replace(/[)）]/g, '');
 
         // 其余的空白是**分段符**，不许剥掉：有学校用空格分隔两段周次（"1-3周 5-9周"）、

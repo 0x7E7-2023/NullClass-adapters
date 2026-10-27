@@ -3,7 +3,7 @@
   "key": "njtech",
   "name": "南京工业大学",
   "initial": "N",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://jwgl.njtech.edu.cn/xtgl/login_slogin.html",
@@ -52,6 +52,11 @@
       "name": "合成用例：作息表只到第 8 节（末节 17:50-18:40）+ 课表用到第 9-12 节（第 9、10 节内置开始早于上一节下课 → 顺推；第 11、12 节内置开始不早于上一节下课 → 用内置表，同一用例两条分支都走到）+ 课表最晚第 21 周（校历缺失、超出内置 20 周 → 抬高总周数的提醒走校历缺失那条）",
       "extracted": "fixtures/periods-mixed.extracted.json",
       "expected": "fixtures/periods-mixed.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

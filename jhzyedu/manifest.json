@@ -3,7 +3,7 @@
   "key": "jhzyedu",
   "name": "江西航空职业技术学院",
   "initial": "J",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 JN（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://jw.jhzyedu.cn/xtgl/login_slogin.html?ydType=0",
@@ -57,6 +57,11 @@
       "name": "合成用例：周次括号位置（1-16周(1,2) 与 (1)1-16周 的括号是教学班序号、1-16周(3组) 是备注、(1-16周) 括号包住周次、1-16(2、1-16周(3 括号未闭合：换成逗号不删，六门都应得 1-16 周）",
       "extracted": "fixtures/weeks-brackets.extracted.json",
       "expected": "fixtures/weeks-brackets.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

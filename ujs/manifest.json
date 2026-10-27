@@ -3,7 +3,7 @@
   "key": "ujs",
   "name": "江苏大学",
   "initial": "J",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 洛初 Github@gongfuture（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://jwxt.ujs.edu.cn/sso/jziotlogin",
@@ -59,6 +59,11 @@
       "name": "合成用例：校历取不到 → 开学日推算 2026-08-31 并提醒；课表最晚第 23 周 → 总周数抬到 23；夏令时 11 节下课 21:35，第 12-13 节顺推补时间（空课默认第 12 节接不上），第 14 节越过 23:59 不补并说明",
       "extracted": "fixtures/no-calendar-overweek.extracted.json",
       "expected": "fixtures/no-calendar-overweek.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

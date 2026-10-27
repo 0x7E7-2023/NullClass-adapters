@@ -278,7 +278,14 @@
         // ④ 第一步：破折号（半角 / 全角 / 波浪 / 减号 / 汉字「至」「到」）连同两侧空白 → 半角 '-'，
         //    "1 -16周(单)" / "1- 16周" / "1～16周" / "1至16周" 都归成标准形态。**不要在这里删掉全部空白**。
         cleaned = cleaned.replace(/\s*[-～－−–—~至到]\s*/g, '-');
-        cleaned = fullWidthToHalf(cleaned).replace(/周/g, '');
+        cleaned = fullWidthToHalf(cleaned);
+        // 无逗号前置单双标记修正：标记前面紧挨数字或「周」、后面紧跟数字，且它所在的这一段本身以前置标记开头时（"(单)1-8周(双)9-16周"），
+        //   它是下一段的前缀，前面补逗号隔开；否则仍是上一段的后缀（"1-8周(单)9-16周(双)"），原样保留
+        cleaned = cleaned.replace(/([0-9周])\s*\(([单双])(?:周)?\)\s*(?=[0-9])/g, function (all, before, mark, offset, whole) {
+            if (!/^\([单双]/.test(whole.substring(0, offset + 1).replace(/\s+$/, '').split(/[,\s]+/).pop())) return all;
+            return before + ',' + mark;
+        });
+        cleaned = cleaned.replace(/周/g, '');
         // 括号里只有数字/数字区间的是教学班序号，整段摘掉（"(1)"、"(1-2)"、"( 1 - 2 )"）
         cleaned = cleaned.replace(/\([ ]*[0-9]+(?:[ ]*-[ ]*[0-9]+)*[ ]*\)/g, function () {
             serialGroups++;

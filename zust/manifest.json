@@ -3,7 +3,7 @@
   "key": "zust",
   "name": "浙江科技大学",
   "initial": "Z",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 小漫君（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://webvpn.zust.edu.cn/",
@@ -50,6 +50,11 @@
       "name": "合成用例：合并 · 1-2 节 + 3-4 节连堂合成 1-4；完全重复的行只留一条；同课 1-8 周与 9-16 周并成 1-16 周；不同校区、教室都为空的两节课不合并（这时地点缺失只算缺教室）",
       "extracted": "fixtures/merge.extracted.json",
       "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

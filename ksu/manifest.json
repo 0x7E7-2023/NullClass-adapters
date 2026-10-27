@@ -3,7 +3,7 @@
   "key": "ksu",
   "name": "喀什大学",
   "initial": "K",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 星河欲转（MIT）；移植 0x7E7-2023（haiku 移植，2026-10-08）",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://cas.ksu.edu.cn/cas/login?service=https://jwnet.ksu.edu.cn/sso/ddlogin",
@@ -64,6 +64,11 @@
       "name": "合成用例（X1 周次括号）：「(1-16周)」整段保留；「1-16周(1,2)」「(1)1-16周」括号里是教学班序号，整段摘掉；「1-16周(3组)」备注括号摘掉并提醒；全角「1-16周（单）」为单周；「1-16周(1,2」「1-16周(3」未闭合括号换成逗号，数字不粘连成 161 / 163",
       "extracted": "fixtures/weeks-brackets.extracted.json",
       "expected": "fixtures/weeks-brackets.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

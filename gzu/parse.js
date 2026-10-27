@@ -284,7 +284,7 @@
         cleaned = cleaned.replace(/\s*[-～－−–—~至到]\s*/g, '-');
         cleaned = fullWidthToHalf(cleaned);
         // 第 1 步：括号一对一对处理。必须在删「周」之前，否则「(1-16周)」的「周」先没了，就分不清是不是序号
-        cleaned = cleaned.replace(/\(([^()]*)\)/g, function (all, inner) {
+        cleaned = cleaned.replace(/\(([^()]*)\)/g, function (all, inner, offset, whole) {
             // 只有数字、区间、逗号：教学班序号（"(1)"、"(1-2)"、"(1,2)"），整组连内容摘掉
             if (/^[0-9\s,-]+$/.test(inner) && /[0-9]/.test(inner)) {
                 serialGroups++;
@@ -295,6 +295,13 @@
                 noteGroups++;
                 if (!noteSample) noteSample = all;
                 return ',';
+            }
+            // 无逗号前置单双标记修正（2026-10-27）：标记后面紧跟数字时，它是下一段的前缀，直接贴到后面那一段上，不补后逗号；
+            // 前面紧挨「周」「数字」的只在本段以前置标记开头时才算（「(单)1-8周(双)9-16周」的 "(双)"），否则仍是上一段的后缀
+            var beforeMark = whole.substring(0, offset).replace(/\s+$/, '');
+            if (/[单双]/.test(inner) && /^\s*[0-9]/.test(whole.substring(offset + all.length))) {
+                if (!/[0-9周]$/.test(beforeMark)) return ',' + inner;
+                if (/^\([单双]/.test(beforeMark.split(/[,\s]+/).pop())) return ',' + inner;
             }
             // 其余（含「周」或单/双，"(1-16周)"、"(单)"、"(双周)"）：保留内容，两侧换成逗号
             return ',' + inner + ',';

@@ -3,7 +3,7 @@
   "key": "cauc",
   "name": "中国民航大学",
   "initial": "Z",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://http-jwgl-cauc-edu-cn-80.webvpn.cauc.edu.cn/xtgl/login_slogin.html",
@@ -47,6 +47,11 @@
       "name": "合成用例：节次超出作息表（内置表不早于上一节下课则用内置 = 第 11-12 节；早于则顺推 = 第 10、13-14 节；顺推越过 23:59 则不补并说明 = 第 15 节）+ 校历没取到（开学日推算）+ 课表最晚第 22 周抬高总周数",
       "extracted": "fixtures/period-extend.extracted.json",
       "expected": "fixtures/period-extend.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

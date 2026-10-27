@@ -3,7 +3,7 @@
   "key": "huel",
   "name": "河南财经政法大学",
   "initial": "H",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 Mercury（MIT）；移植 NullClass",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://xk.huel.edu.cn/",
@@ -36,6 +36,11 @@
       "name": "周次越界与空周次（合成 fixture：1-36周 的超出部分丢弃并报警，zcd 为空的行跳过并报警）",
       "extracted": "fixtures/weeks-overflow.extracted.json",
       "expected": "fixtures/weeks-overflow.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

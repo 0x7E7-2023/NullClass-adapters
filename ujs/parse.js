@@ -376,10 +376,14 @@
         //      必须先于前缀折叠：否则 "1-8周(单) 9-16周(双)" 里第一个标记会被当成第二段的前缀，两段的单双全错；
         //   ② 折完后还留着的标记，前面一定不是数字或「周」（段首，或在分隔符之后），才当下一段的前缀："(单)1" 折成 "单1"。
         //      "(单)1-8周,(双)9-16周" 里两个标记各跟自己那一段走，不会并到前一段把 1-16 周都读成每周都上
-        cleaned = cleaned.replace(/([0-9])\s*周?\s*\(([单双])(?:周)?\)/g, function (all, digit, mark) {
+        cleaned = cleaned.replace(/([0-9])\s*周?\s*\(([单双])(?:周)?\)/g, function (all, digit, mark, offset, whole) {
+            // 无逗号前置单双标记修正：标记所在的这一段本身以前置标记开头时（"(单)1-8周(双)9-16周"），它是下一段的前缀，不折成后缀
+            if (/^\([单双]/.test(whole.substring(0, offset + all.indexOf('(')).replace(/\s+$/, '').split(/[,\s]+/).pop())) return all;
             return digit + mark + ',';
         });
-        cleaned = cleaned.replace(/\(([单双])(?:周)?\)\s*(?=[0-9])/g, function (all, mark) {
+        cleaned = cleaned.replace(/\(([单双])(?:周)?\)\s*(?=[0-9])/g, function (all, mark, offset, whole) {
+            // 无逗号前置单双标记修正：标记前面紧挨数字或「周」时是上一步留下的前缀（夹在两段中间），前面补逗号隔开两段
+            if (/[0-9周]\s*$/.test(whole.substring(0, offset))) return ',' + mark;
             return mark;
         });
         // 括号先于删「周」逐组处理（全角括号已在上一步归成半角）：

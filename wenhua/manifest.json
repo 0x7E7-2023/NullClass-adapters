@@ -3,7 +3,7 @@
   "key": "wenhua",
   "name": "文华学院",
   "initial": "W",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 glxgo（MIT）；移植 NullClass",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://jw1.hustwenhua.net/jwglxt/xtgl/login_slogin.html",
@@ -67,6 +67,11 @@
       "name": "学年读不出来（合成：学期名退化成「第二学期」、第 1 周退回今天所在周的周一）",
       "extracted": "fixtures/no-year.extracted.json",
       "expected": "fixtures/no-year.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

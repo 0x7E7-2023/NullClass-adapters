@@ -143,6 +143,12 @@
 
     function weeksOf(source) {
         var body = text(source).replace(/\s+/g, '');
+        // 无逗号前置单双标记修正：标记前面紧挨数字或「周」、后面紧跟数字，且它所在的这一段本身以前置标记开头时（"(单)1-8周(双)9-16周"），
+        //   它是下一段的前缀，前面补逗号隔开；否则仍是上一段的后缀（"1-8周(单)9-16周(双)"），原样保留
+        body = body.replace(/([0-9周])[（(]([单双])(?:周)?[)）](?=[0-9])/g, function (all, before, mark, offset, whole) {
+            if (!/^[（(][单双]/.test(whole.substring(0, offset + 1).split(/[,，、;；]/).pop())) return all;
+            return before + ',' + all.substring(1);
+        });
         var seen = {};
         var weeks = [];
         var segments = body.split(/[,，、;；]/);

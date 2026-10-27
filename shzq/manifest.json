@@ -3,7 +3,7 @@
   "key": "shzq",
   "name": "上海中侨职业技术大学",
   "initial": "S",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 Kredenk（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://cas.shzq.edu.cn/cas/login?service=https://jw.shzq.edu.cn/sso/ddlogin",
@@ -62,6 +62,11 @@
       "name": "合成用例：H1 第二学期 + 校历第 1 周日期（2026-09-07）不属于本学期 → 连同校历写的 18 周一并作废，总周数按内置 20 周导入；提醒说「教务校历不属于这个学期」，不说「接口没有返回数据」",
       "extracted": "fixtures/calendar-rejected.extracted.json",
       "expected": "fixtures/calendar-rejected.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

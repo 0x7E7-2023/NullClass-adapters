@@ -3,7 +3,7 @@
   "key": "taru",
   "name": "塔里木大学",
   "initial": "T",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://auth.taru.edu.cn/cas/login?service=https%3A%2F%2Fhall.taru.edu.cn%2FserviceHall",
@@ -37,6 +37,11 @@
       "name": "作息不完整就整份不交（合成：课表是 1-4 节连堂，教务的节次时间只回了第 1、2 节 / 缺第 3、4 节 → periodTimes 必须整份为空并在 warnings 里说明）",
       "extracted": "fixtures/times-incomplete.extracted.json",
       "expected": "fixtures/times-incomplete.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周；期望取修订前代码对等价的后置写法「1-8周(单),9-16周(双)」的输出",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
     }
   ]
 }

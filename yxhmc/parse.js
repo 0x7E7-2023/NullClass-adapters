@@ -307,7 +307,7 @@
         cleaned = cleaned.replace(/\s*[-～－−–—~至到]\s*/g, '-');
         cleaned = fullWidthToHalf(cleaned);
         // 括号先按内容分类（这时「周」还在，能看出括号里是不是周次）：
-        cleaned = cleaned.replace(/\(([^()]*)\)/g, function (all, inner) {
+        cleaned = cleaned.replace(/\(([^()]*)\)/g, function (all, inner, offset, whole) {
             if (/^[0-9\s,-]+$/.test(inner) && /[0-9]/.test(inner)) {
                 serialGroups++;
                 return ',';
@@ -316,6 +316,12 @@
                 noteGroups++;
                 if (!noteSample) noteSample = all;
                 return ',';
+            }
+            // 无逗号前置单双标记：夹在两段中间、前面的段以前置标记开头时（「(单)1-8周(双)9-16周」的第二个标记）是下一段的前缀，贴到后面那一段上
+            var beforeMark = whole.substring(0, offset);
+            if (/^[单双]周?$/.test(inner) && /^[0-9]/.test(whole.substring(offset + all.length))) {
+                if (!/[0-9周]\s*$/.test(beforeMark)) return ',' + inner;
+                if (/^\([单双]/.test(beforeMark.replace(/\s+$/, '').split(/[,\s]+/).pop())) return ',' + inner;
             }
             return ',' + inner + ',';
         });
