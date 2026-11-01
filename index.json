@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.11.01.3",
+  "version": "2026.11.01.4",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -945,6 +945,66 @@
       "name": "中国石油大学（北京）克拉玛依校区",
       "version": "1.0.0",
       "path": "cupk"
+    },
+    {
+      "key": "cup",
+      "name": "中国石油大学（北京）",
+      "version": "1.0.0",
+      "path": "cup"
+    },
+    {
+      "key": "usc",
+      "name": "南华大学",
+      "version": "1.0.0",
+      "path": "usc"
+    },
+    {
+      "key": "hbdfxy",
+      "name": "河北东方学院",
+      "version": "1.0.0",
+      "path": "hbdfxy"
+    },
+    {
+      "key": "hbguhx",
+      "name": "河北地质大学华信学院",
+      "version": "1.0.0",
+      "path": "hbguhx"
+    },
+    {
+      "key": "gdipu",
+      "name": "广东轻工职业技术大学",
+      "version": "1.0.0",
+      "path": "gdipu"
+    },
+    {
+      "key": "sctbc",
+      "name": "四川工商职业技术学院",
+      "version": "1.0.0",
+      "path": "sctbc"
+    },
+    {
+      "key": "mmpt",
+      "name": "茂名职业技术学院",
+      "version": "1.0.0",
+      "path": "mmpt"
+    },
+    {
+      "key": "gdut",
+      "name": "广东工业大学",
+      "version": "1.0.0",
+      "path": "gdut"
+    },
+    {
+      "key": "cdutcm",
+      "name": "成都中医药大学",
+      "version": "1.0.0",
+      "path": "cdutcm"
+    },
+    {
+      "key": "jnu",
+      "name": "暨南大学",
+      "version": "1.0.0",
+      "path": "jnu"
     }
   ]
 }

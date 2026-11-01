@@ -1,0 +1,57 @@
+{
+  "specVersion": 1,
+  "key": "hbguhx",
+  "name": "河北地质大学华信学院",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 未来之乡（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://61.182.88.214:8090/jsxsd/",
+  "scheduleUrlHint": "http://61.182.88.214:8090/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 简表与详表择优留教师；大学体育写成未知教师、待定教室时留空并汇总提醒；电路基础无逗号前置单双（1-7 单周、10-16 双周）；程序设计第 5-6 节与第 7-8 节并成 5-8；课表大节起止拆成 10 节；周历 18 周、开学日 2026-09-07",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法与单/双标记归属 —— (单)1-8周,(双)9-16周 / 1-8周(单)9-16周(双)（后缀紧挨下一段）/ 第1-第8周 / 1-8周(共8周),9-16周（只剥备注）/ 1-16周 双 / 2-16(双周)",
+      "extracted": "fixtures/weeks-forms.extracted.json",
+      "expected": "fixtures/weeks-forms.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 同类问题多门课 —— 4 门长课名缺教师且缺教室、3 门长课名周次认不出、1 个很长的括号备注：提醒按类型汇总、点名截到 20 字、每条不超过 200 字，并指向「编辑课程」",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    },
+    {
+      "name": "合成用例：课表排到第 11-14 节（学校只公布 10 节）—— 第 11-13 节从 20:40 顺推补上，第 14 节越过 23:59 不补并说明",
+      "extracted": "fixtures/period-overflow.extracted.json",
+      "expected": "fixtures/period-overflow.expected.json"
+    },
+    {
+      "name": "合成用例：周历取不到 —— 开学日按提取日期（2026-09-16 星期三）所在周的周一 2026-09-14 推算；总周数用 20，不用课表里的第 16 周",
+      "extracted": "fixtures/cal-none.extracted.json",
+      "expected": "fixtures/cal-none.expected.json"
+    },
+    {
+      "name": "合成用例：重叠节次与重复行 —— 同一门课第 1-2 节与第 2-3 节并成 1-3；完全相同的第 5-6 节只留一条",
+      "extracted": "fixtures/overlap.extracted.json",
+      "expected": "fixtures/overlap.expected.json"
+    },
+    {
+      "name": "合成用例：没有周历且课表到第 22 周 —— 总周数从 20 抬到 22 并提醒",
+      "extracted": "fixtures/raise-weeks.extracted.json",
+      "expected": "fixtures/raise-weeks.expected.json"
+    },
+    {
+      "name": "合成用例：1-8(周)[01-02节]9-16(周)[05-06节] 拆成两段，不是 1-16 周都上第 1-2 节",
+      "extracted": "fixtures/split-sections.extracted.json",
+      "expected": "fixtures/split-sections.expected.json"
+    }
+  ]
+}

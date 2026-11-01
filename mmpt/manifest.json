@@ -1,0 +1,67 @@
+{
+  "specVersion": 1,
+  "key": "mmpt",
+  "name": "茂名职业技术学院",
+  "initial": "M",
+  "version": "1.0.0",
+  "author": "上游 一颗（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwc.mmpt.edu.cn/xtgl/login_slogin.html",
+  "scheduleUrlHint": "https://jwc.mmpt.edu.cn/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 节次读 jc；课名去掉星号；完全重复行只留一条；「未知」「待定」「暂无教师」「暂无教室」「未知教师」「未知教室」不当成教师或教室；星期用中文「星期三」；南校区 11 节；开学日推算为 2026-08-31；总周数 20；缺教师、缺教室、集中实践课、记录总数对不上",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 · 「(单)1-8周(双)9-16周」读成 1-7 单周加 10-16 双周，不是 1-16 每周；后置「1-8周(单)9-16周(双)」结果相同；标记和数字之间有空格也一样",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
+    },
+    {
+      "name": "合成用例：单双标记与「共 N 周」· 有逗号的前置「(单)1-8周,(双)9-16周」与后置「1-8周(单),9-16周(双)」都是 1-7 单周加 10-16 双周；「1-15周(单) 共16周」只留 1-15 单周；「1-8周(共8周),9-16周(实验)」不吞掉后段；「共16周,1-15周(单)」不整行丢课；「1-8周(1)」里的序号不是周次",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：周次里的「第」· 「第1-第8周」是 1-8 每周，不是只上第 1 周和第 8 周；「第1-第8周(单)」是 1-7 单周",
+      "extracted": "fixtures/week-di.extracted.json",
+      "expected": "fixtures/week-di.expected.json"
+    },
+    {
+      "name": "合成用例：合并 · 1-2 节与重叠的 2-3 节合成 1-3 节；1-4 节与重叠的 3-4 节合成 1-4 节；同节 1-8 周与 9-16 周并成 1-16 周；完全相同的两行只留一条",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 · 四门超长缺教师课、四门超长集中实践课、认不出的周次原文、超长括号备注都截到 20 字，每条提醒不超过 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：北校区 · 选了北校区时用北校区 12 节（第 1 节 08:00-08:40，第 5 节 11:20-12:00，第 12 节 20:40-21:20）",
+      "extracted": "fixtures/north.extracted.json",
+      "expected": "fixtures/north.expected.json"
+    },
+    {
+      "name": "合成用例：没选校区 · 取消选择时节次时间按南校区，并提醒「没选校区，节次时间按南校区」",
+      "extracted": "fixtures/campus-cancel.extracted.json",
+      "expected": "fixtures/campus-cancel.expected.json"
+    },
+    {
+      "name": "合成用例：超过 20 周与表外节次 · 课表排到第 21 周时总周数抬到 21；南校区只有 11 节，第 12 节从 21:20 后顺推为 21:25-22:10",
+      "extracted": "fixtures/overweek.extracted.json",
+      "expected": "fixtures/overweek.expected.json"
+    },
+    {
+      "name": "合成用例：页面上没有学年学期 · 按月份推算过的学期会单独提醒，学期名仍是学年加第几学期",
+      "extracted": "fixtures/inferred.extracted.json",
+      "expected": "fixtures/inferred.expected.json"
+    }
+  ]
+}

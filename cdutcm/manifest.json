@@ -1,0 +1,62 @@
+{
+  "specVersion": 1,
+  "key": "cdutcm",
+  "name": "成都中医药大学",
+  "initial": "C",
+  "version": "1.0.0",
+  "author": "上游 wwwhyDB（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwweb.cdutcm.edu.cn/xsgrkbcx!xsgrkbMain.action",
+  "scheduleUrlHint": "https://jwweb.cdutcm.edu.cn/xsgrkbcx!xsgrkbMain.action",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 排课详情给地点、课表任务给教师；第 1 周日期 2026-08-31 作开学日；连堂 1-2、三节 3-5、缺第 9 周、单周 1-7、重复的一周被并掉",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次文字 · 「(单)1-8周(双)9-16周」无逗号前置、「1-8周(单),9-16周(双)」后置、「(单)1-8周,(双)9-16周」、「1-8(单)9-16(双)」、「1-8周(单)9-16周(双)」、「第1-第8周(单)」、「1-16周(单)共16周」、「1-8周(共16周),9-16周」只剥备注、「2-16周(双)」；没有日期时第二学期推算为 2026-02-16；没有排课详情就用课表上的地点",
+      "extracted": "fixtures/weeks-prefix.extracted.json",
+      "expected": "fixtures/weeks-prefix.expected.json"
+    },
+    {
+      "name": "合成用例：周次数组与缺周 · 数组 1,2,3,5,7 切成 1-3 每周加 5-7 单周；连续 1-16；乱序 17,2,3,4,6；课名里的 &amp; 解成 &",
+      "extracted": "fixtures/weeks-gap.extracted.json",
+      "expected": "fixtures/weeks-gap.expected.json"
+    },
+    {
+      "name": "合成用例：早读第 0 节 · 08:00-08:20 放在第 1 节，学校第 1-2 节顺延为第 2-3 节，学校第 12 节顺延为第 13 节",
+      "extracted": "fixtures/morning.extracted.json",
+      "expected": "fixtures/morning.expected.json"
+    },
+    {
+      "name": "合成用例：脏数据 · 未知、暂无教师、暂无教室、待定、不用场地记为空；缺课名、星期错、缺节次、周次读不出被跳过；括号序号、括号备注、单双同写、孤立单双、节次不连续、第 31 周丢弃；总周数抬到 22",
+      "extracted": "fixtures/dirty-rows.extracted.json",
+      "expected": "fixtures/dirty-rows.expected.json"
+    },
+    {
+      "name": "合成用例：长课名与长学期名 · 四门缺教师缺地点的长课名和超过 30 字的学期名，提醒里课名截到 20 字、学期名截到 30 字，每条不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：超出第 12 节 · 第 13 到第 15 节按课间 5 分钟、每节 45 分钟顺推，第 16 节越过 23:59 补不上，课照常导入",
+      "extracted": "fixtures/late-periods.extracted.json",
+      "expected": "fixtures/late-periods.expected.json"
+    },
+    {
+      "name": "合成用例：学期列表没有标记 · 取第一项并提醒；学期名为空时用学校名加学期代码；别的学年的日期不采用",
+      "extracted": "fixtures/first-term.extracted.json",
+      "expected": "fixtures/first-term.expected.json"
+    },
+    {
+      "name": "合成用例：部分课没有排课详情 · 有详情的课用地点以详情为准，没有详情的课改用课表上的地点并提醒",
+      "extracted": "fixtures/detail-fallback.extracted.json",
+      "expected": "fixtures/detail-fallback.expected.json"
+    }
+  ]
+}

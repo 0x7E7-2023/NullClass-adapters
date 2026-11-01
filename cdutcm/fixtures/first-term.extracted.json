@@ -1,0 +1,37 @@
+{
+  "term": {
+    "code": "202601",
+    "name": "",
+    "source": "first"
+  },
+  "today": "2026-09-10",
+  "dateInfo": {
+    "1": [
+      {
+        "xqmc": "1",
+        "rq": "2024-09-02"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "kcmc": "导论",
+      "teaxms": "教师甲",
+      "jxcdmcs": "不该用",
+      "xq": "1",
+      "zcs": "1-4",
+      "jcdm2": "1",
+      "kcrwdm": "F"
+    }
+  ],
+  "details": [
+    {
+      "kcmc": "导论",
+      "xq": "1",
+      "jcdm2": "1",
+      "zc": "1-4",
+      "jxcdmc": "教室甲"
+    }
+  ],
+  "detailFailed": 0
+}

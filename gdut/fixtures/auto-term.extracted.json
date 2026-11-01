@@ -1,0 +1,36 @@
+{
+  "term": {
+    "code": "202601",
+    "name": "",
+    "source": "auto"
+  },
+  "today": "2026-11-01",
+  "dateInfo": {
+    "1": [
+      {
+        "xqmc": "1",
+        "rq": "2024-09-02"
+      }
+    ]
+  },
+  "total": 2,
+  "truncated": false,
+  "rows": [
+    {
+      "kcmc": "高等数学",
+      "teaxms": "张老师",
+      "jxcdmc": "工学1号楼201",
+      "xq": 1,
+      "jcdm": "0102",
+      "zc": 1
+    },
+    {
+      "kcmc": "毕业设计",
+      "teaxms": "李老师",
+      "jxcdmc": "线上",
+      "xq": 4,
+      "jcdm": "11",
+      "zc": 22
+    }
+  ]
+}

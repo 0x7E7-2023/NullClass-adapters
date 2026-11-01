@@ -1,0 +1,77 @@
+{
+  "specVersion": 1,
+  "key": "sctbc",
+  "name": "四川工商职业技术学院",
+  "initial": "S",
+  "version": "1.0.0",
+  "author": "上游 Violet、dclindev（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://jw.sctbc.edu.cn/xtgl/login_slogin.html",
+  "scheduleUrlHint": "http://jw.sctbc.edu.cn/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 节次接口只有节次号时不用；开学日推算为 2026-08-31；总周数 20；课表排到第 13 节时在第 12 节后顺推；课名去掉星号；完全重复行只留一条；「未知」「待定」「暂无」「暂无教师」「暂无教室」不当成教师或教室；星期用中文「星期三」；缺教师、缺教室、集中实践课、记录总数对不上",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 · 「(单)1-8周(双)9-16周」读成 1-7 单周加 10-16 双周，不是 1-16 每周；后置「1-8周(单)9-16周(双)」结果相同",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
+    },
+    {
+      "name": "合成用例：单双标记与「共 N 周」· 有逗号的前置「(单)1-8周,(双)9-16周」与后置「1-8周(单),9-16周(双)」都是 1-7 单周加 10-16 双周；「1-15周(单) 共16周」只留 1-15 单周；「1-8周(共8周),9-16周(实验)」不吞掉后段；「共16周,1-15周(单)」不整行丢课；「1-8周(1)」里的序号不是周次",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：周次里的「第」· 「第1-第8周」是 1-8 每周，不是只上第 1 周和第 8 周；「第1-第8周(单)」是 1-7 单周",
+      "extracted": "fixtures/week-di.extracted.json",
+      "expected": "fixtures/week-di.expected.json"
+    },
+    {
+      "name": "合成用例：合并 · 1-2 节与重叠的 2-3 节合成 1-3 节；1-4 节与重叠的 3-4 节合成 1-4 节；同节 1-8 周与 9-16 周并成 1-16 周；完全相同的两行只留一条",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 · 四门超长缺教师课、四门超长集中实践课、认不出的周次原文、超长括号备注都截到 20 字，每条提醒不超过 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：校历第 1 周写成「第1周」「2026年9月7日」时仍认得出；节次号可用 jcmc 或 jc，最后一节只给上课时间文字；第 11 节用应用里常用的节次时间补上；星期写成「星期一」",
+      "extracted": "fixtures/calendar-start.extracted.json",
+      "expected": "fixtures/calendar-start.expected.json"
+    },
+    {
+      "name": "合成用例：没有校历时总周数按 20，课表排到第 21 周才抬到 21；只有节次号的列表不当成节次时间",
+      "extracted": "fixtures/overweek.extracted.json",
+      "expected": "fixtures/overweek.expected.json"
+    },
+    {
+      "name": "合成用例：单双标记和周次之间有空格，以及两段周次贴在一起 · 「(单) 1-8周(双)9-16周」「(单)1-8 周(双)9-16 周」都是 1-7 单周加 10-16 双周；「1-8周9-16周」是 1-16 每周，总周数仍是 20",
+      "extracted": "fixtures/weeks-space.extracted.json",
+      "expected": "fixtures/weeks-space.expected.json"
+    },
+    {
+      "name": "合成用例：节次「第1-第2节」读成第 1-2 节；没有上课时间的节次行丢掉，不把有时间的第 1、2、4 节换成常用 12 节；课用到的第 3 节按上一节下课顺推，并停在第 4 节开始之前",
+      "extracted": "fixtures/period-gap.extracted.json",
+      "expected": "fixtures/period-gap.expected.json"
+    },
+    {
+      "name": "合成用例：校历只到第 8 周（周次号带「第」）时不当成一学期，开学日仍用第 1 周，总周数按 20",
+      "extracted": "fixtures/calendar-short.extracted.json",
+      "expected": "fixtures/calendar-short.expected.json"
+    },
+    {
+      "name": "合成用例：校历到第 18 周时总周数用 18，开学日用第 1 周的周一",
+      "extracted": "fixtures/calendar-full.extracted.json",
+      "expected": "fixtures/calendar-full.expected.json"
+    }
+  ]
+}

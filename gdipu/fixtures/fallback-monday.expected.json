@@ -1,0 +1,107 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "没能识别出学年学期，学期名已用「广东轻工职业技术大学当前学期」占位，请在「学期管理」里改名",
+    "开学日期无法从教务获取，已把最早有课的一周（2026-10-26）当作第 1 周，请在「学期管理」里核对",
+    "教务没有给出学期总周数，已按 20 周计，请在「学期管理」里核对"
+  ],
+  "terms": [
+    {
+      "name": "广东轻工职业技术大学当前学期",
+      "firstDay": "2026-10-26",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:30",
+          "end": "09:10"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:15",
+          "end": "09:55"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:15",
+          "end": "10:55"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:00",
+          "end": "11:40"
+        },
+        {
+          "periodIndex": 5,
+          "start": "11:45",
+          "end": "12:25"
+        },
+        {
+          "periodIndex": 6,
+          "start": "13:15",
+          "end": "13:55"
+        },
+        {
+          "periodIndex": 7,
+          "start": "14:00",
+          "end": "14:40"
+        },
+        {
+          "periodIndex": 8,
+          "start": "14:45",
+          "end": "15:25"
+        },
+        {
+          "periodIndex": 9,
+          "start": "15:45",
+          "end": "16:25"
+        },
+        {
+          "periodIndex": 10,
+          "start": "16:30",
+          "end": "17:10"
+        },
+        {
+          "periodIndex": 11,
+          "start": "17:15",
+          "end": "17:55"
+        },
+        {
+          "periodIndex": 12,
+          "start": "19:30",
+          "end": "20:10"
+        },
+        {
+          "periodIndex": 13,
+          "start": "20:15",
+          "end": "20:55"
+        },
+        {
+          "periodIndex": 14,
+          "start": "21:00",
+          "end": "21:40"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教1-101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

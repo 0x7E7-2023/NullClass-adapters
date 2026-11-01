@@ -1,0 +1,47 @@
+{
+  "specVersion": 1,
+  "key": "jnu",
+  "name": "暨南大学",
+  "initial": "J",
+  "version": "1.0.0",
+  "author": "上游 White-Dew-Boy（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jw.jnu.edu.cn/jwapp/sys/wdkb/*default/index.do",
+  "scheduleUrlHint": "https://jw.jnu.edu.cn/jwapp/sys/wdkb/*default/index.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（珠海节次、开学日按周一推算、总周数 20、后置单双周）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次文字（无逗号前置单双、后置单双、第1-第8周、共 N 周、缺一周、班号与备注）",
+      "extracted": "fixtures/weeks.extracted.json",
+      "expected": "fixtures/weeks.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师缺教室与超长课名（未知、待定、暂无交空，提醒截课名）",
+      "extracted": "fixtures/missing.extracted.json",
+      "expected": "fixtures/missing.expected.json"
+    },
+    {
+      "name": "合成用例：边界（总周数抬到 22、第 14-15 节顺推、连堂合并、重复行、间隔不合并、第 31 周丢掉）",
+      "extracted": "fixtures/boundary.extracted.json",
+      "expected": "fixtures/boundary.expected.json"
+    },
+    {
+      "name": "合成用例：跳过不完整行（缺课名、星期、节次、认不出的周次）",
+      "extracted": "fixtures/skip.extracted.json",
+      "expected": "fixtures/skip.expected.json"
+    },
+    {
+      "name": "合成用例：学期名用页面原文，节次方括号写法",
+      "extracted": "fixtures/term-name.extracted.json",
+      "expected": "fixtures/term-name.expected.json"
+    }
+  ]
+}

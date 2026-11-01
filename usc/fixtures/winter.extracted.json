@@ -1,0 +1,134 @@
+{
+ "now": "2027-03-03",
+ "term": {
+  "code": "2026-2027-2",
+  "name": "2026-2027学年第二学期"
+ },
+ "screenTermMissing": false,
+ "cols": 8,
+ "calendar": {
+  "found": true,
+  "rows": [
+   [
+    {
+     "col": 0,
+     "text": "周次"
+    },
+    {
+     "col": 1,
+     "text": "一"
+    },
+    {
+     "col": 2,
+     "text": "二"
+    },
+    {
+     "col": 3,
+     "text": "三"
+    },
+    {
+     "col": 4,
+     "text": "四"
+    },
+    {
+     "col": 5,
+     "text": "五"
+    },
+    {
+     "col": 6,
+     "text": "六"
+    },
+    {
+     "col": 7,
+     "text": "日"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "1"
+    },
+    {
+     "col": 1,
+     "title": "2027-03-01",
+     "text": "1"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "20"
+    }
+   ]
+  ]
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "节次",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "星期一",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "星期二",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "星期三",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "星期四",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "星期五",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "星期六",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "星期日",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "span": 1,
+    "text": "1-2节",
+    "th": true,
+    "parts": []
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "大学英语<br/><font title=\"老师\">丙老师</font><br/><font title=\"周次(节次)\">1-16周[01-02节]</font><br/><font title=\"教室\">外语楼201</font>"
+    ]
+   }
+  ]
+ ]
+}

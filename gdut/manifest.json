@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "key": "gdut",
+  "name": "广东工业大学",
+  "initial": "G",
+  "version": "1.0.0",
+  "author": "上游 forer4433（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jxfw.gdut.edu.cn/",
+  "scheduleUrlHint": "https://jxfw.gdut.edu.cn/xsgrkbcx!getXsgrbkList.action",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 一位数字周次合并成连续周、缺一周拆成两段、单周与双周、重复周次不另起一段、三节连排 030405、缺教师缺教室",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次文字 · (单)1-8周(双)9-16周 无逗号前置、后置单双、第1-第8周、共 N 周只剥备注；没有日期时第二学期推算为 2026-02-16",
+      "extracted": "fixtures/weeks-text.extracted.json",
+      "expected": "fixtures/weeks-text.expected.json"
+    },
+    {
+      "name": "合成用例：超出 14 节 · 第 15 节按课间 5 分钟、每节 45 分钟顺推为 22:40-23:25，第 16 节会越过 23:59 不补时间，课照常导入",
+      "extracted": "fixtures/late-periods.extracted.json",
+      "expected": "fixtures/late-periods.expected.json"
+    },
+    {
+      "name": "合成用例：脏数据 · 未知、待定、暂无教师、暂无教室记为空；缺课名、星期错误、节次读不出、周次读不出或超过 30 周跳过；括号序号、备注、单双同写、孤立单双、节次不连续",
+      "extracted": "fixtures/dirty-rows.extracted.json",
+      "expected": "fixtures/dirty-rows.expected.json"
+    },
+    {
+      "name": "合成用例：长课名与长学期名 · 四门缺教师缺教室的长课名和超长学期名，提醒里课名截到 20 字、学期名截到 30 字，每条不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：同时段与实体 · 同一门课两个教室分开、乱序周次 17 与 2-4 与 6 切成三段、课名里的 &amp; 解码",
+      "extracted": "fixtures/merge-entities.extracted.json",
+      "expected": "fixtures/merge-entities.expected.json"
+    },
+    {
+      "name": "合成用例：按日期推算的学期 · 学期名为空时用学校名加学期代码；第 1 周日期不属于该学期则按 9 月 1 日所在周推算；第 22 周把总周数抬到 22",
+      "extracted": "fixtures/auto-term.extracted.json",
+      "expected": "fixtures/auto-term.expected.json"
+    }
+  ]
+}

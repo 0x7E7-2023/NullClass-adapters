@@ -1,0 +1,134 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "节次时间按学校公布的夏秋季导入（开学日期在 5 月 1 日至 9 月 30 日）。10 月 1 日起改为秋冬季，两套时间不一样，请在「学期管理」里核对",
+  "有 4 门课没给上课教师、4 门课没给上课地点（例如 高等数学与线性代数工程应用导论实验课程…、大学物理与近代物理实验综合训练课程甲班外、电路分析与模拟电子技术综合设计课程甲班外 等）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第一学期",
+   "firstDay": "2026-09-07",
+   "totalWeeks": 18,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:00",
+     "end": "08:45"
+    },
+    {
+     "periodIndex": 2,
+     "start": "08:55",
+     "end": "09:40"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:00",
+     "end": "10:45"
+    },
+    {
+     "periodIndex": 4,
+     "start": "10:55",
+     "end": "11:40"
+    },
+    {
+     "periodIndex": 5,
+     "start": "15:00",
+     "end": "15:45"
+    },
+    {
+     "periodIndex": 6,
+     "start": "15:55",
+     "end": "16:40"
+    },
+    {
+     "periodIndex": 7,
+     "start": "17:00",
+     "end": "17:45"
+    },
+    {
+     "periodIndex": 8,
+     "start": "17:55",
+     "end": "18:40"
+    },
+    {
+     "periodIndex": 9,
+     "start": "20:00",
+     "end": "20:45"
+    },
+    {
+     "periodIndex": 10,
+     "start": "20:55",
+     "end": "21:40"
+    }
+   ],
+   "courses": [
+    {
+     "name": "高等数学与线性代数工程应用导论实验课程甲班",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "大学物理与近代物理实验综合训练课程甲班外",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "电路分析与模拟电子技术综合设计课程甲班外",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 3,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "数据结构与算法分析课程设计综合实践甲班外",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

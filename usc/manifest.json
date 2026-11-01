@@ -1,0 +1,67 @@
+{
+  "specVersion": 1,
+  "key": "usc",
+  "name": "南华大学",
+  "initial": "N",
+  "version": "1.0.0",
+  "author": "上游 UVhyx（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://jwzx.usc.edu.cn:8924/jsxsd/",
+  "scheduleUrlHint": "http://jwzx.usc.edu.cn:8924/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：夏秋季开学（9 月 7 日）用夏秋季节次时间；单双周；未知教师和待定教室留空",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期 3 月 1 日开学，用秋冬季节次时间，不是夏秋季",
+      "extracted": "fixtures/winter.extracted.json",
+      "expected": "fixtures/winter.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号前置单双、后置单双、第1-第8周、共 N 周只剥备注、逗号前置单双",
+      "extracted": "fixtures/weeks.extracted.json",
+      "expected": "fixtures/weeks.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒点名截到 20 字，整条不超过 200 字",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    },
+    {
+      "name": "合成用例：没有教学周历时按 20 周，课表到第 22 周才抬高并提醒，开学日按提取日推算",
+      "extracted": "fixtures/no-calendar.extracted.json",
+      "expected": "fixtures/no-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：同一节重复行不叠课，第 4 节与第 5 节不并，第 5-6 节与第 7-8 节并成 5-8",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：第 11 节超出学校公布的 10 节，按课间 5 分钟、每节 45 分钟顺推",
+      "extracted": "fixtures/overflow.extracted.json",
+      "expected": "fixtures/overflow.expected.json"
+    },
+    {
+      "name": "合成用例：周历周号写成「第1周」「第18周」时总周数仍是 18，不开学日提醒说教务没给总周数",
+      "extracted": "fixtures/calendar-label.extracted.json",
+      "expected": "fixtures/calendar-label.expected.json"
+    },
+    {
+      "name": "合成用例：第 1 周没有日期、第 2 周星期一为 2026-09-14 时，开学日倒推为 2026-09-07 并提醒",
+      "extracted": "fixtures/calendar-back.extracted.json",
+      "expected": "fixtures/calendar-back.expected.json"
+    },
+    {
+      "name": "合成用例：认不出的单双原文先截到 20 字，提醒末尾仍保留「请核对导入结果」",
+      "extracted": "fixtures/long-mark.extracted.json",
+      "expected": "fixtures/long-mark.expected.json"
+    }
+  ]
+}

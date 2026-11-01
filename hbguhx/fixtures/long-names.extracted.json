@@ -1,0 +1,264 @@
+{
+ "_note": "合成：4 门长课名缺教师且缺教室；3 门长课名周次认不出；1 处超长括号备注。点名都截到 20 字。",
+ "now": "2026-09-16",
+ "term": {
+  "code": "2026-2027-1",
+  "name": "2026-2027学年第一学期"
+ },
+ "screenTermMissing": false,
+ "cols": 8,
+ "calendar": {
+  "found": true,
+  "rows": [
+   [
+    {
+     "col": 0,
+     "text": "周次"
+    },
+    {
+     "col": 1,
+     "text": "一"
+    },
+    {
+     "col": 2,
+     "text": "二"
+    },
+    {
+     "col": 3,
+     "text": "三"
+    },
+    {
+     "col": 4,
+     "text": "四"
+    },
+    {
+     "col": 5,
+     "text": "五"
+    },
+    {
+     "col": 6,
+     "text": "六"
+    },
+    {
+     "col": 7,
+     "text": "日"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "1"
+    },
+    {
+     "col": 1,
+     "title": "2026-09-07",
+     "text": "7"
+    },
+    {
+     "col": 2,
+     "title": "2026-09-08",
+     "text": "8"
+    },
+    {
+     "col": 3,
+     "title": "2026-09-09",
+     "text": "9"
+    },
+    {
+     "col": 4,
+     "title": "2026-09-10",
+     "text": "10"
+    },
+    {
+     "col": 5,
+     "title": "2026-09-11",
+     "text": "11"
+    },
+    {
+     "col": 6,
+     "title": "2026-09-12",
+     "text": "12"
+    },
+    {
+     "col": 7,
+     "title": "2026-09-13",
+     "text": "13"
+    }
+   ],
+   [
+    {
+     "col": 0,
+     "text": "18"
+    }
+   ]
+  ]
+ },
+ "rows": [
+  [
+   {
+    "col": 0,
+    "th": true,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "th": true,
+    "text": "星期一",
+    "parts": []
+   },
+   {
+    "col": 2,
+    "th": true,
+    "text": "星期二",
+    "parts": []
+   },
+   {
+    "col": 3,
+    "th": true,
+    "text": "星期三",
+    "parts": []
+   },
+   {
+    "col": 4,
+    "th": true,
+    "text": "星期四",
+    "parts": []
+   },
+   {
+    "col": 5,
+    "th": true,
+    "text": "星期五",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "th": true,
+    "text": "星期六",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "th": true,
+    "text": "星期日",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "th": true,
+    "text": "第1-2节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "高等数学复习与习题课程加长名称甲乙丙丁戊<br/><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br/>"
+    ]
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "线性代数复习与习题课程加长名称甲乙丙丁戊<br/><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br/>"
+    ]
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "大学物理复习与习题课程加长名称甲乙丙丁戊<br/><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br/>"
+    ]
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "概率统计复习与习题课程加长名称甲乙丙丁戊<br/><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br/>"
+    ]
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": []
+   }
+  ],
+  [
+   {
+    "col": 0,
+    "th": true,
+    "text": "第3-4节",
+    "parts": []
+   },
+   {
+    "col": 1,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "离散数学复习与习题课程加长名称甲乙丙丁戊<br/><font title=\"老师\">周老师</font><br/><font title=\"周次(节次)\">另行通知[01-02节]</font><br/><font title=\"教室\">教B101</font><br/>"
+    ]
+   },
+   {
+    "col": 2,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "编译原理复习与习题课程加长名称甲乙丙丁戊<br/><font title=\"老师\">周老师</font><br/><font title=\"周次(节次)\">另行通知[01-02节]</font><br/><font title=\"教室\">教B101</font><br/>"
+    ]
+   },
+   {
+    "col": 3,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "操作系统复习与习题课程加长名称甲乙丙丁戊<br/><font title=\"老师\">周老师</font><br/><font title=\"周次(节次)\">另行通知[01-02节]</font><br/><font title=\"教室\">教B101</font><br/>"
+    ]
+   },
+   {
+    "col": 4,
+    "span": 1,
+    "text": "",
+    "parts": [
+     "马克思主义<br/><font title=\"老师\">周老师</font><br/><font title=\"周次(节次)\">1-4周(这是一段特别长的括号备注文字用于钉住截断啊),6-8周[03-04节]</font><br/><font title=\"教室\">教B104</font><br/>"
+    ]
+   },
+   {
+    "col": 5,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 6,
+    "span": 1,
+    "text": "",
+    "parts": []
+   },
+   {
+    "col": 7,
+    "span": 1,
+    "text": "",
+    "parts": []
+   }
+  ]
+ ]
+}

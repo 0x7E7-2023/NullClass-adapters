@@ -1,0 +1,37 @@
+{
+  "term": {
+    "code": "202601",
+    "name": "2026-2027学年第一学期",
+    "source": "page"
+  },
+  "today": "2026-09-10",
+  "dateInfo": {
+    "1": [
+      {
+        "xqmc": "1",
+        "rq": "2026-08-31"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "kcmc": "夜课",
+      "teaxms": "教师甲",
+      "jxcdmcs": "不该用",
+      "xq": "1",
+      "zcs": "1-2",
+      "jcdm2": "16",
+      "kcrwdm": "N"
+    }
+  ],
+  "details": [
+    {
+      "kcmc": "夜课",
+      "xq": "1",
+      "jcdm2": "16",
+      "zc": "1-2",
+      "jxcdmc": "阶梯教室"
+    }
+  ],
+  "detailFailed": 0
+}

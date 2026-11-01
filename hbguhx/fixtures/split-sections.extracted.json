@@ -1,0 +1,212 @@
+{
+  "_note": "合成：周次文字。(单)1-8周,(双)9-16周；1-8周(单)9-16周(双)；第1-第8周；1-8周(共8周),9-16周只剥备注；1-16周 双；2-16(双周)。",
+  "now": "2026-09-16",
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期"
+  },
+  "screenTermMissing": false,
+  "cols": 8,
+  "calendar": {
+    "found": true,
+    "rows": [
+      [
+        {
+          "col": 0,
+          "text": "周次"
+        },
+        {
+          "col": 1,
+          "text": "一"
+        },
+        {
+          "col": 2,
+          "text": "二"
+        },
+        {
+          "col": 3,
+          "text": "三"
+        },
+        {
+          "col": 4,
+          "text": "四"
+        },
+        {
+          "col": 5,
+          "text": "五"
+        },
+        {
+          "col": 6,
+          "text": "六"
+        },
+        {
+          "col": 7,
+          "text": "日"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "1"
+        },
+        {
+          "col": 1,
+          "title": "2026-09-07",
+          "text": "7"
+        },
+        {
+          "col": 2,
+          "title": "2026-09-08",
+          "text": "8"
+        },
+        {
+          "col": 3,
+          "title": "2026-09-09",
+          "text": "9"
+        },
+        {
+          "col": 4,
+          "title": "2026-09-10",
+          "text": "10"
+        },
+        {
+          "col": 5,
+          "title": "2026-09-11",
+          "text": "11"
+        },
+        {
+          "col": 6,
+          "title": "2026-09-12",
+          "text": "12"
+        },
+        {
+          "col": 7,
+          "title": "2026-09-13",
+          "text": "13"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "18"
+        }
+      ]
+    ]
+  },
+  "rows": [
+    [
+      {
+        "col": 0,
+        "th": true,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "th": true,
+        "text": "星期一",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "th": true,
+        "text": "星期二",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "th": true,
+        "text": "星期三",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "th": true,
+        "text": "星期四",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "th": true,
+        "text": "星期五",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "th": true,
+        "text": "星期六",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "th": true,
+        "text": "星期日",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "th": true,
+        "text": "第1-2节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "形势与政策<br/><font title=\"老师\">周老师</font><br/><font title=\"周次(节次)\">(单)1-8周,(双)9-16周[01-02节]</font><br/><font title=\"教室\">教A101</font><br/>"
+        ]
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "大学英语<br/><font title=\"老师\">周老师</font><br/><font title=\"周次(节次)\">1-8周(单)9-16周(双)[01-02节]</font><br/><font title=\"教室\">教A102</font><br/>"
+        ]
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "中国近现代史<br/><font title=\"老师\">周老师</font><br/><font title=\"周次(节次)\">第1-第8周[01-02节]</font><br/><font title=\"教室\">教A103</font><br/>"
+        ]
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "思想道德<br/><font title=\"老师\">周老师</font><br/><font title=\"周次(节次)\">1-8周(共8周),9-16周[01-02节]</font><br/><font title=\"教室\">教A104</font><br/>"
+        ]
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "军事理论<br/><font title=\"老师\">周老师</font><br/><font title=\"周次(节次)\">1-16周 双[01-02节]</font><br/><font title=\"教室\">教A105</font><br/>"
+        ]
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "劳动教育<br/><font title=\"老师\">周老师</font><br/><font title=\"周次(节次)\">2-16(双周)[01-02节]</font><br/><font title=\"教室\">教A106</font><br/>"
+        ]
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "分段节次<br/><font title=\"老师\">周老师</font><br/><font title=\"周次(节次)\">1-8(周)[01-02节]9-16(周)[05-06节]</font><br/><font title=\"教室\">教A107</font><br/>"
+        ]
+      }
+    ]
+  ]
+}

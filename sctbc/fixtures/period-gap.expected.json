@@ -1,0 +1,58 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的校历：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "教务校历只给了开学日期、没有写出一共多少周，学期总周数按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "课表用到了第 3 节，现有的节次时间没有覆盖，已补上：第 3 节按上一节下课后课间 5 分钟、每节 45 分钟顺推，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:10", "end": "08:50" },
+        { "periodIndex": 2, "start": "09:00", "end": "09:40" },
+        { "periodIndex": 3, "start": "09:45", "end": "10:10" },
+        { "periodIndex": 4, "start": "10:10", "end": "10:50" }
+      ],
+      "courses": [
+        {
+          "name": "节次带第",
+          "teacher": "张老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教1-101"
+            }
+          ]
+        },
+        {
+          "name": "第四节",
+          "teacher": "李老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 4,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教2-201"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

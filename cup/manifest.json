@@ -1,0 +1,67 @@
+{
+  "specVersion": 1,
+  "key": "cup",
+  "name": "中国石油大学（北京）",
+  "initial": "Z",
+  "version": "1.0.0",
+  "author": "上游 larryyan（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://bk.cup.edu.cn/student/for-std/course-table",
+  "scheduleUrlHint": "https://bk.cup.edu.cn/student/for-std/course-table",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：当前学期、校历 20 周、重复行并周、单双周、未知教师和教室",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：(单)1-8周(双)9-16周 与后置单双、共 N 周、第几周",
+      "extracted": "fixtures/weeks-text.extracted.json",
+      "expected": "fixtures/weeks-text.expected.json"
+    },
+    {
+      "name": "合成用例：没有校历时总周数用 20，不用课表最大周",
+      "extracted": "fixtures/no-calendar.extracted.json",
+      "expected": "fixtures/no-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：课表周次比校历更晚时才抬高总周数",
+      "extracted": "fixtures/over-calendar.extracted.json",
+      "expected": "fixtures/over-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：没有校历但课表晚于 20 周时抬高并提醒",
+      "extracted": "fixtures/raise-default.extracted.json",
+      "expected": "fixtures/raise-default.expected.json"
+    },
+    {
+      "name": "合成用例：长课名缺教师的提醒不超过 200 字",
+      "extracted": "fixtures/long-warn.extracted.json",
+      "expected": "fixtures/long-warn.expected.json"
+    },
+    {
+      "name": "合成用例：节次表缺第 3 到 5 节时只补这几节，第 1、2 节仍用教务给出的时间",
+      "extracted": "fixtures/period-gap.extracted.json",
+      "expected": "fixtures/period-gap.expected.json"
+    },
+    {
+      "name": "合成用例：没标出当前学期、脏记录、认不出的周次",
+      "extracted": "fixtures/dirty.extracted.json",
+      "expected": "fixtures/dirty.expected.json"
+    },
+    {
+      "name": "合成用例：没有开学日和学期名时按周一推算并写明",
+      "extracted": "fixtures/guess-start.extracted.json",
+      "expected": "fixtures/guess-start.expected.json"
+    },
+    {
+      "name": "合成用例：单双标记后有空格，或中间隔着「第」· 都是 1-7 单周加 10-16 双周，不是 1-16 每周",
+      "extracted": "fixtures/weeks-gap.extracted.json",
+      "expected": "fixtures/weeks-gap.expected.json"
+    }
+  ]
+}

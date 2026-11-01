@@ -1,0 +1,67 @@
+{
+  "specVersion": 1,
+  "key": "hbdfxy",
+  "name": "河北东方学院",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 小漫君（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://219.148.95.56:10000/jsxsd/",
+  "scheduleUrlHint": "http://219.148.95.56:10000/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 星期一高等数学 1-16 周 1-2 节，教师和教室都有；周历 18 周、第 1 周星期一 2026-09-07；学期名由代码拼成「2026-2027学年第一学期」；节次时间用本校十节",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法 —— (单)1-8周(双)9-16周（无逗号前置）、逗号分段、(单)与(双)后置紧挨、第1-第8周、共 N 周只剥备注、1-16周 双、括号备注(实验)",
+      "extracted": "fixtures/weeks-forms.extracted.json",
+      "expected": "fixtures/weeks-forms.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 —— 4 门缺教师且缺教室、3 门周次认不出；提醒点名截到 20 字，每条不超过 200 字，教师地点指向「编辑课程」",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    },
+    {
+      "name": "合成用例：课表排到第 11-14 节 —— 第 11-13 节按第 10 节 20:40 下课后顺推（20:45-21:30 / 21:35-22:20 / 22:25-23:10），第 14 节越过 23:59 不补",
+      "extracted": "fixtures/period-overflow.extracted.json",
+      "expected": "fixtures/period-overflow.expected.json"
+    },
+    {
+      "name": "合成用例：周历取不到 —— 开学日按 2026-09-16（星期三）所在周的周一 2026-09-14 推算，总周数用 20 而不是课表里的第 16 周",
+      "extracted": "fixtures/cal-none.extracted.json",
+      "expected": "fixtures/cal-none.expected.json"
+    },
+    {
+      "name": "合成用例：课名像网络课但有周次和节次照常导入；教务未排上课时间的两门课只进提醒，长课名截到 20 字",
+      "extracted": "fixtures/pending-online.extracted.json",
+      "expected": "fixtures/pending-online.expected.json"
+    },
+    {
+      "name": "合成用例：连堂 —— 1-2 与 3-4 并成 1-4，5-6 与 7-8 并成 5-8；第 4 与第 5 节、第 8 与第 9 节不并；1-2 与重叠的 2-3 并成 1-3",
+      "extracted": "fixtures/merge-overlap.extracted.json",
+      "expected": "fixtures/merge-overlap.expected.json"
+    },
+    {
+      "name": "合成用例：教师写成待定、教室写成暂无教室时留空并提醒；有周次但没有节次的课不静默丢掉，放进提醒",
+      "extracted": "fixtures/blank-and-noperiod.extracted.json",
+      "expected": "fixtures/blank-and-noperiod.expected.json"
+    },
+    {
+      "name": "合成用例：周历 16 周而课表到第 18 周 —— 总周数抬到 18 并提醒",
+      "extracted": "fixtures/weeks-raised.extracted.json",
+      "expected": "fixtures/weeks-raised.expected.json"
+    },
+    {
+      "name": "合成用例：两段认不出的单双原文各先截到 20 字，提醒末尾仍是「请核对导入结果」",
+      "extracted": "fixtures/long-mark.extracted.json",
+      "expected": "fixtures/long-mark.expected.json"
+    }
+  ]
+}

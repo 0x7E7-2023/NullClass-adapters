@@ -1,0 +1,127 @@
+{
+  "term": {
+    "id": "191",
+    "label": "2025-2026学年第一学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    {
+      "id": "191",
+      "label": "2025-2026学年第一学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": {
+    "startDate": "2025-09-01",
+    "endDate": "2026-01-18",
+    "weekStartOnSunday": false,
+    "nameZh": "2025-2026学年第一学期"
+  },
+  "courseUnitList": [
+    {
+      "indexNo": 1,
+      "startTime": 820,
+      "endTime": 905
+    },
+    {
+      "indexNo": 2,
+      "startTime": 915,
+      "endTime": 1000
+    },
+    {
+      "indexNo": 3,
+      "startTime": 1020,
+      "endTime": 1105
+    },
+    {
+      "indexNo": 4,
+      "startTime": 1115,
+      "endTime": 1200
+    },
+    {
+      "indexNo": 5,
+      "startTime": 1430,
+      "endTime": 1515
+    },
+    {
+      "indexNo": 6,
+      "startTime": 1525,
+      "endTime": 1610
+    },
+    {
+      "indexNo": 7,
+      "startTime": 1630,
+      "endTime": 1715
+    },
+    {
+      "indexNo": 8,
+      "startTime": 1725,
+      "endTime": 1810
+    },
+    {
+      "indexNo": 9,
+      "startTime": 1930,
+      "endTime": 2015
+    },
+    {
+      "indexNo": 10,
+      "startTime": 2025,
+      "endTime": 2110
+    },
+    {
+      "indexNo": 11,
+      "startTime": 2120,
+      "endTime": 2205
+    }
+  ],
+  "activities": [
+    {
+      "courseName": "石油地质与地球物理勘探综合实践课程名称超长甲",
+      "teachers": [
+        "未知"
+      ],
+      "room": "E101",
+      "weekday": 1,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "courseName": "油气储运工程长输管道设计与运行管理课程乙乙乙",
+      "teachers": [
+        "待定"
+      ],
+      "room": "E102",
+      "weekday": 2,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "courseName": "化学工程与工艺专业生产实习与毕业设计课程丙丙丙",
+      "teachers": [
+        "暂无"
+      ],
+      "room": "E103",
+      "weekday": 3,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ]
+}

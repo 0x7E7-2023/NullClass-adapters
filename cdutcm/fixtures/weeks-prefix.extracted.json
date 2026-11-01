@@ -1,0 +1,94 @@
+{
+  "term": {
+    "code": "202502",
+    "name": "2025-2026学年第二学期",
+    "source": "default"
+  },
+  "today": "2026-03-02",
+  "dateInfo": null,
+  "tasks": [
+    {
+      "kcmc": "方剂学",
+      "teaxms": "教师甲",
+      "jxcdmcs": "教室甲",
+      "xq": "1",
+      "zcs": "(单)1-8周(双)9-16周",
+      "jcdm2": "1",
+      "kcrwdm": "P0"
+    },
+    {
+      "kcmc": "诊断学",
+      "teaxms": "教师乙",
+      "jxcdmcs": "教室乙",
+      "xq": "2",
+      "zcs": "1-8周(单),9-16周(双)",
+      "jcdm2": "2",
+      "kcrwdm": "P1"
+    },
+    {
+      "kcmc": "中医内科",
+      "teaxms": "教师丙",
+      "jxcdmcs": "教室丙",
+      "xq": "3",
+      "zcs": "(单)1-8周,(双)9-16周",
+      "jcdm2": "3",
+      "kcrwdm": "P2"
+    },
+    {
+      "kcmc": "中医外科",
+      "teaxms": "教师丁",
+      "jxcdmcs": "教室丁",
+      "xq": "4",
+      "zcs": "1-8(单)9-16(双)",
+      "jcdm2": "4",
+      "kcrwdm": "P3"
+    },
+    {
+      "kcmc": "伤寒论",
+      "teaxms": "教师戊",
+      "jxcdmcs": "教室戊",
+      "xq": "1",
+      "zcs": "第1-第8周(单)",
+      "jcdm2": "6",
+      "kcrwdm": "P4"
+    },
+    {
+      "kcmc": "温病学",
+      "teaxms": "教师己",
+      "jxcdmcs": "教室己",
+      "xq": "2",
+      "zcs": "1-16周(单)共16周",
+      "jcdm2": "7",
+      "kcrwdm": "P5"
+    },
+    {
+      "kcmc": "针灸治疗",
+      "teaxms": "教师庚",
+      "jxcdmcs": "教室庚",
+      "xq": "5",
+      "zcs": "1-8周(单)9-16周(双)",
+      "jcdm2": "5",
+      "kcrwdm": "P6"
+    },
+    {
+      "kcmc": "内经",
+      "teaxms": "教师辛",
+      "jxcdmcs": "教室辛",
+      "xq": "3",
+      "zcs": "1-8周(共16周),9-16周",
+      "jcdm2": "8",
+      "kcrwdm": "P7"
+    },
+    {
+      "kcmc": "英语",
+      "teaxms": "教师壬",
+      "jxcdmcs": "教室壬",
+      "xq": "4",
+      "zcs": "2-16周(双)",
+      "jcdm2": "9",
+      "kcrwdm": "P8"
+    }
+  ],
+  "details": [],
+  "detailFailed": 0
+}

@@ -1,0 +1,76 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "课表用到了第 3、4、5 节，学校公布的节次时间没有覆盖，已补上：第 3、4、5 节按上一节下课后课间 5 分钟、每节 45 分钟顺推，请在学期管理里核对。"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第一学期",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:20",
+          "end": "09:05"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:15",
+          "end": "10:00"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:05",
+          "end": "10:50"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:55",
+          "end": "11:40"
+        },
+        {
+          "periodIndex": 5,
+          "start": "11:45",
+          "end": "12:30"
+        }
+      ],
+      "courses": [
+        {
+          "name": "上午课",
+          "teacher": "冯某",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "F101"
+            }
+          ]
+        },
+        {
+          "name": "晚上课",
+          "teacher": "冯某",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 5,
+              "endPeriod": 5,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "F201"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

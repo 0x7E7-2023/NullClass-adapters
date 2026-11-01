@@ -1,0 +1,41 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的校历：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "学期总周数取自教务校历（18 周），如与实际不符可在学期管理里改"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 18,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:10", "end": "08:50" },
+        { "periodIndex": 2, "start": "09:00", "end": "09:40" },
+        { "periodIndex": 3, "start": "09:50", "end": "10:30" },
+        { "periodIndex": 4, "start": "10:40", "end": "11:20" }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "张老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教1-101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

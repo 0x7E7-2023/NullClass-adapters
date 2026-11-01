@@ -1,0 +1,92 @@
+{
+  "term": {
+    "id": "191",
+    "label": "2025-2026学年第一学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    {
+      "id": "191",
+      "label": "2025-2026学年第一学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": {
+    "startDate": "2025-09-01",
+    "endDate": null,
+    "weekStartOnSunday": false,
+    "nameZh": "2025-2026学年第一学期"
+  },
+  "courseUnitList": [
+    {
+      "indexNo": 1,
+      "startTime": 820,
+      "endTime": 905
+    },
+    {
+      "indexNo": 2,
+      "startTime": 915,
+      "endTime": 1000
+    },
+    {
+      "indexNo": 3,
+      "startTime": 1020,
+      "endTime": 1105
+    },
+    {
+      "indexNo": 4,
+      "startTime": 1115,
+      "endTime": 1200
+    },
+    {
+      "indexNo": 5,
+      "startTime": 1430,
+      "endTime": 1515
+    },
+    {
+      "indexNo": 6,
+      "startTime": 1525,
+      "endTime": 1610
+    },
+    {
+      "indexNo": 7,
+      "startTime": 1630,
+      "endTime": 1715
+    },
+    {
+      "indexNo": 8,
+      "startTime": 1725,
+      "endTime": 1810
+    },
+    {
+      "indexNo": 9,
+      "startTime": 1930,
+      "endTime": 2015
+    },
+    {
+      "indexNo": 10,
+      "startTime": 2025,
+      "endTime": 2110
+    },
+    {
+      "indexNo": 11,
+      "startTime": 2120,
+      "endTime": 2205
+    }
+  ],
+  "activities": [
+    {
+      "courseName": "补考辅导",
+      "teachers": [
+        "郑某"
+      ],
+      "room": "D401",
+      "weekday": 2,
+      "startUnit": 3,
+      "endUnit": 4,
+      "weekIndexes": [
+        22
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务的教学周历里第 1 周的星期一写的是 2026-09-01（那天不是星期一），开学日期已按它所在那一周的周一（2026-08-31）对齐，请在「学期管理」里核对",
+    "课表里有第 15 节，节次时间里没有这几节，已临时补上（22:00 起），请到「学期管理」里核对真实的上下课时间",
+    "有 1 处周次里的单双 / 隔周标记认不出来（1-8周隔周），这些周次已按「每周都上」处理，请核对导入结果"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:30",
+          "end": "09:10"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:15",
+          "end": "09:55"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:15",
+          "end": "10:55"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:00",
+          "end": "11:40"
+        },
+        {
+          "periodIndex": 5,
+          "start": "11:45",
+          "end": "12:25"
+        },
+        {
+          "periodIndex": 6,
+          "start": "13:15",
+          "end": "13:55"
+        },
+        {
+          "periodIndex": 7,
+          "start": "14:00",
+          "end": "14:40"
+        },
+        {
+          "periodIndex": 8,
+          "start": "14:45",
+          "end": "15:25"
+        },
+        {
+          "periodIndex": 9,
+          "start": "15:45",
+          "end": "16:25"
+        },
+        {
+          "periodIndex": 10,
+          "start": "16:30",
+          "end": "17:10"
+        },
+        {
+          "periodIndex": 11,
+          "start": "17:15",
+          "end": "17:55"
+        },
+        {
+          "periodIndex": 12,
+          "start": "19:30",
+          "end": "20:10"
+        },
+        {
+          "periodIndex": 13,
+          "start": "20:15",
+          "end": "20:55"
+        },
+        {
+          "periodIndex": 14,
+          "start": "21:00",
+          "end": "21:40"
+        },
+        {
+          "periodIndex": 15,
+          "start": "22:00",
+          "end": "22:45"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "A101"
+            }
+          ]
+        },
+        {
+          "name": "连堂实验",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "A101"
+            }
+          ]
+        },
+        {
+          "name": "晚自习",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 15,
+              "endPeriod": 15,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "A101"
+            }
+          ]
+        },
+        {
+          "name": "隔周课",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 11,
+              "endPeriod": 12,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "A101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
