@@ -1,0 +1,123 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务页面上当前选中的学期（2026-2027学年秋季学期）；要导入别的学期，请先在教务系统里切到那个学期再点「提取课表」",
+    "第 1 周的开始日期（2026-09-07）是从教务系统第 1 周的周课表里读出来的，没法向你确认，请在学期管理里核对是不是学校实际的开学日",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "教务的节次时间缺了第 3 节，缺的这几节已按上一节下课后课间 5 分钟、每节 45 分钟补上，其余节次用的是教务给出的时间，请在「学期管理」里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年秋季学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "14:00",
+          "end": "14:40"
+        },
+        {
+          "periodIndex": 2,
+          "start": "14:00",
+          "end": "14:40"
+        },
+        {
+          "periodIndex": 3,
+          "start": "14:45",
+          "end": "15:30"
+        },
+        {
+          "periodIndex": 4,
+          "start": "14:00",
+          "end": "14:40"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:00",
+          "end": "14:40"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:00",
+          "end": "14:40"
+        },
+        {
+          "periodIndex": 7,
+          "start": "14:00",
+          "end": "14:40"
+        },
+        {
+          "periodIndex": 8,
+          "start": "14:00",
+          "end": "14:40"
+        },
+        {
+          "periodIndex": 9,
+          "start": "14:00",
+          "end": "14:40"
+        },
+        {
+          "periodIndex": 10,
+          "start": "14:00",
+          "end": "14:40"
+        },
+        {
+          "periodIndex": 11,
+          "start": "14:00",
+          "end": "14:40"
+        },
+        {
+          "periodIndex": 12,
+          "start": "14:00",
+          "end": "14:40"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "教师甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "丽泽A101"
+            }
+          ]
+        },
+        {
+          "name": "大学英语",
+          "teacher": "教师乙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 3,
+              "endPeriod": 3,
+              "startWeek": 1,
+              "endWeek": 7,
+              "weekType": "ODD",
+              "location": "B201"
+            },
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 3,
+              "endPeriod": 3,
+              "startWeek": 10,
+              "endWeek": 16,
+              "weekType": "EVEN",
+              "location": "B201"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "_note": "合成数据，不是真实抓取。",
+  "source": "qz-jsxsd",
+  "pageUrl": "https://edu-admin.zhku.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-09-13",
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期"
+  },
+  "screenTermMissing": false,
+  "campus": "haizhu",
+  "cols": 8,
+  "calendar": {
+    "found": true,
+    "rows": [
+      [
+        {
+          "col": 0,
+          "text": "周次"
+        },
+        {
+          "col": 1,
+          "text": "一"
+        },
+        {
+          "col": 2,
+          "text": "二"
+        },
+        {
+          "col": 3,
+          "text": "三"
+        },
+        {
+          "col": 4,
+          "text": "四"
+        },
+        {
+          "col": 5,
+          "text": "五"
+        },
+        {
+          "col": 6,
+          "text": "六"
+        },
+        {
+          "col": 7,
+          "text": "日"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "1"
+        },
+        {
+          "col": 1,
+          "title": "2026年09月07日"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "20"
+        }
+      ]
+    ]
+  },
+  "rows": [
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "节次",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "星期一",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "星期二",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "星期三",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "星期四",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "星期五",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "星期六",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "星期日",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第1,2节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "植物生理学实验与田间实习加长名称一二三四五六七八九十<br><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br><font title=\"教室\">教C1</font>"
+        ]
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第3,4节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "动物科学综合实习与生产实践加长名称一二三四五六七八九十<br><font title=\"周次(节次)\">1-16(周)[03-04节]</font><br><font title=\"教室\">教C2</font>"
+        ]
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第5,6节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "食品工艺学课程设计与工厂参观加长名称一二三四五六七八九十<br><font title=\"教师\">甲老师</font><br><font title=\"周次(节次)\">1-16(周)[05-06节]</font>"
+        ]
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第7,8节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "园林规划设计初步与场地测绘加长名称一二三四五六七八九十<br><font title=\"周次(节次)\">1-16(周)[07-08节]</font><br><font title=\"教室\">教C4</font>"
+        ]
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第9,10节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "普通课<br><font title=\"周次(节次)\">1-16(周)[09-10节]</font><br><font title=\"教室\">教C5</font>"
+        ]
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ]
+  ]
+}

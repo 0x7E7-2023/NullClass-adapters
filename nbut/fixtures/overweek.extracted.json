@@ -1,0 +1,32 @@
+{
+  "term": {
+    "xnm": "2026",
+    "xqm": "3",
+    "xnmText": "2026-2027",
+    "xqmText": "1"
+  },
+  "today": "2026-09-15",
+  "raw": {
+    "kbList": [
+      {
+        "kcmc": "毕业设计",
+        "xm": "张老师",
+        "cdmc": "教1-101",
+        "jcs": "1-2",
+        "zcd": "1-21周",
+        "xqj": "1"
+      }
+    ],
+    "sjkList": []
+  },
+  "total": null,
+  "periodTimes": [
+    {
+      "jcmc": "1"
+    },
+    {
+      "jcmc": "2"
+    }
+  ],
+  "calendarStart": null
+}

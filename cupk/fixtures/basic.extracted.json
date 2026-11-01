@@ -1,0 +1,214 @@
+{
+  "term": {
+    "id": "191",
+    "label": "2025-2026学年第一学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    {
+      "id": "201",
+      "label": "2026-2027学年第一学期",
+      "selected": false
+    },
+    {
+      "id": "191",
+      "label": "2025-2026学年第一学期",
+      "selected": true
+    },
+    {
+      "id": "171",
+      "label": "2024-2025学年第二学期",
+      "selected": false
+    }
+  ],
+  "semesterMeta": {
+    "startDate": "2025-09-01",
+    "endDate": "2026-01-18",
+    "weekStartOnSunday": false,
+    "nameZh": "2025-2026学年第一学期"
+  },
+  "courseUnitList": [
+    {
+      "indexNo": 1,
+      "startTime": 820,
+      "endTime": 905
+    },
+    {
+      "indexNo": 2,
+      "startTime": 915,
+      "endTime": 1000
+    },
+    {
+      "indexNo": 3,
+      "startTime": 1020,
+      "endTime": 1105
+    },
+    {
+      "indexNo": 4,
+      "startTime": 1115,
+      "endTime": 1200
+    },
+    {
+      "indexNo": 5,
+      "startTime": 1430,
+      "endTime": 1515
+    },
+    {
+      "indexNo": 6,
+      "startTime": 1525,
+      "endTime": 1610
+    },
+    {
+      "indexNo": 7,
+      "startTime": 1630,
+      "endTime": 1715
+    },
+    {
+      "indexNo": 8,
+      "startTime": 1725,
+      "endTime": 1810
+    },
+    {
+      "indexNo": 9,
+      "startTime": 1930,
+      "endTime": 2015
+    },
+    {
+      "indexNo": 10,
+      "startTime": 2025,
+      "endTime": 2110
+    },
+    {
+      "indexNo": 11,
+      "startTime": 2120,
+      "endTime": 2205
+    }
+  ],
+  "activities": [
+    {
+      "courseName": "高等数学",
+      "teachers": [
+        "林某(1)"
+      ],
+      "room": "A101",
+      "weekday": 1,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "campus": "克拉玛依校区"
+    },
+    {
+      "courseName": "高等数学",
+      "teachers": [
+        "林某(1)"
+      ],
+      "room": "A101",
+      "weekday": 1,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [
+        17,
+        18
+      ],
+      "campus": "克拉玛依校区"
+    },
+    {
+      "courseName": "高等数学",
+      "teachers": [
+        "林某(1)"
+      ],
+      "room": "A101",
+      "weekday": 1,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "campus": "克拉玛依校区"
+    },
+    {
+      "courseName": "大学英语",
+      "teachers": [
+        "赵某",
+        "钱某"
+      ],
+      "room": "B201",
+      "weekday": 3,
+      "startUnit": 3,
+      "endUnit": 4,
+      "weekIndexes": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "courseName": "物理实验",
+      "teachers": [
+        "未知"
+      ],
+      "room": "待定",
+      "weekday": 2,
+      "startUnit": 5,
+      "endUnit": 6,
+      "weekIndexes": [
+        4
+      ]
+    },
+    {
+      "courseName": "体育",
+      "teachers": "",
+      "room": "暂无",
+      "weekday": 4,
+      "startUnit": 7,
+      "endUnit": 8,
+      "weekIndexes": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ]
+    }
+  ]
+}

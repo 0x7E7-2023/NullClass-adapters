@@ -1,0 +1,122 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "有 3 门课没有教师（例如「石油地质与地球物理勘探综合实践课程名称超…」、「油气储运工程长输管道设计与运行管理课程乙…」、「化学工程与工艺专业生产实习与毕业设计课程…」），可在这门课的「编辑课程」里补上。"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第一学期",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:20",
+          "end": "09:05"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:15",
+          "end": "10:00"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:20",
+          "end": "11:05"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:15",
+          "end": "12:00"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:30",
+          "end": "15:15"
+        },
+        {
+          "periodIndex": 6,
+          "start": "15:25",
+          "end": "16:10"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:30",
+          "end": "17:15"
+        },
+        {
+          "periodIndex": 8,
+          "start": "17:25",
+          "end": "18:10"
+        },
+        {
+          "periodIndex": 9,
+          "start": "19:30",
+          "end": "20:15"
+        },
+        {
+          "periodIndex": 10,
+          "start": "20:25",
+          "end": "21:10"
+        },
+        {
+          "periodIndex": 11,
+          "start": "21:20",
+          "end": "22:05"
+        }
+      ],
+      "courses": [
+        {
+          "name": "石油地质与地球物理勘探综合实践课程名称超长甲",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "E101"
+            }
+          ]
+        },
+        {
+          "name": "油气储运工程长输管道设计与运行管理课程乙乙乙",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "E102"
+            }
+          ]
+        },
+        {
+          "name": "化学工程与工艺专业生产实习与毕业设计课程丙丙丙",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "E103"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

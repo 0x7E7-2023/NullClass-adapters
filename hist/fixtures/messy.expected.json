@@ -1,0 +1,195 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务页面上当前选中的学期（2025-2026学年第一学期）；要导入别的学期，请先在教务系统里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2025-09-01，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "学校还没公布这一学期的节次时间，已用备用节次时间（第 1 节 08:00-08:45，第 10 节 20:55-21:40），请在「学期管理」里核对",
+    "有 2 条课程内容没能读成课程（缺课程名 1 条、上课时间认不出 1 条），已跳过，例如 「1-16周 五[1-2] C1」「没有节次」：如发现少课请反馈",
+    "有 3 门课没给上课教师、2 门课没给上课地点（例如 缺教师课、缺地点课、未知教师课，另有 2 门未列出）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第一学期",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:55",
+          "end": "09:40"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:10",
+          "end": "10:55"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:05",
+          "end": "11:50"
+        },
+        {
+          "periodIndex": 5,
+          "start": "15:00",
+          "end": "15:45"
+        },
+        {
+          "periodIndex": 6,
+          "start": "15:55",
+          "end": "16:40"
+        },
+        {
+          "periodIndex": 7,
+          "start": "17:10",
+          "end": "17:55"
+        },
+        {
+          "periodIndex": 8,
+          "start": "18:05",
+          "end": "18:50"
+        },
+        {
+          "periodIndex": 9,
+          "start": "20:00",
+          "end": "20:45"
+        },
+        {
+          "periodIndex": 10,
+          "start": "20:55",
+          "end": "21:40"
+        }
+      ],
+      "courses": [
+        {
+          "name": "缺教师课",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "A101"
+            }
+          ]
+        },
+        {
+          "name": "缺地点课",
+          "teacher": "教师甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "未知教师课",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "C101"
+            }
+          ]
+        },
+        {
+          "name": "待定地点课",
+          "teacher": "教师乙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "暂无教师课",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "E101"
+            }
+          ]
+        },
+        {
+          "name": "继承地点",
+          "teacher": "教师丙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "机房"
+            },
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 9,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "机房"
+            }
+          ]
+        },
+        {
+          "name": "教室空格课",
+          "teacher": "教师丁",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 6,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教 学 楼 101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "term": {
+    "xn": "2025",
+    "xq": "0",
+    "source": "page"
+  },
+  "today": "2026-11-01",
+  "rows": [
+    {
+      "name": "晚课",
+      "teacher": "教师甲",
+      "timePlace": "1-16周 一[11-13] 夜"
+    }
+  ],
+  "slots": [],
+  "slotsNote": "unpublished"
+}

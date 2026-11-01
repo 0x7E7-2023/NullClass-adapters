@@ -1,0 +1,29 @@
+{
+  "source": "qz-jsxsd-layui",
+  "pageUrl": "https://jwgl.mku.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-09-21",
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期"
+  },
+  "screenTermMissing": false,
+  "weekAjax": "[{\"qszc\":1,\"jszc\":20}]",
+  "headerShow": "2026-2027-1 第3周",
+  "rows": [
+    {
+      "title": "1-2",
+      "text": "1-2 08:00~08:30",
+      "cells": [
+        {
+          "day": 1,
+          "items": [
+            {
+              "name": "高等数学",
+              "info": "老师:甲老师;时间:1-16周[1-2节];地点:教1-101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

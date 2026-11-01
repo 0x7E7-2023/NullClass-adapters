@@ -1,0 +1,47 @@
+{
+  "specVersion": 1,
+  "key": "zhku",
+  "name": "仲恺农业工程学院",
+  "initial": "Z",
+  "version": "1.0.0",
+  "author": "上游 lc6464（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://edu-admin.zhku.edu.cn/jsxsd/",
+  "scheduleUrlHint": "https://edu-admin.zhku.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：海珠节次、教室整理、前置单双周、重复行、待定暂无、网络课不导入",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：白云节次、后置单双、括号单周、第1-第8周、共 N 周、方括号单、多段周次",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：行首第N，M节与单节标签补节次，缺教师缺教室照常导入",
+      "extracted": "fixtures/row-label.extracted.json",
+      "expected": "fixtures/row-label.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒截到 20 字且整条不超过 200 字",
+      "extracted": "fixtures/long-name.extracted.json",
+      "expected": "fixtures/long-name.expected.json"
+    },
+    {
+      "name": "合成用例：周历不足 8 周不当学期总周数，改按 20 周并提醒",
+      "extracted": "fixtures/short-calendar.extracted.json",
+      "expected": "fixtures/short-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：未确认校区按白云、第 13 节占位、认不出的单双按每周、重复行不叠课",
+      "extracted": "fixtures/extra-period.extracted.json",
+      "expected": "fixtures/extra-period.expected.json"
+    }
+  ]
+}

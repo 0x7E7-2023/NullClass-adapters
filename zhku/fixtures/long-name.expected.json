@@ -1,0 +1,160 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "有 4 门课教务没有给任课教师，已留空（例如 植物生理学实验与田间实习加长名称一二三…、动物科学综合实习与生产实践加长名称一二…、园林规划设计初步与场地测绘加长名称一二… 等），可在对应课程的「编辑课程」里补充",
+    "有 1 门课教务没有给上课地点，已留空（例如 食品工艺学课程设计与工厂参观加长名称一…），可在对应课程的「编辑课程」里补充"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:40"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:50",
+          "end": "09:30"
+        },
+        {
+          "periodIndex": 3,
+          "start": "09:50",
+          "end": "10:30"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:40",
+          "end": "11:20"
+        },
+        {
+          "periodIndex": 5,
+          "start": "11:30",
+          "end": "12:10"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:30",
+          "end": "15:10"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:20",
+          "end": "16:00"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:20",
+          "end": "17:00"
+        },
+        {
+          "periodIndex": 9,
+          "start": "17:10",
+          "end": "17:50"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:30",
+          "end": "20:10"
+        },
+        {
+          "periodIndex": 11,
+          "start": "20:20",
+          "end": "21:00"
+        },
+        {
+          "periodIndex": 12,
+          "start": "21:10",
+          "end": "21:50"
+        }
+      ],
+      "courses": [
+        {
+          "name": "植物生理学实验与田间实习加长名称一二三四五六七八九十",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教C1"
+            }
+          ]
+        },
+        {
+          "name": "动物科学综合实习与生产实践加长名称一二三四五六七八九十",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教C2"
+            }
+          ]
+        },
+        {
+          "name": "食品工艺学课程设计与工厂参观加长名称一二三四五六七八九十",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "园林规划设计初步与场地测绘加长名称一二三四五六七八九十",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 7,
+              "endPeriod": 8,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教C4"
+            }
+          ]
+        },
+        {
+          "name": "普通课",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 9,
+              "endPeriod": 10,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教C5"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

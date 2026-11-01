@@ -1,0 +1,57 @@
+{
+  "specVersion": 1,
+  "key": "bupt",
+  "name": "北京邮电大学",
+  "initial": "B",
+  "version": "1.0.0",
+  "author": "上游 cstkn（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwgl.bupt.edu.cn/jsxsd/",
+  "scheduleUrlHint": "https://jwgl.bupt.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表，无逗号前置单双周，并提醒跳过的实验课表",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：后置单双、逗号后置单双、第1-第8周、共 N 周、方括号单周",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：行首第N，M节补节次，待定、暂无、未知的教师和教室留空",
+      "extracted": "fixtures/row-label.extracted.json",
+      "expected": "fixtures/row-label.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒截到 20 字且整条不超过 200 字",
+      "extracted": "fixtures/long-name.extracted.json",
+      "expected": "fixtures/long-name.expected.json"
+    },
+    {
+      "name": "合成用例：第 13 节占位、同一节重复行只留一条、隔周按每周并出声",
+      "extracted": "fixtures/extra-period.extracted.json",
+      "expected": "fixtures/extra-period.expected.json"
+    },
+    {
+      "name": "合成用例：没有校历时不把最大周当学期长度，课表到第 22 周才抬高",
+      "extracted": "fixtures/late-week.extracted.json",
+      "expected": "fixtures/late-week.expected.json"
+    },
+    {
+      "name": "合成用例：没有学年学期下拉框时用学校名占位",
+      "extracted": "fixtures/no-term.extracted.json",
+      "expected": "fixtures/no-term.expected.json"
+    },
+    {
+      "name": "合成用例：全角数字的周次和节次先折成半角 · 「１-１６周」整段导入，「０１-０２节」是第 1-2 节",
+      "extracted": "fixtures/fullwidth.extracted.json",
+      "expected": "fixtures/fullwidth.expected.json"
+    }
+  ]
+}

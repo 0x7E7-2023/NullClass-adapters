@@ -1,0 +1,62 @@
+{
+  "term": {
+    "xn": "2025",
+    "xq": "0",
+    "source": "page"
+  },
+  "today": "2026-11-01",
+  "rows": [
+    {
+      "name": "连堂课",
+      "teacher": "教师甲",
+      "timePlace": "1-16周 一[1-2] L1"
+    },
+    {
+      "name": "连堂课",
+      "teacher": "教师甲",
+      "timePlace": "1-16周 一[3-4] L1"
+    },
+    {
+      "name": "重复课",
+      "teacher": "教师乙",
+      "timePlace": "1-16周 二[1-2] R1"
+    },
+    {
+      "name": "重复课",
+      "teacher": "教师乙",
+      "timePlace": "1-16周 二[1-2] R1"
+    },
+    {
+      "name": "重叠课",
+      "teacher": "教师丙",
+      "timePlace": "1-16周 三[1-4] O1"
+    },
+    {
+      "name": "重叠课",
+      "teacher": "教师丙",
+      "timePlace": "1-16周 三[3-5] O1"
+    },
+    {
+      "name": "并集课",
+      "teacher": "教师丁",
+      "timePlace": "1-8周 四[1-2] U1"
+    },
+    {
+      "name": "并集课",
+      "teacher": "教师丁",
+      "timePlace": "9-16周 四[1-2] U1"
+    },
+    {
+      "name": "同名课",
+      "teacher": "教师甲",
+      "timePlace": "1-16周 五[1-2] X1"
+    },
+    {
+      "name": "同名课",
+      "teacher": "教师乙",
+      "timePlace": "1-16周 五[1-2] X1"
+    }
+  ],
+  "slots": [],
+  "slotsNote": "unpublished"
+}

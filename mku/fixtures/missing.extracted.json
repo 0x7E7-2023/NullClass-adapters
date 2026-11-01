@@ -1,0 +1,33 @@
+{
+  "source": "qz-jsxsd-layui",
+  "pageUrl": "https://jwgl.mku.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-09-21",
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期"
+  },
+  "screenTermMissing": false,
+  "weekAjax": "[{\"qszc\":1,\"jszc\":20}]",
+  "headerShow": "2026-2027-1 第3周",
+  "rows": [
+    {
+      "title": "5-6",
+      "text": "5-6 14:00~15:40",
+      "cells": [
+        {
+          "day": 2,
+          "items": [
+            {
+              "name": "体育",
+              "info": "老师:未知;时间:1-16周;地点:待定"
+            },
+            {
+              "name": "实验",
+              "info": "老师:暂无;时间:1-4周[5-6节];地点:暂无"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

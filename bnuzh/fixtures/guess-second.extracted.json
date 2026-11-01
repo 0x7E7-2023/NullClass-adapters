@@ -1,0 +1,20 @@
+{
+  "term": {
+    "xn": "2025",
+    "xq": "1",
+    "source": "guess",
+    "name": ""
+  },
+  "today": "2026-09-07",
+  "hasTable": true,
+  "rows": [
+    {
+      "name": "大学物理",
+      "teacher": "教师甲",
+      "time": "1-16周 一[1] 教室甲"
+    }
+  ],
+  "badRows": 0,
+  "dates": [],
+  "slots": []
+}

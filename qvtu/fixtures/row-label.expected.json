@@ -1,0 +1,128 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "有 2 门课教务没有给任课教师，已留空（例如 体育、线性代数），可在对应课程的「编辑课程」里补充",
+    "有 2 门课教务没有给上课地点，已留空（例如 大学物理、线性代数），可在对应课程的「编辑课程」里补充"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:10",
+          "end": "08:55"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:10",
+          "end": "09:55"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:10",
+          "end": "10:55"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:10",
+          "end": "11:55"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:10",
+          "end": "14:55"
+        },
+        {
+          "periodIndex": 6,
+          "start": "15:10",
+          "end": "15:55"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:10",
+          "end": "16:55"
+        },
+        {
+          "periodIndex": 8,
+          "start": "17:10",
+          "end": "17:55"
+        },
+        {
+          "periodIndex": 9,
+          "start": "19:10",
+          "end": "19:55"
+        },
+        {
+          "periodIndex": 10,
+          "start": "20:10",
+          "end": "20:55"
+        },
+        {
+          "periodIndex": 11,
+          "start": "21:10",
+          "end": "21:55"
+        },
+        {
+          "periodIndex": 12,
+          "start": "22:10",
+          "end": "22:55"
+        }
+      ],
+      "courses": [
+        {
+          "name": "大学物理",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "体育",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 3,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "操场"
+            }
+          ]
+        },
+        {
+          "name": "线性代数",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 9,
+              "endPeriod": 10,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

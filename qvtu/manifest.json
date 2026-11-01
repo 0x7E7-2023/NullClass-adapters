@@ -1,0 +1,47 @@
+{
+  "specVersion": 1,
+  "key": "qvtu",
+  "name": "泉州职业技术大学",
+  "initial": "Q",
+  "version": "1.0.0",
+  "author": "上游 suiren0219（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jw.qvtu.edu.cn/jsxsd/",
+  "scheduleUrlHint": "https://jw.qvtu.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（单双周、重复行只留一条、12 节节次时间）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号前置与后置单双、逗号后置单双、第1-第8周、共 N 周、方括号单周",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：行首第N，M节补节次，缺教师缺教室，待定与暂无写成空",
+      "extracted": "fixtures/row-label.extracted.json",
+      "expected": "fixtures/row-label.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒截到 20 字且整条不超过 200 字",
+      "extracted": "fixtures/long-name.extracted.json",
+      "expected": "fixtures/long-name.expected.json"
+    },
+    {
+      "name": "合成用例：周历不足 8 周不当学期总周数，改按 20 周并提醒",
+      "extracted": "fixtures/short-calendar.extracted.json",
+      "expected": "fixtures/short-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：第 13 节占位、认不出的单双按每周并出声、同一节重复行不叠课",
+      "extracted": "fixtures/extra-period.extracted.json",
+      "expected": "fixtures/extra-period.expected.json"
+    }
+  ]
+}

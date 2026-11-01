@@ -1,0 +1,17 @@
+{
+  "term": {
+    "xn": "2025",
+    "xq": "1",
+    "source": "guess"
+  },
+  "today": "2026-04-01",
+  "rows": [
+    {
+      "name": "大学英语",
+      "teacher": "教师甲",
+      "timePlace": "1-16周 一[1-2] A101"
+    }
+  ],
+  "slots": [],
+  "slotsNote": "unpublished"
+}

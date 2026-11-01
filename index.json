@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.11.01.2",
+  "version": "2026.11.01.3",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -885,6 +885,66 @@
       "name": "辽宁科技大学",
       "version": "1.0.0",
       "path": "ustl"
+    },
+    {
+      "key": "qvtu",
+      "name": "泉州职业技术大学",
+      "version": "1.0.0",
+      "path": "qvtu"
+    },
+    {
+      "key": "gdkm",
+      "name": "广东科贸职业学院",
+      "version": "1.0.0",
+      "path": "gdkm"
+    },
+    {
+      "key": "bupt",
+      "name": "北京邮电大学",
+      "version": "1.0.0",
+      "path": "bupt"
+    },
+    {
+      "key": "zhku",
+      "name": "仲恺农业工程学院",
+      "version": "1.0.0",
+      "path": "zhku"
+    },
+    {
+      "key": "mku",
+      "name": "闽南科技学院",
+      "version": "1.0.0",
+      "path": "mku"
+    },
+    {
+      "key": "bnuzh",
+      "name": "北京师范大学珠海校区",
+      "version": "1.0.0",
+      "path": "bnuzh"
+    },
+    {
+      "key": "sxdzkj",
+      "name": "山西电子科技学院",
+      "version": "1.0.0",
+      "path": "sxdzkj"
+    },
+    {
+      "key": "hist",
+      "name": "河南科技学院",
+      "version": "1.0.0",
+      "path": "hist"
+    },
+    {
+      "key": "nbut",
+      "name": "宁波工程学院",
+      "version": "1.0.0",
+      "path": "nbut"
+    },
+    {
+      "key": "cupk",
+      "name": "中国石油大学（北京）克拉玛依校区",
+      "version": "1.0.0",
+      "path": "cupk"
     }
   ]
 }

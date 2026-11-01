@@ -1,0 +1,57 @@
+{
+  "term": {
+    "xn": "2025",
+    "xq": "0",
+    "source": "page"
+  },
+  "today": "2026-11-01",
+  "rows": [
+    {
+      "name": "缺教师课",
+      "teacher": "",
+      "timePlace": "1-16周 一[1-2] A101"
+    },
+    {
+      "name": "缺地点课",
+      "teacher": "教师甲",
+      "timePlace": "1-16周 二[1-2]"
+    },
+    {
+      "name": "未知教师课",
+      "teacher": "未知",
+      "timePlace": "1-16周 三[1-2] C101"
+    },
+    {
+      "name": "待定地点课",
+      "teacher": "教师乙",
+      "timePlace": "1-16周 三[3-4] 待定"
+    },
+    {
+      "name": "暂无教师课",
+      "teacher": "暂无教师",
+      "timePlace": "1-16周 五[1-2] E101"
+    },
+    {
+      "name": "继承地点",
+      "teacher": "教师丙",
+      "timePlace": "1-8周 四[1-2],9-16周 四[3-4] 机房"
+    },
+    {
+      "name": "教室空格课",
+      "teacher": "教师丁",
+      "timePlace": "1-16周 六[1-2]  教 学 楼 101"
+    },
+    {
+      "name": "",
+      "teacher": "教师甲",
+      "timePlace": "1-16周 五[1-2] C1"
+    },
+    {
+      "name": "坏时间课",
+      "teacher": "教师甲",
+      "timePlace": "没有节次"
+    }
+  ],
+  "slots": [],
+  "slotsNote": "unpublished"
+}

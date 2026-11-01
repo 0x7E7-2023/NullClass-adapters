@@ -1,0 +1,204 @@
+{
+  "term": {
+    "id": "171",
+    "label": "2024-2025学年第二学期",
+    "pickedBy": "first"
+  },
+  "semesters": [
+    {
+      "id": "171",
+      "label": "2024-2025学年第二学期",
+      "selected": false
+    },
+    {
+      "id": "191",
+      "label": "2025-2026学年第一学期",
+      "selected": false
+    }
+  ],
+  "semesterMeta": {
+    "startDate": "2025-02-24",
+    "endDate": "2025-07-06",
+    "weekStartOnSunday": false,
+    "nameZh": "2024-2025学年第二学期"
+  },
+  "courseUnitList": [
+    {
+      "indexNo": 1,
+      "startTime": 820,
+      "endTime": 905
+    },
+    {
+      "indexNo": 2,
+      "startTime": 915,
+      "endTime": 1000
+    },
+    {
+      "indexNo": 3,
+      "startTime": 1020,
+      "endTime": 1105
+    },
+    {
+      "indexNo": 4,
+      "startTime": 1115,
+      "endTime": 1200
+    },
+    {
+      "indexNo": 5,
+      "startTime": 1430,
+      "endTime": 1515
+    },
+    {
+      "indexNo": 6,
+      "startTime": 1525,
+      "endTime": 1610
+    },
+    {
+      "indexNo": 7,
+      "startTime": 1630,
+      "endTime": 1715
+    },
+    {
+      "indexNo": 8,
+      "startTime": 1725,
+      "endTime": 1810
+    },
+    {
+      "indexNo": 9,
+      "startTime": 1930,
+      "endTime": 2015
+    },
+    {
+      "indexNo": 10,
+      "startTime": 2025,
+      "endTime": 2110
+    },
+    {
+      "indexNo": 11,
+      "startTime": 2120,
+      "endTime": 2205
+    }
+  ],
+  "activities": [
+    {
+      "courseName": "高等数学",
+      "teachers": [
+        "林某(1)"
+      ],
+      "room": "A101",
+      "weekday": 1,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [
+        1,
+        2,
+        3,
+        "x"
+      ]
+    },
+    {
+      "courseName": "高等数学",
+      "teachers": [
+        "林某(1)"
+      ],
+      "room": "A101",
+      "weekday": 1,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "courseName": "高等数学",
+      "teachers": [
+        "林某(1)"
+      ],
+      "room": "A101",
+      "weekday": 1,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "courseName": "",
+      "teachers": [
+        "林某"
+      ],
+      "room": "A101",
+      "weekday": 1,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [
+        1
+      ]
+    },
+    {
+      "courseName": "坏星期",
+      "teachers": [
+        "林某"
+      ],
+      "room": "A101",
+      "weekday": 8,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [
+        1
+      ]
+    },
+    {
+      "courseName": "坏节次",
+      "teachers": [
+        "林某"
+      ],
+      "room": "A101",
+      "weekday": 1,
+      "startUnit": 3,
+      "endUnit": 2,
+      "weekIndexes": [
+        1
+      ]
+    },
+    {
+      "courseName": "空周次",
+      "teachers": [
+        "林某"
+      ],
+      "room": "A101",
+      "weekday": 1,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": []
+    },
+    {
+      "courseName": "认不出的周次",
+      "teachers": [
+        "林某"
+      ],
+      "room": "A101",
+      "weekday": 1,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": "待定周次"
+    },
+    {
+      "courseName": "形势与政策",
+      "teachers": [
+        "未知"
+      ],
+      "room": "待定",
+      "weekday": 3,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [
+        6
+      ]
+    }
+  ]
+}

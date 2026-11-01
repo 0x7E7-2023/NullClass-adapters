@@ -1,0 +1,125 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的校历：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "教务校历只给了开学日期、没有写出一共多少周，学期总周数按 20 周导入（课表里最晚排到第 8 周），如与实际不符可在学期管理里改",
+    "教务系统另外给了 4 门集中实践课（集中实践课程名称超长一号用于截断测试甲…、集中实践课程名称超长二号用于截断测试甲…、集中实践课程名称超长三号用于截断测试甲… 等）：它们没有固定的星期与节次，排不进周课表，请自行在学期里添加",
+    "有 1 行课表数据不全（缺周次（或周次全超出 1-30 周）1 行、认不出的周次写法如「跟随导师安排的不定周次说明文字超过二十…」），已跳过：教务数据不完整时会出现，如发现少课请反馈",
+    "有 4 门课没给上课教师（例如 缺教师的超长课程名称一号甲乙丙丁戊己庚辛、缺教师的超长课程名称二号甲乙丙丁戊己庚辛、缺教师的超长课程名称三号甲乙丙丁戊己庚辛）：已照常导入，教师暂时空着，可在「编辑课程」里补上",
+    "有 1 处周次里的括号备注（如「(实验分组超长备注文字用来钉住截断甲乙…」）不是周次，已忽略，请核对这几门课的周次"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:10",
+          "end": "08:50"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:00",
+          "end": "09:40"
+        },
+        {
+          "periodIndex": 3,
+          "start": "09:50",
+          "end": "10:30"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:40",
+          "end": "11:20"
+        }
+      ],
+      "courses": [
+        {
+          "name": "缺教师的超长课程名称一号甲乙丙丁戊己庚辛",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "教1-101"
+            }
+          ]
+        },
+        {
+          "name": "缺教师的超长课程名称二号甲乙丙丁戊己庚辛",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "教1-101"
+            }
+          ]
+        },
+        {
+          "name": "缺教师的超长课程名称三号甲乙丙丁戊己庚辛",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "教1-101"
+            }
+          ]
+        },
+        {
+          "name": "缺教师的超长课程名称四号甲乙丙丁戊己庚辛",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "教1-101"
+            }
+          ]
+        },
+        {
+          "name": "普通课",
+          "teacher": "张老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "教1-101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

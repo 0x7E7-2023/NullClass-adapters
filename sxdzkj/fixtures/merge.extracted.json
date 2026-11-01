@@ -1,0 +1,60 @@
+{
+  "term": {
+    "xn": "2025",
+    "xq": "0",
+    "source": "page"
+  },
+  "today": "2026-10-15",
+  "rows": [
+    {
+      "name": "连堂课",
+      "teacher": "教师甲",
+      "schedule": "1-8周 一[1-2] A101"
+    },
+    {
+      "name": "连堂课",
+      "teacher": "教师甲",
+      "schedule": "1-8周 一[3-4] A101"
+    },
+    {
+      "name": "重复课",
+      "teacher": "教师甲",
+      "schedule": "1-8周 二[1-2] B101"
+    },
+    {
+      "name": "重复课",
+      "teacher": "教师甲",
+      "schedule": "1-8周 二[1-2] B101"
+    },
+    {
+      "name": "重叠课",
+      "teacher": "教师甲",
+      "schedule": "1-8周 三[1-4] C101"
+    },
+    {
+      "name": "重叠课",
+      "teacher": "教师甲",
+      "schedule": "1-8周 三[3-5] C101"
+    },
+    {
+      "name": "并集课",
+      "teacher": "教师甲",
+      "schedule": "1-8周 四[1-2] D101"
+    },
+    {
+      "name": "并集课",
+      "teacher": "教师甲",
+      "schedule": "9-16周 四[1-2] D101"
+    },
+    {
+      "name": "同名分班",
+      "teacher": "教师甲",
+      "schedule": "1-4周 五[1-2] E101"
+    },
+    {
+      "name": "同名分班",
+      "teacher": "教师乙",
+      "schedule": "1-4周 五[1-2] F101"
+    }
+  ]
+}

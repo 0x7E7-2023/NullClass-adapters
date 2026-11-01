@@ -1,0 +1,391 @@
+{
+  "_note": "合成数据，不是真实课表",
+  "source": "bupt-page",
+  "pageUrl": "https://jwgl.bupt.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-09-14",
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期"
+  },
+  "screenTermMissing": false,
+  "cols": 8,
+  "calendar": {
+    "found": false,
+    "rows": []
+  },
+  "slots": [
+    {
+      "period": 1,
+      "start": "08:00",
+      "end": "08:45"
+    },
+    {
+      "period": 2,
+      "start": "08:55",
+      "end": "09:40"
+    },
+    {
+      "period": 3,
+      "start": "10:10",
+      "end": "10:55"
+    },
+    {
+      "period": 4,
+      "start": "11:05",
+      "end": "11:50"
+    },
+    {
+      "period": 5,
+      "start": "13:30",
+      "end": "14:15"
+    },
+    {
+      "period": 6,
+      "start": "14:25",
+      "end": "15:10"
+    },
+    {
+      "period": 7,
+      "start": "15:30",
+      "end": "16:15"
+    },
+    {
+      "period": 8,
+      "start": "16:25",
+      "end": "17:10"
+    },
+    {
+      "period": 9,
+      "start": "18:30",
+      "end": "19:15"
+    },
+    {
+      "period": 10,
+      "start": "19:25",
+      "end": "20:10"
+    },
+    {
+      "period": 11,
+      "start": "20:20",
+      "end": "21:05"
+    },
+    {
+      "period": 12,
+      "start": "21:15",
+      "end": "22:00"
+    }
+  ],
+  "skippedLab": 0,
+  "rows": [
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "星期一",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "星期二",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "星期三",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "星期四",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "星期五",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "星期六",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "星期日",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "1 08:00-08:45",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "后置单双<br><font title=\"教师\">甲老师</font><br><font title=\"周次(节次)\">1-8周(单)9-16周(双)[01-02节]</font><br><font title=\"教室\">教A</font>"
+        ]
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "3 10:10-10:55",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "逗号后置<br><font title=\"教师\">乙老师</font><br><font title=\"周次(节次)\">1-8周(单),10-16周(双)[03-04节]</font><br><font title=\"教室\">教B</font>"
+        ]
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "5 13:30-14:15",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "带第的区间<br><font title=\"教师\">丙老师</font><br><font title=\"周次(节次)\">第1-第8周[05-06节]</font><br><font title=\"教室\">教C</font>"
+        ]
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "7 15:30-16:15",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "共周备注<br><font title=\"教师\">丁老师</font><br><font title=\"周次(节次)\">1-4周共8周,10-12周[07-08节]</font><br><font title=\"教室\">教D</font>"
+        ]
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "9 18:30-19:15",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "括号单周<br><font title=\"教师\">戊老师</font><br><font title=\"周次(节次)\">1-16周[单][09-10节]</font><br><font title=\"教室\">教E</font>"
+        ]
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ]
+  ]
+}

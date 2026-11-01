@@ -1,0 +1,41 @@
+{
+  "source": "qz-jsxsd-layui",
+  "pageUrl": "https://jwgl.mku.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-09-21",
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期"
+  },
+  "screenTermMissing": false,
+  "weekAjax": "[{\"qszc\":1,\"jszc\":20}]",
+  "headerShow": "2026-2027-1 第3周",
+  "rows": [
+    {
+      "title": "1-2",
+      "text": "1-2 08:00~09:40",
+      "cells": [
+        {
+          "day": 1,
+          "items": [
+            {
+              "name": "高等数学与线性代数联合研讨课程导论甲乙丙丁",
+              "info": "时间:1-16周[1-2节];地点:教1-101"
+            },
+            {
+              "name": "大学物理",
+              "info": "时间:1-16周[1-2节];地点:教1-102"
+            },
+            {
+              "name": "电路基础",
+              "info": "时间:1-16周[1-2节];地点:教1-103"
+            },
+            {
+              "name": "体育",
+              "info": "时间:1-16周[1-2节];地点:操场"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "key": "gdkm",
+  "name": "广东科贸职业学院",
+  "initial": "G",
+  "version": "1.0.0",
+  "author": "上游 qwwshs（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jw.gdkm.edu.cn/jsxsd/",
+  "scheduleUrlHint": "https://jw.gdkm.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（整学期、单周、双周，12 节节次时间，开学日来自第 1 周）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号前置与后置单双、逗号后置单双、第1-第8周、共 N 周只剥备注",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：行首小节号补节次，连堂合并，暂无教师和暂无教室留空",
+      "extracted": "fixtures/row-label.extracted.json",
+      "expected": "fixtures/row-label.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒截到 20 字且整条不超过 200 字",
+      "extracted": "fixtures/long-name.extracted.json",
+      "expected": "fixtures/long-name.expected.json"
+    },
+    {
+      "name": "合成用例：没有教学周历时按 20 周，课表到第 22 周才抬高并提醒",
+      "extracted": "fixtures/no-calendar.extracted.json",
+      "expected": "fixtures/no-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：跨行占位对齐星期、同一节重复行不叠课、第 13 节占位、隔周出声",
+      "extracted": "fixtures/extra-period.extracted.json",
+      "expected": "fixtures/extra-period.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期 2 月开学日用学年的后一年，不是起始年",
+      "extracted": "fixtures/spring-date.extracted.json",
+      "expected": "fixtures/spring-date.expected.json"
+    }
+  ]
+}

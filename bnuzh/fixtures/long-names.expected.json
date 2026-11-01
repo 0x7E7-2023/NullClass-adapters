@@ -1,0 +1,131 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务页面上当前选中的学期（2026-2027学年秋季学期）；要导入别的学期，请先在教务系统里切到那个学期再点「提取课表」",
+    "第 1 周的开始日期（2026-09-07）是从教务系统第 1 周的周课表里读出来的，没法向你确认，请在学期管理里核对是不是学校实际的开学日",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "有 1 条课程内容没能读成课程（上课时间认不出），已跳过，例如 「完全没有星期和节次的一长串说明文字用来…」：如发现少课请反馈",
+    "有 2 门课没给上课教师、2 门课没给上课地点（例如 超长课程名称一二三四五六七八九十甲乙丙…、超长地点课程一二三四五六七八九十甲乙丙…、又一门超长课名一二三四五六七八九十甲乙…）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年秋季学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:55",
+          "end": "09:40"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:00",
+          "end": "10:45"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:55",
+          "end": "11:40"
+        },
+        {
+          "periodIndex": 5,
+          "start": "13:30",
+          "end": "14:15"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:25",
+          "end": "15:10"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:30",
+          "end": "16:15"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:25",
+          "end": "17:10"
+        },
+        {
+          "periodIndex": 9,
+          "start": "18:00",
+          "end": "18:45"
+        },
+        {
+          "periodIndex": 10,
+          "start": "18:55",
+          "end": "19:40"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:50",
+          "end": "20:35"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:45",
+          "end": "21:30"
+        }
+      ],
+      "courses": [
+        {
+          "name": "超长课程名称一二三四五六七八九十甲乙丙丁戊",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 1,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教室甲"
+            }
+          ]
+        },
+        {
+          "name": "超长地点课程一二三四五六七八九十甲乙丙丁戊",
+          "teacher": "教师乙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 1,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "又一门超长课名一二三四五六七八九十甲乙丙丁",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 1,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

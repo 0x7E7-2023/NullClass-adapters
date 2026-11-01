@@ -1,0 +1,50 @@
+{
+  "term": {
+    "xn": "2025",
+    "xq": "0",
+    "source": "page"
+  },
+  "today": "2026-10-15",
+  "rows": [
+    {
+      "name": "没教师",
+      "teacher": "",
+      "schedule": "1-4周 一[1-2] A101"
+    },
+    {
+      "name": "未知教师",
+      "teacher": "未知",
+      "schedule": "1-4周 二[1-2] B101"
+    },
+    {
+      "name": "待定教师",
+      "teacher": "待定",
+      "schedule": "1-4周 三[1-2] C101"
+    },
+    {
+      "name": "暂无教室",
+      "teacher": "教师甲",
+      "schedule": "1-4周 四[1-2] 暂无"
+    },
+    {
+      "name": "未知地点",
+      "teacher": "教师甲",
+      "schedule": "1-4周 五[1-2] 未知地点"
+    },
+    {
+      "name": "空格教室",
+      "teacher": "教师甲",
+      "schedule": "1-4周 六[1-2] A 101"
+    },
+    {
+      "name": "",
+      "teacher": "教师甲",
+      "schedule": "1-4周 日[1-2] Z101"
+    },
+    {
+      "name": "坏时间",
+      "teacher": "教师甲",
+      "schedule": "下周再通知"
+    }
+  ]
+}

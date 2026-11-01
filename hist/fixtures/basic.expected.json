@@ -1,0 +1,97 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务页面上当前选中的学期（2025-2026学年第一学期）；要导入别的学期，请先在教务系统里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2025-09-01，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 18 周），如与实际不符可在学期管理里改",
+    "已按学校公布的节次时间导入（第 1 节 08:10-08:50，第 10 节 20:00-20:40），请在「学期管理」里核对"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第一学期",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:10",
+          "end": "08:50"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:00",
+          "end": "09:40"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:10",
+          "end": "10:50"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:00",
+          "end": "11:40"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:10",
+          "end": "14:50"
+        },
+        {
+          "periodIndex": 6,
+          "start": "15:00",
+          "end": "15:40"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:10",
+          "end": "16:50"
+        },
+        {
+          "periodIndex": 8,
+          "start": "17:00",
+          "end": "17:40"
+        },
+        {
+          "periodIndex": 9,
+          "start": "19:10",
+          "end": "19:50"
+        },
+        {
+          "periodIndex": 10,
+          "start": "20:00",
+          "end": "20:40"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "教师甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 2,
+              "weekType": "ALL",
+              "location": "A101"
+            },
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 4,
+              "startWeek": 5,
+              "endWeek": 18,
+              "weekType": "ALL",
+              "location": "A101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

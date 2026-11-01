@@ -1,0 +1,66 @@
+{
+  "term": {
+    "id": "191",
+    "label": "2025-2026学年第一学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    {
+      "id": "191",
+      "label": "2025-2026学年第一学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": {
+    "startDate": "2025-09-01",
+    "endDate": "2026-01-18",
+    "weekStartOnSunday": false,
+    "nameZh": "2025-2026学年第一学期"
+  },
+  "courseUnitList": [
+    {
+      "indexNo": 1,
+      "startTime": 820,
+      "endTime": 905
+    },
+    {
+      "indexNo": 2,
+      "startTime": 915,
+      "endTime": 1000
+    }
+  ],
+  "activities": [
+    {
+      "courseName": "上午课",
+      "teachers": [
+        "冯某"
+      ],
+      "room": "F101",
+      "weekday": 1,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "courseName": "晚上课",
+      "teachers": [
+        "冯某"
+      ],
+      "room": "F201",
+      "weekday": 1,
+      "startUnit": 5,
+      "endUnit": 5,
+      "weekIndexes": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ]
+}

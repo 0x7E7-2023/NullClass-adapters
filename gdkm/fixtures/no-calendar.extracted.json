@@ -1,0 +1,28 @@
+{
+  "source": "qz-jsxsd",
+  "pageUrl": "https://jw.gdkm.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-09-08",
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期"
+  },
+  "calendar": {
+    "weeks": []
+  },
+  "rows": [
+    {
+      "sectionText": "第一大节 (01、02小节)",
+      "cells": [
+        {
+          "rowspan": 1,
+          "items": [
+            {
+              "name": "高等数学",
+              "abbr": "老师:甲老师;时间:1-22周[01-02节];地点:教1-101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
