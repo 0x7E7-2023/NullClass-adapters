@@ -1,0 +1,57 @@
+{
+  "specVersion": 1,
+  "key": "qut",
+  "name": "青岛理工大学",
+  "initial": "Q",
+  "version": "1.0.0",
+  "author": "上游 LucasAndrew0120（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jxgl.qut.edu.cn/jwglxt/xtgl/index_initMenu.html",
+  "scheduleUrlHint": "https://jxgl.qut.edu.cn/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N253508&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 节次时间与校历都没有时用学校常用的 10 节（第 3 节 09:55-10:40、第 10 节 19:00-19:45）；开学日推算为 2026-08-31；课表排到第 12 节时用应用自带时间补第 11-12 节；课名去掉星号；完全重复行只留一条；缺教师、缺教室、集中实践课",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：单/双标记归属与「共 N 周」剥离 · 前缀「(单)1-8周,(双)9-16周」与后缀「1-8周(单),9-16周(双)」都是 1-7 单周 + 10-16 双周；「1-15周(单) 共16周」只留 1-15 单周；「1-8周(共8周),9-16周」不吞掉后段；「共16周,1-15周(单)」不整行丢课",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 · 「(单)1-8周(双)9-16周」读成 1-7 单周 + 10-16 双周，不是 1-16 每周；后置「1-8周(单)9-16周(双)」结果相同",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
+    },
+    {
+      "name": "合成用例：周次里的「第」 · 「第1-第8周」是 1-8 每周，不是只上第 1 周和第 8 周；「第1-第8周(单)」是 1-7 单周",
+      "extracted": "fixtures/week-di.extracted.json",
+      "expected": "fixtures/week-di.expected.json"
+    },
+    {
+      "name": "合成用例：合并 · 1-2 节与紧接着的 2-3 节合成 1-3 节；1-4 节与重叠的 3-4 节合成 1-4 节；同节 1-8 周与 9-16 周并成 1-16 周；完全相同的两行只留一条",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期 · 节次号用 jcdm、最后一节只给 sksj；校历第 1 周周三回退到周一 2026-02-16；第 21 周把总周数从 16 顶到 21；记录总数对不上；脏行与越界周次；节次多段；两位节次 0102",
+      "extracted": "fixtures/api-calendar.extracted.json",
+      "expected": "fixtures/api-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 · 超长课名、四门超长集中实践课、认不出的周次原文、超长括号备注都截到 20 字，每条提醒不超过 200 字；缺教师或缺教室照常导入",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "校历日期写成「2026年2月18日」时仍认得出，开学日不改成推算",
+      "extracted": "fixtures/chinese-date.extracted.json",
+      "expected": "fixtures/chinese-date.expected.json"
+    }
+  ]
+}

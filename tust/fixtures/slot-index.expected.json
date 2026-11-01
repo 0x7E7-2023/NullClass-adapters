@@ -1,0 +1,64 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务系统没有给出开学日期，第 1 周按提取当天 2026-09-10 所在周的周一推算为 2026-09-07，请在「学期管理」里核对成学校实际开学日",
+    "学期名是推算的：教务没有给出学年学期，已按提取当天 2026-09-10 推为「天津科技大学 2026-2027学年第一学期」，如与实际不符可在导入后重命名",
+    "教务没有给出学期总周数，已按 20 周导入（课表里最晚到第 4 周），如与实际不符可在「学期管理」里改",
+    "教务返回的节次时间里有 1 节的时间读不出来或节次重复，已跳过该节；其余照常，请在导入后核对上课时间"
+  ],
+  "terms": [
+    {
+      "name": "天津科技大学 2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:00",
+          "end": "10:45"
+        }
+      ],
+      "courses": [
+        {
+          "name": "晨课",
+          "teacher": "甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 1,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "教学楼A座101"
+            }
+          ]
+        },
+        {
+          "name": "第三节",
+          "teacher": "乙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 3,
+              "startWeek": 1,
+              "endWeek": 2,
+              "weekType": "ALL",
+              "location": "教学楼A座102"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

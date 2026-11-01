@@ -1,0 +1,98 @@
+{
+  "fetchedDate": "2026-09-10",
+  "slots": [
+    {
+      "startTime": "0800",
+      "endTime": "0845"
+    },
+    {
+      "startTime": "0855",
+      "endTime": "0940"
+    },
+    {
+      "startTime": "1000",
+      "endTime": "1045"
+    },
+    {
+      "startTime": "1055",
+      "endTime": "1140"
+    }
+  ],
+  "courses": [
+    {
+      "courseName": "甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲甲",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        {
+          "classDay": 1,
+          "classSessions": 1,
+          "continuingSession": null,
+          "classWeek": "1",
+          "teachingBuildingName": "",
+          "classroomName": ""
+        }
+      ]
+    },
+    {
+      "courseName": "乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙乙",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        {
+          "classDay": 2,
+          "classSessions": 1,
+          "continuingSession": null,
+          "classWeek": "1",
+          "teachingBuildingName": "",
+          "classroomName": ""
+        }
+      ]
+    },
+    {
+      "courseName": "丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙丙",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        {
+          "classDay": 3,
+          "classSessions": 1,
+          "continuingSession": null,
+          "classWeek": "1",
+          "teachingBuildingName": "",
+          "classroomName": ""
+        }
+      ]
+    },
+    {
+      "courseName": "丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁丁",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        {
+          "classDay": 4,
+          "classSessions": 1,
+          "continuingSession": null,
+          "classWeek": "1",
+          "teachingBuildingName": "",
+          "classroomName": ""
+        }
+      ]
+    },
+    {
+      "courseName": "戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊戊",
+      "attendClassTeacher": "辛*",
+      "timeAndPlaceList": []
+    },
+    {
+      "courseName": "己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己己",
+      "attendClassTeacher": "壬*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 5,
+          "classSessions": 1,
+          "continuingSession": 1,
+          "classWeek": "",
+          "teachingBuildingName": "教学楼",
+          "classroomName": "1"
+        }
+      ]
+    }
+  ]
+}

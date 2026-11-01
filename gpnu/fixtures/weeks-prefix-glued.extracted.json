@@ -1,0 +1,26 @@
+{
+  "term": {
+    "xnm": "2026",
+    "xqm": "3",
+    "xnmText": "2026-2027",
+    "xqmText": "第一学期"
+  },
+  "today": "2026-09-13",
+  "timetable": 0,
+  "timetableSource": "ask",
+  "raw": {
+    "kbList": [
+      {
+        "kcmc": "相邻周次甲",
+        "xm": "甲老师",
+        "cdmc": "教学楼1-101",
+        "xqj": "1",
+        "jcs": "1-2",
+        "zcd": "(单)1-8周(双)9-16周"
+      }
+    ],
+    "sjkList": []
+  },
+  "total": null,
+  "calendar": null
+}

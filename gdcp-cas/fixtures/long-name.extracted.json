@@ -1,0 +1,175 @@
+{
+  "source": "qz-jsxsd",
+  "pageUrl": "https://jw.gdcp.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-09-13",
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027-1"
+  },
+  "screenTermMissing": false,
+  "cols": 8,
+  "calendar": {
+    "found": true,
+    "rows": [
+      [
+        {
+          "col": 0,
+          "text": "周次"
+        },
+        {
+          "col": 1,
+          "text": "一"
+        },
+        {
+          "col": 2,
+          "text": "二"
+        },
+        {
+          "col": 3,
+          "text": "三"
+        },
+        {
+          "col": 4,
+          "text": "四"
+        },
+        {
+          "col": 5,
+          "text": "五"
+        },
+        {
+          "col": 6,
+          "text": "六"
+        },
+        {
+          "col": 7,
+          "text": "日"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "1"
+        },
+        {
+          "col": 1,
+          "text": "7",
+          "title": "2026年09月07日"
+        }
+      ],
+      [
+        {
+          "col": 0,
+          "text": "18"
+        }
+      ]
+    ]
+  },
+  "rows": [
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "星期一",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "星期二",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "星期三",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "星期四",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "星期五",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "星期六",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "星期日",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第1,2节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "<font>高等数学与工程应用实践专题研讨课课外补充甲乙</font><br><font title=\"周次(节次)\">1-16周[01-02节]</font><br><font title=\"教学楼\">9号楼</font>"
+        ]
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "<font>大学物理实验拓展</font><br><font title=\"周次(节次)\">1-16周[01-02节]</font><br><font title=\"教学楼\">9号楼</font>"
+        ]
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "<font>电路分析与系统设计实践课程序号甲</font><br><font title=\"周次(节次)\">1-16周[01-02节]</font><br><font title=\"教学楼\">9号楼</font>"
+        ]
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ]
+  ]
+}

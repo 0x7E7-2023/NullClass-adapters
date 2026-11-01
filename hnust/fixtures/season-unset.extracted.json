@@ -1,0 +1,117 @@
+{
+  "_note": "合成数据，不是真实抓取。",
+  "source": "qz-jsxsd",
+  "pageUrl": "https://kdjw.hnust.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-09-16",
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期"
+  },
+  "screenTermMissing": false,
+  "season": null,
+  "cols": 8,
+  "rows": [
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "节次",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "星期一",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "星期二",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "星期三",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "星期四",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "星期五",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "星期六",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "星期日",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第1,2节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "高等数学<br><font title=\"教师\">甲老师</font><br><font title=\"周次(节次)\">1-16(周)[01-02节]</font><br><font title=\"教室\">教1-101</font>"
+        ]
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ]
+  ]
+}

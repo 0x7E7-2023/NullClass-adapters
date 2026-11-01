@@ -1,0 +1,14 @@
+{
+  "today": "2025-10-08",
+  "currentSemesterId": "201",
+  "semesters": [
+    {
+      "id": "201",
+      "schoolYear": "2025-2026",
+      "term": "1",
+      "startDate": "2025-09-01",
+      "endDate": "2026-01-18"
+    }
+  ],
+  "courseHtml": "<script>\nvar unitCount = 12;\nactivity = new TaskActivity(\"1\",\"郑某\",\"c\",\"加节\",\"r\",\"综合楼201\",\"0110\");\nindex = 0*unitCount+8;\n</script>"
+}

@@ -1,0 +1,59 @@
+{
+  "specVersion": 1,
+  "key": "gdcp-cas",
+  "name": "广东交通职业技术学院（门户）",
+  "initial": "G",
+  "version": "1.0.0",
+  "author": "上游 小漫君（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://cas.gdcp.edu.cn/",
+  "scheduleUrlHint": "https://jw.gdcp.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jw.gdcp.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 天河 09 号楼与 12 号楼的第 1-2 节；一格两门课；单周 1-15；周历开学日 2026-09-07、18 周",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次文字 · 无逗号前置「(单)1-8周(双)9-16周」为 1-8 单周与 9-16 双周；后置单双、共 N 周只剥备注、第1-第8周",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：重复行与重叠节次并成一条，不另起一段",
+      "extracted": "fixtures/dup-merge.extracted.json",
+      "expected": "fixtures/dup-merge.expected.json"
+    },
+    {
+      "name": "合成用例：花都校区晚班为多数，第 3、4 节 10:30 起；少数早班的 1 号楼点名提醒",
+      "extracted": "fixtures/late-campus.extracted.json",
+      "expected": "fixtures/late-campus.expected.json"
+    },
+    {
+      "name": "合成用例：只上到第 7 节的课占了连堂的半段，照常导入并提醒整段时间",
+      "extracted": "fixtures/half-block.extracted.json",
+      "expected": "fixtures/half-block.expected.json"
+    },
+    {
+      "name": "合成用例：课表用到第 13 节，按课间 5 分钟、每节 45 分钟顺推补节次时间",
+      "extracted": "fixtures/extra-period.extracted.json",
+      "expected": "fixtures/extra-period.expected.json"
+    },
+    {
+      "name": "合成用例：长课名缺教师和教室，点名截到 20 字，整条提醒不超过 200 字",
+      "extracted": "fixtures/long-name.extracted.json",
+      "expected": "fixtures/long-name.expected.json"
+    },
+    {
+      "name": "合成用例：没有教学周历，开学日按提取日 2026-09-13 所在周的周一推算，总周数按 20 周",
+      "extracted": "fixtures/no-calendar.extracted.json",
+      "expected": "fixtures/no-calendar.expected.json"
+    }
+  ]
+}

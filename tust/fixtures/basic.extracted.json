@@ -1,0 +1,207 @@
+{
+  "fetchedDate": "2026-09-10",
+  "slots": [
+    {
+      "startTime": "0800",
+      "endTime": "0845"
+    },
+    {
+      "startTime": "0855",
+      "endTime": "0940"
+    },
+    {
+      "startTime": "1000",
+      "endTime": "1045"
+    },
+    {
+      "startTime": "1055",
+      "endTime": "1140"
+    },
+    {
+      "startTime": "1400",
+      "endTime": "1445"
+    },
+    {
+      "startTime": "1455",
+      "endTime": "1540"
+    },
+    {
+      "startTime": "1600",
+      "endTime": "1645"
+    },
+    {
+      "startTime": "1655",
+      "endTime": "1740"
+    },
+    {
+      "startTime": "1900",
+      "endTime": "1945"
+    },
+    {
+      "startTime": "1955",
+      "endTime": "2040"
+    },
+    {
+      "startTime": "2050",
+      "endTime": "2135"
+    },
+    {
+      "startTime": "2145",
+      "endTime": "2230"
+    }
+  ],
+  "courses": [
+    {
+      "courseName": "高等数学",
+      "attendClassTeacher": "张三* 李四* ",
+      "timeAndPlaceList": [
+        {
+          "classDay": 1,
+          "classSessions": 1,
+          "continuingSession": 2,
+          "classWeek": "111111111111111100000000",
+          "teachingBuildingName": "教学楼A座",
+          "classroomName": "101"
+        },
+        {
+          "classDay": 3,
+          "classSessions": 3,
+          "continuingSession": 2,
+          "classWeek": "111111111111111100000000",
+          "teachingBuildingName": "教学楼A座",
+          "classroomName": "101"
+        }
+      ]
+    },
+    {
+      "courseName": "大学英语",
+      "attendClassTeacher": "王五*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 2,
+          "classSessions": 1,
+          "continuingSession": 2,
+          "classWeek": "111111110000000000000000",
+          "teachingBuildingName": "教学楼B座",
+          "classroomName": "202"
+        },
+        {
+          "classDay": 2,
+          "classSessions": 3,
+          "continuingSession": 2,
+          "classWeek": "111111110000000000000000",
+          "teachingBuildingName": "教学楼B座",
+          "classroomName": "202"
+        }
+      ]
+    },
+    {
+      "courseName": "程序设计",
+      "attendClassTeacher": "赵六*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 4,
+          "classSessions": 5,
+          "continuingSession": 2,
+          "classWeek": "111111110000000000000000",
+          "teachingBuildingName": "实验楼",
+          "classroomName": "305"
+        },
+        {
+          "classDay": 4,
+          "classSessions": 5,
+          "continuingSession": 2,
+          "classWeek": "000000001111111100000000",
+          "teachingBuildingName": "实验楼",
+          "classroomName": "305"
+        }
+      ]
+    },
+    {
+      "courseName": "数据结构",
+      "attendClassTeacher": "孙七*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 5,
+          "classSessions": 7,
+          "continuingSession": 2,
+          "classWeek": "101010101010101000000000",
+          "teachingBuildingName": "教学楼A座",
+          "classroomName": "303"
+        },
+        {
+          "classDay": 5,
+          "classSessions": 9,
+          "continuingSession": 2,
+          "classWeek": "010101010101010100000000",
+          "teachingBuildingName": "教学楼A座",
+          "classroomName": "303"
+        }
+      ]
+    },
+    {
+      "courseName": "线性代数",
+      "attendClassTeacher": "周八*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 2,
+          "classSessions": 5,
+          "continuingSession": 2,
+          "classWeek": "111111111111111100000000",
+          "teachingBuildingName": "教学楼C座",
+          "classroomName": "110"
+        },
+        {
+          "classDay": 2,
+          "classSessions": 5,
+          "continuingSession": 2,
+          "classWeek": "111111111111111100000000",
+          "teachingBuildingName": "教学楼C座",
+          "classroomName": "110"
+        }
+      ]
+    },
+    {
+      "courseName": "概率论",
+      "attendClassTeacher": "吴九*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 3,
+          "classSessions": 7,
+          "continuingSession": 2,
+          "classWeek": "001111111111110000000000",
+          "teachingBuildingName": "教学楼B座",
+          "classroomName": "305"
+        }
+      ]
+    },
+    {
+      "courseName": "体育",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        {
+          "classDay": 5,
+          "classSessions": 3,
+          "continuingSession": 2,
+          "classWeek": "111111111111111100000000",
+          "teachingBuildingName": "",
+          "classroomName": ""
+        }
+      ]
+    },
+    {
+      "courseName": "形势与政策",
+      "attendClassTeacher": "郑十*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 4,
+          "classSessions": 1,
+          "continuingSession": 2,
+          "classWeek": "000000000100000000000000",
+          "teachingBuildingName": null,
+          "classroomName": null
+        }
+      ]
+    }
+  ]
+}

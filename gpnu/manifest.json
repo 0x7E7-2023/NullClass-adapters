@@ -1,0 +1,57 @@
+{
+  "specVersion": 1,
+  "key": "gpnu",
+  "name": "广东技术师范大学",
+  "initial": "G",
+  "version": "1.0.0",
+  "author": "上游 moondish（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwglxt.gpnu.edu.cn/sso/lyiotlogin",
+  "scheduleUrlHint": "https://jwglxt.gpnu.edu.cn/jwglxt/kbcx/xskbcx_cxXsgrkb.html?gnmkdm=N2151",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 选东/西/北校区 11 节表（第 1 节 08:20-09:00、第 6 节 14:20-15:00）；校历没有 → 开学日推算、总周数 20；单双周、缺教师、缺教室、完全重复行、集中实践课；排到第 13 节 → 第 12 节用常用时间、第 13 节顺推",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 「(单)1-8周(双)9-16周」读成 1-7 单周 + 10-16 双周，不能并成 1-16 每周",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
+    },
+    {
+      "name": "合成用例：后置单双、共 N 周只剥备注、第1-第8周、教学班序号 —— 「1-8周(单)9-16周(双)」仍是 1-7 单 + 10-16 双；「1-8周(共8周),9-16周」不丢后半段",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：合并 · 1-2 与 3-4 连成 1-4；5-6 与单独的第 6 节收成一段不重叠；1-8 与 9-16 周次并集；完全重复行只留一条",
+      "extracted": "fixtures/merge-overlap.extracted.json",
+      "expected": "fixtures/merge-overlap.expected.json"
+    },
+    {
+      "name": "合成用例：校历第 1 周是周三 → 开学日回到周一；校历 18 周但课表有第 20 周 → 总周数抬到 20；节次时间用白云校区（第 1 节 08:30）",
+      "extracted": "fixtures/calendar-baiyun.extracted.json",
+      "expected": "fixtures/calendar-baiyun.expected.json"
+    },
+    {
+      "name": "合成用例：校历第 1 周行没有日期 → 按第 3 周的日期倒推再回到周一；没问到校区 → 暂用东/西/北并提醒",
+      "extracted": "fixtures/calendar-derived.extracted.json",
+      "expected": "fixtures/calendar-derived.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 四门超长集中实践课 + 两段认不出的周次 → 提醒按类型汇总、教务原文截到 20 字、每条不超 200 字；节次时间用河源校区（第 5 节 13:50）",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "超长学期名和周次备注：提醒里截到 20 字，末尾的操作说明还在",
+      "extracted": "fixtures/long-clip.extracted.json",
+      "expected": "fixtures/long-clip.expected.json"
+    }
+  ]
+}

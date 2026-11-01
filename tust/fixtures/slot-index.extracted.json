@@ -1,0 +1,47 @@
+{
+  "fetchedDate": "2026-09-10",
+  "slots": [
+    {
+      "startTime": "0800",
+      "endTime": "0845"
+    },
+    {
+      "startTime": "9999",
+      "endTime": "9999"
+    },
+    {
+      "startTime": "1000",
+      "endTime": "1045"
+    }
+  ],
+  "courses": [
+    {
+      "courseName": "晨课",
+      "attendClassTeacher": "甲*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 1,
+          "classSessions": 1,
+          "continuingSession": 1,
+          "classWeek": "1111",
+          "teachingBuildingName": "教学楼A座",
+          "classroomName": "101"
+        }
+      ]
+    },
+    {
+      "courseName": "第三节",
+      "attendClassTeacher": "乙*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 2,
+          "classSessions": 3,
+          "continuingSession": 1,
+          "classWeek": "11",
+          "teachingBuildingName": "教学楼A座",
+          "classroomName": "102"
+        }
+      ]
+    }
+  ]
+}

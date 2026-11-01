@@ -1,0 +1,6 @@
+{
+  "today": "2025-10-08",
+  "currentSemesterId": null,
+  "semesters": [],
+  "courseHtml": "<script>\nvar actTeacherName = [{id:1,name:\"陈某\"},{id:2,name:\"周某\"}];\nactivity = new TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"1001\",\"形势与政策\",\"\",\"西区B201\",\"01110\");\nindex = 10;\nactivity = new TaskActivity(\"x\");\nactivity = new TaskActivity(\"1\",\"吴某\",\"c\",\"体育\",\"\",\"\",\"0110\");\nindex = 0*unitCount+0;\n</script>"
+}

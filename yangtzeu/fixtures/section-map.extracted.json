@@ -1,0 +1,14 @@
+{
+  "today": "2025-10-08",
+  "currentSemesterId": "201",
+  "semesters": [
+    {
+      "id": "201",
+      "schoolYear": "2025-2026",
+      "term": "1",
+      "startDate": "2025-09-01",
+      "endDate": "2026-01-18"
+    }
+  ],
+  "courseHtml": "<script>\nvar unitCount = 8;\nactivity = new TaskActivity(\"1\",\"钱某\",\"c\",\"下午连堂\",\"r\",\"实验楼101\",\"01110\");\nindex = 0*unitCount+2;\nindex = 0*unitCount+3;\nactivity = new TaskActivity(\"1\",\"钱某\",\"c\",\"午间课\",\"r\",\"实验楼101\",\"01110\");\nindex = 0*unitCount+6;\nactivity = new TaskActivity(\"1\",\"钱某\",\"c\",\"第八节\",\"r\",\"实验楼101\",\"01110\");\nindex = 1*unitCount+5;\nactivity = new TaskActivity(\"1\",\"钱某\",\"c\",\"第六节\",\"r\",\"实验楼101\",\"01110\");\nindex = 2*unitCount+7;\nactivity = new TaskActivity(\"1\",\"钱某\",\"c\",\"不相邻\",\"r\",\"实验楼101\",\"01110\");\nindex = 3*unitCount+0;\nindex = 3*unitCount+2;\n</script>"
+}

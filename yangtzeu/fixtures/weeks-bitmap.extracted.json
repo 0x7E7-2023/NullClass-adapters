@@ -1,0 +1,14 @@
+{
+  "today": "2025-10-08",
+  "currentSemesterId": "201",
+  "semesters": [
+    {
+      "id": "201",
+      "schoolYear": "2025-2026",
+      "term": "1",
+      "startDate": "2025-09-01",
+      "endDate": "2026-01-18"
+    }
+  ],
+  "courseHtml": "<script>\nvar unitCount = 8;\nactivity = new TaskActivity(\"1\",\"甲\",\"c\",\"A第0位\",\"r\",\"教室甲\",\"1100\");\nindex = 0*unitCount+0;\nactivity = new TaskActivity(\"1\",\"甲\",\"c\",\"B缺周\",\"r\",\"教室甲\",\"01110111000\");\nindex = 1*unitCount+0;\nactivity = new TaskActivity(\"1\",\"甲\",\"c\",\"C单双\",\"r\",\"教室甲\",\"010101010010101010\");\nindex = 2*unitCount+0;\nactivity = new TaskActivity(\"1\",\"甲\",\"c\",\"D超周\",\"r\",\"教室甲\",\"00100000000000000000000000000001\");\nindex = 3*unitCount+0;\nactivity = new TaskActivity(\"1\",\"甲\",\"c\",\"E坏符号\",\"r\",\"教室甲\",\"01x10\");\nindex = 4*unitCount+0;\nactivity = new TaskActivity(\"1\",\"甲\",\"c\",\"F空周\",\"r\",\"教室甲\",\"0000\");\nindex = 5*unitCount+0;\nactivity = new TaskActivity(\"x\");\n</script>"
+}

@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.11.01.1",
+  "version": "2026.11.01.2",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -831,6 +831,60 @@
       "name": "电子科技大学中山学院",
       "version": "1.0.0",
       "path": "zsc"
+    },
+    {
+      "key": "gdcp-cas",
+      "name": "广东交通职业技术学院（门户）",
+      "version": "1.0.0",
+      "path": "gdcp-cas"
+    },
+    {
+      "key": "nynu",
+      "name": "南阳师范学院",
+      "version": "1.0.0",
+      "path": "nynu"
+    },
+    {
+      "key": "yangtzeu",
+      "name": "长江大学",
+      "version": "1.0.0",
+      "path": "yangtzeu"
+    },
+    {
+      "key": "tust",
+      "name": "天津科技大学",
+      "version": "1.0.0",
+      "path": "tust"
+    },
+    {
+      "key": "xaut",
+      "name": "西安理工大学",
+      "version": "1.0.0",
+      "path": "xaut"
+    },
+    {
+      "key": "hnust",
+      "name": "湖南科技大学",
+      "version": "1.0.0",
+      "path": "hnust"
+    },
+    {
+      "key": "qut",
+      "name": "青岛理工大学",
+      "version": "1.0.0",
+      "path": "qut"
+    },
+    {
+      "key": "gpnu",
+      "name": "广东技术师范大学",
+      "version": "1.0.0",
+      "path": "gpnu"
+    },
+    {
+      "key": "ustl",
+      "name": "辽宁科技大学",
+      "version": "1.0.0",
+      "path": "ustl"
     }
   ]
 }

@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "key": "yangtzeu",
+  "name": "长江大学",
+  "initial": "C",
+  "version": "1.0.0",
+  "author": "上游 Jursin（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://cas-yangtzeu-edu-cn.atrust.yangtzeu.edu.cn/authserver/login?service=https%3A%2F%2Fatrust.yangtzeu.edu.cn%3A4443%2Fpassport%2Fv1%2Fauth%2Fcas%3FsfDomain%3DCAS",
+  "scheduleUrlHint": "https://jwc3-yangtzeu-edu-cn-s.atrust.yangtzeu.edu.cn/eams/courseTableForStd.action",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["jwc3-yangtzeu-edu-cn-s.atrust.yangtzeu.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：教师写在活动参数里、连堂合并、单周位图、课名去掉行尾序号，学期起止日期推出开学日与总周数",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：课表行号映射到作息节次（午间第 3 节、晚间第 6 节、第 8 节）且不相邻节次不并成一段",
+      "extracted": "fixtures/section-map.extracted.json",
+      "expected": "fixtures/section-map.expected.json"
+    },
+    {
+      "name": "合成用例：周次位图第 0 位、缺周切段、单周接双周、超过 30 周丢掉、认不出的符号、空周次",
+      "extracted": "fixtures/weeks-bitmap.extracted.json",
+      "expected": "fixtures/weeks-bitmap.expected.json"
+    },
+    {
+      "name": "合成用例：没有学期列表时推算开学日、一天节数读不到按 8 节、教师名单拼接、算好的节次序号、空教室",
+      "extracted": "fixtures/fallback.extracted.json",
+      "expected": "fixtures/fallback.expected.json"
+    },
+    {
+      "name": "合成用例：多门课缺教师和教室时按类型汇总，超长课名在提醒里截到 20 字",
+      "extracted": "fixtures/long-name.extracted.json",
+      "expected": "fixtures/long-name.expected.json"
+    },
+    {
+      "name": "合成用例：同一节的重复行并进同一段，中间空着的节次不连成一段",
+      "extracted": "fixtures/duplicate-rows.extracted.json",
+      "expected": "fixtures/duplicate-rows.expected.json"
+    },
+    {
+      "name": "合成用例：课用到第 9 节时在第 8 节下课后按课间 5 分钟、每节 45 分钟补时间",
+      "extracted": "fixtures/extend-period.extracted.json",
+      "expected": "fixtures/extend-period.expected.json"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "fetchedDate": "2026-09-10",
+  "slots": [
+    {
+      "startTime": "0800",
+      "endTime": "0845"
+    },
+    {
+      "startTime": "0855",
+      "endTime": "0940"
+    },
+    {
+      "startTime": "1000",
+      "endTime": "1045"
+    },
+    {
+      "startTime": "1055",
+      "endTime": "1140"
+    },
+    {
+      "startTime": "1400",
+      "endTime": "1445"
+    },
+    {
+      "startTime": "1455",
+      "endTime": "1540"
+    },
+    {
+      "startTime": "1600",
+      "endTime": "1645"
+    },
+    {
+      "startTime": "1655",
+      "endTime": "1740"
+    }
+  ],
+  "courses": [
+    {
+      "courseName": "电路实验",
+      "attendClassTeacher": "甲*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 1,
+          "classSessions": 1,
+          "continuingSession": 2,
+          "classWeek": "11110000",
+          "teachingBuildingName": "实验楼",
+          "classroomName": "201"
+        },
+        {
+          "classDay": 1,
+          "classSessions": 1,
+          "continuingSession": 2,
+          "classWeek": "11110000",
+          "teachingBuildingName": "实验楼",
+          "classroomName": "201"
+        },
+        {
+          "classDay": 1,
+          "classSessions": 2,
+          "continuingSession": 2,
+          "classWeek": "11110000",
+          "teachingBuildingName": "实验楼",
+          "classroomName": "201"
+        }
+      ]
+    },
+    {
+      "courseName": "连续课",
+      "attendClassTeacher": "乙*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 2,
+          "classSessions": 5,
+          "continuingSession": 2,
+          "classWeek": "11111111",
+          "teachingBuildingName": "教学楼A座",
+          "classroomName": "301"
+        },
+        {
+          "classDay": 2,
+          "classSessions": 7,
+          "continuingSession": 2,
+          "classWeek": "11111111",
+          "teachingBuildingName": "教学楼A座",
+          "classroomName": "301"
+        }
+      ]
+    },
+    {
+      "courseName": "缺周课",
+      "attendClassTeacher": "丙*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 3,
+          "classSessions": 1,
+          "continuingSession": 2,
+          "classWeek": "11101111",
+          "teachingBuildingName": "教学楼A座",
+          "classroomName": "302"
+        }
+      ]
+    }
+  ]
+}

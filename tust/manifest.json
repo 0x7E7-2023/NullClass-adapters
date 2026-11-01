@@ -1,0 +1,59 @@
+{
+  "specVersion": 1,
+  "key": "tust",
+  "name": "天津科技大学",
+  "initial": "T",
+  "version": "1.0.0",
+  "author": "上游 oneepointer（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://id.tust.edu.cn/authserver/login?service=http://jwxtxs.tust.edu.cn:46110/j_spring_cas_security_check",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jwxtxs.tust.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（当前学期、节次时间按数组顺序 12 节、开学日与学期名按提取日推算、总周数 20、位串连续周与单双周、连堂合并、同节次周次并集、完全重复行、多位教师、缺教师缺教室汇总）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：classWeek 位串的缺周、连续周、空串、全 0、非法字符，以及星期或节次越界、连续节数缺失、没排课、没有课程名",
+      "extracted": "fixtures/weeks-edge.extracted.json",
+      "expected": "fixtures/weeks-edge.expected.json"
+    },
+    {
+      "name": "合成用例：同一节重复行与重叠节次合并成一条（1-2 节叠 2-3 节得到 1-3 节），首尾相接的连堂仍合并，位串中间缺一周拆成两段",
+      "extracted": "fixtures/overlap.extracted.json",
+      "expected": "fixtures/overlap.expected.json"
+    },
+    {
+      "name": "合成用例：节次时间中间一行读不出来时不把后面的节次前移（第 3 项仍是第 3 节）",
+      "extracted": "fixtures/slot-index.extracted.json",
+      "expected": "fixtures/slot-index.expected.json"
+    },
+    {
+      "name": "合成用例：节次时间只到第 8 节（第 9-12 节用空课默认补、第 13-14 节顺推、第 15 节越过 23:59 补不了）、坏的节次行跳过、课表第 24 周超过 20 周需抬高总周数",
+      "extracted": "fixtures/slots-extend.extracted.json",
+      "expected": "fixtures/slots-extend.expected.json"
+    },
+    {
+      "name": "合成用例：课表有第 32 周的课，总周数压到 30 周：跨界安排截断、整条落在 30 周之后的安排与课程丢弃并提醒",
+      "extracted": "fixtures/clamp.extracted.json",
+      "expected": "fixtures/clamp.expected.json"
+    },
+    {
+      "name": "合成用例：四门约 40 字的长课名都缺连续节数、缺教师、缺教室（提醒里课名要截短、超过 3 门写「等 N 门」，单条提醒不超过 200 字），另有长课名的没排课课和读不出安排的课点名",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    },
+    {
+      "name": "合成用例：节次时间取不到（slots 为 null），1 月提取日的学期名属于上一学年第一学期，总周数仍按 20 周，缺教师汇总",
+      "extracted": "fixtures/no-slots.extracted.json",
+      "expected": "fixtures/no-slots.expected.json"
+    }
+  ],
+  "scheduleUrlHint": "http://jwxtxs.tust.edu.cn:46110/student/courseSelect/thisSemesterCurriculum/index"
+}

@@ -1,0 +1,102 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的学期周次校历：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "教务校历写的一学期是 18 周，课表里有第 20 周的课，已按 20 周导入（否则第 19 周起的课放不下）",
+    "节次时间按你选择的白云校区导入（第 1 节 08:30-09:10，共 11 节）。另外两个校区的时间不同，选错了请在学期管理里改"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:30",
+          "end": "09:10"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:15",
+          "end": "09:55"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:05",
+          "end": "10:45"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:50",
+          "end": "11:30"
+        },
+        {
+          "periodIndex": 5,
+          "start": "13:30",
+          "end": "14:10"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:15",
+          "end": "14:55"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:05",
+          "end": "15:45"
+        },
+        {
+          "periodIndex": 8,
+          "start": "15:50",
+          "end": "16:30"
+        },
+        {
+          "periodIndex": 9,
+          "start": "18:40",
+          "end": "19:20"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:25",
+          "end": "20:05"
+        },
+        {
+          "periodIndex": 11,
+          "start": "20:10",
+          "end": "20:50"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高等数学A(一)",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教学楼1-101"
+            },
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 20,
+              "endWeek": 20,
+              "weekType": "ALL",
+              "location": "教学楼1-101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

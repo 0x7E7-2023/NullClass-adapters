@@ -1,0 +1,14 @@
+{
+  "today": "2025-10-08",
+  "currentSemesterId": "201",
+  "semesters": [
+    {
+      "id": "201",
+      "schoolYear": "2025-2026",
+      "term": "1",
+      "startDate": "2025-09-01",
+      "endDate": "2026-01-18"
+    }
+  ],
+  "courseHtml": "<script>\nvar unitCount = 8;\nactivity = new TaskActivity(\"1\",\"林某\",\"c1\",\"高等数学(1.01)\",\"r\",\"东区A101\",\"01111111111111111\");\nindex = 0*unitCount+0;\nindex = 0*unitCount+1;\nactivity = new TaskActivity(\"2\",\"赵某\",\"c2\",\"大学英语\",\"r\",\"西区B201\",\"01010101010101010\");\nindex = 2*unitCount+6;\n</script>"
+}

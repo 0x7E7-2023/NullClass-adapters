@@ -1,0 +1,35 @@
+{
+  "term": {
+    "xnm": "2026",
+    "xqm": "3",
+    "xnmText": "2026-2027",
+    "xqmText": "第一学期"
+  },
+  "today": "2026-09-13",
+  "timetable": null,
+  "timetableSource": "default",
+  "raw": {
+    "kbList": [
+      {
+        "kcmc": "高等数学A(一)",
+        "xm": "甲老师",
+        "cdmc": "教学楼1-101",
+        "xqj": "1",
+        "jcs": "1-2",
+        "zcd": "1-2周"
+      }
+    ],
+    "sjkList": []
+  },
+  "total": null,
+  "calendar": [
+    {
+      "zs": "1",
+      "rq": ""
+    },
+    {
+      "zs": "3",
+      "rq": "2026-09-23"
+    }
+  ]
+}

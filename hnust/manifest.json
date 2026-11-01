@@ -1,0 +1,57 @@
+{
+  "specVersion": 1,
+  "key": "hnust",
+  "name": "湖南科技大学",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 dezige131（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://kdjw.hnust.edu.cn/",
+  "scheduleUrlHint": "https://kdjw.hnust.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（无逗号前置单双、后置单双、缺教师缺教室、非夏季节次时间）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号前置与后置单双、共 N 周只剥备注、第1-第8周",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：行首第1，2节，未知和待定不当教师教室",
+      "extracted": "fixtures/pending.extracted.json",
+      "expected": "fixtures/pending.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒截到 20 字且整条不超过 200 字",
+      "extracted": "fixtures/long-name.extracted.json",
+      "expected": "fixtures/long-name.expected.json"
+    },
+    {
+      "name": "合成用例：第 11 节占位、重复行不叠课、认不出的单双按每周、总周数抬到 22",
+      "extracted": "fixtures/extra.extracted.json",
+      "expected": "fixtures/extra.expected.json"
+    },
+    {
+      "name": "合成用例：选了夏季，第 5 节从 14:30 开始",
+      "extracted": "fixtures/summer.extracted.json",
+      "expected": "fixtures/summer.expected.json"
+    },
+    {
+      "name": "合成用例：没选季节时按非夏季并提醒",
+      "extracted": "fixtures/season-unset.extracted.json",
+      "expected": "fixtures/season-unset.expected.json"
+    },
+    {
+      "name": "合成用例：没有节次标签时按行序当成第 1-2 节并提醒",
+      "extracted": "fixtures/row-index.extracted.json",
+      "expected": "fixtures/row-index.expected.json"
+    }
+  ]
+}
