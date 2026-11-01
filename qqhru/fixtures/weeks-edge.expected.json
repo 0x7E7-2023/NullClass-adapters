@@ -1,0 +1,83 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "开学日期取自教务系统的校历：第 1 周从 2026-08-31 开始，请在「学期管理」里核对成学校实际开学日",
+    "学期总周数取自教务系统（18 周），如与实际不符可在「学期管理」里改",
+    "有 3 条安排没有写连续节数，已按 1 节导入（这是推算的），涉及：综合E、综合F，请核对这些课的节次",
+    "教务系统对 1 门课还没有排上课时间地点（通常是还没排课），已跳过：综合G",
+    "有 1 门课一条安排都没解析出来，已跳过：综合D；共有 6 条安排的星期、节次或周次读不出来，已忽略；另有 1 门课没有课程名，已跳过"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年春",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 18,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 7, "start": "16:00", "end": "16:45" },
+        { "periodIndex": 8, "start": "16:55", "end": "17:40" }
+      ],
+      "courses": [
+        {
+          "name": "综合A",
+          "teacher": "甲",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "综合楼101" },
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 6, "endWeek": 10, "weekType": "EVEN", "location": "综合楼101" },
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 13, "endWeek": 15, "weekType": "ALL", "location": "综合楼101" }
+          ]
+        },
+        {
+          "name": "综合B",
+          "teacher": "乙",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 5, "weekType": "ODD", "location": "综合楼102" },
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 6, "endWeek": 6, "weekType": "ALL", "location": "综合楼102" }
+          ]
+        },
+        {
+          "name": "综合C",
+          "teacher": "丙",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "综合楼103" }
+          ]
+        },
+        {
+          "name": "综合E",
+          "teacher": "戊",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 5, "endPeriod": 5, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "综合楼105" },
+            { "dayOfWeek": 5, "startPeriod": 7, "endPeriod": 7, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "综合楼105" }
+          ]
+        },
+        {
+          "name": "综合F",
+          "teacher": "庚",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 6, "startPeriod": 3, "endPeriod": 3, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "综合楼106" }
+          ]
+        },
+        {
+          "name": "综合I",
+          "teacher": "己",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 7, "startPeriod": 7, "endPeriod": 8, "startWeek": 18, "endWeek": 18, "weekType": "ALL", "location": "综合楼107" }
+          ]
+        }
+      ]
+    }
+  ]
+}

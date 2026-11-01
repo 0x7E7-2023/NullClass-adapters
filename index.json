@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.10.27.2",
+  "version": "2026.11.01.1",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -813,6 +813,24 @@
       "name": "临沂大学",
       "version": "1.0.0",
       "path": "lyu"
+    },
+    {
+      "key": "imu",
+      "name": "内蒙古大学",
+      "version": "1.0.0",
+      "path": "imu"
+    },
+    {
+      "key": "qqhru",
+      "name": "齐齐哈尔大学",
+      "version": "1.0.0",
+      "path": "qqhru"
+    },
+    {
+      "key": "zsc",
+      "name": "电子科技大学中山学院",
+      "version": "1.0.0",
+      "path": "zsc"
     }
   ]
 }

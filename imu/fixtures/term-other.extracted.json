@@ -1,0 +1,71 @@
+{
+  "fetchedDate": "2026-09-10",
+  "term": {
+    "text": "2025-2026学年春",
+    "isDefault": false
+  },
+  "rq": "20260831",
+  "skzc": "20",
+  "slots": [
+    {
+      "jc": "1",
+      "kssj": "0800",
+      "jssj": "0845"
+    },
+    {
+      "jc": "2",
+      "kssj": "0855",
+      "jssj": "0940"
+    },
+    {
+      "jc": "3",
+      "kssj": "1000",
+      "jssj": "1045"
+    },
+    {
+      "jc": "4",
+      "kssj": "1055",
+      "jssj": "1140"
+    },
+    {
+      "jc": "5",
+      "kssj": "1400",
+      "jssj": "1445"
+    },
+    {
+      "jc": "6",
+      "kssj": "1455",
+      "jssj": "1540"
+    }
+  ],
+  "courses": [
+    {
+      "courseName": "管理学",
+      "attendClassTeacher": "钱*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 1,
+          "classSessions": 1,
+          "continuingSession": 2,
+          "classWeek": "111111111111110000000000",
+          "teachingBuildingName": "文博楼",
+          "classroomName": "201"
+        }
+      ]
+    },
+    {
+      "courseName": "经济学",
+      "attendClassTeacher": "孙*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 3,
+          "classSessions": 3,
+          "continuingSession": 2,
+          "classWeek": "111111111111000000000000",
+          "teachingBuildingName": "文博楼",
+          "classroomName": "202"
+        }
+      ]
+    }
+  ]
+}

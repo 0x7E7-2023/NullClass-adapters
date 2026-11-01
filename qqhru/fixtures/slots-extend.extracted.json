@@ -1,0 +1,124 @@
+{
+  "fetchedDate": "2026-09-10",
+  "term": {
+    "text": "2026-2027学年秋(当前)",
+    "isDefault": true
+  },
+  "rq": "20260901",
+  "skzc": "20",
+  "slots": [
+    {
+      "jc": "1",
+      "kssj": "0800",
+      "jssj": "0845"
+    },
+    {
+      "jc": "2",
+      "kssj": "0855",
+      "jssj": "0940"
+    },
+    {
+      "jc": "3",
+      "kssj": "1000",
+      "jssj": "1045"
+    },
+    {
+      "jc": "4",
+      "kssj": "1055",
+      "jssj": "1140"
+    },
+    {
+      "jc": "5",
+      "kssj": "1400",
+      "jssj": "1445"
+    },
+    {
+      "jc": "6",
+      "kssj": "1455",
+      "jssj": "1540"
+    },
+    {
+      "jc": "7",
+      "kssj": "1600",
+      "jssj": "1645"
+    },
+    {
+      "jc": "8",
+      "kssj": "1655",
+      "jssj": "1740"
+    },
+    {
+      "jc": "3",
+      "kssj": "1030",
+      "jssj": "1115"
+    },
+    {
+      "jc": "11",
+      "kssj": "2500",
+      "jssj": "2545"
+    },
+    {
+      "jc": "12",
+      "kssj": "1200",
+      "jssj": "1100"
+    }
+  ],
+  "courses": [
+    {
+      "courseName": "专业实践",
+      "attendClassTeacher": "刘*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 1,
+          "classSessions": 1,
+          "continuingSession": 2,
+          "classWeek": "111111111111111111111111",
+          "teachingBuildingName": "实训楼",
+          "classroomName": "101"
+        }
+      ]
+    },
+    {
+      "courseName": "晚间选修",
+      "attendClassTeacher": "马*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 3,
+          "classSessions": 9,
+          "continuingSession": 4,
+          "classWeek": "111111111111111100000000",
+          "teachingBuildingName": "教学楼A座",
+          "classroomName": "401"
+        }
+      ]
+    },
+    {
+      "courseName": "夜间实验",
+      "attendClassTeacher": "杨*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 5,
+          "classSessions": 13,
+          "continuingSession": 2,
+          "classWeek": "111111110000000000000000",
+          "teachingBuildingName": "实验楼",
+          "classroomName": "701"
+        }
+      ]
+    },
+    {
+      "courseName": "深夜实验",
+      "attendClassTeacher": "郭*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 6,
+          "classSessions": 15,
+          "continuingSession": 1,
+          "classWeek": "111111110000000000000000",
+          "teachingBuildingName": "实验楼",
+          "classroomName": "702"
+        }
+      ]
+    }
+  ]
+}

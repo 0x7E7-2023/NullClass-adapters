@@ -1,0 +1,40 @@
+{
+  "fetchedDate": "2027-01-05",
+  "term": {
+    "text": "(当前)",
+    "isDefault": true
+  },
+  "rq": null,
+  "skzc": "教务返回的学期周数栏被页面公告占满了这里不是数字而是一段很长的说明文字请忽略后按默认周数导入",
+  "slots": null,
+  "courses": [
+    {
+      "courseName": "大学物理",
+      "attendClassTeacher": "陈*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 2,
+          "classSessions": 1,
+          "continuingSession": 2,
+          "classWeek": "111111111100000000000000",
+          "teachingBuildingName": "理科楼",
+          "classroomName": "301"
+        }
+      ]
+    },
+    {
+      "courseName": "计算机基础",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        {
+          "classDay": 4,
+          "classSessions": 3,
+          "continuingSession": 2,
+          "classWeek": "111111111100000000000000",
+          "teachingBuildingName": "机房楼",
+          "classroomName": "B101"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "fetchedDate": "2026-09-14",
+  "term": null,
+  "rq": "20260831",
+  "skzc": "18",
+  "slots": [
+    { "jc": "1", "kssj": "0800", "jssj": "0845" },
+    { "jc": "2", "kssj": "0855", "jssj": "0940" },
+    { "jc": "3", "kssj": "1000", "jssj": "1045" },
+    { "jc": "4", "kssj": "1055", "jssj": "1140" },
+    { "jc": "5", "kssj": "1400", "jssj": "1445" },
+    { "jc": "6", "kssj": "1455", "jssj": "1540" }
+  ],
+  "courses": [
+    {
+      "courseName": "电路分析",
+      "attendClassTeacher": "吴十*",
+      "timeAndPlaceList": [
+        { "classDay": 2, "classSessions": 3, "continuingSession": 2, "classWeek": "0111111111111111100000", "teachingBuildingName": "实验楼", "classroomName": "B-201" }
+      ]
+    },
+    {
+      "courseName": "工程制图",
+      "attendClassTeacher": "郑十一*",
+      "timeAndPlaceList": [
+        { "classDay": 5, "classSessions": 5, "continuingSession": 2, "classWeek": "1010101010101010", "teachingBuildingName": "教学楼C座", "classroomName": "" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "fetchedDate": "2026-09-14",
+  "term": { "text": "2026-2027学年第一学期(当前)", "isDefault": true },
+  "rq": "20260914",
+  "skzc": "18",
+  "slots": [
+    { "jc": "1", "kssj": "0800", "jssj": "0845" },
+    { "jc": "2", "kssj": "0855", "jssj": "0940" },
+    { "jc": "3", "kssj": "1000", "jssj": "1045" },
+    { "jc": "4", "kssj": "1055", "jssj": "1140" }
+  ],
+  "courses": [
+    {
+      "courseName": "缺周课",
+      "attendClassTeacher": "教师甲* ",
+      "timeAndPlaceList": [
+        {
+          "classDay": 1,
+          "classSessions": 1,
+          "continuingSession": 2,
+          "classWeek": "11101111",
+          "teachingBuildingName": "主楼",
+          "classroomName": "101"
+        }
+      ]
+    },
+    {
+      "courseName": "连续周课",
+      "attendClassTeacher": "教师乙*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 2,
+          "classSessions": 3,
+          "continuingSession": 2,
+          "classWeek": "11111111",
+          "teachingBuildingName": "主楼",
+          "classroomName": "202"
+        }
+      ]
+    },
+    {
+      "courseName": "重复节课",
+      "attendClassTeacher": "教师丙*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 3,
+          "classSessions": 1,
+          "continuingSession": 2,
+          "classWeek": "11110000",
+          "teachingBuildingName": "主楼",
+          "classroomName": "303"
+        },
+        {
+          "classDay": 3,
+          "classSessions": 2,
+          "continuingSession": 2,
+          "classWeek": "11110000",
+          "teachingBuildingName": "主楼",
+          "classroomName": "303"
+        }
+      ]
+    },
+    {
+      "courseName": "空周课",
+      "attendClassTeacher": "教师丁*",
+      "timeAndPlaceList": [
+        {
+          "classDay": 4,
+          "classSessions": 1,
+          "continuingSession": 2,
+          "classWeek": "",
+          "teachingBuildingName": "主楼",
+          "classroomName": "404"
+        }
+      ]
+    }
+  ]
+}

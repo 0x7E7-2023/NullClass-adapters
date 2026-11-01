@@ -1,0 +1,82 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "开学日期取自教务系统的校历：第 1 周从 2026-09-14 开始，请在「学期管理」里核对成学校实际开学日",
+    "学期总周数取自教务系统（18 周），如与实际不符可在「学期管理」里改",
+    "有 1 门课一条安排都没解析出来，已跳过：空周课；共有 1 条安排的星期、节次或周次读不出来，已忽略"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-14",
+      "totalWeeks": 18,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" }
+      ],
+      "courses": [
+        {
+          "name": "缺周课",
+          "teacher": "教师甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 3,
+              "weekType": "ALL",
+              "location": "主楼101"
+            },
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 5,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "主楼101"
+            }
+          ]
+        },
+        {
+          "name": "连续周课",
+          "teacher": "教师乙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "主楼202"
+            }
+          ]
+        },
+        {
+          "name": "重复节课",
+          "teacher": "教师丙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 3,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "主楼303"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
