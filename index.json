@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.11.01.4",
+  "version": "2026.11.02.1",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -1005,6 +1005,24 @@
       "name": "暨南大学",
       "version": "1.0.0",
       "path": "jnu"
+    },
+    {
+      "key": "csuft",
+      "name": "中南林业科技大学",
+      "version": "1.0.0",
+      "path": "csuft"
+    },
+    {
+      "key": "jsnu",
+      "name": "江苏师范大学",
+      "version": "1.0.0",
+      "path": "jsnu"
+    },
+    {
+      "key": "huse",
+      "name": "湖南科技学院",
+      "version": "1.0.0",
+      "path": "huse"
     }
   ]
 }

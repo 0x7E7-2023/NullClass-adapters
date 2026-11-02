@@ -1,0 +1,117 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "有 3 门课教务没有给任课教师，已留空（例如 这是一门名字特别特别长的专业限选课啊啊…、另一门名字也长得离谱的选修课程名称超出…、第三门超长课程名称用于钉住提醒长度不要…），可在对应课程的「编辑课程」里补充"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:55",
+          "end": "09:40"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:00",
+          "end": "10:45"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:55",
+          "end": "11:40"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:55",
+          "end": "15:40"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:00",
+          "end": "16:45"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:55",
+          "end": "17:40"
+        },
+        {
+          "periodIndex": 9,
+          "start": "19:00",
+          "end": "19:45"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:55",
+          "end": "20:40"
+        }
+      ],
+      "courses": [
+        {
+          "name": "这是一门名字特别特别长的专业限选课啊啊啊啊啊",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 2,
+              "weekType": "ALL",
+              "location": "教室甲"
+            }
+          ]
+        },
+        {
+          "name": "另一门名字也长得离谱的选修课程名称超出啦啦",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 2,
+              "weekType": "ALL",
+              "location": "教室乙"
+            }
+          ]
+        },
+        {
+          "name": "第三门超长课程名称用于钉住提醒长度不要被截断后半句说明",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 2,
+              "weekType": "ALL",
+              "location": "教室丙"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
