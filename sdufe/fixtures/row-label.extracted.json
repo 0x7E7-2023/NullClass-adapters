@@ -1,0 +1,123 @@
+{
+  "source": "qz-jsxsd",
+  "pageUrl": "http://jw.sdufe.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-09-09",
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期"
+  },
+  "screenTermMissing": false,
+  "cols": 8,
+  "calendar": {
+    "found": false,
+    "rows": []
+  },
+  "rows": [
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "星期一",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "星期二",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "星期三",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "星期四",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "星期五",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "星期六",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "星期日",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "(01,02小节) 08:00-09:40",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "形势与政策<br><font title=\"周次(节次)\">1-16(周)</font>"
+        ]
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "军事理论<br><font title=\"教师\">未知</font><br><font title=\"周次(节次)\">1-8(周)[01-02节]</font><br><font title=\"教室\">待定</font>"
+        ]
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "认不出节次课<br><font title=\"教师\">甲老师</font><br><font title=\"周次(节次)\">1-4(周)[11-12节]</font><br><font title=\"教室\">教1-101</font>"
+        ]
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ]
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "specVersion": 1,
+  "key": "hzu",
+  "name": "菏泽学院",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 yukoimi（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://222.206.176.102/jsxsd/",
+  "scheduleUrlHint": "https://222.206.176.102/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {"name":"合成用例：夏季 10 节、单双周、多个时间段、周历锚点","extracted":"fixtures/basic.extracted.json","expected":"fixtures/basic.expected.json"},
+    {"name":"合成用例：无逗号前置与后置单双、第1-第8周、共 N 周","extracted":"fixtures/week-forms.extracted.json","expected":"fixtures/week-forms.expected.json"},
+    {"name":"合成用例：缺教师缺教室、重复楼栋名、行首补节次","extracted":"fixtures/missing.extracted.json","expected":"fixtures/missing.expected.json"},
+    {"name":"合成用例：长课名提醒截到 20 字且整条不超过 200 字","extracted":"fixtures/long-name.extracted.json","expected":"fixtures/long-name.expected.json"},
+    {"name":"合成用例：没有周历时按 20 周，课表到第 22 周才抬高","extracted":"fixtures/no-calendar.extracted.json","expected":"fixtures/no-calendar.expected.json"},
+    {"name":"合成用例：第 11-12 节顺推时间、重复行不叠课","extracted":"fixtures/extra-period.extracted.json","expected":"fixtures/extra-period.expected.json"},
+    {"name":"合成用例：冬季下午提前 30 分钟","extracted":"fixtures/winter.extracted.json","expected":"fixtures/winter.expected.json"},
+    {"name":"合成用例：不连续节次不填中间空档，跳过并点名","extracted":"fixtures/period-gap.extracted.json","expected":"fixtures/period-gap.expected.json"}
+  ]
+}

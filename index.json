@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.11.02.1",
+  "version": "2026.11.02.2",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -1023,6 +1023,36 @@
       "name": "湖南科技学院",
       "version": "1.0.0",
       "path": "huse"
+    },
+    {
+      "key": "njfu",
+      "name": "南京林业大学",
+      "version": "1.0.0",
+      "path": "njfu"
+    },
+    {
+      "key": "lidapoly",
+      "name": "上海立达学院",
+      "version": "1.0.0",
+      "path": "lidapoly"
+    },
+    {
+      "key": "sdufe",
+      "name": "山东财经大学",
+      "version": "1.0.0",
+      "path": "sdufe"
+    },
+    {
+      "key": "wust",
+      "name": "武汉科技大学",
+      "version": "1.0.0",
+      "path": "wust"
+    },
+    {
+      "key": "hzu",
+      "name": "菏泽学院",
+      "version": "1.0.0",
+      "path": "hzu"
     }
   ]
 }

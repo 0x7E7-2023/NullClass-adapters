@@ -1,0 +1,123 @@
+{
+  "source": "qz-jsxsd",
+  "pageUrl": "https://bkjx.wust.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-09-09",
+  "term": {
+    "code": null,
+    "name": null
+  },
+  "screenTermMissing": true,
+  "cols": 8,
+  "calendar": {
+    "found": false,
+    "rows": []
+  },
+  "rows": [
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "星期一",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "星期二",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "星期三",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "星期四",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "星期五",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "星期六",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "星期日",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第13节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "实验课<br><font title=\"教师\">甲老师</font><br><font title=\"周次(节次)\">1-16(周)</font><br><font title=\"教室\">实验楼</font>",
+          "实验课<br><font title=\"教师\">甲老师</font><br><font title=\"周次(节次)\">1-16(周)</font><br><font title=\"教室\">实验楼</font>"
+        ]
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "",
+        "parts": [
+          "隔周讨论<br><font title=\"教师\">乙老师</font><br><font title=\"周次(节次)\">1-16周(单双)</font><br><font title=\"教室\">实验楼</font>"
+        ]
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "",
+        "parts": []
+      }
+    ]
+  ],
+  "campus": 0
+}

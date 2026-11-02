@@ -1,0 +1,24 @@
+{
+  "specVersion": 1,
+  "key": "lidapoly",
+  "name": "上海立达学院",
+  "initial": "S",
+  "version": "1.0.0",
+  "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://jw.lidapoly.edu.cn/shldzyjsxy_jsxsd",
+  "scheduleUrlHint": "http://jw.lidapoly.edu.cn/shldzyjsxy_jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {"name":"合成用例：16 节、班级字段周次、课名学分后缀、周历 18 周","extracted":"fixtures/basic.extracted.json","expected":"fixtures/basic.expected.json"},
+    {"name":"合成用例：无逗号前置与后置单双、第1-第8周、共 N 周","extracted":"fixtures/week-forms.extracted.json","expected":"fixtures/week-forms.expected.json"},
+    {"name":"合成用例：行首补节次、未知和待定留空、映射失败出声","extracted":"fixtures/row-label.extracted.json","expected":"fixtures/row-label.expected.json"},
+    {"name":"合成用例：长课名提醒截到 20 字且整条不超过 200 字","extracted":"fixtures/long-name.extracted.json","expected":"fixtures/long-name.expected.json"},
+    {"name":"合成用例：第 13 节使用学校正式时间、认不出的单双出声","extracted":"fixtures/extra-period.extracted.json","expected":"fixtures/extra-period.expected.json"},
+    {"name":"合成用例：同一门课重复行只保留映射后的那一条","extracted":"fixtures/repeat-row.extracted.json","expected":"fixtures/repeat-row.expected.json"},
+    {"name":"合成用例：12 月仍使用同一套 16 节，开学日取周历","extracted":"fixtures/winter-calendar.extracted.json","expected":"fixtures/winter-calendar.expected.json"}
+  ]
+}

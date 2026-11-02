@@ -1,0 +1,182 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "开学日期无法从教务获取，已按最近的周一（2026-09-07）推算，请在「学期管理」里核对",
+    "没能确认上课校区，节次时间已按黄家湖校区填写；如果是青山校区，请在「学期管理」里核对上午前四节",
+    "教务没有给出学期总周数，已按 20 周计，请在「学期管理」里核对",
+    "有 2 个上课安排没能认出来，已跳过（没认出节次 2 个）。教务页面的写法可能有变化，欢迎反馈。包含：午休讲座（甲老师）——没认出节次；未映射课（甲老师）——没认出节次",
+    "有 1 门课教务没有给任课教师，已留空（例如 体育），可在对应课程的「编辑课程」里补充",
+    "有 1 门课教务没有给上课地点，已留空（例如 体育），可在对应课程的「编辑课程」里补充"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:20",
+          "end": "09:05"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:15",
+          "end": "10:00"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:20",
+          "end": "11:05"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:15",
+          "end": "12:00"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:55",
+          "end": "15:40"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:00",
+          "end": "16:45"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:55",
+          "end": "17:40"
+        },
+        {
+          "periodIndex": 9,
+          "start": "18:40",
+          "end": "19:25"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:35",
+          "end": "20:20"
+        },
+        {
+          "periodIndex": 11,
+          "start": "20:40",
+          "end": "21:25"
+        },
+        {
+          "periodIndex": 12,
+          "start": "21:35",
+          "end": "22:20"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 1,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教1-101"
+            }
+          ]
+        },
+        {
+          "name": "跨节课",
+          "teacher": "丁老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "教B1"
+            }
+          ]
+        },
+        {
+          "name": "电路基础",
+          "teacher": "乙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 2,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 7,
+              "weekType": "ODD",
+              "location": "教A101"
+            },
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 2,
+              "endPeriod": 2,
+              "startWeek": 10,
+              "endWeek": 16,
+              "weekType": "EVEN",
+              "location": "教A101"
+            }
+          ]
+        },
+        {
+          "name": "模拟电子",
+          "teacher": "丙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 3,
+              "startWeek": 1,
+              "endWeek": 7,
+              "weekType": "ODD",
+              "location": "教A102"
+            },
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 3,
+              "startWeek": 10,
+              "endWeek": 16,
+              "weekType": "EVEN",
+              "location": "教A102"
+            }
+          ]
+        },
+        {
+          "name": "体育",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 4,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
