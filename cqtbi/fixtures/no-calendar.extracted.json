@@ -1,0 +1,17 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程、教师、教室均为虚构，无真实个人信息。只验证确定输入的转换回归，不代表真实教务页面已验证。",
+  "source": "cqtbi-mainV",
+  "termCode": "2026-2027-1",
+  "today": "2026-09-13",
+  "calendar": null,
+  "items": [
+    {
+      "name": "无周历课程",
+      "teacherText": "暂无",
+      "sectionsText": "01~02~03节",
+      "roomText": "未知地点",
+      "weekText": "第1-20周(全部)",
+      "day": 1
+    }
+  ]
+}

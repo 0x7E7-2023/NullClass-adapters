@@ -1,0 +1,44 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程、教师、教室均为虚构，无真实个人信息。只验证确定输入的转换回归，不代表真实教务页面已验证。",
+  "source": "cqtbi-mainV",
+  "termCode": "2026-2027-1",
+  "today": "2026-09-13",
+  "calendar": {
+    "firstDate": "2026-09-07",
+    "totalWeeks": 18
+  },
+  "items": [
+    {
+      "name": "前置单双",
+      "teacherText": "甲老师",
+      "sectionsText": "01~02节",
+      "roomText": "教1-101",
+      "weekText": "(单)1-8周(双)9-16周",
+      "day": 1
+    },
+    {
+      "name": "多段周次",
+      "teacherText": "甲老师",
+      "sectionsText": "03~04节",
+      "roomText": "教1-101",
+      "weekText": "第1-3,5-9周(全部) 星期二",
+      "day": 2
+    },
+    {
+      "name": "合并周次",
+      "teacherText": "甲老师",
+      "sectionsText": "05~06~07节",
+      "roomText": "教1-101",
+      "weekText": "第1-8周(单)",
+      "day": 3
+    },
+    {
+      "name": "合并周次",
+      "teacherText": "甲老师",
+      "sectionsText": "05~06~07节",
+      "roomText": "教1-101",
+      "weekText": "第2-16周(双)",
+      "day": 3
+    }
+  ]
+}

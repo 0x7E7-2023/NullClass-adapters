@@ -1,0 +1,22 @@
+{
+  "specVersion": 1,
+  "key": "cug",
+  "name": "中国地质大学（武汉）",
+  "initial": "Z",
+  "version": "1.0.0",
+  "author": "上游 kncatl（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwgl.cug.edu.cn/jwglxt/xtgl/login_slogin.html",
+  "scheduleUrlHint": "https://jwgl.cug.edu.cn/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {"name":"合成用例：南望山秋冬季、校区地点与周历","extracted":"fixtures/basic.extracted.json","expected":"fixtures/basic.expected.json"},
+    {"name":"合成用例：南望山春夏季与周次写法","extracted":"fixtures/summer.extracted.json","expected":"fixtures/summer.expected.json"},
+    {"name":"合成用例：未来城校区与无周历推算","extracted":"fixtures/future.extracted.json","expected":"fixtures/future.expected.json"},
+    {"name":"合成用例：取消作息选择后使用推荐项","extracted":"fixtures/defaulted.extracted.json","expected":"fixtures/defaulted.expected.json"},
+    {"name":"合成用例：教务作息优先与额外节次","extracted":"fixtures/api-times.extracted.json","expected":"fixtures/api-times.expected.json"}
+  ]
+}

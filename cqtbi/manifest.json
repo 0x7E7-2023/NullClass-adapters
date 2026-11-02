@@ -1,0 +1,22 @@
+{
+  "specVersion": 1,
+  "key": "cqtbi",
+  "name": "重庆工商职业学院",
+  "initial": "C",
+  "version": "1.0.0",
+  "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://jwgl.cqtbi.edu.cn:81/jsxsd/framework/xsMain.jsp",
+  "scheduleUrlHint": "http://jwgl.cqtbi.edu.cn:81/jsxsd/framework/xsMainV.htmlx",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {"name":"合成用例：全部周、周历、重复卡片与缺字段","extracted":"fixtures/basic.extracted.json","expected":"fixtures/basic.expected.json"},
+    {"name":"合成用例：单双周、多段周次与前置标记","extracted":"fixtures/week-forms.extracted.json","expected":"fixtures/week-forms.expected.json"},
+    {"name":"合成用例：周历日期对齐与总周数抬高","extracted":"fixtures/calendar.extracted.json","expected":"fixtures/calendar.expected.json"},
+    {"name":"合成用例：无周历回退与占位教师教室","extracted":"fixtures/no-calendar.extracted.json","expected":"fixtures/no-calendar.expected.json"},
+    {"name":"合成用例：不连续节次和无效卡片跳过提醒","extracted":"fixtures/invalid.extracted.json","expected":"fixtures/invalid.expected.json"}
+  ]
+}

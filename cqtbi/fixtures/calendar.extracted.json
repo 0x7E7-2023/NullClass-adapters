@@ -1,0 +1,20 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程、教师、教室均为虚构，无真实个人信息。只验证确定输入的转换回归，不代表真实教务页面已验证。",
+  "source": "cqtbi-mainV",
+  "termCode": "2026-2027-1",
+  "today": "2026-09-13",
+  "calendar": {
+    "firstDate": "2026-09-09",
+    "totalWeeks": 16
+  },
+  "items": [
+    {
+      "name": "毕业设计",
+      "teacherText": "甲老师",
+      "sectionsText": "01~02节",
+      "roomText": "教1-101",
+      "weekText": "第1-22周(全部)",
+      "day": 6
+    }
+  ]
+}

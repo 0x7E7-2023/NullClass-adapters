@@ -1,0 +1,33 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程、教师、教室均为虚构，无真实个人信息。只验证确定输入的转换回归，不代表真实教务页面已验证。",
+  "term": {
+    "xnm": "2026",
+    "xqm": "3",
+    "xnmText": "2026-2027",
+    "xqmText": "第一学期"
+  },
+  "today": "2026-09-13",
+  "campusId": "01",
+  "raw": {
+    "kbList": [
+      {
+        "kcmc": "毕业设计",
+        "xm": "甲老师",
+        "cdmc": "教1-101",
+        "xqj": "6",
+        "jcs": "1-2",
+        "zcd": "1-22周",
+        "xqmc": "未来城校区"
+      }
+    ],
+    "sjkList": []
+  },
+  "total": 1,
+  "periodTimes": null,
+  "calendar": null,
+  "scheduleChoice": {
+    "index": 2,
+    "name": "未来城校区",
+    "defaulted": false
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程、教师、教室均为虚构，无真实个人信息。只验证确定输入的转换回归，不代表真实教务页面已验证。",
+  "source": "cqtbi-mainV",
+  "termCode": "2026-2027-1",
+  "today": "2026-09-13",
+  "calendar": {
+    "firstDate": "2026-09-07",
+    "totalWeeks": 18
+  },
+  "items": [
+    {
+      "name": "有效课程",
+      "teacherText": "甲老师",
+      "sectionsText": "01~02节",
+      "roomText": "教1-101",
+      "weekText": "第1-16周(全部)",
+      "day": 1
+    },
+    {
+      "name": "",
+      "teacherText": "甲老师",
+      "sectionsText": "01~02节",
+      "roomText": "教1-101",
+      "weekText": "第1-16周",
+      "day": 1
+    },
+    {
+      "name": "坏星期",
+      "teacherText": "甲老师",
+      "sectionsText": "01~02节",
+      "roomText": "教1-101",
+      "weekText": "第1-16周",
+      "day": 8
+    },
+    {
+      "name": "坏周次",
+      "teacherText": "甲老师",
+      "sectionsText": "01~02节",
+      "roomText": "教1-101",
+      "weekText": "没有周次",
+      "day": 1
+    },
+    {
+      "name": "不连续节次",
+      "teacherText": "甲老师",
+      "sectionsText": "01~03节",
+      "roomText": "教1-101",
+      "weekText": "第1-16周",
+      "day": 2
+    },
+    {
+      "name": "超出节次",
+      "teacherText": "甲老师",
+      "sectionsText": "12~13节",
+      "roomText": "教1-101",
+      "weekText": "第1-16周",
+      "day": 2
+    }
+  ]
+}

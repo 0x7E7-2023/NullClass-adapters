@@ -1,0 +1,44 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程、教师、教室均为虚构，无真实个人信息。只验证确定输入的转换回归，不代表真实教务页面已验证。",
+  "source": "cqtbi-mainV",
+  "termCode": "2026-2027-1",
+  "today": "2026-09-13",
+  "calendar": {
+    "firstDate": "2026-09-07",
+    "totalWeeks": 18
+  },
+  "items": [
+    {
+      "name": "高等数学",
+      "teacherText": "甲老师",
+      "sectionsText": "01~02节",
+      "roomText": "教1-101",
+      "weekText": "第1-16周(全部) 星期一",
+      "day": 1
+    },
+    {
+      "name": "大学英语",
+      "teacherText": "甲老师",
+      "sectionsText": "03~04节",
+      "roomText": "教1-101",
+      "weekText": "第1-16周(单) 星期二",
+      "day": 2
+    },
+    {
+      "name": "大学体育",
+      "teacherText": "未知",
+      "sectionsText": "05~06节",
+      "roomText": "待定",
+      "weekText": "第2-16周(双) 星期四",
+      "day": 4
+    },
+    {
+      "name": "高等数学",
+      "teacherText": "甲老师",
+      "sectionsText": "01~02节",
+      "roomText": "教1-101",
+      "weekText": "第1-16周(全部) 星期一",
+      "day": 1
+    }
+  ]
+}
