@@ -1,0 +1,69 @@
+{
+  "_note": "合成 fixture：课程与教师全部虚构（甲 / 乙 老师，C301 等教室号），无真实个人信息。",
+  "_case": "学期起止日期 2026-03-04（周三）至 2026-06-24（周三，恰好相隔 16 整周，末日所在那一周也要算上）算出 17 周，开学日回退到周一 2026-03-02；课表排到第 19 周，超出 17 周，总周数抬到 19 并提醒；节次时间组重复（两组内容相同，去重）；课表用到第 11-13 节，第 11-12 节用默认时间、第 13 节顺推，并提醒。",
+  "term": {
+    "year": "2025-2026",
+    "term": "春",
+    "beginDate": "2026-03-04",
+    "endDate": "2026-06-24"
+  },
+  "pick": "date",
+  "today": "2026-03-20",
+  "periodLists": [
+    [
+      { "smallPeriod": "1", "startTime": "08:30", "endTime": "09:15" },
+      { "smallPeriod": "2", "startTime": "09:20", "endTime": "10:05" },
+      { "smallPeriod": "3", "startTime": "10:20", "endTime": "11:05" },
+      { "smallPeriod": "4", "startTime": "11:10", "endTime": "11:55" },
+      { "smallPeriod": "5", "startTime": "14:00", "endTime": "14:45" },
+      { "smallPeriod": "6", "startTime": "14:50", "endTime": "15:35" },
+      { "smallPeriod": "7", "startTime": "15:50", "endTime": "16:35" },
+      { "smallPeriod": "8", "startTime": "16:40", "endTime": "17:25" },
+      { "smallPeriod": "9", "startTime": "18:30", "endTime": "19:15" },
+      { "smallPeriod": "10", "startTime": "19:20", "endTime": "20:05" }
+    ],
+    [
+      { "smallPeriod": "1", "startTime": "08:30", "endTime": "09:15" },
+      { "smallPeriod": "2", "startTime": "09:20", "endTime": "10:05" },
+      { "smallPeriod": "3", "startTime": "10:20", "endTime": "11:05" },
+      { "smallPeriod": "4", "startTime": "11:10", "endTime": "11:55" },
+      { "smallPeriod": "5", "startTime": "14:00", "endTime": "14:45" },
+      { "smallPeriod": "6", "startTime": "14:50", "endTime": "15:35" },
+      { "smallPeriod": "7", "startTime": "15:50", "endTime": "16:35" },
+      { "smallPeriod": "8", "startTime": "16:40", "endTime": "17:25" },
+      { "smallPeriod": "9", "startTime": "18:30", "endTime": "19:15" },
+      { "smallPeriod": "10", "startTime": "19:20", "endTime": "20:05" }
+    ]
+  ],
+  "raw": {
+    "rows": [
+      {
+        "courseName": "数据结构",
+        "instructorName": "甲老师",
+        "roomName": "C301",
+        "campusName": "",
+        "weekDay": "2",
+        "periodFormat": "1-2",
+        "teachingWeekFormat": "1-19"
+      },
+      {
+        "courseName": "形势与政策",
+        "instructorName": "乙老师",
+        "roomName": "C302",
+        "campusName": "",
+        "weekDay": "4",
+        "periodFormat": "11-13",
+        "teachingWeekFormat": "1-16"
+      },
+      {
+        "courseName": "数据结构",
+        "instructorName": "甲老师",
+        "roomName": "C301",
+        "campusName": "",
+        "weekDay": "2",
+        "periodFormat": "1-2",
+        "teachingWeekFormat": "1-19"
+      }
+    ]
+  }
+}

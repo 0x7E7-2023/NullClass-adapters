@@ -1,0 +1,71 @@
+{
+  "_note": "合成 fixture：课程与教师全部虚构（乙 / 丙 / 丁 老师，B201 等教室号），无真实个人信息。",
+  "_case": "周次单双标记与「共 N 周」剥离：(单)1-8周,(双)9-16周 / (单)1-8周(双)9-16周 / 1-8周(单),9-16周(双) 都读成 1-7 单周 + 10-16 双周；1-15周(单) 共16周 只读 1-15 单周；1-8周(共8周),9-16周 只剥备注、整段 1-16 周。教务未标当前学期，按列表第一个导入；无起止日期，开学日按春季锚点推算，总周数 20。 「第1-第8周」（终点前带「第」）读成 1-8 周。",
+  "term": {
+    "year": "2025-2026",
+    "term": "春",
+    "beginDate": "",
+    "endDate": ""
+  },
+  "pick": "first",
+  "today": "2026-03-10",
+  "periodLists": null,
+  "raw": {
+    "rows": [
+      {
+        "courseName": "单周课",
+        "instructorName": "乙老师",
+        "roomName": "B201",
+        "campusName": "西校区",
+        "weekDay": "1",
+        "periodFormat": "1-2",
+        "teachingWeekFormat": "(单)1-8周,(双)9-16周"
+      },
+      {
+        "courseName": "前置无逗号课",
+        "instructorName": "乙老师",
+        "roomName": "B202",
+        "campusName": "西校区",
+        "weekDay": "2",
+        "periodFormat": "1-2",
+        "teachingWeekFormat": "(单)1-8周(双)9-16周"
+      },
+      {
+        "courseName": "后置无逗号课",
+        "instructorName": "乙老师",
+        "roomName": "B203",
+        "campusName": "西校区",
+        "weekDay": "3",
+        "periodFormat": "1-2",
+        "teachingWeekFormat": "1-8周(单),9-16周(双)"
+      },
+      {
+        "courseName": "共十六周课",
+        "instructorName": "丙老师",
+        "roomName": "B204",
+        "campusName": "西校区",
+        "weekDay": "4",
+        "periodFormat": "1-2",
+        "teachingWeekFormat": "1-15周(单) 共16周"
+      },
+      {
+        "courseName": "共备注课",
+        "instructorName": "丁老师",
+        "roomName": "B205",
+        "campusName": "西校区",
+        "weekDay": "5",
+        "periodFormat": "1-2",
+        "teachingWeekFormat": "1-8周(共8周),9-16周"
+      },
+      {
+        "courseName": "第字周次课",
+        "instructorName": "丁老师",
+        "roomName": "B206",
+        "campusName": "西校区",
+        "weekDay": "6",
+        "periodFormat": "1-2",
+        "teachingWeekFormat": "第1-第8周"
+      }
+    ]
+  }
+}

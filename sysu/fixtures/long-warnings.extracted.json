@@ -1,0 +1,17 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 交出去的样子编造，课名为虚构的超长课名，无真实个人信息。",
+  "_case": "带课名的提醒不超 200 字：超长课名（25 字、21 字）在提醒里截到 20 字加「…」；缺教师 4 门（点名 3 个后加「等」）、缺教室 3 门；认不出的周次（单双周看通知）按开始周导入并提醒；部分认得的周次（1-8周,待定周）只导入认出的部分并提醒；课名为空、周次只写「待定」且无开始周的行跳过并计数",
+  "acadYear": "2026-1",
+  "startDate": "2026-09-07",
+  "rows": [
+    { "courseName": "本(专必)国家安全与公共安全概论及相关实践教学专题研讨课程", "teachingStaffName": "", "classPlace": "", "week": 1, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "1-16周" },
+    { "courseName": "现代数学分析与实践创新专题训练课程A（二）", "teachingStaffName": "周老师", "classPlace": "未知", "week": 2, "startClassTimes": 3, "endClassTimes": 4, "startWeek": 1, "timeDetail": "1-16周" },
+    { "courseName": "理论力学（一）", "teachingStaffName": "", "classPlace": "", "week": 3, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "1-16周" },
+    { "courseName": "周次乱写课", "teachingStaffName": "吴老师", "classPlace": "教三", "week": 4, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 2, "timeDetail": "单双周看通知" },
+    { "courseName": "部分认得的周次课", "teachingStaffName": "郑老师", "classPlace": "教四", "week": 5, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "1-8周,待定周" },
+    { "courseName": "", "teachingStaffName": "王老师", "classPlace": "教五", "week": 6, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "1-16周" },
+    { "courseName": "大学体育（三）", "teachingStaffName": "", "classPlace": "体育馆", "week": 6, "startClassTimes": 5, "endClassTimes": 6, "startWeek": 1, "timeDetail": "1-16周" },
+    { "courseName": "数据结构", "teachingStaffName": "", "classPlace": "教二", "week": 7, "startClassTimes": 3, "endClassTimes": 4, "startWeek": 1, "timeDetail": "1-16周" },
+    { "courseName": "待定周次的课", "teachingStaffName": "赵老师", "classPlace": "", "week": 7, "startClassTimes": 5, "endClassTimes": 6, "timeDetail": "待定" }
+  ]
+}

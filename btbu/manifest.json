@@ -1,0 +1,64 @@
+{
+  "specVersion": 1,
+  "key": "btbu",
+  "name": "北京工商大学",
+  "initial": "B",
+  "version": "1.0.0",
+  "author": "上游 lztttt（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwgl.btbu.edu.cn/jsxsd/",
+  "scheduleUrlHint": "https://jwgl.btbu.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "vpn.btbu.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表，三门课分别是整周、单周、双周；13 节节次时间；开学日按今天所在周的周一推算并提醒",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：多段周次写法，无逗号前置单双、后置单双、逗号后置单双、第1-第8周、共 N 周只剥备注",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：没有方括号时用行首「1~2节」补节次，暂无教师和暂无教室留空并汇总",
+      "extracted": "fixtures/row-label.extracted.json",
+      "expected": "fixtures/row-label.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒截到 20 字，四门缺教师的课只列三门，整条不超过 200 字",
+      "extracted": "fixtures/long-name.extracted.json",
+      "expected": "fixtures/long-name.expected.json"
+    },
+    {
+      "name": "合成用例：课表到第 22 周才抬高总周数，第 14、15 节顺推补齐，第 17 节补不了，这门课跳过并提醒",
+      "extracted": "fixtures/late-week.extracted.json",
+      "expected": "fixtures/late-week.expected.json"
+    },
+    {
+      "name": "合成用例：课名前的纯编号兜底建课，「------」分隔线分开两门课，隐藏副本不重复，未知教师和未知地点留空",
+      "extracted": "fixtures/code-divider.extracted.json",
+      "expected": "fixtures/code-divider.expected.json"
+    },
+    {
+      "name": "合成用例：没有标出当前学期时取列表第一项并提醒；同一门课相邻节次与重复行合并成一段",
+      "extracted": "fixtures/term-first.extracted.json",
+      "expected": "fixtures/term-first.expected.json"
+    },
+    {
+      "name": "合成用例：有教务周历，第 1 周星期一格是 9 月 2 日，开学日对齐到周一并提醒，总周数用周历的 18 周",
+      "extracted": "fixtures/calendar.extracted.json",
+      "expected": "fixtures/calendar.expected.json"
+    },
+    {
+      "name": "合成用例：第 3 学期（夏季小学期）没取到周历——开学日按 7 月 1 日所在周的周一推算（学年的后一年），不能推到前一年 9 月",
+      "extracted": "fixtures/term-summer.extracted.json",
+      "expected": "fixtures/term-summer.expected.json"
+    }
+  ]
+}

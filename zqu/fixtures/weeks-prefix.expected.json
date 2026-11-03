@@ -1,0 +1,248 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了「2025-2026学年第二学期」；要导入别的学期，请先在教务「我的课表」页面里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「第二学期 = 2 月 20 日所在周的周一」推算为 2026-02-16，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第二学期",
+      "firstDay": "2026-02-16",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:40"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:50",
+          "end": "09:30"
+        },
+        {
+          "periodIndex": 3,
+          "start": "09:50",
+          "end": "10:30"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:40",
+          "end": "11:20"
+        },
+        {
+          "periodIndex": 5,
+          "start": "11:30",
+          "end": "12:10"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:30",
+          "end": "15:10"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:20",
+          "end": "16:00"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:15",
+          "end": "16:55"
+        },
+        {
+          "periodIndex": 9,
+          "start": "17:05",
+          "end": "17:45"
+        },
+        {
+          "periodIndex": 10,
+          "start": "17:55",
+          "end": "18:35"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:00",
+          "end": "19:40"
+        },
+        {
+          "periodIndex": 12,
+          "start": "19:50",
+          "end": "20:30"
+        },
+        {
+          "periodIndex": 13,
+          "start": "20:40",
+          "end": "21:20"
+        },
+        {
+          "periodIndex": 14,
+          "start": "21:30",
+          "end": "22:10"
+        }
+      ],
+      "courses": [
+        {
+          "name": "课A",
+          "teacher": "T1",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 7,
+              "weekType": "ODD",
+              "location": "L1"
+            },
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 10,
+              "endWeek": 16,
+              "weekType": "EVEN",
+              "location": "L1"
+            }
+          ]
+        },
+        {
+          "name": "课B",
+          "teacher": "T2",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 7,
+              "weekType": "ODD",
+              "location": "L2"
+            },
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 10,
+              "endWeek": 16,
+              "weekType": "EVEN",
+              "location": "L2"
+            }
+          ]
+        },
+        {
+          "name": "课C",
+          "teacher": "T3",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 7,
+              "weekType": "ODD",
+              "location": "L3"
+            },
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 10,
+              "endWeek": 16,
+              "weekType": "EVEN",
+              "location": "L3"
+            }
+          ]
+        },
+        {
+          "name": "课D",
+          "teacher": "T4",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 7,
+              "weekType": "ODD",
+              "location": "L4"
+            },
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 10,
+              "endWeek": 16,
+              "weekType": "EVEN",
+              "location": "L4"
+            }
+          ]
+        },
+        {
+          "name": "课E",
+          "teacher": "T5",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 7,
+              "weekType": "ODD",
+              "location": "L5"
+            },
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 10,
+              "endWeek": 16,
+              "weekType": "EVEN",
+              "location": "L5"
+            }
+          ]
+        },
+        {
+          "name": "课F",
+          "teacher": "T6",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 6,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 7,
+              "weekType": "ODD",
+              "location": "L6"
+            }
+          ]
+        },
+        {
+          "name": "课G",
+          "teacher": "T7",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 7,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 15,
+              "weekType": "ODD",
+              "location": "L7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

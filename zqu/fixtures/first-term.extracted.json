@@ -1,0 +1,37 @@
+{
+  "_note": "合成 fixture：字段形状照 extract.js 实际交出去的样子编造（kcmc / teaxms / jxcdmc / xq / zc / jcdm2 / jcdm），课程、教师、教室均为虚构，无真实个人信息。",
+  "term": {
+    "code": "2026-2027-1",
+    "name": "",
+    "source": "first"
+  },
+  "today": "2026-08-20",
+  "dateInfo": {
+    "1": {
+      "0": {
+        "xqmc": "1",
+        "rq": "2024-09-02"
+      }
+    }
+  },
+  "rows": [
+    {
+      "kcmc": "数字电路",
+      "teaxms": "冯波",
+      "jxcdmc": "教一-505",
+      "xq": "1",
+      "zc": "1-12",
+      "jcdm2": "01,02",
+      "jcdm": ""
+    },
+    {
+      "kcmc": "模拟电路",
+      "teaxms": "冯波",
+      "jxcdmc": "教一-505",
+      "xq": "2",
+      "zc": "1-12",
+      "jcdm2": "03,04",
+      "jcdm": ""
+    }
+  ]
+}

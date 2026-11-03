@@ -1,0 +1,14 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课名、教师、教室均为虚构，无真实个人信息。",
+  "_case": "重复记录不放大提醒：同一条「见通知」记录重复 3 次 → 只算 1 门课的周次没看懂；同一条「1-8周,31-32周」重复 3 次 → 越界周次只计 2 个（不是 6 个）",
+  "acadYear": "2026-1",
+  "startDate": "2026-09-07",
+  "rows": [
+    { "courseName": "见通知课", "teachingStaffName": "甲老师", "classPlace": "教一", "week": 1, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "见通知" },
+    { "courseName": "见通知课", "teachingStaffName": "甲老师", "classPlace": "教一", "week": 1, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "见通知" },
+    { "courseName": "见通知课", "teachingStaffName": "甲老师", "classPlace": "教一", "week": 1, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "见通知" },
+    { "courseName": "越界课", "teachingStaffName": "乙老师", "classPlace": "教二", "week": 2, "startClassTimes": 3, "endClassTimes": 4, "startWeek": 1, "timeDetail": "1-8周,31-32周" },
+    { "courseName": "越界课", "teachingStaffName": "乙老师", "classPlace": "教二", "week": 2, "startClassTimes": 3, "endClassTimes": 4, "startWeek": 1, "timeDetail": "1-8周,31-32周" },
+    { "courseName": "越界课", "teachingStaffName": "乙老师", "classPlace": "教二", "week": 2, "startClassTimes": 3, "endClassTimes": 4, "startWeek": 1, "timeDetail": "1-8周,31-32周" }
+  ]
+}

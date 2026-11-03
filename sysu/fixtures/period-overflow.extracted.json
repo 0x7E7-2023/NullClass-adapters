@@ -1,0 +1,10 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 交出去的样子编造，课名、教师、教室均为虚构，无真实个人信息。",
+  "_case": "节次超出学校 11 节：第 12-13 节按统一修订 H3 顺推补上（21:40 起、22:30 起）；第 14 节顺推会超过 23:59，补不上并提醒，课照常导入",
+  "acadYear": "2026-1",
+  "startDate": "2026-09-07",
+  "rows": [
+    { "courseName": "晚间实践课", "teachingStaffName": "甲老师", "classPlace": "实验楼", "week": 5, "startClassTimes": 12, "endClassTimes": 13, "startWeek": 1, "timeDetail": "1-8周" },
+    { "courseName": "晚间综合课", "teachingStaffName": "乙老师", "classPlace": "实验楼", "week": 6, "startClassTimes": 13, "endClassTimes": 14, "startWeek": 1, "timeDetail": "1-4周" }
+  ]
+}

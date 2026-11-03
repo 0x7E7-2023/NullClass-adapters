@@ -1,0 +1,107 @@
+{
+  "_note": "合成 fixture：课程与教师全部虚构（丁 / 戊 / 己 老师），课名为合成长名，无真实个人信息。",
+  "_case": "长课名 + 缺教师 / 缺教室 + 脏行（缺课程名、星期 9、缺节次、认不出的周次）+ 括号备注过长。提醒里点名的课名截到 20 字（末尾「…」），括号备注截到 20 字，每条提醒不超 200 字，缺教师 / 缺教室按类型汇总计数。",
+  "term": {
+    "year": "2026-2027",
+    "term": "秋",
+    "beginDate": "2026-09-07",
+    "endDate": "2027-01-15"
+  },
+  "pick": "active",
+  "today": "2026-10-20",
+  "periodLists": [
+    [
+      { "smallPeriod": "1", "startTime": "08:00", "endTime": "08:45" },
+      { "smallPeriod": "2", "startTime": "08:55", "endTime": "09:40" },
+      { "smallPeriod": "3", "startTime": "10:00", "endTime": "10:45" },
+      { "smallPeriod": "4", "startTime": "10:55", "endTime": "11:40" },
+      { "smallPeriod": "5", "startTime": "14:00", "endTime": "14:45" },
+      { "smallPeriod": "6", "startTime": "14:55", "endTime": "15:40" }
+    ]
+  ],
+  "raw": {
+    "rows": [
+      {
+        "courseName": "跨境电子商务与国际贸易综合实践专题研讨课程",
+        "instructorName": "",
+        "roomName": "A101",
+        "campusName": "",
+        "weekDay": "1",
+        "periodFormat": "1-2",
+        "teachingWeekFormat": "1-16"
+      },
+      {
+        "courseName": "现代企业管理案例分析与实训课程设计报告撰写",
+        "instructorName": "",
+        "roomName": "A102",
+        "campusName": "",
+        "weekDay": "2",
+        "periodFormat": "3-4",
+        "teachingWeekFormat": "1-16"
+      },
+      {
+        "courseName": "数字经济背景下的供应链金融风险防控与应用研究",
+        "instructorName": "",
+        "roomName": "A103",
+        "campusName": "",
+        "weekDay": "3",
+        "periodFormat": "5-6",
+        "teachingWeekFormat": "1-16"
+      },
+      {
+        "courseName": "体育",
+        "instructorName": "丁老师",
+        "roomName": "",
+        "campusName": "",
+        "weekDay": "4",
+        "periodFormat": "1-2",
+        "teachingWeekFormat": "1-16"
+      },
+      {
+        "courseName": "",
+        "instructorName": "乙老师",
+        "roomName": "A104",
+        "campusName": "",
+        "weekDay": "1",
+        "periodFormat": "1-2",
+        "teachingWeekFormat": "1-16"
+      },
+      {
+        "courseName": "坏周次课",
+        "instructorName": "戊老师",
+        "roomName": "A105",
+        "campusName": "",
+        "weekDay": "6",
+        "periodFormat": "7-8",
+        "teachingWeekFormat": "全学期以学校通知为准"
+      },
+      {
+        "courseName": "坏星期课",
+        "instructorName": "戊老师",
+        "roomName": "A106",
+        "campusName": "",
+        "weekDay": "9",
+        "periodFormat": "1-2",
+        "teachingWeekFormat": "1-16"
+      },
+      {
+        "courseName": "坏节次课",
+        "instructorName": "戊老师",
+        "roomName": "A107",
+        "campusName": "",
+        "weekDay": "7",
+        "periodFormat": "",
+        "teachingWeekFormat": "1-16"
+      },
+      {
+        "courseName": "数据库原理",
+        "instructorName": "己老师",
+        "roomName": "A108",
+        "campusName": "",
+        "weekDay": "7",
+        "periodFormat": "1-2",
+        "teachingWeekFormat": "1-16周(第二次实验课程的分组安排与成绩评定说明文字)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "没取到教务的周历，开学日按 9 月 1 日所在周的周一推算为 2026-08-31，请在「学期管理」里核对",
+    "教务没有给出学期总周数，课表里有到第 22 周的课，已按 22 周计，请在「学期管理」里核对",
+    "课表里有第 14 至 15 节，节次时间里没有这几节，已临时补上（21:15 起），请到「学期管理」里核对真实的上下课时间",
+    "有 1 个上课安排没能认出来，已跳过（节次超出可补的范围 1 个）。包含：工程制图实训——节次超出可补的范围"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 22,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:50", "end": "09:35" },
+        { "periodIndex": 3, "start": "09:50", "end": "10:35" },
+        { "periodIndex": 4, "start": "10:40", "end": "11:25" },
+        { "periodIndex": 5, "start": "11:30", "end": "12:15" },
+        { "periodIndex": 6, "start": "13:40", "end": "14:25" },
+        { "periodIndex": 7, "start": "14:30", "end": "15:15" },
+        { "periodIndex": 8, "start": "15:30", "end": "16:15" },
+        { "periodIndex": 9, "start": "16:20", "end": "17:05" },
+        { "periodIndex": 10, "start": "17:10", "end": "17:55" },
+        { "periodIndex": 11, "start": "18:45", "end": "19:30" },
+        { "periodIndex": 12, "start": "19:35", "end": "20:20" },
+        { "periodIndex": 13, "start": "20:25", "end": "21:10" },
+        { "periodIndex": 14, "start": "21:15", "end": "22:00" },
+        { "periodIndex": 15, "start": "22:05", "end": "22:50" }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 22, "weekType": "ALL", "location": "树人楼北502" }
+          ]
+        },
+        {
+          "name": "体育",
+          "teacher": "丙老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 14, "endPeriod": 15, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "体育馆" }
+          ]
+        }
+      ]
+    }
+  ]
+}

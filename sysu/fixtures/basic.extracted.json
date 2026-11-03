@@ -1,0 +1,16 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 交出去的样子编造（课名、教师、教室均为虚构），无真实个人信息。",
+  "_case": "基本：校历给了开学日；本部 1 节起的课表；单双周、双周、每周各一；缺教师（体育）、缺教室（写「未知」）；完全重复的一行只留一条；课名带「本(专必)」类别前缀；排到第 12-13 节 → 节次时间按统一修订 H3 补上",
+  "acadYear": "2026-1",
+  "startDate": "2026-09-07",
+  "rows": [
+    { "courseName": "本(专必)高等数学一（I）", "teachingStaffName": "甲老师", "classPlace": "教学楼A-101", "week": "1", "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "1-16周" },
+    { "courseName": "大学英语", "teachingStaffName": "乙老师", "classPlace": "教学楼B-305", "week": 2, "startClassTimes": 3, "endClassTimes": 4, "startWeek": 1, "timeDetail": "1-16周(单)" },
+    { "courseName": "人体解剖学", "teachingStaffName": "丙老师", "classPlace": "解剖楼B201", "week": 3, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 2, "timeDetail": "2-16周(双)" },
+    { "courseName": "大学英语", "teachingStaffName": "乙老师", "classPlace": "教学楼B-305", "week": 2, "startClassTimes": 3, "endClassTimes": 4, "startWeek": 1, "timeDetail": "1-16周(单)" },
+    { "courseName": "大学体育(一)", "teachingStaffName": "", "classPlace": "田径场", "week": 4, "startClassTimes": 5, "endClassTimes": 6, "startWeek": 1, "timeDetail": "1-8周" },
+    { "courseName": "思想道德与法治", "teachingStaffName": "丁老师", "classPlace": "未知", "week": 3, "startClassTimes": 7, "endClassTimes": 8, "startWeek": 1, "timeDetail": "1-8周" },
+    { "courseName": "人体解剖学", "teachingStaffName": "丙老师", "classPlace": "解剖楼B201", "week": 5, "startClassTimes": 3, "endClassTimes": 4, "startWeek": 1, "timeDetail": "1-16周" },
+    { "courseName": "实验课(晚)", "teachingStaffName": "戊老师", "classPlace": "实验楼C101", "week": 5, "startClassTimes": 12, "endClassTimes": 13, "startWeek": 1, "timeDetail": "1-4周" }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "没取到教务的周历，开学日按 9 月 1 日所在周的周一推算为 2026-08-31，请在「学期管理」里核对",
+    "教务没有给出学期总周数，已按 20 周计，请在「学期管理」里核对",
+    "有 2 门课教务没有给任课教师，已留空（例如 C语言程序设计、形势与政策），可在对应课程的「编辑课程」里补充",
+    "有 1 门课教务没有给上课地点，已留空（例如 形势与政策），可在对应课程的「编辑课程」里补充"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:50", "end": "09:35" },
+        { "periodIndex": 3, "start": "09:50", "end": "10:35" },
+        { "periodIndex": 4, "start": "10:40", "end": "11:25" },
+        { "periodIndex": 5, "start": "11:30", "end": "12:15" },
+        { "periodIndex": 6, "start": "13:40", "end": "14:25" },
+        { "periodIndex": 7, "start": "14:30", "end": "15:15" },
+        { "periodIndex": 8, "start": "15:30", "end": "16:15" },
+        { "periodIndex": 9, "start": "16:20", "end": "17:05" },
+        { "periodIndex": 10, "start": "17:10", "end": "17:55" },
+        { "periodIndex": 11, "start": "18:45", "end": "19:30" },
+        { "periodIndex": 12, "start": "19:35", "end": "20:20" },
+        { "periodIndex": 13, "start": "20:25", "end": "21:10" }
+      ],
+      "courses": [
+        {
+          "name": "C语言程序设计",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "教学楼B-102" }
+          ]
+        },
+        {
+          "name": "数据库系统原理",
+          "teacher": "赵老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教学楼A-301" }
+          ]
+        },
+        {
+          "name": "20230101",
+          "teacher": "钱老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "综合楼1" }
+          ]
+        },
+        {
+          "name": "形势与政策",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "specVersion": 1,
+  "key": "zqu",
+  "name": "肇庆学院",
+  "initial": "Z",
+  "version": "1.0.0",
+  "author": "上游 NoobLLiu（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwgl.zqu.edu.cn/",
+  "scheduleUrlHint": "https://jwgl.zqu.edu.cn/xsgrkbcx!getXsgrbkList.action",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["webvpn.zqu.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 教务给了第 1 周日期（2025-09-01）→ 开学日取自教务；同课同时段两行周次合并成 1-18；大学英语 1-8 与 10-16 分两段；2-16(双) 偶数周；1-16周(单) 奇数周；完全重复行不计入",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法 + 推算开学日 · 「(单)1-8周,(双)9-16周」标记各归各段；「第1-第8周」与「1-8周(共16周),9-16周」合并成 1-16（只剥备注）；没有日期响应，第二学期按 2 月 20 日所在周推算为 2026-02-16",
+      "extracted": "fixtures/weeks-parity.extracted.json",
+      "expected": "fixtures/weeks-parity.expected.json"
+    },
+    {
+      "name": "合成用例：单双括号挨着下一段 · 「(单)1-8周(双)9-16周」「1-8周(单),9-16周(双)」「(单)1-8周,(双)9-16周」「1-8(单)9-16(双)」「1-8周(单)9-16周(双)」各读成 1-7 单 + 10-16 双；「第1-第8周(单)」「1-16周(单)共16周」",
+      "extracted": "fixtures/weeks-prefix.extracted.json",
+      "expected": "fixtures/weeks-prefix.expected.json"
+    },
+    {
+      "name": "合成用例：节次时间表之外 · 第 15、16 节按课间 5 分钟 / 每节 45 分钟顺推（22:15-23:00、23:05-23:50）并提醒；第 17 节顺推会越过 23:59，课照常导入、时间补不上照实说",
+      "extracted": "fixtures/late-periods.extracted.json",
+      "expected": "fixtures/late-periods.expected.json"
+    },
+    {
+      "name": "合成用例：脏数据 · 教师「未知」、教室「待定」「暂无教室」记为空并汇总；缺课名 / 星期错 / 缺节次 / 周次读不出各一行被跳过并计数；0/1 位串周次；括号序号、括号备注、单双同写、节次不连续、周次超 30 各一处提醒；总周数抬到 30",
+      "extracted": "fixtures/dirty-rows.extracted.json",
+      "expected": "fixtures/dirty-rows.expected.json"
+    },
+    {
+      "name": "合成用例：长课名与长学期名 · 四门缺教师教室的长课名（各 25 字以上）和 40 字的学期名，提醒里课名、学期名截到 20 字，长周次原文也截 20 字，每条提醒不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：学期没有任何标记 · 取学期列表第一项并提醒核对；学期名为空用「学校名 + 学期代码」；日期响应属于别的学期（2024-09-02）不采用，按 2026-09-01 所在周推算 2026-08-31",
+      "extracted": "fixtures/first-term.extracted.json",
+      "expected": "fixtures/first-term.expected.json"
+    },
+    {
+      "name": "合成用例：同时段合并与脏格式 · 课名 HTML 实体「&amp;」解码、斜杠日期「2025/09/01」、乱序周次「17,2,3,4,6」切成 2-4 / 6 / 17、全角周次「１-４，６周」、同课不同教室分开",
+      "extracted": "fixtures/merge-entities.extracted.json",
+      "expected": "fixtures/merge-entities.expected.json"
+    },
+    {
+      "name": "合成用例：相邻节次合并 · 同教室同周次的 1-2、2-3（重叠）、3-4 合成 1-4；周次不同的 5-6（1-8 周）不并；隔了空节的 9-10 不并",
+      "extracted": "fixtures/adjacent-merge.extracted.json",
+      "expected": "fixtures/adjacent-merge.expected.json"
+    },
+    {
+      "name": "合成用例：连写节次 · jcdm「010203」每两位一节读成第 1–3 节；奇数位「01020」计入缺节次并提醒",
+      "extracted": "fixtures/six-digit-sections.extracted.json",
+      "expected": "fixtures/six-digit-sections.expected.json"
+    }
+  ]
+}

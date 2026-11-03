@@ -1,0 +1,96 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 实际交出去的样子（课表行只带白名单字段，节次时间组、学期起止日期来自教务接口的字段名）。课程、教师、教室全部虚构（甲 / 乙 / 丙 / 丁 老师，A101 等教室号），无真实姓名与学号。只保证「同样的输入永远得到同样的输出」，不保证在真实教务页面上是对的。",
+  "_case": "基本：教务标为当前的学期（秋季）；节次时间取自教务（8 节，时间带秒）；学期起止日期 2026-09-07 至 2027-01-15 算出 19 周；教师「甲老师[主讲];」去掉标注；教师「未知」与教室「待定」给 null；同一行重复出现只留一条；单周课。",
+  "term": {
+    "year": "2026-2027",
+    "term": "秋",
+    "beginDate": "2026-09-01",
+    "endDate": "2027-01-18"
+  },
+  "pick": "active",
+  "today": "2026-10-20",
+  "periodLists": [
+    [
+      {
+        "smallPeriod": "1",
+        "startTime": "08:20:00",
+        "endTime": "09:05:00"
+      },
+      {
+        "smallPeriod": "2",
+        "startTime": "09:10:00",
+        "endTime": "09:55:00"
+      },
+      {
+        "smallPeriod": "3",
+        "startTime": "10:15:00",
+        "endTime": "11:00:00"
+      },
+      {
+        "smallPeriod": "4",
+        "startTime": "11:05:00",
+        "endTime": "11:50:00"
+      },
+      {
+        "smallPeriod": "5",
+        "startTime": "14:30:00",
+        "endTime": "15:15:00"
+      },
+      {
+        "smallPeriod": "6",
+        "startTime": "15:20:00",
+        "endTime": "16:05:00"
+      },
+      {
+        "smallPeriod": "7",
+        "startTime": "16:20:00",
+        "endTime": "17:05:00"
+      },
+      {
+        "smallPeriod": "8",
+        "startTime": "17:10:00",
+        "endTime": "17:55:00"
+      }
+    ]
+  ],
+  "raw": {
+    "rows": [
+      {
+        "courseName": "大学英语",
+        "instructorName": "甲老师[主讲];",
+        "roomName": "A101",
+        "campusName": "东校区",
+        "weekDay": "1",
+        "periodFormat": "1-2",
+        "teachingWeekFormat": "1-4,6-9"
+      },
+      {
+        "courseName": "高等数学",
+        "instructorName": "",
+        "roomName": "",
+        "campusName": "东校区",
+        "weekDay": "3",
+        "periodFormat": "3-4",
+        "teachingWeekFormat": "1-16周(单)"
+      },
+      {
+        "courseName": "体育",
+        "instructorName": "未知",
+        "roomName": "待定",
+        "campusName": "",
+        "weekDay": "5",
+        "periodFormat": "5",
+        "teachingWeekFormat": "1-16"
+      },
+      {
+        "courseName": "大学英语",
+        "instructorName": "甲老师[主讲];",
+        "roomName": "A101",
+        "campusName": "东校区",
+        "weekDay": "1",
+        "periodFormat": "1-2",
+        "teachingWeekFormat": "1-4,6-9"
+      }
+    ]
+  }
+}

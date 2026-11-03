@@ -1,0 +1,19 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 交出去的样子编造，无真实个人信息。",
+  "_case": "周次标记全集：前置 (单)(双) 逗号 / 无逗号；后置逗号 / 无逗号；(单周) 括号形式；「1-15周(单) 共16周」；「1-8周(共8周),9-16周」只剥备注；「共16周,1-15周(单)」；「第1-第8周」；「1,3,5周」；教学班序号「(1)」摘掉",
+  "acadYear": "2026-1",
+  "startDate": "2026-09-07",
+  "rows": [
+    { "courseName": "前置逗号课", "teachingStaffName": "甲老师", "classPlace": "教一", "week": 1, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "(单)1-8周,(双)9-16周" },
+    { "courseName": "后置逗号课", "teachingStaffName": "甲老师", "classPlace": "教一", "week": 2, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "1-8周(单),9-16周(双)" },
+    { "courseName": "后置无逗号课", "teachingStaffName": "甲老师", "classPlace": "教一", "week": 3, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "1-8周(单)9-16周(双)" },
+    { "courseName": "前置无逗号课", "teachingStaffName": "甲老师", "classPlace": "教一", "week": 4, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "(单)1-8周(双)9-16周" },
+    { "courseName": "括号单周课", "teachingStaffName": "甲老师", "classPlace": "教一", "week": 5, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "1-16(单周)" },
+    { "courseName": "共N周后置课", "teachingStaffName": "甲老师", "classPlace": "教一", "week": 6, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "1-15周(单) 共16周" },
+    { "courseName": "备注括号课", "teachingStaffName": "甲老师", "classPlace": "教一", "week": 7, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "1-8周(共8周),9-16周" },
+    { "courseName": "共N周前置课", "teachingStaffName": "甲老师", "classPlace": "教一", "week": 1, "startClassTimes": 3, "endClassTimes": 4, "startWeek": 1, "timeDetail": "共16周,1-15周(单)" },
+    { "courseName": "第N周区间课", "teachingStaffName": "甲老师", "classPlace": "教一", "week": 2, "startClassTimes": 5, "endClassTimes": 6, "startWeek": 1, "timeDetail": "第1-第8周" },
+    { "courseName": "逗号列表课", "teachingStaffName": "甲老师", "classPlace": "教一", "week": 3, "startClassTimes": 3, "endClassTimes": 4, "startWeek": 1, "timeDetail": "1,3,5周" },
+    { "courseName": "教学班序号课", "teachingStaffName": "甲老师", "classPlace": "教一", "week": 4, "startClassTimes": 3, "endClassTimes": 4, "startWeek": 1, "timeDetail": "1-8周(1)" }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "_note": "合成 fixture：课程与教师全部虚构（甲 / 乙 老师，B301 等教室号），无真实个人信息。",
+  "_case": "秋季学期无起止日期，教务标为当前学期：开学日按秋季 9 月初锚点推算到 2026-08-31（9 月 1 日所在周的周一）并提醒；总周数取 20；节次时间取不到用默认表并提醒；语文缺教室照常导入（location 为 null）并提醒。",
+  "term": {
+    "year": "2026-2027",
+    "term": "秋",
+    "beginDate": "",
+    "endDate": ""
+  },
+  "pick": "active",
+  "today": "2026-10-20",
+  "periodLists": null,
+  "raw": {
+    "rows": [
+      { "courseName": "语文", "instructorName": "甲老师", "roomName": "", "campusName": "", "weekDay": "2", "periodFormat": "1-2", "teachingWeekFormat": "1-18" },
+      { "courseName": "英语", "instructorName": "乙老师", "roomName": "B301", "campusName": "", "weekDay": "4", "periodFormat": "3-4", "teachingWeekFormat": "1-18" }
+    ]
+  }
+}

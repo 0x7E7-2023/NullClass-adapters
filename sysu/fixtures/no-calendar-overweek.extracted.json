@@ -1,0 +1,14 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 交出去的样子编造，无真实个人信息。",
+  "_case": "校历取不到（startDate 为 null）→ 第二学期按 2 月 20 日所在周的周一推算开学日 2026-02-16；课表排到第 22 周 → 总周数抬到 22 并提醒；「待定」周次 → 按开始周导入并提醒；课名为空、星期为空的两行 → 跳过并计数；缺教师 / 缺教室计数；教师括号备注不算教师名",
+  "acadYear": "2025-2",
+  "startDate": null,
+  "rows": [
+    { "courseName": "高等数学（下）", "teachingStaffName": "张老师", "classPlace": "二教 201", "week": 2, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "1-22周" },
+    { "courseName": "体育（二）", "teachingStaffName": "李老师（外聘）", "classPlace": "", "week": 5, "startClassTimes": 3, "endClassTimes": 4, "startWeek": 1, "timeDetail": "第1-第8周" },
+    { "courseName": "形势与政策", "teachingStaffName": "", "classPlace": "大礼堂", "week": 7, "startClassTimes": 9, "endClassTimes": 10, "startWeek": 1, "timeDetail": "1-16周(共16周)" },
+    { "courseName": "无周次课程", "teachingStaffName": "", "classPlace": "未知", "week": 6, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 3, "timeDetail": "待定" },
+    { "courseName": "", "teachingStaffName": "王老师", "classPlace": "教一", "week": 1, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "1-16周" },
+    { "courseName": "实践周", "teachingStaffName": "", "classPlace": "", "week": "", "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "1-16周" }
+  ]
+}

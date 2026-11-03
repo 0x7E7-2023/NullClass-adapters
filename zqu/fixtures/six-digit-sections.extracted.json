@@ -1,0 +1,30 @@
+{
+  "_note": "合成 fixture：字段形状照 extract.js 实际交出去的样子编造（kcmc / teaxms / jxcdmc / xq / zc / jcdm2 / jcdm），课程、教师、教室均为虚构，无真实个人信息。",
+  "term": {
+    "code": "2025-2026-1",
+    "name": "2025-2026学年第一学期",
+    "source": "page"
+  },
+  "today": "2025-09-03",
+  "dateInfo": null,
+  "rows": [
+    {
+      "kcmc": "语文",
+      "teaxms": "甲",
+      "jxcdmc": "教一-101",
+      "xq": "1",
+      "zc": "1-16",
+      "jcdm2": "",
+      "jcdm": "010203"
+    },
+    {
+      "kcmc": "数学",
+      "teaxms": "乙",
+      "jxcdmc": "教一-102",
+      "xq": "2",
+      "zc": "1-16",
+      "jcdm2": "",
+      "jcdm": "01020"
+    }
+  ]
+}

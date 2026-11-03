@@ -1,0 +1,119 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "已导入教务系统标为当前的学期「2026-2027学年第一学期」；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统给的学期开始日期：第 1 周从 2026-08-31 开始，请在学期管理里核对",
+    "学期总周数按教务给的学期起止日期算为 21 周，如与实际不符可在学期管理里改",
+    "有 2 门课没给上课教师、1 门课没给上课教室（例如 高等数学、体育）：已照常导入，教师或教室暂时空着，可在「编辑课程」里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 21,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:20",
+          "end": "09:05"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:10",
+          "end": "09:55"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:15",
+          "end": "11:00"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:05",
+          "end": "11:50"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:30",
+          "end": "15:15"
+        },
+        {
+          "periodIndex": 6,
+          "start": "15:20",
+          "end": "16:05"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:20",
+          "end": "17:05"
+        },
+        {
+          "periodIndex": 8,
+          "start": "17:10",
+          "end": "17:55"
+        }
+      ],
+      "courses": [
+        {
+          "name": "大学英语",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "A101（东校区）"
+            },
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 6,
+              "endWeek": 9,
+              "weekType": "ALL",
+              "location": "A101（东校区）"
+            }
+          ]
+        },
+        {
+          "name": "高等数学",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 15,
+              "weekType": "ODD",
+              "location": "东校区"
+            }
+          ]
+        },
+        {
+          "name": "体育",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 5,
+              "endPeriod": 5,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

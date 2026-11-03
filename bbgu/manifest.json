@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "key": "bbgu",
+  "name": "北部湾大学",
+  "initial": "B",
+  "version": "1.0.0",
+  "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://zhjw.bbgu.edu.cn/workspace/home",
+  "scheduleUrlHint": "https://zhjw.bbgu.edu.cn/workspace/home",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 教务标为当前的学期（秋季）+ 节次时间取自教务（8 节，时间带秒）+ 学期起止日期算出 19 周 + 教师「甲老师[主讲];」去掉标注 + 教师「未知」与教室「待定」给 null + 同一行重复出现只留一条 + 单周课",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次单双标记 · 「(单)1-8周,(双)9-16周」「(单)1-8周(双)9-16周」「1-8周(单),9-16周(双)」都读成 1-7 单周 + 10-16 双周；「1-15周(单) 共16周」只读 1-15 单周；「1-8周(共8周),9-16周」只剥备注、整段 1-16 周；选不出学期时取列表第一个、开学日按秋季/春季锚点推算、总周数按 20 周",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 缺教师 / 缺教室 + 脏行（缺课程名、星期 9、缺节次、认不出的周次）+ 括号备注过长 · 课名与备注都截到 20 字，每条提醒不超 200 字，提醒按类型汇总",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：学期起止日期（开学日不是周一，回退到周一）+ 课表排到第 19 周（超出按起止日期算出的 17 周，抬高总周数并提醒）+ 节次 11-13 节（第 11-12 节用默认时间、第 13 节顺推）+ 节次时间组重复出现（去重）",
+      "extracted": "fixtures/dates-raise.extracted.json",
+      "expected": "fixtures/dates-raise.expected.json"
+    },
+    {
+      "name": "合成用例：同课合并 · 同课同教室 1-2 与 3-4 节（同周次）合成 1-4 节；同节次不同周次（1-8 与 9-16）周次并集 1-16；完全相同的 3-4 行只留一条",
+      "extracted": "fixtures/merge-consecutive.extracted.json",
+      "expected": "fixtures/merge-consecutive.expected.json"
+    },
+    {
+      "name": "合成用例：秋季学期（教务标为当前）无起止日期 · 开学日按秋季 9 月初锚点推算到 2026-08-31 并提醒；缺教室照常导入（location 为 null）；总周数 20 并提醒；节次时间取不到用默认表并提醒",
+      "extracted": "fixtures/estimate-autumn.extracted.json",
+      "expected": "fixtures/estimate-autumn.expected.json"
+    },
+    {
+      "name": "合成用例：学期开始日是周二（2026-09-01）、结束日 2027-01-18——总周数要从开学那周的周一算起，为 21 周",
+      "extracted": "fixtures/dates-tuesday.extracted.json",
+      "expected": "fixtures/dates-tuesday.expected.json"
+    }
+  ]
+}

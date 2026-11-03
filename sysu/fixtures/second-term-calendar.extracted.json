@@ -1,0 +1,10 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 交出去的样子编造，课名、教师均为虚构，无真实个人信息。",
+  "_case": "第二学期 · 校历第 1 周给的是周三 2026-02-25 → 开学日回退到当周周一 2026-02-23；校历给的时间戳带时分秒；教师括号备注（「（外聘）」）不算教师名；周次「2-16周(双)」只取双周",
+  "acadYear": "2025-2",
+  "startDate": "2026-02-25 00:00:00",
+  "rows": [
+    { "courseName": "近代史纲要", "teachingStaffName": "钱老师", "classPlace": "教一-101", "week": 1, "startClassTimes": 1, "endClassTimes": 2, "startWeek": 1, "timeDetail": "1-16周" },
+    { "courseName": "大学物理", "teachingStaffName": "孙老师（外聘）", "classPlace": "教二-203", "week": 3, "startClassTimes": 3, "endClassTimes": 4, "startWeek": 2, "timeDetail": "2-16周(双)" }
+  ]
+}

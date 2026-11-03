@@ -1,0 +1,42 @@
+{
+  "source": "btbu-jsxsd",
+  "pageUrl": "https://jwgl.btbu.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-09-08",
+  "term": { "code": "2026-2027-1", "name": "2026-2027-1", "picked": "selected" },
+  "rows": [
+    { "tds": [
+      { "span": 1, "text": "节次", "divs": [] },
+      { "span": 1, "text": "星期一", "divs": [] },
+      { "span": 1, "text": "星期二", "divs": [] }
+    ] },
+    { "tds": [
+      { "span": 1, "text": "1~2节 08:00-09:35", "divs": [] },
+      { "span": 1, "text": "", "divs": [
+        { "hidden": false, "pieces": [
+          { "t": "", "x": "高等数学" },
+          { "t": "教师", "x": "甲老师" },
+          { "t": "周次(节次)", "x": "1-16(周)[01-02节]" },
+          { "t": "教室", "x": "树人楼北502" }
+        ] }
+      ] },
+      { "span": 1, "text": "", "divs": [
+        { "hidden": false, "pieces": [
+          { "t": "", "x": "大学英语" },
+          { "t": "教师", "x": "乙老师" },
+          { "t": "周次(节次)", "x": "1-15(单)[01-02节]" },
+          { "t": "教室", "x": "明德楼201" }
+        ] }
+      ] }
+    ] },
+    { "tds": [
+      { "span": 1, "text": "3~4节 10:00-11:45", "divs": [] },
+      { "span": 1, "text": "", "divs": [] },
+      { "span": 1, "text": "", "divs": [
+        { "hidden": false, "pieces": [
+          { "t": "", "x": "线性代数" },
+          { "t": "周次(节次)", "x": "2-16(双)[03-04节]" }
+        ] }
+      ] }
+    ] }
+  ]
+}
