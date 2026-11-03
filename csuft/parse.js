@@ -2,7 +2,7 @@
     // 中南林业科技大学（强智新版周课表）课表解析。
     // 移植自 shiguang_warehouse 的 CSUFT/csuft.js（MIT，上游作者 jinnianliuxing）
     //   https://github.com/XingHeYuZhuan/shiguang_warehouse
-    // 上游快照 03d161a；本校脚本 4678e75。模板是已审计的 gdkm。
+    // 上游快照 29498b0；本校脚本最后修改 92a4198。1.0.1 跟进时 parse.js 代码未改，只更新本行快照号。模板是已审计的 gdkm。
     // 保留上游的 10 节时间、周历锚点回推、重复楼栋名清理；周次改为逐段判单双，
     // 跨行格子还原星期，同一门课的重叠或相邻节次合并，所有推算与丢课均汇总提醒。
     // 输入：{ now, term, calendar: { weeks: [{ label, days }] },

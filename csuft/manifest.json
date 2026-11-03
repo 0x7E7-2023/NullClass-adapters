@@ -3,15 +3,18 @@
   "key": "csuft",
   "name": "中南林业科技大学",
   "initial": "Z",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 jinnianliuxing（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://webvpn.csuft.edu.cn/",
-  "scheduleUrlHint": "https://http-jwxt-csuft-edu-cn-80.webvpn.csuft.edu.cn/jsxsd/xskb/xskb_list.do",
+  "scheduleUrlHint": "https://https-jwxt-csuft-edu-cn-443.webvpn.csuft.edu.cn/jsxsd/xskb/xskb_list.do",
   "minAppVersionCode": 11,
   "extract": "extract.js",
   "parse": "parse.js",
-  "allowHosts": ["http-jwxt-csuft-edu-cn-80.webvpn.csuft.edu.cn"],
+  "allowHosts": [
+    "https-jwxt-csuft-edu-cn-443.webvpn.csuft.edu.cn",
+    "http-jwxt-csuft-edu-cn-80.webvpn.csuft.edu.cn"
+  ],
   "fixtures": [
     {
       "name": "合成用例：基本课表、单双周、多个时间段、周历任意日期锚点",

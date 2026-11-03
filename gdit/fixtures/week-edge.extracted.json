@@ -1,0 +1,16 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 交出去的样子。课程、教师、教室均为虚构。",
+  "_case": "周次边界：单 / 双标记；未知标记 9；周次 0 起、31-33 整段超出、起周大于止周；课表最晚第 25 周抬高总周数",
+  "term": { "schoolYear": "2026-2027", "semester": "1" },
+  "today": "2026-10-20",
+  "meta": { "success": true, "message": "" },
+  "rows": [
+    { "courseName": "数学A", "userName": "甲老师", "placeName": "教1", "weekDay": "1", "festivals": "1-2", "startWeek": "1", "endWeek": "8", "singleDoubleWeek": "1" },
+    { "courseName": "数学A", "userName": "甲老师", "placeName": "教1", "weekDay": "1", "festivals": "1-2", "startWeek": "2", "endWeek": "8", "singleDoubleWeek": "2" },
+    { "courseName": "物理B", "userName": "乙老师", "placeName": "教2", "weekDay": "2", "festivals": "3-4", "startWeek": "1", "endWeek": "8", "singleDoubleWeek": "9" },
+    { "courseName": "化学C", "userName": "丙老师", "placeName": "教3", "weekDay": "3", "festivals": "1-2", "startWeek": "0", "endWeek": "17", "singleDoubleWeek": "0" },
+    { "courseName": "英语D", "userName": "丁老师", "placeName": "教4", "weekDay": "4", "festivals": "5-6", "startWeek": "31", "endWeek": "33", "singleDoubleWeek": "0" },
+    { "courseName": "体育E", "userName": "戊老师", "placeName": "体育场", "weekDay": "5", "festivals": "1-2", "startWeek": "20", "endWeek": "25", "singleDoubleWeek": "0" },
+    { "courseName": "计算机F", "userName": "己老师", "placeName": "机房", "weekDay": "6", "festivals": "1-2", "startWeek": "5", "endWeek": "3", "singleDoubleWeek": "0" }
+  ]
+}

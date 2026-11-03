@@ -1,0 +1,42 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程与教师均为虚构，无真实个人信息。",
+  "_case": "节次顺推：晚上第 13-15 节超出写死的 12 节；「1-16周(单双周)」单双同时出现按每周都上并提醒；缺教师一门；教师写「未知」、教室写「暂无教室」的一门按没有处理（载荷里是 null）",
+  "term": {
+    "yearLabel": "2026-2027",
+    "termLabel": "第一学期",
+    "yearValue": "2026-2027",
+    "termValue": "1",
+    "picked": "flag"
+  },
+  "today": "2026-09-13",
+  "failedWeeks": [],
+  "rows": [
+    {
+      "courseName": "晚自习",
+      "teacherName": "丙老师",
+      "classRoom": "教一001",
+      "day": 7,
+      "startSection": "13",
+      "endSection": "15",
+      "weeks": "1-3周"
+    },
+    {
+      "courseName": "形势与政策",
+      "teacherName": "",
+      "classRoom": "图书馆报告厅",
+      "day": 6,
+      "startSection": "1",
+      "endSection": "2",
+      "weeks": "1-16周(单双周)"
+    },
+    {
+      "courseName": "习近平新时代中国特色社会主义思想概论",
+      "teacherName": "未知",
+      "classRoom": "暂无教室",
+      "day": 4,
+      "startSection": "1",
+      "endSection": "2",
+      "weeks": "1-2周"
+    }
+  ]
+}

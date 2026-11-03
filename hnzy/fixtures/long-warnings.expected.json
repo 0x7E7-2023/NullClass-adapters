@@ -1,0 +1,68 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "导入的是教务系统标为当前的学期（2026-2027学年第一学期），请核对后再使用",
+    "教务系统没有给出开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期周数，学期总周数按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "节次时间用的是学校的 12 节表（第 1 节 08:30-09:15，第 12 节 19:45-20:30），请在学期管理里核对是否与学校实际的节次时间一致",
+    "有 2 行课表数据不全（缺周次（或周次全超出 1-30 周）2 行、认不出的周次写法如「待定」「无」），已跳过，如发现少课请反馈",
+    "有 3 门课没给上课教师、3 门课没给上课地点（例如 中国特色社会主义理论与实践概论专题研讨…、大学生心理健康教育与自我成长指导课程专…、高级程序设计语言与软件工程方法实践课程）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:15", "end": "10:00" },
+        { "periodIndex": 3, "start": "10:20", "end": "11:05" },
+        { "periodIndex": 4, "start": "11:05", "end": "11:50" },
+        { "periodIndex": 5, "start": "14:20", "end": "15:05" },
+        { "periodIndex": 6, "start": "15:05", "end": "15:50" },
+        { "periodIndex": 7, "start": "16:10", "end": "16:55" },
+        { "periodIndex": 8, "start": "16:55", "end": "17:40" },
+        { "periodIndex": 9, "start": "18:00", "end": "18:45" },
+        { "periodIndex": 10, "start": "18:45", "end": "19:00" },
+        { "periodIndex": 11, "start": "19:00", "end": "19:45" },
+        { "periodIndex": 12, "start": "19:45", "end": "20:30" }
+      ],
+      "courses": [
+        {
+          "name": "中国特色社会主义理论与实践概论专题研讨与实践训练课程",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "大学生心理健康教育与自我成长指导课程专题讲座",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "高级程序设计语言与软件工程方法实践课程",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "计算机网络原理与应用综合实训课程设计",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "工科楼A1" }
+          ]
+        }
+      ]
+    }
+  ]
+}

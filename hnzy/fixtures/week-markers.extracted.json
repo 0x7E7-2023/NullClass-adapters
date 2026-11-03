@@ -1,0 +1,17 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程与教师均为虚构，无真实个人信息。",
+  "_case": "周次标记归属：前置、后置、无逗号前置、无逗号后置的单双；共 N 周备注；第 N 周写法；括号序号",
+  "term": { "yearLabel": "2026-2027", "termLabel": "第一学期", "yearValue": "2026-2027", "termValue": "1", "picked": "flag" },
+  "today": "2026-09-13",
+  "failedWeeks": [],
+  "rows": [
+    { "courseName": "单双前置课", "teacherName": "甲老师", "classRoom": "L1", "day": 1, "startSection": "1", "endSection": "2", "weeks": "(单)1-8周,(双)9-16周" },
+    { "courseName": "后置单双课", "teacherName": "乙老师", "classRoom": "L2", "day": 2, "startSection": "1", "endSection": "2", "weeks": "1-8周(单),9-16周(双)" },
+    { "courseName": "无逗号前置课", "teacherName": "丙老师", "classRoom": "L3", "day": 3, "startSection": "1", "endSection": "2", "weeks": "(单)1-8周(双)9-16周" },
+    { "courseName": "无逗号后置课", "teacherName": "丁老师", "classRoom": "L4", "day": 4, "startSection": "1", "endSection": "2", "weeks": "1-8周(单)9-16周(双)" },
+    { "courseName": "共周课", "teacherName": "戊老师", "classRoom": "L5", "day": 5, "startSection": "1", "endSection": "2", "weeks": "1-15周(单) 共16周" },
+    { "courseName": "备注共周课", "teacherName": "己老师", "classRoom": "L6", "day": 1, "startSection": "3", "endSection": "4", "weeks": "1-8周(共8周),9-16周" },
+    { "courseName": "第周课", "teacherName": "庚老师", "classRoom": "L7", "day": 2, "startSection": "3", "endSection": "4", "weeks": "第1-第8周" },
+    { "courseName": "序号课", "teacherName": "辛老师", "classRoom": "L8", "day": 3, "startSection": "3", "endSection": "4", "weeks": "1-16周(1)" }
+  ]
+}

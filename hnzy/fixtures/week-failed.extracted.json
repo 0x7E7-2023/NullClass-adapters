@@ -1,0 +1,37 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程与教师均为虚构，无真实个人信息。",
+  "_case": "单周请求失败：第 5、6 周没取到；没有标记的学期按今天的日期（2026-02-10 → 2025-2026 第二学期）选择；开学日按 2 月下旬推算为 2026-02-16；课表排到第 22 周 → 总周数抬到 22 并提醒；「1-4周,6-8周」拆两块",
+  "term": {
+    "yearLabel": "2025-2026",
+    "termLabel": "第二学期",
+    "yearValue": "2025-2026",
+    "termValue": "12",
+    "picked": "date",
+    "dateNo": 2
+  },
+  "today": "2026-02-10",
+  "failedWeeks": [
+    5,
+    6
+  ],
+  "rows": [
+    {
+      "courseName": "工程制图",
+      "teacherName": "丙老师",
+      "classRoom": "工科楼301",
+      "day": 1,
+      "startSection": "1",
+      "endSection": "2",
+      "weeks": "1-22周"
+    },
+    {
+      "courseName": "材料力学",
+      "teacherName": "丁老师",
+      "classRoom": "工科楼302",
+      "day": 3,
+      "startSection": "3",
+      "endSection": "4",
+      "weeks": "1-4周,6-8周"
+    }
+  ]
+}

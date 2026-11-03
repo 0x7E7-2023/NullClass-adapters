@@ -1,0 +1,16 @@
+{
+  "term": {
+    "code": "2026-2027-1",
+    "text": ""
+  },
+  "rows": [
+    { "kcmc": "<a>形势与政策</a>", "tmc": "<a>乙</a>", "croommc": "<a>教3-101</a>", "xingqi": "2", "djc": "5", "zcstr": "(单)1-8周,(双)9-16周" },
+    { "kcmc": "<a>体育</a>", "tmc": "<a>丙</a>", "croommc": "<a>操场</a>", "xingqi": "3", "djc": "1", "zcstr": "(单)1-8周(双)9-16周" },
+    { "kcmc": "<a>数学分析</a>", "tmc": "<a>丁</a>", "croommc": "<a>教1-102</a>", "xingqi": "4", "djc": "3", "zcstr": "1-8周(单)9-16周(双)" },
+    { "kcmc": "<a>英语</a>", "tmc": "<a>戊</a>", "croommc": "<a>教4</a>", "xingqi": "4", "djc": "6", "zcstr": "1-16周(双)" },
+    { "kcmc": "<a>大学物理</a>", "tmc": "<a>己</a>", "croommc": "<a>教5</a>", "xingqi": "5", "djc": "1", "zcstr": "1-8周(共8周),9-16周" },
+    { "kcmc": "<a>化学</a>", "tmc": "<a>庚</a>", "croommc": "<a>教5</a>", "xingqi": "6", "djc": "1", "zcstr": "第1-第8周" }
+  ],
+  "slots": [],
+  "weeks": []
+}

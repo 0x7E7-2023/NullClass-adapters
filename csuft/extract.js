@@ -2,21 +2,34 @@
     // 中南林业科技大学教务适配器 —— 强智新版周课表，经学校 WebVPN 访问。
     // 移植自 shiguang_warehouse 的 CSUFT/csuft.js（MIT，上游作者 jinnianliuxing）
     //   https://github.com/XingHeYuZhuan/shiguang_warehouse
-    // 上游快照 03d161a；本校脚本最后一次修改 4678e75。
+    // 上游快照 29498b0；本校脚本最后一次修改 92a4198（1.0.1 跟进域名迁移；1.0.0 基于 4678e75）。
     // 模板是已审计的 gdkm；课表网格、周历和载荷沿用同平台实现，请求参数与 WebVPN 入口按 CSUFT 上游重写。
     //
-    // 请求（全部为当前页面同源）：
+    // 请求（教务域名按顺序探测，见 jwFetch）：
     //   GET  /jsxsd/xskb/xskb_list.do                         读取当前学期与时间模式
     //   GET  /jsxsd/xskb/xskb_list.do?<完整课表参数>           整学期课表
     //   POST /jsxsd/jxzl/jxzl_query                           教学周历；失败时退回带学期参数的 GET
+    // 域名：当前页已在教务域名上则先用当前域名；否则先新域名 https-443，再旧域名 http-80（旧域名 302 到新域名）。
+    // 只有响应正常且内容像课表 / 周历才算可用；单域名 15 秒超时；整次导入最多 10 次请求。
     //
     // 移植改动：不弹窗选学期；去掉提示与保存桥；只交学期、周历、课程卡片原文；
-    // 周次、节次和开学日全在 parse.js；登录页与门户页不发请求；页面地址不带查询串。
+    // 周次、节次和开学日全在 parse.js；教务登录页与 WebVPN 门户页不发请求；页面地址不带查询串。
+    // 1.0.1 改动（跟进上游 92a4198）：多域名探测、记住可用域名、单域名超时、内容校验，
+    // 两个域名都不可用时提示「请先在学校 WebVPN 里打开教务系统」。未跟上游的「月历推算开学日」与
+    // 「学期列表改从周历页取」，理由见 AUDIT.md。
     // 不读账号、姓名、学号或隐藏令牌，不写页面。详见 AUDIT.md。
-    var JW_HOST = 'http-jwxt-csuft-edu-cn-80.webvpn.csuft.edu.cn';
+    var PORTAL_HOST = 'webvpn.csuft.edu.cn';
+    var JW_HOSTS = [
+        'https-jwxt-csuft-edu-cn-443.webvpn.csuft.edu.cn',
+        'http-jwxt-csuft-edu-cn-80.webvpn.csuft.edu.cn'
+    ];
     var SCHEDULE_PATH = '/jsxsd/xskb/xskb_list.do';
     var CALENDAR_PATH = '/jsxsd/jxzl/jxzl_query';
-    var LOGIN_HINT = '请先通过学校 WebVPN 登录教务系统，再打开「课表查询」，然后点提取';
+    var LOGIN_HINT = '请先在学校 WebVPN 里打开教务系统，再打开「课表查询」，然后点提取';
+    var TIMEOUT_MS = 15000;     // 单个域名最多等 15 秒，超时就换下一个域名
+    var MAX_REQUESTS = 10;      // 整次导入请求上限，防止多域名反复试探卡住
+    var requestCount = 0;
+    var goodOrigin = '';        // 本次已确认可用的域名，后续请求优先用它
 
     function clean(value) {
         if (value === null || value === undefined) return '';
@@ -68,12 +81,16 @@
         return out;
     }
 
-    // 登录页 / 统一认证页 / 学校主页：不发请求。只看地址，不读输入框。
+    // 教务登录页 / WebVPN 门户页 / 学校主页：不发请求。只看地址，不读输入框。
+    // 门户页跨域取数不可靠（需要 CORS 与跨子域 cookie），只给提示，让学生先进入教务系统。
     function loginHint() {
         var loc = window.location;
         var host = String(loc.hostname || '').toLowerCase();
         var path = String(loc.pathname || '').toLowerCase();
-        if (host !== JW_HOST) {
+        if (host === PORTAL_HOST) {
+            return '当前打开的是学校 WebVPN 门户。请先在门户里点进教务系统，打开「课表查询」页面，再点提取';
+        }
+        if (JW_HOSTS.indexOf(host) < 0) {
             return '当前打开的不是中南林业科技大学教务系统。' + LOGIN_HINT;
         }
         if (path === '/' || path === '' || /^\/jsxsd\/?$/.test(path) || /^\/jsxsd\/(index|login|xk\/log)/.test(path)) {
@@ -211,37 +228,90 @@
         return { code: code, name: clean(chosen.textContent) || code };
     }
 
-    function readResponse(response) {
-        if (response.status === 401 || response.status === 403) {
-            throw new Error('教务系统拒绝访问（代码 ' + response.status + '）。' + LOGIN_HINT);
+    function parseHtml(text) {
+        return new DOMParser().parseFromString(text, 'text/html');
+    }
+
+    // 课表页与周历页的判定特征：登录页、门户页内容不算
+    function isSchedulePage(text) {
+        return /id=["']xnxq01id["']/.test(text) || /qz-weeklyTable/.test(text);
+    }
+
+    function isCalendarPage(text) {
+        return /qz-weeklyTable-label/.test(text) || /第\s*1\s*周/.test(text);
+    }
+
+    // 本次导入的教务域名尝试顺序：当前页若在教务域名上就先用它，然后新域名、旧域名；已确认可用的排最前
+    function originsInOrder() {
+        var out = [];
+        var here = window.location;
+        if (JW_HOSTS.indexOf(String(here.hostname || '').toLowerCase()) >= 0) {
+            out.push(String(here.protocol) + '//' + String(here.host));
         }
-        if (response.status < 200 || response.status >= 300) {
-            throw new Error('教务系统返回错误（代码 ' + response.status + '）。' + LOGIN_HINT);
+        for (var i = 0; i < JW_HOSTS.length; i++) {
+            var url = 'https://' + JW_HOSTS[i];
+            if (out.indexOf(url) < 0) out.push(url);
         }
-        if (hostOf(response.url) && hostOf(response.url) !== JW_HOST) {
-            throw new Error('登录已失效。' + LOGIN_HINT);
+        if (goodOrigin) {
+            var rest = [];
+            for (var k = 0; k < out.length; k++) {
+                if (out[k] !== goodOrigin) rest.push(out[k]);
+            }
+            out = [goodOrigin].concat(rest);
         }
-        return response.text().then(function (html) {
-            return new DOMParser().parseFromString(html, 'text/html');
+        return out;
+    }
+
+    // 单次请求：超时、非 2xx、被跳到非教务主机（登录页）都算失败
+    function requestText(url, init) {
+        var ctrl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+        var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, TIMEOUT_MS) : null;
+        var opts = { credentials: 'include' };
+        for (var key in init) {
+            if (init.hasOwnProperty(key)) opts[key] = init[key];
+        }
+        if (ctrl) opts.signal = ctrl.signal;
+        function done() { if (timer) clearTimeout(timer); }
+        return fetch(url, opts).then(function (resp) {
+            if (resp.status < 200 || resp.status >= 300) throw new Error('HTTP ' + resp.status);
+            var host = hostOf(resp.url);
+            if (host && JW_HOSTS.indexOf(host) < 0) throw new Error('跳到了非教务主机');
+            return resp.text();
+        }).then(function (text) {
+            done();
+            return text;
+        }, function (err) {
+            done();
+            throw err;
         });
     }
 
-    function requestDoc(url, options) {
-        return fetch(url, options).then(readResponse, function () {
-            throw new Error('连不上教务系统。' + LOGIN_HINT);
-        });
+    // 依次试各教务域名，返回第一个通过 check 的页面文本；全部不可用返回 null
+    function jwFetch(path, init, check) {
+        var origins = originsInOrder();
+        function tryFrom(i) {
+            if (i >= origins.length) return Promise.resolve(null);
+            if (requestCount >= MAX_REQUESTS) {
+                return Promise.reject(new Error('教务系统请求次数过多，已停止本次导入，请稍后重试'));
+            }
+            requestCount++;
+            return requestText(origins[i] + path, init).then(function (text) {
+                if (check(text)) {
+                    goodOrigin = origins[i];
+                    return text;
+                }
+                return tryFrom(i + 1);
+            }, function () {
+                return tryFrom(i + 1);
+            });
+        }
+        return tryFrom(0);
     }
 
-    function getDoc(url) {
-        return requestDoc(url, { method: 'GET', credentials: 'same-origin' });
-    }
-
-    function postDoc(url, code) {
-        return requestDoc(url, {
-            method: 'POST',
-            credentials: 'same-origin',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: 'xnxq01id=' + encodeURIComponent(code || '')
+    function loadPage(path, check) {
+        return jwFetch(path, { method: 'GET' }, check).then(function (text) {
+            if (text === null) throw new Error(LOGIN_HINT);
+            return text;
         });
     }
 
@@ -283,32 +353,35 @@
         return n;
     }
 
-    function calendarByGet(code) {
-        return getDoc(CALENDAR_PATH + '?xnxq01id=' + encodeURIComponent(code || '')).then(function (doc) {
-            return calendarOf(doc);
-        }, function () {
-            return { weeks: [] };
-        });
-    }
-
+    // 周历是可选的：POST 取不到或没有周次时退回带学期参数的 GET；都失败就给空周历，由 parse.js 按 20 周提醒
     function fetchCalendar(code) {
-        return postDoc(CALENDAR_PATH, code).then(function (doc) {
-            return calendarOf(doc);
-        }).then(function (calendar) {
-            return calendar.weeks.length ? calendar : calendarByGet(code);
-        }, function () {
-            return calendarByGet(code);
+        var body = 'xnxq01id=' + encodeURIComponent(code || '');
+        var postInit = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: body
+        };
+        return jwFetch(CALENDAR_PATH, postInit, isCalendarPage).then(function (text) {
+            var calendar = text ? calendarOf(parseHtml(text)) : { weeks: [] };
+            if (calendar.weeks.length) return calendar;
+            return jwFetch(CALENDAR_PATH + '?' + body, { method: 'GET' }, isCalendarPage).then(function (t) {
+                return t ? calendarOf(parseHtml(t)) : { weeks: [] };
+            });
+        }).then(null, function () {
+            return { weeks: [] };
         });
     }
 
     function run() {
         var hint = loginHint();
         if (hint) return Promise.reject(new Error(hint));
-        return getDoc(SCHEDULE_PATH + '?' + scheduleQuery('', '')).then(function (initial) {
+        return loadPage(SCHEDULE_PATH + '?' + scheduleQuery('', ''), isSchedulePage).then(function (html) {
+            var initial = parseHtml(html);
             var term = termOf(initial);
             if (!term) throw new Error('当前页面找不到学年学期。' + LOGIN_HINT);
             var mode = modeOf(initial);
-            return getDoc(SCHEDULE_PATH + '?' + scheduleQuery(term.code, mode)).then(function (page) {
+            return loadPage(SCHEDULE_PATH + '?' + scheduleQuery(term.code, mode), isSchedulePage).then(function (text) {
+                var page = parseHtml(text);
                 if (titleOf(page).indexOf('登录') >= 0 && !findTimetable(page)) {
                     throw new Error('登录已失效。' + LOGIN_HINT);
                 }

@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.11.02.4",
+  "version": "2026.11.03.1",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -745,7 +745,7 @@
     {
       "key": "ynufe",
       "name": "云南财经大学",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "path": "ynufe"
     },
     {
@@ -1009,7 +1009,7 @@
     {
       "key": "csuft",
       "name": "中南林业科技大学",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "csuft"
     },
     {
@@ -1113,6 +1113,36 @@
       "name": "四川机电职业技术学院",
       "version": "1.0.0",
       "path": "scemi"
+    },
+    {
+      "key": "huuc",
+      "name": "河南城建学院",
+      "version": "1.0.0",
+      "path": "huuc"
+    },
+    {
+      "key": "ccsut",
+      "name": "长沙工业学院",
+      "version": "1.0.0",
+      "path": "ccsut"
+    },
+    {
+      "key": "hbuas",
+      "name": "湖北文理学院",
+      "version": "1.0.0",
+      "path": "hbuas"
+    },
+    {
+      "key": "gdit",
+      "name": "广东科学技术职业学院",
+      "version": "1.0.0",
+      "path": "gdit"
+    },
+    {
+      "key": "hnzy",
+      "name": "河南职业技术学院",
+      "version": "1.0.0",
+      "path": "hnzy"
     }
   ]
 }

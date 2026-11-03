@@ -1,0 +1,82 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统里当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "教务系统没有给出开学日期，第 1 周按「9 月 1 日之后的第一个周一」推算为 2026-09-07，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期总周数，按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "教务系统没有给出节次时间，已按北校区常用的 10 节节次时间导入（第 1 节 08:00-08:45）；如果你不在北校区上课，或时间与学校实际不符，请在学期管理里核对",
+    "有 6 门课没有教师信息（例如 超长课名测试第一门：电路原理与数字系统…、超长课名测试第二门：计算机网络原理与协…、超长课名测试第三门：工程制图与三维计算… 等），教师可在本门课的「编辑课程」里补充",
+    "有 6 门课没有教室信息（例如 超长课名测试第一门：电路原理与数字系统…、超长课名测试第二门：计算机网络原理与协…、超长课名测试第三门：工程制图与三维计算… 等），教室可在本门课的「编辑课程」里补充"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:50", "end": "11:40" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 7, "start": "16:00", "end": "16:45" },
+        { "periodIndex": 8, "start": "16:45", "end": "17:30" },
+        { "periodIndex": 9, "start": "18:30", "end": "19:15" },
+        { "periodIndex": 10, "start": "19:15", "end": "20:00" }
+      ],
+      "courses": [
+        {
+          "name": "超长课名测试第一门：电路原理与数字系统设计综合实践",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "超长课名测试第二门：计算机网络原理与协议分析实验",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "超长课名测试第三门：工程制图与三维计算机辅助设计",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "超长课名测试第四门：数据结构与算法分析专题讨论课",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "超长课名测试第五门：大学物理实验综合设计课题（二）",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "超长课名测试第六门：毕业设计与学术论文写作规范训练",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 6, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

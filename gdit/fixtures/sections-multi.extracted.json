@@ -1,0 +1,16 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 交出去的样子。课程、教师、教室均为虚构。",
+  "_case": "节次写法：「1-2,5-6」拆两块；「01-02」与「1-2」去重；「第3-4节」；「1-2-3」「空」记为缺节次；「14-15」超出能补齐的节次范围记为缺节次",
+  "term": { "schoolYear": "2026-2027", "semester": "1" },
+  "today": "2026-10-20",
+  "meta": { "success": true, "message": "" },
+  "rows": [
+    { "courseName": "大学物理", "userName": "甲老师", "placeName": "教1", "weekDay": "1", "festivals": "1-2,5-6", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "大学物理", "userName": "甲老师", "placeName": "教1", "weekDay": "1", "festivals": "01-02", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "线性代数", "userName": "乙老师", "placeName": "教2", "weekDay": "2", "festivals": "第3-4节", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "概率论", "userName": "丙老师", "placeName": "教3", "weekDay": "3", "festivals": "1-2-3", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "形势与政策", "userName": "丁老师", "placeName": "教4", "weekDay": "4", "festivals": "14-15", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "体育", "userName": "戊老师", "placeName": "体育场", "weekDay": "5", "festivals": "", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "大学英语", "userName": "乙老师", "placeName": "教2", "weekDay": "6", "festivals": "9-10", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" }
+  ]
+}

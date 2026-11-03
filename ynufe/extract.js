@@ -4,7 +4,8 @@
     //   https://github.com/XingHeYuZhuan/shiguang_warehouse  （MIT，上游作者 AxelPLN）
     // 上游 resources/YNUFE/adapters.yaml：YNUFE_01「云南财经大学本科教务系统」，maintainer「AxelPLN」，
     //   import_url = https://xjwis.ynufe.edu.cn/jsxsd/
-    // 上游快照 e15c627（2026-10-26 拉取），本校脚本最后一次修改 7a4c0f7（2026-10-21：支持获取开学日期及周数、自动判断校区）。
+    // 上游快照 29498b0（2026-11-03 对齐），本校脚本最后一次修改 3fe13d2（2026-11-03：跨大节课时自动适配下课时间；extract 部分 1.1.0 无改动，见 AUDIT.md）。
+    // 更早的 7a4c0f7（2026-10-21：支持获取开学日期及周数、自动判断校区）仍是取数逻辑的来源。
     // 模板：hnptc（同平台、同一组路径：课表页 xskb_list.do + 教学周历 jxzl_query）。
     //
     // 平台判据按脚本实际请求的接口路径，不按注释：

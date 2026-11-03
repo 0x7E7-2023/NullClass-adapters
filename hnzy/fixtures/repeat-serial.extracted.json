@@ -1,0 +1,44 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程与教师均为虚构。",
+  "_case": "同一条带「(1)」的记录在 16 个周里各出现一次（这里写 3 次代表多周重复）：提醒计数为 1 处，而不是按周累加",
+  "term": {
+    "yearLabel": "2026-2027",
+    "termLabel": "第一学期",
+    "yearValue": "2026-2027",
+    "termValue": "1",
+    "picked": "flag",
+    "dateNo": 0
+  },
+  "today": "2026-09-13",
+  "failedWeeks": [],
+  "capHit": false,
+  "rows": [
+    {
+      "courseName": "序号课",
+      "teacherName": "辛老师",
+      "classRoom": "L8",
+      "day": 3,
+      "startSection": "3",
+      "endSection": "4",
+      "weeks": "1-16周(1)"
+    },
+    {
+      "courseName": "序号课",
+      "teacherName": "辛老师",
+      "classRoom": "L8",
+      "day": 3,
+      "startSection": "3",
+      "endSection": "4",
+      "weeks": "1-16周(1)"
+    },
+    {
+      "courseName": "序号课",
+      "teacherName": "辛老师",
+      "classRoom": "L8",
+      "day": 3,
+      "startSection": "3",
+      "endSection": "4",
+      "weeks": "1-16周(1)"
+    }
+  ]
+}

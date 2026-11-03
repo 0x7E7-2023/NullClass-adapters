@@ -1,0 +1,26 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程与教师均为虚构。",
+  "_case": "超长学期名：没有标记、日期对不上 → 第一项；提醒里的学期名截到 20 字，末尾「请核对是不是要导入的学期」仍在",
+  "term": {
+    "yearLabel": "2026-2027",
+    "termLabel": "第一学期（这是一个非常非常长的学期名称测试用例用来检查提醒截短）",
+    "yearValue": "2026-2027",
+    "termValue": "1",
+    "picked": "first",
+    "dateNo": 0
+  },
+  "today": "2026-10-15",
+  "failedWeeks": [],
+  "capHit": false,
+  "rows": [
+    {
+      "courseName": "甲课",
+      "teacherName": "甲老师",
+      "classRoom": "L1",
+      "day": 1,
+      "startSection": "1",
+      "endSection": "2",
+      "weeks": "1-16周"
+    }
+  ]
+}

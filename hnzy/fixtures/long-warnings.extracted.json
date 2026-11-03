@@ -1,0 +1,15 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程与教师均为虚构，无真实个人信息。",
+  "_case": "带课名的提醒不超 200 字：三门超过 20 字的长课名（两门缺教师和教室、一门只缺教室、一门只缺教师）+ 两行认不出的周次「待定」「无」",
+  "term": { "yearLabel": "2026-2027", "termLabel": "第一学期", "yearValue": "2026-2027", "termValue": "1", "picked": "flag" },
+  "today": "2026-09-13",
+  "failedWeeks": [],
+  "rows": [
+    { "courseName": "中国特色社会主义理论与实践概论专题研讨与实践训练课程", "teacherName": "", "classRoom": "", "day": 1, "startSection": "1", "endSection": "2", "weeks": "1-16周" },
+    { "courseName": "大学生心理健康教育与自我成长指导课程专题讲座", "teacherName": "", "classRoom": "", "day": 2, "startSection": "3", "endSection": "4", "weeks": "1-8周" },
+    { "courseName": "高级程序设计语言与软件工程方法实践课程", "teacherName": "甲老师", "classRoom": "", "day": 3, "startSection": "1", "endSection": "2", "weeks": "1-16周" },
+    { "courseName": "计算机网络原理与应用综合实训课程设计", "teacherName": "", "classRoom": "工科楼A1", "day": 4, "startSection": "1", "endSection": "2", "weeks": "1-16周" },
+    { "courseName": "形势与政策", "teacherName": "丙老师", "classRoom": "图书馆报告厅", "day": 5, "startSection": "1", "endSection": "2", "weeks": "待定" },
+    { "courseName": "体育", "teacherName": "丁老师", "classRoom": "田径场", "day": 6, "startSection": "3", "endSection": "4", "weeks": "无" }
+  ]
+}

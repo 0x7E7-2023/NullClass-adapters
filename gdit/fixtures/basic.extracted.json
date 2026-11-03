@@ -1,0 +1,17 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 实际交出去的样子（term / today / meta / rows，rows 只有 8 个白名单字段）。课程、教师、教室均为虚构（甲 / 乙 / 丙 / 丁 / 戊老师），无真实个人信息。只保证同样的输入永远得到同样的输出，不保证在真实页面上是对的。",
+  "_case": "基本：2026-11-03 推算为 2026-2027 学年第 1 学期；开学日推算 2026-08-31；11 节作息照抄；课表用到第 13 节 → 顺推补第 12-13 节；单双周；缺教师、缺教室；完全重复行；缺星期与缺节次各一条",
+  "term": { "schoolYear": "2026-2027", "semester": "1" },
+  "today": "2026-11-03",
+  "meta": { "success": true, "message": "" },
+  "rows": [
+    { "courseName": "高等数学A(一)", "userName": "甲老师", "placeName": "教1-101", "weekDay": "1", "festivals": "1-2", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "大学英语(一)", "userName": "乙老师", "placeName": "教学楼2-305", "weekDay": "2", "festivals": "3-4", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "1" },
+    { "courseName": "大学体育(一)", "userName": "", "placeName": "田径场", "weekDay": "4", "festivals": "5-6", "startWeek": "2", "endWeek": "16", "singleDoubleWeek": "2" },
+    { "courseName": "思想道德与法治", "userName": "丁老师", "placeName": "", "weekDay": "3", "festivals": "7-8", "startWeek": "1", "endWeek": "8", "singleDoubleWeek": "0" },
+    { "courseName": "实验课(晚)", "userName": "戊老师", "placeName": "实验楼C101", "weekDay": "5", "festivals": "12-13", "startWeek": "1", "endWeek": "4", "singleDoubleWeek": "" },
+    { "courseName": "大学英语(一)", "userName": "乙老师", "placeName": "教学楼2-305", "weekDay": "2", "festivals": "3-4", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "1" },
+    { "courseName": "无效行A", "userName": "", "placeName": "", "weekDay": "9", "festivals": "1-2", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "无效行B", "userName": "", "placeName": "", "weekDay": "2", "festivals": "", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" }
+  ]
+}

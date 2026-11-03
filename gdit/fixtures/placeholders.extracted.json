@@ -1,0 +1,13 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 交出去的样子。课程、教师、教室均为虚构。",
+  "_case": "占位词：待定 / 暂无教室 / 暂无教师 / 未知 在教师、教室位置交 null；同课名一个教师为空、一个有教师即两门课；教师名首尾空格去掉",
+  "term": { "schoolYear": "2026-2027", "semester": "1" },
+  "today": "2026-10-20",
+  "meta": { "success": true, "message": "" },
+  "rows": [
+    { "courseName": "高级英语", "userName": "待定", "placeName": "暂无教室", "weekDay": "1", "festivals": "1-2", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "高级英语", "userName": "暂无教师", "placeName": "教4", "weekDay": "2", "festivals": "1-2", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "数据库原理", "userName": "未知", "placeName": "未知", "weekDay": "3", "festivals": "3-4", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "数据库原理", "userName": " 王老师 ", "placeName": "教5", "weekDay": "3", "festivals": "5-6", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" }
+  ]
+}

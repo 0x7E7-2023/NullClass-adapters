@@ -1,0 +1,23 @@
+{
+  "term": { "code": "2026-2027-1", "text": "2026-2027学年第一学期" },
+  "campus": { "xqid": "01", "xqmc": "主校区" },
+  "askedCampus": null,
+  "season": null,
+  "rows": [
+    { "kcmc": "大学物理", "tmc": "甲", "croommc": "教2-101", "xingqi": "1", "djc": "8", "zcstr": "1-8", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "大学物理", "tmc": "甲", "croommc": "教2-101", "xingqi": "1", "djc": "9", "zcstr": "1-8", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "大学物理", "tmc": "甲", "croommc": "教2-101", "xingqi": "1", "djc": "10", "zcstr": "1-8", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "大学物理", "tmc": "甲", "croommc": "教2-101", "xingqi": "1", "djc": "11", "zcstr": "1-8", "xqid": "01", "xqmc": "主校区" }
+  ],
+  "slots": [
+    { "jc": "1", "kssj": "08:10", "jssj": "08:55" },
+    { "jc": "2", "kssj": "09:00", "jssj": "09:45" },
+    { "jc": "3", "kssj": "10:00", "jssj": "10:45" },
+    { "jc": "4", "kssj": "10:50", "jssj": "11:35" },
+    { "jc": "5", "kssj": "14:00", "jssj": "14:45" },
+    { "jc": "6", "kssj": "14:50", "jssj": "15:35" },
+    { "jc": "7", "kssj": "16:00", "jssj": "16:45" },
+    { "jc": "8", "kssj": "16:50", "jssj": "17:35" }
+  ],
+  "weeks": []
+}

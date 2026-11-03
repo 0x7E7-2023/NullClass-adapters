@@ -1,0 +1,15 @@
+{
+  "term": { "code": "2026-2027-1", "text": "2026-2027学年第一学期" },
+  "campus": { "xqid": "01", "xqmc": "主校区" },
+  "askedCampus": null,
+  "season": "summer",
+  "rows": [
+    { "kcmc": "高级程序设计与软件工程实践综合训练专题课程", "tmc": "", "croommc": "", "xingqi": "1", "djc": "1", "zcstr": "1-8", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "中国近现代史纲要与社会主义核心价值观专题研讨课", "tmc": "", "croommc": "", "xingqi": "2", "djc": "3", "zcstr": "1-8", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "工程制图与计算机辅助设计综合实践训练课程组", "tmc": "王一", "croommc": "", "xingqi": "3", "djc": "1", "zcstr": "1-8", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "大学英语读写译综合能力提升与跨文化交际专题", "tmc": "", "croommc": "教4-201", "xingqi": "4", "djc": "5", "zcstr": "1-8", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "嵌入式系统原理与应用开发综合实践课程训练营", "tmc": "", "croommc": "教5-301", "xingqi": "5", "djc": "6", "zcstr": "1-8", "xqid": "01", "xqmc": "主校区" }
+  ],
+  "slots": [],
+  "weeks": []
+}

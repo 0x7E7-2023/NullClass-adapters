@@ -1,0 +1,12 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程与教师均为虚构，无真实个人信息。",
+  "_case": "没有标记、日期也对不上 → 取列表第一项（first）；课表含「15-22周」与「1-30周」→ 总周数抬到 30；碰到 30 周硬上限 → capHit 提醒",
+  "term": { "yearLabel": "2026-2027", "termLabel": "第一学期", "yearValue": "2026-2027", "termValue": "1", "picked": "first", "dateNo": 0 },
+  "today": "2026-10-15",
+  "failedWeeks": [],
+  "capHit": true,
+  "rows": [
+    { "courseName": "夜课", "teacherName": "甲老师", "classRoom": "L1", "day": 1, "startSection": "1", "endSection": "2", "weeks": "15-22周" },
+    { "courseName": "全程课", "teacherName": "乙老师", "classRoom": "L2", "day": 2, "startSection": "3", "endSection": "4", "weeks": "1-30周" }
+  ]
+}

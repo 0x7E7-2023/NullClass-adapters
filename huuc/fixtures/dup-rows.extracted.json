@@ -1,0 +1,14 @@
+{
+  "term": { "code": "2026-2027-1", "text": "2026-2027学年第一学期" },
+  "campus": { "xqid": "01", "xqmc": "主校区" },
+  "askedCampus": null,
+  "season": "summer",
+  "rows": [
+    { "kcmc": "数据库原理", "tmc": "甲", "croommc": "教1-201", "xingqi": "1", "djc": "2", "zcstr": "1-8", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "数据库原理", "tmc": "甲", "croommc": "教1-201", "xingqi": "1", "djc": "1", "zcstr": "1-8", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "数据库原理", "tmc": "甲", "croommc": "教1-201", "xingqi": "1", "djc": "1", "zcstr": "1-8", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "离散数学", "tmc": "乙", "croommc": "教1-202", "xingqi": "2", "djc": "3", "zcstr": "1-8", "xqid": "01", "xqmc": "主校区" }
+  ],
+  "slots": [],
+  "weeks": []
+}

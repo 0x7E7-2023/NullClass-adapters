@@ -1,0 +1,62 @@
+{
+  "specVersion": 1,
+  "key": "hnzy",
+  "name": "河南职业技术学院",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 一颗（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://one.hnzj.edu.cn/common-service/kcb-pc/personage/personage",
+  "scheduleUrlHint": "https://one.hnzj.edu.cn/common-service/kcb-pc/personage/personage",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 标记为当前的学期（2026-2027 第一学期）→ 开学日按 9 月初周一推算、总周数内置 20 周；周次含「1-16周(单)」「2-16周(双)」「1-8周」；缺教师（体育）、缺教室（思想道德）各照常导入并按课名汇总；缺周次的行计数跳过；第 13 节按 H3 顺推补上；完全重复的行只留一条",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次标记归属 · 前置「(单)1-8周,(双)9-16周」、后置「1-8周(单),9-16周(双)」、无逗号前置「(单)1-8周(双)9-16周」、无逗号后置「1-8周(单)9-16周(双)」都读成 1-7 单周 + 10-16 双周；「1-15周(单) 共16周」只读 1-15 单周；「1-8周(共8周),9-16周」只剥备注、不丢 9-16 周；「第1-第8周」读成 1-8 周；「1-16周(1)」的 (1) 是序号、不是周次",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：同一门课在不同周换教室 · 教一203 上第 1-8 周、教二105 上第 9-16 周，两块分开保留（不并成一个教室）；同一教室相邻节次 1-2 与 3-4 合成 1-4 节；逐周重复的行只留一条；普通物理 1-2、5-6、3-4 三行合成 1-6 节",
+      "extracted": "fixtures/room-change.extracted.json",
+      "expected": "fixtures/room-change.expected.json"
+    },
+    {
+      "name": "合成用例：单周请求失败 · 第 5、6 周没取到 → 提醒点名周次、其余周照常导入；没有标记的学期按今天的日期选 2025-2026 第二学期 → 开学日推算为 2026-02-16；课表排到第 22 周 → 总周数抬到 22 并提醒；「1-4周,6-8周」拆两块",
+      "extracted": "fixtures/week-failed.extracted.json",
+      "expected": "fixtures/week-failed.expected.json"
+    },
+    {
+      "name": "合成用例：带课名的提醒不超 200 字 · 三门超过 20 字的长课名（缺教师、缺教室）+ 两行认不出的周次「待定」「无」→ 缺教师 / 缺教室按类型汇总计数、点名课名截到 20 字，每条不超 200 字；缺周次的行计数跳过并点名写法",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：节次顺推与周次括号 · 晚上第 13-15 节（教务写死表只到 12 节）→ 逐节顺推补上（第 14 节 21:25-22:10、第 15 节 22:15-23:00）；「1-16周(单双周)」两个标记同时出现按每周都上并提醒；教师写「未知」、教室写「暂无教室」按没有处理（null），缺教师的汇总句按类型计数",
+      "extracted": "fixtures/extension-both.extracted.json",
+      "expected": "fixtures/extension-both.expected.json"
+    },
+    {
+      "name": "合成用例：没有标记、日期也对不上 → 取列表第一项并提醒；课表出现「15-22周」与「1-30周」→ 逐周延伸，总周数抬到 30；碰到 30 周硬上限 → 提醒之后的周次没有导入",
+      "extracted": "fixtures/week-cap-first.extracted.json",
+      "expected": "fixtures/week-cap-first.expected.json"
+    },
+    {
+      "name": "合成用例：逐周重复的记录去重计数 · 同一条带「(1)」的记录在多个周重复出现 → 「括号纯数字」提醒计为 1 处，不按周累加",
+      "extracted": "fixtures/repeat-serial.extracted.json",
+      "expected": "fixtures/repeat-serial.expected.json"
+    },
+    {
+      "name": "合成用例：超长学期名 · 学期名 43 字，提醒里截到 20 字，末尾「请核对是不是要导入的学期」仍在；载荷里的学期名保持完整",
+      "extracted": "fixtures/long-term-name.extracted.json",
+      "expected": "fixtures/long-term-name.expected.json"
+    }
+  ]
+}

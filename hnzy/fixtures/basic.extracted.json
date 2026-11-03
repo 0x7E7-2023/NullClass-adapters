@@ -1,0 +1,17 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：按上游 HNZY/hnzy.js 实际读取的字段形状（courseName / teacherName / classRoom / 星期 / startSection / endSection / weeks）编造，课程与教师均为虚构，无真实个人信息。只保证同样的输入永远得到同样的输出，不保证解析在真实页面上是对的。",
+  "_case": "基本：标为当前的学期；周次含「1-16周(单)」「2-16周(双)」「1-8周」；缺教师、缺教室各一门；缺周次的行跳过；第 13 节超出写死表按 H3 顺推；完全重复的行只留一条",
+  "term": { "yearLabel": "2026-2027", "termLabel": "第一学期", "yearValue": "2026-2027", "termValue": "1", "picked": "flag" },
+  "today": "2026-09-13",
+  "failedWeeks": [],
+  "rows": [
+    { "courseName": "高等数学", "teacherName": "甲老师", "classRoom": "教学楼A101", "day": 1, "startSection": "1", "endSection": "2", "weeks": "1-16周" },
+    { "courseName": "大学英语", "teacherName": "乙老师", "classRoom": "教学楼B305", "day": 2, "startSection": "3", "endSection": "4", "weeks": "1-16周(单)" },
+    { "courseName": "人体解剖学", "teacherName": "丙老师", "classRoom": "解剖楼201", "day": 3, "startSection": "1", "endSection": "2", "weeks": "2-16周(双)" },
+    { "courseName": "大学体育", "teacherName": "", "classRoom": "田径场", "day": 4, "startSection": "5", "endSection": "6", "weeks": "1-8周" },
+    { "courseName": "思想道德与法治", "teacherName": "丁老师", "classRoom": "", "day": 3, "startSection": "7", "endSection": "8", "weeks": "1-8周" },
+    { "courseName": "物理实验", "teacherName": "戊老师", "classRoom": "实验楼C101", "day": 5, "startSection": "13", "endSection": "13", "weeks": "1-4周" },
+    { "courseName": "大学英语", "teacherName": "乙老师", "classRoom": "教学楼B305", "day": 2, "startSection": "3", "endSection": "4", "weeks": "1-16周(单)" },
+    { "courseName": "体育选项", "teacherName": "丙老师", "classRoom": "田径场", "day": 6, "startSection": "1", "endSection": "2", "weeks": "" }
+  ]
+}

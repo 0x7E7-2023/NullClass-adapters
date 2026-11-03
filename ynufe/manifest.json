@@ -3,7 +3,7 @@
   "key": "ynufe",
   "name": "云南财经大学",
   "initial": "Y",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "上游 AxelPLN（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://xjwis.ynufe.edu.cn/jsxsd/",
@@ -117,6 +117,16 @@
       "name": "合成用例：课表顶部没有星期标题 —— 按最右边 7 列推断并提醒；课表页上找不到学年学期 → 学期名用「云南财经大学当前学期」占位并提醒；格子没有星期标注",
       "extracted": "fixtures/no-header.extracted.json",
       "expected": "fixtures/no-header.expected.json"
+    },
+    {
+      "name": "合成用例：跨大节课 —— 第 2-3 节跨上午大课间、第 1-5 节整段上午、第 4-6 节跨午休、第 7-8 节下午（上游 3fe13d2 按「40+10 连着上」缩短下课时间，这里仍按节次时间表放，见 AUDIT 跟进一节）",
+      "extracted": "fixtures/cross-block.extracted.json",
+      "expected": "fixtures/cross-block.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— (单)1-8周(双)9-16周 按段各判（单 1-7 / 双 10-16）；(双)1-8周(单)9-16周（双 2-8 / 单 9-15），不退化成每周都上",
+      "extracted": "fixtures/weeks-leading-mark.extracted.json",
+      "expected": "fixtures/weeks-leading-mark.expected.json"
     }
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 交出去的样子。课名为虚构的长课名（用来钉住提醒截字），教师、教室均为空或虚构。无真实个人信息。",
+  "_case": "长课名提醒：四门课没给教师（其中两门课名超过 20 字）、四门课没给教室（其中一门超过 20 字）；提醒按类型汇总、点名最多 3 门、课名截到 20 字",
+  "term": { "schoolYear": "2026-2027", "semester": "1" },
+  "today": "2026-10-20",
+  "meta": { "success": true, "message": "" },
+  "rows": [
+    { "courseName": "数据结构与算法分析实践课程设计报告撰写培训班", "userName": "", "placeName": "机房A101", "weekDay": "1", "festivals": "1-2", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "新媒体运营与短视频内容策划实训课程", "userName": "丙老师", "placeName": "", "weekDay": "2", "festivals": "3-4", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "人工智能导论与机器学习基础专题研讨课", "userName": "", "placeName": "教学楼B202", "weekDay": "3", "festivals": "5-6", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "军事理论与国防教育综合实践专题讲座课程", "userName": "丁老师", "placeName": "", "weekDay": "4", "festivals": "7-8", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "综合布线技术与网络工程实践项目设计专题课程", "userName": "", "placeName": "", "weekDay": "5", "festivals": "1-2", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "高等代数与解析几何的历史发展与应用专题", "userName": "", "placeName": "", "weekDay": "6", "festivals": "1-2", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" }
+  ]
+}

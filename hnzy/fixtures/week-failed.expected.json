@@ -1,0 +1,124 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务系统没有标出当前学期，已按今天的日期选择导入 2025-2026 学年第 2 学期，请核对是不是要导入的学期",
+    "教务系统没有给出开学日期，第 1 周按「第二学期 = 2 月 20 日所在周的周一」推算为 2026-02-16，请在学期管理里核对成学校实际开学日",
+    "课表里有第 22 周的课，超过默认的 20 周，学期总周数已按 22 周导入，如与实际不符可在学期管理里改",
+    "节次时间用的是学校的 12 节表（第 1 节 08:30-09:15，第 12 节 19:45-20:30），请在学期管理里核对是否与学校实际的节次时间一致",
+    "第 5、6 周的课表没有取到（教务系统没有响应或返回错误），这几周的课可能不全，请稍后重新提取一次"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第二学期",
+      "firstDay": "2026-02-16",
+      "totalWeeks": 22,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:30",
+          "end": "09:15"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:15",
+          "end": "10:00"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:20",
+          "end": "11:05"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:05",
+          "end": "11:50"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:20",
+          "end": "15:05"
+        },
+        {
+          "periodIndex": 6,
+          "start": "15:05",
+          "end": "15:50"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:10",
+          "end": "16:55"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:55",
+          "end": "17:40"
+        },
+        {
+          "periodIndex": 9,
+          "start": "18:00",
+          "end": "18:45"
+        },
+        {
+          "periodIndex": 10,
+          "start": "18:45",
+          "end": "19:00"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:00",
+          "end": "19:45"
+        },
+        {
+          "periodIndex": 12,
+          "start": "19:45",
+          "end": "20:30"
+        }
+      ],
+      "courses": [
+        {
+          "name": "工程制图",
+          "teacher": "丙老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 22,
+              "weekType": "ALL",
+              "location": "工科楼301"
+            }
+          ]
+        },
+        {
+          "name": "材料力学",
+          "teacher": "丁老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "工科楼302"
+            },
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 6,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "工科楼302"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "term": { "code": "2026-2027-1", "text": "" },
+  "campus": { "xqid": "01", "xqmc": "主校区" },
+  "askedCampus": null,
+  "season": "summer",
+  "rows": [
+    { "kcmc": "程序设计", "tmc": "甲", "croommc": "实验楼A301", "xingqi": "1", "djc": "1", "zcstr": "1-16周(双)", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "程序设计", "tmc": "甲", "croommc": "实验楼A301", "xingqi": "1", "djc": "2", "zcstr": "1-15周(单)", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "形势与政策", "tmc": "乙", "croommc": "教3-101", "xingqi": "2", "djc": "5", "zcstr": "(单)1-8周,(双)9-16周", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "体育", "tmc": "丙", "croommc": "操场", "xingqi": "3", "djc": "1", "zcstr": "(单)1-8周(双)9-16周", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "数学分析", "tmc": "丁", "croommc": "教1-102", "xingqi": "4", "djc": "3", "zcstr": "1-8周(单)9-16周(双)", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "思政", "tmc": "己", "croommc": "教4-301", "xingqi": "5", "djc": "1", "zcstr": "1-8周(共8周),9-16周", "xqid": "01", "xqmc": "主校区" },
+    { "kcmc": "大学物理", "tmc": "庚", "croommc": "教5", "xingqi": "6", "djc": "2", "zcstr": "第1-第8周", "xqid": "01", "xqmc": "主校区" }
+  ],
+  "slots": [],
+  "weeks": []
+}

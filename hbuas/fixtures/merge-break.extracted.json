@@ -1,0 +1,16 @@
+{
+  "term": {
+    "code": "2026-2027-1",
+    "text": "2026-2027学年第一学期"
+  },
+  "rows": [
+    { "kcmc": "<a>线性代数</a>", "tmc": "<a>丙</a>", "croommc": "<a>教2</a>", "xingqi": "1", "djc": "1", "zcstr": "1-16" },
+    { "kcmc": "<a>线性代数</a>", "tmc": "<a>丙</a>", "croommc": "<a>教2</a>", "xingqi": "1", "djc": "2", "zcstr": "1-16" },
+    { "kcmc": "<a>线性代数</a>", "tmc": "<a>丙</a>", "croommc": "<a>教2</a>", "xingqi": "1", "djc": "2", "zcstr": "1-16" },
+    { "kcmc": "<a>线性代数</a>", "tmc": "<a>丙</a>", "croommc": "<a>教2</a>", "xingqi": "1", "djc": "4", "zcstr": "1-16" },
+    { "kcmc": "<a>线性代数</a>", "tmc": "<a>丙</a>", "croommc": "<a>教2</a>", "xingqi": "1", "djc": "5", "zcstr": "1-16" },
+    { "kcmc": "<a>线性代数</a>", "tmc": "<a>丙</a>", "croommc": "<a>教2</a>", "xingqi": "1", "djc": "3", "zcstr": "1-8" }
+  ],
+  "slots": [],
+  "weeks": []
+}

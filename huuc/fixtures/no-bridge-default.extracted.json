@@ -1,0 +1,11 @@
+{
+  "term": { "code": "2026-2027-1", "text": "2026-2027学年第一学期" },
+  "campus": { "xqid": "01", "xqmc": "主校区" },
+  "askedCampus": null,
+  "season": null,
+  "rows": [
+    { "kcmc": "体育", "tmc": "甲", "croommc": "操场", "xingqi": "2", "djc": "5", "zcstr": "1-8", "xqid": "01", "xqmc": "主校区" }
+  ],
+  "slots": [],
+  "weeks": []
+}

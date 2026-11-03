@@ -1,0 +1,17 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程与教师均为虚构，无真实个人信息。逐周请求的结果会有重复行，这里照实际形状重复写。",
+  "_case": "同课换教室：同一门课第 1-8 周在教一203、第 9-16 周在教二105，两块分开；相邻节次合并；逐周重复的行只留一条；三行节次乱序（1-2、5-6、3-4）合成 1-6 节",
+  "term": { "yearLabel": "2026-2027", "termLabel": "第一学期", "yearValue": "2026-2027", "termValue": "1", "picked": "flag" },
+  "today": "2026-09-13",
+  "failedWeeks": [],
+  "rows": [
+    { "courseName": "高等代数", "teacherName": "甲老师", "classRoom": "教一203", "day": 2, "startSection": "1", "endSection": "2", "weeks": "1-8周" },
+    { "courseName": "高等代数", "teacherName": "甲老师", "classRoom": "教一203", "day": 2, "startSection": "3", "endSection": "4", "weeks": "1-8周" },
+    { "courseName": "高等代数", "teacherName": "甲老师", "classRoom": "教一203", "day": 2, "startSection": "3", "endSection": "4", "weeks": "1-8周" },
+    { "courseName": "高等代数", "teacherName": "甲老师", "classRoom": "教二105", "day": 2, "startSection": "1", "endSection": "2", "weeks": "9-16周" },
+    { "courseName": "高等代数", "teacherName": "甲老师", "classRoom": "教二105", "day": 2, "startSection": "1", "endSection": "2", "weeks": "9-16周" },
+    { "courseName": "普通物理", "teacherName": "乙老师", "classRoom": "教一203", "day": 4, "startSection": "1", "endSection": "2", "weeks": "1-16周" },
+    { "courseName": "普通物理", "teacherName": "乙老师", "classRoom": "教一203", "day": 4, "startSection": "5", "endSection": "6", "weeks": "1-16周" },
+    { "courseName": "普通物理", "teacherName": "乙老师", "classRoom": "教一203", "day": 4, "startSection": "3", "endSection": "4", "weeks": "1-16周" }
+  ]
+}

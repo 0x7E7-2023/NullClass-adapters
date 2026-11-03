@@ -1,0 +1,12 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 交出去的样子。课程、教师、教室均为虚构。",
+  "_case": "第二学期：semester=2、schoolYear=2025-2026，今天 2026-04-15；开学日按 2 月 20 日所在周的周一推算为 2026-02-16",
+  "term": { "schoolYear": "2025-2026", "semester": "2" },
+  "today": "2026-04-15",
+  "meta": { "success": true, "message": "" },
+  "rows": [
+    { "courseName": "形势分析", "userName": "甲老师", "placeName": "教1", "weekDay": "1", "festivals": "1-2", "startWeek": "1", "endWeek": "16", "singleDoubleWeek": "0" },
+    { "courseName": "信号与系统", "userName": "乙老师", "placeName": "教2", "weekDay": "2", "festivals": "3-4", "startWeek": "2", "endWeek": "16", "singleDoubleWeek": "2" },
+    { "courseName": "工程制图", "userName": "丙老师", "placeName": "教3", "weekDay": "3", "festivals": "1-2", "startWeek": "1", "endWeek": "8", "singleDoubleWeek": "1" }
+  ]
+}

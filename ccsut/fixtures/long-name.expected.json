@@ -1,0 +1,72 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统里当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "学期总周数取自教务校历（18 周），如与实际不符可在学期管理里改",
+    "有 4 门课没有教师信息（例如 离散数学与数理逻辑基础理论及应用实践综…、大学生心理健康教育与自我成长专题实践活…、面向对象程序设计与Java语言综合实训… 等），教师可在本门课的「编辑课程」里补充",
+    "有 3 门课没有教室信息（例如 大学生心理健康教育与自我成长专题实践活…、高等代数与解析几何综合训练与课程设计实践、大学英语四六级听力口语强化训练与模拟考…），教室可在本门课的「编辑课程」里补充"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 18,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:20", "end": "09:05" },
+        { "periodIndex": 2, "start": "09:10", "end": "09:55" },
+        { "periodIndex": 3, "start": "10:15", "end": "11:00" },
+        { "periodIndex": 4, "start": "11:05", "end": "11:50" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:50", "end": "15:35" },
+        { "periodIndex": 7, "start": "15:50", "end": "16:35" },
+        { "periodIndex": 8, "start": "16:40", "end": "17:25" },
+        { "periodIndex": 9, "start": "18:30", "end": "19:15" },
+        { "periodIndex": 10, "start": "19:25", "end": "20:10" }
+      ],
+      "courses": [
+        {
+          "name": "离散数学与数理逻辑基础理论及应用实践综合课程",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "教1-101" }
+          ]
+        },
+        {
+          "name": "大学生心理健康教育与自我成长专题实践活动课",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 3, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "面向对象程序设计与Java语言综合实训课程",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 5, "endPeriod": 5, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "实验楼" }
+          ]
+        },
+        {
+          "name": "高等代数与解析几何综合训练与课程设计实践",
+          "teacher": "王四",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 7, "endPeriod": 7, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "大学英语四六级听力口语强化训练与模拟考试辅导",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 9, "endPeriod": 9, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

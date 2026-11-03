@@ -1,0 +1,14 @@
+{
+  "term": {
+    "code": "2026-2027-1",
+    "text": "2026-2027学年第一学期"
+  },
+  "rows": [
+    { "kcmc": "<a>高等物理</a>", "tmc": "<a>丁</a>", "croommc": "<a>教6</a>", "xingqi": "1", "djc": "11", "zcstr": "1-16" },
+    { "kcmc": "<a>高等物理</a>", "tmc": "<a>丁</a>", "croommc": "<a>教6</a>", "xingqi": "1", "djc": "12", "zcstr": "1-16" },
+    { "kcmc": "<a>高等物理</a>", "tmc": "<a>丁</a>", "croommc": "<a>教6</a>", "xingqi": "1", "djc": "13", "zcstr": "1-16" },
+    { "kcmc": "<a>实验课</a>", "tmc": "<a>戊</a>", "croommc": "<a>实验室</a>", "xingqi": "2", "djc": "10", "zcstr": "1-16" }
+  ],
+  "slots": [],
+  "weeks": []
+}
