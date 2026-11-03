@@ -1,0 +1,88 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "节次时间按沈阳建筑大学公布的上课时间导入（第 1 节 08:00-08:45，共 10 节）；第 3、4 节在四、五层教室上课的晚 10 分钟（10:10、11:10 开始），请核对",
+    "教务首页的当前教学周属于2026年秋季学期，不是这个学期，开学日期按「2027 年 3 月 1 日所在周的周一」推算为 2027-03-01，请在学期管理里核对",
+    "学期总周数教务没有提供，已按 20 周计（内置值 20 周），如校历不同请在学期管理里调整",
+    "只导入了教务系统当前选中的那个学期（2026-2027学年第二学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2027-03-01",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:00",
+          "end": "09:45"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:00",
+          "end": "10:45"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:00",
+          "end": "11:45"
+        },
+        {
+          "periodIndex": 5,
+          "start": "13:30",
+          "end": "14:15"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:30",
+          "end": "15:15"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:30",
+          "end": "16:15"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:30",
+          "end": "17:15"
+        },
+        {
+          "periodIndex": 9,
+          "start": "18:30",
+          "end": "19:15"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:30",
+          "end": "20:15"
+        }
+      ],
+      "courses": [
+        {
+          "name": "春季课子",
+          "teacher": "教师寅",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "C1203"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

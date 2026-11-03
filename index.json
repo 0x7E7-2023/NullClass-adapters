@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.11.03.2",
+  "version": "2026.11.03.3",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -1173,6 +1173,12 @@
       "name": "中山大学",
       "version": "1.0.0",
       "path": "sysu"
+    },
+    {
+      "key": "sjzu",
+      "name": "沈阳建筑大学",
+      "version": "1.0.0",
+      "path": "sjzu"
     }
   ]
 }

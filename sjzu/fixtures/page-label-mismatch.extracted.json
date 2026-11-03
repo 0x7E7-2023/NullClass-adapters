@@ -1,0 +1,11 @@
+{
+ "_note": "合成：学期名取自页面上的学期组件（2026-2027学年第二学期，学期号 231），首页教学周却属于 2026 秋季：仍要认出对不上、按 3 月 1 日推算（复审 B1）",
+ "today": "2026-11-03",
+ "url": "http://111.117.146.166/eams/homeExt.action",
+ "tagId": "semesterBar1234567890Semester",
+ "semesterId": "231",
+ "semesterLabel": "2026-2027学年第二学期",
+ "semesterRaw": "{yearDom:\"<tr><td index='0'>2026</td></tr>\",termDom:\"\",semesters:{y24:[{id:226,schoolYear:\"2026\",name:\"春季\"},{id:230,schoolYear:\"2026\",name:\"秋季\"}],y25:[{id:231,schoolYear:\"2027\",name:\"春季\"}]},yearIndex:\"24\",termIndex:\"1\",semesterId:\"231\"}",
+ "teachWeek": "2026第秋季学期 10 教学周",
+ "courseHtml": "<table id=\"manualArrangeCourseTable\" class=\"gridtable\"><tr><td id=\"TD0_0\"></td></tr></table>\n<script>bar.addItem(\"打印\",'bg.Go(\"/eams/courseTableForStd!courseTable.action?setting.kind=std&ids=\", \"_blank\")');</script>\n<script language=\"JavaScript\">\n\tvar language = \"zh\";\n\tvar table0 = new CourseTable(2026,84);\n\tvar unitCount = 12;\n\tvar index=0;\n\tvar activity=null;\n\t\tvar taskId = \"10\";\n\t\tvar teachers = [{id:1001,name:\"教师寅\",lab:false}];\n\t\tvar actTeachers = [{id:1001,name:\"教师寅\",lab:false}];\n\t\tvar assistant = _.filter(actTeachers, function(actTeacher) {\n\t\t\treturn (_.where(teachers, {id:actTeacher.id,name:actTeacher.name,lab:actTeacher.lab}).length == 0) && (actTeacher.lab == true);\n\t\t});\n\t\tvar assistantName = \"\";\n\t\tif (assistant.length > 0) {\n\t\t\tassistantName = assistant[0].name;\n\t\t\tactTeachers = _.reject(actTeachers, function(actTeacher) {\n\t\t\t\treturn _.where(assistant, {id:actTeacher.id}).length > 0;\n\t\t\t});\n\t\t}\n\t\tvar actTeacherId = [];\n\t\tvar actTeacherName = [];\n\t\tfor (var i = 0; i < actTeachers.length; i++) {\n\t\t\tactTeacherId.push(actTeachers[i].id);\n\t\t\tactTeacherName.push(actTeachers[i].name);\n\t\t}\n\t\t\tactivity = new TaskActivity(actTeacherId.join(','),actTeacherName.join(','),\"910(A0)\",\"春季课子(A000010)\",\"1\",\"C1203(沈阳建筑大学)\",\"01111111111111111000000000000000000000000000000000000\",taskId,null,assistantName,\"\",\"\");\n\t\t\tindex =1*unitCount+2;\n\t\t\ttable0.activities[index][table0.activities[index].length]=activity;\n\t\t\tindex =1*unitCount+3;\n\t\t\ttable0.activities[index][table0.activities[index].length]=activity;\n\ttable0.marshalTable(2,1,20);\n</script>\n"
+}

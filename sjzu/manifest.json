@@ -1,0 +1,62 @@
+{
+  "specVersion": 1,
+  "key": "sjzu",
+  "name": "沈阳建筑大学",
+  "initial": "S",
+  "version": "1.0.0",
+  "author": "NullClass",
+  "homepage": "https://github.com/0x7E7-2023/NullClass",
+  "loginUrl": "http://111.117.146.166/eams/loginExt.action",
+  "scheduleUrlHint": "http://111.117.146.166/eams/courseTableForStd.action",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（本校教师写法 actTeachers / teachers、实验课只排一周、缺教室汇总、单周、跨 4 节合并、课程代码与「(沈阳建筑大学)」去掉、开学日由首页「第 10 教学周」倒推、本校 10 节节次时间）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：教师与助教（只有助教时用助教名、教师加助教时剔掉助教、没有教师留空并提醒、两位教师）+ 首页教学周读不到时按 9 月 1 日所在周的周一推算",
+      "extracted": "fixtures/teachers.extracted.json",
+      "expected": "fixtures/teachers.expected.json"
+    },
+    {
+      "name": "合成用例：导入的学期（2027 春季）与首页教学周所属学期（2026 秋季）对不上——不用教学周，按 3 月 1 日所在周的周一推算",
+      "extracted": "fixtures/term-mismatch.extracted.json",
+      "expected": "fixtures/term-mismatch.expected.json"
+    },
+    {
+      "name": "合成用例：第 9-10 节用学校表、第 11-12 节按课间 15 分钟顺推并提醒、课表排到第 22 周时总周数抬高",
+      "extracted": "fixtures/late-periods.extracted.json",
+      "expected": "fixtures/late-periods.expected.json"
+    },
+    {
+      "name": "合成用例：长课名的缺教师 / 缺教室汇总提醒（各举 3 例、例子截到 20 字、整条不超 200 字）",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    },
+    {
+      "name": "合成用例：课名与教室清理（课程代码去掉而全角括号留着、无代码课名不动、全角括号的校区名也去掉）+ 教室标「停课」的跳过并提醒",
+      "extracted": "fixtures/names-rooms.extracted.json",
+      "expected": "fixtures/names-rooms.expected.json"
+    },
+    {
+      "name": "合成用例：学期名取自页面上的学期组件时，开学日仍由首页教学周倒推（学期列表照常给出年份与季节）",
+      "extracted": "fixtures/page-label.extracted.json",
+      "expected": "fixtures/page-label.expected.json"
+    },
+    {
+      "name": "合成用例：学期列表没取到时照用首页教学周倒推开学日，学期名按首页的当前学期写并提醒",
+      "extracted": "fixtures/no-semesters.extracted.json",
+      "expected": "fixtures/no-semesters.expected.json"
+    },
+    {
+      "name": "合成用例：学期名取自页面上的学期组件（2026-2027学年第二学期），首页教学周却属于 2026 秋季——仍要认出对不上，按 3 月 1 日所在周的周一推算",
+      "extracted": "fixtures/page-label-mismatch.extracted.json",
+      "expected": "fixtures/page-label-mismatch.expected.json"
+    }
+  ]
+}
