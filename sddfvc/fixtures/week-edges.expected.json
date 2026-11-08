@@ -1,0 +1,31 @@
+{
+  "specVersion":1,"kind":"schedule","ocrAssisted":false,
+  "warnings":[
+    "已按教务系统标注的当前学期「2026-2027 学年度第一学期」导入；要导入别的学期，请先在教务系统里切换后再点「提取课表」",
+    "第 1 周开始日期（2026-08-31）来自教务周次列表，请在学期管理里核对",
+    "课表里有第 30 周的课，超过教务周次列表，学期总周数已按 30 周导入，请在学期管理里核对",
+    "有 2 条课程记录没能导入（周次认不出 2 条），例如 逆序周、文字周；如发现少课请反馈",
+    "有 2 段周次写法认不出，已忽略这些写法；请核对是否少课",
+    "有 4 个周次超出 1-30 周，已丢弃；请核对教务课表"
+  ],
+  "terms":[{
+    "name":"2026-2027 学年度第一学期","firstDay":"2026-08-31","totalWeeks":30,
+    "periodTimes":[
+      {"periodIndex":1,"start":"08:30","end":"10:00"},{"periodIndex":2,"start":"10:15","end":"11:45"},
+      {"periodIndex":3,"start":"13:30","end":"15:00"},{"periodIndex":4,"start":"15:15","end":"16:45"},
+      {"periodIndex":5,"start":"19:00","end":"19:30"},{"periodIndex":6,"start":"20:00","end":"20:45"}
+    ],
+    "courses":[
+      {"name":"分段单周","teacher":"教师甲","note":null,"blocks":[
+        {"dayOfWeek":1,"startPeriod":1,"endPeriod":1,"startWeek":1,"endWeek":7,"weekType":"ODD","location":"A"},
+        {"dayOfWeek":1,"startPeriod":1,"endPeriod":1,"startWeek":11,"endWeek":17,"weekType":"ODD","location":"A"}
+      ]},
+      {"name":"离散奇周","teacher":"教师甲","note":null,"blocks":[{"dayOfWeek":1,"startPeriod":2,"endPeriod":2,"startWeek":1,"endWeek":5,"weekType":"ODD","location":"A"}]},
+      {"name":"离散双周","teacher":"教师甲","note":null,"blocks":[{"dayOfWeek":2,"startPeriod":1,"endPeriod":1,"startWeek":2,"endWeek":4,"weekType":"EVEN","location":"A"}]},
+      {"name":"边界周","teacher":"教师甲","note":null,"blocks":[
+        {"dayOfWeek":2,"startPeriod":2,"endPeriod":2,"startWeek":1,"endWeek":2,"weekType":"ALL","location":"A"},
+        {"dayOfWeek":2,"startPeriod":2,"endPeriod":2,"startWeek":30,"endWeek":30,"weekType":"ALL","location":"A"}
+      ]}
+    ]
+  }]
+}

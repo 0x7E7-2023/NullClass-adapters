@@ -1,0 +1,82 @@
+{
+  "specVersion": 1,
+  "key": "zjbti",
+  "name": "浙江工商职业技术学院",
+  "initial": "Z",
+  "version": "1.0.0",
+  "author": "上游 LanRhyme（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://webvpn.zjbti.net.cn",
+  "scheduleUrlHint": "https://webvpn.zjbti.net.cn/zjgsjw/student/wsxk.xskcb10319.jsp",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表、单双周、分段周次、第 12 节与教务周历开学日",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期按日期判断、次年周历开学日、星期日课程",
+      "extracted": "fixtures/second-term.extracted.json",
+      "expected": "fixtures/second-term.expected.json"
+    },
+    {
+      "name": "合成用例：周历日期不是周一时改用学期锚点推算并提醒",
+      "extracted": "fixtures/start-bad.extracted.json",
+      "expected": "fixtures/start-bad.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号前置及后置单双标记、第字区间、共 N 周、单周奇偶与超范围周次",
+      "extracted": "fixtures/weeks-forms.extracted.json",
+      "expected": "fixtures/weeks-forms.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师教室及占位文字、全角括号、多段节次、坏行与超范围星期均汇总提醒",
+      "extracted": "fixtures/messy.extracted.json",
+      "expected": "fixtures/messy.expected.json"
+    },
+    {
+      "name": "合成用例：长课名及长原文按 20 字截短，同类提醒合并且每条不超过 200 字",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    },
+    {
+      "name": "合成用例：第 13 至 15 节顺推补时间，第 16 节越过午夜不补并提醒",
+      "extracted": "fixtures/period-overflow.extracted.json",
+      "expected": "fixtures/period-overflow.expected.json"
+    },
+    {
+      "name": "合成用例：重复行、连堂、重叠节次、按周错位与换教室的合并",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：旧形状杂散格含虚构个人信息也只计数，正文绝不进入提醒",
+      "extracted": "fixtures/stray-privacy.extracted.json",
+      "expected": "fixtures/stray-privacy.expected.json"
+    },
+    {
+      "name": "合成用例：隐藏节点清洗后的可见课程文本按原课程结构导入",
+      "extracted": "fixtures/visible-text.extracted.json",
+      "expected": "fixtures/visible-text.expected.json"
+    },
+    {
+      "name": "合成用例：中文日期不干扰真实星期表头，5 天课程列映射保持星期一至星期五",
+      "extracted": "fixtures/five-day-dates.extracted.json",
+      "expected": "fixtures/five-day-dates.expected.json"
+    },
+    {
+      "name": "合成用例：第 20 至 22 节课程保留，并精确提醒这些节次无法补时间",
+      "extracted": "fixtures/period-high.extracted.json",
+      "expected": "fixtures/period-high.expected.json"
+    },
+    {
+      "name": "合成用例：只用第 13 与 16 节，顺推提醒只列真正用到的 13 节、不把补出的 14-15 空档算进去",
+      "extracted": "fixtures/period-fill-used.extracted.json",
+      "expected": "fixtures/period-fill-used.expected.json"
+    }
+  ]
+}

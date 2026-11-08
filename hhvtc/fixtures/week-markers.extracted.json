@@ -1,0 +1,12 @@
+{
+  "today": "2026-11-03",
+  "details": [
+    { "name": "甲课程", "teacher": "教师一", "timeText": "[(单)1-8周,(双)9-16周]一[1-2节]", "location": "教室A" },
+    { "name": "乙课程", "teacher": "教师二", "timeText": "[1-8周(单),9-16周(双)]二[3-4节]", "location": "教室B" },
+    { "name": "丙课程", "teacher": "教师三", "timeText": "[(单)1-8周(双)9-16周]三[5-6节]", "location": "教室C" },
+    { "name": "丁课程", "teacher": "教师四", "timeText": "[1-8周(单)9-16周(双)]四[7-8节]", "location": "教室D" },
+    { "name": "戊课程", "teacher": "教师五", "timeText": "[1-15周(单) 共16周]五[1-2节]", "location": "教室E" },
+    { "name": "己课程", "teacher": "教师六", "timeText": "[1-8周(共8周),9-16周]六[3-4节]", "location": "教室F" },
+    { "name": "庚课程", "teacher": "教师七", "timeText": "[第1-第8周]日[5-6节]", "location": "教室G" }
+  ]
+}

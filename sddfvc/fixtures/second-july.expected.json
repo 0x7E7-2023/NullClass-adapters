@@ -1,0 +1,21 @@
+{
+  "specVersion":1,"kind":"schedule","ocrAssisted":false,
+  "warnings":[
+    "已按教务系统标注的当前学期「2026-2027 学年度第二学期」导入；要导入别的学期，请先在教务系统里切换后再点「提取课表」",
+    "第 1 周开始日期（2027-02-22）来自教务周次列表，请在学期管理里核对",
+    "教务周次缺少完整周号，已按周历日期跨度计算为 23 周，请在学期管理里核对"
+  ],
+  "terms":[{
+    "name":"2026-2027 学年度第二学期","firstDay":"2027-02-22","totalWeeks":23,
+    "periodTimes":[
+      {"periodIndex":1,"start":"08:30","end":"10:00"},{"periodIndex":2,"start":"10:15","end":"11:45"},
+      {"periodIndex":3,"start":"13:30","end":"15:00"},{"periodIndex":4,"start":"15:15","end":"16:45"},
+      {"periodIndex":5,"start":"19:00","end":"19:30"},{"periodIndex":6,"start":"20:00","end":"20:45"}
+    ],
+    "courses":[
+      {"name":"药事管理与法规","teacher":"教师庚","note":null,"blocks":[
+        {"dayOfWeek":1,"startPeriod":1,"endPeriod":1,"startWeek":2,"endWeek":3,"weekType":"ALL","location":"A203"}
+      ]}
+    ]
+  }]
+}

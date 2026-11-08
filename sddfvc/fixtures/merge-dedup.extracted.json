@@ -1,0 +1,23 @@
+{
+  "_note":"合成数据：逐周重复记录、连堂、节次错位、同名不同教师和换教室；第 1 周日期故意为周二。",
+  "term":{"id":"T1","name":"2026-2027 学年度第一学期"},
+  "calendar":[{"id":"1","startDate":"09/01"},{"id":"2","startDate":"09/08"},{"id":"3","startDate":"09/15"},{"id":"4","startDate":"09/22"}],
+  "responses":[
+    {"week":"1","entries":[
+      {"day":1,"slot":"1","rawName":"连堂课","details":[{"weeks":"1-4","parity":0,"teacher":"教师甲","location":"A"}]},
+      {"day":1,"slot":"3","rawName":"连堂课","details":[{"weeks":"1-4","parity":0,"teacher":"教师甲","location":"A"}]},
+      {"day":1,"slot":"1","rawName":"连堂课","details":[{"weeks":"1-4","parity":0,"teacher":"教师甲","location":"A"}]},
+      {"day":1,"slot":"5","rawName":"拼周课","details":[{"weeks":"1-2","parity":0,"teacher":"教师乙","location":"B"}]},
+      {"day":1,"slot":"5","rawName":"拼周课","details":[{"weeks":"3-4","parity":0,"teacher":"教师乙","location":"B"}]},
+      {"day":2,"slot":"1","rawName":"错位课","details":[{"weeks":"1-2","parity":0,"teacher":"教师丙","location":"C"}]},
+      {"day":2,"slot":"3","rawName":"错位课","details":[{"weeks":"3-4","parity":0,"teacher":"教师丙","location":"C"}]},
+      {"day":3,"slot":"1","rawName":"同名课","details":[{"weeks":"1-4","parity":0,"teacher":"教师甲","location":"D"}]},
+      {"day":3,"slot":"1","rawName":"同名课","details":[{"weeks":"1-4","parity":0,"teacher":"教师乙","location":"D"}]},
+      {"day":4,"slot":"1","rawName":"换教室课","details":[{"weeks":"1-2","parity":0,"teacher":"教师丁","location":"G1"}]},
+      {"day":4,"slot":"1","rawName":"换教室课","details":[{"weeks":"3-4","parity":0,"teacher":"教师丁","location":"G2"}]}
+    ]},
+    {"week":"2","entries":[
+      {"day":1,"slot":"1","rawName":"连堂课","details":[{"weeks":"1-4","parity":0,"teacher":"教师甲","location":"A"}]}
+    ]}
+  ],"failedWeeks":[]
+}

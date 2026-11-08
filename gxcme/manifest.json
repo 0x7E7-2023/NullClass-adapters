@@ -1,0 +1,82 @@
+{
+  "specVersion": 1,
+  "key": "gxcme",
+  "name": "广西机电职业技术学院",
+  "initial": "G",
+  "version": "1.0.0",
+  "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://sso.gxcme.edu.cn/login?service=https://nportal.gxcme.edu.cn/login",
+  "scheduleUrlHint": "https://nportal.gxcme.edu.cn/jwglxt/kbcx/xskbcxZccx_cxXskbcxIndex.html?gnmkdm=N2154&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["nportal.gxcme.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表、重复行、集中实践课、占位教师与教室；校历缺失时推算开学日，14 节表外补第 15～16 节",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：校历第 1 周为周三时回退到周一，总周数取校历，逐节钉住上游 14 节时间",
+      "extracted": "fixtures/calendar-weekday.extracted.json",
+      "expected": "fixtures/calendar-weekday.expected.json"
+    },
+    {
+      "name": "合成用例：前置与后置单双标记归属，以及「共 N 周」备注只剥备注本身",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号前置单双标记「(单)1-8周(双)9-16周」不得退化成 1～16 周每周",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
+    },
+    {
+      "name": "合成用例：相邻与重叠节次合并、完全重复行去重、同节次不同周次取并集",
+      "extracted": "fixtures/merge-consecutive.extracted.json",
+      "expected": "fixtures/merge-consecutive.expected.json"
+    },
+    {
+      "name": "合成用例：长课名与长周次原文限长，缺教师和缺教室汇总，四门长名称实践课，占位值导入为空",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：无校历且课表排到第 21 周时抬高总周数并提醒",
+      "extracted": "fixtures/no-calendar-overweek.extracted.json",
+      "expected": "fixtures/no-calendar-overweek.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期、记录数对账、三类脏行、多段节次、越界周次与第 30 周课程",
+      "extracted": "fixtures/api-calendar.extracted.json",
+      "expected": "fixtures/api-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：周次通知备注中的数字不得猜成上课周，整行跳过并提醒",
+      "extracted": "fixtures/week-note-reject.extracted.json",
+      "expected": "fixtures/week-note-reject.expected.json"
+    },
+    {
+      "name": "合成用例：zcrq 周次标签前缀后的日期可识别，第 1 周周三回退到周一",
+      "extracted": "fixtures/calendar-prefix-date.extracted.json",
+      "expected": "fixtures/calendar-prefix-date.expected.json"
+    },
+    {
+      "name": "合成用例：完全重复正常行与脏行在解析和计数前去重，缺周次与缺星期数量不放大",
+      "extracted": "fixtures/duplicate-dirty-rows.extracted.json",
+      "expected": "fixtures/duplicate-dirty-rows.expected.json"
+    },
+    {
+      "name": "合成用例：节次连写「第1-第2节」「1-第2节」归一后不整行丢课",
+      "extracted": "fixtures/sections-glued.extracted.json",
+      "expected": "fixtures/sections-glued.expected.json"
+    },
+    {
+      "name": "合成用例：校历第 1 周日期偏离学期锚点超 45 天时作废，回退推算开学日与内置总周数并提醒",
+      "extracted": "fixtures/calendar-rejected.extracted.json",
+      "expected": "fixtures/calendar-rejected.expected.json"
+    }
+  ]
+}

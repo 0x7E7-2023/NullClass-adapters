@@ -1,0 +1,20 @@
+{
+  "specVersion":1,"kind":"schedule","ocrAssisted":false,
+  "warnings":[
+    "已按教务系统标注的当前学期「2026-2027 学年度第一学期」导入；要导入别的学期，请先在教务系统里切换后再点「提取课表」",
+    "教务系统没有给出可用的开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对",
+    "课表里有第 22 周的课，超过教务周次列表，学期总周数已按 22 周导入，请在学期管理里核对",
+    "第 4、7 周课表获取失败，这些周可能有课程未导入，请重新提取；如仍失败请反馈"
+  ],
+  "terms":[{
+    "name":"2026-2027 学年度第一学期","firstDay":"2026-08-31","totalWeeks":22,
+    "periodTimes":[
+      {"periodIndex":1,"start":"08:30","end":"10:00"},{"periodIndex":2,"start":"10:15","end":"11:45"},
+      {"periodIndex":3,"start":"13:30","end":"15:00"},{"periodIndex":4,"start":"15:15","end":"16:45"},
+      {"periodIndex":5,"start":"19:00","end":"19:30"},{"periodIndex":6,"start":"20:00","end":"20:45"}
+    ],
+    "courses":[{"name":"岗位实习","teacher":"教师己","note":null,"blocks":[
+      {"dayOfWeek":5,"startPeriod":4,"endPeriod":4,"startWeek":19,"endWeek":22,"weekType":"ALL","location":"实训基地"}
+    ]}]
+  }]
+}

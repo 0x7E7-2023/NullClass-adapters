@@ -1,0 +1,72 @@
+{
+  "specVersion": 1,
+  "key": "sddfvc",
+  "name": "山东药品食品职业学院",
+  "initial": "S",
+  "version": "1.0.0",
+  "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://cas.sddfvc.edu.cn/login?type=usernamepassword&service=http%3A%2F%2Ffazhan.sddfvc.edu.cn%2Fjs%2Ffzzx%2Flogin",
+  "scheduleUrlHint": "https://jwxt.sddfvc.edu.cn/mobile/student/mobile_kcb",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["jwxt.sddfvc.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：基本逐周课表；单双周与分段周次；相邻槽位合并；周历给出开学日和总周数",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：课名第一个 # 两侧的班级名判断；无 #、多 #、左右含班与两侧同含或同不含",
+      "extracted": "fixtures/course-names.extracted.json",
+      "expected": "fixtures/course-names.expected.json"
+    },
+    {
+      "name": "合成用例：跨周重复记录先去重；连堂与重复槽位合并；同课不同教师、换教室与不连续周次",
+      "extracted": "fixtures/merge-dedup.extracted.json",
+      "expected": "fixtures/merge-dedup.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期年份加一；周历缺第 1 周时按周号倒推开学日；总周数取真实末周号",
+      "extracted": "fixtures/second-calendar.extracted.json",
+      "expected": "fixtures/second-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：周历只有第 2、4、7 周且课程仅到第 3 周；总周数按真实末周号取 7，不取列表长度 3",
+      "extracted": "fixtures/calendar-gap.extracted.json",
+      "expected": "fixtures/calendar-gap.expected.json"
+    },
+    {
+      "name": "合成用例：周历日期缺失时推算开学日；课表最晚周抬高总周数；失败周次明确提醒",
+      "extracted": "fixtures/fallback-raised.extracted.json",
+      "expected": "fixtures/fallback-raised.expected.json"
+    },
+    {
+      "name": "合成用例：周次边界与非法值；单双周过滤、孤立周、超范围与逆序区间",
+      "extracted": "fixtures/week-edges.extracted.json",
+      "expected": "fixtures/week-edges.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期 7 月周次仍属结束年；只有日期没有周号的周次按日期跨度抬高总周数",
+      "extracted": "fixtures/second-july.extracted.json",
+      "expected": "fixtures/second-july.expected.json"
+    },
+    {
+      "name": "合成用例：失败周次超过 10 个时列前 10 个并补出「等共 N 周」",
+      "extracted": "fixtures/failed-many.extracted.json",
+      "expected": "fixtures/failed-many.expected.json"
+    },
+    {
+      "name": "合成用例：排课项没有明细时按内容去重计数，并入未导入汇总不静默丢课",
+      "extracted": "fixtures/empty-details.extracted.json",
+      "expected": "fixtures/empty-details.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒限长；未知槽位、坏周次、缺课名、占位及缺失教师教室均不静默",
+      "extracted": "fixtures/messy-long.extracted.json",
+      "expected": "fixtures/messy-long.expected.json"
+    }
+  ]
+}

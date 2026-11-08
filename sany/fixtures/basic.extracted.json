@@ -1,0 +1,12 @@
+{
+  "term": { "xn": "2026-2027", "xq": "1", "startDate": "2026-09-07", "totalWeeks": "20", "altTotalWeeks": "", "selection": "date" },
+  "today": "2026-11-03",
+  "rows": [
+    { "KCM": "工程数学", "SKJS": "教师甲", "JASMC": "实训楼101", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "1111111111111111" },
+    { "KCM": "大学英语", "SKJS": "未知", "JASMC": "待定", "SKXQ": "2", "KSJC": "3", "JSJC": "4", "SKZC": "1010101010101010" },
+    { "KCM": "机械制图", "SKJS": "教师乙", "JASMC": "工程楼202", "SKXQ": 3, "KSJC": 5, "JSJC": 6, "SKZC": "0101010101010101" },
+    { "KCM": "缺星期课", "SKJS": "教师丙", "JASMC": "教室", "SKXQ": 0, "KSJC": 1, "JSJC": 2, "SKZC": "1111" },
+    { "KCM": "缺节次课", "SKJS": "教师丁", "JASMC": "教室", "SKXQ": 4, "KSJC": 3, "JSJC": "", "SKZC": "1111" },
+    { "KCM": "缺周次课", "SKJS": "教师戊", "JASMC": "教室", "SKXQ": 5, "KSJC": 7, "JSJC": 8, "SKZC": "00000000" }
+  ]
+}

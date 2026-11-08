@@ -1,0 +1,7 @@
+{
+  "today": "2027-03-15",
+  "details": [
+    { "name": "英语口语", "teacher": "教师戊", "timeText": "[1-22周]一[9-10节]", "location": "教室A" },
+    { "name": "夜间实验", "teacher": "教师己", "timeText": "[3-5周]三[16节]", "location": "实验室B" }
+  ]
+}

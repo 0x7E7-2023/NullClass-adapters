@@ -1,0 +1,11 @@
+{
+  "term": { "xn": "2026-2027", "xq": "1", "startDate": "2026-09-07", "totalWeeks": 20, "altTotalWeeks": null, "selection": "date" },
+  "today": "2026-11-03",
+  "rows": [
+    { "KCM": "机械基础", "SKJS": "教师丙", "JASMC": "教室A", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "11111111" },
+    { "KCM": "机械基础", "SKJS": "教师丙", "JASMC": "教室A", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "0000000011111111" },
+    { "KCM": "机械基础", "SKJS": "教师丙", "JASMC": "教室A", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "11111111" },
+    { "KCM": "机械基础", "SKJS": "教师丙", "JASMC": "教室A", "SKXQ": 1, "KSJC": 3, "JSJC": 4, "SKZC": "11111111" },
+    { "KCM": "机械基础", "SKJS": "教师丙", "JASMC": "教室B", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "11111111" }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "specVersion": 1,
+  "key": "sany",
+  "name": "湖南三一工业职业技术学院",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://ehall.sanyedu.com/new/index.html",
+  "scheduleUrlHint": "https://ehall.sanyedu.com/jwapp/sys/wdkb/*default/index.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表 · 最近已开学学期、连续周与单双周位串、占位教师教室、缺星期节次周次的脏行",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：位串边界 · 连续周、单周、双周、孤立周与跨段空洞分别切段，第 31 周丢弃并提醒",
+      "extracted": "fixtures/weeks-bitmap.extracted.json",
+      "expected": "fixtures/weeks-bitmap.expected.json"
+    },
+    {
+      "name": "合成用例：同课归并 · 同节次周次取并集、完全重复行只算一次、连堂保持两段、不同教室不合并",
+      "extracted": "fixtures/merge-duplicates.extracted.json",
+      "expected": "fixtures/merge-duplicates.expected.json"
+    },
+    {
+      "name": "合成用例：未来学期与节次扩展 · 全部开学日晚于今天时取首项、周三开学回退周一、20 周默认抬到 22 周、第 11-14 节顺推及越界说明",
+      "extracted": "fixtures/future-extend.extracted.json",
+      "expected": "fixtures/future-extend.expected.json"
+    },
+    {
+      "name": "合成用例：带课名的提醒不超 200 字 · 多门超长课名缺教师或地点，按类型汇总且课名截到 20 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：重复脏行去重 · 缺课名、星期、节次、周次及越界周次重复出现时不放大提醒计数",
+      "extracted": "fixtures/dirty-duplicates.extracted.json",
+      "expected": "fixtures/dirty-duplicates.expected.json"
+    },
+    {
+      "name": "合成用例：总周数回退 · ZZC 为空时认 ZJXZC=22，不触发默认 20 周提醒",
+      "extracted": "fixtures/alt-weeks.extracted.json",
+      "expected": "fixtures/alt-weeks.expected.json"
+    },
+    {
+      "name": "合成用例：开学日非法 · XQKSRQ 为空时按本机日期所在周的周一推算并提醒",
+      "extracted": "fixtures/start-invalid.extracted.json",
+      "expected": "fixtures/start-invalid.expected.json"
+    },
+    {
+      "name": "合成用例：总周数截断 · ZZC=40 超过 30 周时按 30 周导入并提醒",
+      "extracted": "fixtures/weeks-clamped.extracted.json",
+      "expected": "fixtures/weeks-clamped.expected.json"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "_note": "合成数据，不是真实抓取：按 SDDFVC/sddfvc.js 的逐周课表结构编造；期望由人工按上游规则推导。",
+  "term": {"id":"2026-2027-1","name":"2026-2027 学年度第一学期"},
+  "calendar": [
+    {"id":"1","startDate":"08/31"},{"id":"2","startDate":"09/07"},{"id":"3","startDate":"09/14"},{"id":"4","startDate":"09/21"},
+    {"id":"5","startDate":"09/28"},{"id":"6","startDate":"10/05"},{"id":"7","startDate":"10/12"},{"id":"8","startDate":"10/19"},
+    {"id":"9","startDate":"10/26"},{"id":"10","startDate":"11/02"},{"id":"11","startDate":"11/09"},{"id":"12","startDate":"11/16"},
+    {"id":"13","startDate":"11/23"},{"id":"14","startDate":"11/30"},{"id":"15","startDate":"12/07"},{"id":"16","startDate":"12/14"},
+    {"id":"17","startDate":"12/21"},{"id":"18","startDate":"12/28"},{"id":"19","startDate":"01/04"},{"id":"20","startDate":"01/11"}
+  ],
+  "responses": [
+    {"week":"1","entries":[
+      {"day":1,"slot":"1","rawName":"2026级药学1班#药理学","details":[{"weeks":"1-8,10-17","parity":0,"teacher":"教师甲","location":"A101"}]},
+      {"day":1,"slot":"3","rawName":"2026级药学1班#药理学","details":[{"weeks":"1-8,10-17","parity":0,"teacher":"教师甲","location":"A101"}]},
+      {"day":2,"slot":"5","rawName":"大学英语","details":[{"weeks":"1-16","parity":1,"teacher":"教师乙","location":"B202"}]},
+      {"day":3,"slot":"7","rawName":"体育","details":[{"weeks":"2-16","parity":2,"teacher":"教师丙","location":"操场"}]},
+      {"day":5,"slot":"11","rawName":"晚间选修","details":[{"weeks":"1-8","parity":-1,"teacher":"教师丁","location":"C301"}]}
+    ]},
+    {"week":"2","entries":[
+      {"day":1,"slot":"1","rawName":"2026级药学1班#药理学","details":[{"weeks":"1-8,10-17","parity":0,"teacher":"教师甲","location":"A101"}]}
+    ]}
+  ],
+  "failedWeeks":[]
+}

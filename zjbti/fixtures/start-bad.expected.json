@@ -1,0 +1,20 @@
+{
+  "specVersion":1,"kind":"schedule","ocrAssisted":false,
+  "warnings":[
+    "没能从教务页面读到当前学期，今天的日期对应的学期也不在教务系统的学期列表里，已导入列表里的第一个学期「2026-2027学年第一学期」；如果不是你要的学期，请在教务系统里切到那个学期再点「提取课表」",
+    "教务系统周课表里读到的开学日期（09-02）不是周一或不在合理的月份里，已不采用；第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对成学校实际开学日",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 14 周），如与实际不符可在学期管理里改"
+  ],
+  "terms":[{
+    "name":"2026-2027学年第一学期","firstDay":"2026-08-31","totalWeeks":20,
+    "periodTimes":[
+      {"periodIndex":1,"start":"08:30","end":"09:15"},{"periodIndex":2,"start":"09:20","end":"10:05"},
+      {"periodIndex":3,"start":"10:20","end":"11:05"},{"periodIndex":4,"start":"11:10","end":"11:55"},
+      {"periodIndex":5,"start":"13:10","end":"13:55"},{"periodIndex":6,"start":"14:00","end":"14:45"},
+      {"periodIndex":7,"start":"15:00","end":"15:45"},{"periodIndex":8,"start":"15:50","end":"16:35"},
+      {"periodIndex":9,"start":"16:40","end":"17:25"},{"periodIndex":10,"start":"18:20","end":"19:05"},
+      {"periodIndex":11,"start":"19:10","end":"19:55"},{"periodIndex":12,"start":"20:00","end":"20:45"}
+    ],
+    "courses":[{"name":"大学物理","teacher":"教师甲","note":null,"blocks":[{"dayOfWeek":2,"startPeriod":3,"endPeriod":4,"startWeek":1,"endWeek":14,"weekType":"ALL","location":"理科楼201"}]}]
+  }]
+}

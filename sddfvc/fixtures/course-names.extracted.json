@@ -1,0 +1,14 @@
+{
+  "_note":"合成数据：逐个覆盖上游 extractCourseName 的分支，不是真实学生或教师数据。",
+  "term":{"id":"T1","name":"2026-2027 学年度第一学期"},
+  "calendar":[{"id":"1","startDate":"08/31"},{"id":"2","startDate":"09/07"}],
+  "responses":[{"week":"1","entries":[
+    {"day":1,"slot":"1","rawName":"药物分析","details":[{"weeks":"1","parity":0,"teacher":"教师甲","location":"A"}]},
+    {"day":1,"slot":"3","rawName":"24级药学班#有机化学#上","details":[{"weeks":"1","parity":0,"teacher":"教师甲","location":"A"}]},
+    {"day":2,"slot":"1","rawName":"无机化学#24级化学班","details":[{"weeks":"1","parity":0,"teacher":"教师甲","location":"A"}]},
+    {"day":2,"slot":"3","rawName":"24级药学班#24级化学班","details":[{"weeks":"1","parity":0,"teacher":"教师甲","location":"A"}]},
+    {"day":3,"slot":"1","rawName":"高等数学#上","details":[{"weeks":"1","parity":0,"teacher":"教师甲","location":"A"}]},
+    {"day":3,"slot":"3","rawName":"24级药学班#药理学","details":[{"weeks":"1","parity":0,"teacher":"教师甲","location":"A"}]},
+    {"day":4,"slot":"1","rawName":"24级药学班#药事管理#实验班","details":[{"weeks":"1","parity":0,"teacher":"教师甲","location":"A"}]}
+  ]}],"failedWeeks":[]
+}

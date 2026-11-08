@@ -1,0 +1,13 @@
+{
+  "today": "2026-09-10",
+  "details": [
+    { "name": "高等数学", "teacher": "教师甲", "timeText": "[1-16周]一[1-2节]", "location": "教1-101" },
+    { "name": "大学英语", "teacher": "未知", "timeText": "[1-15周(单)]三[3-4节]", "location": "外语楼203" },
+    { "name": "线性代数", "teacher": "教师丙", "timeText": "[2-12周]四[5-6节]", "location": "待定" },
+    { "name": "体育", "teacher": "暂无教师", "timeText": "[3周]日[7-8节]", "location": "操场" },
+    { "name": "缺周课", "teacher": "教师丁", "timeText": "[]二[1-2节]", "location": "教室" },
+    { "name": "缺节课", "teacher": "教师戊", "timeText": "[1-8周]五[21-22节]", "location": "教室" },
+    { "name": "缺星期课", "teacher": "教师己", "timeText": "[1-8周][1-2节]", "location": "教室" },
+    { "name": "", "teacher": "教师庚", "timeText": "[1-8周]六[1-2节]", "location": "教室" }
+  ]
+}

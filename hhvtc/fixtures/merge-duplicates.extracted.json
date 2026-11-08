@@ -1,0 +1,13 @@
+{
+  "today": "2026-11-03",
+  "details": [
+    { "name": "线性代数", "teacher": "教师甲", "timeText": "[1-8周]一[1-2节]", "location": "教室甲" },
+    { "name": "线性代数", "teacher": "教师甲", "timeText": "[9-16周]一[1-2节]", "location": "教室甲" },
+    { "name": "线性代数", "teacher": "教师甲", "timeText": "[1-8周]一[1-2节]", "location": "教室甲" },
+    { "name": "线性代数", "teacher": "教师甲", "timeText": "[1-8周]一[3-4节]", "location": "教室甲" },
+    { "name": "线性代数", "teacher": "教师甲", "timeText": "[1-8周]一[3-4节]", "location": "教室甲" },
+    { "name": "分组实验", "teacher": "教师辛", "timeText": "[1-16周(3组)]二[5-6节]", "location": "实验室乙" },
+    { "name": "分组实验", "teacher": "教师辛", "timeText": "[1-16周(3组)]二[5-6节]", "location": "实验室乙" },
+    { "name": "分组实验", "teacher": "教师辛", "timeText": "[1-16周(3组)]二[5-6节]", "location": "实验室乙" }
+  ]
+}

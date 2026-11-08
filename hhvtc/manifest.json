@@ -1,0 +1,67 @@
+{
+  "specVersion": 1,
+  "key": "hhvtc",
+  "name": "怀化职业技术学院",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://jwgl.hhvtc.com.cn/",
+  "scheduleUrlHint": "http://jwgl.hhvtc.com.cn/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：夏秋基本课表 · 连续周、单周、单周次、占位教师与地点为空；缺课程名、星期、节次、周次分别计数；8 节时间逐节核对",
+      "extracted": "fixtures/basic-summer.extracted.json",
+      "expected": "fixtures/basic-summer.expected.json"
+    },
+    {
+      "name": "合成用例：冬春第二学期与节次补全 · 第 22 周抬高总周数；第 9-10 节顺推时间；第 16 节越过当天只导课程并提醒",
+      "extracted": "fixtures/winter-second-extend.extracted.json",
+      "expected": "fixtures/winter-second-extend.expected.json"
+    },
+    {
+      "name": "合成用例：单双标记与共 N 周 · 前置、后置、无逗号两种粘连均正确归属；共 N 周只剥备注；第1-第8周连成区间",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：同课合并与重复详情 · 同节次周次取并集、不同节次不合并；三条相同详情只解析一次，括号备注提醒计数不放大",
+      "extracted": "fixtures/merge-duplicates.extracted.json",
+      "expected": "fixtures/merge-duplicates.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒不超 200 字 · 四门超长课名缺教师或地点，三条超长周次无法识别；原文截到 20 字并按类型汇总",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：一月学期边界与单节课程 · 仍属上一学年第一学期；双周文字与单日第 8 节正确解析，使用冬春时间",
+      "extracted": "fixtures/january-single-period.extracted.json",
+      "expected": "fixtures/january-single-period.expected.json"
+    },
+    {
+      "name": "合成用例：五月第二学期与稀疏周次 · 多个独立区间和交错单双周分别切为极大段，不补入未上课周",
+      "extracted": "fixtures/sparse-weeks-second.extracted.json",
+      "expected": "fixtures/sparse-weeks-second.expected.json"
+    },
+    {
+      "name": "合成用例：周一至周日全部简写 · 七门课分别落入第 1-7 天，周日第 3-4 节不得按缺星期跳过；既有星期几写法保持兼容",
+      "extracted": "fixtures/weekday-short-forms.extracted.json",
+      "expected": "fixtures/weekday-short-forms.expected.json"
+    },
+    {
+      "name": "合成用例：一格内多个节次段 · 只导入第一段，其余段计数提醒不静默丢课；周四完整写法仍正确",
+      "extracted": "fixtures/multi-segment.extracted.json",
+      "expected": "fixtures/multi-segment.expected.json"
+    },
+    {
+      "name": "合成用例：单双标记后用空格或逗号分隔 · 前置标记交给后一个周次段，双周落第 2-8 周、单周落第 9-15 周",
+      "extracted": "fixtures/marker-before-separator.extracted.json",
+      "expected": "fixtures/marker-before-separator.expected.json"
+    }
+  ]
+}

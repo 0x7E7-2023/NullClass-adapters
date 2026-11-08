@@ -1,0 +1,19 @@
+{
+  "_note":"合成数据：数字周次与独立 dsz 标记，不套用文字周次规则；覆盖过滤、孤立周、越界和逆序。",
+  "term":{"id":"T1","name":"2026-2027 学年度第一学期"},
+  "calendar":[
+    {"id":"1","startDate":"08/31"},{"id":"2","startDate":""},{"id":"3","startDate":""},{"id":"4","startDate":""},
+    {"id":"5","startDate":""},{"id":"6","startDate":""},{"id":"7","startDate":""},{"id":"8","startDate":""},
+    {"id":"9","startDate":""},{"id":"10","startDate":""},{"id":"11","startDate":""},{"id":"12","startDate":""},
+    {"id":"13","startDate":""},{"id":"14","startDate":""},{"id":"15","startDate":""},{"id":"16","startDate":""},
+    {"id":"17","startDate":""},{"id":"18","startDate":""},{"id":"19","startDate":""},{"id":"20","startDate":""}
+  ],
+  "responses":[{"week":"1","entries":[
+    {"day":1,"slot":"1","rawName":"分段单周","details":[{"weeks":"1-8,10-17","parity":1,"teacher":"教师甲","location":"A"}]},
+    {"day":1,"slot":"3","rawName":"离散奇周","details":[{"weeks":"1,3,5","parity":0,"teacher":"教师甲","location":"A"}]},
+    {"day":2,"slot":"1","rawName":"离散双周","details":[{"weeks":"2,4,7","parity":2,"teacher":"教师甲","location":"A"}]},
+    {"day":2,"slot":"3","rawName":"边界周","details":[{"weeks":"0-2,30-33","parity":0,"teacher":"教师甲","location":"A"}]},
+    {"day":3,"slot":"1","rawName":"逆序周","details":[{"weeks":"8-6","parity":0,"teacher":"教师甲","location":"A"}]},
+    {"day":3,"slot":"3","rawName":"文字周","details":[{"weeks":"待定","parity":0,"teacher":"教师甲","location":"A"}]}
+  ]}],"failedWeeks":[]
+}

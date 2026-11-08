@@ -1,0 +1,18 @@
+{
+  "term": { "xn": "2026-2027", "xq": "1", "startDate": "2026-09-07", "totalWeeks": 20, "altTotalWeeks": null, "selection": "date" },
+  "today": "2026-11-03",
+  "rows": [
+    { "KCM": "有效课程", "SKJS": "教师甲", "JASMC": "教室A", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "1" },
+    { "KCM": "", "SKJS": "教师乙", "JASMC": "教室B", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "1" },
+    { "KCM": "", "SKJS": "教师乙", "JASMC": "教室B", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "1" },
+    { "KCM": "坏星期", "SKJS": "教师丙", "JASMC": "教室C", "SKXQ": 8, "KSJC": 1, "JSJC": 2, "SKZC": "1" },
+    { "KCM": "坏星期", "SKJS": "教师丙", "JASMC": "教室C", "SKXQ": 8, "KSJC": 1, "JSJC": 2, "SKZC": "1" },
+    { "KCM": "坏星期", "SKJS": "教师丙", "JASMC": "教室C", "SKXQ": 8, "KSJC": 1, "JSJC": 2, "SKZC": "1" },
+    { "KCM": "坏节次", "SKJS": "教师丁", "JASMC": "教室D", "SKXQ": 2, "KSJC": 3, "JSJC": 2, "SKZC": "1" },
+    { "KCM": "坏节次", "SKJS": "教师丁", "JASMC": "教室D", "SKXQ": 2, "KSJC": 3, "JSJC": 2, "SKZC": "1" },
+    { "KCM": "空位串", "SKJS": "教师戊", "JASMC": "教室E", "SKXQ": 3, "KSJC": 1, "JSJC": 2, "SKZC": "0000" },
+    { "KCM": "空位串", "SKJS": "教师戊", "JASMC": "教室E", "SKXQ": 3, "KSJC": 1, "JSJC": 2, "SKZC": "0000" },
+    { "KCM": "只有越界周", "SKJS": "教师己", "JASMC": "教室F", "SKXQ": 4, "KSJC": 1, "JSJC": 2, "SKZC": "0000000000000000000000000000001" },
+    { "KCM": "只有越界周", "SKJS": "教师己", "JASMC": "教室F", "SKXQ": 4, "KSJC": 1, "JSJC": 2, "SKZC": "0000000000000000000000000000001" }
+  ]
+}

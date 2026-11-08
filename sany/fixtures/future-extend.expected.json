@@ -1,0 +1,39 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务给出的开学日期都晚于本机日期或无法识别，已按学期列表第 1 项导入（2026-2027学年第二学期），请核对学年学期",
+    "教务给出的开学日期是 2027-02-24，第 1 周已回退到同一周的周一 2027-02-22，请在学期管理里核对",
+    "教务没有给出有效的学期总周数，已按 20 周导入；课表排到更晚的周，另按课表调整，请在学期管理里核对",
+    "课表里有第 22 周的课，超过原定的 20 周，学期总周数已按 22 周导入，请在学期管理里核对",
+    "已按学校公布的 10 节节次时间导入（第 1 节 08:20-09:05，第 10 节 19:55-20:40），学校调整后请在学期管理里核对",
+    "课表用到了第 11-13 节，学校节次时间没有覆盖，已按上一节下课后课间 5 分钟、每节 45 分钟顺推补上，请在学期管理里核对",
+    "课表用到了第 14 节及以后，顺推的时间会越过当天 23:59，这些节次没有补上时间（课程已导入），请在学期管理里补上"
+  ],
+  "terms": [{
+    "name": "2026-2027学年第二学期",
+    "firstDay": "2027-02-22",
+    "totalWeeks": 22,
+    "periodTimes": [
+      { "periodIndex": 1, "start": "08:20", "end": "09:05" },
+      { "periodIndex": 2, "start": "09:15", "end": "10:00" },
+      { "periodIndex": 3, "start": "10:20", "end": "11:05" },
+      { "periodIndex": 4, "start": "11:15", "end": "12:00" },
+      { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+      { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+      { "periodIndex": 7, "start": "15:50", "end": "16:35" },
+      { "periodIndex": 8, "start": "16:45", "end": "17:30" },
+      { "periodIndex": 9, "start": "19:00", "end": "19:45" },
+      { "periodIndex": 10, "start": "19:55", "end": "20:40" },
+      { "periodIndex": 11, "start": "20:45", "end": "21:30" },
+      { "periodIndex": 12, "start": "21:35", "end": "22:20" },
+      { "periodIndex": 13, "start": "22:25", "end": "23:10" }
+    ],
+    "courses": [
+      { "name": "晚间实训", "teacher": "教师丁", "note": null, "blocks": [
+        { "dayOfWeek": 4, "startPeriod": 11, "endPeriod": 14, "startWeek": 1, "endWeek": 22, "weekType": "ALL", "location": "实训中心" }
+      ] }
+    ]
+  }]
+}

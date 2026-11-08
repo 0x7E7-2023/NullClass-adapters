@@ -1,0 +1,12 @@
+{
+  "_note":"合成数据：周历只有第 2、4、7 周，课程仅到第 3 周；人工期望总周数为真实校历末周 7，而非列表长度 3。",
+  "term":{"id":"T1","name":"2026-2027 学年度第一学期"},
+  "calendar":[
+    {"id":"2","startDate":"09/07"},
+    {"id":"4","startDate":"09/21"},
+    {"id":"7","startDate":"10/12"}
+  ],
+  "responses":[{"week":"2","entries":[
+    {"day":2,"slot":"3","rawName":"药物合成实验","details":[{"weeks":"2-3","parity":0,"teacher":"教师庚","location":"实验楼201"}]}
+  ]}],"failedWeeks":[]
+}

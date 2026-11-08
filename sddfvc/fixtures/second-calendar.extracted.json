@@ -1,0 +1,8 @@
+{
+  "_note":"合成数据：周历从第 2 周开始，第一学期以外的年份规则由人工按上游代码推导。",
+  "term":{"id":"T2","name":"2026-2027 学年度第二学期"},
+  "calendar":[{"id":"2","startDate":"02/22"},{"id":"3","startDate":"03/01"},{"id":"4","startDate":"03/08"}],
+  "responses":[{"week":"2","entries":[
+    {"day":7,"slot":"9","rawName":"药学综合实训","details":[{"weeks":"2-3","parity":0,"teacher":"教师戊","location":"实训中心"}]}
+  ]}],"failedWeeks":[]
+}

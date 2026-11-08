@@ -1,0 +1,41 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "已按开学日期选择不晚于本机日期的最近学期（2026-2027学年第一学期）；要导入别的学期，请等教务数据更新后再提取",
+    "已按学校公布的 10 节节次时间导入（第 1 节 08:20-09:05，第 10 节 19:55-20:40），学校调整后请在学期管理里核对",
+    "有 3 门课没给上课教师、3 门课没给上课地点（例如 智能制造生产线系统集成与工业机器人协同…、职业院校学生职业素养提升与就业能力综合…、新能源汽车电池管理系统故障诊断与维修综…）：已照常导入，空着的项可在「编辑课程」里补上"
+  ],
+  "terms": [{
+    "name": "2026-2027学年第一学期",
+    "firstDay": "2026-09-07",
+    "totalWeeks": 20,
+    "periodTimes": [
+      { "periodIndex": 1, "start": "08:20", "end": "09:05" },
+      { "periodIndex": 2, "start": "09:15", "end": "10:00" },
+      { "periodIndex": 3, "start": "10:20", "end": "11:05" },
+      { "periodIndex": 4, "start": "11:15", "end": "12:00" },
+      { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+      { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+      { "periodIndex": 7, "start": "15:50", "end": "16:35" },
+      { "periodIndex": 8, "start": "16:45", "end": "17:30" },
+      { "periodIndex": 9, "start": "19:00", "end": "19:45" },
+      { "periodIndex": 10, "start": "19:55", "end": "20:40" }
+    ],
+    "courses": [
+      { "name": "智能制造生产线系统集成与工业机器人协同控制综合实践课程", "teacher": null, "note": null, "blocks": [
+        { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "实训楼" }
+      ] },
+      { "name": "职业院校学生职业素养提升与就业能力综合训练专题课程", "teacher": "教师戊", "note": null, "blocks": [
+        { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+      ] },
+      { "name": "新能源汽车电池管理系统故障诊断与维修综合实训课程", "teacher": null, "note": null, "blocks": [
+        { "dayOfWeek": 3, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+      ] },
+      { "name": "数字化工厂生产计划调度与质量控制综合案例分析课程", "teacher": null, "note": null, "blocks": [
+        { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+      ] }
+    ]
+  }]
+}

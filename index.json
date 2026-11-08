@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.11.03.3",
+  "version": "2026.11.08.1",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -1179,6 +1179,36 @@
       "name": "沈阳建筑大学",
       "version": "1.0.0",
       "path": "sjzu"
+    },
+    {
+      "key": "gxcme",
+      "name": "广西机电职业技术学院",
+      "version": "1.0.0",
+      "path": "gxcme"
+    },
+    {
+      "key": "hhvtc",
+      "name": "怀化职业技术学院",
+      "version": "1.0.0",
+      "path": "hhvtc"
+    },
+    {
+      "key": "sany",
+      "name": "湖南三一工业职业技术学院",
+      "version": "1.0.0",
+      "path": "sany"
+    },
+    {
+      "key": "sddfvc",
+      "name": "山东药品食品职业学院",
+      "version": "1.0.0",
+      "path": "sddfvc"
+    },
+    {
+      "key": "zjbti",
+      "name": "浙江工商职业技术学院",
+      "version": "1.0.0",
+      "path": "zjbti"
     }
   ]
 }

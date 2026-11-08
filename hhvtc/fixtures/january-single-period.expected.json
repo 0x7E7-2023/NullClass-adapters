@@ -1,0 +1,30 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务课表页没有给出可读取的学年学期和开学日期，已按提取当天推为「怀化职业技术学院 2026-2027学…」，第 1 周按「9 月 1 日所在那周的周一」推算为 2026-08-31，请在学期管理里核对",
+    "教务系统没有给出学期校历，学期总周数按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "已按提取当天（2027-01-15）选择冬春季（10 月至次年 4 月）节次时间；学校调整或查询其他学期时可能不同，请在学期管理里核对"
+  ],
+  "terms": [{
+    "name": "怀化职业技术学院 2026-2027学年第一学期",
+    "firstDay": "2026-08-31",
+    "totalWeeks": 20,
+    "periodTimes": [
+      { "periodIndex": 1, "start": "08:20", "end": "09:05" },
+      { "periodIndex": 2, "start": "09:15", "end": "10:00" },
+      { "periodIndex": 3, "start": "10:20", "end": "11:05" },
+      { "periodIndex": 4, "start": "11:15", "end": "12:00" },
+      { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+      { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+      { "periodIndex": 7, "start": "15:50", "end": "16:35" },
+      { "periodIndex": 8, "start": "16:45", "end": "17:30" }
+    ],
+    "courses": [
+      { "name": "单节课程", "teacher": "教师壬", "note": null, "blocks": [
+        { "dayOfWeek": 6, "startPeriod": 8, "endPeriod": 8, "startWeek": 2, "endWeek": 16, "weekType": "EVEN", "location": "体育馆" }
+      ] }
+    ]
+  }]
+}

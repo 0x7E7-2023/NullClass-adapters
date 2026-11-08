@@ -1,0 +1,36 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务课表页没有给出可读取的学年学期和开学日期，已按提取当天推为「怀化职业技术学院 2025-2026学…」，第 1 周按「2 月 20 日所在那周的周一」推算为 2026-02-16，请在学期管理里核对",
+    "教务系统没有给出学期校历，学期总周数按 20 周导入（课表里最晚排到第 12 周），如与实际不符可在学期管理里改",
+    "已按提取当天（2026-05-06）选择夏秋季（5 月至 9 月）节次时间；学校调整或查询其他学期时可能不同，请在学期管理里核对"
+  ],
+  "terms": [{
+    "name": "怀化职业技术学院 2025-2026学年第二学期",
+    "firstDay": "2026-02-16",
+    "totalWeeks": 20,
+    "periodTimes": [
+      { "periodIndex": 1, "start": "08:10", "end": "08:55" },
+      { "periodIndex": 2, "start": "09:05", "end": "09:50" },
+      { "periodIndex": 3, "start": "10:10", "end": "10:55" },
+      { "periodIndex": 4, "start": "11:05", "end": "11:50" },
+      { "periodIndex": 5, "start": "14:30", "end": "15:15" },
+      { "periodIndex": 6, "start": "15:25", "end": "16:10" },
+      { "periodIndex": 7, "start": "16:20", "end": "17:05" },
+      { "periodIndex": 8, "start": "17:15", "end": "18:00" }
+    ],
+    "courses": [
+      { "name": "集中实践", "teacher": "教师癸", "note": null, "blocks": [
+        { "dayOfWeek": 2, "startPeriod": 5, "endPeriod": 8, "startWeek": 1, "endWeek": 3, "weekType": "ALL", "location": "实训中心" },
+        { "dayOfWeek": 2, "startPeriod": 5, "endPeriod": 8, "startWeek": 5, "endWeek": 5, "weekType": "ALL", "location": "实训中心" },
+        { "dayOfWeek": 2, "startPeriod": 5, "endPeriod": 8, "startWeek": 9, "endWeek": 10, "weekType": "ALL", "location": "实训中心" }
+      ] },
+      { "name": "交错讲座", "teacher": "教师子", "note": null, "blocks": [
+        { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 5, "weekType": "ODD", "location": "报告厅" },
+        { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 2, "startWeek": 8, "endWeek": 12, "weekType": "EVEN", "location": "报告厅" }
+      ] }
+    ]
+  }]
+}

@@ -1,0 +1,21 @@
+{
+  "specVersion":1,"kind":"schedule","ocrAssisted":false,
+  "warnings":[
+    "已按教务系统标注的当前学期「2026-2027 学年度第一学期」导入；要导入别的学期，请先在教务系统里切换后再点「提取课表」",
+    "教务系统没有给出可用的开学日期，第 1 周按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31，请在学期管理里核对",
+    "第 2、3、4、5、6、7、8、9、10、11 等共 12 周课表获取失败，这些周可能有课程未导入，请重新提取；如仍失败请反馈"
+  ],
+  "terms":[{
+    "name":"2026-2027 学年度第一学期","firstDay":"2026-08-31","totalWeeks":20,
+    "periodTimes":[
+      {"periodIndex":1,"start":"08:30","end":"10:00"},{"periodIndex":2,"start":"10:15","end":"11:45"},
+      {"periodIndex":3,"start":"13:30","end":"15:00"},{"periodIndex":4,"start":"15:15","end":"16:45"},
+      {"periodIndex":5,"start":"19:00","end":"19:30"},{"periodIndex":6,"start":"20:00","end":"20:45"}
+    ],
+    "courses":[
+      {"name":"药品储存与养护","teacher":"教师甲","note":null,"blocks":[
+        {"dayOfWeek":2,"startPeriod":3,"endPeriod":3,"startWeek":1,"endWeek":6,"weekType":"ALL","location":"B105"}
+      ]}
+    ]
+  }]
+}

@@ -1,0 +1,11 @@
+{
+  "term": { "xn": "2026-2027", "xq": "1", "startDate": "2026-09-07", "totalWeeks": 20, "altTotalWeeks": null, "selection": "date" },
+  "today": "2026-11-03",
+  "rows": [
+    { "KCM": "连续周", "SKJS": "教师甲", "JASMC": "教室A", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "11110000" },
+    { "KCM": "单周课", "SKJS": "教师乙", "JASMC": "教室B", "SKXQ": 2, "KSJC": 1, "JSJC": 2, "SKZC": "10101010" },
+    { "KCM": "双周课", "SKJS": "教师丙", "JASMC": "教室C", "SKXQ": 3, "KSJC": 1, "JSJC": 2, "SKZC": "01010101" },
+    { "KCM": "间隔周", "SKJS": "教师丁", "JASMC": "教室D", "SKXQ": 4, "KSJC": 1, "JSJC": 2, "SKZC": "10011001" },
+    { "KCM": "超界周", "SKJS": "教师戊", "JASMC": "教室E", "SKXQ": 5, "KSJC": 1, "JSJC": 2, "SKZC": "1000000000000000000000000000001" }
+  ]
+}

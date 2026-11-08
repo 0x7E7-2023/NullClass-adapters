@@ -1,0 +1,25 @@
+{
+  "_note":"合成数据：第 3、5 天的两格排课项没有 pkmx 明细，三周响应里重复出现；期望只各计一次并入跳过汇总。",
+  "term":{"id":"T1","name":"2026-2027 学年度第一学期"},
+  "calendar":[
+    {"id":"1","startDate":"09/07"},{"id":"2","startDate":"09/14"},{"id":"3","startDate":"09/21"}
+  ],
+  "responses":[
+    {"week":"1","entries":[
+      {"day":1,"slot":"1","rawName":"药剂学","details":[{"weeks":"1-3","parity":0,"teacher":"教师乙","location":"A101"}]},
+      {"day":3,"slot":"7","rawName":"无机化学#2101班","details":[]},
+      {"day":5,"slot":"9","rawName":"化学实训","details":[]}
+    ]},
+    {"week":"2","entries":[
+      {"day":1,"slot":"1","rawName":"药剂学","details":[{"weeks":"1-3","parity":0,"teacher":"教师乙","location":"A101"}]},
+      {"day":3,"slot":"7","rawName":"无机化学#2101班","details":[]},
+      {"day":5,"slot":"9","rawName":"化学实训","details":[]}
+    ]},
+    {"week":"3","entries":[
+      {"day":1,"slot":"1","rawName":"药剂学","details":[{"weeks":"1-3","parity":0,"teacher":"教师乙","location":"A101"}]},
+      {"day":3,"slot":"7","rawName":"无机化学#2101班","details":[]},
+      {"day":5,"slot":"9","rawName":"化学实训","details":[]}
+    ]}
+  ],
+  "failedWeeks":[]
+}

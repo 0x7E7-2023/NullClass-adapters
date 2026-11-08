@@ -1,0 +1,17 @@
+{
+  "_note":"合成数据：第二学期周历的最后几周落在 7 月，另有一格只给日期没给周号；期望值按 2027 自然年与周一手推。",
+  "term":{"id":"T3","name":"2026-2027 学年度第二学期"},
+  "calendar":[
+    {"id":"1","startDate":"02/22"},{"id":"2","startDate":"03/01"},{"id":"3","startDate":"03/08"},
+    {"id":"4","startDate":"03/15"},{"id":"5","startDate":"03/22"},{"id":"6","startDate":"03/29"},
+    {"id":"7","startDate":"04/05"},{"id":"8","startDate":"04/12"},{"id":"9","startDate":"04/19"},
+    {"id":"10","startDate":"04/26"},{"id":"11","startDate":"05/03"},{"id":"12","startDate":"05/10"},
+    {"id":"13","startDate":"05/17"},{"id":"14","startDate":"05/24"},{"id":"15","startDate":"05/31"},
+    {"id":"16","startDate":"06/07"},{"id":"17","startDate":"06/14"},{"id":"18","startDate":"06/21"},
+    {"id":"19","startDate":"06/28"},{"id":"20","startDate":"07/05"},{"id":"21","startDate":"07/12"},
+    {"id":"22","startDate":"07/19"},{"id":"","startDate":"07/26"}
+  ],
+  "responses":[{"week":"2","entries":[
+    {"day":1,"slot":"1","rawName":"药事管理与法规","details":[{"weeks":"2-3","parity":0,"teacher":"教师庚","location":"A203"}]}
+  ]}],"failedWeeks":[]
+}

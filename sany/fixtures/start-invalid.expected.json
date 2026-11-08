@@ -1,0 +1,32 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "已按开学日期选择不晚于本机日期的最近学期（2026-2027学年第一学期）；要导入别的学期，请等教务数据更新后再提取",
+    "没能从教务读到合法的开学日期，第 1 周已按本机日期所在周的周一推算为 2026-11-02，请在学期管理里核对",
+    "已按学校公布的 10 节节次时间导入（第 1 节 08:20-09:05，第 10 节 19:55-20:40），学校调整后请在学期管理里核对"
+  ],
+  "terms": [{
+    "name": "2026-2027学年第一学期",
+    "firstDay": "2026-11-02",
+    "totalWeeks": 20,
+    "periodTimes": [
+      { "periodIndex": 1, "start": "08:20", "end": "09:05" },
+      { "periodIndex": 2, "start": "09:15", "end": "10:00" },
+      { "periodIndex": 3, "start": "10:20", "end": "11:05" },
+      { "periodIndex": 4, "start": "11:15", "end": "12:00" },
+      { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+      { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+      { "periodIndex": 7, "start": "15:50", "end": "16:35" },
+      { "periodIndex": 8, "start": "16:45", "end": "17:30" },
+      { "periodIndex": 9, "start": "19:00", "end": "19:45" },
+      { "periodIndex": 10, "start": "19:55", "end": "20:40" }
+    ],
+    "courses": [
+      { "name": "大学英语", "teacher": "教师乙", "note": null, "blocks": [
+        { "dayOfWeek": 3, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "外语楼203" }
+      ] }
+    ]
+  }]
+}

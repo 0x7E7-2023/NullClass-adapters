@@ -1,0 +1,13 @@
+{
+  "_note":"合成数据：所有姓名均为占位符；长课名用于独立手推提醒截断，覆盖缺失字段与不可读记录。",
+  "term":{"id":"T1","name":"2026-2027 学年度第一学期"},
+  "calendar":[{"id":"1","startDate":"08/31"},{"id":"2","startDate":"09/07"}],
+  "responses":[{"week":"1","entries":[
+    {"day":1,"slot":"1","rawName":"药学综合性实验课程设计与质量控制实践能力训练超长课程名称","details":[{"weeks":"1-2","parity":0,"teacher":"","location":""}]},
+    {"day":1,"slot":"3","rawName":"药物制剂生产质量管理规范综合实训课程超长名称","details":[{"weeks":"1-2","parity":0,"teacher":"暂无教师","location":"待定"}]},
+    {"day":2,"slot":"2","rawName":"临床药物治疗学综合案例研讨课程超长名称","details":[{"weeks":"1-2","parity":0,"teacher":"教师甲","location":"A"}]},
+    {"day":2,"slot":"5","rawName":"天然药物学野外实习与鉴别实践课程超长名称","details":[{"weeks":"待定","parity":0,"teacher":"教师甲","location":"A"}]},
+    {"day":3,"slot":"1","rawName":"","details":[{"weeks":"1-2","parity":0,"teacher":"教师甲","location":"A"}]},
+    {"day":8,"slot":"1","rawName":"星期异常课程","details":[{"weeks":"1-2","parity":0,"teacher":"教师甲","location":"A"}]}
+  ]}],"failedWeeks":[]
+}

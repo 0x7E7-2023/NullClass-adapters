@@ -1,0 +1,15 @@
+{
+  "_note":"合成数据：周历只给周号没给日期，第 2 至 13 周共 12 个周次请求失败；期望提醒只列前 10 个但补出总数。",
+  "term":{"id":"T1","name":"2026-2027 学年度第一学期"},
+  "calendar":[
+    {"id":"1","startDate":""},{"id":"2","startDate":""},{"id":"3","startDate":""},{"id":"4","startDate":""},
+    {"id":"5","startDate":""},{"id":"6","startDate":""},{"id":"7","startDate":""},{"id":"8","startDate":""},
+    {"id":"9","startDate":""},{"id":"10","startDate":""},{"id":"11","startDate":""},{"id":"12","startDate":""},
+    {"id":"13","startDate":""},{"id":"14","startDate":""},{"id":"15","startDate":""},{"id":"16","startDate":""},
+    {"id":"17","startDate":""},{"id":"18","startDate":""},{"id":"19","startDate":""},{"id":"20","startDate":""}
+  ],
+  "responses":[{"week":"1","entries":[
+    {"day":2,"slot":"5","rawName":"药品储存与养护","details":[{"weeks":"1-6","parity":0,"teacher":"教师甲","location":"B105"}]}
+  ]}],
+  "failedWeeks":["2","3","4","5","6","7","8","9","10","11","12","13"]
+}

@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务课表页没有给出可读取的学年学期和开学日期，已按提取当天推为「怀化职业技术学院 2026-2027学…」，第 1 周按「9 月 1 日所在那周的周一」推算为 2026-08-31，请在学期管理里核对",
+    "教务系统没有给出学期校历，学期总周数按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "已按提取当天（2026-11-03）选择冬春季（10 月至次年 4 月）节次时间；学校调整或查询其他学期时可能不同，请在学期管理里核对"
+  ],
+  "terms": [{
+    "name": "怀化职业技术学院 2026-2027学年第一学期",
+    "firstDay": "2026-08-31",
+    "totalWeeks": 20,
+    "periodTimes": [
+      { "periodIndex": 1, "start": "08:20", "end": "09:05" },
+      { "periodIndex": 2, "start": "09:15", "end": "10:00" },
+      { "periodIndex": 3, "start": "10:20", "end": "11:05" },
+      { "periodIndex": 4, "start": "11:15", "end": "12:00" },
+      { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+      { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+      { "periodIndex": 7, "start": "15:50", "end": "16:35" },
+      { "periodIndex": 8, "start": "16:45", "end": "17:30" }
+    ],
+    "courses": [
+      { "name": "甲课程", "teacher": "教师一", "note": null, "blocks": [
+        { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 7, "weekType": "ODD", "location": "教室A" },
+        { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 10, "endWeek": 16, "weekType": "EVEN", "location": "教室A" }
+      ] },
+      { "name": "乙课程", "teacher": "教师二", "note": null, "blocks": [
+        { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 7, "weekType": "ODD", "location": "教室B" },
+        { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 10, "endWeek": 16, "weekType": "EVEN", "location": "教室B" }
+      ] },
+      { "name": "丙课程", "teacher": "教师三", "note": null, "blocks": [
+        { "dayOfWeek": 3, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 7, "weekType": "ODD", "location": "教室C" },
+        { "dayOfWeek": 3, "startPeriod": 5, "endPeriod": 6, "startWeek": 10, "endWeek": 16, "weekType": "EVEN", "location": "教室C" }
+      ] },
+      { "name": "丁课程", "teacher": "教师四", "note": null, "blocks": [
+        { "dayOfWeek": 4, "startPeriod": 7, "endPeriod": 8, "startWeek": 1, "endWeek": 7, "weekType": "ODD", "location": "教室D" },
+        { "dayOfWeek": 4, "startPeriod": 7, "endPeriod": 8, "startWeek": 10, "endWeek": 16, "weekType": "EVEN", "location": "教室D" }
+      ] },
+      { "name": "戊课程", "teacher": "教师五", "note": null, "blocks": [
+        { "dayOfWeek": 5, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 15, "weekType": "ODD", "location": "教室E" }
+      ] },
+      { "name": "己课程", "teacher": "教师六", "note": null, "blocks": [
+        { "dayOfWeek": 6, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "教室F" }
+      ] },
+      { "name": "庚课程", "teacher": "教师七", "note": null, "blocks": [
+        { "dayOfWeek": 7, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "教室G" }
+      ] }
+    ]
+  }]
+}

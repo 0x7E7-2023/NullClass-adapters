@@ -1,0 +1,14 @@
+{
+  "today": "2026-11-03",
+  "details": [
+    { "name": "周一简写课", "teacher": "教师一", "timeText": "[1-8周]周一[1-2节]", "location": "教室1" },
+    { "name": "周二简写课", "teacher": "教师二", "timeText": "[1-8周]周二[1-2节]", "location": "教室2" },
+    { "name": "周三简写课", "teacher": "教师三", "timeText": "[1-8周]周三[1-2节]", "location": "教室3" },
+    { "name": "周四简写课", "teacher": "教师四", "timeText": "[1-8周]周四[1-2节]", "location": "教室4" },
+    { "name": "周五简写课", "teacher": "教师五", "timeText": "[1-8周]周五[1-2节]", "location": "教室5" },
+    { "name": "周六简写课", "teacher": "教师六", "timeText": "[1-8周]周六[1-2节]", "location": "教室6" },
+    { "name": "周日简写课", "teacher": "教师七", "timeText": "[1-8周]周日[3-4节]", "location": "教室7" },
+    { "name": "星期一兼容课", "teacher": "教师八", "timeText": "[1-8周]星期一[5-6节]", "location": "教室8" },
+    { "name": "星期日兼容课", "teacher": "教师九", "timeText": "[1-8周]星期日[7-8节]", "location": "教室9" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "_note":"合成数据：周历无日期，课程到第 22 周，两个周请求失败；期望日期按 9 月 1 日所在周周一推算。",
+  "term":{"id":"T1","name":"2026-2027 学年度第一学期"},
+  "calendar":[
+    {"id":"1","startDate":""},{"id":"2","startDate":""},{"id":"3","startDate":""},{"id":"4","startDate":""},
+    {"id":"5","startDate":""},{"id":"6","startDate":""},{"id":"7","startDate":""},{"id":"8","startDate":""},
+    {"id":"9","startDate":""},{"id":"10","startDate":""},{"id":"11","startDate":""},{"id":"12","startDate":""},
+    {"id":"13","startDate":""},{"id":"14","startDate":""},{"id":"15","startDate":""},{"id":"16","startDate":""},
+    {"id":"17","startDate":""},{"id":"18","startDate":""},{"id":"19","startDate":""},{"id":"20","startDate":""}
+  ],
+  "responses":[{"week":"19","entries":[
+    {"day":5,"slot":"7","rawName":"岗位实习","details":[{"weeks":"19-22","parity":0,"teacher":"教师己","location":"实训基地"}]}
+  ]}],"failedWeeks":["4","7"]
+}
