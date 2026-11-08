@@ -16,12 +16,12 @@
 
 | 域 | 谁在用 | 请求 | 说明 |
 |---|---|---|---|
-| `authserver.xjie.edu.cn` | **CAS 单点登录域** | **脚本从不请求它** | 只出现在 `manifest.loginUrl` 里，给应用打开登录页用；桥与网络白名单会自动带上这个主机（`JwAdapterPackage.allowedHosts(loginHost)`），但 `extract.js` 里没有任何指向它的 fetch |
+| `authserver.xjie.edu.cn` | **CAS 单点登录域** | **脚本从不请求它** | 只出现在 `manifest.loginUrl` 里，给应用打开登录页用；桥注入与图片下载的域名集合会自动带上这个主机（`JwAdapterPackage.allowedHosts(loginHost)`），但 `extract.js` 里没有任何指向它的 fetch |
 | `jwxt.xjie.edu.cn` | **教务域**（同一台服务器） | `GET /jsxsd/xskb/xskb_list.do` | 教务默认的当前学期。只在当前页面（含同源 iframe）里没找到课表时才发 |
 | `jwxt.xjie.edu.cn` | 同上 | `POST /jsxsd/xskb/xskb_list.do` | 取指定学年学期的课表，body 与上游一字不差：`cj0701id=&zc=&demo=&xnxq01id=<学期>` |
 
 `allowHosts` = `["jwxt.xjie.edu.cn"]`（精确主机，不用通配）。CAS 域不需要写进 `allowHosts`：它是
-`loginUrl` 的同源主机，应用会自己加；写进去反而是多余的放行面。
+`loginUrl` 的同源主机，应用会自己加；写进去反而是多余的声明范围。
 **为什么不用 `*.xjie.edu.cn`**：通配项会被 `JwOriginRules` 跳过（桥注入不到，`__ncCapabilities` 全 false），
 而且这里只需要一台主机，没有理由放宽到全校子域。
 

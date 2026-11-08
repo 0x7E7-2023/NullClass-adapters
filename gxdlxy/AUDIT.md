@@ -1,5 +1,7 @@
 # 安全审计：`gxdlxy`（广西电力职业技术学院）
 
+> **宿主策略更新（2026-11-09）**：本文关于 `JwNetworkGate`、提取期冻结/拦截或 JS 沙箱的描述仅记录旧版实现。现行策略对所有适配器一律不自动断网：不拦截网页请求或导航，也不改写页面网络接口。`allowHosts` 仍用于请求目标声明、桥注入和宿主图片下载。
+
 - 上游：`shiguang_warehouse` 的 `resources/GXDLXY/gxdlxy_01.js`（MIT，作者 **星河欲转**，`adapters.yaml`
   里的 `maintainer` 也是他）。快照 commit `e62554a4034386b893bcd6813c7b2b64f8c730a3`（2026-09-12），
   该文件的 blob `0c0da65675213b3fb1e53f1a0196f12991cfcc04`。

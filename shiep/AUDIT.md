@@ -1,5 +1,7 @@
 # 安全审计 —— 上海电力大学（树维 EAMS 平台）
 
+> **宿主策略更新（2026-11-09）**：本文关于 `JwNetworkGate`、提取期冻结/拦截或 JS 沙箱的描述仅记录旧版实现。现行策略对所有适配器一律不自动断网：不拦截网页请求或导航，也不改写页面网络接口。`allowHosts` 仍用于请求目标声明、桥注入和宿主图片下载。
+
 审计对象：`jw-adapters/shiep/`（`manifest.json`、`extract.js`、`parse.js`、`fixtures/`）
 上游：`shiguang_warehouse` 的 `resources/SHIEP/SHIEP.js`，作者 zt11125（MIT），快照 commit `ff72d1f08782df965cae110034a9d87cd91e0c07`。文件头写明改自本仓库中天津农学院（TJAU）的适配脚本（作者：星河欲转），本件保留这一署名。
 移植者：0x7E7-2023（haiku 移植，2026-10-08）

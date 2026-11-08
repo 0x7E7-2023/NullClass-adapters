@@ -118,7 +118,7 @@
 8. **`teacher` 拿不到就留空**：**过**。上游写的是 `rawCourse.xm`（没有兜底词，这点上游是对的），
    移植件仍然显式做 `text(row.xm) || null`，教师 / 教室为空就是 `null`，不写「未知」「暂无」。
    `basic` 的「大学物理」、`dirty-rows` 的「自习」都是教师为空的用例（后者教室也为空）。
-9. **`allowHosts`**：**过**。留空数组 —— 只放行 `loginUrl` 的同源主机（`JwAdapter.allowedHosts`
+9. **`allowHosts`**：**过**。留空数组 —— 桥注入与图片下载只使用 `loginUrl` 的同源主机（`JwAdapter.allowedHosts`
    会自动把 `loginUrl` 的主机加进去）。不写 `*.` 通配，也不硬编码主机名；路径全是相对当前 origin 拼的。
    **本适配器不用 OCR 桥也不用提问桥**（源码里不出现 `__ncOcr` / `__ncOcrGrid` / `__ncSelect` /
    `__ncConfirm` / `__ncPrompt`），所以「通配拿不到桥」这条对它不适用。

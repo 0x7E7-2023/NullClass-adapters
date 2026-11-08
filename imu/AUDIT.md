@@ -11,7 +11,7 @@
 
 ## 1. 请求清单（与代码一致）
 
-所有请求都是**同源相对路径**（上游写死绝对地址 `https://jwxt.imu.edu.cn/student/courseSelect/thisSemesterCurriculum/ajaxStudentSchedule/callback`）。代码里没有任何绝对 URL，也没有第二个主机。`allowHosts` 为空：只允许与 `loginUrl`（`jwxt.imu.edu.cn`）同源。`extract.js` 里 `fetch` 共 2 处（`requestSchedule`、`fetchCalendar`）。
+所有请求都是**同源相对路径**（上游写死绝对地址 `https://jwxt.imu.edu.cn/student/courseSelect/thisSemesterCurriculum/ajaxStudentSchedule/callback`）。代码里没有任何绝对 URL，也没有第二个主机。`allowHosts` 为空：不声明额外主机，宿主也不自动拦截网页请求；桥注入与宿主图片下载只使用 `loginUrl`（`jwxt.imu.edu.cn`）的主机。`extract.js` 里 `fetch` 共 2 处（`requestSchedule`、`fetchCalendar`）。
 
 | # | 方法 | 路径 | 干什么 | 取不到时怎么办 |
 |---|---|---|---|---|

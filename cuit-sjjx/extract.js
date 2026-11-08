@@ -12,9 +12,8 @@
     // 平台：本科实践教学（管理）平台「LabMS」（接口前缀 /labms/），课表页
     //   https://sjjx.cuit.edu.cn:56443/labms/#/course/my（上游脚本注释自带的地址）。
     //   这一台与 loginUrl（ywtb.cuit.edu.cn，上游 adapters.yaml 的说明是「外网用户把二维码发到
-    //   另一台设备登录」）不同源，所以 manifest.json 的 allowHosts 显式写了 "sjjx.cuit.edu.cn"
-    //   （见 AUDIT.md 第 2 节）——不写的话，提取期闸门只放行 loginUrl 的主机，
-    //   本脚本对 window.location.origin 的同源请求会被直接拦掉。
+    //   另一台设备登录」）不同源，所以 manifest.json 的 allowHosts 显式声明 "sjjx.cuit.edu.cn"
+    //   （见 AUDIT.md 第 2 节）。宿主不自动拦截网页请求；该声明仍用于审计、桥注入与图片下载。
     //
     // 移植改动：
     //   ① ES6 → ES5（async/await 改成 then 链，去掉模板串、箭头函数、块级声明关键字、可选链 ?.）

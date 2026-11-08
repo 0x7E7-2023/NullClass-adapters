@@ -78,7 +78,7 @@
 | 6 | 分页 | **不适用，但对账了**。正方这个接口一次性返回整学期排课，没有分页参数，上游也没有翻页。响应里若带了记录总数，就与行数对账，取到的少就出声：`fixtures/calendar-extra`（教务说 30 条、实际 10 行）覆盖这条，对应 `warnings` 里「教务系统说这个学期有 30 条排课记录，实际只取到 10 条，课表可能不完整，请重试或反馈」那一条 |
 | 7 | 学期名 | **过**。取自教务下拉框文本（`extract.js` 第 134–139 行读出的 `xnmText` / `xqmText`）。`xqmText` 整段已是「…学年…学期」时直接用原文；否则用学年（`xnmText` 是 `YYYY-YYYY` 时用它，否则由 `xnm` 推出）加「学年第 X 学期」拼（`parse.js` 第 186–202 行）。**没有拿适配器名或学校名当学期名。** 用例的学期名有 `2026-2027学年第一学期`（如 `basic`）与 `2026-2027学年第二学期`（`second-term`） |
 | 8 | `teacher` / `location` 拿不到就留空（`null`） | **过**。读不到就是 `null`，不写「未知」「暂无」。用例：`basic` 的「大学体育(一)」（`xm` 为空，teacher 为 null）、`basic` 的「思想道德与法治」（`cdmc` 为空，location 为 null）、`calendar-extra` 的「大学语文」（教师与教室都为 null）。**上游在这里整行丢课**：`FIT/fit.js` 第 144–147 行要求 `kcmc` / `xm` / `cdmc` / `xqj` / `jcs` / `zcd` 六个字段全部非空，缺任一就跳过整行。模板件的写法是把它们留空（见模板件 `parse.js` 第 504 行注释），本件输出 `null` |
-| 9 | `allowHosts` | **过**。`allowHosts: []`（`manifest.json` 第 14 行）。四条请求都由当前页的 origin 拼出，同源；只放行 `loginUrl`（`manifest.json` 第 9 行）所在的那一个主机，不写通配 |
+| 9 | `allowHosts` | **过**。`allowHosts: []`（`manifest.json` 第 14 行）。四条请求都由当前页的 origin 拼出，同源；桥注入与图片下载只使用 `loginUrl`（`manifest.json` 第 9 行）所在的主机，不写通配 |
 | 10 | 每件都要做变异测试 | **孪生件已做 15 处（见 §11），本件代码与之逐字相同。本件只在副本上复跑了其中 3 处（M2、M12、M14），其余 12 处未在本件上重跑，以孪生件的记录为准。** 复跑结果与真文件、副本哈希见 §9 |
 
 ## 5. 批次五专项检查（六条）
@@ -195,7 +195,7 @@
 12. **「作息」用词（未改，交派工人）**：`parse.js` 第 783 行的新提醒「时间可能与学校实际作息不符」、第 788 行「用空课默认作息」、第 792 行「课表用到了作息表里没有的…」仍含「作息」。`harmonize-zf-2.md` 第 64 行对其它提醒有宽限，但第 783 行是本轮替换的新句子，术语表要求用「节次时间」。改它要同时更新 8 份期望文件（M1 红灯名单里有这条提醒的 8 份），本轮没有改，交派工人决定。
 13. **X1 变异 B 的偏离**：`harmonize-zf-2.md` 要求变异 B 用 `1-16周(1,2)`，但它在括号步骤（第 280–291 行）就被消掉，到不了第 292 行，变异测不到。改用未闭合的 `1-16周(1,2`（weeks-brackets 的 R 行；S 行 `1-16周(3` 也是未闭合括号）做 M14。`harmonize-zf-2.md` 的注记也记了这一更正。
 14. **明文 http（本件特有，已裁定接受）**：`loginUrl` 与课表页都是 `http://oaa.fitedu.net`，会话 Cookie 与课表在网络上明文传输（§1 风险段）。移植件不改 scheme（学校没有已知的 https 入口，上游 `import_url` 也是 http）。主调度裁定按现状接受：规范允许 http 的 `loginUrl`，应用界面会标出「不安全连接」，已发布件里另有 13 件是 http 入口。学校以后提供 https 时再改 manifest。
-15. **App 的明文策略（主调度已核对）**：应用的 `network_security_config.xml` 是 `base-config cleartextTrafficPermitted="true"`，WebView 能加载 `http://` 页面；可达主机仍由适配器网络白名单约束（同源 + `allowHosts`）。没有在真机上用本校账号验证。
+15. **App 的明文策略（主调度已核对）**：应用的 `network_security_config.xml` 是 `base-config cleartextTrafficPermitted="true"`，WebView 能加载 `http://` 页面。2026-11-09 起宿主不再自动拦截网页网络；`allowHosts` 仅声明请求目标并约束桥注入和宿主图片下载。没有在真机上用本校账号验证。
 
 ## 11. 与孪生件的关系
 

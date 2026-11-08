@@ -57,10 +57,9 @@ grep -nE "https?://|fetch\(|XMLHttpRequest|sendBeacon|new WebSocket|\.src\s*=" j
 `new Image().src`、`<script src=...>` 注入。
 
 所以 `allowHosts` 是 **空数组**（`[]`），**没有通配**，更没有 `*.edu.cn`：
-连额外域名都不需要放行，只靠 `loginUrl` 的那一个同源主机。
-（为什么不用 `allowHosts: ["jwxt.neuq.edu.cn"]`：白名单一放行就写死了主机名，
-学校换域或走网关前缀时适配器会直接失效；同源相对路径比白名单更窄也更耐用 ——
-移植手册 §5「代理域」那一条。）
+不声明额外域名，只使用 `loginUrl` 的那一个同源主机。
+（为什么不用 `allowHosts: ["jwxt.neuq.edu.cn"]`：声明写死主机名没有额外收益，
+同源相对路径比额外域名声明更窄也更耐用 —— 移植手册 §5「代理域」那一条。）
 
 ### 四个接口与请求体（全部只读、全部同源）
 

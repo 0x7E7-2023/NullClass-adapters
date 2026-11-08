@@ -1,5 +1,7 @@
 # 安全审计 —— 广东科技学院（正方教务 jwglxt 根路径，经学校 WebVPN 路径前缀访问，校内网络可直连）
 
+> **宿主策略更新（2026-11-09）**：本文关于 `JwNetworkGate`、提取期冻结/拦截或 JS 沙箱的描述仅记录旧版实现。现行策略对所有适配器一律不自动断网：不拦截网页请求或导航，也不改写页面网络接口。`allowHosts` 仍用于请求目标声明、桥注入和宿主图片下载。
+
 审计对象：`jw-adapters/gdust/` 下的 `extract.js` / `parse.js` / `manifest.json`，以及它们移植自的上游脚本
 `shiguang_warehouse` 的 `GDUST/gdust.js`（快照 commit `19a65bf07a3e998fcfc69cee692387cdc0523c1a`，2026-10-19 22:41 拉取，MIT，作者 星河欲转；本校脚本最后一次修改 `80e30cf`，2026-09-23）。
 上游的 `adapters.yaml` 同目录，`maintainer` 为「星河欲转」，`import_url` 为 WebVPN 的 CAS 登录地址（即 `manifest.loginUrl`）。

@@ -1,5 +1,7 @@
 # 安全审计 —— 河南财经政法大学教务适配器（`huel`，正方新版 jwglxt 平台）
 
+> **宿主策略更新（2026-11-09）**：本文关于 `JwNetworkGate`、提取期冻结/拦截或 JS 沙箱的描述仅记录旧版实现。现行策略对所有适配器一律不自动断网：不拦截网页请求或导航，也不改写页面网络接口。`allowHosts` 仍用于请求目标声明、桥注入和宿主图片下载。
+
 - 上游：`shiguang_warehouse` 的 `HUEL/huel_01.js`（MIT，`adapters.yaml` 里的 maintainer 是 **Mercury**）；
   学校名与登录地址取自同目录 `adapters.yaml`（`import_url: https://xk.huel.edu.cn`）
 - 上游快照：commit `e62554a4034386b893bcd6813c7b2b64f8c730a3`（2026-09-12，与同批次的 `zjut` 同一快照）

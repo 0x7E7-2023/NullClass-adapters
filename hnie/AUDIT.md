@@ -1,5 +1,7 @@
 # 安全审计：`hnie`（湖南工程学院）
 
+> **宿主策略更新（2026-11-09）**：本文关于 `JwNetworkGate`、提取期冻结/拦截或 JS 沙箱的描述仅记录旧版实现。现行策略对所有适配器一律不自动断网：不拦截网页请求或导航，也不改写页面网络接口。`allowHosts` 仍用于请求目标声明、桥注入和宿主图片下载。
+
 - **适配器**：`hnie` v1.0.0，强智科技「高校综合管理教务系统」（学生端 `/jsxsd/`）
 - **上游**：shiguang_warehouse `resources/HNIE/hnie_01.js`
   （`https://github.com/XingHeYuZhuan/shiguang_warehouse`，MIT，

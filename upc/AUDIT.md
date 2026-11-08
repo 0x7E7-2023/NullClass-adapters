@@ -1,5 +1,7 @@
 # 安全审计：`upc`（中国石油大学（华东）· 本科教务）
 
+> **宿主策略更新（2026-11-09）**：本文关于 `JwNetworkGate`、提取期冻结/拦截或 JS 沙箱的描述仅记录旧版实现。现行策略对所有适配器一律不自动断网：不拦截网页请求或导航，也不改写页面网络接口。`allowHosts` 仍用于请求目标声明、桥注入和宿主图片下载。
+
 | | |
 |---|---|
 | 上游 | [shiguang_warehouse](https://github.com/XingHeYuZhuan/shiguang_warehouse) `UPC/upc.js`（MIT，上游作者 **星河欲转**，见同目录 `adapters.yaml` 的 `maintainer`），快照 2026-09-12 |

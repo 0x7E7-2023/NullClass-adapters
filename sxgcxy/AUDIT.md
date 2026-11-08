@@ -1,5 +1,7 @@
 # 安全审计 —— `sxgcxy`（山西工程职业学院 · 超星教务）
 
+> **宿主策略更新（2026-11-09）**：本文关于 `JwNetworkGate`、提取期冻结/拦截或 JS 沙箱的描述仅记录旧版实现。现行策略对所有适配器一律不自动断网：不拦截网页请求或导航，也不改写页面网络接口。`allowHosts` 仍用于请求目标声明、桥注入和宿主图片下载。
+
 - 上游快照：`shiguang_warehouse` 的 `resources/SXGCXY/sxgcxy_01.js` + 同目录 `adapters.yaml`（取回日期 2026-09-12）
 - 上游作者 / 维护者：**星河欲转**（MIT）；上游 `import_url` = `https://sxevc.jw.chaoxing.com/admin/login`
 - 移植者：NullClass　审计日期：**2026-09-12**　审计依据：[移植手册 §5](https://github.com/0x7E7-2023/NullClass/blob/main/docs/jw-adapter-porting.md)

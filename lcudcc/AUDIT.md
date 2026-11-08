@@ -76,7 +76,7 @@
 | 6 | 分页 | **不适用，但对账了**。正方这个接口一次性返回整学期排课，没有分页参数，上游也没有翻页。响应里若带了记录总数，就与行数对账，取到的少就出声：`fixtures/calendar-extra`（教务说 30 条、实际 10 行）覆盖这条，对应 `warnings` 里「教务系统说这个学期有 30 条排课记录，实际只取到 10 条，课表可能不完整，请重试或反馈」那一条 |
 | 7 | 学期名 | **过**。取自教务下拉框文本（`extract.js` 第 134–139 行读出的 `xnmText` / `xqmText`）。`xqmText` 整段已是「…学年…学期」时直接用原文；否则用学年（`xnmText` 是 `YYYY-YYYY` 时用它，否则由 `xnm` 推出）加「学年第 X 学期」拼（`parse.js` 第 186–202 行）。**没有拿适配器名或学校名当学期名。** 用例的学期名有 `2026-2027学年第一学期`（如 `basic`）与 `2026-2027学年第二学期`（`second-term`） |
 | 8 | `teacher` / `location` 拿不到就留空（`null`） | **过**。读不到就是 `null`，不写「未知」「暂无」。用例：`basic` 的「大学体育(一)」（`xm` 为空，teacher 为 null）、`basic` 的「思想道德与法治」（`cdmc` 为空，location 为 null）、`calendar-extra` 的「大学语文」（教师与教室都为 null）。**上游在这里整行丢课**：`lcudcc.js` 第 144–147 行要求 `kcmc` / `xm` / `cdmc` / `xqj` / `jcs` / `zcd` 六个字段全部非空，缺任一就跳过整行。模板件的写法是把它们留空（见模板件 `parse.js` 第 504 行注释），本件输出 `null` |
-| 9 | `allowHosts` | **过**。`allowHosts: []`（`manifest.json` 第 14 行）。四条请求都由当前页的 origin 拼出，同源；只放行 `loginUrl`（`manifest.json` 第 9 行）所在的那一个主机，不写通配 |
+| 9 | `allowHosts` | **过**。`allowHosts: []`（`manifest.json` 第 14 行）。四条请求都由当前页的 origin 拼出，同源；桥注入与图片下载只使用 `loginUrl`（`manifest.json` 第 9 行）所在的主机，不写通配 |
 | 10 | 每件都要做变异测试 | **已做，见 §9**。15 处变异，每处都有红灯 fixture；真文件与各副本的哈希见 §9 |
 
 ## 5. 批次五专项检查（六条）

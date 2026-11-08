@@ -174,7 +174,7 @@ extract.js 在 Node 里用桩 window / location / fetch / DOMParser 实跑，覆
 1. **真实部署未验证**：广州理工学院教务是否开放 `xskbcx_cxXskbcxIndex` / `xskbcx_cxXsgrkb` / `xskbcxZccx_cxZcByXnxq` 这三个接口、返回形状是否与 fixture 一致，没有账号无法验证。fixture 是合成的，只保证同样的输入永远得到同样的输出，**不保证解析在真实页面上是对的**。拿到真实响应后替换 fixture 并重跑 check.js，是最高优先级。
 2. **节次时间与学校实际不符的风险**：12 节逐节照抄上游，上游注释与表本身也不完全一致（§0 第 1 条）。导入时 `warnings` 会说明「节次时间没有从教务系统取，已按本校固定的 12 节时间导入」，并请用户核对。
 3. **统一认证直连教务**：`jw.gzist.edu.cn` 直连能否用统一认证登录态（上游 `import_url` 带 `/sso/lyiotlogin`）访问课表页，没有账号无法验证。若不行，用户需要走 WebVPN 入口（`webvpn.gzist.edu.cn/https/jw.gzist.edu.cn/...`），脚本两种都支持。
-4. **`loginUrl` 不在 `allowHosts` 里**：`loginUrl` 指向 `ids.gzist.edu.cn`，它是用户登录用的统一认证主机，脚本不请求它；`allowHosts` 只放行脚本真正请求的两个教务主机。
+4. **`loginUrl` 不在 `allowHosts` 里**：`loginUrl` 指向 `ids.gzist.edu.cn`，它是用户登录用的统一认证主机，脚本不请求它；`allowHosts` 只声明脚本真正请求的两个教务主机。
 5. **「页面覆盖原型方法」只是上游注释的说法**：没有真机核实这两个方法是否真被改写。本件的 extract.js 不依赖它们（§6.2 S4 / S5 已按注释描述改坏后验证），即使真不存在这种改写也不影响结果。
 6. **学期代号认法**：`termKind` 优先看下拉框文本里的「一 / 二 / 三」，认不出再看代号（`3` 第一、`12` 第二、`16` 第三）。若本校代号不同，文本认法仍然生效，但学期名与开学日推算依赖它。
 7. **校历日期字段**：本件按 `rq` 首段（`2026-09-07/2026-09-13`）、`zrq` / `zcrq` / `ksrq` 认日期，没有见过真实响应。`rq` 首段不是周一时会回退到那一周的周一。

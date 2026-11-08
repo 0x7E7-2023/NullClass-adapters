@@ -5,7 +5,7 @@
 - 上游文件：`resources/ZSC/zsc_01.js`，作者 Lanjunyee。快照提交 `7c9e190`（2026-10-27 拉取）。本校脚本最后一次修改 `f77f5a6`（2026-10-27，`add: 电子科技大学中山学院强智教务课表适配`），与任务卡一致。
 - 上游 `resources/ZSC/adapters.yaml`：adapter_id `ZSC_01`，名称「电子科技大学中山学院强智教务系统」，import_url `https://jwgln.zsc.edu.cn/jsxsd/`，maintainer `Lanjunyee`。
 - 模板：已审计的 `yssdufe`（强智 `/jsxsd/`）。任务卡给出的行相似度：与 `YSSDUFE/yssdufe_01.js` 0.570，高于 `XJIE` 的 0.554。取数路径、课表容器 `#kbtable`、周历 `#kbtable`、请求体都同构，所以从 `yssdufe` 复制，不从 URP / 正方起手。
-- 地址：上游把 `BASE_URL` 写成绝对地址 `https://jwgln.zsc.edu.cn`。本件改成当前页同源的相对路径（`/jsxsd/...`）。主机只能是 `jwgln.zsc.edu.cn`；登录页判断会拦住别的主机，因此不发到认证中心或门户。`allowHosts` 按主调度定为 `[]`（只放行登录页那一台同源主机）。没有发现第二个主机，没有自行加白名单。
+- 地址：上游把 `BASE_URL` 写成绝对地址 `https://jwgln.zsc.edu.cn`。本件改成当前页同源的相对路径（`/jsxsd/...`）。主机只能是 `jwgln.zsc.edu.cn`；登录页判断会拦住别的主机，因此不发到认证中心或门户。`allowHosts` 按主调度定为 `[]`（桥注入与图片下载只使用登录页那一台同源主机）。没有发现第二个主机，没有自行加白名单。
 
 ## 本校与模板不同的地方（分析）
 

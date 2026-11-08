@@ -1,5 +1,7 @@
 # 安全审计 —— 徐州医科大学研究生教务适配器（`xzhmu`）
 
+> **宿主策略更新（2026-11-09）**：本文关于 `JwNetworkGate`、提取期冻结/拦截或 JS 沙箱的描述仅记录旧版实现。现行策略对所有适配器一律不自动断网：不拦截网页请求或导航，也不改写页面网络接口。`allowHosts` 仍用于请求目标声明、桥注入和宿主图片下载。
+
 审计对象：`jw-adapters/xzhmu/extract.js` + `parse.js` + `manifest.json`
 
 上游出处：拾光课程表社区 `shiguang_warehouse` 的 `resources/XZHMU/xzhmu_01.js`

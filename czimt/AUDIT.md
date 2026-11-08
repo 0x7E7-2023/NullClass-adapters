@@ -1,5 +1,7 @@
 # 安全审计 —— 常州机电职业技术学院（正方教务 jwglxt 根路径，经「校内通」WebVPN 路径前缀访问，校内网络可直连）
 
+> **宿主策略更新（2026-11-09）**：本文关于 `JwNetworkGate`、提取期冻结/拦截或 JS 沙箱的描述仅记录旧版实现。现行策略对所有适配器一律不自动断网：不拦截网页请求或导航，也不改写页面网络接口。`allowHosts` 仍用于请求目标声明、桥注入和宿主图片下载。
+
 审计对象：`jw-adapters/czimt/` 下的 `extract.js` / `parse.js` / `manifest.json`，以及它们移植自的上游脚本 `shiguang_warehouse` 的 `CZIMT/czimt.js`
 （快照 commit `19a65bf07a3e998fcfc69cee692387cdc0523c1a`，2026-10-19 22:41 拉取，2026-10-20 复核仍是最新；本校脚本最后一次修改 `80e30cf`，2026-09-23；MIT，维护者 ShallowY）。
 上游 `adapters.yaml` 登记：`adapter_id` `CZIMT_01`，`import_url` `https://webapp.czimt.edu.cn`（「校内通」统一身份认证入口，即 `manifest.loginUrl`），描述「采用新版Webapp(校内通)入口，统一身份认证后进入教务系统执行导入」。

@@ -1,5 +1,7 @@
 # 安全审计 —— 广西医科大学（乘方智慧教务，jwxt.gxmu.edu.cn）
 
+> **宿主策略更新（2026-11-09）**：本文关于 `JwNetworkGate`、提取期冻结/拦截或 JS 沙箱的描述仅记录旧版实现。现行策略对所有适配器一律不自动断网：不拦截网页请求或导航，也不改写页面网络接口。`allowHosts` 仍用于请求目标声明、桥注入和宿主图片下载。
+
 审计对象：`jw-adapters/gxmu/` 下的 `extract.js` / `parse.js` / `manifest.json`，以及它们移植自的上游脚本
 `shiguang_warehouse` 的 `GXMU/gxmu.js`（快照 commit `19a65bf07a3e998fcfc69cee692387cdc0523c1a`，2026-10-19 拉取，2026-10-20 复核仍是最新；
 MIT，作者 Haooz，`adapters.yaml` 的 maintainer；本校脚本最后一次修改 `80e30cf`，`git log -1 -- resources/GXMU/gxmu.js` 核对一致）。

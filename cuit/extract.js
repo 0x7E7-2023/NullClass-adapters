@@ -58,7 +58,7 @@
 
     // 本适配器只发**当前页面同源**的相对路径（见 AUDIT.md 第 2 节）：登录域 jwc.cuit.edu.cn
     // 与脚本请求的教务主机不是同一台，所以万一用户是停在登录页/门户上点的「提取课表」，
-    // 请求会被应用的白名单闸门拦下 —— 那种情况下给一句能照做的提示，别只报「连不上」。
+    // 给一句能照做的提示，别只报「连不上」。宿主不再自动拦截网页请求。
     function hostHint() {
         var host = String(window.location.hostname || '');
         if (/jwgl|jwxt|jwc/i.test(host)) return '';

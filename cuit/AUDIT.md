@@ -1,5 +1,7 @@
 # 安全审计与移植说明：`cuit`（成都信息工程大学）
 
+> **宿主策略更新（2026-11-09）**：本文关于 `JwNetworkGate`、提取期冻结/拦截或 JS 沙箱的描述仅记录旧版实现。现行策略对所有适配器一律不自动断网：不拦截网页请求或导航，也不改写页面网络接口。`allowHosts` 仍用于请求目标声明、桥注入和宿主图片下载。
+
 - **平台**：树维 EAMS（接口路径 `/eams/`），上海树维信息科技有限公司（SupWisdom，新开普子公司）。
   判据是**脚本实际请求的接口路径**（`courseTableForStd.action` / `dataQuery.action` /
   `courseTableForStd!courseTable.action`），不是上游注释。**本件不写「强智」**。
