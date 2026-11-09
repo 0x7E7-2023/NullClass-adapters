@@ -1,0 +1,24 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：字段形状照上游 CQU/cqu.js 读到的样子编造，课程、教师、教室均为虚构，无真实个人信息。",
+  "_case": "开学日推算 · 教务没给 beginDate 时按「第二学期 = 2 月 20 日所在周的周一」推；课表最晚周 22 超过教务写的 20 周 → 抬高并提醒；课表用到第 11-12 节，教务只给了 10 节 → 用默认节次表同号的两节补上",
+  "term": { "id": "120", "name": null, "year": "2026-2027", "term": "2" },
+  "today": "2027-03-01",
+  "startDate": null,
+  "maxWeek": 20,
+  "periodTimes": [
+    { "periodOrder": 1, "startTime": "08:00", "endTime": "08:45" },
+    { "periodOrder": 2, "startTime": "08:55", "endTime": "09:40" },
+    { "periodOrder": 3, "startTime": "10:00", "endTime": "10:45" },
+    { "periodOrder": 4, "startTime": "10:55", "endTime": "11:40" },
+    { "periodOrder": 5, "startTime": "14:00", "endTime": "14:45" },
+    { "periodOrder": 6, "startTime": "14:55", "endTime": "15:40" },
+    { "periodOrder": 7, "startTime": "16:00", "endTime": "16:45" },
+    { "periodOrder": 8, "startTime": "16:55", "endTime": "17:40" },
+    { "periodOrder": 9, "startTime": "18:00", "endTime": "18:45" },
+    { "periodOrder": 10, "startTime": "18:55", "endTime": "19:40" }
+  ],
+  "rows": [
+    { "courseName": "电路原理", "instructorName": "教师甲", "position": "电气楼101", "roomName": "电气楼101", "weekDay": 4, "periodFormat": "11-12", "teachingWeek": "1111111111111111" },
+    { "courseName": "电机学", "instructorName": "教师乙", "position": "电气楼102", "roomName": "电气楼102", "weekDay": 1, "periodFormat": "1-2", "teachingWeek": "1111111111111111111111" }
+  ]
+}

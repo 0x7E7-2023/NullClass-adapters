@@ -1,0 +1,31 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：字段形状照上游 CQU/cqu.js 读到的样子编造，课程、教师、教室均为虚构，无真实个人信息。",
+  "_case": "同课合并 · 完全重复的行先去重再计数；1-2 与 3-4 连堂合成 1-4；同节次不同周次（1-8 与 9-16）取并集 1-16；教室不同不合并；不连续的节次保持两段；教师写「戊老师-己老师」时按上游取「-」前一段",
+  "term": { "id": "115", "name": "2026-2027学年第一学期", "year": null, "term": null },
+  "today": "2026-11-09",
+  "startDate": "2026-09-07",
+  "maxWeek": 16,
+  "periodTimes": [
+    { "periodOrder": 1, "startTime": "08:00", "endTime": "08:45" },
+    { "periodOrder": 2, "startTime": "08:55", "endTime": "09:40" },
+    { "periodOrder": 3, "startTime": "10:00", "endTime": "10:45" },
+    { "periodOrder": 4, "startTime": "10:55", "endTime": "11:40" },
+    { "periodOrder": 5, "startTime": "14:00", "endTime": "14:45" },
+    { "periodOrder": 6, "startTime": "14:55", "endTime": "15:40" },
+    { "periodOrder": 7, "startTime": "16:00", "endTime": "16:45" },
+    { "periodOrder": 8, "startTime": "16:55", "endTime": "17:40" },
+    { "periodOrder": 9, "startTime": "18:30", "endTime": "19:15" },
+    { "periodOrder": 10, "startTime": "19:25", "endTime": "20:10" },
+    { "periodOrder": 11, "startTime": "20:20", "endTime": "21:05" },
+    { "periodOrder": 12, "startTime": "21:15", "endTime": "22:00" }
+  ],
+  "rows": [
+    { "courseName": "数据结构", "instructorName": "戊老师-己老师", "position": "实验楼301", "roomName": "实验楼301", "weekDay": 1, "periodFormat": "1-2", "teachingWeek": "11111111" },
+    { "courseName": "数据结构", "instructorName": "戊老师-己老师", "position": "实验楼301", "roomName": "实验楼301", "weekDay": 1, "periodFormat": "3-4", "teachingWeek": "11111111" },
+    { "courseName": "数据结构", "instructorName": "戊老师-己老师", "position": "实验楼301", "roomName": "实验楼301", "weekDay": 1, "periodFormat": "3-4", "teachingWeek": "11111111" },
+    { "courseName": "数据结构", "instructorName": "戊老师-己老师", "position": "实验楼301", "roomName": "实验楼301", "weekDay": 1, "periodFormat": "1-4", "teachingWeek": "0000000011111111" },
+    { "courseName": "数据结构", "instructorName": "戊老师-己老师", "position": "实验楼302", "roomName": "实验楼302", "weekDay": 1, "periodFormat": "1-4", "teachingWeek": "1111111111111111" },
+    { "courseName": "操作系统", "instructorName": "庚老师", "position": "教1-101", "roomName": "教1-101", "weekDay": 2, "periodFormat": "5-6", "teachingWeek": "1111111111111111" },
+    { "courseName": "操作系统", "instructorName": "庚老师", "position": "教1-101", "roomName": "教1-101", "weekDay": 2, "periodFormat": "1-2", "teachingWeek": "1111111111111111" }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "specVersion": 1,
+  "key": "scnu",
+  "name": "华南师范大学",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 YewFence（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwxt.scnu.edu.cn/xtgl/login_slogin.html",
+  "scheduleUrlHint": "https://jwxt.scnu.edu.cn/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N253508",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["jwxt.scnu.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 教务给校区作息与 18 周校历；开学日回退到第 1 周所在周的周一 2026-08-31；课名后缀「（实验）」；地点拼「校区 + 教室」；「未知」「暂无教师」不当成真名；未排课程汇总一条提醒",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：多校区 · 课程分布在两个校区，节次时间按行数最多的广州校区写入并提醒其余校区核对；地点带各校区名",
+      "extracted": "fixtures/campus-multi.extracted.json",
+      "expected": "fixtures/campus-multi.expected.json"
+    },
+    {
+      "name": "合成用例：没有校区编号 · 教务没给 xqh_id 时不猜作息，节次时间用应用里常用的 12 节并说明原因",
+      "extracted": "fixtures/campus-missing.extracted.json",
+      "expected": "fixtures/campus-missing.expected.json"
+    },
+    {
+      "name": "合成用例：作息时间重叠 · 校区作息第 3 节与第 2 节重叠时整份不用，回落到应用里常用的 12 节并写明「时间有重叠」",
+      "extracted": "fixtures/period-invalid.extracted.json",
+      "expected": "fixtures/period-invalid.expected.json"
+    },
+    {
+      "name": "合成用例：校历周次不连续 · 缺第 3 周时校历不能定总周数，开学日仍取第 1 周日期，总周数按 20 并说明",
+      "extracted": "fixtures/calendar-gap.extracted.json",
+      "expected": "fixtures/calendar-gap.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 · 「(单)1-8周(双)9-16周」读成 1-7 单周加 10-16 双周，不是 1-16 每周；后置「1-8周(单)9-16周(双)」结果相同",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
+    },
+    {
+      "name": "合成用例：周次里的「第」与「共 N 周」· 「第1-第8周」是 1-8 每周；「1-15周(单) 共16周」只留 1-15 单周；「共16周,1-15周(单)」不整行丢课",
+      "extracted": "fixtures/week-di.extracted.json",
+      "expected": "fixtures/week-di.expected.json"
+    },
+    {
+      "name": "合成用例：合并 · 1-2 节与重叠的 2-3 节合成 1-3 节；同节 1-8 周与 9-16 周并成 1-16 周；完全相同的两行只留一条",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 · 超长课名与超长校区名都截到 20 字，缺教师、未排课程的提醒每条不超过 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    }
+  ]
+}

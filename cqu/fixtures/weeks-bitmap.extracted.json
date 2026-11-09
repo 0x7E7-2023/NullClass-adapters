@@ -1,0 +1,27 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：字段形状照上游 CQU/cqu.js 读到的样子编造，课程、教师、教室均为虚构，无真实个人信息。",
+  "_case": "周次位串切段 · 连续、孤立、隔周各自成段；第 31 周被丢弃并提醒；全 0 位串与写成「1-16」的位串算不完整行；教务写的总周数小于课表最晚周时抬高并提醒",
+  "term": { "id": "137", "name": "2026-2027学年第二学期", "year": null, "term": null },
+  "today": "2027-03-01",
+  "startDate": "2027-02-22",
+  "maxWeek": 20,
+  "periodTimes": [
+    { "periodOrder": 1, "startTime": "08:00", "endTime": "08:45" },
+    { "periodOrder": 2, "startTime": "08:55", "endTime": "09:40" },
+    { "periodOrder": 3, "startTime": "10:00", "endTime": "10:45" },
+    { "periodOrder": 4, "startTime": "10:55", "endTime": "11:40" },
+    { "periodOrder": 5, "startTime": "14:00", "endTime": "14:45" },
+    { "periodOrder": 6, "startTime": "14:55", "endTime": "15:40" },
+    { "periodOrder": 7, "startTime": "16:00", "endTime": "16:45" },
+    { "periodOrder": 8, "startTime": "16:55", "endTime": "17:40" },
+    { "periodOrder": 9, "startTime": "19:00", "endTime": "19:45" },
+    { "periodOrder": 10, "startTime": "19:55", "endTime": "20:40" }
+  ],
+  "rows": [
+    { "courseName": "数据挖掘", "instructorName": "教师A", "position": "教学楼3-201", "roomName": "教学楼3-201", "weekDay": 1, "periodFormat": "1-2", "teachingWeek": "111010111" },
+    { "courseName": "离散数学", "instructorName": "教师B", "position": "教学楼3-202", "roomName": "教学楼3-202", "weekDay": 2, "periodFormat": "3", "teachingWeek": "0001010101" },
+    { "courseName": "高级算法", "instructorName": "教师C", "position": "教学楼3-203", "roomName": "教学楼3-203", "weekDay": 3, "periodFormat": "5-6", "teachingWeek": "0000000000000000000000001111111" },
+    { "courseName": "空周课", "instructorName": "教师D", "position": "教学楼3-204", "roomName": "教学楼3-204", "weekDay": 4, "periodFormat": "7-8", "teachingWeek": "0000" },
+    { "courseName": "乱码周", "instructorName": "教师E", "position": "教学楼3-205", "roomName": "教学楼3-205", "weekDay": 5, "periodFormat": "9", "teachingWeek": "1-16" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "now": "2026-11-09",
+  "term": { "xn": "2026", "xj": "11", "xnLabel": "2026-2027", "xjLabel": "第一学期", "source": "selected" },
+  "weeks": [1, 2, 3, 4, 5],
+  "skippedWeeks": 2,
+  "failedWeeks": [2, 4],
+  "timeSlots": [
+    { "number": 1, "start": "08:00", "end": "08:45" },
+    { "number": 2, "start": "08:55", "end": "09:40" },
+    { "number": 3, "start": "10:00", "end": "10:45" },
+    { "number": 4, "start": "10:55", "end": "11:40" }
+  ],
+  "courses": [
+    { "week": 1, "day": 1, "name": "人工智能导论", "lines": ["人工智能导论", "1-5周", "第1节 -- 第2节", "何静", "信息楼201"] },
+    { "week": 3, "day": 2, "name": "见通知", "lines": ["见通知"] },
+    { "week": 5, "day": 4, "name": "学术写作", "lines": ["学术写作", "1-5周", "第3节 -- 第4节", "郑凯", "教学楼B301"] }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "已按教务系统里的调课、停课记录调整了 5 处上课安排（其中 2 处只去掉了原来的上课周次，没有排新的上课时间），请核对调整后的课表",
+    "有 1 条调课、停课记录没能对上课表里原来的课，没有应用，请在教务系统里核对"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 18,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:55",
+          "end": "09:40"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:00",
+          "end": "10:45"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:55",
+          "end": "11:40"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:55",
+          "end": "15:40"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:50",
+          "end": "16:35"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:45",
+          "end": "17:30"
+        }
+      ],
+      "courses": [
+        {
+          "name": "数据结构",
+          "teacher": "教师甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 4,
+              "weekType": "ALL",
+              "location": "A101"
+            },
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 7,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "A101"
+            },
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 3,
+              "endWeek": 3,
+              "weekType": "ALL",
+              "location": "A101"
+            }
+          ]
+        },
+        {
+          "name": "操作系统",
+          "teacher": "教师乙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "B202"
+            },
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 11,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "B202"
+            }
+          ]
+        },
+        {
+          "name": "计算机网络",
+          "teacher": "教师丙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 1,
+              "endWeek": 11,
+              "weekType": "ALL",
+              "location": "C303"
+            },
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 5,
+              "endPeriod": 6,
+              "startWeek": 13,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "C303"
+            }
+          ]
+        },
+        {
+          "name": "操作系统",
+          "teacher": "教师丁",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 7,
+              "endPeriod": 8,
+              "startWeek": 11,
+              "endWeek": 11,
+              "weekType": "ALL",
+              "location": "D404"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

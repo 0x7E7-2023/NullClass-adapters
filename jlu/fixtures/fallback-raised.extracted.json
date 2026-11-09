@@ -1,0 +1,12 @@
+{
+  "term": { "code": "2026-2027-1", "name": "" },
+  "today": "2026-03-05",
+  "rowTotal": null,
+  "calendarRows": [],
+  "sectionRows": [],
+  "rows": [
+    { "KBID": "K1", "KCM": "课程甲", "SKJS": "教师甲", "JASMC": "教一101", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "1111111111111111111111" }
+  ],
+  "changeRows": null,
+  "undeterminedRows": []
+}

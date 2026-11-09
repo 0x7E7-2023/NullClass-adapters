@@ -1,0 +1,47 @@
+{
+  "specVersion": 1,
+  "key": "tongji",
+  "name": "同济大学",
+  "initial": "T",
+  "version": "1.0.0",
+  "author": "上游 Linho1219（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://1.tongji.edu.cn/",
+  "scheduleUrlHint": "https://1.tongji.edu.cn/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["1.tongji.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 教务给定 13 节逐节时间与开学日（周一）、总周数从日历详情读到 18；教师工号括号剥掉、多位教师逗号分隔；教室 roomLable 兜底；占位词「暂无」与空值交 null；单双周；完全重复的排课行只留一条",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次数字数组切段 · 连续段 1-3 / 5-7 / 9-11 / 13-15、隔周单周 1-9、单周 12、以及步长变化 1,2,4,6 → 1-2 每周 + 4-6 双周",
+      "extracted": "fixtures/runs.extracted.json",
+      "expected": "fixtures/runs.expected.json"
+    },
+    {
+      "name": "合成用例：日历详情取不到 · 开学日按学期锚点推算、总周数内置 20 周被第 21 周抬到 21、节次时间用空课默认 12 节；课表排到 13-14 节按 H3 顺推；缺课名 / 星期 8 / 节次 5-3 / 周次只有「第一周」各计一行；周次 0 与 31 丢弃；只有课名没有上课安排的课单独提醒",
+      "extracted": "fixtures/missing.extracted.json",
+      "expected": "fixtures/missing.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 缺教师 / 缺教室 + 三条读不出来的长周次 + 三条脏行 → 提醒按类型汇总、课名与周次原文截到 20 字、每条不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：学期回落 · 当前学期读不到时按学期列表第一项导入（fromList），学期名为空时兜底「同济大学 第一学期」并写明用的是列表第一项",
+      "extracted": "fixtures/term-list.extracted.json",
+      "expected": "fixtures/term-list.expected.json"
+    },
+    {
+      "name": "合成用例：H3 补节次 · 教务只给 11 节时间，课表排到第 12-13 节 → 第 12 节用空课默认节次时间、第 13 节顺推，提醒里逐节说明",
+      "extracted": "fixtures/h3-periods.extracted.json",
+      "expected": "fixtures/h3-periods.expected.json"
+    }
+  ]
+}

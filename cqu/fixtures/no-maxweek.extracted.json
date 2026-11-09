@@ -1,0 +1,14 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：字段形状照上游 CQU/cqu.js 读到的样子编造，课程、教师、教室均为虚构，无真实个人信息。",
+  "_case": "总周数回退 · 教务没给 maxWeek 时按课表最晚周；节次时间也没给时整张用默认 12 节表；课表用到第 15 节 → 13-14 节顺推、第 15 节越过 23:59 如实说明",
+  "term": { "id": "115", "name": "2026-2027学年第一学期", "year": null, "term": null },
+  "today": "2026-11-09",
+  "startDate": "2026-09-07",
+  "maxWeek": null,
+  "periodTimes": null,
+  "rows": [
+    { "courseName": "线性代数", "instructorName": "教师甲", "position": "主楼101", "roomName": "主楼101", "weekDay": 1, "periodFormat": "1-2", "teachingWeek": "11111111111111111" },
+    { "courseName": "概率论", "instructorName": "教师乙", "position": "主楼202", "roomName": "主楼202", "weekDay": 2, "periodFormat": "3", "teachingWeek": "11111111" },
+    { "courseName": "晚间实验", "instructorName": "教师丙", "position": "实验楼105", "roomName": "实验楼105", "weekDay": 3, "periodFormat": "15", "teachingWeek": "1111" }
+  ]
+}

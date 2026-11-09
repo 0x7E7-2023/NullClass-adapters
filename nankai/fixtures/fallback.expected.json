@@ -1,0 +1,43 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务系统没有给出开学日期，已按「2 月 20 日之后最近的周一」推算第 1 周从 2027-02-22 开始，请在「学期管理」里核对成学校实际开学日",
+    "教务系统没有给出节次时间，已按学校公布的 14 节节次时间导入（第 1 节 08:00-08:45），如与实际安排不符，请在「学期管理」里核对",
+    "教务系统没有预选学年学期，已按学期列表的第一项「2026-2027学年第二学期」导入，请在「学期管理」里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2027-02-22",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "12:00", "end": "12:45" },
+        { "periodIndex": 6, "start": "12:55", "end": "13:40" },
+        { "periodIndex": 7, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 8, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 9, "start": "16:00", "end": "16:45" },
+        { "periodIndex": 10, "start": "16:55", "end": "17:40" },
+        { "periodIndex": 11, "start": "18:30", "end": "19:15" },
+        { "periodIndex": 12, "start": "19:25", "end": "20:10" },
+        { "periodIndex": 13, "start": "20:20", "end": "21:05" },
+        { "periodIndex": 14, "start": "21:15", "end": "22:00" }
+      ],
+      "courses": [
+        {
+          "name": "有机化学",
+          "teacher": "陈晨",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 2, "endWeek": 2, "weekType": "ALL", "location": "主楼202" }
+          ]
+        }
+      ]
+    }
+  ]
+}

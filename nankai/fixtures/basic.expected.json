@@ -1,0 +1,64 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "有 1 门课没有给出上课教师（例如 学术讲座）：已照常导入，相应内容暂时空着，可在「编辑课程」里补上",
+    "教务系统没有给出开学日期，已按「9 月 1 日之后最近的周一」推算第 1 周从 2026-09-07 开始，请在「学期管理」里核对成学校实际开学日"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 8,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" }
+      ],
+      "courses": [
+        {
+          "name": "体育",
+          "teacher": "王强",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 7, "weekType": "ODD", "location": "体育馆" }
+          ]
+        },
+        {
+          "name": "大学英语",
+          "teacher": "李娜",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 3, "endPeriod": 4, "startWeek": 2, "endWeek": 2, "weekType": "ALL", "location": "外语楼203" }
+          ]
+        },
+        {
+          "name": "学术讲座",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 1, "endPeriod": 2, "startWeek": 6, "endWeek": 6, "weekType": "ALL", "location": "逸夫楼报告厅" }
+          ]
+        },
+        {
+          "name": "计算机基础",
+          "teacher": "刘洋",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 3, "endPeriod": 4, "startWeek": 4, "endWeek": 4, "weekType": "ALL", "location": "信息楼105" }
+          ]
+        },
+        {
+          "name": "高等数学",
+          "teacher": "张伟",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 3, "weekType": "ALL", "location": "主楼301" }
+          ]
+        }
+      ]
+    }
+  ]
+}

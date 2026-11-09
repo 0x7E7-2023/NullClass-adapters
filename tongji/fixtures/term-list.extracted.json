@@ -1,0 +1,23 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 交出去的字段编造，课程、教师、教室均为虚构，无真实个人信息。只保证同样的输入永远得到同样的输出。",
+  "_case": "学期回落：当前学期读不到，extract 取学期列表第一项（fromList=true）且学期名为空 → 学期名兜底「同济大学 第一学期」，提醒说明用的是列表第一项；开学日与总周数仍来自日历详情",
+  "term": { "name": "", "fromList": true },
+  "today": "2026-11-09",
+  "detail": {
+    "beginDay": "2026-09-07T00:00:00+08:00",
+    "times": [
+      { "beginTime": "08:00:00", "endTime": "08:45:00" },
+      { "beginTime": "08:55:00", "endTime": "09:40:00" },
+      { "beginTime": "10:00:00", "endTime": "10:45:00" }
+    ],
+    "totalWeeks": 18
+  },
+  "courses": [
+    {
+      "courseName": "工程制图",
+      "timeTableList": [
+        { "teacherName": "卫老师(3001)", "roomIdI18n": "南校区 综合楼 501", "dayOfWeek": 2, "timeStart": 1, "timeEnd": 2, "weeks": [1, 2, 3, 4, 5, 6, 7, 8] }
+      ]
+    }
+  ]
+}

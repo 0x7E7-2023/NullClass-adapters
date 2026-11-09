@@ -1,0 +1,40 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "有 1 门课没有给出上课教师、1 门课没有给出上课地点（例如 马克思主义基本原理）：已照常导入，相应内容暂时空着，可在「编辑课程」里补上",
+    "教务系统没有给出开学日期，已按「2 月 20 日之后最近的周一」推算第 1 周从 2027-02-22 开始，请在「学期管理」里核对成学校实际开学日"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第二学期",
+      "firstDay": "2027-02-22",
+      "totalWeeks": 8,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" }
+      ],
+      "courses": [
+        {
+          "name": "专业英语",
+          "teacher": "周涛",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 3, "endPeriod": 4, "startWeek": 2, "endWeek": 8, "weekType": "EVEN", "location": "外语楼203" }
+          ]
+        },
+        {
+          "name": "马克思主义基本原理",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 3, "weekType": "ALL", "location": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

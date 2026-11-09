@@ -1,0 +1,55 @@
+{
+  "specVersion": 1,
+  "key": "jlu",
+  "name": "吉林大学",
+  "initial": "J",
+  "version": "1.0.0",
+  "author": "上游 Leimeng52mc（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://iedu.jlu.edu.cn/",
+  "scheduleUrlHint": "https://iedu.jlu.edu.cn/jwapp/sys/wdkb/*default/index.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "iedu.jlu.edu.cn",
+    "vpn.jlu.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表 · 教务当前学期、校历开学日与总周数、启用节次时间、教师工号只留姓名、占位教师教室与三类无效行",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次位串切段 · 连续、单双、孤立、空洞分别成段，单双两行合并成每周，第 31 周丢弃并提醒",
+      "extracted": "fixtures/weeks-bitmap.extracted.json",
+      "expected": "fixtures/weeks-bitmap.expected.json"
+    },
+    {
+      "name": "合成用例：调课与停课 · 停课只去周次、调课换时间教师教室、同一排课位并入周次、连续两次调同一节课、对不上的记录与重复原始行",
+      "extracted": "fixtures/changes.extracted.json",
+      "expected": "fixtures/changes.expected.json"
+    },
+    {
+      "name": "合成用例：带课名的提醒不超 200 字 · 超长课名缺教师缺教室、未定时间课程点名截 20 字，按类型汇总",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：校历与节次时间取不到 · 开学日按本机日期所在周周一推算、总周数用 20 再按第 22 周抬高、节次时间交空表、调课记录取不到",
+      "extracted": "fixtures/fallback-raised.extracted.json",
+      "expected": "fixtures/fallback-raised.expected.json"
+    },
+    {
+      "name": "合成用例：总周数截断与节次顺推 · ZZC=40 按 30 周导入，课表用到第 8 节时按上一节顺推补时间",
+      "extracted": "fixtures/weeks-clamped.extracted.json",
+      "expected": "fixtures/weeks-clamped.expected.json"
+    },
+    {
+      "name": "合成用例：重复的调课记录 · 同一条记录出现两次只应用一次，提醒里的「已调整 N 处」不被放大",
+      "extracted": "fixtures/duplicate-changes.extracted.json",
+      "expected": "fixtures/duplicate-changes.expected.json"
+    }
+  ]
+}

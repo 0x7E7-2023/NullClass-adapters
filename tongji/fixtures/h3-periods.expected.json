@@ -1,0 +1,43 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "已按教务系统的当前学期（2026-2027学年第一学期）导入；要导入别的学期，请在教务系统里切换到那个学期后再点「提取课表」",
+    "开学日期取自教务系统：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "学期总周数取自教务系统（18 周），如与实际不符可在学期管理里改",
+    "课表用到了第 12-13 节，现有的节次时间没有覆盖，已补上：第 12 节用空课默认的节次时间，第 13 节按上一节下课后课间 5 分钟、每节 45 分钟顺推，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 18,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "13:30", "end": "14:15" },
+        { "periodIndex": 6, "start": "14:25", "end": "15:10" },
+        { "periodIndex": 7, "start": "15:30", "end": "16:15" },
+        { "periodIndex": 8, "start": "16:25", "end": "17:10" },
+        { "periodIndex": 9, "start": "18:30", "end": "19:15" },
+        { "periodIndex": 10, "start": "19:25", "end": "20:10" },
+        { "periodIndex": 11, "start": "20:20", "end": "21:05" },
+        { "periodIndex": 12, "start": "21:15", "end": "22:00" },
+        { "periodIndex": 13, "start": "22:05", "end": "22:50" }
+      ],
+      "courses": [
+        {
+          "name": "夜间实验",
+          "teacher": "辰老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 12, "endPeriod": 13, "startWeek": 1, "endWeek": 2, "weekType": "ALL", "location": "实验楼 F501" }
+          ]
+        }
+      ]
+    }
+  ]
+}

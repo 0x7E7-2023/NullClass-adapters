@@ -1,0 +1,54 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的校历：第 1 周从 2026-09-02 开始，请在学期管理里核对",
+    "学期总周数取自教务校历（18 周），如与实际不符可在学期管理里改",
+    "教务系统另外给了 1 门还没排上课表的课程（工程训练）：它们没有固定的星期与节次，排不进周课表，请按实际安排在课表里自行添加",
+    "本次只导入个人课表里的安排；独立实验预约的安排不在这里，请到教务系统的实验预约页面核对",
+    "有 1 门课没给上课教师、1 门课没给上课地点（例如 体育）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-02",
+      "totalWeeks": 18,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:10", "end": "08:50" },
+        { "periodIndex": 2, "start": "09:00", "end": "09:40" },
+        { "periodIndex": 3, "start": "09:50", "end": "10:30" },
+        { "periodIndex": 4, "start": "10:40", "end": "11:20" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:40" },
+        { "periodIndex": 6, "start": "14:50", "end": "15:30" }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "张三",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "广州校区 教1-101" }
+          ]
+        },
+        {
+          "name": "物理光学（实验）",
+          "teacher": "李四",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 2, "endWeek": 16, "weekType": "EVEN", "location": "广州校区 实验楼205" }
+          ]
+        },
+        {
+          "name": "体育",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

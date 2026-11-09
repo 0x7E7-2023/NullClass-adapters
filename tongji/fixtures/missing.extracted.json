@@ -1,0 +1,49 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 交出去的字段编造，课程、教师、教室均为虚构，无真实个人信息。只保证同样的输入永远得到同样的输出。",
+  "_case": "日历详情取不到（detail 为 null）：开学日按学期锚点推算、总周数内置 20 周再被第 21 周抬到 21 周、节次时间用空课默认 12 节；课表用到 13-14 节按 H3 顺推；脏行（缺课名 / 星期 8 / 节次 5-3 / 周次只有「第一周」）各计一行；周次 0 与 31 丢弃；只有课程名、没有上课安排的课单独提醒",
+  "term": { "name": "2026-2027学年第一学期", "fromList": false },
+  "today": "2026-11-09",
+  "detail": null,
+  "courses": [
+    {
+      "courseName": "高等数学",
+      "timeTableList": [
+        { "teacherName": "甲老师", "roomIdI18n": "教学楼A101", "dayOfWeek": 1, "timeStart": 1, "timeEnd": 2, "weeks": [0, 1, 31] }
+      ]
+    },
+    {
+      "courseName": "高等数学",
+      "timeTableList": [
+        { "teacherName": "甲老师", "roomIdI18n": "教学楼A101", "dayOfWeek": 3, "timeStart": 13, "timeEnd": 14, "weeks": [1, 21] }
+      ]
+    },
+    {
+      "courseName": "信号与系统",
+      "timeTableList": [
+        { "teacherName": "乙老师", "roomIdI18n": "教学楼B202", "dayOfWeek": 8, "timeStart": 1, "timeEnd": 2, "weeks": [1] }
+      ]
+    },
+    {
+      "courseName": "数字电路",
+      "timeTableList": [
+        { "teacherName": "丙老师", "roomIdI18n": "教学楼B203", "dayOfWeek": 2, "timeStart": 5, "timeEnd": 3, "weeks": [1] }
+      ]
+    },
+    {
+      "courseName": "模拟电路",
+      "timeTableList": [
+        { "teacherName": "丁老师", "roomIdI18n": "教学楼B204", "dayOfWeek": 4, "timeStart": 1, "timeEnd": 2, "weeks": ["第一周"] }
+      ]
+    },
+    {
+      "courseName": "",
+      "timeTableList": [
+        { "teacherName": "戊老师", "roomIdI18n": "教学楼C101", "dayOfWeek": 1, "timeStart": 3, "timeEnd": 4, "weeks": [1] }
+      ]
+    },
+    {
+      "courseName": "没有排课的课",
+      "timeTableList": []
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "specVersion": 1,
+  "key": "cqu",
+  "name": "重庆大学",
+  "initial": "C",
+  "version": "1.0.0",
+  "author": "上游 茵符草（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://my.cqu.edu.cn/",
+  "scheduleUrlHint": "https://my.cqu.edu.cn/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "my.cqu.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 学期名用学年 + 学期代号拼；开学日是周一；总周数用教务的 maxWeek；节次时间用教务的 classPeriodVOS；连堂与单节、「1-2」与「5」两种写法、单双周位串、缺教师、地点写「待定」、完全重复的行",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次位串切段 · 连续、孤立、隔周各自成段；第 31 周丢弃并提醒；全 0 位串与写成「1-16」的位串算不完整行；教务总周数小于课表最晚周时抬高并提醒",
+      "extracted": "fixtures/weeks-bitmap.extracted.json",
+      "expected": "fixtures/weeks-bitmap.expected.json"
+    },
+    {
+      "name": "合成用例：总周数回退 · 教务没给 maxWeek 时按课表最晚周；节次时间也没给时整张用默认 12 节表；课表用到第 15 节 → 13-14 节顺推、第 15 节越过 23:59 如实说明",
+      "extracted": "fixtures/no-maxweek.extracted.json",
+      "expected": "fixtures/no-maxweek.expected.json"
+    },
+    {
+      "name": "合成用例：开学日推算 · 教务没给 beginDate 时按「第二学期 = 2 月 20 日所在周的周一」推；课表最晚周超过教务写的总周数时抬高并提醒；课表用到第 11-12 节、教务只给 10 节 → 用默认节次表同号的两节补上",
+      "extracted": "fixtures/start-fallback.extracted.json",
+      "expected": "fixtures/start-fallback.expected.json"
+    },
+    {
+      "name": "合成用例：同课合并 · 完全重复的行先去重；1-2 与 3-4 连堂合成 1-4；同节次不同周次取并集；教室不同不合并；不连续的节次保持两段；教师「戊老师-己老师」按上游取「-」前一段",
+      "extracted": "fixtures/merge-duplicates.extracted.json",
+      "expected": "fixtures/merge-duplicates.expected.json"
+    },
+    {
+      "name": "合成用例：带课名的提醒不超 200 字 · 五门超长课名 / 占位词缺教师缺地点，按类型汇总且课名截到 20 字；四行不完整数据按原因计数；「张三（外聘）」不拆成第二位教师",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：开学日对齐与总周数上限 · 周三开学回退到周一并说明；教务写 36 周 → 按最多 30 周导入并提醒；教务没给学期名称时按开学日推学年学期并说明",
+      "extracted": "fixtures/maxweek-clamp.extracted.json",
+      "expected": "fixtures/maxweek-clamp.expected.json"
+    },
+    {
+      "name": "合成用例：学期名是教务原文但不含「学期」二字（2026夏）· 原样使用，不改成推算名",
+      "extracted": "fixtures/term-name-summer.extracted.json",
+      "expected": "fixtures/term-name-summer.expected.json"
+    },
+    {
+      "name": "合成用例：只能按开学日推学期名 · 7 月开学推成第三学期并提醒",
+      "extracted": "fixtures/start-july.extracted.json",
+      "expected": "fixtures/start-july.expected.json"
+    }
+  ]
+}

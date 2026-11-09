@@ -1,0 +1,32 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务系统没有给出当前学期，已按学期列表的第一项（同济大学 第一学期）导入；如不是要导入的学期，请在教务系统里切换到目标学期后再点「提取课表」",
+    "开学日期取自教务系统：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "学期总周数取自教务系统（18 周），如与实际不符可在学期管理里改"
+  ],
+  "terms": [
+    {
+      "name": "同济大学 第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 18,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" }
+      ],
+      "courses": [
+        {
+          "name": "工程制图",
+          "teacher": "卫老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "南校区 综合楼 501" }
+          ]
+        }
+      ]
+    }
+  ]
+}

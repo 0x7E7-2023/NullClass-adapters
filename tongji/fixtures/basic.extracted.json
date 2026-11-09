@@ -1,0 +1,46 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：按上游 TONGJI/tongji_01.js 实际读取的字段形状（currentTermCalendar / schoolCalendar detail 的 noWeekendWorkTimes 与 beginDay / findStudentTimetab 的 courseName + timeTableList）编造，课程、教师、教室均为虚构，无真实个人信息。只保证「同样的输入永远得到同样的输出」，不保证解析在真实页面上是对的（见 docs/jw-adapter-testing.md §3）。",
+  "_case": "基本：教务给出 13 节逐节时间与开学日（周一），总周数从 detail 读到 18；教师工号括号被剥掉、多位教师用逗号分隔；教室 roomLable 兜底、占位词与空值交 null；单双周；完全重复的排课行只留一条",
+  "term": { "name": "2026-2027学年第一学期", "fromList": false },
+  "today": "2026-11-09",
+  "detail": {
+    "beginDay": "2026-09-07T00:00:00+08:00",
+    "times": [
+      { "beginTime": "08:00:00", "endTime": "08:45:00" },
+      { "beginTime": "08:55:00", "endTime": "09:40:00" },
+      { "beginTime": "10:00:00", "endTime": "10:45:00" },
+      { "beginTime": "10:55:00", "endTime": "11:40:00" },
+      { "beginTime": "13:30:00", "endTime": "14:15:00" },
+      { "beginTime": "14:25:00", "endTime": "15:10:00" },
+      { "beginTime": "15:30:00", "endTime": "16:15:00" },
+      { "beginTime": "16:25:00", "endTime": "17:10:00" },
+      { "beginTime": "18:30:00", "endTime": "19:15:00" },
+      { "beginTime": "19:25:00", "endTime": "20:10:00" },
+      { "beginTime": "20:20:00", "endTime": "21:05:00" },
+      { "beginTime": "21:15:00", "endTime": "22:00:00" },
+      { "beginTime": "22:10:00", "endTime": "22:55:00" }
+    ],
+    "totalWeeks": 18
+  },
+  "courses": [
+    {
+      "courseName": "高等数学A(一)",
+      "timeTableList": [
+        { "teacherName": "张三(1001)", "roomIdI18n": "四平路校区 教学南楼 101", "roomLable": null, "dayOfWeek": 1, "timeStart": 1, "timeEnd": 2, "weeks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] },
+        { "teacherName": "张三(1001)", "roomIdI18n": "四平路校区 教学南楼 101", "roomLable": null, "dayOfWeek": 1, "timeStart": 1, "timeEnd": 2, "weeks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] }
+      ]
+    },
+    {
+      "courseName": "大学英语",
+      "timeTableList": [
+        { "teacherName": "李四(1002),王五(1003)", "roomIdI18n": null, "roomLable": "嘉定校区 博楼 205", "dayOfWeek": 3, "timeStart": 3, "timeEnd": 4, "weeks": [1, 3, 5, 7, 9, 11, 13, 15] }
+      ]
+    },
+    {
+      "courseName": "体育",
+      "timeTableList": [
+        { "teacherName": "暂无", "roomIdI18n": null, "roomLable": "", "dayOfWeek": 5, "timeStart": 7, "timeEnd": 8, "weeks": [2, 4, 6, 8, 10, 12, 14, 16] }
+      ]
+    }
+  ]
+}

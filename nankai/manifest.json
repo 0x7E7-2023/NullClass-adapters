@@ -1,0 +1,47 @@
+{
+  "specVersion": 1,
+  "key": "nankai",
+  "name": "南开大学（研究生）",
+  "initial": "N",
+  "version": "1.0.0",
+  "author": "上游 Cure（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://yjs.nankai.edu.cn/py/page/student/grkcb.htm",
+  "scheduleUrlHint": "https://yjs.nankai.edu.cn/py/page/student/grkcb.htm",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["yjs.nankai.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 教务选中第一学期（2026-2027）与页面节次时间；同一门课跨 3 周合并成 1-3 周、只上单周的课合成 1-7 单周段、同周连续两节合并成一段、没有独立教师行的课把第一行认成地点；缺教师汇总提醒",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：逐周去重 · 同一门课在第 1~3 周重复出现（含完全重复的一条）先按内容去重，缺教师 / 缺地点只按课名计一次；隔周课程合成 2-8 双周段",
+      "extracted": "fixtures/weeks.extracted.json",
+      "expected": "fixtures/weeks.expected.json"
+    },
+    {
+      "name": "合成用例：学期兜底 · 页面没有预选学年学期（用列表第一项）、没有节次时间（14 节兜底）；第二学期开学日按「2 月 20 日之后最近的周一」推算为 2027-02-22",
+      "extracted": "fixtures/fallback.extracted.json",
+      "expected": "fixtures/fallback.expected.json"
+    },
+    {
+      "name": "合成用例：取数不全 · 第 2、4 周没取到课表、1 条课程信息认不出、2 个超过 30 周的周次没抓取；三类都进提醒，其余课程照常导入",
+      "extracted": "fixtures/failed.extracted.json",
+      "expected": "fixtures/failed.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒 · 3 门 27~28 字课名的课都缺教师 / 缺地点，提醒按类型汇总、点名的课名截到 20 字、整条不超 200 字",
+      "extracted": "fixtures/long-name.extracted.json",
+      "expected": "fixtures/long-name.expected.json"
+    },
+    {
+      "name": "合成用例：节次超出 · 课表排到第 15、16 节，兜底节次时间只到第 14 节，按课间 5 分钟、每节 45 分钟顺推补上并提醒",
+      "extracted": "fixtures/sections.extracted.json",
+      "expected": "fixtures/sections.expected.json"
+    }
+  ]
+}

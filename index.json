@@ -1,146 +1,50 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.11.09.1",
+  "version": "2026.11.10.1",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
-      "key": "dlutci",
-      "name": "大连工程学院（原大连理工大学城市学院）",
+      "key": "ahszu",
+      "name": "宿州学院",
+      "version": "1.0.0",
+      "path": "ahszu"
+    },
+    {
+      "key": "aufe",
+      "name": "安徽财经大学",
+      "version": "1.0.0",
+      "path": "aufe"
+    },
+    {
+      "key": "bbgu",
+      "name": "北部湾大学",
+      "version": "1.0.0",
+      "path": "bbgu"
+    },
+    {
+      "key": "bnuzh",
+      "name": "北京师范大学珠海校区",
+      "version": "1.0.0",
+      "path": "bnuzh"
+    },
+    {
+      "key": "btbu",
+      "name": "北京工商大学",
+      "version": "1.0.0",
+      "path": "btbu"
+    },
+    {
+      "key": "bupt",
+      "name": "北京邮电大学",
+      "version": "1.0.0",
+      "path": "bupt"
+    },
+    {
+      "key": "cauc",
+      "name": "中国民航大学",
       "version": "1.0.1",
-      "path": "dlutci"
-    },
-    {
-      "key": "ustc",
-      "name": "中国科学技术大学",
-      "version": "1.0.0",
-      "path": "ustc"
-    },
-    {
-      "key": "universal",
-      "name": "通用适配器",
-      "version": "1.0.0",
-      "path": "universal"
-    },
-    {
-      "key": "zjut",
-      "name": "浙江工业大学",
-      "version": "1.0.1",
-      "path": "zjut"
-    },
-    {
-      "key": "hynu",
-      "name": "衡阳师范学院",
-      "version": "1.0.0",
-      "path": "hynu"
-    },
-    {
-      "key": "niit",
-      "name": "南京工业职业技术大学",
-      "version": "1.0.0",
-      "path": "niit"
-    },
-    {
-      "key": "jstc",
-      "name": "江苏旅游职业学院",
-      "version": "1.0.0",
-      "path": "jstc"
-    },
-    {
-      "key": "masu",
-      "name": "马鞍山学院",
-      "version": "1.0.0",
-      "path": "masu"
-    },
-    {
-      "key": "neau",
-      "name": "东北农业大学",
-      "version": "1.0.0",
-      "path": "neau"
-    },
-    {
-      "key": "sxgcxy",
-      "name": "山西工程职业学院",
-      "version": "1.0.0",
-      "path": "sxgcxy"
-    },
-    {
-      "key": "hbmu",
-      "name": "湖北医药学院",
-      "version": "1.0.0",
-      "path": "hbmu"
-    },
-    {
-      "key": "cfec",
-      "name": "重庆财经学院",
-      "version": "1.0.1",
-      "path": "cfec"
-    },
-    {
-      "key": "hblgxy",
-      "name": "淮北理工学院",
-      "version": "1.0.0",
-      "path": "hblgxy"
-    },
-    {
-      "key": "glmu",
-      "name": "桂林医科大学",
-      "version": "1.0.0",
-      "path": "glmu"
-    },
-    {
-      "key": "xjie",
-      "name": "新疆工程学院",
-      "version": "1.0.0",
-      "path": "xjie"
-    },
-    {
-      "key": "wenhua",
-      "name": "文华学院",
-      "version": "1.0.1",
-      "path": "wenhua"
-    },
-    {
-      "key": "hniu",
-      "name": "湖南信息职业技术学院",
-      "version": "1.0.0",
-      "path": "hniu"
-    },
-    {
-      "key": "upc",
-      "name": "中国石油大学（华东）",
-      "version": "1.0.0",
-      "path": "upc"
-    },
-    {
-      "key": "huel",
-      "name": "河南财经政法大学",
-      "version": "1.0.1",
-      "path": "huel"
-    },
-    {
-      "key": "hhtc",
-      "name": "怀化学院",
-      "version": "1.0.0",
-      "path": "hhtc"
-    },
-    {
-      "key": "cqrk",
-      "name": "重庆人文科技学院",
-      "version": "1.0.0",
-      "path": "cqrk"
-    },
-    {
-      "key": "gxdlxy",
-      "name": "广西电力职业技术学院",
-      "version": "1.0.0",
-      "path": "gxdlxy"
-    },
-    {
-      "key": "zzu",
-      "name": "郑州大学",
-      "version": "1.0.0",
-      "path": "zzu"
+      "path": "cauc"
     },
     {
       "key": "ccit",
@@ -149,58 +53,28 @@
       "path": "ccit"
     },
     {
-      "key": "hnie",
-      "name": "湖南工程学院",
+      "key": "ccsut",
+      "name": "长沙工业学院",
       "version": "1.0.0",
-      "path": "hnie"
+      "path": "ccsut"
     },
     {
-      "key": "stcnchu",
-      "name": "南昌航空大学科技学院",
+      "key": "cdutcm",
+      "name": "成都中医药大学",
       "version": "1.0.0",
-      "path": "stcnchu"
+      "path": "cdutcm"
     },
     {
-      "key": "hnvcc",
-      "name": "湖南商务职业技术学院",
-      "version": "1.0.0",
-      "path": "hnvcc"
-    },
-    {
-      "key": "xzhmu",
-      "name": "徐州医科大学（研究生）",
-      "version": "1.0.0",
-      "path": "xzhmu"
-    },
-    {
-      "key": "taru",
-      "name": "塔里木大学",
+      "key": "cfec",
+      "name": "重庆财经学院",
       "version": "1.0.1",
-      "path": "taru"
+      "path": "cfec"
     },
     {
-      "key": "xawl",
-      "name": "西安文理学院",
+      "key": "cjlu",
+      "name": "中国计量大学",
       "version": "1.0.1",
-      "path": "xawl"
-    },
-    {
-      "key": "zcmu",
-      "name": "浙江中医药大学",
-      "version": "1.0.1",
-      "path": "zcmu"
-    },
-    {
-      "key": "gsmc",
-      "name": "甘肃医学院",
-      "version": "1.0.1",
-      "path": "gsmc"
-    },
-    {
-      "key": "qdhhc",
-      "name": "青岛黄海学院",
-      "version": "1.0.1",
-      "path": "qdhhc"
+      "path": "cjlu"
     },
     {
       "key": "cqcivc",
@@ -209,82 +83,52 @@
       "path": "cqcivc"
     },
     {
-      "key": "whut",
-      "name": "武汉理工大学",
-      "version": "1.0.0",
-      "path": "whut"
+      "key": "cqepc",
+      "name": "重庆航天职业技术学院",
+      "version": "1.0.2",
+      "path": "cqepc"
     },
     {
-      "key": "neu",
-      "name": "东北大学",
+      "key": "cqrk",
+      "name": "重庆人文科技学院",
       "version": "1.0.0",
-      "path": "neu"
+      "path": "cqrk"
     },
     {
-      "key": "hpu",
-      "name": "河南理工大学",
+      "key": "cqtbi",
+      "name": "重庆工商职业学院",
       "version": "1.0.0",
-      "path": "hpu"
+      "path": "cqtbi"
     },
     {
-      "key": "uestc",
-      "name": "电子科技大学",
+      "key": "cqu",
+      "name": "重庆大学",
       "version": "1.0.0",
-      "path": "uestc"
+      "path": "cqu"
     },
     {
-      "key": "zua",
-      "name": "郑州航空工业管理学院",
+      "key": "csu",
+      "name": "中南大学",
       "version": "1.0.0",
-      "path": "zua"
+      "path": "csu"
     },
     {
-      "key": "zzvcae",
-      "name": "郑州汽车工程职业学院",
-      "version": "1.0.0",
-      "path": "zzvcae"
+      "key": "csuft",
+      "name": "中南林业科技大学",
+      "version": "1.0.1",
+      "path": "csuft"
     },
     {
-      "key": "dlmu",
-      "name": "大连海事大学",
+      "key": "ctgu",
+      "name": "三峡大学",
       "version": "1.0.0",
-      "path": "dlmu"
+      "path": "ctgu"
     },
     {
-      "key": "neuq",
-      "name": "东北大学秦皇岛分校",
+      "key": "cug",
+      "name": "中国地质大学（武汉）",
       "version": "1.0.0",
-      "path": "neuq"
-    },
-    {
-      "key": "haust",
-      "name": "河南科技大学",
-      "version": "1.0.0",
-      "path": "haust"
-    },
-    {
-      "key": "hfnu",
-      "name": "合肥师范学院",
-      "version": "1.0.0",
-      "path": "hfnu"
-    },
-    {
-      "key": "xatu",
-      "name": "西安工业大学",
-      "version": "1.1.0",
-      "path": "xatu"
-    },
-    {
-      "key": "tjau",
-      "name": "天津农学院",
-      "version": "1.0.0",
-      "path": "tjau"
-    },
-    {
-      "key": "hunnu",
-      "name": "湖南师范大学",
-      "version": "1.0.0",
-      "path": "hunnu"
+      "path": "cug"
     },
     {
       "key": "cuit",
@@ -299,646 +143,10 @@
       "path": "cuit-sjjx"
     },
     {
-      "key": "neu-grad",
-      "name": "东北大学（研究生）",
+      "key": "cup",
+      "name": "中国石油大学（北京）",
       "version": "1.0.0",
-      "path": "neu-grad"
-    },
-    {
-      "key": "upc-grad",
-      "name": "中国石油大学（华东）（研究生）",
-      "version": "1.0.0",
-      "path": "upc-grad"
-    },
-    {
-      "key": "ustc-grad",
-      "name": "中国科学技术大学（研究生）",
-      "version": "1.0.0",
-      "path": "ustc-grad"
-    },
-    {
-      "key": "haut",
-      "name": "河南工业大学",
-      "version": "1.0.1",
-      "path": "haut"
-    },
-    {
-      "key": "ksu",
-      "name": "喀什大学",
-      "version": "1.0.1",
-      "path": "ksu"
-    },
-    {
-      "key": "sdnu",
-      "name": "山东师范大学",
-      "version": "1.0.1",
-      "path": "sdnu"
-    },
-    {
-      "key": "gzu",
-      "name": "贵州大学",
-      "version": "1.0.1",
-      "path": "gzu"
-    },
-    {
-      "key": "yxhmc",
-      "name": "成都银杏酒店管理学院",
-      "version": "1.0.1",
-      "path": "yxhmc"
-    },
-    {
-      "key": "cauc",
-      "name": "中国民航大学",
-      "version": "1.0.1",
-      "path": "cauc"
-    },
-    {
-      "key": "njtech",
-      "name": "南京工业大学",
-      "version": "1.0.1",
-      "path": "njtech"
-    },
-    {
-      "key": "jhzyedu",
-      "name": "江西航空职业技术学院",
-      "version": "1.0.1",
-      "path": "jhzyedu"
-    },
-    {
-      "key": "cwxu",
-      "name": "无锡学院",
-      "version": "1.0.1",
-      "path": "cwxu"
-    },
-    {
-      "key": "lcudcc",
-      "name": "聊城大学东昌学院",
-      "version": "1.0.1",
-      "path": "lcudcc"
-    },
-    {
-      "key": "shiep",
-      "name": "上海电力大学",
-      "version": "1.0.0",
-      "path": "shiep"
-    },
-    {
-      "key": "nuaa",
-      "name": "南京航空航天大学",
-      "version": "1.0.0",
-      "path": "nuaa"
-    },
-    {
-      "key": "shnu",
-      "name": "上海师范大学",
-      "version": "1.0.0",
-      "path": "shnu"
-    },
-    {
-      "key": "nuist",
-      "name": "南京信息工程大学",
-      "version": "1.0.0",
-      "path": "nuist"
-    },
-    {
-      "key": "xjzfu",
-      "name": "新疆政法学院",
-      "version": "1.0.0",
-      "path": "xjzfu"
-    },
-    {
-      "key": "yssdufe",
-      "name": "山东财经大学燕山学院",
-      "version": "1.0.0",
-      "path": "yssdufe"
-    },
-    {
-      "key": "jxust",
-      "name": "江西理工大学",
-      "version": "1.0.0",
-      "path": "jxust"
-    },
-    {
-      "key": "qau",
-      "name": "青岛农业大学",
-      "version": "1.0.1",
-      "path": "qau"
-    },
-    {
-      "key": "shzq",
-      "name": "上海中侨职业技术大学",
-      "version": "1.0.1",
-      "path": "shzq"
-    },
-    {
-      "key": "fit",
-      "name": "福州理工学院",
-      "version": "1.0.1",
-      "path": "fit"
-    },
-    {
-      "key": "xjtu",
-      "name": "西安交通大学",
-      "version": "1.0.0",
-      "path": "xjtu"
-    },
-    {
-      "key": "dlut",
-      "name": "大连理工大学",
-      "version": "1.0.0",
-      "path": "dlut"
-    },
-    {
-      "key": "nefu",
-      "name": "东北林业大学",
-      "version": "1.0.0",
-      "path": "nefu"
-    },
-    {
-      "key": "lnu",
-      "name": "辽宁大学",
-      "version": "1.0.0",
-      "path": "lnu"
-    },
-    {
-      "key": "xhkjzyxy",
-      "name": "宣化科技职业学院",
-      "version": "1.0.2",
-      "path": "xhkjzyxy"
-    },
-    {
-      "key": "hueb",
-      "name": "河北经贸大学",
-      "version": "1.0.2",
-      "path": "hueb"
-    },
-    {
-      "key": "jsei",
-      "name": "江苏电子信息职业学院",
-      "version": "1.0.1",
-      "path": "jsei"
-    },
-    {
-      "key": "cqepc",
-      "name": "重庆航天职业技术学院",
-      "version": "1.0.2",
-      "path": "cqepc"
-    },
-    {
-      "key": "qqhrit",
-      "name": "齐齐哈尔工程学院",
-      "version": "1.0.2",
-      "path": "qqhrit"
-    },
-    {
-      "key": "zwu",
-      "name": "浙江万里学院",
-      "version": "1.0.1",
-      "path": "zwu"
-    },
-    {
-      "key": "xust",
-      "name": "西安科技大学",
-      "version": "1.0.2",
-      "path": "xust"
-    },
-    {
-      "key": "gzmtu",
-      "name": "广州航海学院",
-      "version": "1.0.2",
-      "path": "gzmtu"
-    },
-    {
-      "key": "gdust",
-      "name": "广东科技学院",
-      "version": "1.0.2",
-      "path": "gdust"
-    },
-    {
-      "key": "gdpu",
-      "name": "广东药科大学",
-      "version": "1.0.2",
-      "path": "gdpu"
-    },
-    {
-      "key": "czimt",
-      "name": "常州机电职业技术学院",
-      "version": "1.0.2",
-      "path": "czimt"
-    },
-    {
-      "key": "swu",
-      "name": "西南大学",
-      "version": "1.0.2",
-      "path": "swu"
-    },
-    {
-      "key": "shufezj",
-      "name": "上海财经大学浙江学院",
-      "version": "1.0.2",
-      "path": "shufezj"
-    },
-    {
-      "key": "gzist",
-      "name": "广州理工学院",
-      "version": "1.0.2",
-      "path": "gzist"
-    },
-    {
-      "key": "hualixy",
-      "name": "广州华立学院",
-      "version": "1.0.2",
-      "path": "hualixy"
-    },
-    {
-      "key": "swfu",
-      "name": "西南林业大学",
-      "version": "1.0.1",
-      "path": "swfu"
-    },
-    {
-      "key": "dzu",
-      "name": "德州学院",
-      "version": "1.0.1",
-      "path": "dzu"
-    },
-    {
-      "key": "njcit",
-      "name": "南京信息职业技术学院",
-      "version": "1.0.1",
-      "path": "njcit"
-    },
-    {
-      "key": "gdou",
-      "name": "广东海洋大学",
-      "version": "1.1.1",
-      "path": "gdou"
-    },
-    {
-      "key": "ujs",
-      "name": "江苏大学",
-      "version": "1.0.1",
-      "path": "ujs"
-    },
-    {
-      "key": "qdu",
-      "name": "青岛大学",
-      "version": "1.0.0",
-      "path": "qdu"
-    },
-    {
-      "key": "hnu",
-      "name": "湖南大学",
-      "version": "1.0.0",
-      "path": "hnu"
-    },
-    {
-      "key": "gzst",
-      "name": "广州松田职业学院",
-      "version": "1.0.0",
-      "path": "gzst"
-    },
-    {
-      "key": "gdcp",
-      "name": "广东交通职业技术学院",
-      "version": "1.0.0",
-      "path": "gdcp"
-    },
-    {
-      "key": "ouc",
-      "name": "中国海洋大学",
-      "version": "1.0.0",
-      "path": "ouc"
-    },
-    {
-      "key": "ctgu",
-      "name": "三峡大学",
-      "version": "1.0.0",
-      "path": "ctgu"
-    },
-    {
-      "key": "njnu",
-      "name": "南京师范大学",
-      "version": "1.0.0",
-      "path": "njnu"
-    },
-    {
-      "key": "sdwcvc",
-      "name": "山东水利职业学院",
-      "version": "1.0.0",
-      "path": "sdwcvc"
-    },
-    {
-      "key": "jyvtc",
-      "name": "济源职业技术学院",
-      "version": "1.0.0",
-      "path": "jyvtc"
-    },
-    {
-      "key": "xhsysu",
-      "name": "广州新华学院",
-      "version": "1.0.1",
-      "path": "xhsysu"
-    },
-    {
-      "key": "gscmxy",
-      "name": "甘肃财贸职业学院",
-      "version": "1.0.0",
-      "path": "gscmxy"
-    },
-    {
-      "key": "wzzy",
-      "name": "梧州职业学院",
-      "version": "1.0.0",
-      "path": "wzzy"
-    },
-    {
-      "key": "scut",
-      "name": "华南理工大学",
-      "version": "1.0.1",
-      "path": "scut"
-    },
-    {
-      "key": "shxy",
-      "name": "绥化学院",
-      "version": "1.0.0",
-      "path": "shxy"
-    },
-    {
-      "key": "hnsf",
-      "name": "河南师范大学",
-      "version": "1.0.1",
-      "path": "hnsf"
-    },
-    {
-      "key": "gxmu",
-      "name": "广西医科大学",
-      "version": "1.0.0",
-      "path": "gxmu"
-    },
-    {
-      "key": "sdipct",
-      "name": "山东石油化工学院",
-      "version": "1.0.0",
-      "path": "sdipct"
-    },
-    {
-      "key": "smxy",
-      "name": "三明学院",
-      "version": "1.0.1",
-      "path": "smxy"
-    },
-    {
-      "key": "aufe",
-      "name": "安徽财经大学",
-      "version": "1.0.0",
-      "path": "aufe"
-    },
-    {
-      "key": "syist",
-      "name": "沈阳科技学院",
-      "version": "1.0.0",
-      "path": "syist"
-    },
-    {
-      "key": "ahszu",
-      "name": "宿州学院",
-      "version": "1.0.0",
-      "path": "ahszu"
-    },
-    {
-      "key": "xmcu",
-      "name": "厦门城市职业学院",
-      "version": "1.0.0",
-      "path": "xmcu"
-    },
-    {
-      "key": "qfnu",
-      "name": "曲阜师范大学",
-      "version": "1.0.0",
-      "path": "qfnu"
-    },
-    {
-      "key": "hnptc",
-      "name": "湖南邮电职业技术学院",
-      "version": "1.0.0",
-      "path": "hnptc"
-    },
-    {
-      "key": "hunau",
-      "name": "湖南农业大学",
-      "version": "1.0.0",
-      "path": "hunau"
-    },
-    {
-      "key": "gdou-wfw",
-      "name": "广东海洋大学（校外通道）",
-      "version": "1.0.1",
-      "path": "gdou-wfw"
-    },
-    {
-      "key": "zust",
-      "name": "浙江科技大学",
-      "version": "1.0.1",
-      "path": "zust"
-    },
-    {
-      "key": "ynufe",
-      "name": "云南财经大学",
-      "version": "1.1.0",
-      "path": "ynufe"
-    },
-    {
-      "key": "nenu",
-      "name": "东北师范大学",
-      "version": "1.0.0",
-      "path": "nenu"
-    },
-    {
-      "key": "csu",
-      "name": "中南大学",
-      "version": "1.0.0",
-      "path": "csu"
-    },
-    {
-      "key": "gzhmu",
-      "name": "广州医科大学",
-      "version": "1.0.0",
-      "path": "gzhmu"
-    },
-    {
-      "key": "gztcme",
-      "name": "贵州机电职业技术学院",
-      "version": "1.0.1",
-      "path": "gztcme"
-    },
-    {
-      "key": "hebeu",
-      "name": "河北工程大学",
-      "version": "1.0.1",
-      "path": "hebeu"
-    },
-    {
-      "key": "cjlu",
-      "name": "中国计量大学",
-      "version": "1.0.1",
-      "path": "cjlu"
-    },
-    {
-      "key": "jxfu",
-      "name": "江西飞行学院",
-      "version": "1.0.0",
-      "path": "jxfu"
-    },
-    {
-      "key": "tcu",
-      "name": "天津城建大学",
-      "version": "1.0.0",
-      "path": "tcu"
-    },
-    {
-      "key": "smu",
-      "name": "南方医科大学",
-      "version": "1.0.0",
-      "path": "smu"
-    },
-    {
-      "key": "xsyu",
-      "name": "西安石油大学",
-      "version": "1.0.0",
-      "path": "xsyu"
-    },
-    {
-      "key": "lyu",
-      "name": "临沂大学",
-      "version": "1.0.0",
-      "path": "lyu"
-    },
-    {
-      "key": "imu",
-      "name": "内蒙古大学",
-      "version": "1.0.0",
-      "path": "imu"
-    },
-    {
-      "key": "qqhru",
-      "name": "齐齐哈尔大学",
-      "version": "1.0.0",
-      "path": "qqhru"
-    },
-    {
-      "key": "zsc",
-      "name": "电子科技大学中山学院",
-      "version": "1.0.0",
-      "path": "zsc"
-    },
-    {
-      "key": "gdcp-cas",
-      "name": "广东交通职业技术学院（门户）",
-      "version": "1.0.0",
-      "path": "gdcp-cas"
-    },
-    {
-      "key": "nynu",
-      "name": "南阳师范学院",
-      "version": "1.0.0",
-      "path": "nynu"
-    },
-    {
-      "key": "yangtzeu",
-      "name": "长江大学",
-      "version": "1.0.0",
-      "path": "yangtzeu"
-    },
-    {
-      "key": "tust",
-      "name": "天津科技大学",
-      "version": "1.0.0",
-      "path": "tust"
-    },
-    {
-      "key": "xaut",
-      "name": "西安理工大学",
-      "version": "1.0.0",
-      "path": "xaut"
-    },
-    {
-      "key": "hnust",
-      "name": "湖南科技大学",
-      "version": "1.0.0",
-      "path": "hnust"
-    },
-    {
-      "key": "qut",
-      "name": "青岛理工大学",
-      "version": "1.0.0",
-      "path": "qut"
-    },
-    {
-      "key": "gpnu",
-      "name": "广东技术师范大学",
-      "version": "1.0.0",
-      "path": "gpnu"
-    },
-    {
-      "key": "ustl",
-      "name": "辽宁科技大学",
-      "version": "1.0.0",
-      "path": "ustl"
-    },
-    {
-      "key": "qvtu",
-      "name": "泉州职业技术大学",
-      "version": "1.0.0",
-      "path": "qvtu"
-    },
-    {
-      "key": "gdkm",
-      "name": "广东科贸职业学院",
-      "version": "1.0.0",
-      "path": "gdkm"
-    },
-    {
-      "key": "bupt",
-      "name": "北京邮电大学",
-      "version": "1.0.0",
-      "path": "bupt"
-    },
-    {
-      "key": "zhku",
-      "name": "仲恺农业工程学院",
-      "version": "1.0.0",
-      "path": "zhku"
-    },
-    {
-      "key": "mku",
-      "name": "闽南科技学院",
-      "version": "1.0.0",
-      "path": "mku"
-    },
-    {
-      "key": "bnuzh",
-      "name": "北京师范大学珠海校区",
-      "version": "1.0.0",
-      "path": "bnuzh"
-    },
-    {
-      "key": "sxdzkj",
-      "name": "山西电子科技学院",
-      "version": "1.0.0",
-      "path": "sxdzkj"
-    },
-    {
-      "key": "hist",
-      "name": "河南科技学院",
-      "version": "1.0.0",
-      "path": "hist"
-    },
-    {
-      "key": "nbut",
-      "name": "宁波工程学院",
-      "version": "1.0.0",
-      "path": "nbut"
+      "path": "cup"
     },
     {
       "key": "cupk",
@@ -947,16 +155,208 @@
       "path": "cupk"
     },
     {
-      "key": "cup",
-      "name": "中国石油大学（北京）",
-      "version": "1.0.0",
-      "path": "cup"
+      "key": "cwxu",
+      "name": "无锡学院",
+      "version": "1.0.1",
+      "path": "cwxu"
     },
     {
-      "key": "usc",
-      "name": "南华大学",
+      "key": "czimt",
+      "name": "常州机电职业技术学院",
+      "version": "1.0.2",
+      "path": "czimt"
+    },
+    {
+      "key": "dlmu",
+      "name": "大连海事大学",
       "version": "1.0.0",
-      "path": "usc"
+      "path": "dlmu"
+    },
+    {
+      "key": "dlu",
+      "name": "大连大学",
+      "version": "1.0.1",
+      "path": "dlu"
+    },
+    {
+      "key": "dlut",
+      "name": "大连理工大学",
+      "version": "1.0.0",
+      "path": "dlut"
+    },
+    {
+      "key": "dlutci",
+      "name": "大连工程学院（原大连理工大学城市学院）",
+      "version": "1.0.1",
+      "path": "dlutci"
+    },
+    {
+      "key": "dzu",
+      "name": "德州学院",
+      "version": "1.0.1",
+      "path": "dzu"
+    },
+    {
+      "key": "fit",
+      "name": "福州理工学院",
+      "version": "1.0.1",
+      "path": "fit"
+    },
+    {
+      "key": "gdcp",
+      "name": "广东交通职业技术学院",
+      "version": "1.0.0",
+      "path": "gdcp"
+    },
+    {
+      "key": "gdcp-cas",
+      "name": "广东交通职业技术学院（门户）",
+      "version": "1.0.0",
+      "path": "gdcp-cas"
+    },
+    {
+      "key": "gdipu",
+      "name": "广东轻工职业技术大学",
+      "version": "1.0.0",
+      "path": "gdipu"
+    },
+    {
+      "key": "gdit",
+      "name": "广东科学技术职业学院",
+      "version": "1.0.0",
+      "path": "gdit"
+    },
+    {
+      "key": "gdkm",
+      "name": "广东科贸职业学院",
+      "version": "1.0.0",
+      "path": "gdkm"
+    },
+    {
+      "key": "gdou",
+      "name": "广东海洋大学",
+      "version": "1.1.1",
+      "path": "gdou"
+    },
+    {
+      "key": "gdou-wfw",
+      "name": "广东海洋大学（校外通道）",
+      "version": "1.0.1",
+      "path": "gdou-wfw"
+    },
+    {
+      "key": "gdpu",
+      "name": "广东药科大学",
+      "version": "1.0.2",
+      "path": "gdpu"
+    },
+    {
+      "key": "gdust",
+      "name": "广东科技学院",
+      "version": "1.0.2",
+      "path": "gdust"
+    },
+    {
+      "key": "gdut",
+      "name": "广东工业大学",
+      "version": "1.0.0",
+      "path": "gdut"
+    },
+    {
+      "key": "glmu",
+      "name": "桂林医科大学",
+      "version": "1.0.0",
+      "path": "glmu"
+    },
+    {
+      "key": "gpnu",
+      "name": "广东技术师范大学",
+      "version": "1.0.0",
+      "path": "gpnu"
+    },
+    {
+      "key": "gscmxy",
+      "name": "甘肃财贸职业学院",
+      "version": "1.0.0",
+      "path": "gscmxy"
+    },
+    {
+      "key": "gsmc",
+      "name": "甘肃医学院",
+      "version": "1.0.1",
+      "path": "gsmc"
+    },
+    {
+      "key": "gxcme",
+      "name": "广西机电职业技术学院",
+      "version": "1.0.1",
+      "path": "gxcme"
+    },
+    {
+      "key": "gxdlxy",
+      "name": "广西电力职业技术学院",
+      "version": "1.0.0",
+      "path": "gxdlxy"
+    },
+    {
+      "key": "gxmu",
+      "name": "广西医科大学",
+      "version": "1.0.0",
+      "path": "gxmu"
+    },
+    {
+      "key": "gzhmu",
+      "name": "广州医科大学",
+      "version": "1.0.0",
+      "path": "gzhmu"
+    },
+    {
+      "key": "gzist",
+      "name": "广州理工学院",
+      "version": "1.0.2",
+      "path": "gzist"
+    },
+    {
+      "key": "gzmtu",
+      "name": "广州航海学院",
+      "version": "1.0.2",
+      "path": "gzmtu"
+    },
+    {
+      "key": "gzst",
+      "name": "广州松田职业学院",
+      "version": "1.0.0",
+      "path": "gzst"
+    },
+    {
+      "key": "gztcme",
+      "name": "贵州机电职业技术学院",
+      "version": "1.0.1",
+      "path": "gztcme"
+    },
+    {
+      "key": "gzu",
+      "name": "贵州大学",
+      "version": "1.0.1",
+      "path": "gzu"
+    },
+    {
+      "key": "haue",
+      "name": "河南工程学院",
+      "version": "1.0.0",
+      "path": "haue"
+    },
+    {
+      "key": "haust",
+      "name": "河南科技大学",
+      "version": "1.0.0",
+      "path": "haust"
+    },
+    {
+      "key": "haut",
+      "name": "河南工业大学",
+      "version": "1.0.1",
+      "path": "haut"
     },
     {
       "key": "hbdfxy",
@@ -971,160 +371,16 @@
       "path": "hbguhx"
     },
     {
-      "key": "gdipu",
-      "name": "广东轻工职业技术大学",
+      "key": "hblgxy",
+      "name": "淮北理工学院",
       "version": "1.0.0",
-      "path": "gdipu"
+      "path": "hblgxy"
     },
     {
-      "key": "sctbc",
-      "name": "四川工商职业技术学院",
+      "key": "hbmu",
+      "name": "湖北医药学院",
       "version": "1.0.0",
-      "path": "sctbc"
-    },
-    {
-      "key": "mmpt",
-      "name": "茂名职业技术学院",
-      "version": "1.0.0",
-      "path": "mmpt"
-    },
-    {
-      "key": "gdut",
-      "name": "广东工业大学",
-      "version": "1.0.0",
-      "path": "gdut"
-    },
-    {
-      "key": "cdutcm",
-      "name": "成都中医药大学",
-      "version": "1.0.0",
-      "path": "cdutcm"
-    },
-    {
-      "key": "jnu",
-      "name": "暨南大学",
-      "version": "1.0.0",
-      "path": "jnu"
-    },
-    {
-      "key": "csuft",
-      "name": "中南林业科技大学",
-      "version": "1.0.1",
-      "path": "csuft"
-    },
-    {
-      "key": "jsnu",
-      "name": "江苏师范大学",
-      "version": "1.0.0",
-      "path": "jsnu"
-    },
-    {
-      "key": "huse",
-      "name": "湖南科技学院",
-      "version": "1.0.0",
-      "path": "huse"
-    },
-    {
-      "key": "njfu",
-      "name": "南京林业大学",
-      "version": "1.0.0",
-      "path": "njfu"
-    },
-    {
-      "key": "lidapoly",
-      "name": "上海立达学院",
-      "version": "1.0.0",
-      "path": "lidapoly"
-    },
-    {
-      "key": "sdufe",
-      "name": "山东财经大学",
-      "version": "1.0.0",
-      "path": "sdufe"
-    },
-    {
-      "key": "wust",
-      "name": "武汉科技大学",
-      "version": "1.0.0",
-      "path": "wust"
-    },
-    {
-      "key": "hzu",
-      "name": "菏泽学院",
-      "version": "1.0.0",
-      "path": "hzu"
-    },
-    {
-      "key": "uzz",
-      "name": "枣庄学院",
-      "version": "1.0.0",
-      "path": "uzz"
-    },
-    {
-      "key": "dlu",
-      "name": "大连大学",
-      "version": "1.0.1",
-      "path": "dlu"
-    },
-    {
-      "key": "huayu",
-      "name": "山东华宇工学院",
-      "version": "1.0.0",
-      "path": "huayu"
-    },
-    {
-      "key": "cug",
-      "name": "中国地质大学（武汉）",
-      "version": "1.0.0",
-      "path": "cug"
-    },
-    {
-      "key": "cqtbi",
-      "name": "重庆工商职业学院",
-      "version": "1.0.0",
-      "path": "cqtbi"
-    },
-    {
-      "key": "haue",
-      "name": "河南工程学院",
-      "version": "1.0.0",
-      "path": "haue"
-    },
-    {
-      "key": "xcu",
-      "name": "许昌学院",
-      "version": "1.0.0",
-      "path": "xcu"
-    },
-    {
-      "key": "ntu",
-      "name": "南通大学",
-      "version": "1.0.0",
-      "path": "ntu"
-    },
-    {
-      "key": "jngcxy",
-      "name": "济南工程职业技术学院",
-      "version": "1.0.0",
-      "path": "jngcxy"
-    },
-    {
-      "key": "scemi",
-      "name": "四川机电职业技术学院",
-      "version": "1.0.0",
-      "path": "scemi"
-    },
-    {
-      "key": "huuc",
-      "name": "河南城建学院",
-      "version": "1.0.0",
-      "path": "huuc"
-    },
-    {
-      "key": "ccsut",
-      "name": "长沙工业学院",
-      "version": "1.0.0",
-      "path": "ccsut"
+      "path": "hbmu"
     },
     {
       "key": "hbuas",
@@ -1133,58 +389,22 @@
       "path": "hbuas"
     },
     {
-      "key": "gdit",
-      "name": "广东科学技术职业学院",
-      "version": "1.0.0",
-      "path": "gdit"
-    },
-    {
-      "key": "hnzy",
-      "name": "河南职业技术学院",
-      "version": "1.0.0",
-      "path": "hnzy"
-    },
-    {
-      "key": "btbu",
-      "name": "北京工商大学",
-      "version": "1.0.0",
-      "path": "btbu"
-    },
-    {
-      "key": "zqu",
-      "name": "肇庆学院",
-      "version": "1.0.0",
-      "path": "zqu"
-    },
-    {
-      "key": "hlju",
-      "name": "黑龙江大学",
-      "version": "1.0.0",
-      "path": "hlju"
-    },
-    {
-      "key": "bbgu",
-      "name": "北部湾大学",
-      "version": "1.0.0",
-      "path": "bbgu"
-    },
-    {
-      "key": "sysu",
-      "name": "中山大学",
-      "version": "1.0.0",
-      "path": "sysu"
-    },
-    {
-      "key": "sjzu",
-      "name": "沈阳建筑大学",
-      "version": "1.0.0",
-      "path": "sjzu"
-    },
-    {
-      "key": "gxcme",
-      "name": "广西机电职业技术学院",
+      "key": "hebeu",
+      "name": "河北工程大学",
       "version": "1.0.1",
-      "path": "gxcme"
+      "path": "hebeu"
+    },
+    {
+      "key": "hfnu",
+      "name": "合肥师范学院",
+      "version": "1.0.0",
+      "path": "hfnu"
+    },
+    {
+      "key": "hhtc",
+      "name": "怀化学院",
+      "version": "1.0.0",
+      "path": "hhtc"
     },
     {
       "key": "hhvtc",
@@ -1193,10 +413,430 @@
       "path": "hhvtc"
     },
     {
+      "key": "hist",
+      "name": "河南科技学院",
+      "version": "1.0.0",
+      "path": "hist"
+    },
+    {
+      "key": "hlju",
+      "name": "黑龙江大学",
+      "version": "1.0.0",
+      "path": "hlju"
+    },
+    {
+      "key": "hnie",
+      "name": "湖南工程学院",
+      "version": "1.0.0",
+      "path": "hnie"
+    },
+    {
+      "key": "hniu",
+      "name": "湖南信息职业技术学院",
+      "version": "1.0.0",
+      "path": "hniu"
+    },
+    {
+      "key": "hnptc",
+      "name": "湖南邮电职业技术学院",
+      "version": "1.0.0",
+      "path": "hnptc"
+    },
+    {
+      "key": "hnsf",
+      "name": "河南师范大学",
+      "version": "1.0.1",
+      "path": "hnsf"
+    },
+    {
+      "key": "hnu",
+      "name": "湖南大学",
+      "version": "1.0.0",
+      "path": "hnu"
+    },
+    {
+      "key": "hnust",
+      "name": "湖南科技大学",
+      "version": "1.0.0",
+      "path": "hnust"
+    },
+    {
+      "key": "hnvcc",
+      "name": "湖南商务职业技术学院",
+      "version": "1.0.0",
+      "path": "hnvcc"
+    },
+    {
+      "key": "hnzy",
+      "name": "河南职业技术学院",
+      "version": "1.0.0",
+      "path": "hnzy"
+    },
+    {
+      "key": "hpu",
+      "name": "河南理工大学",
+      "version": "1.0.0",
+      "path": "hpu"
+    },
+    {
+      "key": "hualixy",
+      "name": "广州华立学院",
+      "version": "1.0.2",
+      "path": "hualixy"
+    },
+    {
+      "key": "huayu",
+      "name": "山东华宇工学院",
+      "version": "1.0.0",
+      "path": "huayu"
+    },
+    {
+      "key": "hueb",
+      "name": "河北经贸大学",
+      "version": "1.0.2",
+      "path": "hueb"
+    },
+    {
+      "key": "huel",
+      "name": "河南财经政法大学",
+      "version": "1.0.1",
+      "path": "huel"
+    },
+    {
+      "key": "hunau",
+      "name": "湖南农业大学",
+      "version": "1.0.0",
+      "path": "hunau"
+    },
+    {
+      "key": "hunnu",
+      "name": "湖南师范大学",
+      "version": "1.0.0",
+      "path": "hunnu"
+    },
+    {
+      "key": "huse",
+      "name": "湖南科技学院",
+      "version": "1.0.0",
+      "path": "huse"
+    },
+    {
+      "key": "huuc",
+      "name": "河南城建学院",
+      "version": "1.0.0",
+      "path": "huuc"
+    },
+    {
+      "key": "hynu",
+      "name": "衡阳师范学院",
+      "version": "1.0.0",
+      "path": "hynu"
+    },
+    {
+      "key": "hzu",
+      "name": "菏泽学院",
+      "version": "1.0.0",
+      "path": "hzu"
+    },
+    {
+      "key": "imu",
+      "name": "内蒙古大学",
+      "version": "1.0.0",
+      "path": "imu"
+    },
+    {
+      "key": "jhzyedu",
+      "name": "江西航空职业技术学院",
+      "version": "1.0.1",
+      "path": "jhzyedu"
+    },
+    {
+      "key": "jlu",
+      "name": "吉林大学",
+      "version": "1.0.0",
+      "path": "jlu"
+    },
+    {
+      "key": "jngcxy",
+      "name": "济南工程职业技术学院",
+      "version": "1.0.0",
+      "path": "jngcxy"
+    },
+    {
+      "key": "jnu",
+      "name": "暨南大学",
+      "version": "1.0.0",
+      "path": "jnu"
+    },
+    {
+      "key": "jsei",
+      "name": "江苏电子信息职业学院",
+      "version": "1.0.1",
+      "path": "jsei"
+    },
+    {
+      "key": "jsnu",
+      "name": "江苏师范大学",
+      "version": "1.0.0",
+      "path": "jsnu"
+    },
+    {
+      "key": "jstc",
+      "name": "江苏旅游职业学院",
+      "version": "1.0.0",
+      "path": "jstc"
+    },
+    {
+      "key": "jxfu",
+      "name": "江西飞行学院",
+      "version": "1.0.0",
+      "path": "jxfu"
+    },
+    {
+      "key": "jxust",
+      "name": "江西理工大学",
+      "version": "1.0.0",
+      "path": "jxust"
+    },
+    {
+      "key": "jyvtc",
+      "name": "济源职业技术学院",
+      "version": "1.0.0",
+      "path": "jyvtc"
+    },
+    {
+      "key": "ksu",
+      "name": "喀什大学",
+      "version": "1.0.1",
+      "path": "ksu"
+    },
+    {
+      "key": "lcudcc",
+      "name": "聊城大学东昌学院",
+      "version": "1.0.1",
+      "path": "lcudcc"
+    },
+    {
+      "key": "lidapoly",
+      "name": "上海立达学院",
+      "version": "1.0.0",
+      "path": "lidapoly"
+    },
+    {
+      "key": "lnu",
+      "name": "辽宁大学",
+      "version": "1.0.0",
+      "path": "lnu"
+    },
+    {
+      "key": "lyu",
+      "name": "临沂大学",
+      "version": "1.0.0",
+      "path": "lyu"
+    },
+    {
+      "key": "masu",
+      "name": "马鞍山学院",
+      "version": "1.0.0",
+      "path": "masu"
+    },
+    {
+      "key": "mku",
+      "name": "闽南科技学院",
+      "version": "1.0.0",
+      "path": "mku"
+    },
+    {
+      "key": "mmpt",
+      "name": "茂名职业技术学院",
+      "version": "1.0.0",
+      "path": "mmpt"
+    },
+    {
+      "key": "nankai",
+      "name": "南开大学（研究生）",
+      "version": "1.0.0",
+      "path": "nankai"
+    },
+    {
+      "key": "nbut",
+      "name": "宁波工程学院",
+      "version": "1.0.0",
+      "path": "nbut"
+    },
+    {
+      "key": "neau",
+      "name": "东北农业大学",
+      "version": "1.0.0",
+      "path": "neau"
+    },
+    {
+      "key": "nefu",
+      "name": "东北林业大学",
+      "version": "1.0.0",
+      "path": "nefu"
+    },
+    {
+      "key": "nenu",
+      "name": "东北师范大学",
+      "version": "1.0.0",
+      "path": "nenu"
+    },
+    {
+      "key": "neu",
+      "name": "东北大学",
+      "version": "1.0.0",
+      "path": "neu"
+    },
+    {
+      "key": "neu-grad",
+      "name": "东北大学（研究生）",
+      "version": "1.0.0",
+      "path": "neu-grad"
+    },
+    {
+      "key": "neuq",
+      "name": "东北大学秦皇岛分校",
+      "version": "1.0.0",
+      "path": "neuq"
+    },
+    {
+      "key": "niit",
+      "name": "南京工业职业技术大学",
+      "version": "1.0.0",
+      "path": "niit"
+    },
+    {
+      "key": "njcit",
+      "name": "南京信息职业技术学院",
+      "version": "1.0.1",
+      "path": "njcit"
+    },
+    {
+      "key": "njfu",
+      "name": "南京林业大学",
+      "version": "1.0.0",
+      "path": "njfu"
+    },
+    {
+      "key": "njnu",
+      "name": "南京师范大学",
+      "version": "1.0.0",
+      "path": "njnu"
+    },
+    {
+      "key": "njtech",
+      "name": "南京工业大学",
+      "version": "1.0.1",
+      "path": "njtech"
+    },
+    {
+      "key": "ntu",
+      "name": "南通大学",
+      "version": "1.0.0",
+      "path": "ntu"
+    },
+    {
+      "key": "nuaa",
+      "name": "南京航空航天大学",
+      "version": "1.0.0",
+      "path": "nuaa"
+    },
+    {
+      "key": "nuist",
+      "name": "南京信息工程大学",
+      "version": "1.0.0",
+      "path": "nuist"
+    },
+    {
+      "key": "nynu",
+      "name": "南阳师范学院",
+      "version": "1.0.0",
+      "path": "nynu"
+    },
+    {
+      "key": "ouc",
+      "name": "中国海洋大学",
+      "version": "1.0.0",
+      "path": "ouc"
+    },
+    {
+      "key": "qau",
+      "name": "青岛农业大学",
+      "version": "1.0.1",
+      "path": "qau"
+    },
+    {
+      "key": "qdhhc",
+      "name": "青岛黄海学院",
+      "version": "1.0.1",
+      "path": "qdhhc"
+    },
+    {
+      "key": "qdu",
+      "name": "青岛大学",
+      "version": "1.0.0",
+      "path": "qdu"
+    },
+    {
+      "key": "qfnu",
+      "name": "曲阜师范大学",
+      "version": "1.0.0",
+      "path": "qfnu"
+    },
+    {
+      "key": "qqhrit",
+      "name": "齐齐哈尔工程学院",
+      "version": "1.0.2",
+      "path": "qqhrit"
+    },
+    {
+      "key": "qqhru",
+      "name": "齐齐哈尔大学",
+      "version": "1.0.0",
+      "path": "qqhru"
+    },
+    {
+      "key": "qut",
+      "name": "青岛理工大学",
+      "version": "1.0.0",
+      "path": "qut"
+    },
+    {
+      "key": "qvtu",
+      "name": "泉州职业技术大学",
+      "version": "1.0.0",
+      "path": "qvtu"
+    },
+    {
       "key": "sany",
       "name": "湖南三一工业职业技术学院",
       "version": "1.0.0",
       "path": "sany"
+    },
+    {
+      "key": "scemi",
+      "name": "四川机电职业技术学院",
+      "version": "1.0.0",
+      "path": "scemi"
+    },
+    {
+      "key": "scnu",
+      "name": "华南师范大学",
+      "version": "1.0.0",
+      "path": "scnu"
+    },
+    {
+      "key": "sctbc",
+      "name": "四川工商职业技术学院",
+      "version": "1.0.0",
+      "path": "sctbc"
+    },
+    {
+      "key": "scut",
+      "name": "华南理工大学",
+      "version": "1.0.1",
+      "path": "scut"
     },
     {
       "key": "sddfvc",
@@ -1205,10 +845,400 @@
       "path": "sddfvc"
     },
     {
+      "key": "sdipct",
+      "name": "山东石油化工学院",
+      "version": "1.0.0",
+      "path": "sdipct"
+    },
+    {
+      "key": "sdnu",
+      "name": "山东师范大学",
+      "version": "1.0.1",
+      "path": "sdnu"
+    },
+    {
+      "key": "sdufe",
+      "name": "山东财经大学",
+      "version": "1.0.0",
+      "path": "sdufe"
+    },
+    {
+      "key": "sdwcvc",
+      "name": "山东水利职业学院",
+      "version": "1.0.0",
+      "path": "sdwcvc"
+    },
+    {
+      "key": "shiep",
+      "name": "上海电力大学",
+      "version": "1.0.0",
+      "path": "shiep"
+    },
+    {
+      "key": "shnu",
+      "name": "上海师范大学",
+      "version": "1.0.0",
+      "path": "shnu"
+    },
+    {
+      "key": "shufezj",
+      "name": "上海财经大学浙江学院",
+      "version": "1.0.2",
+      "path": "shufezj"
+    },
+    {
+      "key": "shxy",
+      "name": "绥化学院",
+      "version": "1.0.0",
+      "path": "shxy"
+    },
+    {
+      "key": "shzq",
+      "name": "上海中侨职业技术大学",
+      "version": "1.0.1",
+      "path": "shzq"
+    },
+    {
+      "key": "sjzu",
+      "name": "沈阳建筑大学",
+      "version": "1.0.0",
+      "path": "sjzu"
+    },
+    {
+      "key": "smu",
+      "name": "南方医科大学",
+      "version": "1.0.0",
+      "path": "smu"
+    },
+    {
+      "key": "smxy",
+      "name": "三明学院",
+      "version": "1.0.1",
+      "path": "smxy"
+    },
+    {
+      "key": "stcnchu",
+      "name": "南昌航空大学科技学院",
+      "version": "1.0.0",
+      "path": "stcnchu"
+    },
+    {
+      "key": "swfu",
+      "name": "西南林业大学",
+      "version": "1.0.1",
+      "path": "swfu"
+    },
+    {
+      "key": "swu",
+      "name": "西南大学",
+      "version": "1.0.2",
+      "path": "swu"
+    },
+    {
+      "key": "sxdzkj",
+      "name": "山西电子科技学院",
+      "version": "1.0.0",
+      "path": "sxdzkj"
+    },
+    {
+      "key": "sxgcxy",
+      "name": "山西工程职业学院",
+      "version": "1.0.0",
+      "path": "sxgcxy"
+    },
+    {
+      "key": "syist",
+      "name": "沈阳科技学院",
+      "version": "1.0.0",
+      "path": "syist"
+    },
+    {
+      "key": "sysu",
+      "name": "中山大学",
+      "version": "1.0.0",
+      "path": "sysu"
+    },
+    {
+      "key": "taru",
+      "name": "塔里木大学",
+      "version": "1.0.1",
+      "path": "taru"
+    },
+    {
+      "key": "tcu",
+      "name": "天津城建大学",
+      "version": "1.0.0",
+      "path": "tcu"
+    },
+    {
+      "key": "tjau",
+      "name": "天津农学院",
+      "version": "1.0.0",
+      "path": "tjau"
+    },
+    {
+      "key": "tongji",
+      "name": "同济大学",
+      "version": "1.0.0",
+      "path": "tongji"
+    },
+    {
+      "key": "tust",
+      "name": "天津科技大学",
+      "version": "1.0.0",
+      "path": "tust"
+    },
+    {
+      "key": "uestc",
+      "name": "电子科技大学",
+      "version": "1.0.0",
+      "path": "uestc"
+    },
+    {
+      "key": "ujs",
+      "name": "江苏大学",
+      "version": "1.0.1",
+      "path": "ujs"
+    },
+    {
+      "key": "universal",
+      "name": "通用适配器",
+      "version": "1.0.0",
+      "path": "universal"
+    },
+    {
+      "key": "upc",
+      "name": "中国石油大学（华东）",
+      "version": "1.0.0",
+      "path": "upc"
+    },
+    {
+      "key": "upc-grad",
+      "name": "中国石油大学（华东）（研究生）",
+      "version": "1.0.0",
+      "path": "upc-grad"
+    },
+    {
+      "key": "usc",
+      "name": "南华大学",
+      "version": "1.0.0",
+      "path": "usc"
+    },
+    {
+      "key": "ustc",
+      "name": "中国科学技术大学",
+      "version": "1.0.0",
+      "path": "ustc"
+    },
+    {
+      "key": "ustc-grad",
+      "name": "中国科学技术大学（研究生）",
+      "version": "1.0.0",
+      "path": "ustc-grad"
+    },
+    {
+      "key": "ustl",
+      "name": "辽宁科技大学",
+      "version": "1.0.0",
+      "path": "ustl"
+    },
+    {
+      "key": "uzz",
+      "name": "枣庄学院",
+      "version": "1.0.0",
+      "path": "uzz"
+    },
+    {
+      "key": "wenhua",
+      "name": "文华学院",
+      "version": "1.0.1",
+      "path": "wenhua"
+    },
+    {
+      "key": "whut",
+      "name": "武汉理工大学",
+      "version": "1.0.0",
+      "path": "whut"
+    },
+    {
+      "key": "wust",
+      "name": "武汉科技大学",
+      "version": "1.0.0",
+      "path": "wust"
+    },
+    {
+      "key": "wzzy",
+      "name": "梧州职业学院",
+      "version": "1.0.0",
+      "path": "wzzy"
+    },
+    {
+      "key": "xatu",
+      "name": "西安工业大学",
+      "version": "1.1.0",
+      "path": "xatu"
+    },
+    {
+      "key": "xaut",
+      "name": "西安理工大学",
+      "version": "1.0.0",
+      "path": "xaut"
+    },
+    {
+      "key": "xawl",
+      "name": "西安文理学院",
+      "version": "1.0.1",
+      "path": "xawl"
+    },
+    {
+      "key": "xcu",
+      "name": "许昌学院",
+      "version": "1.0.0",
+      "path": "xcu"
+    },
+    {
+      "key": "xhkjzyxy",
+      "name": "宣化科技职业学院",
+      "version": "1.0.2",
+      "path": "xhkjzyxy"
+    },
+    {
+      "key": "xhsysu",
+      "name": "广州新华学院",
+      "version": "1.0.1",
+      "path": "xhsysu"
+    },
+    {
+      "key": "xjie",
+      "name": "新疆工程学院",
+      "version": "1.0.0",
+      "path": "xjie"
+    },
+    {
+      "key": "xjtu",
+      "name": "西安交通大学",
+      "version": "1.0.0",
+      "path": "xjtu"
+    },
+    {
+      "key": "xjzfu",
+      "name": "新疆政法学院",
+      "version": "1.0.0",
+      "path": "xjzfu"
+    },
+    {
+      "key": "xmcu",
+      "name": "厦门城市职业学院",
+      "version": "1.0.0",
+      "path": "xmcu"
+    },
+    {
+      "key": "xsyu",
+      "name": "西安石油大学",
+      "version": "1.0.0",
+      "path": "xsyu"
+    },
+    {
+      "key": "xust",
+      "name": "西安科技大学",
+      "version": "1.0.2",
+      "path": "xust"
+    },
+    {
+      "key": "xzhmu",
+      "name": "徐州医科大学（研究生）",
+      "version": "1.0.0",
+      "path": "xzhmu"
+    },
+    {
+      "key": "yangtzeu",
+      "name": "长江大学",
+      "version": "1.0.0",
+      "path": "yangtzeu"
+    },
+    {
+      "key": "ynufe",
+      "name": "云南财经大学",
+      "version": "1.1.0",
+      "path": "ynufe"
+    },
+    {
+      "key": "yssdufe",
+      "name": "山东财经大学燕山学院",
+      "version": "1.0.0",
+      "path": "yssdufe"
+    },
+    {
+      "key": "yxhmc",
+      "name": "成都银杏酒店管理学院",
+      "version": "1.0.1",
+      "path": "yxhmc"
+    },
+    {
+      "key": "zcmu",
+      "name": "浙江中医药大学",
+      "version": "1.0.1",
+      "path": "zcmu"
+    },
+    {
+      "key": "zhku",
+      "name": "仲恺农业工程学院",
+      "version": "1.0.0",
+      "path": "zhku"
+    },
+    {
       "key": "zjbti",
       "name": "浙江工商职业技术学院",
       "version": "1.0.0",
       "path": "zjbti"
+    },
+    {
+      "key": "zjut",
+      "name": "浙江工业大学",
+      "version": "1.0.1",
+      "path": "zjut"
+    },
+    {
+      "key": "zqu",
+      "name": "肇庆学院",
+      "version": "1.0.0",
+      "path": "zqu"
+    },
+    {
+      "key": "zsc",
+      "name": "电子科技大学中山学院",
+      "version": "1.0.0",
+      "path": "zsc"
+    },
+    {
+      "key": "zua",
+      "name": "郑州航空工业管理学院",
+      "version": "1.0.0",
+      "path": "zua"
+    },
+    {
+      "key": "zust",
+      "name": "浙江科技大学",
+      "version": "1.0.1",
+      "path": "zust"
+    },
+    {
+      "key": "zwu",
+      "name": "浙江万里学院",
+      "version": "1.0.1",
+      "path": "zwu"
+    },
+    {
+      "key": "zzu",
+      "name": "郑州大学",
+      "version": "1.0.0",
+      "path": "zzu"
+    },
+    {
+      "key": "zzvcae",
+      "name": "郑州汽车工程职业学院",
+      "version": "1.0.0",
+      "path": "zzvcae"
     }
   ]
 }

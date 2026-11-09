@@ -1,0 +1,21 @@
+{
+  "term": { "code": "2026-2027-1", "name": "2026-2027学年第一学期" },
+  "today": "2026-09-20",
+  "rowTotal": 1,
+  "calendarRows": [
+    { "XN": "2026-2027", "XQ": "1", "XQKSRQ": "2026-09-07", "ZZC": "40" }
+  ],
+  "sectionRows": [
+    { "DM": "1", "KSSJ": "08:00", "JSSJ": "08:45", "SFSY": 1 },
+    { "DM": "2", "KSSJ": "08:55", "JSSJ": "09:40", "SFSY": 1 },
+    { "DM": "3", "KSSJ": "10:00", "JSSJ": "10:45", "SFSY": 1 },
+    { "DM": "4", "KSSJ": "10:55", "JSSJ": "11:40", "SFSY": 1 },
+    { "DM": "5", "KSSJ": "14:00", "JSSJ": "14:45", "SFSY": 1 },
+    { "DM": "6", "KSSJ": "14:55", "JSSJ": "15:40", "SFSY": 1 }
+  ],
+  "rows": [
+    { "KBID": "K1", "KCM": "课程甲", "SKJS": "教师甲", "JASMC": "教一101", "SKXQ": 1, "KSJC": 7, "JSJC": 8, "SKZC": "11111111111111111111" }
+  ],
+  "changeRows": [],
+  "undeterminedRows": []
+}

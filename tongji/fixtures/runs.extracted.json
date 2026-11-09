@@ -1,0 +1,44 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 交出去的字段编造，课程、教师、教室均为虚构，无真实个人信息。只保证同样的输入永远得到同样的输出。",
+  "_case": "周次数字数组切段：连续段、隔周单周、隔周双周、单周、以及「步长变化」（1,2,4,6 → 1-2 每周 + 4-6 双周）各钉一条；教务给出 6 节时间与第二学期开学日",
+  "term": { "name": "2026-2027学年第二学期", "fromList": false },
+  "today": "2026-11-09",
+  "detail": {
+    "beginDay": "2027-02-22T00:00:00+08:00",
+    "times": [
+      { "beginTime": "08:00:00", "endTime": "08:45:00" },
+      { "beginTime": "08:55:00", "endTime": "09:40:00" },
+      { "beginTime": "10:00:00", "endTime": "10:45:00" },
+      { "beginTime": "10:55:00", "endTime": "11:40:00" },
+      { "beginTime": "13:30:00", "endTime": "14:15:00" },
+      { "beginTime": "14:25:00", "endTime": "15:10:00" }
+    ],
+    "totalWeeks": 16
+  },
+  "courses": [
+    {
+      "courseName": "数据结构",
+      "timeTableList": [
+        { "teacherName": "陈老师(2001)", "roomIdI18n": "一号楼 301", "dayOfWeek": 1, "timeStart": 1, "timeEnd": 2, "weeks": [1, 2, 3, 5, 6, 7, 9, 10, 11, 13, 14, 15] }
+      ]
+    },
+    {
+      "courseName": "概率论",
+      "timeTableList": [
+        { "teacherName": "周老师", "roomIdI18n": "二号楼 202", "dayOfWeek": 2, "timeStart": 3, "timeEnd": 4, "weeks": [1, 3, 5, 7, 9] }
+      ]
+    },
+    {
+      "courseName": "线性代数",
+      "timeTableList": [
+        { "teacherName": "吴老师", "roomIdI18n": "一号楼 105", "dayOfWeek": 4, "timeStart": 1, "timeEnd": 2, "weeks": [1, 2, 4, 6] }
+      ]
+    },
+    {
+      "courseName": "大学物理实验",
+      "timeTableList": [
+        { "teacherName": "郑老师", "roomIdI18n": "实验楼 B203", "dayOfWeek": 5, "timeStart": 3, "timeEnd": 4, "weeks": [12] }
+      ]
+    }
+  ]
+}

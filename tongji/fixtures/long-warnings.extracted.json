@@ -1,0 +1,72 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 extract.js 交出去的字段编造，课程、教师、教室均为虚构，无真实个人信息。只保证同样的输入永远得到同样的输出。",
+  "_case": "长课名 + 缺教师 / 缺教室 + 三条读不出来的长周次 + 三条脏行：提醒按类型汇总、点名的课名与周次原文截到 20 字、每条不超 200 字（专钉提醒限长，去掉截短后整条会超过 200 字并被硬截断）",
+  "term": { "name": "2026-2027学年第一学期", "fromList": false },
+  "today": "2026-11-09",
+  "detail": {
+    "beginDay": "2026-09-07T00:00:00+08:00",
+    "times": [
+      { "beginTime": "08:00:00", "endTime": "08:45:00" },
+      { "beginTime": "08:55:00", "endTime": "09:40:00" },
+      { "beginTime": "10:00:00", "endTime": "10:45:00" },
+      { "beginTime": "10:55:00", "endTime": "11:40:00" }
+    ],
+    "totalWeeks": 18
+  },
+  "courses": [
+    {
+      "courseName": "中华人民共和国史与中国特色社会主义理论体系概论",
+      "timeTableList": [
+        { "teacherName": "", "roomIdI18n": "", "dayOfWeek": 1, "timeStart": 1, "timeEnd": 2, "weeks": [1, 2, 3, 4] }
+      ]
+    },
+    {
+      "courseName": "跨学科创新实践与综合能力训练（创新创业方向）",
+      "timeTableList": [
+        { "teacherName": "待定", "roomIdI18n": "暂无", "dayOfWeek": 2, "timeStart": 1, "timeEnd": 2, "weeks": [1, 2, 3, 4] }
+      ]
+    },
+    {
+      "courseName": "毕业设计（土木工程结构方向与工程管理实践）",
+      "timeTableList": [
+        { "dayOfWeek": 3, "timeStart": 1, "timeEnd": 2, "weeks": [1, 2, 3, 4] }
+      ]
+    },
+    {
+      "courseName": "",
+      "timeTableList": [
+        { "teacherName": "壬老师", "roomIdI18n": "教学楼E101", "dayOfWeek": 1, "timeStart": 3, "timeEnd": 4, "weeks": [1] }
+      ]
+    },
+    {
+      "courseName": "缺星期的课",
+      "timeTableList": [
+        { "teacherName": "癸老师", "roomIdI18n": "教学楼E102", "dayOfWeek": 9, "timeStart": 1, "timeEnd": 2, "weeks": [1] }
+      ]
+    },
+    {
+      "courseName": "缺节次的课",
+      "timeTableList": [
+        { "teacherName": "子老师", "roomIdI18n": "教学楼E103", "dayOfWeek": 2, "timeStart": 4, "timeEnd": 2, "weeks": [1] }
+      ]
+    },
+    {
+      "courseName": "长周次写法一",
+      "timeTableList": [
+        { "teacherName": "丑老师", "roomIdI18n": "教学楼D101", "dayOfWeek": 4, "timeStart": 1, "timeEnd": 2, "weeks": ["第1-2周（除法定节假日与校运动会外另行通知，具体以教务系统每周公告为准）"] }
+      ]
+    },
+    {
+      "courseName": "长周次写法二",
+      "timeTableList": [
+        { "teacherName": "寅老师", "roomIdI18n": "教学楼D102", "dayOfWeek": 4, "timeStart": 3, "timeEnd": 4, "weeks": ["第3-4周（实验课分组安排请查看教务系统通知，分组名单另行发布）"] }
+      ]
+    },
+    {
+      "courseName": "长周次写法三",
+      "timeTableList": [
+        { "teacherName": "卯老师", "roomIdI18n": "教学楼D103", "dayOfWeek": 5, "timeStart": 1, "timeEnd": 2, "weeks": ["第5-6周（线上教学与答疑另行通知，请留意课程群消息与教务公告）"] }
+      ]
+    }
+  ]
+}

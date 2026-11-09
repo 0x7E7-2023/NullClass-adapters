@@ -1,0 +1,34 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "没能取到教务系统里的调课、停课记录，课表可能没有反映最近的调整，请在教务系统里核对",
+    "另有 4 门课程上课时间暂未确定，没有导入（例如 跨学科融合创新实践与人工智能基础综合演…、高等数学分析与线性代数联合实践研讨课程…、大学物理实验与工程训练综合创新实践项目…），时间确定后请重新提取",
+    "有 3 门课没给上课教师、3 门课没给上课地点（例如 跨学科融合创新实践与人工智能基础综合演…、高等数学分析与线性代数联合实践研讨课程…、大学物理实验与工程训练综合创新实践项目…）：已照常导入，空着的项可在「编辑课程」里补上"
+  ],
+  "terms": [{
+    "name": "2026-2027学年第二学期",
+    "firstDay": "2027-02-22",
+    "totalWeeks": 16,
+    "periodTimes": [
+      { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+      { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+      { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+      { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+      { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+      { "periodIndex": 6, "start": "14:55", "end": "15:40" }
+    ],
+    "courses": [
+      { "name": "跨学科融合创新实践与人工智能基础综合演练课程", "teacher": null, "note": null, "blocks": [
+        { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+      ] },
+      { "name": "高等数学分析与线性代数联合实践研讨课程设计", "teacher": null, "note": null, "blocks": [
+        { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+      ] },
+      { "name": "大学物理实验与工程训练综合创新实践项目课程", "teacher": null, "note": null, "blocks": [
+        { "dayOfWeek": 3, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+      ] }
+    ]
+  }]
+}

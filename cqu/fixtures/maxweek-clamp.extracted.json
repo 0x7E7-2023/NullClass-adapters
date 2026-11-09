@@ -1,0 +1,25 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：字段形状照上游 CQU/cqu.js 读到的样子编造，课程、教师、教室均为虚构，无真实个人信息。",
+  "_case": "开学日对齐与总周数上限 · 教务给的开学日是周三（2026-09-09）→ 第 1 周回退到那一周的周一 2026-09-07 并说明；教务写 36 周 → 按最多 30 周导入并提醒；教务没给学期名称时按开学日推学年学期并说明",
+  "term": { "id": "115", "name": null, "year": null, "term": null },
+  "today": "2026-11-09",
+  "startDate": "2026-09-09",
+  "maxWeek": 36,
+  "periodTimes": [
+    { "periodOrder": 1, "startTime": "08:00", "endTime": "08:45" },
+    { "periodOrder": 2, "startTime": "08:55", "endTime": "09:40" },
+    { "periodOrder": 3, "startTime": "10:00", "endTime": "10:45" },
+    { "periodOrder": 4, "startTime": "10:55", "endTime": "11:40" },
+    { "periodOrder": 5, "startTime": "14:00", "endTime": "14:45" },
+    { "periodOrder": 6, "startTime": "14:55", "endTime": "15:40" },
+    { "periodOrder": 7, "startTime": "16:00", "endTime": "16:45" },
+    { "periodOrder": 8, "startTime": "16:55", "endTime": "17:40" },
+    { "periodOrder": 9, "startTime": "18:30", "endTime": "19:15" },
+    { "periodOrder": 10, "startTime": "19:25", "endTime": "20:10" },
+    { "periodOrder": 11, "startTime": "20:20", "endTime": "21:05" },
+    { "periodOrder": 12, "startTime": "21:15", "endTime": "22:00" }
+  ],
+  "rows": [
+    { "courseName": "编译原理", "instructorName": "教师甲", "position": "计算机楼101", "roomName": "计算机楼101", "weekDay": 1, "periodFormat": "1-2", "teachingWeek": "111111111111111111" }
+  ]
+}

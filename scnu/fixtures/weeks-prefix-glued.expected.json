@@ -1,0 +1,44 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的校历：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "学期总周数取自教务校历（16 周），如与实际不符可在学期管理里改",
+    "本次只导入个人课表里的安排；独立实验预约的安排不在这里，请到教务系统的实验预约页面核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 16,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:10", "end": "08:50" },
+        { "periodIndex": 2, "start": "09:00", "end": "09:40" },
+        { "periodIndex": 3, "start": "09:50", "end": "10:30" },
+        { "periodIndex": 4, "start": "10:40", "end": "11:20" }
+      ],
+      "courses": [
+        {
+          "name": "课程甲",
+          "teacher": "甲老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 7, "weekType": "ODD", "location": "广州校区 101" },
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 10, "endWeek": 16, "weekType": "EVEN", "location": "广州校区 101" }
+          ]
+        },
+        {
+          "name": "课程乙",
+          "teacher": "乙老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 7, "weekType": "ODD", "location": "广州校区 102" },
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 10, "endWeek": 16, "weekType": "EVEN", "location": "广州校区 102" }
+          ]
+        }
+      ]
+    }
+  ]
+}

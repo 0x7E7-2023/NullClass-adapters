@@ -1,0 +1,32 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：字段形状照上游 CQU/cqu.js 读到的样子编造，课程、教师、教室均为虚构，无真实个人信息。课名故意写得很长，用来钉住提醒的限长。",
+  "_case": "带课名的提醒不超 200 字 · 五门超长课名 / 占位词缺教师缺地点，按类型汇总、课名截到 20 字；另有四行不完整数据（缺课名、缺星期、节次越界、周次认不出）按原因计数；教师写「张三（外聘）」原样保留，不拆成第二位教师",
+  "term": { "id": "115", "name": "2026-2027学年第一学期", "year": null, "term": null },
+  "today": "2026-11-09",
+  "startDate": "2026-09-07",
+  "maxWeek": 20,
+  "periodTimes": [
+    { "periodOrder": 1, "startTime": "08:00", "endTime": "08:45" },
+    { "periodOrder": 2, "startTime": "08:55", "endTime": "09:40" },
+    { "periodOrder": 3, "startTime": "10:00", "endTime": "10:45" },
+    { "periodOrder": 4, "startTime": "10:55", "endTime": "11:40" },
+    { "periodOrder": 5, "startTime": "14:00", "endTime": "14:45" },
+    { "periodOrder": 6, "startTime": "14:55", "endTime": "15:40" },
+    { "periodOrder": 7, "startTime": "16:00", "endTime": "16:45" },
+    { "periodOrder": 8, "startTime": "16:55", "endTime": "17:40" },
+    { "periodOrder": 9, "startTime": "18:30", "endTime": "19:15" },
+    { "periodOrder": 10, "startTime": "19:25", "endTime": "20:10" }
+  ],
+  "rows": [
+    { "courseName": "第一门超长课程名称用于检查提醒长度是否被截短甲乙", "instructorName": "", "position": "", "roomName": "", "weekDay": 1, "periodFormat": "1-2", "teachingWeek": "1111111111111111" },
+    { "courseName": "第二门超长课程名称用于检查提醒长度是否被截短丙丁", "instructorName": "", "position": "", "roomName": "", "weekDay": 2, "periodFormat": "3-4", "teachingWeek": "1111111111111111" },
+    { "courseName": "第三门超长课程名称用于检查提醒长度是否被截短戊己", "instructorName": "", "position": "", "roomName": "", "weekDay": 3, "periodFormat": "5-6", "teachingWeek": "1111111111111111" },
+    { "courseName": "第四门超长课程名称用于检查提醒长度是否被截短庚辛", "instructorName": "", "position": "", "roomName": "", "weekDay": 4, "periodFormat": "7-8", "teachingWeek": "1111111111111111" },
+    { "courseName": "第五门课程", "instructorName": "未知", "position": "暂无教室", "roomName": "", "weekDay": 5, "periodFormat": "9-10", "teachingWeek": "1111111111111111" },
+    { "courseName": "第六门课程", "instructorName": "张三（外聘）", "position": "教5-101", "roomName": "教5-101", "weekDay": 6, "periodFormat": "1-2", "teachingWeek": "1111111111111111" },
+    { "courseName": "", "instructorName": "教师甲", "position": "教6-101", "roomName": "教6-101", "weekDay": 1, "periodFormat": "1-2", "teachingWeek": "1111" },
+    { "courseName": "缺星期课", "instructorName": "教师乙", "position": "教6-102", "roomName": "教6-102", "weekDay": 8, "periodFormat": "1-2", "teachingWeek": "1111" },
+    { "courseName": "缺节次课", "instructorName": "教师丙", "position": "教6-103", "roomName": "教6-103", "weekDay": 2, "periodFormat": "21", "teachingWeek": "1111" },
+    { "courseName": "认不出周次课", "instructorName": "教师丁", "position": "教6-104", "roomName": "教6-104", "weekDay": 3, "periodFormat": "3-4", "teachingWeek": "1-16" }
+  ]
+}
