@@ -3,7 +3,7 @@
   "key": "hnsf",
   "name": "河南师范大学",
   "initial": "H",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://jwc.htu.edu.cn/",
@@ -67,6 +67,16 @@
       "name": "合成用例：标成周一的日期实际是周二 · 2026-09-08（带时间部分）→ 回退到当周周一 2026-09-07 并说明",
       "extracted": "fixtures/start-adjusted.extracted.json",
       "expected": "fixtures/start-adjusted.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号前置单双「(单)1-8周(双)9-16周」两段各自归属（单周 1-7、双周 10-16），不退化成每周都上",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
+    },
+    {
+      "name": "合成用例：全角数字的「共１６周」备注只剥备注本身，不增加第 16 周",
+      "extracted": "fixtures/weeks-gong-fullwidth.extracted.json",
+      "expected": "fixtures/weeks-gong-fullwidth.expected.json"
     }
   ]
 }

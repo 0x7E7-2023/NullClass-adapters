@@ -1,0 +1,27 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：「共16周」只是课程总周数备注，不是第 16 周；课程与教师均为虚构。",
+  "term": {
+    "xnm": "2026",
+    "xqm": "3",
+    "xnmText": "2026-2027",
+    "xqmText": "第一学期"
+  },
+  "today": "2026-11-09",
+  "campusId": "",
+  "raw": {
+    "kbList": [
+      {
+        "kcmc": "单周课",
+        "xm": "甲老师",
+        "cdmc": "教学楼1-101",
+        "xqj": "1",
+        "jcs": "1-2",
+        "zcd": "1-15周(单)共16周"
+      }
+    ],
+    "sjkList": []
+  },
+  "total": null,
+  "periodTimes": null,
+  "calendar": null
+}

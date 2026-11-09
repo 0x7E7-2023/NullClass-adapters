@@ -327,20 +327,23 @@
     function weeksOf(source) {
         var cleaned = text(source);
         if (!cleaned) return [];
-        // 周次里常夹着「共8周」这类课程总周数备注，它不是上课周次，只剥备注本身；
-        // 不能从第一个「共」一路删到行尾 —— 「1-8周(共8周),9-16周」后面的 9-16 周会被一起吞掉
-        cleaned = cleaned.replace(/共\s*[0-9]+\s*周?/g, '');
         // 破折号（半角 / 全角 / 波浪 / 减号 / 汉字「至」「到」）连同两侧空白 → 半角 '-'。不要在这里删掉全部空白
         cleaned = cleaned.replace(/\s*[-～－−–—~至到]\s*/g, '-');
         cleaned = fullWidthToHalf(cleaned);
+        // 「共8周」是课程总周数备注，不是上课周次，只剥备注本身；放在全角转半角之后，全角数字也一起剥掉
+        cleaned = cleaned.replace(/共\s*[0-9]+\s*周?/g, '');
         // 紧挨周次的单 / 双括号按相邻关系先归属，再交给下面的通用括号处理 ——
         //   前缀写法 "(单)1-8周,(双)9-16周" 里两个标记都并到前一段，会把 1-16 周都读成每周都上；
         //   这里先把 "(单)1" / "8周(单)" 直接折成 "单1" / "8单"，标记就跟着自己那一段走。
         //   前缀只认在段首：标记前面紧挨着数字或「周」（中间可有空白）时它是上一段的后缀，
         //   "1-8周(单) 9-16周(双)" 里的 "(单)" 不能被后面的 "9" 抢去当前缀；后缀后面紧跟下一段的数字时补一个逗号隔开
         cleaned = cleaned.replace(/\(([单双])(?:周)?\)\s*(?=[0-9])/g, function (all, mark, offset, whole) {
-            if (/[0-9周]\s*$/.test(whole.substring(0, offset))) return all;
-            return mark;
+            var before = whole.substring(0, offset);
+            if (!/[0-9周]\s*$/.test(before)) return mark;
+            // 夹在两段中间的标记：本段以前置标记开头时它是下一段的前缀，补逗号隔开
+            // （「(单)1-8周(双)9-16周」的第二个标记）；否则仍是上一段的后缀
+            if (/^\([单双]/.test(before.replace(/\s+$/, '').split(/[,\s]+/).pop())) return ',' + mark;
+            return all;
         });
         cleaned = cleaned.replace(/([0-9])\s*周?\s*\(([单双])(?:周)?\)/g, function (all, digit, mark, offset, whole) {
             var glue = /^\s*[0-9]/.test(whole.substring(offset + all.length)) ? ',' : '';

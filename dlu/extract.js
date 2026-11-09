@@ -30,6 +30,9 @@
 
     var JWLGXT = '/jwglxt';
     var GNMKDM = 'N2151';
+    // 行字段白名单：parse.js 只读这几个字段，响应里其它字段（学生信息之类）一律不带出
+    var KB_FIELDS = ['kcmc', 'xm', 'cdmc', 'xqj', 'jcs', 'zcd'];
+    var PRACTICE_FIELDS = ['kcmc'];
 
     function originOf() {
         var loc = window.location;
@@ -86,6 +89,19 @@
     function textOf(value) {
         if (value === null || value === undefined) return '';
         return String(value).replace(/\s+/g, ' ').trim();
+    }
+
+    function pickFields(list, fields) {
+        var out = [];
+        for (var i = 0; i < list.length; i++) {
+            var row = list[i] || {};
+            var kept = {};
+            for (var j = 0; j < fields.length; j++) {
+                if (row[fields[j]] !== undefined) kept[fields[j]] = row[fields[j]];
+            }
+            out.push(kept);
+        }
+        return out;
     }
 
     function localTodayIso() {
@@ -210,11 +226,11 @@
     return currentTerm().then(function (term) {
         return fetchTimetable(term).then(function (json) {
             // 只交出排课行与实践课行；响应里夹带的学生信息（xsxx 等）一律不带出
-            var rows = json.kbList;
-            var practice = json.sjkList instanceof Array ? json.sjkList : [];
+            var rows = pickFields(json.kbList, KB_FIELDS);
+            var practice = pickFields(json.sjkList instanceof Array ? json.sjkList : [], PRACTICE_FIELDS);
             var campusId = '';
-            for (var i = 0; i < rows.length; i++) {
-                var id = textOf((rows[i] || {}).xqh_id).replace(/\s+/g, '');
+            for (var i = 0; i < json.kbList.length; i++) {
+                var id = textOf((json.kbList[i] || {}).xqh_id).replace(/\s+/g, '');
                 if (id) { campusId = id; break; }
             }
             var termBody = 'xnm=' + encodeURIComponent(term.xnm) + '&xqm=' + encodeURIComponent(term.xqm);

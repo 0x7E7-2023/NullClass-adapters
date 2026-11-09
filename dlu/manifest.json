@@ -3,7 +3,7 @@
   "key": "dlu",
   "name": "大连大学",
   "initial": "D",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 platinumyrh（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "http://jwgl.dlu.edu.cn/jwglxt/xtgl/login_slogin.html",
@@ -17,6 +17,7 @@
     {"name":"合成用例：周次写法与前置单双","extracted":"fixtures/week-forms.extracted.json","expected":"fixtures/week-forms.expected.json"},
     {"name":"合成用例：无周历时推算开学日并抬高总周数","extracted":"fixtures/no-calendar.extracted.json","expected":"fixtures/no-calendar.expected.json"},
     {"name":"合成用例：教务作息与额外节次","extracted":"fixtures/api-times.extracted.json","expected":"fixtures/api-times.expected.json"},
-    {"name":"合成用例：周末特殊作息写入备注并提醒","extracted":"fixtures/weekend.extracted.json","expected":"fixtures/weekend.expected.json"}
+    {"name":"合成用例：周末特殊作息写入备注并提醒","extracted":"fixtures/weekend.extracted.json","expected":"fixtures/weekend.expected.json"},
+    {"name":"合成用例：「共16周」只是课程总周数备注，不增加第 16 周","extracted":"fixtures/weeks-gong.extracted.json","expected":"fixtures/weeks-gong.expected.json"}
   ]
 }

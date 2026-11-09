@@ -68,7 +68,7 @@ Playwright 本地假站运行真实 `extract.js` 并交给 Rhino 跑 `parse.js`�
 | `dates` | 最多 14 个 `MM-DD`，不含周历正文 |
 
 不读页面输入框密码、Cookie、本地存储；不读课程格的 `id`、`title`、`onclick` 等属性；不输出课表页眉、其他表格行、周历正文、学期列表额外键。
-`isVisible()` 逐祖先检查 `hidden`、`aria-hidden`、内联 `display:none` / `visibility:hidden` / `collapse`、文档 CSSOM 规则与计算样式；`visibleText()` 递归只拼接通过检查的文本节点，不使用元素整体 `textContent` 作为课程行。离屏 DOMParser 文档不插入当前页面。
+`isVisible()` 逐祖先检查 `hidden`、`aria-hidden`、内联 `display:none` / `visibility:hidden` / `collapse`、文档**内联 `<style>`** 的 CSSOM 规则与计算样式；`visibleText()` 递归只拼接通过检查的文本节点，不使用元素整体 `textContent` 作为课程行。离屏 DOMParser 文档不插入当前页面。**外链 `<link rel=stylesheet>` 不会被 DOMParser 加载，其规则无法参与判定**，详见 §9。
 `parse.js` 对旧形状字符串 `stray` 也只计数，不保存、不拼接、不回显；提醒仅说格子数量，不使用姓名学号正则事后清洗。
 假站在页眉、属性、非课表行、周历、列表额外键、无课程块格正文、内联/CSS/属性/祖先隐藏节点中埋入学号、身份证号、手机号与标记字符串，所有成功场景均断言输出无这些值，且顶层、`term`、格子键集合精确匹配，所有 `stray` 均严格为 `true`。
 教师名是课表显示所需内容，随可见课程文字保留。若学校把额外个人信息直接写成可见课名、教师或地点正文，现有白名单无法做语义区分，列为未验证风险。
@@ -143,8 +143,10 @@ WebVPN `/http/abcd1234/zjgsjw/…` 前缀下三次实际请求均逐字断言；
 - `scheduleUrlHint` 的路径来自上游，但无账号验证不带 `params` 时课表页是否可直接显示当前学期；用户可在任意已登录教务页手动提取。
 - 课程格正文中的个人信息无法可靠语义识别；当前仅通过限定课程所需可见文字、长度和不读属性来减小暴露面。
 - 隐藏判断依赖内核的 `matchMedia` 与 `CSSRule` 形状：条件分组只在引擎判定当前生效时参与隐藏，`@supports` 分组与 CSS 嵌套子规则不递归（判不准就当不生效，宁可少清洗隐藏文字也不静默丢可见课程）。不同内核版本的差异由 `hidden-text`、`media-print-hide` 两个场景钉住，未在真机 WebView 验证；旧版 WebView 若不给普通规则挂 `cssRules`，同一段代码仍按选择器判断，行为一致。
+- **外链样式表**：DOMParser 文档不加载 `<link rel=stylesheet>`，外链 CSS 里的隐藏规则不参与清洗；若本校用外链 CSS 隐藏详情区，隐藏文本会进入候选。只读页面 HTML 的脚本无法可靠加载外链 CSS，暂不处理，需真机确认本校页面是否如此。
 
 ## 10. 签名
 
 0x7E7-2023（haiku 移植，2026-11-03）
 0x7E7-2023（批次三十复审修正，2026-11-08）：补时间提醒按课程实际用到的节次收口、条件分组与普通规则分流、`period-fill-used` fixture 与 `media-print-hide` 场景、浏览器侧变异脚本。
+修订（2026-11-09）：把隐藏清洗的结论限定为内联 / 内嵌样式，外链 CSS 不加载、不参与判定，已记入 §9 风险（无代码改动）。

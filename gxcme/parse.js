@@ -222,9 +222,10 @@
     function weeksOf(source) {
         var cleaned = text(source);
         if (!cleaned) return [];
-        cleaned = cleaned.replace(/共\s*[0-9]+\s*周?/g, '');
         cleaned = cleaned.replace(/\s*[-～－−–—~至到]\s*/g, '-');
-        cleaned = fullWidthToHalf(cleaned).replace(/第\s*(?=[0-9])/g, '');
+        // 「共 N 周」只剥备注本身；放在全角转半角之后，全角数字（共１６周）才一起剥掉
+        cleaned = fullWidthToHalf(cleaned).replace(/第\s*(?=[0-9])/g, '')
+            .replace(/共\s*[0-9]+\s*周?/g, '');
         cleaned = cleaned.replace(/\(([单双])(?:周)?\)\s*(?=[0-9])/g, function (all, mark, offset, whole) {
             var before = whole.substring(0, offset);
             if (!/[0-9周]\s*$/.test(before)) return mark;

@@ -22,7 +22,8 @@
     //   ⑦ 校区由 extract.js 问来（data.campus）；问不到就回落青岛校区并写进 warnings；
     //   ⑧ 上游的「未知 / 待定 / 未知教师 / 未知地点」一律不抄，写成 null；「任课教师:」这类标签前缀去掉；
     //   ⑨ 总周数上游不给：默认 20 周，课表里有更靠后的周就抬高到那一周（上限 30），并 warnings；
-    //   ⑩ 开学日上游不给：按提取当天所在周的周一推算，并 warnings；学期名取教务下拉框的文字，
+    //   ⑩ 开学日上游不给：先按学期号推锚点（第一学期 9/1、第二学期次年 2/20 所在周的周一），
+    //      学期号认不出才按提取当周的周一，都有 warnings；学期名取教务下拉框的文字，
     //      没有就用「学校名 + 学年学期」，不用适配器名。
     //   ⑪ 有课的格子落在不对应任何星期的列上（不是星期一至星期日的列）：计数并点名进 warnings，不静默丢课；
     //   ⑫ 节次：格子里方括号写的节次优先（那是这一格自己的写法），格子里没写才用行表头「第N,M节」；
@@ -83,8 +84,8 @@
     var DEFAULT_CAMPUS = '青岛校区';
     var PERIOD_COUNT = 11;
 
-    // 节次上限：越过它一定是脏数据。占位时刻写成 pad2(7 + 节次)，第 16 节 = 23:00-23:45 是最后
-    // 一个还在当天的档位；再往后补出来的就不是合法 HH:mm 了，载荷校验会整次拒收。
+    // 节次上限：越过它一定是脏数据。超过 11 节的占位时刻按上一节下课顺推，越过 23:59 就不补，
+    // 不会生成非法 HH:mm 让载荷校验整次拒收。
     var MAX_PERIOD = 16;
 
     // 学期总周数：上游不给，默认 20；课表里有更靠后的周就抬高（上限 MAX_WEEK）
@@ -159,6 +160,16 @@
         return (n < 10 ? '0' : '') + n;
     }
 
+    function minutesOf(hhmm) {
+        return parseInt(hhmm.substring(0, 2), 10) * 60 + parseInt(hhmm.substring(3, 5), 10);
+    }
+
+    function hhmmOf(total) {
+        var h = Math.floor(total / 60);
+        var m = total % 60;
+        return pad2(h) + ':' + pad2(m);
+    }
+
     function isoOf(date) {
         return date.getFullYear() + '-' + pad2(date.getMonth() + 1) + '-' + pad2(date.getDate());
     }
@@ -171,6 +182,14 @@
         var day = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
         var back = (day.getDay() + 6) % 7;
         return isoOf(new Date(day.getFullYear(), day.getMonth(), day.getDate() - back));
+    }
+
+    // 学期号「2026-2027-1」→ 开学日锚点：第一学期 9 月 1 日、第二学期次年 2 月 20 日所在周的周一。
+    function termStartFromCode(code) {
+        var m = /^([0-9]{4})-([0-9]{4})-([12])$/.exec(clean(code));
+        if (!m) return null;
+        if (m[3] === '1') return { iso: mondayOf(m[1] + '-09-01'), rule: '第一学期 = 9 月 1 日所在周的周一' };
+        return { iso: mondayOf(m[2] + '-02-20'), rule: '第二学期 = 2 月 20 日所在周的周一' };
     }
 
     function stripTags(value) {
@@ -316,6 +335,11 @@
     function weeksIn(source) {
         var text = clean(source);
         if (!text) return [];
+        // 全角数字先转半角，再剥「共 N 周」备注（否则「共１６周」会被当成第 16 周）
+        text = text.replace(/[０-９]/g, function (ch) {
+            return String.fromCharCode(ch.charCodeAt(0) - 0xFEE0);
+        });
+        text = text.replace(/共\s*[0-9]+\s*周?/g, ' ');
         // 区间分隔符先归一：全角波浪 ～、全角减 －、数学减 −、短破折 –、长破折 —、半角 ~、「至/到」
         text = text.replace(/[～－−–—~至到]/g, '-');
         // 方括号 / 【】里是节次，整段去掉，免得节次的数字被当成周次
@@ -789,18 +813,24 @@
             end: baseTimes[pi].end
         });
     }
+    var EXTEND_BREAK_MINUTES = 5;
+    var EXTEND_CLASS_MINUTES = 45;
+    var unfilledFrom = 0;
     for (var extra = PERIOD_COUNT + 1; extra <= maxPeriod; extra++) {
-        periodTimes.push({
-            periodIndex: extra,
-            start: pad2(7 + extra) + ':00',
-            end: pad2(7 + extra) + ':45'
-        });
+        // 占位时间必须接在上一节下课之后：接不上（越过 23:59）就从这一节起不补
+        var prevEnd = minutesOf(periodTimes[periodTimes.length - 1].end);
+        var nextStart = prevEnd + EXTEND_BREAK_MINUTES;
+        var nextEnd = nextStart + EXTEND_CLASS_MINUTES;
+        if (nextEnd > 23 * 60 + 59) { unfilledFrom = extra; break; }
+        periodTimes.push({ periodIndex: extra, start: hhmmOf(nextStart), end: hhmmOf(nextEnd) });
     }
 
     var termName = clean(term.name) || termNameFromCode(term.code);
 
-    // extract.js 一定会带 now（提取时刻）；缺了就没法推算开学日，明确报错而不是瞎猜
-    var firstDay = mondayOf(data.now);
+    // 开学日：优先按学期号推锚点（第一学期 9/1、第二学期次年 2/20 所在周的周一）；
+    // 学期号认不出才退回提取当周的周一。extract.js 一定会带 now，缺了明确报错。
+    var termAnchor = termStartFromCode(term.code);
+    var firstDay = termAnchor ? termAnchor.iso : mondayOf(data.now);
     if (!firstDay) {
         throw new Error('没能获取到当前日期，无法推算开学日期，请重新导入');
     }
@@ -812,15 +842,24 @@
         pushWarning('已按「' + campus + '」的节次时间导入（教务页面不提供，三个校区的节次时间不同），' +
             '请到「学期管理」里核对');
     }
-    pushWarning('开学日期无法从教务获取，已按最近的周一（' + firstDay + '）推算，请在「学期管理」里核对');
+    if (termAnchor) {
+        pushWarning('开学日期无法从教务获取，已按学期号推算为 ' + firstDay + '（' + termAnchor.rule +
+            '），请在「学期管理」里核对');
+    } else {
+        pushWarning('开学日期无法从教务获取，已按最近的周一（' + firstDay + '）推算，请在「学期管理」里核对');
+    }
     pushWarning('教务页面不提供学期总周数：已按 ' + DEFAULT_TOTAL_WEEKS + ' 周起算，请在「学期管理」里核对');
     if (maxWeek > DEFAULT_TOTAL_WEEKS) {
         pushWarning('课表里有到第 ' + maxWeek + ' 周的课，超过了默认的 ' + DEFAULT_TOTAL_WEEKS +
             ' 周，学期总周数已按 ' + totalWeeks + ' 周计，请在「学期管理」里核对');
     }
-    if (maxPeriod > PERIOD_COUNT) {
-        pushWarning('课表里出现了节次时间里没有的第 ' + (PERIOD_COUNT + 1) + '-' + maxPeriod +
-            ' 节，已暂按 ' + periodTimes[PERIOD_COUNT].start + ' 起的时间补上，请到「学期管理」里核对真实上下课时间');
+    var filledTo = periodTimes.length;
+    if (filledTo > PERIOD_COUNT) {
+        pushWarning('课表用到了节次时间里没有的第 ' + (PERIOD_COUNT + 1) + '-' + filledTo +
+            ' 节，已按上一节下课后课间 5 分钟、每节 45 分钟顺推补上，请到「学期管理」里核对真实上下课时间');
+    }
+    if (unfilledFrom) {
+        pushWarning('课表用到了第 ' + unfilledFrom + ' 节及以后，顺推的时间会越过当天 23:59，这些节次没有补上时间（课程已导入），请到「学期管理」里补上');
     }
     if (!termName) {
         termName = '青岛农业大学学年学期';

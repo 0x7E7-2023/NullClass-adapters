@@ -1,0 +1,80 @@
+{
+  "_note": "合成数据（非真实抓取）：青岛校区第 11,12 节；验证第 12 节的占位作息接在第 11 节下课之后，而不是倒挂到 19:00。",
+  "source": "qau-jsxsd-xskb",
+  "pageUrl": "http://jwglxt.qau.edu.cn/jsxsd/xskb/xskb_list.do",
+  "now": "2026-10-08",
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期"
+  },
+  "campus": "青岛校区",
+  "cols": 8,
+  "rows": [
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "节次",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "星期一",
+        "parts": []
+      },
+      {
+        "col": 2,
+        "span": 1,
+        "text": "星期二",
+        "parts": []
+      },
+      {
+        "col": 3,
+        "span": 1,
+        "text": "星期三",
+        "parts": []
+      },
+      {
+        "col": 4,
+        "span": 1,
+        "text": "星期四",
+        "parts": []
+      },
+      {
+        "col": 5,
+        "span": 1,
+        "text": "星期五",
+        "parts": []
+      },
+      {
+        "col": 6,
+        "span": 1,
+        "text": "星期六",
+        "parts": []
+      },
+      {
+        "col": 7,
+        "span": 1,
+        "text": "星期日",
+        "parts": []
+      }
+    ],
+    [
+      {
+        "col": 0,
+        "span": 1,
+        "text": "第11,12节",
+        "parts": []
+      },
+      {
+        "col": 1,
+        "span": 1,
+        "text": "晚课",
+        "parts": [
+          "晚课<br><font title=\"老师\">甲老师</font><br><font title=\"周次(节次)\">1-16(周)[11-12节]</font><br><font title=\"教室\">教学楼A101</font>"
+        ]
+      }
+    ]
+  ]
+}

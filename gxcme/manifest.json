@@ -3,7 +3,7 @@
   "key": "gxcme",
   "name": "广西机电职业技术学院",
   "initial": "G",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://sso.gxcme.edu.cn/login?service=https://nportal.gxcme.edu.cn/login",
@@ -77,6 +77,11 @@
       "name": "合成用例：校历第 1 周日期偏离学期锚点超 45 天时作废，回退推算开学日与内置总周数并提醒",
       "extracted": "fixtures/calendar-rejected.extracted.json",
       "expected": "fixtures/calendar-rejected.expected.json"
+    },
+    {
+      "name": "合成用例：全角数字的「共１６周」备注只剥备注本身，不整行丢课（上游能读对）",
+      "extracted": "fixtures/weeks-gong-fullwidth.extracted.json",
+      "expected": "fixtures/weeks-gong-fullwidth.expected.json"
     }
   ]
 }

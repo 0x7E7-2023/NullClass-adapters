@@ -3,7 +3,7 @@
   "key": "qau",
   "name": "青岛农业大学",
   "initial": "Q",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 ReGoMark（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "http://jwglxt.qau.edu.cn/",
@@ -74,6 +74,16 @@
       "name": "合成用例：格子里写的节次与行表头「第1,2节」不一致，以格子为准并出声",
       "extracted": "fixtures/period-conflict.extracted.json",
       "expected": "fixtures/period-conflict.expected.json"
+    },
+    {
+      "name": "合成用例：青岛校区第 11,12 节；第 12 节的占位作息接在第 11 节下课之后（20:35-21:20），不倒挂",
+      "extracted": "fixtures/period-12.extracted.json",
+      "expected": "fixtures/period-12.expected.json"
+    },
+    {
+      "name": "合成用例：全角数字与空格的「共１６周」备注只剥备注本身，不增加周次",
+      "extracted": "fixtures/weeks-gong.extracted.json",
+      "expected": "fixtures/weeks-gong.expected.json"
     }
   ]
 }
