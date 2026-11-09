@@ -1,0 +1,62 @@
+{
+  "term": {
+    "id": "191",
+    "label": "2025-2026学年第一学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    {
+      "id": "191",
+      "label": "2025-2026学年第一学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": {
+    "startDate": "2025-09-01",
+    "endDate": "2026-01-18",
+    "weekStartOnSunday": false,
+    "nameZh": "2025-2026学年第一学期"
+  },
+  "courseUnitList": [
+    { "indexNo": 1, "startTime": 830, "endTime": 915 },
+    { "indexNo": 2, "startTime": 925, "endTime": 1010 }
+  ],
+  "activities": [
+    {
+      "courseName": "马克思主义基本原理概论与当代中国实践研究专题",
+      "teachers": [],
+      "room": "",
+      "weekday": 1,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    },
+    {
+      "courseName": "大学英语听说读写译能力综合训练课程设计实践",
+      "teachers": [],
+      "room": "",
+      "weekday": 2,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    },
+    {
+      "courseName": "大学物理实验与工程训练创新实践课程",
+      "teachers": [],
+      "room": "",
+      "weekday": 3,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    },
+    {
+      "courseName": "电路分析与模拟电子技术基础综合实验",
+      "teachers": [],
+      "room": "",
+      "weekday": 4,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    }
+  ]
+}

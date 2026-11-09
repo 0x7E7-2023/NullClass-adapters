@@ -1,0 +1,23 @@
+{
+  "term": {
+    "year": "2026",
+    "semester": "2",
+    "yearLabel": "2026-2027",
+    "semesterLabel": "第二学期"
+  },
+  "today": "2027-03-05",
+  "rows": [
+    {
+      "name": "数据结构",
+      "time": "周一第1,2节{第1-22周}",
+      "teacher": "教师甲",
+      "location": "东教201"
+    },
+    {
+      "name": "线性代数",
+      "time": "周三第3,4节{第1-16周}",
+      "teacher": "教师乙",
+      "location": "东教202"
+    }
+  ]
+}

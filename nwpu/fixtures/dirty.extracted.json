@@ -1,0 +1,104 @@
+{
+  "term": {
+    "id": "191",
+    "label": "2025-2026学年第一学期",
+    "pickedBy": "first"
+  },
+  "semesters": [
+    {
+      "id": "191",
+      "label": "2025-2026学年第一学期",
+      "selected": false
+    },
+    {
+      "id": "171",
+      "label": "2024-2025学年第二学期",
+      "selected": false
+    }
+  ],
+  "semesterMeta": {
+    "startDate": "2025-09-01",
+    "endDate": "2025-12-21",
+    "weekStartOnSunday": false,
+    "nameZh": "2025-2026学年第一学期"
+  },
+  "courseUnitList": [
+    { "indexNo": 1, "startTime": 830, "endTime": 915 },
+    { "indexNo": 2, "startTime": 925, "endTime": 1010 },
+    { "indexNo": 3, "startTime": 1030, "endTime": 1115 },
+    { "indexNo": 4, "startTime": 1125, "endTime": 1210 }
+  ],
+  "activities": [
+    {
+      "teachers": ["张某"],
+      "room": "B101",
+      "weekday": 1,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [1, 2, 3]
+    },
+    {
+      "courseName": "缺星期的课",
+      "teachers": ["张某"],
+      "room": "B102",
+      "weekday": 9,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [1, 2]
+    },
+    {
+      "courseName": "缺节次的课",
+      "teachers": ["张某"],
+      "room": "B103",
+      "weekday": 2,
+      "startUnit": 0,
+      "endUnit": 2,
+      "weekIndexes": [1, 2]
+    },
+    {
+      "courseName": "没周次的课",
+      "teachers": ["张某"],
+      "room": "B104",
+      "weekday": 3,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": []
+    },
+    {
+      "courseName": "周次为零的课",
+      "teachers": ["张某"],
+      "room": "B105",
+      "weekday": 4,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [0, -2]
+    },
+    {
+      "courseName": "超出范围的课",
+      "teachers": ["李某"],
+      "room": "A301",
+      "weekday": 5,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [1, 2, 3, 31]
+    },
+    {
+      "courseName": "认不出周次的课",
+      "teachers": ["李某"],
+      "room": "A302",
+      "weekday": 6,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": "全程"
+    },
+    {
+      "courseName": "缺教师教室的课",
+      "teachers": ["暂无教师"],
+      "room": "未知",
+      "weekday": 7,
+      "startUnit": 3,
+      "endUnit": 4,
+      "weekIndexes": [1, 2]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "today": "2026-11-10",
+  "term": { "name": "2026-2027学年第一学期", "year": 2026, "kind": "first", "source": "page" },
+  "courses": [
+    { "courseName": "课程甲", "staffName": "教师一", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "25-32周 星期一 第1-2节", "classPlace": "A101" } ] },
+    { "courseName": "课程乙", "staffName": "教师二", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1-16周 星期八 第1-2节", "classPlace": "A102" } ] },
+    { "courseName": "线性代数", "staffName": "教师三", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1-16周 星期二 第0-2节", "classPlace": "A103" } ] },
+    { "courseName": "大学化学", "staffName": "教师四", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "星期三 第3-4节", "classPlace": "A104" } ] },
+    { "courseName": "课程丙", "staffName": "教师五", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1-16周(单双周) 星期四 第1-2节", "classPlace": "A105" } ] },
+    { "courseName": "课程丁", "staffName": "教师六", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1-16周(1) 星期五 第1-2节", "classPlace": "A106" } ] },
+    { "courseName": "课程戊", "staffName": "教师七", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1-16周(3组) 星期六 第1-2节", "classPlace": "A107" } ] }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "term": {
+    "year": "2026",
+    "semester": "1",
+    "yearLabel": "2026-2027",
+    "semesterLabel": "第一学期"
+  },
+  "today": "2026-10-27",
+  "rows": [
+    {
+      "name": "晚课甲",
+      "time": "周四第13,14节{第1-10周}",
+      "teacher": "教师甲",
+      "location": "东教301"
+    },
+    {
+      "name": "晚课乙",
+      "time": "周一第15节{第1-10周}",
+      "teacher": "教师乙",
+      "location": "东教302"
+    }
+  ]
+}

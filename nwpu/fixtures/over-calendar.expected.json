@@ -1,0 +1,37 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务系统给出的学期起止只能数出 16 周，但课表排到第 20 周，学期总周数已按 20 周导入，请在学期管理里核对。"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第一学期",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:25", "end": "10:10" }
+      ],
+      "courses": [
+        {
+          "name": "工程制图",
+          "teacher": "郑某",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 20,
+              "weekType": "ALL",
+              "location": "教3-102"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

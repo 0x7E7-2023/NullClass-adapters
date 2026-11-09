@@ -1,0 +1,39 @@
+{
+  "today": "2026-11-10",
+  "term": {
+    "name": "2026-2027学年第一学期",
+    "year": 2026,
+    "kind": "first",
+    "source": "page"
+  },
+  "courses": [
+    {
+      "courseName": "高等数学A(一)",
+      "staffName": "张三",
+      "staffNameOther": "",
+      "campusName": "犀浦校区",
+      "slots": [
+        { "classTime": "1-16周 星期一 第1-2节", "classPlace": "犀浦校区 X2101" },
+        { "classTime": "1-16周 星期三 第3-4节", "classPlace": "犀浦校区 X2101" }
+      ]
+    },
+    {
+      "courseName": "大学英语",
+      "staffName": "李四,王五",
+      "staffNameOther": "",
+      "campusName": "",
+      "slots": [
+        { "classTime": "1-16周(单) 星期二 第5-6节", "classPlace": "犀浦校区 J1102" }
+      ]
+    },
+    {
+      "courseName": "体育",
+      "staffName": "",
+      "staffNameOther": "",
+      "campusName": "犀浦校区",
+      "slots": [
+        { "classTime": "2-16周 星期四 第7-8节", "classPlace": "" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "term": {
+    "id": "211",
+    "label": "2026-2027学年第一学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    {
+      "id": "211",
+      "label": "2026-2027学年第一学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": null,
+  "courseUnitList": [
+    { "indexNo": 1, "startTime": 830, "endTime": 915 },
+    { "indexNo": 2, "startTime": 925, "endTime": 1010 }
+  ],
+  "activities": [
+    {
+      "courseName": "数据结构",
+      "teachers": ["吴某"],
+      "room": "教2-201",
+      "weekday": 3,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    }
+  ],
+  "today": "2026-09-02"
+}

@@ -1,0 +1,95 @@
+{
+  "term": {
+    "id": "2024-2025-2",
+    "label": "2024-2025学年第二学期",
+    "pickedBy": "first"
+  },
+  "semesters": [
+    {
+      "id": "2024-2025-2",
+      "label": "2024-2025学年第二学期",
+      "selected": false
+    },
+    {
+      "id": "2025-2026-1",
+      "label": "2025-2026学年第一学期",
+      "selected": false
+    }
+  ],
+  "semesterMeta": {
+    "startDate": "2025-02-24",
+    "endDate": "2025-07-06"
+  },
+  "lessonList": [
+    {
+      "id": 401,
+      "courseName": "形势与政策"
+    },
+    {
+      "id": 402,
+      "courseName": "大学体育"
+    },
+    {
+      "id": 403,
+      "courseName": "金工实习"
+    }
+  ],
+  "scheduleList": [
+    {
+      "lessonId": 401,
+      "date": "2025-02-26",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "未知",
+      "room": "待定"
+    },
+    {
+      "lessonId": 401,
+      "date": "2025-02-26",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "未知",
+      "room": "待定"
+    },
+    {
+      "lessonId": 999,
+      "date": "2025-02-26",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 401,
+      "date": "待定",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 401,
+      "date": "2025-03-05",
+      "startTime": 1500,
+      "endTime": 1400,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 402,
+      "date": "2025-02-27",
+      "startTime": 1005,
+      "endTime": 1140,
+      "personName": "李某（外聘）",
+      "room": "操场"
+    },
+    {
+      "lessonId": 402,
+      "date": "2025-02-27",
+      "startTime": 1005,
+      "endTime": 1130,
+      "personName": "李某（外聘）",
+      "room": "操场"
+    }
+  ]
+}

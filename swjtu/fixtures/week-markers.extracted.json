@@ -1,0 +1,20 @@
+{
+  "today": "2026-11-10",
+  "term": { "name": "2026-2027学年第一学期", "year": 2026, "kind": "first", "source": "page" },
+  "courses": [
+    { "courseName": "电路分析", "staffName": "张三", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "第1-第8周 星期一 第1-2节", "classPlace": "A101" } ] },
+    { "courseName": "信号与系统", "staffName": "李四", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "(单)1-8周,(双)9-16周 星期二 第3-4节", "classPlace": "B202" } ] },
+    { "courseName": "工程制图", "staffName": "王五", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1-15周(单) 共16周 星期三 第5-6节", "classPlace": "C303" } ] },
+    { "courseName": "大学物理", "staffName": "赵六", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "共16周,1-8周(共8周),9-16周 星期四 第7-8节", "classPlace": "D404" } ] },
+    { "courseName": "体育", "staffName": "钱七", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "１－１６周 星期五 第1-2节", "classPlace": "E505" } ] },
+    { "courseName": "音乐鉴赏", "staffName": "孙八", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1至8周 星期六 第3-4节", "classPlace": "F606" } ] },
+    { "courseName": "形势与政策", "staffName": "周九", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1~16周 星期日 第9-10节", "classPlace": "G707" } ] }
+  ]
+}

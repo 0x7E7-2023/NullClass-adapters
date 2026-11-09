@@ -1,0 +1,10 @@
+{
+  "today": "2026-11-10",
+  "term": { "name": "", "year": 0, "kind": "", "source": "none" },
+  "courses": [
+    { "courseName": "大学物理", "staffName": "教师一", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1-22周 星期一 第1-2节", "classPlace": "A101" } ] },
+    { "courseName": "概率论", "staffName": "教师二", "staffNameOther": "", "campusName": "犀浦校区",
+      "slots": [ { "classTime": "1-16周 星期二 第14-15节", "classPlace": "B202" } ] }
+  ]
+}

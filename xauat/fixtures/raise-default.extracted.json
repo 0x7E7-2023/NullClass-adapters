@@ -1,0 +1,39 @@
+{
+  "term": {
+    "id": "2026-2027-2",
+    "label": "2026-2027学年第二学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    {
+      "id": "2026-2027-2",
+      "label": "2026-2027学年第二学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": null,
+  "lessonList": [
+    {
+      "id": 601,
+      "courseName": "毕业设计"
+    }
+  ],
+  "scheduleList": [
+    {
+      "lessonId": 601,
+      "date": "2026-03-02",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "孙某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 601,
+      "date": "2026-07-27",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "孙某",
+      "room": "A101"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "specVersion": 1,
+  "key": "lzu",
+  "name": "兰州大学",
+  "initial": "L",
+  "version": "1.0.0",
+  "author": "上游 yalerove（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://jwk.lzu.edu.cn/academic/common/security/login.jsp",
+  "scheduleUrlHint": "http://jwk.lzu.edu.cn/academic/student/currcourse/currcourse.jsdo",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 网格视图（策略 C）+ 页面表头节次时间；连堂合并成 1-4 节、同日同节重复行吸收、单双周切段、两个时段分开",
+      "extracted": "fixtures/grid-basic.extracted.json",
+      "expected": "fixtures/grid-basic.expected.json"
+    },
+    {
+      "name": "合成用例：课程列表视图（策略 B）· 一格两个时段；页面不给节次时间时回落学校秋季表并提醒",
+      "extracted": "fixtures/list-view.extracted.json",
+      "expected": "fixtures/list-view.expected.json"
+    },
+    {
+      "name": "合成用例：URP 标准网格（策略 A）· 课程格两种结构（教师在第 2 段 / 第 3 段）、教室「待定」记为空",
+      "extracted": "fixtures/urp-grid.extracted.json",
+      "expected": "fixtures/urp-grid.expected.json"
+    },
+    {
+      "name": "合成用例：周次单双标记归属 · 「(单)1-8周(双)9-16周」「1-8周(单)9-16周(双)」「第1-第8周(单)」「1-16周(单)共16周」",
+      "extracted": "fixtures/weeks-prefix.extracted.json",
+      "expected": "fixtures/weeks-prefix.expected.json"
+    },
+    {
+      "name": "合成用例：第 11 节之后的节次 · 第 12、13 节按课间 5 分钟 / 每节 45 分钟顺推，第 14 节越过 23:59 补不了",
+      "extracted": "fixtures/late-periods.extracted.json",
+      "expected": "fixtures/late-periods.expected.json"
+    },
+    {
+      "name": "合成用例：脏数据 · 教师「未知」记为空；括号序号 / 括号备注 / 单双同写 / 孤立单双 / 超出 30 周 / 缺星期 / 缺周次各自计数；总周数抬到 30；页面截断提醒",
+      "extracted": "fixtures/dirty-rows.extracted.json",
+      "expected": "fixtures/dirty-rows.expected.json"
+    },
+    {
+      "name": "合成用例：长课名与多门课缺教师教室 · 提醒里课名截 20 字、每条提醒不超 200 字；载荷里的课名保持完整",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：页面没有学期文字 · 按今天的日期推断学期名与开学日；全角数字与全角减号写成「１－８周」「第１－２节」",
+      "extracted": "fixtures/inferred-term.extracted.json",
+      "expected": "fixtures/inferred-term.expected.json"
+    },
+    {
+      "name": "合成用例：表头只给出部分节次 · 缺的节次用学校公布的时间补齐并提醒，不留没有上下课时间的节次",
+      "extracted": "fixtures/partial-slots.extracted.json",
+      "expected": "fixtures/partial-slots.expected.json"
+    }
+  ]
+}

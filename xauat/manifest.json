@@ -1,0 +1,69 @@
+{
+  "specVersion": 1,
+  "key": "xauat",
+  "name": "西安建筑科技大学",
+  "initial": "X",
+  "version": "1.0.0",
+  "author": "上游 Alph4rc（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://swjw.xauat.edu.cn/student/login/",
+  "scheduleUrlHint": "https://swjw.xauat.edu.cn/student/for-std/course-table",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "swjw.xauat.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：按日期换算周次与星期、重复行去重、单双周、没排课的课、未知教师和教室",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：教务没给开学日时按最早的排课日期推算并提醒",
+      "extracted": "fixtures/no-start.extracted.json",
+      "expected": "fixtures/no-start.expected.json"
+    },
+    {
+      "name": "合成用例：开学前的日期与第 25 周之后的日期都丢弃并计数",
+      "extracted": "fixtures/cross-semester.extracted.json",
+      "expected": "fixtures/cross-semester.expected.json"
+    },
+    {
+      "name": "合成用例：长课名缺教师缺教室的提醒不超过 200 字",
+      "extracted": "fixtures/long-warn.extracted.json",
+      "expected": "fixtures/long-warn.expected.json"
+    },
+    {
+      "name": "合成用例：没有校历但课表排到第 22 周时抬高总周数并提醒",
+      "extracted": "fixtures/raise-default.extracted.json",
+      "expected": "fixtures/raise-default.expected.json"
+    },
+    {
+      "name": "合成用例：校历只有 16 周但课表排到第 18 周时抬高总周数并提醒",
+      "extracted": "fixtures/over-calendar.extracted.json",
+      "expected": "fixtures/over-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：没标当前学期、读不了的记录、同一开始时间下课时间不一致",
+      "extracted": "fixtures/dirty.extracted.json",
+      "expected": "fixtures/dirty.expected.json"
+    },
+    {
+      "name": "合成用例：校历只能数出 7 周时按 16 周下限导入并提醒",
+      "extracted": "fixtures/calendar-short.extracted.json",
+      "expected": "fixtures/calendar-short.expected.json"
+    },
+    {
+      "name": "合成用例：校历跨 30 周时按 25 周上限导入并提醒",
+      "extracted": "fixtures/calendar-long.extracted.json",
+      "expected": "fixtures/calendar-long.expected.json"
+    },
+    {
+      "name": "合成用例：重复记录先去重再计数 · 同一起始时间的下课时间出入按开始时间计数，抬高与 16 周下限两条提醒互不矛盾",
+      "extracted": "fixtures/counters.extracted.json",
+      "expected": "fixtures/counters.expected.json"
+    }
+  ]
+}

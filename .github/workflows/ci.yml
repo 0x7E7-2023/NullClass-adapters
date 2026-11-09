@@ -58,7 +58,9 @@ jobs:
             echo "v$version 已发布，跳过"; exit 0
           fi
           mkdir -p dist
-          zip -X -r dist/nullclass-adapters.zip index.json $(jq -r '.adapters[].path' index.json)
+          # AUDIT.md 只在仓库里留档，不进库：211 个适配器的全部文件已经 4135 个，
+          # 顶到客户端的 4096 条目上限（2026-11-10 批次三十二）；fixtures 必须带上，客户端会核对
+          zip -X -r dist/nullclass-adapters.zip index.json $(jq -r '.adapters[].path' index.json) -x '*/AUDIT.md'
           printf '%s\n' "$SIGNING_KEY" > "$RUNNER_TEMP/key.pem"
           openssl dgst -sha256 -sign "$RUNNER_TEMP/key.pem" -out dist/nullclass-adapters.zip.sig dist/nullclass-adapters.zip
           rm -f "$RUNNER_TEMP/key.pem"

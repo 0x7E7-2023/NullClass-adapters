@@ -1,0 +1,38 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "开学日期教务系统没有给出，已按最近的周一推算为 2026-02-23。它决定现在是第几周，请在学期管理里核对。",
+    "教务系统没有给出可用的学期校历，原本按 20 周导入，但课表排到第 22 周，学期总周数已改为 22 周，请在学期管理里核对。"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第二学期",
+      "firstDay": "2026-02-23",
+      "totalWeeks": 22,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:25", "end": "10:10" }
+      ],
+      "courses": [
+        {
+          "name": "毕业设计",
+          "teacher": "王某",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 22,
+              "weekType": "ALL",
+              "location": "实验楼502"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

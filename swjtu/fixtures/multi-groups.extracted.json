@@ -1,0 +1,18 @@
+{
+  "today": "2026-11-10",
+  "term": { "name": "2026-2027学年第一学期", "year": 2026, "kind": "first", "source": "page" },
+  "courses": [
+    { "courseName": "数据结构", "staffName": "马一", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1-8周 星期一 第1-2节 9-16周 星期三 第3-4节", "classPlace": "X101" } ] },
+    { "courseName": "操作系统", "staffName": "马二", "staffNameOther": "", "campusName": "",
+      "slots": [
+        { "classTime": "1-8周 星期五 第5-6节", "classPlace": "X102" },
+        { "classTime": "9-16周 星期五 第5-6节", "classPlace": "X102" }
+      ] },
+    { "courseName": "编译原理", "staffName": "马三", "staffNameOther": "", "campusName": "",
+      "slots": [
+        { "classTime": "1-16周 星期二 第1-2节", "classPlace": "X103" },
+        { "classTime": "1-16周 星期二 第1-2节", "classPlace": "X103" }
+      ] }
+  ]
+}

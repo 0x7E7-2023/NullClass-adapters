@@ -1,0 +1,35 @@
+{
+  "term": {
+    "id": "191",
+    "label": "2025-2026学年第一学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    {
+      "id": "191",
+      "label": "2025-2026学年第一学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": {
+    "startDate": "2025-09-01",
+    "endDate": "2025-12-21",
+    "weekStartOnSunday": false,
+    "nameZh": "2025-2026学年第一学期"
+  },
+  "courseUnitList": [
+    { "indexNo": 1, "startTime": 830, "endTime": 915 },
+    { "indexNo": 2, "startTime": 925, "endTime": 1010 }
+  ],
+  "activities": [
+    {
+      "courseName": "工程制图",
+      "teachers": ["郑某"],
+      "room": "教3-102",
+      "weekday": 5,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    }
+  ]
+}

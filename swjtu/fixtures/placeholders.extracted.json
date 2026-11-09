@@ -1,0 +1,14 @@
+{
+  "today": "2026-11-10",
+  "term": { "name": "2026-2027学年第一学期", "year": 2026, "kind": "first", "source": "page" },
+  "courses": [
+    { "courseName": "大学物理实验", "staffName": "未知", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1-16周 星期一 第1-2节", "classPlace": "暂无教室" } ] },
+    { "courseName": "电路实验", "staffName": "赵六（外聘）", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1-16周 星期二 第3-4节", "classPlace": "待定" } ] },
+    { "courseName": "金工实习", "staffName": "钱七", "staffNameOther": "", "campusName": "犀浦校区",
+      "slots": [ { "classTime": "1-16周 星期三 第5-6节", "classPlace": "待定" } ] },
+    { "courseName": "工程训练", "staffName": "孙八", "staffNameOther": "周九、吴十", "campusName": "",
+      "slots": [ { "classTime": "1-16周 星期四 第7-8节", "classPlace": "A101" } ] }
+  ]
+}

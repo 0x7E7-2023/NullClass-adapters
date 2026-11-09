@@ -1,0 +1,57 @@
+{
+  "specVersion": 1,
+  "key": "nwpu",
+  "name": "西北工业大学",
+  "initial": "X",
+  "version": "1.0.0",
+  "author": "上游 zengzoxiong（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://ecampus.nwpu.edu.cn/",
+  "scheduleUrlHint": "https://jwxt.nwpu.edu.cn/student/for-std/course-table",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["ecampus.nwpu.edu.cn", "jwxt.nwpu.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：当前学期、校历 20 周、重复行并周、单双周、未知教师和教室、HHmm 节次时间转 HH:mm",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：教务没给节次时间时用上游写死的 13 节表，课表用到第 14 节时按 H3 顺推补时间",
+      "extracted": "fixtures/no-units.extracted.json",
+      "expected": "fixtures/no-units.expected.json"
+    },
+    {
+      "name": "合成用例：(单)1-8周(双)9-16周 与后置单双、共 N 周、第几周、单双都写、实验备注",
+      "extracted": "fixtures/weeks-text.extracted.json",
+      "expected": "fixtures/weeks-text.expected.json"
+    },
+    {
+      "name": "合成用例：长课名缺教师和教室的提醒不超过 200 字",
+      "extracted": "fixtures/long-warn.extracted.json",
+      "expected": "fixtures/long-warn.expected.json"
+    },
+    {
+      "name": "合成用例：没有校历时总周数用 20，开学日按今天推算并写明",
+      "extracted": "fixtures/no-calendar.extracted.json",
+      "expected": "fixtures/no-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：课表周次比校历更晚时才抬高总周数",
+      "extracted": "fixtures/over-calendar.extracted.json",
+      "expected": "fixtures/over-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：没有校历但课表排到第 22 周时从 20 抬到 22 并提醒",
+      "extracted": "fixtures/raise-default.extracted.json",
+      "expected": "fixtures/raise-default.expected.json"
+    },
+    {
+      "name": "合成用例：没标出当前学期、缺字段、坏周次、认不出的周次、占位教师和教室",
+      "extracted": "fixtures/dirty.extracted.json",
+      "expected": "fixtures/dirty.expected.json"
+    }
+  ]
+}

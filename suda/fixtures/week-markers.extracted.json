@@ -1,0 +1,59 @@
+{
+  "term": {
+    "year": "2026",
+    "semester": "1",
+    "yearLabel": "2026-2027",
+    "semesterLabel": "第一学期"
+  },
+  "today": "2026-10-27",
+  "rows": [
+    {
+      "name": "课程甲",
+      "time": "周一第1节{第1-第8周}",
+      "teacher": "教师甲",
+      "location": "教室A"
+    },
+    {
+      "name": "课程乙",
+      "time": "周二第2节{第1-8周(单)}",
+      "teacher": "教师乙",
+      "location": "教室B"
+    },
+    {
+      "name": "课程丙",
+      "time": "周三第3节{第2-16周|双周}",
+      "teacher": "教师丙",
+      "location": "教室C"
+    },
+    {
+      "name": "课程丁",
+      "time": "周四第4节{(单)1-8周,(双)9-16周}",
+      "teacher": "教师丁",
+      "location": "教室D"
+    },
+    {
+      "name": "课程戊",
+      "time": "周五第5节{第1，3，5，7周}",
+      "teacher": "教师戊",
+      "location": "教室E"
+    },
+    {
+      "name": "课程己",
+      "time": "周六第6节{第1-4周,第7周(共8周)}",
+      "teacher": "教师己",
+      "location": "教室F"
+    },
+    {
+      "name": "课程庚",
+      "time": "周日第7节{第1-16周(单双)}",
+      "teacher": "教师庚",
+      "location": "教室G"
+    },
+    {
+      "name": "课程辛",
+      "time": "周二第8节 第1-9周",
+      "teacher": "教师辛",
+      "location": "教室H"
+    }
+  ]
+}

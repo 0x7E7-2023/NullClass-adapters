@@ -1,0 +1,59 @@
+{
+  "specVersion": 1,
+  "key": "swjtu",
+  "name": "西南交通大学",
+  "initial": "X",
+  "version": "1.0.0",
+  "author": "上游 Weedy233（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://yhxt.swjtu.edu.cn/study/teach/course/stu-course-list",
+  "scheduleUrlHint": "https://yhxt.swjtu.edu.cn/study/teach/course/stu-course-list",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "yhxt.swjtu.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 页面读到 2026-2027 学年第一学期、开学日按 9 月 1 日所在周的周一推算为 2026-08-31、总周数 19；一位教师与两位教师、单周、缺教师（null）、只有校区当地点、一门课两处上课时间",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法 · 「(单)1-8周,(双)9-16周」两段各自归属、「第1-第8周」、「1-15周(单) 共16周」、「共16周,1-8周(共8周),9-16周」只剥备注、全角数字与破折号、「1至8周」「1~16周」",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：一段文字里连写两个上课安排（1-8周 星期一 第1-2节 9-16周 星期三 第3-4节）、两个时间段同地点合并成 1-16 周、完全重复的时间段只留一条",
+      "extracted": "fixtures/multi-groups.extracted.json",
+      "expected": "fixtures/multi-groups.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 缺教师 / 缺教室 + 没有上课时间的课 · 提醒按类型汇总、点名课名截到 20 字、每条提醒不超 200 字；认不出的上课时间与没给时间的课都计数",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：读不到学期 → 按 2026-11-10 推算为 2026-2027 学年第一学期并说明；课表排到第 22 周 → 总周数抬到 22；第 14-15 节超出 13 节表 → 顺推 22:00-22:45、22:50-23:35",
+      "extracted": "fixtures/term-missing.extracted.json",
+      "expected": "fixtures/term-missing.expected.json"
+    },
+    {
+      "name": "合成用例：周次 25-32 只留 25-30、总周数抬到 30；星期写错 / 第 0 节 / 没有周次 / 上课时间认不出一共 4 处跳过并分类计数；单双同写按每周都上；教学班序号与「(3组)」备注括号被摘掉并计数",
+      "extracted": "fixtures/anomalies.extracted.json",
+      "expected": "fixtures/anomalies.expected.json"
+    },
+    {
+      "name": "合成用例：教师与教室的占位词 · 「未知」教师与「暂无教室」都交 null、教师括号备注不拆成第二位教师、「待定」教室回落到校区名",
+      "extracted": "fixtures/placeholders.extracted.json",
+      "expected": "fixtures/placeholders.expected.json"
+    },
+    {
+      "name": "合成用例：「第1-第2节」「第3至第4节」与全角数字的节次写法都要认出，别整行丢课",
+      "extracted": "fixtures/section-variants.extracted.json",
+      "expected": "fixtures/section-variants.expected.json"
+    }
+  ]
+}

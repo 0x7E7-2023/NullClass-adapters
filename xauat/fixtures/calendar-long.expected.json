@@ -1,0 +1,41 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务系统没有给出节次时间，已按课表里每节课实际出现的开始时间排出 1 节（最早 08:00 开始），请在学期管理里核对上下课时间。",
+    "按教务数据算出的学期总周数是 30 周，超过本应用支持的 25 周，已按 25 周导入。"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第一学期",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 25,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "09:35"
+        }
+      ],
+      "courses": [
+        {
+          "name": "概率论",
+          "teacher": "吴某",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 1,
+              "startWeek": 1,
+              "endWeek": 1,
+              "weekType": "ALL",
+              "location": "A301"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

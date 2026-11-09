@@ -1,0 +1,91 @@
+{
+  "_case": "复审修正用例：同一条记录重复出现时先按内容去重再计数（日期读不出的、课表行都只算一条）；同一个开始时间的下课时间有三种出入时按「开始时间」只计 1 个；校历只数得出 7 周而课表排到第 15 周时，抬高与 16 周下限两条提醒的周数互不矛盾",
+  "term": {
+    "id": "2025-2026-2",
+    "label": "2025-2026学年第二学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    {
+      "id": "2025-2026-2",
+      "label": "2025-2026学年第二学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": {
+    "startDate": "2026-02-23",
+    "endDate": "2026-04-12"
+  },
+  "lessonList": [
+    {
+      "id": 401,
+      "courseName": "高等数学"
+    }
+  ],
+  "scheduleList": [
+    {
+      "lessonId": 401,
+      "date": "待定",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "李某",
+      "room": "B203"
+    },
+    {
+      "lessonId": 401,
+      "date": "待定",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "李某",
+      "room": "B203"
+    },
+    {
+      "lessonId": 401,
+      "date": "2026-02-23",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "李某",
+      "room": "B203"
+    },
+    {
+      "lessonId": 401,
+      "date": "2026-02-23",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "李某",
+      "room": "B203"
+    },
+    {
+      "lessonId": 401,
+      "date": "2026-06-01",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "李某",
+      "room": "B203"
+    },
+    {
+      "lessonId": 401,
+      "date": "2026-06-01",
+      "startTime": 800,
+      "endTime": 940,
+      "personName": "李某",
+      "room": "B203"
+    },
+    {
+      "lessonId": 401,
+      "date": "2026-06-01",
+      "startTime": 800,
+      "endTime": 945,
+      "personName": "李某",
+      "room": "B203"
+    },
+    {
+      "lessonId": 401,
+      "date": "2026-06-01",
+      "startTime": 800,
+      "endTime": 950,
+      "personName": "李某",
+      "room": "B203"
+    }
+  ]
+}

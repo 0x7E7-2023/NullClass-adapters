@@ -1,0 +1,31 @@
+{
+  "today": "2026-11-10",
+  "term": {
+    "name": "2026-2027学年第一学期",
+    "year": 2026,
+    "kind": "first",
+    "source": "page"
+  },
+  "courses": [
+    {
+      "courseName": "线性代数",
+      "staffName": "王老师",
+      "staffNameOther": "",
+      "campusName": "犀浦校区",
+      "slots": [
+        {
+          "classTime": "1-16周 星期一 第1-第2节",
+          "classPlace": "犀浦校区 X2101"
+        },
+        {
+          "classTime": "1-16周 星期二 第3至第4节",
+          "classPlace": "犀浦校区 X2101"
+        },
+        {
+          "classTime": "１－１６周 星期三 第５－６节",
+          "classPlace": "犀浦校区 X2101"
+        }
+      ]
+    }
+  ]
+}

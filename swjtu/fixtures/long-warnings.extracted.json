@@ -1,0 +1,20 @@
+{
+  "today": "2026-11-10",
+  "term": { "name": "2026-2027学年第一学期", "year": 2026, "kind": "first", "source": "page" },
+  "courses": [
+    { "courseName": "跨学科创新实践甲与工程伦理专题研讨课程设计", "staffName": "", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1-16周 星期一 第1-2节", "classPlace": "" } ] },
+    { "courseName": "跨学科创新实践乙与工程伦理专题研讨课程设计", "staffName": "", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1-16周 星期二 第1-2节", "classPlace": "" } ] },
+    { "courseName": "跨学科创新实践丙与工程伦理专题研讨课程设计", "staffName": "", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1-16周 星期三 第1-2节", "classPlace": "" } ] },
+    { "courseName": "跨学科创新实践丁与工程伦理专题研讨课程设计", "staffName": "", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1-16周 星期四 第1-2节", "classPlace": "" } ] },
+    { "courseName": "跨学科创新实践戊与工程伦理专题研讨课程设计", "staffName": "", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "1-16周 星期五 第1-2节", "classPlace": "" } ] },
+    { "courseName": "社会实践", "staffName": "教师甲", "staffNameOther": "", "campusName": "",
+      "slots": [ { "classTime": "社会实践周 星期一", "classPlace": "A101" } ] },
+    { "courseName": "军事理论", "staffName": "教师乙", "staffNameOther": "", "campusName": "",
+      "slots": [] }
+  ]
+}

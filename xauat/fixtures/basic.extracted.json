@@ -1,0 +1,315 @@
+{
+  "term": {
+    "id": "2025-2026-1",
+    "label": "2025-2026学年第一学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    {
+      "id": "2025-2026-1",
+      "label": "2025-2026学年第一学期",
+      "selected": true
+    },
+    {
+      "id": "2024-2025-2",
+      "label": "2024-2025学年第二学期",
+      "selected": false
+    }
+  ],
+  "semesterMeta": {
+    "startDate": "2025-09-01",
+    "endDate": "2026-01-18"
+  },
+  "lessonList": [
+    {
+      "id": 101,
+      "courseName": "高等数学"
+    },
+    {
+      "id": 102,
+      "courseName": "大学英语"
+    },
+    {
+      "id": 103,
+      "courseName": "体育"
+    },
+    {
+      "id": 104,
+      "courseName": "没排课的课"
+    }
+  ],
+  "scheduleList": [
+    {
+      "lessonId": 101,
+      "date": "2025-09-01",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-09-08",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-09-15",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-09-22",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-09-29",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-10-06",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-10-13",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-10-20",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-10-27",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-11-03",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-11-10",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-11-17",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-11-24",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-12-01",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-12-08",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-12-15",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-09-01",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 101,
+      "date": "2025-09-01",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "林某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 102,
+      "date": "2025-09-03",
+      "startTime": 1005,
+      "endTime": 1140,
+      "personName": "赵某",
+      "room": "B201"
+    },
+    {
+      "lessonId": 102,
+      "date": "2025-09-17",
+      "startTime": 1005,
+      "endTime": 1140,
+      "personName": "赵某",
+      "room": "B201"
+    },
+    {
+      "lessonId": 102,
+      "date": "2025-10-01",
+      "startTime": 1005,
+      "endTime": 1140,
+      "personName": "赵某",
+      "room": "B201"
+    },
+    {
+      "lessonId": 102,
+      "date": "2025-10-15",
+      "startTime": 1005,
+      "endTime": 1140,
+      "personName": "赵某",
+      "room": "B201"
+    },
+    {
+      "lessonId": 102,
+      "date": "2025-10-29",
+      "startTime": 1005,
+      "endTime": 1140,
+      "personName": "赵某",
+      "room": "B201"
+    },
+    {
+      "lessonId": 102,
+      "date": "2025-11-12",
+      "startTime": 1005,
+      "endTime": 1140,
+      "personName": "赵某",
+      "room": "B201"
+    },
+    {
+      "lessonId": 102,
+      "date": "2025-11-26",
+      "startTime": 1005,
+      "endTime": 1140,
+      "personName": "赵某",
+      "room": "B201"
+    },
+    {
+      "lessonId": 102,
+      "date": "2025-12-10",
+      "startTime": 1005,
+      "endTime": 1140,
+      "personName": "赵某",
+      "room": "B201"
+    },
+    {
+      "lessonId": 103,
+      "date": "2025-09-09",
+      "startTime": 1400,
+      "endTime": 1535,
+      "personName": "未知",
+      "room": "待定"
+    },
+    {
+      "lessonId": 103,
+      "date": "2025-09-23",
+      "startTime": 1400,
+      "endTime": 1535,
+      "personName": "未知",
+      "room": "待定"
+    },
+    {
+      "lessonId": 103,
+      "date": "2025-10-07",
+      "startTime": 1400,
+      "endTime": 1535,
+      "personName": "未知",
+      "room": "待定"
+    },
+    {
+      "lessonId": 103,
+      "date": "2025-10-21",
+      "startTime": 1400,
+      "endTime": 1535,
+      "personName": "未知",
+      "room": "待定"
+    },
+    {
+      "lessonId": 103,
+      "date": "2025-11-04",
+      "startTime": 1400,
+      "endTime": 1535,
+      "personName": "未知",
+      "room": "待定"
+    },
+    {
+      "lessonId": 103,
+      "date": "2025-11-18",
+      "startTime": 1400,
+      "endTime": 1535,
+      "personName": "未知",
+      "room": "待定"
+    },
+    {
+      "lessonId": 103,
+      "date": "2025-12-02",
+      "startTime": 1400,
+      "endTime": 1535,
+      "personName": "未知",
+      "room": "待定"
+    },
+    {
+      "lessonId": 103,
+      "date": "2025-12-16",
+      "startTime": 1400,
+      "endTime": 1535,
+      "personName": "未知",
+      "room": "待定"
+    }
+  ]
+}

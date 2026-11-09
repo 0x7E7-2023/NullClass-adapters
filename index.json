@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.11.10.1",
+  "version": "2026.11.10.2",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -635,6 +635,12 @@
       "path": "lyu"
     },
     {
+      "key": "lzu",
+      "name": "兰州大学",
+      "version": "1.0.0",
+      "path": "lzu"
+    },
+    {
       "key": "masu",
       "name": "马鞍山学院",
       "version": "1.0.0",
@@ -747,6 +753,12 @@
       "name": "南京信息工程大学",
       "version": "1.0.0",
       "path": "nuist"
+    },
+    {
+      "key": "nwpu",
+      "name": "西北工业大学",
+      "version": "1.0.0",
+      "path": "nwpu"
     },
     {
       "key": "nynu",
@@ -923,10 +935,22 @@
       "path": "stcnchu"
     },
     {
+      "key": "suda",
+      "name": "苏州大学",
+      "version": "1.0.0",
+      "path": "suda"
+    },
+    {
       "key": "swfu",
       "name": "西南林业大学",
       "version": "1.0.1",
       "path": "swfu"
+    },
+    {
+      "key": "swjtu",
+      "name": "西南交通大学",
+      "version": "1.0.0",
+      "path": "swjtu"
     },
     {
       "key": "swu",
@@ -1077,6 +1101,12 @@
       "name": "西安工业大学",
       "version": "1.1.0",
       "path": "xatu"
+    },
+    {
+      "key": "xauat",
+      "name": "西安建筑科技大学",
+      "version": "1.0.0",
+      "path": "xauat"
     },
     {
       "key": "xaut",

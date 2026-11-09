@@ -1,0 +1,36 @@
+{
+  "term": {
+    "id": "201",
+    "label": "2025-2026学年第二学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    {
+      "id": "201",
+      "label": "2025-2026学年第二学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": {
+    "startDate": null,
+    "endDate": null,
+    "weekStartOnSunday": false,
+    "nameZh": "2025-2026学年第二学期"
+  },
+  "courseUnitList": [
+    { "indexNo": 1, "startTime": 830, "endTime": 915 },
+    { "indexNo": 2, "startTime": 925, "endTime": 1010 }
+  ],
+  "activities": [
+    {
+      "courseName": "毕业设计",
+      "teachers": ["王某"],
+      "room": "实验楼502",
+      "weekday": 2,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+    }
+  ],
+  "today": "2026-02-25"
+}

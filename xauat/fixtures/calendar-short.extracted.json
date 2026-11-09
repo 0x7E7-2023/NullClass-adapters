@@ -1,0 +1,42 @@
+{
+  "term": {
+    "id": "2025-2026-2",
+    "label": "2025-2026学年第二学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    {
+      "id": "2025-2026-2",
+      "label": "2025-2026学年第二学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": {
+    "startDate": "2026-02-23",
+    "endDate": "2026-04-12"
+  },
+  "lessonList": [
+    {
+      "id": 801,
+      "courseName": "线性代数"
+    }
+  ],
+  "scheduleList": [
+    {
+      "lessonId": 801,
+      "date": "2026-02-23",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "钱某",
+      "room": "A201"
+    },
+    {
+      "lessonId": 801,
+      "date": "2026-03-02",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "钱某",
+      "room": "A201"
+    }
+  ]
+}

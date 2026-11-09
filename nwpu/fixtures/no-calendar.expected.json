@@ -1,0 +1,38 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "开学日期教务系统没有给出，已按最近的周一推算为 2026-08-31。它决定现在是第几周，请在学期管理里核对。",
+    "教务系统没有给出可用的学期校历，学期总周数按 20 周导入（课表最晚排到第 16 周）。如与学校安排不符，请在学期管理里改。"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:25", "end": "10:10" }
+      ],
+      "courses": [
+        {
+          "name": "数据结构",
+          "teacher": "吴某",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教2-201"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

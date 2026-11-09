@@ -1,0 +1,29 @@
+{
+  "term": {
+    "year": "2026",
+    "semester": "1",
+    "yearLabel": "2026-2027",
+    "semesterLabel": "第一学期"
+  },
+  "today": "2026-10-27",
+  "rows": [
+    {
+      "name": "体育",
+      "time": "周日第1,2节{第1-16周}",
+      "teacher": "未知",
+      "location": "体育馆"
+    },
+    {
+      "name": "音乐鉴赏",
+      "time": "周天第3,4节{第1-16周}",
+      "teacher": "暂无教师",
+      "location": "暂无"
+    },
+    {
+      "name": "美术",
+      "time": "周六第5节{第1-16周}",
+      "teacher": "待定",
+      "location": "艺术楼101"
+    }
+  ]
+}

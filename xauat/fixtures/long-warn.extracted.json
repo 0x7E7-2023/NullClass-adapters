@@ -1,0 +1,58 @@
+{
+  "term": {
+    "id": "2025-2026-1",
+    "label": "2025-2026学年第一学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    {
+      "id": "2025-2026-1",
+      "label": "2025-2026学年第一学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": {
+    "startDate": "2025-09-01",
+    "endDate": "2026-01-18"
+  },
+  "lessonList": [
+    {
+      "id": 501,
+      "courseName": "土木工程结构试验与检测技术综合实践课程甲甲甲"
+    },
+    {
+      "id": 502,
+      "courseName": "建筑环境与能源应用工程专业生产实习课程乙乙乙"
+    },
+    {
+      "id": 503,
+      "courseName": "城乡规划与设计专业毕业设计综合训练课程丙丙丙"
+    }
+  ],
+  "scheduleList": [
+    {
+      "lessonId": 501,
+      "date": "2025-09-01",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": null,
+      "room": "E101"
+    },
+    {
+      "lessonId": 502,
+      "date": "2025-09-02",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "",
+      "room": "E102"
+    },
+    {
+      "lessonId": 503,
+      "date": "2025-09-03",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "暂无",
+      "room": "E103"
+    }
+  ]
+}

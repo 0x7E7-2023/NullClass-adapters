@@ -1,0 +1,80 @@
+{
+  "term": {
+    "id": "191",
+    "label": "2025-2026学年第一学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    {
+      "id": "191",
+      "label": "2025-2026学年第一学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": {
+    "startDate": "2025-09-01",
+    "endDate": "2026-01-18",
+    "weekStartOnSunday": false,
+    "nameZh": "2025-2026学年第一学期"
+  },
+  "courseUnitList": [
+    { "indexNo": 1, "startTime": 830, "endTime": 915 },
+    { "indexNo": 2, "startTime": 925, "endTime": 1010 }
+  ],
+  "activities": [
+    {
+      "courseName": "单双前置",
+      "teachers": ["周某"],
+      "room": "教西A101",
+      "weekday": 1,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": "(单)1-8周(双)9-16周"
+    },
+    {
+      "courseName": "单双后置",
+      "teachers": ["周某"],
+      "room": "教西A101",
+      "weekday": 2,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": "1-8周(单)9-16周(双)"
+    },
+    {
+      "courseName": "去掉总周备注",
+      "teachers": ["周某"],
+      "room": "教西A102",
+      "weekday": 3,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": "1-8周(共8周),9-16周"
+    },
+    {
+      "courseName": "第字区间",
+      "teachers": ["周某"],
+      "room": "教西A103",
+      "weekday": 4,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": "第1-第8周"
+    },
+    {
+      "courseName": "单双都写",
+      "teachers": ["周某"],
+      "room": "教西A104",
+      "weekday": 5,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": "1-16周(单双周)"
+    },
+    {
+      "courseName": "带实验备注",
+      "teachers": ["周某"],
+      "room": "教西A105",
+      "weekday": 6,
+      "startUnit": 1,
+      "endUnit": 2,
+      "weekIndexes": "1-16周(实验)"
+    }
+  ]
+}

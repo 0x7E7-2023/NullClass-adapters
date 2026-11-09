@@ -1,0 +1,66 @@
+{
+  "term": {
+    "id": "2025-2026-2",
+    "label": "2025-2026学年第二学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    {
+      "id": "2025-2026-2",
+      "label": "2025-2026学年第二学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": {
+    "startDate": "2026-02-23",
+    "endDate": "2026-07-05"
+  },
+  "lessonList": [
+    {
+      "id": 301,
+      "courseName": "大学物理"
+    }
+  ],
+  "scheduleList": [
+    {
+      "lessonId": 301,
+      "date": "2026-02-16",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "张某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 301,
+      "date": "2026-02-23",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "张某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 301,
+      "date": "2026-03-02",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "张某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 301,
+      "date": "2026-03-09",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "张某",
+      "room": "A101"
+    },
+    {
+      "lessonId": 301,
+      "date": "2026-09-07",
+      "startTime": 800,
+      "endTime": 935,
+      "personName": "张某",
+      "room": "A101"
+    }
+  ]
+}
