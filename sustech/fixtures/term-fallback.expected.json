@@ -1,0 +1,98 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "没能读到教务的学年学期，学期名已按今天的日期推算，请在学期管理里核对",
+    "没能读到教务的当前教学周，第 1 周已按本机日期所在周的周一推算为 2026-11-09，请在学期管理里核对",
+    "没能从教务读到学期总周数，已按 20 周导入，请在学期管理里核对",
+    "没能读到教务的节次时间，已按学校公布的常规节次时间导入（第 1 节 08:00-08:50，第 12 节 22:20-23:10），学校调整后请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "南方科技大学 2026-2027学年第一学期",
+      "firstDay": "2026-11-09",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:50"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:00",
+          "end": "09:50"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:20",
+          "end": "11:10"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:20",
+          "end": "12:10"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:00",
+          "end": "14:50"
+        },
+        {
+          "periodIndex": 6,
+          "start": "15:00",
+          "end": "15:50"
+        },
+        {
+          "periodIndex": 7,
+          "start": "16:20",
+          "end": "17:10"
+        },
+        {
+          "periodIndex": 8,
+          "start": "17:20",
+          "end": "18:10"
+        },
+        {
+          "periodIndex": 9,
+          "start": "19:00",
+          "end": "19:50"
+        },
+        {
+          "periodIndex": 10,
+          "start": "20:00",
+          "end": "20:50"
+        },
+        {
+          "periodIndex": 11,
+          "start": "21:20",
+          "end": "22:10"
+        },
+        {
+          "periodIndex": 12,
+          "start": "22:20",
+          "end": "23:10"
+        }
+      ],
+      "courses": [
+        {
+          "name": "课程甲",
+          "teacher": "教师甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "一教101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

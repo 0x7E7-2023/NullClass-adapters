@@ -1,0 +1,35 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "开学日期取自教务系统的校历：第 1 周从 2026-11-09 开始，请在「学期管理」里核对成学校实际开学日",
+    "学期名是推算的：教务没有给出学年学期，已按提取当天 2026-11-10 推为「扬州大学 2026-2027学年第一学期」，如与实际不符可在导入后重命名",
+    "学期总周数取自教务系统的校历（20 周），如与实际不符可在「学期管理」里改",
+    "节次时间取自教务系统给出的时间，请在「学期管理」里核对是否与学校一致",
+    "教务返回的节次时间里有 2 节读不出来，已跳过该节；其余照常，请在导入后核对上课时间"
+  ],
+  "terms": [
+    {
+      "name": "扬州大学 2026-2027学年第一学期",
+      "firstDay": "2026-11-09",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "09:50", "end": "10:35" },
+        { "periodIndex": 4, "start": "10:45", "end": "11:30" }
+      ],
+      "courses": [
+        {
+          "name": "大学物理",
+          "teacher": "李明",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "荷花池校区物理楼101" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "fetchedDate": "2026-09-09",
+  "term": { "text": "2026-2027学年第一学期", "isDefault": true },
+  "rq": null,
+  "skzc": null,
+  "errorMessage": null,
+  "courses": [
+    {
+      "courseName": "跨学科创新实践与工程训练综合课程设计实践环节",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        { "classDay": "1", "classSessions": "1", "continuingSession": "2", "classWeek": "1111111111111111", "campusName": "", "classroomName": "" }
+      ]
+    },
+    {
+      "courseName": "人工智能与机器学习前沿专题研讨课程综合实践环节",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        { "classDay": "2", "classSessions": "3", "continuingSession": "2", "classWeek": "1111111111111111", "campusName": "", "classroomName": "" }
+      ]
+    },
+    {
+      "courseName": "面向乡村振兴的社会调查与数据分析综合训练环节",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        { "classDay": "3", "classSessions": "5", "continuingSession": "2", "classWeek": "1111111111111111", "campusName": "", "classroomName": "" }
+      ]
+    },
+    {
+      "courseName": "智能制造装备设计与虚拟仿真综合实践训练环节",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        { "classDay": "4", "classSessions": "7", "continuingSession": "2", "classWeek": "1111111111111111", "campusName": "", "classroomName": "" }
+      ]
+    },
+    {
+      "courseName": "大学生创新创业训练计划项目综合实践与成果展示",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        { "classDay": "5", "classSessions": "9", "continuingSession": "2", "classWeek": "1111111111111111", "campusName": "", "classroomName": "" }
+      ]
+    },
+    {
+      "courseName": "生态文明建设与绿色低碳发展专题综合实践环节",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        { "classDay": "6", "classSessions": "11", "continuingSession": "2", "classWeek": "1111111111111111", "campusName": "", "classroomName": "" }
+      ]
+    }
+  ],
+  "slots": [
+    { "jc": "1", "kssj": "0800", "jssj": "0845" },
+    { "jc": "2", "kssj": "0855", "jssj": "0940" },
+    { "jc": "3", "kssj": "0950", "jssj": "1035" },
+    { "jc": "4", "kssj": "1045", "jssj": "1130" },
+    { "jc": "5", "kssj": "1135", "jssj": "1220" },
+    { "jc": "6", "kssj": "1400", "jssj": "1445" },
+    { "jc": "7", "kssj": "1455", "jssj": "1540" },
+    { "jc": "8", "kssj": "1550", "jssj": "1635" },
+    { "jc": "9", "kssj": "1645", "jssj": "1730" },
+    { "jc": "10", "kssj": "1830", "jssj": "1915" },
+    { "jc": "11", "kssj": "1925", "jssj": "2010" },
+    { "jc": "12", "kssj": "2020", "jssj": "2105" }
+  ]
+}

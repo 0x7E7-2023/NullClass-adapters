@@ -1,0 +1,71 @@
+{
+  "specVersion": 1,
+  "key": "yzu",
+  "name": "扬州大学",
+  "initial": "Y",
+  "version": "1.0.0",
+  "author": "上游 Thanatos（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://webvpn.yzu.edu.cn/login",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（学期下拉框选中项、连续 2 节、单双周位串、重复安排去重、无排课课程）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：单双周与连续节数（单周 / 双周位串、连续 3 节、连续节数缺失按 1 节、周次位串读不出的课跳过）",
+      "extracted": "fixtures/odd-even.extracted.json",
+      "expected": "fixtures/odd-even.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师 / 缺教室（占位词交空、地点只有校区、地点只有教室、都没有）",
+      "extracted": "fixtures/missing-fields.extracted.json",
+      "expected": "fixtures/missing-fields.expected.json"
+    },
+    {
+      "name": "合成用例：教务没有节次时间时按学校公布的节次时间回落并提醒",
+      "extracted": "fixtures/fallback-slots.extracted.json",
+      "expected": "fixtures/fallback-slots.expected.json"
+    },
+    {
+      "name": "合成用例：长课名与同类缺项多门课，提醒里课名截短、单条不超过 200 字",
+      "extracted": "fixtures/long-names.extracted.json",
+      "expected": "fixtures/long-names.expected.json"
+    },
+    {
+      "name": "合成用例：课表周次超出 20 周抬高总周数、超过 30 周截断并提醒",
+      "extracted": "fixtures/weeks-beyond.extracted.json",
+      "expected": "fixtures/weeks-beyond.expected.json"
+    },
+    {
+      "name": "合成用例：没有学期下拉框时推算学期名与开学日，节次时间里有坏行跳过",
+      "extracted": "fixtures/term-missing.extracted.json",
+      "expected": "fixtures/term-missing.expected.json"
+    },
+    {
+      "name": "合成用例：所选学期不是教务当前学期时校历的开学日与周数不适用，按提取日与 20 周推算并提醒",
+      "extracted": "fixtures/calendar-ignored.extracted.json",
+      "expected": "fixtures/calendar-ignored.expected.json"
+    },
+    {
+      "name": "合成用例：整门被跳过的课不再说成已照常导入；重复安排只算一条缺连续节数；1 月属上一学年第一学期（复核修正）",
+      "extracted": "fixtures/dedupe-and-dropped.extracted.json",
+      "expected": "fixtures/dedupe-and-dropped.expected.json"
+    },
+    {
+      "name": "合成用例：1 月提取时学期名推成上一学年第一学期（复核修正）",
+      "extracted": "fixtures/january-term-name.extracted.json",
+      "expected": "fixtures/january-term-name.expected.json"
+    },
+    {
+      "name": "合成用例：选中的不是当前学期且校历没取到，提醒不再谎称校历给了当前学期周数（复核修正）",
+      "extracted": "fixtures/calendar-absent.extracted.json",
+      "expected": "fixtures/calendar-absent.expected.json"
+    }
+  ]
+}

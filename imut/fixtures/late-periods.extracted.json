@@ -1,0 +1,22 @@
+{
+  "year": "45",
+  "term": "3",
+  "termText": "",
+  "today": "2025-11-10",
+  "firstClassDate": "2025-09-01",
+  "weekCount": 20,
+  "timeSlots": [
+    { "number": 1, "start": "08:00", "end": "08:45" },
+    { "number": 2, "start": "08:55", "end": "09:35" },
+    { "number": 3, "start": "10:05", "end": "10:50" },
+    { "number": 4, "start": "11:00", "end": "11:40" },
+    { "number": 5, "start": "13:30", "end": "14:15" },
+    { "number": 6, "start": "14:25", "end": "15:05" },
+    { "number": 7, "start": "15:35", "end": "16:20" },
+    { "number": 8, "start": "16:30", "end": "17:10" }
+  ],
+  "rows": [
+    { "day": 1, "section": 9, "lines": ["<<大学物理>>;1", "教A101", "教师甲", "1-8周", "讲课"] },
+    { "day": 2, "section": 13, "lines": ["<<夜间实验>>;2", "实验楼E", "教师乙", "9-16周", "实验"] }
+  ]
+}

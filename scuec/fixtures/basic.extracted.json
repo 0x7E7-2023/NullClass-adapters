@@ -1,0 +1,192 @@
+{
+  "today": "2026-11-10",
+  "truncated": false,
+  "rows": [
+    {
+      "section": [
+        "第1节",
+        "08:00~08:45"
+      ],
+      "days": [
+        [
+          [
+            "高等数学",
+            "(第1-2节)1-16周",
+            "张三",
+            "1-101"
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第2节",
+        "08:55~09:40"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第3节",
+        "10:00~10:45"
+      ],
+      "days": [
+        null,
+        null,
+        [
+          [
+            "大学英语",
+            "(第3-4节)1-15周(单)",
+            "李四",
+            "2-203"
+          ]
+        ],
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第4节",
+        "10:55~11:40"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第5节",
+        "14:10~14:55"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        [
+          [
+            "体育",
+            "(第5-6节)1-8周",
+            "王五"
+          ]
+        ],
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第6节",
+        "15:05~15:50"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第7节",
+        "16:00~16:45"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第8节",
+        "16:55~17:40"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第9节",
+        "18:40~19:25"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第10节",
+        "19:30~20:15"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第11节",
+        "20:20~21:05"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "unscheduled": []
+}

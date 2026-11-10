@@ -1,0 +1,6 @@
+{
+  "today": "2026-11-10",
+  "semesterId": "561",
+  "semesterRaw": "{semesters:[{id:560,schoolYear:'2025-2026',name:'2'},{id:561,schoolYear:'2026-2027',name:'1'}],semesterId:561}",
+  "courseHtml": "<div id='courseTable'><script type='text/javascript'>var table0 = new CourseTable();var unitCount = 11;var activity = null;activity = new TaskActivity('8001','','','习近平新时代中国特色社会主义思想概论实践课','','','111111111111111110000000000');activity.index = 0*unitCount+0;table0.activities.add(activity);activity = new TaskActivity('8002','','','大学计算机基础与程序设计实验课程设计','','','111111111111111110000000000');activity.index = 1*unitCount+2;table0.activities.add(activity);activity = new TaskActivity('8003','','','高等数学分析与线性代数综合应用研讨课','','','111111111111111110000000000');activity.index = 2*unitCount+4;table0.activities.add(activity);</script></div>"
+}

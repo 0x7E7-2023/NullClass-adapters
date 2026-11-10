@@ -1,0 +1,6 @@
+{
+  "today": "2026-11-10",
+  "semesterId": "561",
+  "semesterRaw": "{semesters:[{id:560,schoolYear:'2025-2026',name:'2'},{id:561,schoolYear:'2026-2027',name:'1'}],semesterId:561}",
+  "courseHtml": "<div id='courseTable'><script type='text/javascript'>var table0 = new CourseTable();var unitCount = 11;var activity = null;activity = new TaskActivity('9001','教师甲','','高等数学(A1234)','','东教101','111111111111111110000000000');activity.index = 0*unitCount+0;table0.activities.add(activity);activity = new TaskActivity('9002','教师甲','','高等数学(A1234)','','东教101','111111111000000000000000000');activity.index = 0*unitCount+1;table0.activities.add(activity);activity = new TaskActivity('9003','教师乙','','大学物理','','实验楼201','111111111000000000000000000');activity.index = 1*unitCount+2;table0.activities.add(activity);activity.index = 1*unitCount+3;table0.activities.add(activity);</script></div>"
+}

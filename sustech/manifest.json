@@ -1,0 +1,60 @@
+{
+  "specVersion": 1,
+  "key": "sustech",
+  "name": "南方科技大学",
+  "initial": "N",
+  "version": "1.0.0",
+  "author": "上游 yusancky（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://cas.sustech.edu.cn/cas/login?service=https%3A%2F%2Ftis.sustech.edu.cn%2Fcas",
+  "scheduleUrlHint": "https://tis.sustech.edu.cn/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "tis.sustech.edu.cn",
+    "cas.sustech.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表 · 当前学期、连堂合并、网格重复行去重、ZC 位图按下标展开",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次 · ZC 位图单双与跳周、SKSJ 声明周次校准、单双标记前置与后置、共 N 周备注剥离",
+      "extracted": "fixtures/weeks.extracted.json",
+      "expected": "fixtures/weeks.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师与缺教室 · 占位词交空、按课名汇总，课程照常导入",
+      "extracted": "fixtures/missing-fields.extracted.json",
+      "expected": "fixtures/missing-fields.expected.json"
+    },
+    {
+      "name": "合成用例：节次表不满 · 第 11 节起按课间 10 分钟、每节 50 分钟顺推，越过 23:59 的不补时间",
+      "extracted": "fixtures/periods-extend.extracted.json",
+      "expected": "fixtures/periods-extend.expected.json"
+    },
+    {
+      "name": "合成用例：学期接口失败 · 学年学期按今天的日期推算、当前教学周缺失时开学日按本周周一，节次时间回落写死表，各提醒一条",
+      "extracted": "fixtures/term-fallback.extracted.json",
+      "expected": "fixtures/term-fallback.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒 · 多门 22 字课名缺教师或地点，点名截到 20 字且每条不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：英文授课文本 · SKSJ 为空时读 SKSJ_EN（课名、教师、地点、周次都从它来），SKSJ 有内容时以 SKSJ 为准",
+      "extracted": "fixtures/english-text.extracted.json",
+      "expected": "fixtures/english-text.expected.json"
+    },
+    {
+      "name": "合成用例：课周超过 20 周 · 课表排到第 22 周时抬高学期总周数并提醒",
+      "extracted": "fixtures/weeks-beyond.extracted.json",
+      "expected": "fixtures/weeks-beyond.expected.json"
+    }
+  ]
+}

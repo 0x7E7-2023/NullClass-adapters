@@ -1,0 +1,71 @@
+{
+  "specVersion": 1,
+  "key": "scuec",
+  "name": "中南民族大学",
+  "initial": "Z",
+  "version": "1.0.0",
+  "author": "上游 Zellon0w0（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://webvpn.scuec.edu.cn/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表 · 学期与开学日按提取日期推算（2026-11-10 → 第一学期，2026-08-31）；按表头列数认星期、课程行里的「(第N-M节)」认节次、单周课切出 ODD 段；节次时间逐节取自课表页；缺上课地点的课照常导入并点名",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法 · (单)1-8周,(双)9-16周 与没有逗号的 (单)1-8周(双)9-16周 各自归属、第1周至第8周、第1-第8周、「共16周」只剥备注、整段写在括号里的（第1-16周）、周次里混着「第3-4节」、「10-16周(3学分)」的学分不算周号、后置的 1-8周(单)9-16周(双)",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师与缺教室 · 「未知」「待定」「暂无」「暂无教师」按没给处理（null）；只有一行且像教室编号（2-203）的按地点处理，不当成人名；缺的两类分开计数、课照常导入",
+      "extracted": "fixtures/missing-fields.extracted.json",
+      "expected": "fixtures/missing-fields.expected.json"
+    },
+    {
+      "name": "合成用例：同一门课多个时间地点 · 同名同教师的两天课落成一门课的两个上课安排；同一天相邻节次（3-4 与 5-6）合成一段 3-6；完全重复的格子行只留一条",
+      "extracted": "fixtures/multi-slot.extracted.json",
+      "expected": "fixtures/multi-slot.expected.json"
+    },
+    {
+      "name": "合成用例：认不出的周次与长课名 · 缺课程名 / 缺周次（周次见通知）的行被跳过并列出原文、长课名在提醒里截到 20 字、缺教师 3 门缺教室 3 门分开计数，整条提醒不超过 200 字",
+      "extracted": "fixtures/unknown-weeks.extracted.json",
+      "expected": "fixtures/unknown-weeks.expected.json"
+    },
+    {
+      "name": "合成用例：课表页没有节次时间 · 回落到学校公布的 11 节；课表用到第 12 节按课间 5 分钟、每节 45 分钟顺推；课表排到第 22 周则总周数抬到 22；未安排时间的课程点名提醒",
+      "extracted": "fixtures/fallback-periods.extracted.json",
+      "expected": "fixtures/fallback-periods.expected.json"
+    },
+    {
+      "name": "合成用例：课表页只给了部分节次的时间 · 页面给了第 1、2、4 节，缺的第 3 节与课表用到的第 5~9 节用学校公布的节次时间逐节补齐（只补缺的，不整表覆盖），提醒里说明补了几节",
+      "extracted": "fixtures/partial-periods.extracted.json",
+      "expected": "fixtures/partial-periods.expected.json"
+    },
+    {
+      "name": "合成用例：周次前面只写了单双标记 · 没有节次标记的「高等数学(单)1-8周」「大学物理(双)1-8周」标记属于周次不是课名，后置写法「线性代数1-8周(单)」同样读对",
+      "extracted": "fixtures/week-prefix-only.extracted.json",
+      "expected": "fixtures/week-prefix-only.expected.json"
+    },
+    {
+      "name": "合成用例：课表页只给了第 4 节的时间 · 课在第 1-2 节，第 1、2 节按学校公布的时间补上，提醒里点名的是课表页真正给出的第 4 节，另有 3 节按学校时间补齐",
+      "extracted": "fixtures/first-periods.extracted.json",
+      "expected": "fixtures/first-periods.expected.json"
+    },
+    {
+      "name": "合成用例：字母加数字的教室编号 · 只有一行附加文字时 A305 / C-203 认成地点不当教师；教师与教室两行顺序正常时 B12 也认成地点",
+      "extracted": "fixtures/room-codes.extracted.json",
+      "expected": "fixtures/room-codes.expected.json"
+    },
+    {
+      "name": "合成用例：第二学期 · 按提取日期（2026-02-10）推算为 2025-2026 学年第二学期、开学日 2026-03-02；没有节次只写了上课时间（08:10）的课按最接近的第 1 节放入；不相邻节次按首末范围导入；周次里的序号括号与「单双」同写各自提醒",
+      "extracted": "fixtures/second-term.extracted.json",
+      "expected": "fixtures/second-term.expected.json"
+    }
+  ]
+}

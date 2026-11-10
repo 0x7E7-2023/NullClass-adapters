@@ -1,0 +1,6 @@
+{
+  "today": "2026-11-10",
+  "semesterId": "562",
+  "semesterRaw": null,
+  "courseHtml": "<div id='courseTable'><script type='text/javascript'>var table0 = new CourseTable();var unitCount = 11;var activity = null;activity = new TaskActivity('7001','教师午','','线性代数','','东教203','111111111111111110000000000');activity.index = 2*unitCount+2;table0.activities.add(activity);</script></div>"
+}

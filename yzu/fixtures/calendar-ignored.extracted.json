@@ -1,0 +1,30 @@
+{
+  "fetchedDate": "2026-09-09",
+  "term": { "text": "2025-2026学年第二学期", "isDefault": false },
+  "rq": "20260223",
+  "skzc": "20",
+  "errorMessage": null,
+  "courses": [
+    {
+      "courseName": "线性代数",
+      "attendClassTeacher": "陈十",
+      "timeAndPlaceList": [
+        { "classDay": "2", "classSessions": "3", "continuingSession": "2", "classWeek": "1111111111111111", "campusName": "文汇路校区", "classroomName": "数学楼201" }
+      ]
+    }
+  ],
+  "slots": [
+    { "jc": "1", "kssj": "0800", "jssj": "0845" },
+    { "jc": "2", "kssj": "0855", "jssj": "0940" },
+    { "jc": "3", "kssj": "0950", "jssj": "1035" },
+    { "jc": "4", "kssj": "1045", "jssj": "1130" },
+    { "jc": "5", "kssj": "1135", "jssj": "1220" },
+    { "jc": "6", "kssj": "1400", "jssj": "1445" },
+    { "jc": "7", "kssj": "1455", "jssj": "1540" },
+    { "jc": "8", "kssj": "1550", "jssj": "1635" },
+    { "jc": "9", "kssj": "1645", "jssj": "1730" },
+    { "jc": "10", "kssj": "1830", "jssj": "1915" },
+    { "jc": "11", "kssj": "1925", "jssj": "2010" },
+    { "jc": "12", "kssj": "2020", "jssj": "2105" }
+  ]
+}

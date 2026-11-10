@@ -1,0 +1,16 @@
+{
+  "year": "",
+  "term": "",
+  "termText": "2026秋",
+  "today": "2026-11-10",
+  "firstClassDate": "08-25",
+  "weekCount": 0,
+  "timeSlots": [
+    { "number": 1, "start": "08:00", "end": "08:45" },
+    { "number": 2, "start": "08:55", "end": "09:35" },
+    { "number": 3, "start": "10:05", "end": "10:50" }
+  ],
+  "rows": [
+    { "day": 3, "section": 3, "lines": ["<<概率论>>;1", "教A203", "教师甲", "1-22周", "讲课"] }
+  ]
+}

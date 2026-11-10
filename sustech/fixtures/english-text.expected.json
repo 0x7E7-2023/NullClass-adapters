@@ -1,0 +1,72 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "第 1 周周一已按教务的当前教学周（第 10 周）往回推算为 2026-09-07，请在学期管理里核对",
+    "没能从教务读到学期总周数，已按 20 周导入，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:50"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:00",
+          "end": "09:50"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:20",
+          "end": "11:10"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:20",
+          "end": "12:10"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "教师甲",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "一教110"
+            }
+          ]
+        },
+        {
+          "name": "大学物理",
+          "teacher": "教师乙",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 8,
+              "weekType": "ALL",
+              "location": "二教201"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

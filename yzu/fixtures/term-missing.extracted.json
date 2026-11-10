@@ -1,0 +1,24 @@
+{
+  "fetchedDate": "2026-11-10",
+  "term": null,
+  "rq": "20261109",
+  "skzc": "20",
+  "errorMessage": null,
+  "courses": [
+    {
+      "courseName": "大学物理",
+      "attendClassTeacher": "李明",
+      "timeAndPlaceList": [
+        { "classDay": "2", "classSessions": "3", "continuingSession": "2", "classWeek": "1111111111111111", "campusName": "荷花池校区", "classroomName": "物理楼101" }
+      ]
+    }
+  ],
+  "slots": [
+    { "jc": "1", "kssj": "0800", "jssj": "0845" },
+    { "jc": "2", "kssj": "0855", "jssj": "0940" },
+    { "jc": "3", "kssj": "0950", "jssj": "1035" },
+    { "jc": "4", "kssj": "1045", "jssj": "1130" },
+    { "jc": "5", "kssj": "2500", "jssj": "2600" },
+    { "jc": "6", "kssj": "1000", "jssj": "0950" }
+  ]
+}

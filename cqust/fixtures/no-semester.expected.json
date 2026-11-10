@@ -1,0 +1,41 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "教务系统没有给出节次时间，已按学校公布的节次时间导入（第 1 节 08:30-09:15，共 11 节），请在学期管理里核对。",
+    "教务系统没有给出学期名称，已写成「重庆科技大学2026-2027学年第一学期」，可以在学期管理里改成你想要的名字。",
+    "开学日期教务系统没有给出，已按学期推算为 2026-09-07（第 1 周从周一算起），请在学期管理里核对。",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表最晚排到第 16 周），如与学校安排不符，请在学期管理里改。"
+  ],
+  "terms": [
+    {
+      "name": "重庆科技大学2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:25", "end": "10:10" },
+        { "periodIndex": 3, "start": "10:30", "end": "11:15" },
+        { "periodIndex": 4, "start": "11:25", "end": "12:10" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 7, "start": "16:00", "end": "16:45" },
+        { "periodIndex": 8, "start": "16:55", "end": "17:40" },
+        { "periodIndex": 9, "start": "19:00", "end": "19:45" },
+        { "periodIndex": 10, "start": "19:55", "end": "20:40" },
+        { "periodIndex": 11, "start": "20:50", "end": "21:35" }
+      ],
+      "courses": [
+        {
+          "name": "线性代数",
+          "teacher": "教师午",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 3, "endPeriod": 3, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "东教203" }
+          ]
+        }
+      ]
+    }
+  ]
+}

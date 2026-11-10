@@ -1,0 +1,60 @@
+{
+  "specVersion": 1,
+  "key": "cqust",
+  "name": "重庆科技大学",
+  "initial": "C",
+  "version": "1.0.0",
+  "author": "上游 yuexps（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://web.cqust.edu.cn/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "web.cqust.edu.cn",
+    "jwnew.cqust.edu.cn",
+    "jwnew.cqust.edu.ex2.http.80.ipv6.cqust.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（周次位图、连堂合并、同一节的重复行、缺教师缺教室、学期名来自学期列表、节次时间回落到学校公布的 11 节）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次多段（(单)1-8周(双)9-16周、后置单周、第1周至第8周、混着第3-4节与共8周备注）",
+      "extracted": "fixtures/weeks-text.extracted.json",
+      "expected": "fixtures/weeks-text.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师与缺教室按课程汇总（写「暂无」的也算没有，计数按课程不按格子）",
+      "extracted": "fixtures/missing-teacher-room.extracted.json",
+      "expected": "fixtures/missing-teacher-room.expected.json"
+    },
+    {
+      "name": "合成用例：课表页面给了第 1-2 节的节次时间，第 3-5 节按上一节顺推并提醒",
+      "extracted": "fixtures/page-times.extracted.json",
+      "expected": "fixtures/page-times.expected.json"
+    },
+    {
+      "name": "合成用例：学期列表没取到时的兜底（学期名写成学校名加学年学期、开学日按 9 月 7 日所在周的周一推算）",
+      "extracted": "fixtures/no-semester.extracted.json",
+      "expected": "fixtures/no-semester.expected.json"
+    },
+    {
+      "name": "合成用例：长课名缺教师缺教室，课名截到 20 字、整条提醒不超过 200 字",
+      "extracted": "fixtures/long-warn.extracted.json",
+      "expected": "fixtures/long-warn.expected.json"
+    },
+    {
+      "name": "合成用例：相邻节次周次只部分重合时不并成连堂（第 1 节 1-16 周、第 2 节 1-8 周留两个块，周次一样的第 3-4 节照常合并）",
+      "extracted": "fixtures/merge-weeks.extracted.json",
+      "expected": "fixtures/merge-weeks.expected.json"
+    },
+    {
+      "name": "合成用例：读不了的记录（参数不够、周次全 0、认不出的周次、节次越界、标了停课）与未安排时间的课都出声跳过",
+      "extracted": "fixtures/dirty.extracted.json",
+      "expected": "fixtures/dirty.expected.json"
+    }
+  ]
+}

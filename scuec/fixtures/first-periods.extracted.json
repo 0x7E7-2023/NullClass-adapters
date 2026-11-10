@@ -1,0 +1,168 @@
+{
+  "today": "2026-11-10",
+  "truncated": false,
+  "rows": [
+    {
+      "section": [
+        "第1节"
+      ],
+      "days": [
+        [
+          [
+            "早课(第1-2节)1-16周",
+            "教师甲",
+            "1-101"
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第2节"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第3节"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第4节",
+        "10:55~11:40"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第5节"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第6节"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第7节"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第8节"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第9节"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第10节"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "section": [
+        "第11节"
+      ],
+      "days": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "unscheduled": []
+}

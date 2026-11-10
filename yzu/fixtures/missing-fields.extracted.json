@@ -1,0 +1,44 @@
+{
+  "fetchedDate": "2026-09-09",
+  "term": { "text": "2026-2027学年第一学期", "isDefault": true },
+  "rq": "20260909",
+  "skzc": "20",
+  "errorMessage": null,
+  "courses": [
+    {
+      "courseName": "体育",
+      "attendClassTeacher": "",
+      "timeAndPlaceList": [
+        { "classDay": "3", "classSessions": "5", "continuingSession": "2", "classWeek": "1111111111111111", "campusName": "扬子津校区", "classroomName": "" }
+      ]
+    },
+    {
+      "courseName": "思想道德与法治",
+      "attendClassTeacher": "未知",
+      "timeAndPlaceList": [
+        { "classDay": "1", "classSessions": "3", "continuingSession": "2", "classWeek": "1111111111111111", "campusName": "", "classroomName": "教学楼A203" }
+      ]
+    },
+    {
+      "courseName": "工程制图",
+      "attendClassTeacher": "暂无",
+      "timeAndPlaceList": [
+        { "classDay": "2", "classSessions": "1", "continuingSession": "2", "classWeek": "1111111100000000", "campusName": "", "classroomName": "待定" }
+      ]
+    }
+  ],
+  "slots": [
+    { "jc": "1", "kssj": "0800", "jssj": "0845" },
+    { "jc": "2", "kssj": "0855", "jssj": "0940" },
+    { "jc": "3", "kssj": "0950", "jssj": "1035" },
+    { "jc": "4", "kssj": "1045", "jssj": "1130" },
+    { "jc": "5", "kssj": "1135", "jssj": "1220" },
+    { "jc": "6", "kssj": "1400", "jssj": "1445" },
+    { "jc": "7", "kssj": "1455", "jssj": "1540" },
+    { "jc": "8", "kssj": "1550", "jssj": "1635" },
+    { "jc": "9", "kssj": "1645", "jssj": "1730" },
+    { "jc": "10", "kssj": "1830", "jssj": "1915" },
+    { "jc": "11", "kssj": "1925", "jssj": "2010" },
+    { "jc": "12", "kssj": "2020", "jssj": "2105" }
+  ]
+}

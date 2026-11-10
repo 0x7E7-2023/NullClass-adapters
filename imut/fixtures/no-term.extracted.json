@@ -1,0 +1,14 @@
+{
+  "year": "",
+  "term": "",
+  "termText": "",
+  "today": "2026-11-10",
+  "firstClassDate": "",
+  "weekCount": 0,
+  "timeSlots": [
+    { "number": 1, "start": "08:00", "end": "08:45" }
+  ],
+  "rows": [
+    { "day": 2, "section": 1, "lines": ["<<思想道德与法治>>;1", "教C101", "教师甲", "1-10周", "讲课"] }
+  ]
+}

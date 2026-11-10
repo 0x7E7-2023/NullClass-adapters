@@ -1,0 +1,6 @@
+{
+  "today": "2026-11-10",
+  "semesterId": "561",
+  "semesterRaw": "{semesters:[{id:560,schoolYear:'2025-2026',name:'2'},{id:561,schoolYear:'2026-2027',name:'1'}],semesterId:561}",
+  "courseHtml": "<div id='courseTable'><script type='text/javascript'>var table0 = new CourseTable();var unitCount = 11;var activity = null;activity = new TaskActivity('2001','教师丙','','电路原理','','西教305','(单)1-8周(双)9-16周');activity.index = 3*unitCount+2;table0.activities.add(activity);activity.index = 3*unitCount+3;table0.activities.add(activity);activity = new TaskActivity('2002','教师丁','','工程制图','','制图室','第1周至第8周');activity.index = 4*unitCount+0;table0.activities.add(activity);activity = new TaskActivity('2003','教师戊','','形势与政策','','大礼堂','第3-4节,1-16周');activity.index = 5*unitCount+6;table0.activities.add(activity);activity = new TaskActivity('2004','教师己','','体育','','体育馆','1-16周(单)');activity.index = 1*unitCount+8;table0.activities.add(activity);</script></div>"
+}

@@ -1,0 +1,36 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "节次时间取自教务系统的课表页面（第 1 节 08:30-09:15，共 2 节），请在学期管理里核对。",
+    "第 3、4、5 节没有上下课时间，已按上一节下课后课间 10 分钟、每节 45 分钟顺推，请在学期管理里核对。",
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」。",
+    "开学日期教务系统没有给出，已按学期推算为 2026-09-07（第 1 周从周一算起），请在学期管理里核对。",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表最晚排到第 16 周），如与学校安排不符，请在学期管理里改。"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:30", "end": "09:15" },
+        { "periodIndex": 2, "start": "09:25", "end": "10:10" },
+        { "periodIndex": 3, "start": "10:20", "end": "11:05" },
+        { "periodIndex": 4, "start": "11:15", "end": "12:00" },
+        { "periodIndex": 5, "start": "12:10", "end": "12:55" }
+      ],
+      "courses": [
+        {
+          "name": "数据结构",
+          "teacher": "教师癸",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 5, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "信息楼302" }
+          ]
+        }
+      ]
+    }
+  ]
+}

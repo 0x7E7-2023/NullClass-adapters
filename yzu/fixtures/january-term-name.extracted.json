@@ -1,0 +1,20 @@
+{
+  "fetchedDate": "2027-01-12",
+  "term": null,
+  "rq": null,
+  "skzc": null,
+  "errorMessage": null,
+  "courses": [
+    {
+      "courseName": "马克思主义基本原理",
+      "attendClassTeacher": "周八",
+      "timeAndPlaceList": [
+        { "classDay": "3", "classSessions": "1", "continuingSession": "2", "classWeek": "1111111111000000", "campusName": "文汇路校区", "classroomName": "教学楼B302" }
+      ]
+    }
+  ],
+  "slots": [
+    { "jc": "1", "kssj": "0800", "jssj": "0845" },
+    { "jc": "2", "kssj": "0855", "jssj": "0940" }
+  ]
+}

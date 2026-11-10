@@ -1,0 +1,17 @@
+{
+  "fetchedDate": "2026-09-09",
+  "term": { "text": "2026-2027学年第一学期", "isDefault": true },
+  "rq": "20260907",
+  "skzc": "16",
+  "errorMessage": null,
+  "courses": [
+    {
+      "courseName": "高等数学A",
+      "attendClassTeacher": "张三",
+      "timeAndPlaceList": [
+        { "classDay": "1", "classSessions": "1", "continuingSession": "2", "classWeek": "1111111111111111", "campusName": "文汇路校区", "classroomName": "文科楼101" }
+      ]
+    }
+  ],
+  "slots": null
+}

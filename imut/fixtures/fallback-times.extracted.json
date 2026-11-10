@@ -1,0 +1,13 @@
+{
+  "year": "45",
+  "term": "1",
+  "termText": "",
+  "today": "2026-03-05",
+  "firstClassDate": "",
+  "weekCount": 0,
+  "timeSlots": [],
+  "rows": [
+    { "day": 1, "section": 1, "lines": ["<<线性代数>>;1", "教B201", "教师甲", "3-16周", "讲课"] },
+    { "day": 1, "section": 2, "lines": ["<<线性代数>>;1", "教B201", "教师甲", "3-16周", "讲课"] }
+  ]
+}
