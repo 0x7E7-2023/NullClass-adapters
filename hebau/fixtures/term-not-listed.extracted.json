@@ -1,0 +1,14 @@
+{
+  "term": { "code": "2026-2027-1", "name": "2026-2027学年第一学期", "source": "api", "listed": false },
+  "today": "2026-11-03",
+  "calendarRows": [
+    { "XN": "2026-2027", "XQ": "1", "XQKSRQ": "2026-09-07", "ZZC": "20", "ZJXZC": "" }
+  ],
+  "sectionRows": [
+    { "DM": "1", "KSSJ": "08:00", "JSSJ": "08:45" },
+    { "DM": "2", "KSSJ": "08:55", "JSSJ": "09:40" }
+  ],
+  "rows": [
+    { "KCM": "课程丙", "SKJS": "教师丁", "JASMC": "教三303", "SKXQ": 4, "KSJC": 1, "JSJC": 2, "SKZC": "1111111111111111" }
+  ]
+}

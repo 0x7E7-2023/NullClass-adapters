@@ -1,0 +1,9 @@
+{
+  "term": { "code": "2026-2027-2", "name": "2026-2027学年第二学期", "source": "api", "listed": true },
+  "today": "2026-03-05",
+  "calendarRows": [],
+  "sectionRows": [],
+  "rows": [
+    { "KCM": "课程甲", "SKJS": "教师甲", "JASMC": "教一101", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "111111111111111111111111" }
+  ]
+}

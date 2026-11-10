@@ -1,0 +1,27 @@
+{
+  "today": "2026-11-11",
+  "rows": [
+    { "courseName": "", "teacherName": "教师甲", "week": "mon", "weekList": "1-16", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "", "teacherName": "教师甲", "week": "mon", "weekList": "1-16", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "缺星期课", "teacherName": "教师甲", "week": "", "weekList": "1-16", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "缺星期课", "teacherName": "教师甲", "week": "", "weekList": "1-16", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "缺节次课", "teacherName": "教师甲", "week": "tue", "weekList": "1-16", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": "" } },
+    { "courseName": "缺节次课", "teacherName": "教师甲", "week": "tue", "weekList": "1-16", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": "" } },
+    { "courseName": "缺周次课", "teacherName": "教师甲", "week": "wed", "weekList": "", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "缺周次课", "teacherName": "教师甲", "week": "wed", "weekList": "", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "超周课", "teacherName": "教师甲", "week": "thu", "weekList": "1-16,31-32", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "超周课", "teacherName": "教师甲", "week": "thu", "weekList": "1-16,31-32", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "正常课", "teacherName": "教师甲", "week": "fri", "weekList": "1-16", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 3, "endLesson": 4 } }
+  ]
+}

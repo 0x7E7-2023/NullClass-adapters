@@ -1,0 +1,32 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [],
+  "terms": [{
+    "name": "2026-2027学年第一学期",
+    "firstDay": "2026-09-07",
+    "totalWeeks": 20,
+    "periodTimes": [
+      { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+      { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+      { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+      { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+      { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+      { "periodIndex": 6, "start": "14:55", "end": "15:40" }
+    ],
+    "courses": [
+      { "name": "数据结构", "teacher": "教师甲", "note": null, "blocks": [
+        { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "B101" }
+      ] },
+      { "name": "操作系统", "teacher": "教师乙", "note": null, "blocks": [
+        { "dayOfWeek": 1, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "B201" },
+        { "dayOfWeek": 1, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "B201" }
+      ] },
+      { "name": "离散数学", "teacher": "教师丙", "note": null, "blocks": [
+        { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "C301" },
+        { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "C302" }
+      ] }
+    ]
+  }]
+}

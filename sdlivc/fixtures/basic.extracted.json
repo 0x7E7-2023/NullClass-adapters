@@ -1,0 +1,15 @@
+{
+  "today": "2026-11-11",
+  "rows": [
+    { "courseName": "高等数学", "teacherName": "教师甲", "week": "mon", "weekList": "1-8,10-16", "stopCourse": "NO",
+      "eduPlace": { "placeName": "教1-101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "高等数学", "teacherName": "教师甲", "week": "mon", "weekList": "9", "stopCourse": "NO",
+      "eduPlace": { "placeName": "教1-101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 3, "endLesson": 4 } },
+    { "courseName": "大学英语", "teacherName": "未知", "week": "tue", "weekList": "1-16", "stopCourse": "NO",
+      "eduPlace": { "placeName": "待定", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 5, "endLesson": 6 } },
+    { "courseName": "体育", "teacherName": "教师乙", "week": "wed", "weekList": "", "stopCourse": "NO",
+      "eduPlace": { "placeName": "操场", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 7, "endLesson": 8 } },
+    { "courseName": "停开课", "teacherName": "教师丙", "week": "thu", "weekList": "1-16", "stopCourse": "YES",
+      "eduPlace": { "placeName": "教室X", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } }
+  ]
+}

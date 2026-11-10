@@ -1,0 +1,76 @@
+{
+  "specVersion": 1,
+  "key": "guc",
+  "name": "吉利学院",
+  "initial": "J",
+  "version": "1.0.0",
+  "author": "上游 Selffox（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jw.guc.edu.cn/yethan/UserAction?setAction=userLogin",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表 · 页头学期 2025-2026第2学期、表头 03月02日 → 2026-03-02；连堂 1-2 节合并；多周重复的同一格去重；课程编号前缀去掉、课名里的版本号括号（4）保留；缺教师 2 门、缺教室 1 门照常导入并汇总",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法 · (单)1-8周,(双)9-16周 两段各自归属、没有逗号的 (单)1-8周(双)9-16周、1-8周(双)9-16周、第1-第8周、第1周至第8周、1-4周(共16周) 只剥备注、3-4节,5-8周 里的节次整段摘掉、单双同写按每周都上",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：重复行与连堂 · 同一门课在第 1、2 周与同一格里重复出现只留一条、相邻节次 3-4 节合并；同一天同一门课换了周次的 6、7 节不合并",
+      "extracted": "fixtures/dedupe.extracted.json",
+      "expected": "fixtures/dedupe.expected.json"
+    },
+    {
+      "name": "合成用例：缺项与占位词 · 教室写 NoRoom / 未知 / 待定、教师写暂无教师一律按没给；只有一个周次行的格子与配不上周次的课程被跳过并点名原文；教师括号里套「外聘」备注只取真实教师名；课名为「周易概论」时不把带「周」的课名当周次行吞掉",
+      "extracted": "fixtures/missing.extracted.json",
+      "expected": "fixtures/missing.expected.json"
+    },
+    {
+      "name": "合成用例：20 周之外与晚开课 · 第 12 周才出现的课、第 21-23 周才出现的课都导入，总周数从 20 抬到 23 并说明",
+      "extracted": "fixtures/beyond-20.extracted.json",
+      "expected": "fixtures/beyond-20.expected.json"
+    },
+    {
+      "name": "合成用例：节次时间读不出 · 上课时间列缺第 3 节（不连续）→ 整表回落学校公布的 11 节节次时间；课表用到第 12 节，按上一节顺推补出 20:40-21:25 并提醒",
+      "extracted": "fixtures/slots-fallback.extracted.json",
+      "expected": "fixtures/slots-fallback.expected.json"
+    },
+    {
+      "name": "合成用例：长课名与长原文 · 三条超长课名在提醒里截到 20 字、认不出的周次原文同样截短，全部提醒不超过 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：有周次没取到 · 某一周请求失败（ok=false）与 extract 因取数预算到点跳过的周次（skippedWeeks）合并去重后写进一条提醒，其余周的课照常导入",
+      "extracted": "fixtures/skipped-weeks.extracted.json",
+      "expected": "fixtures/skipped-weeks.expected.json"
+    },
+    {
+      "name": "合成用例：节次时间写法 · 上课时间列写一位小时（8:20-9:05、9:10-9:55）时补零成 08:20/09:05/09:10，相邻节不误判重叠；其余 9 节照用",
+      "extracted": "fixtures/time-format.extracted.json",
+      "expected": "fixtures/time-format.expected.json"
+    },
+    {
+      "name": "合成用例：非法分钟 · 第 3 节写成 09:60（分钟超出 00-59）不当作合法时间，整行不用后节次不连续，整表回落学校公布的 11 节并提醒",
+      "extracted": "fixtures/bad-minute.extracted.json",
+      "expected": "fixtures/bad-minute.expected.json"
+    },
+    {
+      "name": "合成用例：课名与地点括号 · 课名末尾的（上）（二）（口语）（全英）（一）（3学分）算课名一部分、不当教师；张三（外聘）仍拆出张三；地点开头的（3学分）计备注、（1）计教学班序号并摘掉，教室名保留",
+      "extracted": "fixtures/course-line.extracted.json",
+      "expected": "fixtures/course-line.expected.json"
+    },
+    {
+      "name": "合成用例：学期与开学日都读不到 · 学期按今天的日期推算并冠学校名（吉利学院 2026-2027学年第一学期），开学日按今天所在周的周一（2026-11-09）推算，两条推算都写进提醒",
+      "extracted": "fixtures/term-fallback.extracted.json",
+      "expected": "fixtures/term-fallback.expected.json"
+    }
+  ]
+}

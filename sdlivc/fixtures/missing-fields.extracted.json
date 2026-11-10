@@ -1,0 +1,13 @@
+{
+  "today": "2026-11-11",
+  "rows": [
+    { "courseName": "教师缺课", "teacherName": "未知", "week": "mon", "weekList": "1-16", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "地点缺课", "teacherName": "教师乙", "week": "tue", "weekList": "1-16", "stopCourse": "NO",
+      "eduPlace": { "placeName": "", "nameIncludeNum": "待定" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "都缺课", "teacherName": "待定", "week": "wed", "weekList": "1-16", "stopCourse": "NO",
+      "eduPlace": { "placeName": "", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "回落室", "teacherName": "教师丙", "week": "thu", "weekList": "1-16", "stopCourse": "NO",
+      "eduPlace": { "placeName": "", "nameIncludeNum": "实验楼201" }, "eduLesson": { "startLesson": 3, "endLesson": 4 } }
+  ]
+}

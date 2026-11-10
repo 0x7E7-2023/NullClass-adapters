@@ -1,0 +1,35 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "课表用到了学校节次时间没有覆盖的第 9-12 节，已按上一节下课后课间 5 分钟、每节 45 分钟顺推补上，请在学期管理里核对"
+  ],
+  "terms": [{
+    "name": "2026-2027学年第一学期",
+    "firstDay": "2026-09-07",
+    "totalWeeks": 20,
+    "periodTimes": [
+      { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+      { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+      { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+      { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+      { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+      { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+      { "periodIndex": 7, "start": "16:00", "end": "16:45" },
+      { "periodIndex": 8, "start": "16:55", "end": "17:40" },
+      { "periodIndex": 9, "start": "17:45", "end": "18:30" },
+      { "periodIndex": 10, "start": "18:35", "end": "19:20" },
+      { "periodIndex": 11, "start": "19:25", "end": "20:10" },
+      { "periodIndex": 12, "start": "20:15", "end": "21:00" }
+    ],
+    "courses": [
+      { "name": "晚课甲", "teacher": "教师甲", "note": null, "blocks": [
+        { "dayOfWeek": 1, "startPeriod": 9, "endPeriod": 10, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "D101" }
+      ] },
+      { "name": "晚课乙", "teacher": "教师乙", "note": null, "blocks": [
+        { "dayOfWeek": 2, "startPeriod": 12, "endPeriod": 12, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "D102" }
+      ] }
+    ]
+  }]
+}

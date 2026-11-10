@@ -1,0 +1,66 @@
+{
+  "specVersion": 1,
+  "key": "sdlivc",
+  "name": "山东轻工职业学院",
+  "initial": "S",
+  "version": "1.0.0",
+  "author": "上游 赛博丁真（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://crp.sdlivc.cn/xsgl/xs/login/login.aspx",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表 · 连堂两段、多段周次取并集、教师与教室占位词交空、停开记录跳过",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法与单双归属 · 1-8、1-8,10-16、第1周至第8周、第1-第8周、(单)1-8周,(双)9-16周、无逗号前置与后置标记、共N周备注、括号整段周次",
+      "extracted": "fixtures/week-forms.extracted.json",
+      "expected": "fixtures/week-forms.expected.json"
+    },
+    {
+      "name": "合成用例：停开记录跳过并提醒 · stopCourse 不是 NO 的记录不导入、不参与缺字段计数",
+      "extracted": "fixtures/stopped.extracted.json",
+      "expected": "fixtures/stopped.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师缺教室 · 照常导入并按课名汇总，地点回落到 nameIncludeNum",
+      "extracted": "fixtures/missing-fields.extracted.json",
+      "expected": "fixtures/missing-fields.expected.json"
+    },
+    {
+      "name": "合成用例：开学日推算与总周数抬高 · 无校历按本机日期所在周周一，21 周课表把默认 20 周抬到 21",
+      "extracted": "fixtures/derive-term.extracted.json",
+      "expected": "fixtures/derive-term.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒不超 200 字 · 多门超长课名缺教师或地点，按类型汇总且课名截到 20 字",
+      "extracted": "fixtures/long-name.extracted.json",
+      "expected": "fixtures/long-name.expected.json"
+    },
+    {
+      "name": "合成用例：节次超出 12 节 · 第 13-15 节按课间 5 分钟、每节 45 分钟顺推，第 16 节越过 23:59 不补",
+      "extracted": "fixtures/extra-period.extracted.json",
+      "expected": "fixtures/extra-period.expected.json"
+    },
+    {
+      "name": "合成用例：数据不全与重复行 · 缺课名、缺星期、缺节次、缺周次的重复行去重后计数，超过 30 周的周次丢弃",
+      "extracted": "fixtures/dirty-duplicates.extracted.json",
+      "expected": "fixtures/dirty-duplicates.expected.json"
+    },
+    {
+      "name": "合成用例：地点兜底 · placeName 为占位词或空白时改用 nameIncludeNum，两者都不可用才交空并计入缺地点",
+      "extracted": "fixtures/place-fallback.extracted.json",
+      "expected": "fixtures/place-fallback.expected.json"
+    },
+    {
+      "name": "合成用例：学期名按日期推算 · 1 月属上一学年第一学期，2027-01-15 推算为 2026-2027 学年第一学期",
+      "extracted": "fixtures/term-name.extracted.json",
+      "expected": "fixtures/term-name.expected.json"
+    }
+  ]
+}

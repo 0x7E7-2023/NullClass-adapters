@@ -1,0 +1,7 @@
+{
+  "today": "2026-11-11",
+  "rows": [
+    { "courseName": "学期晚课", "teacherName": "教师甲", "week": "mon", "weekList": "1-21", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } }
+  ]
+}

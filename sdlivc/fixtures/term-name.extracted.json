@@ -1,0 +1,7 @@
+{
+  "today": "2027-01-15",
+  "rows": [
+    { "courseName": "跨年课", "teacherName": "教师甲", "week": "mon", "weekList": "1-16", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } }
+  ]
+}

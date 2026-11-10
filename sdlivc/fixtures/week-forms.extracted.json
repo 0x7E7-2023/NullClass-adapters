@@ -1,0 +1,29 @@
+{
+  "today": "2026-11-11",
+  "rows": [
+    { "courseName": "写法一", "teacherName": "教师甲", "week": "mon", "weekList": "1-8", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "写法二", "teacherName": "教师甲", "week": "tue", "weekList": "1-8,10-16", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "写法三", "teacherName": "教师甲", "week": "wed", "weekList": "第1周至第8周", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "写法四", "teacherName": "教师甲", "week": "thu", "weekList": "第1-第8周", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "写法五", "teacherName": "教师甲", "week": "fri", "weekList": "(单)1-8周,(双)9-16周", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 1, "endLesson": 2 } },
+    { "courseName": "写法六", "teacherName": "教师甲", "week": "mon", "weekList": "(单)1-8周(双)9-16周", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 3, "endLesson": 4 } },
+    { "courseName": "写法七", "teacherName": "教师甲", "week": "tue", "weekList": "1-8周(单)9-16周(双)", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 3, "endLesson": 4 } },
+    { "courseName": "写法八", "teacherName": "教师甲", "week": "wed", "weekList": "共8周,1-4,6-8周", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 3, "endLesson": 4 } },
+    { "courseName": "写法九", "teacherName": "教师甲", "week": "thu", "weekList": "（第1-16周）", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 3, "endLesson": 4 } },
+    { "courseName": "写法十", "teacherName": "教师甲", "week": "fri", "weekList": "1-8周(单)9-16周", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 3, "endLesson": 4 } },
+    { "courseName": "写法十一", "teacherName": "教师甲", "week": "mon", "weekList": "1-16周(3学分)", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 5, "endLesson": 6 } },
+    { "courseName": "写法十二", "teacherName": "教师甲", "week": "tue", "weekList": "第3-4节,1-16周", "stopCourse": "NO",
+      "eduPlace": { "placeName": "A101", "nameIncludeNum": "" }, "eduLesson": { "startLesson": 5, "endLesson": 6 } }
+  ]
+}

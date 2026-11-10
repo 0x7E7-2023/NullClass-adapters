@@ -1,0 +1,61 @@
+{
+  "specVersion": 1,
+  "key": "hebau",
+  "name": "河北农业大学",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://urp.hebau.edu.cn:1009/jwapp/sys/homeapp/home/index.html#/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表 · 教务当前学期与列表核对一致、校历开学日与 20 周、教务 12 节节次时间、连续周与单双周位串、占位教师教室、三类脏行",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：位串切段 · 连续、孤立、单周、双周与空洞分别切段，第 31 周丢弃并提醒",
+      "extracted": "fixtures/weeks-bitmap.extracted.json",
+      "expected": "fixtures/weeks-bitmap.expected.json"
+    },
+    {
+      "name": "合成用例：同课归并 · 同键周次取并集、完全重复行只算一次、连堂保持两段、不同教室不合并",
+      "extracted": "fixtures/merge-duplicates.extracted.json",
+      "expected": "fixtures/merge-duplicates.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师缺教室 · 按课名去重后汇总门数与样例，课程照常导入",
+      "extracted": "fixtures/missing-fields.extracted.json",
+      "expected": "fixtures/missing-fields.expected.json"
+    },
+    {
+      "name": "合成用例：校历与节次时间取不到 · 开学日按本机日期所在周周一推算、总周数用 20 再按第 24 周抬高、节次时间交空表",
+      "extracted": "fixtures/no-calendar.extracted.json",
+      "expected": "fixtures/no-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：带课名的提醒不超 200 字 · 多门超长课名缺教师或缺地点，按类型汇总且课名截到 20 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：节次顺推 · 教务只给 1-8 节、课表用到第 12 节，按课间 5 分钟每节 45 分钟补齐 9-12 节",
+      "extracted": "fixtures/sections-extend.extracted.json",
+      "expected": "fixtures/sections-extend.expected.json"
+    },
+    {
+      "name": "合成用例：当前学期取不到 · 按本机日期推定为第二学期、学期列表里也没有，提醒说实话",
+      "extracted": "fixtures/term-guess.extracted.json",
+      "expected": "fixtures/term-guess.expected.json"
+    },
+    {
+      "name": "合成用例：当前学期不在列表里 · 教务给了学期但学校公布的学期列表中没有，照常导入并提醒",
+      "extracted": "fixtures/term-not-listed.extracted.json",
+      "expected": "fixtures/term-not-listed.expected.json"
+    }
+  ]
+}

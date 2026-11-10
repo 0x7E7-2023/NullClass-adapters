@@ -1,0 +1,104 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "没能从教务页面读到当前学期，已按今天的日期判断为「2026-2027学年第二学期」；如果不是你要的学期，请在教务系统里切到那个学期再点「提取课表」",
+  "第 1 周的开始日期（2027-02-22）是从教务系统第 1 周的周课表里读出来的，没法向你确认，请在学期管理里核对是不是学校实际的开学日",
+  "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 18 周），如与实际不符可在学期管理里改",
+  "学校在 5 月 1 日至 10 月 7 日按夏令时上课，下午第 5 至 8 节比冬令时晚 30 分钟；节次时间已按冬令时导入，夏令时期间请在学期管理里把这 4 节改晚 30 分钟"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第二学期",
+   "firstDay": "2027-02-22",
+   "totalWeeks": 20,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:00",
+     "end": "08:45"
+    },
+    {
+     "periodIndex": 2,
+     "start": "08:55",
+     "end": "09:40"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:00",
+     "end": "10:45"
+    },
+    {
+     "periodIndex": 4,
+     "start": "10:55",
+     "end": "11:40"
+    },
+    {
+     "periodIndex": 5,
+     "start": "14:00",
+     "end": "14:45"
+    },
+    {
+     "periodIndex": 6,
+     "start": "14:55",
+     "end": "15:40"
+    },
+    {
+     "periodIndex": 7,
+     "start": "16:00",
+     "end": "16:45"
+    },
+    {
+     "periodIndex": 8,
+     "start": "16:55",
+     "end": "17:40"
+    },
+    {
+     "periodIndex": 9,
+     "start": "19:00",
+     "end": "19:45"
+    },
+    {
+     "periodIndex": 10,
+     "start": "19:55",
+     "end": "20:40"
+    }
+   ],
+   "courses": [
+    {
+     "name": "数据库",
+     "teacher": "吴十",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 7,
+       "endPeriod": 8,
+       "startWeek": 3,
+       "endWeek": 17,
+       "weekType": "ODD",
+       "location": "机房2"
+      }
+     ]
+    },
+    {
+     "name": "数据结构",
+     "teacher": "周九",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 18,
+       "weekType": "ALL",
+       "location": "机房1"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

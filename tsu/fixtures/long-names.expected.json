@@ -1,0 +1,140 @@
+{
+ "specVersion": 1,
+ "kind": "schedule",
+ "ocrAssisted": false,
+ "warnings": [
+  "只导入了教务页面上当前显示的这个学期（2026-2027学年第一学期）；要导入别的学期，请先在教务系统里切到那个学期再点「提取课表」",
+  "第 1 周的开始日期（2026-08-31）是从教务系统第 1 周的周课表里读出来的，没法向你确认，请在学期管理里核对是不是学校实际的开学日",
+  "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+  "学校在 5 月 1 日至 10 月 7 日按夏令时上课，下午第 5 至 8 节比冬令时晚 30 分钟；节次时间已按冬令时导入，夏令时期间请在学期管理里把这 4 节改晚 30 分钟",
+  "有 1 条课程内容没能读成课程（周次认不出或全超出 1-30 周 1 条），已跳过，例如 「这是一门课名特别特别长的课程用来测试提…」：如发现少课请反馈",
+  "有 1 门课没给上课教师、1 门课没给上课地点（例如 马克思主义基本原理概论与中国特色社会主…、高等数学（工科类）与应用统计学基础课程…）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上",
+  "有 1 门课在节次或地点后面还有别的文字（如「这是节次后面多出来的一段很长很长的说明…」），这部分没有导入",
+  "有 1 处周次里的括号备注（如「(这是一个非常非常长的备注文字不是周次)」）不是周次，已忽略，请核对这几门课的周次"
+ ],
+ "terms": [
+  {
+   "name": "2026-2027学年第一学期",
+   "firstDay": "2026-08-31",
+   "totalWeeks": 20,
+   "periodTimes": [
+    {
+     "periodIndex": 1,
+     "start": "08:00",
+     "end": "08:45"
+    },
+    {
+     "periodIndex": 2,
+     "start": "08:55",
+     "end": "09:40"
+    },
+    {
+     "periodIndex": 3,
+     "start": "10:00",
+     "end": "10:45"
+    },
+    {
+     "periodIndex": 4,
+     "start": "10:55",
+     "end": "11:40"
+    },
+    {
+     "periodIndex": 5,
+     "start": "14:00",
+     "end": "14:45"
+    },
+    {
+     "periodIndex": 6,
+     "start": "14:55",
+     "end": "15:40"
+    },
+    {
+     "periodIndex": 7,
+     "start": "16:00",
+     "end": "16:45"
+    },
+    {
+     "periodIndex": 8,
+     "start": "16:55",
+     "end": "17:40"
+    },
+    {
+     "periodIndex": 9,
+     "start": "19:00",
+     "end": "19:45"
+    },
+    {
+     "periodIndex": 10,
+     "start": "19:55",
+     "end": "20:40"
+    }
+   ],
+   "courses": [
+    {
+     "name": "马克思主义基本原理概论与中国特色社会主义理论体系概论实践课",
+     "teacher": null,
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 1,
+       "startPeriod": 1,
+       "endPeriod": 2,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "A101"
+      }
+     ]
+    },
+    {
+     "name": "高等数学（工科类）与应用统计学基础课程设计实践环节",
+     "teacher": "教师甲",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 2,
+       "startPeriod": 3,
+       "endPeriod": 4,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": null
+      }
+     ]
+    },
+    {
+     "name": "课程A",
+     "teacher": "吴十",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 4,
+       "startPeriod": 7,
+       "endPeriod": 8,
+       "startWeek": 1,
+       "endWeek": 8,
+       "weekType": "ALL",
+       "location": "D101"
+      }
+     ]
+    },
+    {
+     "name": "课程B",
+     "teacher": "郑一",
+     "note": null,
+     "blocks": [
+      {
+       "dayOfWeek": 5,
+       "startPeriod": 9,
+       "endPeriod": 10,
+       "startWeek": 1,
+       "endWeek": 16,
+       "weekType": "ALL",
+       "location": "E101"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

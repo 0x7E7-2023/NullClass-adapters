@@ -1,0 +1,51 @@
+{
+  "specVersion": 1,
+  "key": "ecjtu",
+  "name": "华东交通大学",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 glxgo（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwxt.ecjtu.edu.cn/index.action",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表（多门课、一格多门、节次 1,2,3 合成连堂）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次多段 / 单双标记（含无逗号前置、后置）/ 第X周至第Y周",
+      "extracted": "fixtures/weeks.extracted.json",
+      "expected": "fixtures/weeks.expected.json"
+    },
+    {
+      "name": "合成用例：同门课不同周次上不同节次拆成多条安排；节次列表 1,3 拆成两段；裸数字周次",
+      "extracted": "fixtures/split-blocks.extracted.json",
+      "expected": "fixtures/split-blocks.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师 / 缺教室 / 占位词 / 只有周次的安排按行首节次补齐 / 缺课名跳过",
+      "extracted": "fixtures/missing.extracted.json",
+      "expected": "fixtures/missing.expected.json"
+    },
+    {
+      "name": "合成用例：没有星期表头、课表排到第 22 周、用到第 11-12 节（补齐节次时间）",
+      "extracted": "fixtures/beyond.extracted.json",
+      "expected": "fixtures/beyond.expected.json"
+    },
+    {
+      "name": "合成用例：长课名的缺教师 / 缺教室提醒不超过 200 字",
+      "extracted": "fixtures/long-name.extracted.json",
+      "expected": "fixtures/long-name.expected.json"
+    },
+    {
+      "name": "合成用例：整行标题 / 图例行（不足 7 格）不误当课程行；真正的 7 格短课程行仍按最后 7 格对齐并提醒",
+      "extracted": "fixtures/layout.extracted.json",
+      "expected": "fixtures/layout.expected.json"
+    }
+  ]
+}

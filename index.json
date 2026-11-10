@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.11.10.5",
+  "version": "2026.11.11.1",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -209,6 +209,12 @@
       "path": "dzu"
     },
     {
+      "key": "ecjtu",
+      "name": "华东交通大学",
+      "version": "1.0.0",
+      "path": "ecjtu"
+    },
+    {
       "key": "fit",
       "name": "福州理工学院",
       "version": "1.0.1",
@@ -303,6 +309,12 @@
       "name": "甘肃医学院",
       "version": "1.0.1",
       "path": "gsmc"
+    },
+    {
+      "key": "guc",
+      "name": "吉利学院",
+      "version": "1.0.0",
+      "path": "guc"
     },
     {
       "key": "gxcme",
@@ -411,6 +423,12 @@
       "name": "湖北文理学院",
       "version": "1.0.0",
       "path": "hbuas"
+    },
+    {
+      "key": "hebau",
+      "name": "河北农业大学",
+      "version": "1.0.0",
+      "path": "hebau"
     },
     {
       "key": "hebeu",
@@ -923,6 +941,12 @@
       "path": "sdipct"
     },
     {
+      "key": "sdlivc",
+      "name": "山东轻工职业学院",
+      "version": "1.0.0",
+      "path": "sdlivc"
+    },
+    {
       "key": "sdnu",
       "name": "山东师范大学",
       "version": "1.0.1",
@@ -1071,6 +1095,12 @@
       "name": "同济大学",
       "version": "1.0.0",
       "path": "tongji"
+    },
+    {
+      "key": "tsu",
+      "name": "泰山学院",
+      "version": "1.0.0",
+      "path": "tsu"
     },
     {
       "key": "tust",

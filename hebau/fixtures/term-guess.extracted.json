@@ -1,0 +1,14 @@
+{
+  "term": { "code": "2026-2027-2", "name": "", "source": "guess", "listed": false },
+  "today": "2026-03-05",
+  "calendarRows": [
+    { "XN": "2026-2027", "XQ": "2", "XQKSRQ": "2026-02-23", "ZZC": "20", "ZJXZC": "" }
+  ],
+  "sectionRows": [
+    { "DM": "1", "KSSJ": "08:00", "JSSJ": "08:45" },
+    { "DM": "2", "KSSJ": "08:55", "JSSJ": "09:40" }
+  ],
+  "rows": [
+    { "KCM": "课程乙", "SKJS": "教师丙", "JASMC": "教二202", "SKXQ": 3, "KSJC": 1, "JSJC": 2, "SKZC": "1111111111111111" }
+  ]
+}
