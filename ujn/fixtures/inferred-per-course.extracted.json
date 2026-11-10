@@ -1,0 +1,9 @@
+{
+  "page": "personal",
+  "term": { "xnm": "2026", "xqm": "3", "xnmText": "2026-2027", "xqmText": "第一学期" },
+  "today": "2026-11-10",
+  "cells": [
+    { "name": "数值分析", "weeks": "1-16周", "location": "教2-301", "teacher": "甲老师", "row": 3, "col": 2, "rowSpan": 2, "colSpan": 1 },
+    { "name": "数值分析", "weeks": "1-16周", "location": "教2-301", "teacher": "甲老师", "row": 5, "col": 4, "rowSpan": 2, "colSpan": 1 }
+  ]
+}

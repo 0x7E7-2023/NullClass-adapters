@@ -1,0 +1,9 @@
+{
+  "term": { "dm": "2026-2027-1" },
+  "today": "2026-11-10",
+  "rows": [
+    { "KCM": "缺周次课", "SKJS": "暂无", "JASMC": "", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "ZCMC": "" },
+    { "KCM": "全周课", "SKJS": "", "JASMC": "A101", "SKXQ": 2, "KSJC": 3, "JSJC": 4, "ZCMC": "全周" },
+    { "KCM": "有效课", "SKJS": "教师甲", "JASMC": "B202", "SKXQ": 3, "KSJC": 5, "JSJC": 6, "ZCMC": "1-8周" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "semester": "",
+  "semesters": [],
+  "today": "2027-03-05",
+  "timeSlots": [],
+  "rows": [
+    {
+      "day": 2,
+      "section": 1,
+      "name": "操作系统",
+      "teacher": "教师甲",
+      "location": "东教401",
+      "weeks": "第1-16周"
+    }
+  ]
+}

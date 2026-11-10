@@ -1,0 +1,23 @@
+{
+  "term": { "dm": "2026-2027-1" },
+  "today": "2026-11-10",
+  "rows": [
+    { "KCM": "", "SKJS": "教师甲", "JASMC": "A101", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "ZCMC": "1-8周" },
+    { "KCM": "", "SKJS": "教师甲", "JASMC": "A101", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "ZCMC": "1-8周" },
+    { "KCM": "", "SKJS": "教师甲", "JASMC": "A101", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "ZCMC": "1-8周" },
+    { "KCM": "缺星期课", "SKJS": "教师乙", "JASMC": "A101", "SKXQ": 0, "KSJC": 1, "JSJC": 2, "ZCMC": "1-8周" },
+    { "KCM": "缺星期课", "SKJS": "教师乙", "JASMC": "A101", "SKXQ": 0, "KSJC": 1, "JSJC": 2, "ZCMC": "1-8周" },
+    { "KCM": "缺星期课", "SKJS": "教师乙", "JASMC": "A101", "SKXQ": 0, "KSJC": 1, "JSJC": 2, "ZCMC": "1-8周" },
+    { "KCM": "缺节次课", "SKJS": "教师丙", "JASMC": "A101", "SKXQ": 2, "KSJC": "", "JSJC": "4", "ZCMC": "1-8周" },
+    { "KCM": "缺节次课", "SKJS": "教师丙", "JASMC": "A101", "SKXQ": 2, "KSJC": "", "JSJC": "4", "ZCMC": "1-8周" },
+    { "KCM": "缺节次课", "SKJS": "教师丙", "JASMC": "A101", "SKXQ": 2, "KSJC": "", "JSJC": "4", "ZCMC": "1-8周" },
+    { "KCM": "认不出周次", "SKJS": "教师丁", "JASMC": "A101", "SKXQ": 3, "KSJC": 1, "JSJC": 2, "ZCMC": "认不出" },
+    { "KCM": "认不出周次", "SKJS": "教师丁", "JASMC": "A101", "SKXQ": 3, "KSJC": 1, "JSJC": 2, "ZCMC": "认不出" },
+    { "KCM": "认不出周次", "SKJS": "教师丁", "JASMC": "A101", "SKXQ": 3, "KSJC": 1, "JSJC": 2, "ZCMC": "认不出" },
+    { "KCM": "越界周次", "SKJS": "教师戊", "JASMC": "A101", "SKXQ": 4, "KSJC": 1, "JSJC": 2, "ZCMC": "31周" },
+    { "KCM": "越界周次", "SKJS": "教师戊", "JASMC": "A101", "SKXQ": 4, "KSJC": 1, "JSJC": 2, "ZCMC": "31周" },
+    { "KCM": "越界周次", "SKJS": "教师戊", "JASMC": "A101", "SKXQ": 4, "KSJC": 1, "JSJC": 2, "ZCMC": "31周" },
+    { "KCM": "有效课", "SKJS": "教师己", "JASMC": "A101", "SKXQ": 5, "KSJC": 1, "JSJC": 2, "ZCMC": "1-8周" },
+    { "KCM": "有效课", "SKJS": "教师己", "JASMC": "A101", "SKXQ": 5, "KSJC": 1, "JSJC": 2, "ZCMC": "1-8周" }
+  ]
+}

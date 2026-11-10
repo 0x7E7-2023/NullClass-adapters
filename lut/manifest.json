@@ -1,0 +1,77 @@
+{
+  "specVersion": 1,
+  "key": "lut",
+  "name": "兰州理工大学",
+  "initial": "L",
+  "version": "1.0.0",
+  "author": "上游 Colton（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwxt.lut.edu.cn/",
+  "scheduleUrlHint": "https://jwxt.lut.edu.cn/jwapp/sys/wdkb/*default/index.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["jwxt.lut.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表 · 当前学期、连续周与单双周文本、占位教师教室、缺星期节次周次的脏行",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次文本 · 第1-第8周的「第」、至/到/短横线区间、逗号多段与「共 N 周」备注",
+      "extracted": "fixtures/weeks-text.extracted.json",
+      "expected": "fixtures/weeks-text.expected.json"
+    },
+    {
+      "name": "合成用例：括号与「周至」区间 · (1-16周)、（第1-16周）、第1周至第8周、1周至8周 都要读成完整区间",
+      "extracted": "fixtures/bracket-and-range.extracted.json",
+      "expected": "fixtures/bracket-and-range.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师教室的跳过行 · 因缺周次被跳过的行不进「已照常导入」，全周行的缺教师照常计数",
+      "extracted": "fixtures/missing-fields-skipped.extracted.json",
+      "expected": "fixtures/missing-fields-skipped.expected.json"
+    },
+    {
+      "name": "合成用例：单双标记归属 · 前置、后置与无逗号前置的 (单)/(双) 各归各段，不退化成一整学期每周都上",
+      "extracted": "fixtures/odd-even.extracted.json",
+      "expected": "fixtures/odd-even.expected.json"
+    },
+    {
+      "name": "合成用例：全周跟课表 · 「全周」展开到其余课程覆盖到的最大周（22 周），总周数按 22 周抬升并提醒",
+      "extracted": "fixtures/full-week.extracted.json",
+      "expected": "fixtures/full-week.expected.json"
+    },
+    {
+      "name": "合成用例：全周按默认 20 周 · 其余课程只到第 16 周时「全周」铺 1-20 周，总周数仍是 20",
+      "extracted": "fixtures/full-week-default.extracted.json",
+      "expected": "fixtures/full-week-default.expected.json"
+    },
+    {
+      "name": "合成用例：周次超 30 · 第 31 周起丢弃并计数，丢空了整行的算缺周次",
+      "extracted": "fixtures/over-30.extracted.json",
+      "expected": "fixtures/over-30.expected.json"
+    },
+    {
+      "name": "合成用例：同课归并 · 同节次周次取并集、完全重复行只算一次、连堂保持两段、不同教室不合并",
+      "extracted": "fixtures/merge-duplicates.extracted.json",
+      "expected": "fixtures/merge-duplicates.expected.json"
+    },
+    {
+      "name": "合成用例：重复脏行去重 · 缺课名、星期、节次、周次及越界周次重复出现时不放大提醒计数",
+      "extracted": "fixtures/dirty-duplicates.extracted.json",
+      "expected": "fixtures/dirty-duplicates.expected.json"
+    },
+    {
+      "name": "合成用例：带课名的提醒不超 200 字 · 多门超长课名缺教师或地点，按类型汇总且课名截到 20 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：节次超出 10 节表 · 第 11-13 节按上一节下课后顺推，第 14 节起越过 23:59 不再补时间",
+      "extracted": "fixtures/extend-periods.extracted.json",
+      "expected": "fixtures/extend-periods.expected.json"
+    }
+  ]
+}

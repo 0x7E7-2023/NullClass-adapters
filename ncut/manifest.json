@@ -1,0 +1,59 @@
+{
+  "specVersion": 1,
+  "key": "ncut",
+  "name": "北方工业大学",
+  "initial": "B",
+  "version": "1.0.0",
+  "author": "上游 EnderHCO3（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwxtbk.ncut.edu.cn/jsxsd/",
+  "scheduleUrlHint": "https://jwxtbk.ncut.edu.cn/jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jwxtbk.ncut.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 周次下拉框 20 周（第 1 周 2026-09-07）→ 开学日与总周数取自页面；同格多门、单周 / 双周、1-2 与 3-4 连堂合成 1-4、体育没给教师与教室（null）；节次时间按每行首格拆成首末两节（第 1 节 08:00-08:45、第 10 节 16:30-17:15）",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：本校专属 · 节次时间首末两节算法 —— 5-7 节跨三节（11:25-14:15）只产出第 5、7 节（第 5 节 11:25-12:10、第 7 节 13:30-14:15），中间第 6 节按上一节下课顺推补 12:15-13:00；第 8 节同样顺推补 14:20-15:05；第二学期（学期代号 12）学期名 2026-2027学年第二学期、开学日 2027-02-22、总周数 18",
+      "extracted": "fixtures/period-times.extracted.json",
+      "expected": "fixtures/period-times.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师 / 缺教室 · 教师写「未知」、教室写「暂无」「暂无地点」→ 交 null；没给教师 / 没给教室照常导入并汇总提醒（按课名去重、点名课名）；教师后面的括号备注（「李四(外聘)」）原样保留，不拆成第二位教师",
+      "extracted": "fixtures/missing-fields.extracted.json",
+      "expected": "fixtures/missing-fields.expected.json"
+    },
+    {
+      "name": "合成用例：本校专属 · 周次写法与单/双标记归属 —— 前缀「(单)1-8周,(双)9-16周」、无逗号前缀「(单)1-8周(双)9-16周」都读成 1-7 单周 + 10-16 双周；「1-8周(共8周),9-16周」只剥备注、9-16 周不丢；「第1-第8周」「[1-16周]」；「1-16周(单双周)」按每周都上并提醒；「0-2周」丢掉第 0 周并提醒",
+      "extracted": "fixtures/weeks-forms.extracted.json",
+      "expected": "fixtures/weeks-forms.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒 · 六门超长课名同时缺教师与缺教室 → 提醒里点名的课名截到 20 字、整条不超过 200 字；两门周次写成「实验（第3-4节）」认不出 → 跳过并计数，括号备注原文截短后写进提醒",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：课表排到周次下拉框之外 · 页面周次列表 20 周、课表里有第 25 周的课 → 总周数抬到 25 并说明（否则第 21 周起的课放不下）",
+      "extracted": "fixtures/over-week.extracted.json",
+      "expected": "fixtures/over-week.expected.json"
+    },
+    {
+      "name": "合成用例：合并 · 同课同日同教室 1-2 与 3-4 两行合成 1-4；同一格里的完全重复行只留一条；同一门课 1-8 周与 9-16 周并成 1-16 周",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：本校专属 · 整行没课的大节也交出节次时间 —— 一天开头 1-4 节没课、中间 7-8 节也没课，只有 5-6 与 9-10 有课 → 第 1-10 节时间全部取自课表页（第 1 节 08:00-08:45、第 7 节 14:00-14:45），不会被当成缺节次顺推，也不出「推不出来」的提醒；课程只有两门",
+      "extracted": "fixtures/empty-slots.extracted.json",
+      "expected": "fixtures/empty-slots.expected.json"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "page": "personal",
+  "term": { "xnm": "2026", "xqm": "3", "xnmText": "2026-2027", "xqmText": "第一学期" },
+  "today": "2026-11-10",
+  "cells": [
+    { "name": "跨学科创新实践与工程伦理专题研讨课程设计A", "weeks": "1-16周", "location": "未知", "teacher": "待定", "row": 2, "col": 2, "rowSpan": 2, "colSpan": 1 },
+    { "name": "工程制图与计算机辅助设计实践环节", "weeks": "2-17周", "location": "暂无", "teacher": "暂无教师", "row": 4, "col": 3, "rowSpan": 2, "colSpan": 1 },
+    { "name": "综合英语听说读写译训练与跨文化交际实践课程", "weeks": "4-15周", "location": "教7-102", "teacher": "", "row": 6, "col": 4, "rowSpan": 2, "colSpan": 1 },
+    { "name": "课表待定课程", "weeks": "第2周通知里另行安排", "location": "教8-101", "teacher": "钱五", "row": 8, "col": 5, "rowSpan": 2, "colSpan": 1 }
+  ]
+}

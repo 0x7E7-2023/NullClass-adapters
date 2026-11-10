@@ -1,0 +1,87 @@
+{
+  "semester": "",
+  "semesters": [
+    "2026-2027-2"
+  ],
+  "today": "2027-03-05",
+  "timeSlots": [
+    {
+      "number": 1,
+      "start": "08:00",
+      "end": "08:45"
+    },
+    {
+      "number": 2,
+      "start": "08:55",
+      "end": "09:40"
+    },
+    {
+      "number": 3,
+      "start": "10:10",
+      "end": "10:55"
+    },
+    {
+      "number": 4,
+      "start": "11:05",
+      "end": "11:50"
+    },
+    {
+      "number": 5,
+      "start": "14:00",
+      "end": "14:45"
+    },
+    {
+      "number": 6,
+      "start": "14:55",
+      "end": "15:40"
+    },
+    {
+      "number": 7,
+      "start": "16:10",
+      "end": "16:55"
+    },
+    {
+      "number": 8,
+      "start": "17:05",
+      "end": "17:50"
+    },
+    {
+      "number": 9,
+      "start": "18:30",
+      "end": "19:15"
+    },
+    {
+      "number": 10,
+      "start": "19:25",
+      "end": "20:10"
+    },
+    {
+      "number": 11,
+      "start": "20:20",
+      "end": "21:05"
+    },
+    {
+      "number": 12,
+      "start": "21:15",
+      "end": "22:00"
+    }
+  ],
+  "rows": [
+    {
+      "day": 1,
+      "section": 1,
+      "name": "数据结构",
+      "teacher": "教师甲",
+      "location": "东教201",
+      "weeks": "第1-22周"
+    },
+    {
+      "day": 3,
+      "section": 3,
+      "name": "线性代数",
+      "teacher": "教师乙",
+      "location": "东教202",
+      "weeks": "第1-16周"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "page": "personal",
+  "term": { "xnm": "2026", "xqm": "3", "xnmText": "2026-2027", "xqmText": "第一学期" },
+  "today": "2026-11-10",
+  "cells": [
+    { "name": "课程一", "weeks": "1-16周", "location": "A101", "teacher": "甲", "row": 2, "col": 2, "rowSpan": 2, "colSpan": 1 },
+    { "name": "课程二", "weeks": "1-16周", "location": "A102", "teacher": "乙", "row": 3, "col": 2, "rowSpan": 2, "colSpan": 1 },
+    { "name": "课程三", "weeks": "1-16周", "location": "A103", "teacher": "丙", "row": 4, "col": 5, "rowSpan": 2, "colSpan": 1 },
+    { "name": "课程四", "weeks": "1-16周", "location": "A104", "teacher": "丁", "row": 6, "col": 3, "rowSpan": 2, "colSpan": 1 }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "term": { "dm": "2026-2027-1" },
+  "today": "2026-11-10",
+  "rows": [
+    { "KCM": "括号周次课", "SKJS": "教师甲", "JASMC": "A101", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "ZCMC": "(1-16周)" },
+    { "KCM": "全角括号课", "SKJS": "教师乙", "JASMC": "B202", "SKXQ": 2, "KSJC": 3, "JSJC": 4, "ZCMC": "（第1-16周）" },
+    { "KCM": "至字区间课", "SKJS": "教师丙", "JASMC": "C303", "SKXQ": 3, "KSJC": 5, "JSJC": 6, "ZCMC": "第1周至第8周" },
+    { "KCM": "周至区间课", "SKJS": "教师丁", "JASMC": "D404", "SKXQ": 4, "KSJC": 7, "JSJC": 8, "ZCMC": "1周至8周" }
+  ]
+}

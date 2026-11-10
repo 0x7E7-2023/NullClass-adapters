@@ -1,0 +1,59 @@
+{
+  "specVersion": 1,
+  "key": "ujn",
+  "name": "济南大学",
+  "initial": "J",
+  "version": "1.0.0",
+  "author": "上游 Moyu（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://sso.ujn.edu.cn/tpass/login?service=http%3A%2F%2Fjwgl.ujn.edu.cn%2Fsso%2Fdriotlogin",
+  "scheduleUrlHint": "http://jwgl.ujn.edu.cn/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jwgl.ujn.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：个人课表基本三行，周次同行的「(1-2节)」先剥掉，教师括号备注不拆成第二位教师",
+      "extracted": "fixtures/basic-personal.extracted.json",
+      "expected": "fixtures/basic-personal.expected.json"
+    },
+    {
+      "name": "合成用例：班级课表，只有一个 p 的格子按 1-20 周导入并提醒，第二学期开学日按 2 月 20 日锚点推算",
+      "extracted": "fixtures/class-basic.extracted.json",
+      "expected": "fixtures/class-basic.expected.json"
+    },
+    {
+      "name": "合成用例：后置与前置单双标记、无逗号前置单双「(单)1-8周(双)9-16周」不得退化成 1～16 周每周、「共 N 周」只剥备注本身",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：长课名与认不出的周次原文都截到 20 字，占位教师与教室导入为空并汇总，带课名的提醒不超过 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：节次超出 11 节按课间 5 分钟、每节 45 分钟顺推补到第 13 节，第 14 节越界只导入不补时间",
+      "extracted": "fixtures/over-period.extracted.json",
+      "expected": "fixtures/over-period.expected.json"
+    },
+    {
+      "name": "合成用例：格子行列换算星期，含上游错位函数没有给值的那两种行按没有侧栏标签回退并提醒",
+      "extracted": "fixtures/grid-offset.extracted.json",
+      "expected": "fixtures/grid-offset.expected.json"
+    },
+    {
+      "name": "合成用例：同一门课占两个格子且都落在推算几何的行上，提醒按「门课」计一次而不是两格",
+      "extracted": "fixtures/inferred-per-course.extracted.json",
+      "expected": "fixtures/inferred-per-course.expected.json"
+    },
+    {
+      "name": "合成用例：班级课表同一门课两格都没写周次，按 1-20 周导入且提醒只计一门课",
+      "extracted": "fixtures/class-default-per-course.extracted.json",
+      "expected": "fixtures/class-default-per-course.expected.json"
+    }
+  ]
+}

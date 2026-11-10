@@ -1,0 +1,10 @@
+{
+  "page": "personal",
+  "term": { "xnm": "2026", "xqm": "3", "xnmText": "2026-2027", "xqmText": "第一学期" },
+  "today": "2026-11-10",
+  "cells": [
+    { "name": "高等数学A(一)", "weeks": "1-16周(1-2节)", "location": "教1-101", "teacher": "张三", "row": 2, "col": 2, "rowSpan": 2, "colSpan": 1 },
+    { "name": "体育", "weeks": "1-16周(3-4节)", "location": "田径场", "teacher": "李四", "row": 4, "col": 4, "rowSpan": 2, "colSpan": 1 },
+    { "name": "大学物理", "weeks": "3-16周(5-6节)", "location": "教2-203", "teacher": "王五（外聘）", "row": 6, "col": 3, "rowSpan": 2, "colSpan": 1 }
+  ]
+}

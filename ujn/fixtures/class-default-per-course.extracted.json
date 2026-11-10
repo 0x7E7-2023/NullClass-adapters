@@ -1,0 +1,9 @@
+{
+  "page": "class",
+  "term": { "xnm": "2026", "xqm": "3", "xnmText": "2026-2027", "xqmText": "第一学期" },
+  "today": "2026-11-10",
+  "cells": [
+    { "name": "社会实践", "weeks": "", "location": "", "teacher": "", "row": 4, "col": 3, "rowSpan": 2, "colSpan": 1 },
+    { "name": "社会实践", "weeks": "", "location": "", "teacher": "", "row": 6, "col": 3, "rowSpan": 2, "colSpan": 1 }
+  ]
+}

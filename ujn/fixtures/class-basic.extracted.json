@@ -1,0 +1,9 @@
+{
+  "page": "class",
+  "term": { "xnm": "2026", "xqm": "12", "xnmText": "2026-2027", "xqmText": "第二学期" },
+  "today": "2027-03-08",
+  "cells": [
+    { "name": "数据结构", "weeks": "1-18周", "location": "教3-305", "teacher": "赵六(外聘)", "row": 3, "col": 3, "rowSpan": 2, "colSpan": 1 },
+    { "name": "形势与政策", "weeks": "", "location": "", "teacher": "", "row": 10, "col": 2, "rowSpan": 1, "colSpan": 1 }
+  ]
+}

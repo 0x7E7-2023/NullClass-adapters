@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.11.10.2",
+  "version": "2026.11.10.3",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -21,6 +21,12 @@
       "name": "北部湾大学",
       "version": "1.0.0",
       "path": "bbgu"
+    },
+    {
+      "key": "bjtu",
+      "name": "北京交通大学",
+      "version": "1.0.0",
+      "path": "bjtu"
     },
     {
       "key": "bnuzh",
@@ -629,6 +635,12 @@
       "path": "lnu"
     },
     {
+      "key": "lut",
+      "name": "兰州理工大学",
+      "version": "1.0.0",
+      "path": "lut"
+    },
+    {
       "key": "lyu",
       "name": "临沂大学",
       "version": "1.0.0",
@@ -669,6 +681,12 @@
       "name": "宁波工程学院",
       "version": "1.0.0",
       "path": "nbut"
+    },
+    {
+      "key": "ncut",
+      "name": "北方工业大学",
+      "version": "1.0.0",
+      "path": "ncut"
     },
     {
       "key": "neau",
@@ -1019,6 +1037,12 @@
       "path": "uestc"
     },
     {
+      "key": "ujn",
+      "name": "济南大学",
+      "version": "1.0.0",
+      "path": "ujn"
+    },
+    {
       "key": "ujs",
       "name": "江苏大学",
       "version": "1.0.1",
@@ -1179,6 +1203,12 @@
       "name": "徐州医科大学（研究生）",
       "version": "1.0.0",
       "path": "xzhmu"
+    },
+    {
+      "key": "xzit",
+      "name": "徐州工程学院",
+      "version": "1.0.0",
+      "path": "xzit"
     },
     {
       "key": "yangtzeu",

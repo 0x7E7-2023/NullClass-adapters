@@ -1,0 +1,64 @@
+{
+  "specVersion": 1,
+  "key": "bjtu",
+  "name": "北京交通大学",
+  "initial": "B",
+  "version": "1.0.0",
+  "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://mis.bjtu.edu.cn/home/",
+  "scheduleUrlHint": "https://aa.bjtu.edu.cn/course_selection/courseselect/stuschedule/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "aa.bjtu.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 当前学期读自标题按钮（2026-2027-1 → 2026-2027学年第1学期、开学日按 9 月 1 日所在周的周一推算为 2026-08-31）；地点只取逗号最后一段；连堂课合并；单周行与双周行各成一段；完全重复的行只留一条；缺教师、缺地点照常导入",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：同格多门单双周 · 同一个格子里放了三段安排（同一门课的单周段与双周段、另一门每周都上的课），单周段与双周段各自成一段不并成每周",
+      "extracted": "fixtures/same-cell.extracted.json",
+      "expected": "fixtures/same-cell.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法 · 第1-第8周、周后单双标记、全角括号、两段各带标记、全角逗号的多段周次、共 N 周只剥备注、单双同写按每周都上、多段「第…周」取并集、没有逗号的连写按标记归下一段",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：多段周次 · 「第1-8周,第10-16周」「第1-3周,第5周」两段都导入（周次取并集），不再只认第一段",
+      "extracted": "fixtures/multi-segment.extracted.json",
+      "expected": "fixtures/multi-segment.expected.json"
+    },
+    {
+      "name": "合成用例：多段周次带单双标记 · 「第1-8周(单),第10-16周(双)」两段各归各的标记；没有逗号的连写「第(单)1-8周(双)9-16周」后一个标记归下一段，不退化成每周都上",
+      "extracted": "fixtures/multi-segment-marked.extracted.json",
+      "expected": "fixtures/multi-segment-marked.expected.json"
+    },
+    {
+      "name": "合成用例：学期列表兜底与总周数抬高 · 标题按钮读不到、学期列表只有一项（2026-2027-2）→ 第二学期、开学日 2027-03-01；课表排到第 22 周 → 总周数抬到 22 并说明",
+      "extracted": "fixtures/term-from-list.extracted.json",
+      "expected": "fixtures/term-from-list.expected.json"
+    },
+    {
+      "name": "合成用例：表外节次 · 节次时间表只有 8 节，课表用到第 9 节与第 13 节 → 第 9-12 节用空课默认的节次时间、第 13 节按课间 5 分钟每节 45 分钟顺推，并提醒",
+      "extracted": "fixtures/late-periods.extracted.json",
+      "expected": "fixtures/late-periods.expected.json"
+    },
+    {
+      "name": "合成用例：长课名与缺项 · 长课名点到提醒里截到 20 字、缺教师 3 门、缺地点 3 门（含「未知」「待定」「暂无」占位词）、缺课名 / 节次 / 周次的行被跳过，全部提醒不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：读不到学期与节次时间 · 标题按钮与学期列表都没有 → 按今天的日期推算为第二学期、开学日 2027-03-01；节次时间表为空 → 用默认节次时间导入并提醒",
+      "extracted": "fixtures/no-term.extracted.json",
+      "expected": "fixtures/no-term.expected.json"
+    }
+  ]
+}

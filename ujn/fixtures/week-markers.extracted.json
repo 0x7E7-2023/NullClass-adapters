@@ -1,0 +1,11 @@
+{
+  "page": "personal",
+  "term": { "xnm": "2026", "xqm": "3", "xnmText": "2026-2027", "xqmText": "第一学期" },
+  "today": "2026-11-10",
+  "cells": [
+    { "name": "概率论", "weeks": "1-8周(单)9-16周(双)", "location": "教4-201", "teacher": "孙七", "row": 2, "col": 2, "rowSpan": 2, "colSpan": 1 },
+    { "name": "线性代数", "weeks": "(单)1-8周(双)9-16周", "location": "教4-202", "teacher": "周八", "row": 4, "col": 5, "rowSpan": 2, "colSpan": 1 },
+    { "name": "大学英语", "weeks": "第1-第8周(1-2节),共8周", "location": "外语楼301", "teacher": "吴九", "row": 6, "col": 6, "rowSpan": 2, "colSpan": 1 },
+    { "name": "计算机基础", "weeks": "3,5,7周", "location": "机房A", "teacher": "郑十", "row": 8, "col": 7, "rowSpan": 2, "colSpan": 1 }
+  ]
+}

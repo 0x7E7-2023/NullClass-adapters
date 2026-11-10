@@ -1,0 +1,68 @@
+{
+  "semester": "2026-2027-1",
+  "semesters": [
+    "2025-2026-2",
+    "2026-2027-1"
+  ],
+  "today": "2026-11-10",
+  "timeSlots": [
+    {
+      "number": 1,
+      "start": "08:00",
+      "end": "08:45"
+    },
+    {
+      "number": 2,
+      "start": "08:55",
+      "end": "09:40"
+    },
+    {
+      "number": 3,
+      "start": "10:10",
+      "end": "10:55"
+    },
+    {
+      "number": 4,
+      "start": "11:05",
+      "end": "11:50"
+    },
+    {
+      "number": 5,
+      "start": "14:00",
+      "end": "14:45"
+    },
+    {
+      "number": 6,
+      "start": "14:55",
+      "end": "15:40"
+    },
+    {
+      "number": 7,
+      "start": "16:10",
+      "end": "16:55"
+    },
+    {
+      "number": 8,
+      "start": "17:05",
+      "end": "17:50"
+    }
+  ],
+  "rows": [
+    {
+      "day": 4,
+      "section": 9,
+      "name": "晚课甲",
+      "teacher": "教师甲",
+      "location": "东教301",
+      "weeks": "第1-10周"
+    },
+    {
+      "day": 1,
+      "section": 13,
+      "name": "晚课乙",
+      "teacher": "教师乙",
+      "location": "东教302",
+      "weeks": "第1-10周"
+    }
+  ]
+}
