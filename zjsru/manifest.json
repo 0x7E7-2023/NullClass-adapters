@@ -1,0 +1,54 @@
+{
+  "specVersion": 1,
+  "key": "zjsru",
+  "name": "浙江树人学院",
+  "initial": "Z",
+  "version": "1.0.0",
+  "author": "上游 CagierAsh123（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://xk.jwc.zjsru.edu.cn/",
+  "scheduleUrlHint": "http://xk.jwc.zjsru.edu.cn/xskbcx.aspx",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "*.zjsru.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 第一学期读自教务下拉框 → 开学日按 9 月 1 日所在周的周一推算为 2026-08-31；一格并排两门课按 <br> 分行切出、连堂合并、单周行与双周行各成一段不并成每周、完全重复的行只留一条、缺教室照常导入",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：杨汛桥校区 · 第二学期 → 开学日按 3 月 2 日所在周的周一推算为 2026-03-02；节次时间用杨汛桥 12 节表（含第 5 节 11:35-12:15 占位、第 7 节 14:15 与拱宸桥不同）",
+      "extracted": "fixtures/yangxunqiao.extracted.json",
+      "expected": "fixtures/yangxunqiao.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法 · 第1-8周(单)、第(1-16周) 整段写在括号里、第1-第8周、共8周 只剥备注、|双周、(单)1-8周,(双)9-16周 两段各自归属、没有花括号的周次、单双同写按每周都上",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师与缺教室 · 「未知」「暂无教师」「待定」等占位词按没给处理（null），缺的两类分开计数、课照常导入",
+      "extracted": "fixtures/missing-fields.extracted.json",
+      "expected": "fixtures/missing-fields.expected.json"
+    },
+    {
+      "name": "合成用例：长课名与缺项 · 长课名点到提醒里截到 20 字、缺教师 3 门、缺教室 3 门、缺课名 / 缺周次 / 节次不合理的行被跳过，全部提醒不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：读不到学年学期 · 两个下拉框都没有 → 按今天的日期推算为第一学期，开学日推算为 2026-08-31；校区也没确认 → 按拱宸桥并说明",
+      "extracted": "fixtures/no-term.extracted.json",
+      "expected": "fixtures/no-term.expected.json"
+    },
+    {
+      "name": "合成用例：表外节次与超长学期 · 课表用到第 13-14 节、节次时间表只有 12 节 → 顺推补齐并提醒；课表排到第 22 周 → 总周数抬到 22 并说明",
+      "extracted": "fixtures/late-periods.extracted.json",
+      "expected": "fixtures/late-periods.expected.json"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "term": {
+    "dm": "2026-2027-1",
+    "mc": "2026-2027学年第一学期",
+    "selection": "current",
+    "startDate": "2026-09-07",
+    "totalWeeks": "20"
+  },
+  "today": "2026-11-10",
+  "rows": [
+    { "KCM": "超长课程名称用于验证提醒长度限制的第一号课程", "SKJS": "未知", "JASMC": "待定", "SKXQ": 1, "KSJC": 1, "JSJC": 1, "SKZC": "", "ZCMC": "第1-8周", "weeks": [] },
+    { "KCM": "超长课程名称用于验证提醒长度限制的第二号课程", "SKJS": "未知", "JASMC": "待定", "SKXQ": 2, "KSJC": 3, "JSJC": 3, "SKZC": "", "ZCMC": "第1-8周", "weeks": [] },
+    { "KCM": "超长课程名称用于验证提醒长度限制的第三号课程", "SKJS": "未知", "JASMC": "待定", "SKXQ": 3, "KSJC": 5, "JSJC": 5, "SKZC": "", "ZCMC": "第1-8周", "weeks": [] },
+    { "KCM": "超长课程名称用于验证提醒长度限制的第四号课程", "SKJS": "未知", "JASMC": "待定", "SKXQ": 4, "KSJC": 7, "JSJC": 7, "SKZC": "", "ZCMC": "第1-8周", "weeks": [] },
+    { "KCM": "超长课程名称用于验证提醒长度限制的第五号课程", "SKJS": "未知", "JASMC": "待定", "SKXQ": 5, "KSJC": 9, "JSJC": 9, "SKZC": "", "ZCMC": "第1-8周", "weeks": [] },
+    { "KCM": "超长课程名称用于验证提醒长度限制的第六号课程", "SKJS": "未知", "JASMC": "待定", "SKXQ": 6, "KSJC": 11, "JSJC": 11, "SKZC": "", "ZCMC": "第1-8周", "weeks": [] }
+  ]
+}

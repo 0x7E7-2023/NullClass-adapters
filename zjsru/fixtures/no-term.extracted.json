@@ -1,0 +1,12 @@
+{
+  "today": "2026-11-10",
+  "term": null,
+  "campus": {
+    "key": "gongchenqiao",
+    "label": "拱宸桥校区",
+    "source": "default"
+  },
+  "cells": [
+    ["微观经济学", "周一第1,2节{第1-10周}", "教师甲", "A201"]
+  ]
+}

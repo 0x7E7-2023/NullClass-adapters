@@ -1,0 +1,14 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：按上游 NJUPT/njupt_01.js 实际读取的字段形状编造，课程、教师、教室均为虚构，无真实个人信息。只保证「同样的输入永远得到同样的输出」，不保证解析在真实页面上是对的（见 docs/jw-adapter-testing.md §3）。",
+  "_case": "学期回落第一项 + 校历缺失：#xnm / #xqm 都没标「选中」→ 取列表第一项并在提醒里说明；calendar 为 null → 开学日按第一学期锚点推算为 2026-08-31、总周数按 20 周",
+  "term": { "xnm": "2026", "xqm": "3", "xnmText": "2026-2027", "xqmText": "第一学期", "selected": false },
+  "today": "2026-09-13",
+  "raw": {
+    "kbList": [
+      { "kcmc": "线性代数", "xm": "庚老师", "cdmc": "教2-101", "xqj": "1", "jcs": "1-2", "zcd": "1-16周" }
+    ],
+    "sjkList": []
+  },
+  "total": null,
+  "calendar": null
+}

@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.11.10.3",
+  "version": "2026.11.10.4",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -251,6 +251,12 @@
       "path": "gdou-wfw"
     },
     {
+      "key": "gdouyj",
+      "name": "广东海洋大学（阳江校区）",
+      "version": "1.0.0",
+      "path": "gdouyj"
+    },
+    {
       "key": "gdpu",
       "name": "广东药科大学",
       "version": "1.0.2",
@@ -387,6 +393,12 @@
       "name": "湖北医药学院",
       "version": "1.0.0",
       "path": "hbmu"
+    },
+    {
+      "key": "hbmzu",
+      "name": "湖北民族大学",
+      "version": "1.0.0",
+      "path": "hbmzu"
     },
     {
       "key": "hbuas",
@@ -755,6 +767,12 @@
       "path": "njtech"
     },
     {
+      "key": "njupt",
+      "name": "南京邮电大学",
+      "version": "1.0.0",
+      "path": "njupt"
+    },
+    {
       "key": "ntu",
       "name": "南通大学",
       "version": "1.0.0",
@@ -771,6 +789,12 @@
       "name": "南京信息工程大学",
       "version": "1.0.0",
       "path": "nuist"
+    },
+    {
+      "key": "nwafu",
+      "name": "西北农林科技大学",
+      "version": "1.0.0",
+      "path": "nwafu"
     },
     {
       "key": "nwpu",
@@ -1251,6 +1275,12 @@
       "name": "浙江工商职业技术学院",
       "version": "1.0.0",
       "path": "zjbti"
+    },
+    {
+      "key": "zjsru",
+      "name": "浙江树人学院",
+      "version": "1.0.0",
+      "path": "zjsru"
     },
     {
       "key": "zjut",

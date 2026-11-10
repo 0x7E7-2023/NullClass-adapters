@@ -1,0 +1,13 @@
+{
+  "term": {
+    "dm": "2026-2027-1",
+    "mc": "",
+    "selection": "list",
+    "startDate": "2026-09-07",
+    "totalWeeks": "20"
+  },
+  "today": "2026-11-10",
+  "rows": [
+    { "KCM": "课程甲", "SKJS": "老师甲", "JASMC": "C1", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "", "ZCMC": "第1-8周", "weeks": [] }
+  ]
+}

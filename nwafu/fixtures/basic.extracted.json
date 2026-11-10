@@ -1,0 +1,105 @@
+{
+  "term": {
+    "dm": "2026-2027-1",
+    "mc": "2026-2027学年第一学期",
+    "selection": "current",
+    "startDate": "2026-09-07",
+    "totalWeeks": "20"
+  },
+  "today": "2026-11-10",
+  "rows": [
+    {
+      "KCM": "高等数学",
+      "TYXMDM_DISPLAY": "",
+      "SKJS": "张三",
+      "JASMC": "教1-101",
+      "SKXQ": 1,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "",
+      "ZCMC": "第1-16周",
+      "weeks": []
+    },
+    {
+      "KCM": "高等数学",
+      "TYXMDM_DISPLAY": "",
+      "SKJS": "张三",
+      "JASMC": "教1-101",
+      "SKXQ": 1,
+      "KSJC": 3,
+      "JSJC": 4,
+      "SKZC": "",
+      "ZCMC": "第1-16周",
+      "weeks": []
+    },
+    {
+      "KCM": "体育",
+      "TYXMDM_DISPLAY": "篮球",
+      "SKJS": "李四",
+      "JAS": "",
+      "JXLDM_DISPLAY": "北校区体育馆",
+      "SKXQ": 3,
+      "KSJC": 5,
+      "JSJC": 6,
+      "SKZC": "",
+      "ZCMC": "1-8周(单)",
+      "weeks": []
+    },
+    {
+      "KCM": "程序设计",
+      "TYXMDM_DISPLAY": "",
+      "SKJS": "未知",
+      "JASMC": "待定",
+      "SKXQ": 2,
+      "KSJC": 7,
+      "JSJC": 8,
+      "SKZC": "00001111111111110000",
+      "ZCMC": "",
+      "weeks": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    },
+    {
+      "KCM": "",
+      "SKXQ": 1,
+      "KSJC": 1,
+      "JSJC": 2,
+      "ZCMC": "第1-8周",
+      "weeks": []
+    },
+    {
+      "KCM": "物理",
+      "SKXQ": 8,
+      "KSJC": 1,
+      "JSJC": 2,
+      "ZCMC": "第1-8周",
+      "weeks": []
+    },
+    {
+      "KCM": "化学",
+      "SKXQ": 4,
+      "KSJC": 21,
+      "JSJC": 22,
+      "ZCMC": "第1-8周",
+      "weeks": []
+    },
+    {
+      "KCM": "生物",
+      "SKXQ": 5,
+      "KSJC": 1,
+      "JSJC": 2,
+      "ZCMC": "第31-32周",
+      "weeks": []
+    },
+    {
+      "KCM": "高等数学",
+      "TYXMDM_DISPLAY": "",
+      "SKJS": "张三",
+      "JASMC": "教1-101",
+      "SKXQ": 1,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "",
+      "ZCMC": "第1-16周",
+      "weeks": []
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "today": "2026-03-05",
+  "term": {
+    "year": "2026",
+    "semester": "2"
+  },
+  "rows": [
+    {
+      "day": 2,
+      "section": "上午3-4节",
+      "spans": [
+        "数字电路",
+        "东教201",
+        "1-16周"
+      ]
+    },
+    {
+      "day": 3,
+      "section": "下午5-6节",
+      "spans": [
+        "大学英语",
+        "外语楼203",
+        "1-8周",
+        "教师乙"
+      ]
+    }
+  ],
+  "labStatus": "ok",
+  "labWeeks": [
+    {
+      "week": 1,
+      "ok": true,
+      "lessons": [
+        {
+          "name": "数字电路",
+          "teacher": "未知",
+          "location": "东教201",
+          "day": 2,
+          "start": 3,
+          "period": 2,
+          "week": 1
+        },
+        {
+          "name": "大学英语",
+          "teacher": "教师乙",
+          "location": "外语楼203",
+          "day": 3,
+          "start": 5,
+          "period": 2,
+          "week": 1
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "ok": true,
+      "lessons": [
+        {
+          "name": "数字电路",
+          "teacher": "未知",
+          "location": "东教201",
+          "day": 2,
+          "start": 3,
+          "period": 2,
+          "week": 2
+        },
+        {
+          "name": "大学英语",
+          "teacher": "教师乙",
+          "location": "外语楼203",
+          "day": 3,
+          "start": 5,
+          "period": 2,
+          "week": 2
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "ok": true,
+      "lessons": [
+        {
+          "name": "数字电路",
+          "teacher": "未知",
+          "location": "东教201",
+          "day": 2,
+          "start": 3,
+          "period": 2,
+          "week": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "term": {
+    "dm": "2026-2027-1",
+    "mc": "2026-2027学年第一学期",
+    "selection": "current",
+    "startDate": "",
+    "totalWeeks": null
+  },
+  "today": "2026-11-10",
+  "rows": [
+    { "KCM": "课程甲", "SKJS": "老师甲", "JASMC": "C1", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "", "ZCMC": "第1-16周", "weeks": [] }
+  ]
+}

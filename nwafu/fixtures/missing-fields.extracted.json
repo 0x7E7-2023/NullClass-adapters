@@ -1,0 +1,16 @@
+{
+  "term": {
+    "dm": "2026-2027-1",
+    "mc": "2026-2027学年第一学期",
+    "selection": "current",
+    "startDate": "2026-09-07",
+    "totalWeeks": "20"
+  },
+  "today": "2026-11-10",
+  "rows": [
+    { "KCM": "课程甲", "SKJS": "未知", "JASMC": "R1", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "", "ZCMC": "第1-8周", "weeks": [] },
+    { "KCM": "课程乙", "SKJS": "赵老师", "JASMC": "暂无", "SKXQ": 2, "KSJC": 1, "JSJC": 2, "SKZC": "", "ZCMC": "第1-8周", "weeks": [] },
+    { "KCM": "课程丙", "SKJS": "待定", "JASMC": "", "SKXQ": 3, "KSJC": 1, "JSJC": 2, "SKZC": "", "ZCMC": "第1-8周", "weeks": [] },
+    { "KCM": "课程丙", "SKJS": "待定", "JASMC": "", "SKXQ": 4, "KSJC": 3, "JSJC": 4, "SKZC": "", "ZCMC": "第1-8周", "weeks": [] }
+  ]
+}

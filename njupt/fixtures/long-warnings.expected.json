@@ -1,0 +1,134 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "只导入了教务系统当前选中的学期（2026-2027学年第一学期）；要导入别的学期，请在教务页面里切到那个学期再点「提取课表」",
+    "开学日期取自教务系统的学期周次校历：第 1 周从 2026-09-07 开始，请在学期管理里核对",
+    "学期总周数取自教务校历（16 周），如与实际不符可在学期管理里改",
+    "节次时间按本校固定的 12 节导入（第 1 节 08:00-08:45），如与学校实际不同，请在学期管理里核对",
+    "教务系统另外给了 4 门集中实践课（军训与军事理论综合训练实践环节安排说明…、创新创业训练与学科竞赛实践、社会调查与志愿服务实践 等）：它们没有固定的星期与节次，排不进周课表，请自行在学期里添加",
+    "有 2 行课表数据不全（缺周次（或周次全超出 1-30 周）2 行、认不出的周次写法如「详见通知」「另行通知」），已跳过：教务数据不完整时会出现，如发现少课请反馈",
+    "有 1 门课没给上课教师、1 门课没给上课地点（例如 大学生职业生涯规划与就业指导实践专题课程、中国特色社会主义理论与实践研究专题研讨…）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上",
+    "有 1 处周次里的括号备注（如「(本课程的具体周次安排以任课教师每学期…」）不是周次，已忽略，请核对这几门课的周次"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 16,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:50",
+          "end": "09:35"
+        },
+        {
+          "periodIndex": 3,
+          "start": "09:50",
+          "end": "10:35"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:40",
+          "end": "11:25"
+        },
+        {
+          "periodIndex": 5,
+          "start": "11:30",
+          "end": "12:15"
+        },
+        {
+          "periodIndex": 6,
+          "start": "13:45",
+          "end": "14:30"
+        },
+        {
+          "periodIndex": 7,
+          "start": "14:35",
+          "end": "15:20"
+        },
+        {
+          "periodIndex": 8,
+          "start": "15:35",
+          "end": "16:20"
+        },
+        {
+          "periodIndex": 9,
+          "start": "16:25",
+          "end": "17:10"
+        },
+        {
+          "periodIndex": 10,
+          "start": "18:30",
+          "end": "19:15"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:25",
+          "end": "20:10"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:20",
+          "end": "21:05"
+        }
+      ],
+      "courses": [
+        {
+          "name": "大学生职业生涯规划与就业指导实践专题课程",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "综合楼"
+            }
+          ]
+        },
+        {
+          "name": "中国特色社会主义理论与实践研究专题研讨课程",
+          "teacher": "壬老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 3,
+              "endPeriod": 4,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "备注很长的新课",
+          "teacher": "辛老师",
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 5,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": "教1-108"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

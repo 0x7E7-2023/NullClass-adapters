@@ -1,0 +1,14 @@
+{
+  "term": {
+    "dm": "2025-2026-2",
+    "mc": "2025-2026学年第二学期",
+    "selection": "current",
+    "startDate": "2026-07-06",
+    "totalWeeks": "20"
+  },
+  "today": "2026-07-15",
+  "rows": [
+    { "KCM": "课程夏", "SKJS": "王老师", "JASMC": "S1", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "", "ZCMC": "第1-4周", "weeks": [] },
+    { "KCM": "课程晚", "SKJS": "王老师", "JASMC": "S1", "SKXQ": 2, "KSJC": 11, "JSJC": 12, "SKZC": "", "ZCMC": "第1-4周", "weeks": [] }
+  ]
+}

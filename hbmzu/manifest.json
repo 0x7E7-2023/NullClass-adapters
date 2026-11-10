@@ -1,0 +1,59 @@
+{
+  "specVersion": 1,
+  "key": "hbmzu",
+  "name": "湖北民族大学",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwgl.hbmzu.edu.cn/edu/",
+  "scheduleUrlHint": "https://jwgl.hbmzu.edu.cn/edu/report/mySchedule.mvc",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [
+    "jwgl.hbmzu.edu.cn"
+  ],
+  "fixtures": [
+    {
+      "name": "合成用例：理论课表基本 · 学期读自实验入口页 → 2026-2027学年第一学期；开学日按今天（2026-10-27）所在周的周一推算为 2026-10-26；一格多门课、缺教室只有 3 个 span、缺教师照常导入并汇总",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法 · (单)1-8周,(双)9-16周 两段各自归属、无逗号的 1-8周(双)9-16周、(1) 教学班序号、共 N 周只剥备注、第1-第8周、单双同写按每周都上",
+      "extracted": "fixtures/weeks.extracted.json",
+      "expected": "fixtures/weeks.expected.json"
+    },
+    {
+      "name": "合成用例：理论与实验合并 · 同一门课同一时间的实验记录与理论行合并、周次取并集；实验教师写「未知」与理论缺教师都按没给处理，不会因为占位符差异变成两门",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：实验某周缺失 · 第 2、4 周请求失败只写进提醒，理论课表与其余实验周照常导入；返回空课表的第 3 周不算缺失",
+      "extracted": "fixtures/lab-missing.extracted.json",
+      "expected": "fixtures/lab-missing.expected.json"
+    },
+    {
+      "name": "合成用例：读不到学年学期 · 实验入口页返回了页面但缺学号/学年/学期（登录过期或改版）→ 按今天的日期推算学期并冠学校名，开学日按今天所在周的周一推算，两条推算都写进提醒",
+      "extracted": "fixtures/no-term.extracted.json",
+      "expected": "fixtures/no-term.expected.json"
+    },
+    {
+      "name": "合成用例：长课名与缺项 · 长课名点到提醒里截到 20 字、缺教师 5 门、缺教室 4 门、缺课名 / 节次 / 周次的行与实验记录被跳过，全部提醒不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：课表排到 20 周之外 · 第 1-22 周的生产实习 → 总周数从 20 抬到 22 并说明",
+      "extracted": "fixtures/beyond-20.extracted.json",
+      "expected": "fixtures/beyond-20.expected.json"
+    },
+    {
+      "name": "合成用例：实验入口页打不开 · 请求失败时提醒说「教务系统没有返回该页面」，理论课表照常导入",
+      "extracted": "fixtures/lab-http.extracted.json",
+      "expected": "fixtures/lab-http.expected.json"
+    }
+  ]
+}

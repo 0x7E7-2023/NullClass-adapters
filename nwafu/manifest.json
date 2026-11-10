@@ -1,0 +1,57 @@
+{
+  "specVersion": 1,
+  "key": "nwafu",
+  "name": "西北农林科技大学",
+  "initial": "X",
+  "version": "1.0.0",
+  "author": "上游 123zhuzhu61（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://newehall.nwafu.edu.cn/",
+  "scheduleUrlHint": "https://newehall.nwafu.edu.cn/jwapp/sys/wdkbby/*default/index.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["newehall.nwafu.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表 · 当前学期、连堂合并、别名课名、位串兜底、占位教师教室与三类脏行",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：ZCMC 多段周次 · 单双标记前置与后置、第 N 周写法、共 N 周备注剥离、多段取并集",
+      "extracted": "fixtures/zcmc-segments.extracted.json",
+      "expected": "fixtures/zcmc-segments.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师与缺教室 · 照常导入并按课名汇总，空项交 null",
+      "extracted": "fixtures/missing-fields.extracted.json",
+      "expected": "fixtures/missing-fields.expected.json"
+    },
+    {
+      "name": "合成用例：夏令节次时间 · 今天在 7 月时选夏令表，第 12 节按课间 10 分钟顺推并提醒",
+      "extracted": "fixtures/summer-periods.extracted.json",
+      "expected": "fixtures/summer-periods.expected.json"
+    },
+    {
+      "name": "合成用例：校历缺失 · 开学日按本机日期所在周周一推算、总周数按 20 周并提醒",
+      "extracted": "fixtures/calendar-missing.extracted.json",
+      "expected": "fixtures/calendar-missing.expected.json"
+    },
+    {
+      "name": "合成用例：带课名的提醒不超 200 字 · 多门超长课名缺教师或地点，课名截到 20 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：课周超过 20 周 · 校历给 20 周但课表排到第 22 周时抬高总周数并提醒",
+      "extracted": "fixtures/weeks-beyond.extracted.json",
+      "expected": "fixtures/weeks-beyond.expected.json"
+    },
+    {
+      "name": "合成用例：学期列表回落 · 当前学期取不到时按列表第一条，提醒核对学年学期",
+      "extracted": "fixtures/term-fallback.extracted.json",
+      "expected": "fixtures/term-fallback.expected.json"
+    }
+  ]
+}

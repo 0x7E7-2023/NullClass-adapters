@@ -1,0 +1,19 @@
+{
+  "today": "2026-10-27",
+  "term": null,
+  "rows": [
+    {
+      "day": 2,
+      "section": "下午5-6节",
+      "spans": [
+        "大学物理",
+        "实验楼102",
+        "1-10周",
+        "教师丁"
+      ]
+    }
+  ],
+  "labStatus": "no-entry",
+  "labWeeks": [],
+  "labReason": "http"
+}

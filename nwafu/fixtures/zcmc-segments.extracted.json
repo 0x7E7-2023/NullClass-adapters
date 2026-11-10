@@ -1,0 +1,133 @@
+{
+  "term": {
+    "dm": "2026-2027-1",
+    "mc": "2026-2027学年第一学期",
+    "selection": "current",
+    "startDate": "2026-09-07",
+    "totalWeeks": "20"
+  },
+  "today": "2026-11-10",
+  "rows": [
+    {
+      "KCM": "课程A",
+      "SKJS": "张老师",
+      "JASMC": "A101",
+      "SKXQ": 1,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "",
+      "ZCMC": "(单)1-8周,(双)9-16周",
+      "weeks": []
+    },
+    {
+      "KCM": "课程B",
+      "SKJS": "张老师",
+      "JASMC": "A101",
+      "SKXQ": 2,
+      "KSJC": 3,
+      "JSJC": 4,
+      "SKZC": "",
+      "ZCMC": "(单)1-8周(双)9-16周",
+      "weeks": []
+    },
+    {
+      "KCM": "课程C",
+      "SKJS": "张老师",
+      "JASMC": "A101",
+      "SKXQ": 3,
+      "KSJC": 5,
+      "JSJC": 6,
+      "SKZC": "",
+      "ZCMC": "1-8周(单)9-16周(双)",
+      "weeks": []
+    },
+    {
+      "KCM": "课程D",
+      "SKJS": "张老师",
+      "JASMC": "A101",
+      "SKXQ": 4,
+      "KSJC": 7,
+      "JSJC": 8,
+      "SKZC": "",
+      "ZCMC": "第1周至第8周",
+      "weeks": []
+    },
+    {
+      "KCM": "课程E",
+      "SKJS": "张老师",
+      "JASMC": "A101",
+      "SKXQ": 5,
+      "KSJC": 9,
+      "JSJC": 10,
+      "SKZC": "",
+      "ZCMC": "第1-第8周",
+      "weeks": []
+    },
+    {
+      "KCM": "课程F",
+      "SKJS": "张老师",
+      "JASMC": "A101",
+      "SKXQ": 6,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "",
+      "ZCMC": "1-16周(共16周)",
+      "weeks": []
+    },
+    {
+      "KCM": "课程G",
+      "SKJS": "张老师",
+      "JASMC": "A101",
+      "SKXQ": 7,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "",
+      "ZCMC": "1,3,5,7周",
+      "weeks": []
+    },
+    {
+      "KCM": "课程H",
+      "SKJS": "张老师",
+      "JASMC": "A101",
+      "SKXQ": 1,
+      "KSJC": 9,
+      "JSJC": 10,
+      "SKZC": "",
+      "ZCMC": "1-16周(单)",
+      "weeks": []
+    },
+    {
+      "KCM": "课程I",
+      "SKJS": "张老师",
+      "JASMC": "A101",
+      "SKXQ": 2,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "",
+      "ZCMC": "第3-4节,1-16周",
+      "weeks": []
+    },
+    {
+      "KCM": "课程J",
+      "SKJS": "张老师",
+      "JASMC": "A101",
+      "SKXQ": 3,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "",
+      "ZCMC": "10-16周(3学分)",
+      "weeks": []
+    },
+    {
+      "KCM": "课程K",
+      "SKJS": "张老师",
+      "JASMC": "A101",
+      "SKXQ": 4,
+      "KSJC": 1,
+      "JSJC": 2,
+      "SKZC": "",
+      "ZCMC": "(单)1-8周,9-16周",
+      "weeks": []
+    }
+  ]
+}

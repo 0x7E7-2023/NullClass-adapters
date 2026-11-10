@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "key": "gdouyj",
+  "name": "广东海洋大学（阳江校区）",
+  "initial": "G",
+  "version": "1.0.0",
+  "author": "上游 Yihe-ng（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://wfw.gdou.edu.cn/https://jw.gdou.edu.cn/",
+  "scheduleUrlHint": "https://wfw.gdou.edu.cn/https://jw.gdou.edu.cn/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 校历第 1 周周一开学、总周数取校历 16 周；「（公选）艺术鉴赏」规范成「艺术鉴赏(公选)」；教学楼 B205 第 3-4 节命中错峰作息（提醒点名一门课），慎思楼 203 同一时段不提醒；缺教师 / 缺教室照常导入；集中实践课；完全重复行只留一条；排到第 12 节 → 按阳江节次表顺推补第 11-12 节",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：错峰作息的判定 · 教学楼 3-4 命中（化学原理占两天只算一门、历史纲要、物理实验，共 3 门，另加课名更靠后的数据结构与概率论）；慎思楼 3-4 不命中；空地点 3-4 不命中；3-5 区间不是整段连堂不命中；1-2 + 3-4 合成 1-4 不命中；第 3 节与第 4 节分两行写的合成 3-4 后命中",
+      "extracted": "fixtures/offset-venues.extracted.json",
+      "expected": "fixtures/offset-venues.expected.json"
+    },
+    {
+      "name": "合成用例：周次多段与单/双标记 · 前缀「(单)1-8周,(双)9-16周」与后缀「1-8周(单),9-16周(双)」都读成 1-7 单周 + 10-16 双周；「1-15周(单) 共16周」只剥备注；「1-8周(共8周),9-16周」的 9-16 周不丢；「第1-第8周」；全角「（单）3-9周」；(1) 教学班序号与 (3组) 备注各提醒一次；空格分段；单双同写按每周都上并提醒",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 —— 全部周次写成「(单)1-8周(双)9-16周」（第二个标记夹在两段中间、前面紧挨「周」），应读成 1-7 单周 + 10-16 双周",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 · 五门超长课名（缺教师 / 缺教室 / 错峰作息 / 集中实践课，点名最多 3 门、课名截到 20 字）加一行缺课名、三行认不出的超长周次原文 → 每条提醒都不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：课表排到 20 周之外 · 校历取不到、课表排到第 22 周 → 总周数抬到 22 并说明；开学日按「第一学期 = 9 月 1 日所在周的周一」推算为 2026-08-31",
+      "extracted": "fixtures/over-20-weeks.extracted.json",
+      "expected": "fixtures/over-20-weeks.expected.json"
+    },
+    {
+      "name": "合成用例：校历边界 · 第二学期，第 1 周日期写成「2027年3月3日」（周三，年月日写法）且排在数组中间 → 开学日回退到当周周一 2027-03-01；校历写 18 周而课表排到第 20 周 → 总周数抬到 20 并说明",
+      "extracted": "fixtures/calendar-edge.extracted.json",
+      "expected": "fixtures/calendar-edge.expected.json"
+    }
+  ]
+}

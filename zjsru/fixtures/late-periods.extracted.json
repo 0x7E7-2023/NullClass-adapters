@@ -1,0 +1,17 @@
+{
+  "today": "2026-11-10",
+  "term": {
+    "year": "2026",
+    "semester": "1",
+    "yearLabel": "2026-2027",
+    "semesterLabel": "第一学期"
+  },
+  "campus": {
+    "key": "gongchenqiao",
+    "label": "拱宸桥校区",
+    "source": "page"
+  },
+  "cells": [
+    ["专业综合实践", "周一第13,14节{第1-22周}", "教师甲", "H101"]
+  ]
+}
