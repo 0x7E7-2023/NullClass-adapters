@@ -1,0 +1,72 @@
+{
+  "specVersion": 1,
+  "key": "cqcst",
+  "name": "重庆城市科技学院",
+  "initial": "C",
+  "version": "1.0.0",
+  "author": "上游 Mutx163（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "http://jw.cqcst.edu.cn/cqdxcskjxy_jsxsd/",
+  "scheduleUrlHint": "http://jw.cqcst.edu.cn/cqdxcskjxy_jsxsd/xskb/xskb_list.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表 —— 一格多门课（5 个以上连字符分隔）、连堂 [01-02节] 与 [03-04节]、同门课重复格去重、表头星期对齐、学期名取教务给的文本",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次逐段判单双 —— 1-8(单),9-16(双) / (单)1-8周,(双)9-16周 / 1-8周(单)9-16周(双)（无逗号紧挨）/ 1-16周(共16周)（只剥备注）",
+      "extracted": "fixtures/weeks.extracted.json",
+      "expected": "fixtures/weeks.expected.json"
+    },
+    {
+      "name": "合成用例：缺教师 / 缺地点 / 占位词「未知」「待定」交 null；教师名带括号备注不拆；地点写在周次行同一行也认",
+      "extracted": "fixtures/missing.extracted.json",
+      "expected": "fixtures/missing.expected.json"
+    },
+    {
+      "name": "合成用例：课表页左侧节次列带时间（08:00-09:40 / 10:00-11:40 等）—— 逐节读进节次时间，不再用应用自带的表",
+      "extracted": "fixtures/page-times.extracted.json",
+      "expected": "fixtures/page-times.expected.json"
+    },
+    {
+      "name": "合成用例：认不出的块（只有一行课名、没有周次节次行）按处计数并点名；长课名 + 缺教师缺教室的提醒每条不超过 200 字",
+      "extracted": "fixtures/unrecognized.extracted.json",
+      "expected": "fixtures/unrecognized.expected.json"
+    },
+    {
+      "name": "合成用例：表头星期标题与「最右边 7 列」对不上（表头从第 2 列起按星期日到星期六排）—— 按表头对齐并提醒",
+      "extracted": "fixtures/header-mismatch.extracted.json",
+      "expected": "fixtures/header-mismatch.expected.json"
+    },
+    {
+      "name": "合成用例：课表排到第 13-14 节（节次时间只到 12 节）—— 按上一节下课后课间 5 分钟、每节 45 分钟顺推补上",
+      "extracted": "fixtures/period-overflow.extracted.json",
+      "expected": "fixtures/period-overflow.expected.json"
+    },
+    {
+      "name": "合成用例：没有星期表头 —— 按最右边 7 列依次对应星期一到星期日并提醒；课表排到第 22 周，学期总周数抬到 22",
+      "extracted": "fixtures/no-header.extracted.json",
+      "expected": "fixtures/no-header.expected.json"
+    },
+    {
+      "name": "合成用例：整段周次写在括号里 —— (1-16周) / （第1-16周）按周次解析；「、」分隔的 1-8周(单)、9-16周(双) 按段各自判单双",
+      "extracted": "fixtures/week-parens.extracted.json",
+      "expected": "fixtures/week-parens.expected.json"
+    },
+    {
+      "name": "合成用例：表头只认出 3 个星期标题 —— 表头行按表头跳过、不计入「没能解析出来」；一格图例行也跳过；课程仍按最右 7 列对齐",
+      "extracted": "fixtures/header-short.extracted.json",
+      "expected": "fixtures/header-short.expected.json"
+    },
+    {
+      "name": "合成用例：教师 / 地点全是数字与连字符 —— 1-101 / 3-204 / 1-16-201 不当周次丢掉，地点行按位置认",
+      "extracted": "fixtures/numeric-room.extracted.json",
+      "expected": "fixtures/numeric-room.expected.json"
+    }
+  ]
+}

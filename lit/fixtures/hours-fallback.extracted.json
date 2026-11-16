@@ -1,0 +1,14 @@
+{
+  "term": {
+    "code": "202602",
+    "label": "",
+    "source": "page"
+  },
+  "today": "2027-03-05",
+  "rows": [
+    { "kcmc": "专业课", "teaxms": "教师甲", "jxcdmc": "教室1", "xq": 1, "ps": 1, "pe": 2, "zc": "1,2" },
+    { "kcmc": "晚课", "teaxms": "教师乙", "jxcdmc": "教室2", "xq": 2, "ps": 12, "pe": 13, "zc": "1,2" },
+    { "kcmc": "超长周课", "teaxms": "教师丙", "jxcdmc": "教室3", "xq": 3, "ps": 3, "pe": 4, "zc": "1-22" }
+  ],
+  "hours": null
+}

@@ -1,0 +1,146 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "课表按学校公布的节次时间导入，学校如有调整，请在「学期管理」里核对",
+    "教务课表下面还有备注「未排定时间的课程包括形势与政策、军事理…」：没排定时间的课程不会出现在导入结果里，请回教务核对后手动添加",
+    "有 3 个上课安排没能认出来，已跳过（没认出周次 3 个）。教务页面的写法可能有变化，欢迎反馈。包含：体育与健康（一）体能训练与运动技能综合…——没认出周次；大学生心理健康教育与实践课程综合训练——没认出周次；军事理论与国家安全教育综合实践课程——没认出周次",
+    "有 4 门课没给上课教师、4 门课没给上课地点（例如 高等数学A（一）与线性代数基础综合课程…、大学英语视听说（三）综合训练与跨文化交…、毛泽东思想和中国特色社会主义理论体系概… 等）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 16,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:00",
+          "end": "08:45"
+        },
+        {
+          "periodIndex": 2,
+          "start": "08:50",
+          "end": "09:35"
+        },
+        {
+          "periodIndex": 3,
+          "start": "09:55",
+          "end": "10:40"
+        },
+        {
+          "periodIndex": 4,
+          "start": "10:45",
+          "end": "11:30"
+        },
+        {
+          "periodIndex": 5,
+          "start": "11:35",
+          "end": "12:20"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "periodIndex": 7,
+          "start": "14:50",
+          "end": "15:35"
+        },
+        {
+          "periodIndex": 8,
+          "start": "15:55",
+          "end": "16:40"
+        },
+        {
+          "periodIndex": 9,
+          "start": "16:45",
+          "end": "17:30"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:00",
+          "end": "19:45"
+        },
+        {
+          "periodIndex": 11,
+          "start": "19:50",
+          "end": "20:35"
+        },
+        {
+          "periodIndex": 12,
+          "start": "20:40",
+          "end": "21:25"
+        }
+      ],
+      "courses": [
+        {
+          "name": "高等数学A（一）与线性代数基础综合课程设计实践",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "大学英语视听说（三）综合训练与跨文化交际实践",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "毛泽东思想和中国特色社会主义理论体系概论实践课",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "数据结构与算法分析课程设计及综合实验（双语）",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

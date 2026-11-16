@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.11.11.1",
+  "version": "2026.11.16.1",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -87,6 +87,12 @@
       "name": "重庆化工职业学院",
       "version": "1.0.0",
       "path": "cqcivc"
+    },
+    {
+      "key": "cqcst",
+      "name": "重庆城市科技学院",
+      "version": "1.0.0",
+      "path": "cqcst"
     },
     {
       "key": "cqepc",
@@ -335,6 +341,12 @@
       "path": "gxmu"
     },
     {
+      "key": "gxstnu",
+      "name": "广西科技师范学院",
+      "version": "1.0.0",
+      "path": "gxstnu"
+    },
+    {
       "key": "gzhmu",
       "name": "广州医科大学",
       "version": "1.0.0",
@@ -569,6 +581,12 @@
       "path": "huuc"
     },
     {
+      "key": "huwai",
+      "name": "湖南外国语职业学院",
+      "version": "1.0.0",
+      "path": "huwai"
+    },
+    {
       "key": "hynu",
       "name": "衡阳师范学院",
       "version": "1.0.0",
@@ -669,6 +687,12 @@
       "name": "上海立达学院",
       "version": "1.0.0",
       "path": "lidapoly"
+    },
+    {
+      "key": "lit",
+      "name": "洛阳理工学院",
+      "version": "1.0.0",
+      "path": "lit"
     },
     {
       "key": "lnu",
@@ -1185,6 +1209,12 @@
       "name": "武汉理工大学",
       "version": "1.0.0",
       "path": "whut"
+    },
+    {
+      "key": "wit",
+      "name": "武汉工程大学",
+      "version": "1.0.0",
+      "path": "wit"
     },
     {
       "key": "wust",

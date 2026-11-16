@@ -1,0 +1,57 @@
+{
+  "specVersion": 1,
+  "key": "lit",
+  "name": "洛阳理工学院",
+  "initial": "L",
+  "version": "1.0.0",
+  "author": "上游 小漫君（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://lljw.lit.edu.cn/",
+  "scheduleUrlHint": "https://lljw.lit.edu.cn/new/student/xsgrkb/week.page",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表 · 学期取页面选中项、节次时间逐节照抄教务的 businessHours；连堂 1-2 与 3-4 合成 1-4；单周行与双周行并成每周；缺教师 / 缺教室照常导入并汇总提醒；开学日按第一学期锚点（9 月 1 日所在周的周一）推算、总周数按 20 周并提醒",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次数组 · 逗号分隔的周号、「1-16周」区间、「(单)1-8周,(双)9-16周」标记各归各段、「第1-第8周」是一个区间、「共 N 周」只剥备注、教学班序号括号、超界周次 31 丢弃并计数；缺课名 / 星期不在 1-7 / 节次倒挂 / 周次为空的行被跳过并分类计数",
+      "extracted": "fixtures/weeks-array.extracted.json",
+      "expected": "fixtures/weeks-array.expected.json"
+    },
+    {
+      "name": "合成用例：按周换教室 · jxcdmc2「教室-周次」一间教室一段、同名课按教室拆成两门；省略教室名沿用上一间；zc 里有而 jxcdmc2 里没有的周次用主教室补上并提醒；看不懂的项计数；教室为空 → 地点留空并计入缺教室",
+      "extracted": "fixtures/venue-weeks.extracted.json",
+      "expected": "fixtures/venue-weeks.expected.json"
+    },
+    {
+      "name": "合成用例：教师字段 · teaxms 为空时取备用字段 pkr；教师方括号里的备注（「张三[外聘]」）不是名字的一部分；bapjxcd 为 1 表示不用场地 → 地点写「不用场地」不提醒；完全重复的行只留一条",
+      "extracted": "fixtures/teachers.extracted.json",
+      "expected": "fixtures/teachers.expected.json"
+    },
+    {
+      "name": "合成用例：节次时间解析失败回落 · 教务没给 businessHours → 用空课默认 12 节并提醒；课表用到第 13 节 → 顺推补上；学期文字读不出 → 学期名由代码 202602 拼「2026-2027学年第二学期」、开学日按 2 月 20 日所在周的周一推算为 2027-02-15；课表排到第 22 周 → 总周数抬到 22",
+      "extracted": "fixtures/hours-fallback.extracted.json",
+      "expected": "fixtures/hours-fallback.expected.json"
+    },
+    {
+      "name": "合成用例：同一节两个不同的时间 · 无法判断用哪个 → 整张节次时间回落空课默认 12 节并说明",
+      "extracted": "fixtures/hours-conflict.extracted.json",
+      "expected": "fixtures/hours-conflict.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒不超 200 字 · 超长课名（>20 字）截到 19 字加「…」，缺教师 / 缺教室、上课时间对不上、分周地点对不上、认不出的周次各一条，每条 ≤200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单/双标记 · 「(单)1-8周(双)9-16周」与「第(单)1-8周(双)9-16周」里第二个标记归下一段：单周只落 1-7、双周只落 10-16，不进单双同时出现的提醒",
+      "extracted": "fixtures/prefix-markers.extracted.json",
+      "expected": "fixtures/prefix-markers.expected.json"
+    }
+  ]
+}

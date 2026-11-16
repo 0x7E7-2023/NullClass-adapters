@@ -1,0 +1,57 @@
+{
+  "specVersion": 1,
+  "key": "huwai",
+  "name": "湖南外国语职业学院",
+  "initial": "H",
+  "version": "1.0.0",
+  "author": "上游 Haooz（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jw.huwai.edu.cn:8010/jwglxt/xtgl/login_slogin.html",
+  "scheduleUrlHint": "https://jw.huwai.edu.cn:8010/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": ["jw.huwai.edu.cn"],
+  "fixtures": [
+    {
+      "name": "合成用例：基本 · 节次时间接口取不到 → 整张用上游 10 节表（第 2 节 09:25-10:10、第 10 节 19:15-20:00 逐节钉住）；校历取不到 → 开学日推算、总周数 20；课表排到第 13 节 → 第 11、12 节取空课默认节次时间、第 13 节顺推；含单双周、缺教师、缺教室",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：合并 · 同课同日同教室 1-2 与 3-4 两行 → 合并成 1-4 节；同节次不同周次（1-8 与 9-16）→ 周次并集 1-16；完全重复的 1-2 行只留一条",
+      "extracted": "fixtures/merge.extracted.json",
+      "expected": "fixtures/merge.expected.json"
+    },
+    {
+      "name": "合成用例：单/双标记归属与「共 N 周」剥离 · 前缀「(单)1-8周,(双)9-16周」与后缀「1-8周(单),9-16周(双)」都读成 1-7 单周 + 10-16 双周；「1-15周(单) 共16周」只读 1-15 单周；「1-8周(共8周),9-16周」只剥括号备注、9-16 周不丢",
+      "extracted": "fixtures/week-markers.extracted.json",
+      "expected": "fixtures/week-markers.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号的前置单双标记 · 「(单)1-8周(双)9-16周」第二个标记夹在两段中间，应读成 1-7 单周 + 10-16 双周，不许两段并成 1-16 每周都上",
+      "extracted": "fixtures/weeks-prefix-glued.extracted.json",
+      "expected": "fixtures/weeks-prefix-glued.expected.json"
+    },
+    {
+      "name": "合成用例：教务接口给全 · 校历第 1 周从 2026-08-31（周一）起、共 18 周；作息接口给出 12 节 → 节次时间用教务的；开学日与总周数取自校历",
+      "extracted": "fixtures/calendar-term.extracted.json",
+      "expected": "fixtures/calendar-term.expected.json"
+    },
+    {
+      "name": "合成用例：作息时间非法 / 取不到 → 整表作废回落到学校 10 节表并说明（第 2 节给了 24:00，载荷校验不认）；校历第 1 周给的是周三 2026-09-09 → 开学日回退到那一周的周一 2026-09-07",
+      "extracted": "fixtures/bad-period-times.extracted.json",
+      "expected": "fixtures/bad-period-times.expected.json"
+    },
+    {
+      "name": "合成用例：校历取不到且课表排到第 22 周 → 总周数按课表从 20 抬到 22 并说明；集中实践课单独成一条提醒；认不出的周次原文写进提醒",
+      "extracted": "fixtures/no-calendar-overweek.extracted.json",
+      "expected": "fixtures/no-calendar-overweek.expected.json"
+    },
+    {
+      "name": "合成用例：长课名 + 缺教师 / 缺教室 · 四门超长课名的课照常导入（teacher / location 为 null），提醒按类型汇总、点名的课名截到 20 字、每条不超 200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    }
+  ]
+}

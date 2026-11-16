@@ -1,0 +1,72 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "导入的是教务页面里选中的学期（2026-2027学年第一学期）；要导入别的学期，请先在教务页面里切换到那个学期，再点「提取课表」",
+    "教务系统没有给出开学日期，已按学期推算为 2026-08-31，请在学期管理里把它改成学校实际开学日",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 2 周），如与实际不符可在学期管理里改",
+    "有 1 门课没给上课教师、1 门课没给上课地点（例如 军事理论、绘画）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-08-31",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+        { "periodIndex": 6, "start": "14:55", "end": "15:40" },
+        { "periodIndex": 7, "start": "16:00", "end": "16:45" },
+        { "periodIndex": 8, "start": "16:55", "end": "17:40" },
+        { "periodIndex": 9, "start": "18:30", "end": "19:15" },
+        { "periodIndex": 10, "start": "19:25", "end": "20:10" }
+      ],
+      "courses": [
+        {
+          "name": "大学语文",
+          "teacher": "张三",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 2, "weekType": "ALL", "location": "文科楼101" }
+          ]
+        },
+        {
+          "name": "写作",
+          "teacher": "李四",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 2, "weekType": "ALL", "location": "文科楼102" }
+          ]
+        },
+        {
+          "name": "书法",
+          "teacher": "王五",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 2, "weekType": "ALL", "location": "不用场地" }
+          ]
+        },
+        {
+          "name": "军事理论",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 7, "endPeriod": 8, "startWeek": 1, "endWeek": 2, "weekType": "ALL", "location": "阶梯教室" }
+          ]
+        },
+        {
+          "name": "绘画",
+          "teacher": "赵六",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 9, "endPeriod": 10, "startWeek": 1, "endWeek": 2, "weekType": "ALL", "location": null }
+          ]
+        }
+      ]
+    }
+  ]
+}
