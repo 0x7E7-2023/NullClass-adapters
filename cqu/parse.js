@@ -3,9 +3,11 @@
     //
     // 移植自 shiguang_warehouse 的 CQU/cqu.js
     //   https://github.com/XingHeYuZhuan/shiguang_warehouse  （MIT，作者 茵符草）
-    //   上游快照 baf83fa（2026-11-09 拉取）；本校脚本最后一次修改 1fe584c（2026-08-23，升级桥接接口至 v2）
+    //   上游快照 f83288e（2026-11-24 拉取，1.0.1 跟进）；本校脚本最后一次修改 391193b（2026-11-17，PR #934「适配非正常节数课程」）
+    //   1.0.0 移植时的快照是 baf83fa（最后修改 1fe584c）
     // 输入是 extract.js 交出的 { term, today, startDate, maxWeek, periodTimes, rows }；
-    //   每行只有 courseName / instructorName / position / roomName / weekDay / periodFormat / teachingWeek。
+    //   每行只有 courseName / instructorName / position / roomName / weekDay / periodFormat / teachingWeek，
+    //   1.0.1 起另有 period（节次位串）、timeIn / startTime / endTime（上课时间）；
     //
     // 上游在同一段脚本里取数、拼课、存档；这里只做纯转换（不碰页面、不发请求，CI 用 Rhino 实跑），
     // 取数全部在 extract.js 里。parse.js 骨架取自已审计的 hueb（同为「教务取数 → 载荷」的移植件），
@@ -30,6 +32,13 @@
     //   ⑨ 同课合并：先去掉完全相同的行，再合并首尾相接的节次，最后同节次取周次并集
     //      （与上游「一行一课」语义等价，只是不让同一门课在课表里重复出现）。
     //   ⑩ 上游的弹窗、保存桥、提示条、任务完成通知都不移植；载荷交给宿主保存。
+    //   ⑪ 1.0.1 跟进上游 391193b（非正常节数课程）：节次先看 period 位串（第 1 位是第 1 节，每段连续的 1 是一段，
+    //      三节课、隔节课都能接住），位串没有或写法不认再用 periodFormat；两者都没有时才看上课时间，
+    //      按开始时间找差不超过 1 小时的最近一节放进去并提醒（手册 §4.4，载荷没有按课自定义时间的字段）；
+    //      找不到就跳过并计数。位串与上课时间在行处理阶段读，节次表用的是基础部分（H3 补节次在行处理之后）。
+    //   ⑫ 1.0.1 教师：上游按「;」拆成多位老师（每位各取「-」前一段、去掉 [主讲] 之类标记）；这里照做，占位词与重复名字不留。
+    //      上游的 hourType（课程性质）当地点的回落不跟：「理论」「实验」不是地点，缺地点照常计数提醒。
+    //      上游的 credit、考试安排（exam）不跟：载荷没有对应字段，空课规范也没有考试载荷。
     var data = JSON.parse(typeof __ncInput === 'undefined' ? '{}' : __ncInput);
     var term = data.term || {};
     var rows = Array.isArray(data.rows) ? data.rows : [];
@@ -207,12 +216,12 @@
         return runs;
     }
 
-    // ---------- 节次：periodFormat 是 "1-2"（连堂）或 "3"（单节） ----------
-    // 超出 1-MAX_PERIOD 的按不完整行计数，不硬塞进课表（会让载荷校验拒收或把课排到不存在的节次）
-    function sectionsOf(row) {
-        var source = text(row.periodFormat);
-        if (!source) return null;
-        var cleaned = source
+    // ---------- 节次 ----------
+    // 1.0.1 起节次先看 period 位串（第 1 位是第 1 节；每段连续的 1 是一段，三节课、隔节课都能接住）；
+    // 位串没有或写法不认，再用 periodFormat："1-2"（连堂）或 "3"（单节）。
+    // 超出 1-MAX_PERIOD 的按不完整行计数，不硬塞进课表（会让载荷校验拒收或把课排到不存在的节次）。
+    function periodFormatOf(source) {
+        var cleaned = text(source)
             .replace(/[０-９]/g, function (ch) { return String.fromCharCode(ch.charCodeAt(0) - 0xFEE0); })
             .replace(/[第节\s]/g, '');
         var range = /^([0-9]{1,2})-([0-9]{1,2})$/.exec(cleaned);
@@ -230,6 +239,52 @@
         }
         return null;
     }
+
+    // 返回若干段 { start, end }，或 null（两种写法都用不上）
+    function sectionsOf(row) {
+        var bits = text(row.period).replace(/\s+/g, '');
+        if (/^[01]+$/.test(bits) && bits.indexOf('1') >= 0) {
+            var runs = [];
+            var re = /1+/g;
+            var hit;
+            while ((hit = re.exec(bits)) !== null) {
+                runs.push({ start: hit.index + 1, end: hit.index + hit[0].length });
+            }
+            // 位串里有超出 1-MAX_PERIOD 节的，整串不用，退回 periodFormat（都不行就按缺节次计数）
+            if (runs[runs.length - 1].end <= MAX_PERIOD) return runs;
+        }
+        var one = periodFormatOf(row.periodFormat);
+        return one ? [one] : null;
+    }
+
+    // 自定义上下课时间（只在没有节次时才用）：「18:30~20:00」，或 startTime / endTime 两个字段。
+    // 只要开始时间，结束时间只用来确认它是一段合法时间。
+    // timeIn 写成「待定」之类认不出的文字时，再试 startTime / endTime
+    function customStartOf(row) {
+        var joined = text(row.timeIn);
+        return (joined ? validStartOf(joined.split(/[~～]/)) : null) || validStartOf([row.startTime, row.endTime]);
+    }
+
+    function validStartOf(pair) {
+        var start = timeOf(pair[0]);
+        var end = timeOf(pair[1]);
+        if (!start || !end || minutesOf(start) >= minutesOf(end)) return null;
+        return start;
+    }
+
+    // 开始时间离哪一节最近（差不超过 60 分钟，差得最少；同差取靠前的一节）；都超过就 null（手册 §4.4）
+    // shortcut: 只放开始时间最近的一节，跨好几节的上课时间只占一节，结束时间不参与；载荷有按课自定义时间的字段时再改成按起止时间
+    function nearestPeriodOf(hhmm, table) {
+        var best = null;
+        var bestGap = 61;
+        var at = minutesOf(hhmm);
+        for (var i = 0; i < table.length; i++) {
+            var gap = Math.abs(minutesOf(table[i].start) - at);
+            if (gap < bestGap) { bestGap = gap; best = table[i].periodIndex; }
+        }
+        return best !== null && best <= MAX_PERIOD ? best : null;
+    }
+
 
     // ---------- 教务的节次时间（extract.js 另取的，取不到就是 null） ----------
     // 一行一节：periodOrder = 节次，startTime / endTime = 起止时间。要求从第 1 节起连续、
@@ -257,15 +312,24 @@
     }
 
     // ---------- 教师与教室 ----------
-    // 教师：先摘掉「[主讲]」这类角色标记（同一平台的同类脚本也这么做），再按上游的 '-' 取前一段；
-    // 占位词交 null（写「未知」会被课表当成真名）。括号里的备注（「张三（外聘）」）不拆成第二位教师。
+    // 教师：1.0.1 起按「;」拆成多位（上游同款）；每位先摘掉「[主讲]」这类角色标记，再取「-」前一段；
+    // 占位词与重复的名字不留；括号里的备注（「张三（外聘）」）不拆成第二位教师。没有就是空串（交出时写 null）。
     function teacherOf(value) {
-        var raw = text(value).replace(/\[[^\]]*\]/g, '');
-        var dash = raw.indexOf('-');
-        if (dash >= 0) raw = text(raw.substring(0, dash));
-        raw = text(raw);
-        return !raw || EMPTY_WORD[raw] ? '' : raw;
+        var parts = text(value).split(/[;；]/);
+        var names = [];
+        var seen = {};
+        for (var i = 0; i < parts.length; i++) {
+            var raw = text(parts[i]).replace(/\[[^\]]*\]/g, '');
+            var dash = raw.indexOf('-');
+            if (dash >= 0) raw = text(raw.substring(0, dash));
+            raw = text(raw);
+            if (!raw || EMPTY_WORD[raw] || seen['k' + raw]) continue;
+            seen['k' + raw] = true;
+            names.push(raw);
+        }
+        return names.join(',');
     }
+
 
     function roomOf(row) {
         var raw = text(row.position) || text(row.roomName);
@@ -342,10 +406,13 @@
     // ---------- 逐行转换 ----------
     var courses = [];
     var byName = {};
-    var missing = { name: 0, day: 0, period: 0, week: 0 };
+    var missing = { name: 0, day: 0, period: 0, time: 0, week: 0 };
     // 已导入、但教务没给上课教师 / 上课地点的课（按课名去重，提醒里说「N 门课」才准）
     var missingTeacherCourses = {};
     var missingLocationCourses = {};
+    // 只有上课时间、没有标准节次，已按开始时间放进最近一节的课（按课名去重）
+    var customCourses = {};
+    var customSample = '';
     var fieldSamples = [];     // 这两类课里点名用的课名，最多 3 个
     var weekSamples = [];      // 认不出的周次位串，最多留 3 个，写进提醒方便反馈
     var maxWeek = 0;
@@ -371,13 +438,16 @@
     //   阶段 2：名称、教师、教室、星期、起止节次都一样的，周次取并集。
     var entries = [];
 
-    // 原始行先按内容去重：同一条排课在响应里重复出现时，缺教师 / 缺教室的计数与周次丢弃计数都不能被放大
+    // 原始行先按内容去重：同一条排课在响应里重复出现时，缺教师 / 缺教室的计数与周次丢弃计数都不能被放大。
+    // 1.0.1 起节次与上课时间也要进键：同名同星期的两行若只有时间不同，是两节课，不能合成一行
     function rowKey(row) {
         return [
             text(row.courseName), text(row.instructorName), text(row.position),
-            text(row.roomName), text(row.weekDay), text(row.periodFormat), text(row.teachingWeek)
+            text(row.roomName), text(row.weekDay), text(row.periodFormat), text(row.teachingWeek),
+            text(row.period), text(row.timeIn), text(row.startTime), text(row.endTime)
         ].join('|');
     }
+
 
     function dropDuplicateRows(list) {
         var ledger = {};
@@ -476,6 +546,12 @@
         return out;
     }
 
+    // ---------- 节次时间基础表：教务的优先，取不到整张用默认 12 节表 ----------
+    // 放在逐行处理之前：上课时间要按它找最近的一节。H3 补节次（超出这张表的）在行处理之后才做
+    var apiPeriodTimes = periodTimesOf(data.periodTimes);
+    var usedDefault = !apiPeriodTimes;
+    var periodTimes = usedDefault ? BUILTIN_PERIOD_TIMES.slice(0) : apiPeriodTimes.slice(0);
+
     var uniqueRows = dropDuplicateRows(rows);
     for (var r = 0; r < uniqueRows.length; r++) {
         var row = uniqueRows[r] || {};
@@ -486,8 +562,17 @@
         var day = intOf(row.weekDay);
         if (!(day >= 1 && day <= 7)) { missing.day++; continue; }
 
-        var sections = sectionsOf(row);
-        if (!sections) { missing.period++; continue; }
+        var runs = sectionsOf(row);
+        var custom = false;
+        if (!runs) {
+            // 没有节次：看上课时间；找不到最近的一节就跳过并计数（不静默丢课，也不乱放）
+            var startHhmm = customStartOf(row);
+            if (!startHhmm) { missing.period++; continue; }
+            var near = nearestPeriodOf(startHhmm, periodTimes);
+            if (!near) { missing.time++; continue; }
+            runs = [{ start: near, end: near }];
+            custom = true;
+        }
 
         var weeks = weeksOf(row.teachingWeek);
         if (weeks === null) {
@@ -506,17 +591,24 @@
         if ((!teacher || !location) && fieldSamples.length < 3 && fieldSamples.indexOf(name) < 0) {
             fieldSamples.push(name);
         }
-        entries.push({
-            course: courseOf(name, teacher || null),
-            name: name,
-            teacher: teacher,
-            location: location,
-            day: day,
-            start: sections.start,
-            end: sections.end,
-            weeks: weeks
-        });
+        if (custom) {
+            customCourses['n' + name] = true;
+            if (!customSample) customSample = name;
+        }
+        for (var ri = 0; ri < runs.length; ri++) {
+            entries.push({
+                course: courseOf(name, teacher || null),
+                name: name,
+                teacher: teacher,
+                location: location,
+                day: day,
+                start: runs[ri].start,
+                end: runs[ri].end,
+                weeks: weeks
+            });
+        }
     }
+
 
     // 去完全相同的行 → 排序 → 阶段 1 → 再排序 → 阶段 2
     entries = dropExactDuplicates(entries);
@@ -606,10 +698,7 @@
         return '第 ' + runsText.join('、') + ' 节';
     }
 
-    // ---------- 节次时间：教务的优先，取不到整张用默认 12 节表；课表用到的更晚节次逐节补 ----------
-    var apiPeriodTimes = periodTimesOf(data.periodTimes);
-    var usedDefault = !apiPeriodTimes;
-    var periodTimes = usedDefault ? BUILTIN_PERIOD_TIMES.slice(0) : apiPeriodTimes.slice(0);
+    // ---------- 节次时间（基础表在行处理之前已定，见上）：课表用到的更晚节次逐节补 ----------
     var tableLength = periodTimes.length;
     var fromDefault = [];
     var bySequence = [];
@@ -696,13 +785,15 @@
         );
     }
 
-    var skipped = missing.name + missing.day + missing.period + missing.week;
+    var skipped = missing.name + missing.day + missing.period + missing.time + missing.week;
     if (skipped > 0) {
         var reasons = [];
         if (missing.name) reasons.push('缺课程名 ' + missing.name + ' 行');
         if (missing.day) reasons.push('缺星期（或星期不在 1-7）' + missing.day + ' 行');
         if (missing.period) reasons.push('缺节次（或节次超出 1-' + MAX_PERIOD + ' 节）' + missing.period + ' 行');
+        if (missing.time) reasons.push('上课时间离各节都超过 1 小时 ' + missing.time + ' 行');
         if (missing.week) reasons.push('缺周次（或认不出周次、周次全在 1-' + MAX_WEEK + ' 周之外）' + missing.week + ' 行');
+
         if (weekSamples.length) {
             var sampleTexts = [];
             for (var ws = 0; ws < weekSamples.length; ws++) sampleTexts.push(shortName(weekSamples[ws]));
@@ -729,6 +820,14 @@
         warn(
             '有 ' + fieldParts.join('、') + '（例如 ' + shownFieldNames.join('、') + '）：已照常导入，' +
             emptyText + '，可在「编辑课程」里补上'
+        );
+    }
+
+    var customCount = countKeys(customCourses);
+    if (customCount > 0) {
+        warn(
+            '有 ' + customCount + ' 门课只有上课时间、没有标准节次，已按开始时间放进最近的一节（例如「' +
+            shortName(customSample) + '」），时间可能与学校实际不符，请对照学校课表核对'
         );
     }
 

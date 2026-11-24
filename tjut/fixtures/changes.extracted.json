@@ -1,0 +1,19 @@
+{
+  "term": { "name": "2026-2027学年第一学期", "selection": "current", "startDate": "2026-09-07", "totalWeeks": "20" },
+  "today": "2026-11-03",
+  "courseRows": [
+    { "KBID": "C10", "KCM": "数据结构", "SKJS": "孙八", "JASMC": "C101", "SKXQ": 3, "KSJC": 1, "JSJC": 2, "SKZC": "1111111111111111" },
+    { "KBID": "C11", "KCM": "操作系统", "SKJS": "周九", "JASMC": "C102", "SKXQ": 4, "KSJC": 3, "JSJC": 4, "SKZC": "1111111111111111" },
+    { "KBID": "C12", "KCM": "计算机网络", "SKJS": "吴十", "JASMC": "C103", "SKXQ": 5, "KSJC": 5, "JSJC": 6, "SKZC": "1111111111111111" },
+    { "KBID": "C13", "KCM": "编译原理", "SKJS": "郑一", "JASMC": "C104", "SKXQ": 1, "KSJC": 7, "JSJC": 8, "SKZC": "1111111111111111" }
+  ],
+  "experimentRows": [],
+  "changeRows": [
+    { "KBID": "C10", "KCM": "数据结构", "YSKJS": "孙八", "SKZC": "0000110000000000", "SKXQ": 3, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "C101", "XJASMC": "" },
+    { "KBID": "C11", "KCM": "操作系统", "YSKJS": "周九", "SKZC": "0000000000000001", "SKXQ": 4, "KSJC": 3, "JSJC": 4, "TKLXDM": "01", "XSKZC": "0000000000000001", "XSKXQ": 5, "XKSJC": 7, "XJSJC": 8, "XSKJS": "周九", "JASMC": "C102", "XJASMC": "D301" },
+    { "KBID": "C99", "KCM": "数学补课", "YSKJS": "", "SKZC": "1111", "SKXQ": 2, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "C12", "KCM": "计算机网络", "YSKJS": "吴十", "SKZC": "1000000000000000", "SKXQ": 5, "KSJC": 5, "JSJC": 6, "TKLXDM": "05", "XSKZC": "1111111111111111", "XSKXQ": 6, "XKSJC": 1, "XJSJC": 2, "XSKJS": "吴十", "JASMC": "C103", "XJASMC": "C201" },
+    { "KBID": "C13", "KCM": "编译原理", "YSKJS": "郑一", "SKZC": "1000000000000000", "SKXQ": 1, "KSJC": 7, "JSJC": 8, "TKLXDM": "03", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "C104", "XJASMC": "" }
+  ],
+  "periodRows": null
+}

@@ -1,0 +1,61 @@
+{
+  "specVersion": 1,
+  "key": "jluct",
+  "name": "吉林化工大学",
+  "initial": "J",
+  "version": "1.0.0",
+  "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwxt.jluct.edu.cn/",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表 · 学期取页面选中项；连堂 1-2 与 3-4 合成 1-4；单周行与双周行并成每周；校历给开学日 2025-09-01 与 20 周；缺教师 / 缺教室照常导入并汇总提醒；节次时间按学校统一作息 12 节",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次写法 · 「(单)1-8周,(双)9-16周」两段各归各段；「1-8周(共8周)」只剥备注；「第1-第8周」是一个区间；「1-16周(3组)」备注与「(1)」教学班序号各自忽略并提醒；「31」超界丢弃并计数",
+      "extracted": "fixtures/weeks-multi.extracted.json",
+      "expected": "fixtures/weeks-multi.expected.json"
+    },
+    {
+      "name": "合成用例：无逗号与空白的前置单双标记 · 「(单)1-8周(双)9-16周」「(单)1-8周，(双)9-16周」「(单) 1-8周 (双) 9-16周」「第(单)1-8周(双)9-16周」四种写法，第二个标记都归下一段：单周只落 1-7、双周只落 10-16，不退化成每周都上",
+      "extracted": "fixtures/prefix-markers.extracted.json",
+      "expected": "fixtures/prefix-markers.expected.json"
+    },
+    {
+      "name": "合成用例：同门课按教室分周次 · jxcdmc2「教室-周次」一间教室一段，同名课拆成多段；zc 里有而 jxcdmc2 里没有的第 5 周用主教室补上并提醒；教室名为空的第 6 周地点留空并计入缺地点",
+      "extracted": "fixtures/venue-weeks.extracted.json",
+      "expected": "fixtures/venue-weeks.expected.json"
+    },
+    {
+      "name": "合成用例：教师占位词与括号备注 · 「未知教师」「暂无」留空为 null；「李明（外聘）」「王芳(研究生)」去掉备注；同名同教师的两次排课合并为一门课两段；「待定」教室留空",
+      "extracted": "fixtures/teachers.extracted.json",
+      "expected": "fixtures/teachers.expected.json"
+    },
+    {
+      "name": "合成用例：校历取不到兜底 · 校历接口失败 → 开学日按第二学期锚点 2 月 20 日所在周的周一推算为 2026-02-16 并提醒；总周数按 20 周并提醒；学期标记为 default；第 13 节超出学校作息表，按统一修订 H3 顺推补齐并提醒",
+      "extracted": "fixtures/calendar-fallback.extracted.json",
+      "expected": "fixtures/calendar-fallback.expected.json"
+    },
+    {
+      "name": "合成用例：周日开头的校历 · 校历第 1 周列顺序从周日起（2025-08-31 周日、09-01 周一）→ 开学日取该周的周一 2025-09-01，不早一周",
+      "extracted": "fixtures/calendar-sunday-first.extracted.json",
+      "expected": "fixtures/calendar-sunday-first.expected.json"
+    },
+    {
+      "name": "合成用例：长课名提醒不超 200 字 · 超过 20 字的课名截到 19 字加「…」，同类问题 3 门课一条提醒，缺教师 / 缺地点 / 分周地点对不上 / 没给结束节次各一条，每条 ≤200 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：提醒满 20 条溢出 · 21 条核对提示时保留前 19 条，第 20 条写「另有 2 条」（N 为实际没显示的条数），并覆盖学期名推算、校历取不到、节次补齐与超界、缺课名 / 星期 / 节次 / 周次四类跳过、缺教师、缺地点、分周地点、没给结束节次、序号、备注、超界周次、孤立单双、单双同时出现",
+      "extracted": "fixtures/overflow-warnings.extracted.json",
+      "expected": "fixtures/overflow-warnings.expected.json"
+    }
+  ]
+}

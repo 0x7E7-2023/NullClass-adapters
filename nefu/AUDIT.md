@@ -25,13 +25,13 @@ extract.js 里有两处 `fetch(` 字面量（`getPage` 与 `postCalendar`），�
 
 - 三个请求的请求体只含学期代码（来自页面的选中项）、作息模式的值（来自页面选项）和空的周次。不带学号、姓名、令牌，不读任何本地存储。
 - 上游 `requestCoursePage` 与本件的区别：上游的学期由用户在弹窗里选；本件取页面默认选中项，不弹窗（§7）。
-- 没有任何请求指向 `jwxt.nefu.edu.cn` 之外的主机。`readPage` 对响应的 `response.url` 做了主机检查：被重定向到别的主机（通常是统一身份认证页）时报「登录已失效」。
+- 没有任何请求指向当前页面主机（`jwxt.nefu.edu.cn` 或 WebVPN 的 `jwxt-443.webvpn.nefu.edu.cn`）之外的主机。`readPage` 对响应的 `response.url` 做了主机检查：被重定向到与当前页面不同的主机（通常是统一身份认证页）时报「登录已失效」。
 
 ## 3. 端口与 allowHosts
 
-- `manifest.json` 的 `allowHosts` 为 `["jwxt.nefu.edu.cn"]`，只有一个精确主机名，**没有通配**。
-- 上游的 URL 里没有写端口。`loginUrl` 为 `https://jwxt.nefu.edu.cn/jsxsd/`，与上游 `import_url` 一致。
-- 请求用相对路径，脚本里只有上面三个路径字面量，主机由页面本身决定。`run()` 开头还检查 `window.location.host` 必须是 `jwxt.nefu.edu.cn`，否则直接拒绝执行（上游 `WRONG_ORIGIN` 的同一判据）。
+- `manifest.json` 的 `allowHosts` 为 `["jwxt.nefu.edu.cn", "jwxt-443.webvpn.nefu.edu.cn"]`，两个精确主机名，**没有通配**（1.0.1 起）。
+- 上游的 URL 里没有写端口。`loginUrl` 为 `https://jwxt-443.webvpn.nefu.edu.cn/`，与上游 f83288e 的 `import_url` 一致（1.0.1 起；之前是 `https://jwxt.nefu.edu.cn/jsxsd/`）。
+- 请求用相对路径，脚本里只有上面三个路径字面量，主机由页面本身决定。`run()` 开头还检查 `window.location.host` 必须是 `jwxt.nefu.edu.cn` 或 `jwxt-443.webvpn.nefu.edu.cn`，否则直接拒绝执行（上游 `WRONG_ORIGIN` 的同一判据）。
 - 静态扫描（手册 §5 的两条命令）：URL 主机只有 `https://jwxt.nefu.edu.cn`（在 `manifest.json` 与注释里）；`fetch(` 两处字面量，全部是同源相对路径；没有 XHR、sendBeacon、WebSocket，也没有图片 src 赋值。
 
 ## 4. 读取面与输出面
@@ -181,3 +181,11 @@ extract.js 里有两处 `fetch(` 字面量（`getPage` 与 `postCalendar`），�
 ## 11. 签名
 
 0x7E7-2023（haiku 移植，2026-10-17）
+
+## 1.0.1 跟进上游 f83288e（2026-11-24）
+
+- 上游改动：`NEFU/adapters.yaml` 的 `import_url` 与 `nefu.js` 的 `ORIGIN` 从 `https://jwxt.nefu.edu.cn` 改为学校 WebVPN 主机 `https://jwxt-443.webvpn.nefu.edu.cn`，课表 / 周历路径不变。
+- 本件：`loginUrl`、`scheduleUrlHint` 跟着换成 WebVPN 主机；直连主机仍保留（校内仍可能直连），`allowHosts` 与 `run()` 的主机判断两个都认；
+  `readPage` 的重定向检查改为「响应主机必须等于当前页面主机」，两种入口下都能识别被踢到统一认证页。parse.js 未改，fixtures 不变。
+- 验证：自检 PASS；浏览器冒烟（`.test/port-batch38/nefu/smoke.py`，`NEFU_ORIGIN` 分别设为两个主机）两次结果一致；设为外校主机时在发请求前就拒绝执行。
+- 未验证：没有本校账号，WebVPN 下的真实页面没在真机上验过。

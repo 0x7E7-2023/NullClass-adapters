@@ -1,0 +1,16 @@
+{
+  "term": { "name": "2026-2027学年第一学期", "selection": "current", "startDate": "2026-09-07", "totalWeeks": "20" },
+  "today": "2026-11-03",
+  "courseRows": [
+    { "KBID": "W1", "KCM": "位串课甲", "SKJS": "钱七", "JASMC": "B201", "SKXQ": 2, "KSJC": 1, "JSJC": 2, "SKZC": "1110011010101000" },
+    { "KBID": "W2", "KCM": "周次超长课", "SKJS": "赵六", "JASMC": "A301", "SKXQ": 5, "KSJC": 1, "JSJC": 1, "SKZC": "11111111111111111111111111111111" }
+  ],
+  "experimentRows": [],
+  "changeRows": [],
+  "periodRows": [
+    { "DM": "1", "KSSJ": "08:10", "JSSJ": "08:55" },
+    { "DM": "2", "KSSJ": "09:05", "JSSJ": "09:50" },
+    { "DM": "3", "KSSJ": "10:10", "JSSJ": "10:55" },
+    { "DM": "4", "KSSJ": "11:05", "JSSJ": "11:50" }
+  ]
+}

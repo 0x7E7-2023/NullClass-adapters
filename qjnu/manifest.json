@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "key": "qjnu",
+  "name": "曲靖师范学院",
+  "initial": "Q",
+  "version": "1.0.0",
+  "author": "上游 ZGxudQ（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jw.qjnu.edu.cn/jwapp/sys/emaphome/portal/index.do",
+  "scheduleUrlHint": "https://jw.qjnu.edu.cn/jwapp/sys/wdkb/*default/index.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表 · 多门课、连堂合并、单双周位串、括号备注教师、占位教师教室、实验课、缺星期一行、全 0 空行",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次位串 · 全周 / 全部展开到 max(20, 全部行最大周)、单双周、认不出的写法提醒、超过第 30 周丢弃并提醒",
+      "extracted": "fixtures/weeks-bitmap.extracted.json",
+      "expected": "fixtures/weeks-bitmap.expected.json"
+    },
+    {
+      "name": "合成用例：调课与停课 · 调课挪到新课位、停课整门去掉、找不到原课与类型认不出的调课进提醒",
+      "extracted": "fixtures/changes.extracted.json",
+      "expected": "fixtures/changes.expected.json"
+    },
+    {
+      "name": "合成用例：节次时间回落 · 教务节次表为空用默认表，课表用到第 9-12 节时 11-12 节按 H3 顺推，上课时间与节次时间不同点名提醒",
+      "extracted": "fixtures/sections-fallback.extracted.json",
+      "expected": "fixtures/sections-fallback.expected.json"
+    },
+    {
+      "name": "合成用例：校历取不到 · 开学日按本机日期所在周周一推算、总周数用 20 再按第 24 周抬高",
+      "extracted": "fixtures/no-calendar.extracted.json",
+      "expected": "fixtures/no-calendar.expected.json"
+    },
+    {
+      "name": "合成用例：带课名的提醒不超 200 字 · 十门超长课名缺教师缺教室，课名截到 20 字，周次原文也截短",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：提醒满 20 条溢出 · 21 种认不出的周次写法，显示前 19 条加「另有 2 条」汇总",
+      "extracted": "fixtures/overflow.extracted.json",
+      "expected": "fixtures/overflow.expected.json"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "导入的是教务页面里选中的学期（2025-2026学年第一学期）；要导入别的学期，请先在教务页面里切换到那个学期，再点「提取课表」",
+    "节次时间按学校统一作息导入（共 12 节，第 1 节 08:00-08:45，第 12 节 20:30-21:15），与学校实际不符时请在学期管理里核对",
+    "有 3 门课没给上课教师（例如 智能制造系统原理与工程实践综合训练课程…、电磁场与电磁波理论及工程应用实验课程教…、数字化制造与智能装备设计原理及工程案例…）：已照常导入，教师暂时空着，可在「编辑课程」里补上",
+    "有 1 门课没给上课地点（例如 现代数字信号处理原理与典型算法应用研讨…）：已照常导入，地点暂时空着，可在「编辑课程」里补上",
+    "有 1 门课分周次的上课地点与周次对不上，或有看不懂的部分（例如 高等工程数学与计算方法综合应用及课程实…）：周次都已保留，对不上的用主要地点或留空，请在「编辑课程」里核对",
+    "有 1 门课没给结束节次（例如 先进材料分析测试技术与数据处理综合实验…），已按只上开始的那一节导入，请核对这几门课的节次"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第一学期",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "13:30", "end": "14:15" },
+        { "periodIndex": 6, "start": "14:25", "end": "15:10" },
+        { "periodIndex": 7, "start": "15:30", "end": "16:15" },
+        { "periodIndex": 8, "start": "16:25", "end": "17:10" },
+        { "periodIndex": 9, "start": "18:00", "end": "18:45" },
+        { "periodIndex": 10, "start": "18:45", "end": "19:30" },
+        { "periodIndex": 11, "start": "19:45", "end": "20:30" },
+        { "periodIndex": 12, "start": "20:30", "end": "21:15" }
+      ],
+      "courses": [
+        {
+          "name": "智能制造系统原理与工程实践综合训练课程设计",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "N101" }
+          ]
+        },
+        {
+          "name": "电磁场与电磁波理论及工程应用实验课程教学安排",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "N102" }
+          ]
+        },
+        {
+          "name": "现代数字信号处理原理与典型算法应用研讨课程",
+          "teacher": "陈老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": null }
+          ]
+        },
+        {
+          "name": "高等工程数学与计算方法综合应用及课程实践训练",
+          "teacher": "赵老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 2, "startWeek": 3, "endWeek": 3, "weekType": "ALL", "location": "N104" },
+            { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 2, "weekType": "ALL", "location": "N105" }
+          ]
+        },
+        {
+          "name": "先进材料分析测试技术与数据处理综合实验课程",
+          "teacher": "孙老师",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 5, "startPeriod": 7, "endPeriod": 7, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "N106" }
+          ]
+        },
+        {
+          "name": "数字化制造与智能装备设计原理及工程案例分析",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 6, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 8, "weekType": "ALL", "location": "N107" }
+          ]
+        }
+      ]
+    }
+  ]
+}

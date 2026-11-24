@@ -1,0 +1,52 @@
+{
+  "specVersion": 1,
+  "key": "tjut",
+  "name": "天津理工大学",
+  "initial": "T",
+  "version": "1.0.0",
+  "author": "上游 星河欲转（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://authserver.tjut.edu.cn/authserver/login?service=https%3A%2F%2Fjwxt.tjut.edu.cn%2Fjwapp%2Fsys%2Fhomeapp%2Fhome%2Findex.html",
+  "scheduleUrlHint": "https://jwxt.tjut.edu.cn/jwapp/sys/wdkb/*default/index.do",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：基本课表 · 当前学期、占位教师教室、括号备注、连堂相邻节次合并、实验课合入、重复行与缺字段脏行",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：周次位串 · 连续、单双、多段切段，第 31 周丢弃并提醒，课表超过学期周数时抬高总周数",
+      "extracted": "fixtures/weeks-bitmap.extracted.json",
+      "expected": "fixtures/weeks-bitmap.expected.json"
+    },
+    {
+      "name": "合成用例：调课停课 · 按 KBID 对回原课，停课去周次，01 带新时间加入新安排，对不上与类型不认得的进提醒",
+      "extracted": "fixtures/changes.extracted.json",
+      "expected": "fixtures/changes.expected.json"
+    },
+    {
+      "name": "合成用例：只有这一门课 · 新时间不全与类型不认得的调课都原课不动，不抛「没有解析到任何课程」",
+      "extracted": "fixtures/changes-only.extracted.json",
+      "expected": "fixtures/changes-only.expected.json"
+    },
+    {
+      "name": "合成用例：取不到回落 · 学期取列表第 1 项、开学日缺失按本机周周一、总周数缺失用 20、节次表回落并顺推第 12-13 节、调停课与实验课取不到",
+      "extracted": "fixtures/fallbacks.extracted.json",
+      "expected": "fixtures/fallbacks.expected.json"
+    },
+    {
+      "name": "合成用例：带课名的提醒不超 200 字 · 长课名缺教师与教室按类型汇总，课名截到 20 字",
+      "extracted": "fixtures/long-warnings.extracted.json",
+      "expected": "fixtures/long-warnings.expected.json"
+    },
+    {
+      "name": "合成用例：提醒溢出 · 调课对不上的记录超过 20 条时保留前 19 条，第 20 条汇总且数量正确",
+      "extracted": "fixtures/overflow.extracted.json",
+      "expected": "fixtures/overflow.expected.json"
+    }
+  ]
+}

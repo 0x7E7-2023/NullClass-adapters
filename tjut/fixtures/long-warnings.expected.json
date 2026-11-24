@@ -1,0 +1,36 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "已导入教务标记的当前学期（2026-2027学年第一学期）；要导入别的学期，目前无法选择，请核对学年学期",
+    "已按教务给出的节次时间导入（共 5 节），学校调整后请在学期管理里核对",
+    "课表用到了第 6 节，学校节次时间没有覆盖，已按上一节下课后课间 5 分钟、每节 45 分钟顺推补上，请在学期管理里核对",
+    "调课 / 停课记录「甲乙丙丁戊己庚辛壬癸子丑寅卯辰巳午未申…」没能对上课表（原课节次不一致或不在本学期），已忽略，请以教务为准核对",
+    "有 3 门课没给上课教师、3 门课没给上课地点（例如 甲乙丙丁戊己庚辛壬癸子丑寅卯辰巳午未申…、一二三四五六七八九十壹贰叁肆伍陆柒捌玖…、春夏秋冬东南西北上下左右前后内外中心远…）：已照常导入，空着的项可在「编辑课程」里补上"
+  ],
+  "terms": [{
+    "name": "2026-2027学年第一学期",
+    "firstDay": "2026-09-07",
+    "totalWeeks": 20,
+    "periodTimes": [
+      { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+      { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+      { "periodIndex": 3, "start": "10:10", "end": "10:55" },
+      { "periodIndex": 4, "start": "11:05", "end": "11:50" },
+      { "periodIndex": 5, "start": "14:00", "end": "14:45" },
+      { "periodIndex": 6, "start": "14:50", "end": "15:35" }
+    ],
+    "courses": [
+      { "name": "甲乙丙丁戊己庚辛壬癸子丑寅卯辰巳午未申酉戌亥一二三", "teacher": null, "note": null, "blocks": [
+        { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+      ] },
+      { "name": "一二三四五六七八九十壹贰叁肆伍陆柒捌玖拾甲乙丙丁", "teacher": null, "note": null, "blocks": [
+        { "dayOfWeek": 2, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+      ] },
+      { "name": "春夏秋冬东南西北上下左右前后内外中心远近高低大小", "teacher": null, "note": null, "blocks": [
+        { "dayOfWeek": 3, "startPeriod": 5, "endPeriod": 6, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": null }
+      ] }
+    ]
+  }]
+}

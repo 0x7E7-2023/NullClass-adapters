@@ -5,6 +5,7 @@
     // 上游 resources/NEFU/adapters.yaml：adapter_name「东北林业大学本部本科生院」，maintainer「Chr0n0stasis」，
     //   import_url = https://jwxt.nefu.edu.cn/jsxsd/
     // 上游快照 1dc0772（2026-10-17）；本校脚本最后一次修改 247e1e1（2026-09-28）。
+    // 1.0.1 跟进上游 f83288e：上游把入口改到学校 WebVPN 主机 jwxt-443.webvpn.nefu.edu.cn（路径不变），本件两个主机都认。
     //
     // 平台判据按脚本**实际请求的接口路径**（与上游 PATH 一致），不按注释：
     //   GET  /jsxsd/xskb/xskb_list.do?viweType=0                             课表页（默认学期、作息模式、周次）
@@ -28,7 +29,8 @@
     //   ④ 新增：教学周历（上游没有），用来取开学日与总周数；
     //   ⑤ 去掉上游「仅导入课程，保留原有作息和学期设置」的提醒，改由 parse.js 给出本件自己的提醒；
     //   ⑥ 页面地址只交协议、主机与路径，不交查询串（查询串里可能带学号）。
-    var HOST = 'jwxt.nefu.edu.cn';
+    // 直连主机与学校 WebVPN 主机（上游 f83288e 起入口改为 WebVPN，路径不变）都认
+    var HOSTS = { 'jwxt.nefu.edu.cn': true, 'jwxt-443.webvpn.nefu.edu.cn': true };
     var SCHEDULE_PATH = '/jsxsd/xskb/xskb_list.do';
     var CALENDAR_PATH = '/jsxsd/jxzl/jxzl_query';
     var MODE_NAME = '本部';
@@ -251,7 +253,7 @@
 
     function hostOf(url) {
         var m = /^https?:\/\/([^\/?#]+)/i.exec(String(url || ''));
-        return m ? m[1].toLowerCase() : HOST;
+        return m ? m[1].toLowerCase() : String(window.location.host).toLowerCase();
     }
 
     function readPage(response) {
@@ -262,7 +264,7 @@
             throw new Error('教务系统返回错误（代码 ' + response.status + '）：' + LOGIN_HINT);
         }
         // 被重定向到别的主机（一般是统一身份认证页）：登录已经失效
-        if (hostOf(response.url) !== HOST) {
+        if (hostOf(response.url) !== String(window.location.host).toLowerCase()) {
             throw new Error('登录已失效，请重新登录。' + LOGIN_HINT);
         }
         return response.text().then(function (html) {
@@ -317,7 +319,7 @@
     }
 
     function run() {
-        if (window.location.host !== HOST) {
+        if (!HOSTS.hasOwnProperty(String(window.location.host).toLowerCase())) {
             return Promise.reject(new Error('请在东北林业大学教务系统中执行导入。' + LOGIN_HINT));
         }
         return getPage(SCHEDULE_PATH + '?viweType=0').then(function (first) {

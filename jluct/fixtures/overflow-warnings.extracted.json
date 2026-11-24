@@ -1,0 +1,21 @@
+{
+  "term": { "code": "X", "label": "", "source": "page" },
+  "today": "2026-03-10",
+  "rows": [
+    { "kcmc": "A课", "teaxms": "甲老师", "jxcdmc": "R1", "xq": 1, "ps": 1, "pe": 2, "zc": "1,2,3,4" },
+    { "kcmc": "", "teaxms": "甲老师", "jxcdmc": "R2", "xq": 2, "ps": 1, "pe": 2, "zc": "1-2" },
+    { "kcmc": "B课", "teaxms": "甲老师", "jxcdmc": "R2", "xq": "0", "ps": 1, "pe": 2, "zc": "1-2" },
+    { "kcmc": "C课", "teaxms": "甲老师", "jxcdmc": "R3", "xq": 3, "ps": "x", "pe": 2, "zc": "1-2" },
+    { "kcmc": "D课", "teaxms": "甲老师", "jxcdmc": "R4", "xq": 4, "ps": 1, "pe": 2, "zc": "第一到第八周" },
+    { "kcmc": "E课", "teaxms": "甲老师", "jxcdmc": "", "xq": 5, "ps": 1, "pe": 2, "zc": "1-4" },
+    { "kcmc": "F课", "teaxms": "甲老师", "jxcdmc": "R5", "xq": 6, "ps": 15, "pe": 16, "zc": "1-4" },
+    { "kcmc": "G课", "teaxms": "", "jxcdmc": "R6", "xq": 7, "ps": 3, "pe": "", "zc": "1-4" },
+    { "kcmc": "H课", "teaxms": "乙老师", "jxcdmc": "R7", "xq": 1, "ps": 5, "pe": 6, "zc": "1-4,(1)" },
+    { "kcmc": "I课", "teaxms": "乙老师", "jxcdmc": "R8", "xq": 2, "ps": 5, "pe": 6, "zc": "1-4(3组)" },
+    { "kcmc": "J课", "teaxms": "乙老师", "jxcdmc": "R9", "xq": 3, "ps": 5, "pe": 6, "zc": "1,2,31" },
+    { "kcmc": "K课", "teaxms": "乙老师", "jxcdmc": "R10", "xq": 4, "ps": 1, "pe": 2, "zc": "单" },
+    { "kcmc": "L课", "teaxms": "乙老师", "jxcdmc": "R11", "xq": 5, "ps": 7, "pe": 8, "zc": "1-16(单双)" },
+    { "kcmc": "N课", "teaxms": "乙老师", "jxcdmc": "R13", "jxcdmc2": "R13A-1,R13A-2", "xq": 6, "ps": 1, "pe": 2, "zc": "1,2,3" }
+  ],
+  "calendar": null
+}

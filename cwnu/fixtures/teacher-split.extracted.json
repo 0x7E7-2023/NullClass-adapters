@@ -1,0 +1,14 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程与教师全部虚构。本例覆盖：同一门课、同一时段、同一教室，由两位教师分别上不同的周次，应导入为两条课程，各自保留自己的教师。",
+  "term": { "id": "1001", "label": "2026-2027学年第一学期", "pickedBy": "url" },
+  "semesters": [ { "id": "1001", "label": "2026-2027学年第一学期", "selected": true } ],
+  "semesterMeta": { "id": "1001", "startDate": "2026-10-12", "endDate": "2027-02-06", "weekStartOnSunday": false },
+  "weekIndices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+  "lessonList": [
+    { "id": 901, "courseName": "数据结构", "teachers": ["甲老师", "乙老师"], "flag": null }
+  ],
+  "scheduleList": [
+    { "lessonId": 901, "weekday": 2, "weekIndex": 1, "startTime": "08:00", "endTime": "08:40", "personName": "甲老师", "roomName": "教6-301" },
+    { "lessonId": 901, "weekday": 2, "weekIndex": 2, "startTime": "08:00", "endTime": "08:40", "personName": "乙老师", "roomName": "教6-301" }
+  ]
+}

@@ -3,7 +3,7 @@
   "key": "cqu",
   "name": "重庆大学",
   "initial": "C",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 茵符草（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://my.cqu.edu.cn/",
@@ -59,6 +59,21 @@
       "name": "合成用例：只能按开学日推学期名 · 7 月开学推成第三学期并提醒",
       "extracted": "fixtures/start-july.extracted.json",
       "expected": "fixtures/start-july.expected.json"
+    },
+    {
+      "name": "合成用例：只有上课时间的课（1.0.1 跟进上游）· 18:30 离第 9 节最近放进第 9 节；同名同星期只差时间的两行合成 9-10 节；startTime / endTime 字段放进第 10 节；06:30 离各节都超过 1 小时跳过并计数；周次写错的不计入「按最近一节」提醒",
+      "extracted": "fixtures/custom-time.extracted.json",
+      "expected": "fixtures/custom-time.expected.json"
+    },
+    {
+      "name": "合成用例：节次位串（1.0.1 跟进上游）· 三节课「0011100」→ 3-5 节；位串优先于 periodFormat；位串超出 20 节整串不用、退回 periodFormat；隔节位串「1010000000」→ 1 节与 3 节两段",
+      "extracted": "fixtures/period-bitmap.extracted.json",
+      "expected": "fixtures/period-bitmap.expected.json"
+    },
+    {
+      "name": "合成用例：多教师（1.0.1 跟进上游）· 「;」或「；」分隔的多位老师各取「-」前一段，占位词去掉，重名只留一个，括号备注不拆；全部缺教师时计入提醒",
+      "extracted": "fixtures/multi-teacher.extracted.json",
+      "expected": "fixtures/multi-teacher.expected.json"
     }
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "term": { "code": "2026-2027-1", "name": "2026-2027学年第一学期", "source": "api", "listed": true },
+  "today": "2026-11-03",
+  "calendarRows": [
+    { "XN": "2026-2027", "XQ": "1", "XQKSRQ": "2026-09-07", "ZZC": "20", "ZJXZC": "" }
+  ],
+  "sectionRows": [],
+  "rows": [
+    { "KBID": "4001", "KCM": "高等数学", "SKJS": "赵老师", "JASMC": "E1", "SKXQ": "1", "KSJC": "1", "JSJC": "2", "SKZC": "1111111111111111", "KSSJ": "08:40", "JSSJ": "09:15" },
+    { "KBID": "4002", "KCM": "晚自习", "SKJS": "", "JASMC": "", "SKXQ": "2", "KSJC": "9", "JSJC": "12", "SKZC": "1111111100000000" }
+  ],
+  "experimentRows": [],
+  "changeRows": []
+}

@@ -1,0 +1,146 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "课表按默认的节次时间导入，学校如有调整，请在「学期管理」里核对",
+    "教务课表下面还有备注「本学期课表下面的备注写得很长很长，请回…」：没排定时间的课程不会出现在导入结果里，请回教务核对后手动添加",
+    "有 3 个上课安排没能认出来，已跳过（没认出周次 3 个）。教务页面的写法可能有变化，欢迎反馈。包含：高级程序设计语言与编译原理专题实验课程——没认出周次；数字媒体艺术创作与交互设计综合训练课程——没认出周次；国际贸易实务与跨境电子商务运营实训课程——没认出周次",
+    "有 4 门课没给上课教师、4 门课没给上课地点（例如 中国特色社会主义理论与实践研究专题课程…、大学生心理健康教育与自我成长探索实践课程、人工智能导论与智能系统应用基础实践课程 等）：已照常导入，教师或地点暂时空着，可在「编辑课程」里补上"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 20,
+      "periodTimes": [
+        {
+          "periodIndex": 1,
+          "start": "08:40",
+          "end": "09:20"
+        },
+        {
+          "periodIndex": 2,
+          "start": "09:25",
+          "end": "10:05"
+        },
+        {
+          "periodIndex": 3,
+          "start": "10:25",
+          "end": "11:05"
+        },
+        {
+          "periodIndex": 4,
+          "start": "11:10",
+          "end": "11:50"
+        },
+        {
+          "periodIndex": 5,
+          "start": "14:00",
+          "end": "14:40"
+        },
+        {
+          "periodIndex": 6,
+          "start": "14:45",
+          "end": "15:25"
+        },
+        {
+          "periodIndex": 7,
+          "start": "15:45",
+          "end": "16:25"
+        },
+        {
+          "periodIndex": 8,
+          "start": "16:30",
+          "end": "17:10"
+        },
+        {
+          "periodIndex": 9,
+          "start": "19:00",
+          "end": "19:40"
+        },
+        {
+          "periodIndex": 10,
+          "start": "19:45",
+          "end": "20:25"
+        },
+        {
+          "periodIndex": 11,
+          "start": "20:35",
+          "end": "21:15"
+        },
+        {
+          "periodIndex": 12,
+          "start": "21:20",
+          "end": "22:00"
+        }
+      ],
+      "courses": [
+        {
+          "name": "中国特色社会主义理论与实践研究专题课程改革探索",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 1,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "大学生心理健康教育与自我成长探索实践课程",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 2,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "人工智能导论与智能系统应用基础实践课程",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 3,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        },
+        {
+          "name": "现代企业管理案例分析与讨论研究专题课程",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            {
+              "dayOfWeek": 4,
+              "startPeriod": 1,
+              "endPeriod": 2,
+              "startWeek": 1,
+              "endWeek": 16,
+              "weekType": "ALL",
+              "location": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

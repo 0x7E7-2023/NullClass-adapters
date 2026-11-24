@@ -3,8 +3,8 @@
   "key": "xauat",
   "name": "西安建筑科技大学",
   "initial": "X",
-  "version": "1.0.0",
-  "author": "上游 Alph4rc（MIT）；移植 0x7E7-2023",
+  "version": "1.0.1",
+  "author": "上游 Alph4rc、ZionPu（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
   "loginUrl": "https://swjw.xauat.edu.cn/student/login/",
   "scheduleUrlHint": "https://swjw.xauat.edu.cn/student/for-std/course-table",
@@ -64,6 +64,46 @@
       "name": "合成用例：重复记录先去重再计数 · 同一起始时间的下课时间出入按开始时间计数，抬高与 16 周下限两条提醒互不矛盾",
       "extracted": "fixtures/counters.extracted.json",
       "expected": "fixtures/counters.expected.json"
+    },
+    {
+      "name": "合成用例：有作息表时课时段落在节次内取首末节，只差几分钟的取最近一节，超过 60 分钟的跳过并点名",
+      "extracted": "fixtures/layout-approx-drop.extracted.json",
+      "expected": "fixtures/layout-approx-drop.expected.json"
+    },
+    {
+      "name": "合成用例：有作息表时按教务节次排课（08:00-09:40 占第 1-2 节）",
+      "extracted": "fixtures/layout-grid.extracted.json",
+      "expected": "fixtures/layout-grid.expected.json"
+    },
+    {
+      "name": "合成用例：学期接口说每周从周日开始，开学日为周日，周一与周日的周次按周日起算",
+      "extracted": "fixtures/sunday-first.extracted.json",
+      "expected": "fixtures/sunday-first.expected.json"
+    },
+    {
+      "name": "合成用例：同一周同一时间两间教室并排写出并提醒，周次不同的教室分开导入",
+      "extracted": "fixtures/rooms-merge.extracted.json",
+      "expected": "fixtures/rooms-merge.expected.json"
+    },
+    {
+      "name": "合成用例：课时段首尾不对齐节次边界时起止各取所在节，首尾差几分钟不少算节次并提醒",
+      "extracted": "fixtures/layout-edge.extracted.json",
+      "expected": "fixtures/layout-edge.expected.json"
+    },
+    {
+      "name": "合成用例：作息表里 0 号休息行与开始晚于结束的一行被跳过，其余节次照常使用，被跳的节次号要提醒",
+      "extracted": "fixtures/layout-skip-row.extracted.json",
+      "expected": "fixtures/layout-skip-row.expected.json"
+    },
+    {
+      "name": "合成用例：教务周次与日期算出的周次不一致时按教务周次导入并提醒",
+      "extracted": "fixtures/weekindex-mismatch.extracted.json",
+      "expected": "fixtures/weekindex-mismatch.expected.json"
+    },
+    {
+      "name": "合成用例：排课教师写占位词时回落到课程名单的教师，地点回落到自定义地点",
+      "extracted": "fixtures/lesson-fallback.extracted.json",
+      "expected": "fixtures/lesson-fallback.expected.json"
     }
   ]
 }

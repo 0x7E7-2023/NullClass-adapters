@@ -3,7 +3,8 @@
     //
     // 移植自 shiguang_warehouse 的 CQU/cqu.js
     //   https://github.com/XingHeYuZhuan/shiguang_warehouse  （MIT，作者 茵符草）
-    //   上游快照 baf83fa（2026-11-09 拉取）；本校脚本最后一次修改 1fe584c（2026-08-23，升级桥接接口至 v2）
+    //   上游快照 f83288e（2026-11-24 拉取，1.0.1 跟进）；本校脚本最后一次修改 391193b（2026-11-17，PR #934「适配非正常节数课程」）
+    //   1.0.0 移植时的快照是 baf83fa（最后修改 1fe584c）
     // 移植改动：
     //   1. ES6 改为 ES5 与 Promise 链；拾光保存桥、提示条、任务完成通知都不移植（空课由宿主保存载荷）。
     //   2. 登录判定照上游：主机不是 my.cqu.edu.cn，或页面里读不到学号，直接给大白话提示，一个请求都不发。
@@ -14,9 +15,11 @@
     //   5. 学期不弹窗：直接用 session/info-detail 给的当前学期。
     //   6. 地址一律由 window.location.origin 拼出（登录判定已保证它就是 https://my.cqu.edu.cn），
     //      不写死主机名，也不发往别的域。
-    //   7. 交出的对象按字段白名单挑：学期只交 id / year / term / name，课表行只交七个排课字段；
+    //   7. 交出的对象按字段白名单挑：学期只交 id / year / term / name，课表行只交排课字段（ROW_FIELDS，1.0.1 起共 11 个）；
     //      响应里夹带的学生信息（学号、姓名、证件号、手机号等）一律不带出。
     //   8. 上游 baseFetch 报错时引用了未定义的 termResponse（上游 bug），这里改为读当前响应的状态码。
+    //   9. 1.0.1 跟进上游 391193b：课表行多取 period（节次位串）、timeIn / startTime / endTime（上课时间，只在没有节次时用）。
+    //      不取 hourType（课程性质，不是地点）、credit、考试接口（空课没有考试载荷，不跟）。
     //
     // 请求（全部 credentials: 'include'，全部带 Authorization: Bearer <令牌>）：
     //   1. GET  /api/resourceapi/session/info-detail                                   读当前学期 id
@@ -28,7 +31,8 @@
 
     var HOST = 'my.cqu.edu.cn';
     var TOKEN_KEY = 'cqu_edu_ACCESS_TOKEN';
-    var ROW_FIELDS = ['courseName', 'instructorName', 'position', 'roomName', 'weekDay', 'periodFormat', 'teachingWeek'];
+    var ROW_FIELDS = ['courseName', 'instructorName', 'position', 'roomName', 'weekDay', 'periodFormat', 'teachingWeek',
+        'period', 'timeIn', 'startTime', 'endTime'];
     var SLOT_FIELDS = ['periodOrder', 'startTime', 'endTime'];
 
     function text(value) {

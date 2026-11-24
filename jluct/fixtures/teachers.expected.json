@@ -1,0 +1,67 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "导入的是教务页面里选中的学期（2025-2026学年第一学期）；要导入别的学期，请先在教务页面里切换到那个学期，再点「提取课表」",
+    "节次时间按学校统一作息导入（共 12 节，第 1 节 08:00-08:45，第 12 节 20:30-21:15），与学校实际不符时请在学期管理里核对",
+    "有 2 门课没给上课教师（例如 电路分析、数字电路）：已照常导入，教师暂时空着，可在「编辑课程」里补上",
+    "有 1 门课没给上课地点（例如 数字电路）：已照常导入，地点暂时空着，可在「编辑课程」里补上"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第一学期",
+      "firstDay": "2025-09-01",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "13:30", "end": "14:15" },
+        { "periodIndex": 6, "start": "14:25", "end": "15:10" },
+        { "periodIndex": 7, "start": "15:30", "end": "16:15" },
+        { "periodIndex": 8, "start": "16:25", "end": "17:10" },
+        { "periodIndex": 9, "start": "18:00", "end": "18:45" },
+        { "periodIndex": 10, "start": "18:45", "end": "19:30" },
+        { "periodIndex": 11, "start": "19:45", "end": "20:30" },
+        { "periodIndex": 12, "start": "20:30", "end": "21:15" }
+      ],
+      "courses": [
+        {
+          "name": "电路分析",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "K101" }
+          ]
+        },
+        {
+          "name": "模拟电子",
+          "teacher": "李明",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "K102" },
+            { "dayOfWeek": 4, "startPeriod": 3, "endPeriod": 4, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "K102" }
+          ]
+        },
+        {
+          "name": "信号系统",
+          "teacher": "王芳",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "K103" }
+          ]
+        },
+        {
+          "name": "数字电路",
+          "teacher": null,
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 4, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

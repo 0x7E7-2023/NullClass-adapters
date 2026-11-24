@@ -1,0 +1,19 @@
+{
+  "term": { "id": "2026-2027-1", "label": "2026-2027学年第一学期", "pickedBy": "selected" },
+  "semesters": [ { "id": "2026-2027-1", "label": "2026-2027学年第一学期", "selected": true } ],
+  "semesterMeta": { "startDate": "2026-09-07", "endDate": "2027-01-10", "weekStartOnSunday": false },
+  "lessonList": [
+    { "id": 301, "courseName": "体育", "teacherNames": ["王五"] },
+    { "id": 302, "courseName": "形势与政策", "teacherNames": ["赵六（主讲）", "未知教师"] }
+  ],
+  "scheduleList": [
+    { "lessonId": 301, "date": "2026-09-07", "weekIndex": 1, "startTime": 1000, "endTime": 1045, "personName": null, "room": null, "customPlace": "操场" },
+    { "lessonId": 302, "date": "2026-09-08", "weekIndex": 1, "startTime": 800, "endTime": 845, "personName": "未知", "room": "待定", "customPlace": null }
+  ],
+  "courseUnitList": [
+    { "indexNo": 1, "startTime": 800, "endTime": 845 },
+    { "indexNo": 2, "startTime": 855, "endTime": 940 },
+    { "indexNo": 3, "startTime": 1000, "endTime": 1045 },
+    { "indexNo": 4, "startTime": 1055, "endTime": 1140 }
+  ]
+}

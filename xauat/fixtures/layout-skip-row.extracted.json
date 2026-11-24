@@ -1,0 +1,18 @@
+{
+  "term": { "id": "2026-2027-1", "label": "2026-2027学年第一学期", "pickedBy": "selected" },
+  "semesters": [ { "id": "2026-2027-1", "label": "2026-2027学年第一学期", "selected": true } ],
+  "semesterMeta": { "startDate": "2026-09-07", "endDate": "2027-01-10", "weekStartOnSunday": false },
+  "lessonList": [ { "id": 201, "courseName": "高等数学", "teacherNames": ["张三"] } ],
+  "scheduleList": [
+    { "lessonId": 201, "date": "2026-09-07", "weekIndex": 1, "startTime": 800, "endTime": 940, "personName": "张三", "room": "A101", "customPlace": null },
+    { "lessonId": 201, "date": "2026-09-09", "weekIndex": 1, "startTime": 1000, "endTime": 1045, "personName": "张三", "room": "A101", "customPlace": null }
+  ],
+  "courseUnitList": [
+    { "indexNo": 0, "startTime": 1200, "endTime": 1230 },
+    { "indexNo": 1, "startTime": 800, "endTime": 845 },
+    { "indexNo": 2, "startTime": 855, "endTime": 940 },
+    { "indexNo": 3, "startTime": 1000, "endTime": 1045 },
+    { "indexNo": 4, "startTime": 1055, "endTime": 1140 },
+    { "indexNo": 5, "startTime": 1800, "endTime": 1700 }
+  ]
+}

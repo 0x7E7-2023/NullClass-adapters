@@ -1,0 +1,57 @@
+{
+  "specVersion": 1,
+  "key": "cwnu",
+  "name": "西华师范大学",
+  "initial": "X",
+  "version": "1.0.0",
+  "author": "上游 Smoggy Ting（MIT）；移植 0x7E7-2023",
+  "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
+  "loginUrl": "https://jwxt.cwnu.edu.cn/student/sso/login?service=https%3A%2F%2Fjwxt.cwnu.edu.cn%2Fstudent%2Ffor-std%2Fcourse-table",
+  "scheduleUrlHint": "https://jwxt.cwnu.edu.cn/student/for-std/course-table",
+  "minAppVersionCode": 11,
+  "extract": "extract.js",
+  "parse": "parse.js",
+  "allowHosts": [],
+  "fixtures": [
+    {
+      "name": "合成用例：冬令（10 月开学）基本课表 · 连堂（第 6-7 节）· 单周（ODD）与双周（EVEN）· 同一时段重复行去重 · 缺教师缺教室（占位词转 null）· 没排课的课点名",
+      "extracted": "fixtures/basic.extracted.json",
+      "expected": "fixtures/basic.expected.json"
+    },
+    {
+      "name": "合成用例：夏令（5 月开学）节次时间 · 下午 14:30 的课对不上夏令节次时按最接近的一节放入并提醒 · 10 月 1 日起改冬令的提醒",
+      "extracted": "fixtures/summer.extracted.json",
+      "expected": "fixtures/summer.expected.json"
+    },
+    {
+      "name": "合成用例：学期跨夏令、冬令两段（9 月开学到次年 1 月）时写清切换日期 · 周次超过学校校历时抬高总周数并提醒",
+      "extracted": "fixtures/cross.extracted.json",
+      "expected": "fixtures/cross.expected.json"
+    },
+    {
+      "name": "合成用例：没有开学日时按提取当天（周日起算）推算第 1 周并提醒 · 没标当前学期 · 多个学期只导当前",
+      "extracted": "fixtures/no-start.extracted.json",
+      "expected": "fixtures/no-start.expected.json"
+    },
+    {
+      "name": "合成用例：长课名（超 20 字）· 节次时间对不上的课 · 缺教师缺教室 · 提醒不超过 200 字",
+      "extracted": "fixtures/long-warn.extracted.json",
+      "expected": "fixtures/long-warn.expected.json"
+    },
+    {
+      "name": "合成用例：脏记录（找不到课程、星期不对、时间不对、没有周次）计数提醒 · 未公开安排的课按类型汇总点名 · 整数 HHmm 时间 · 占位词教师教室",
+      "extracted": "fixtures/dirty.extracted.json",
+      "expected": "fixtures/dirty.expected.json"
+    },
+    {
+      "name": "合成用例：同一门课同一时段同一教室由两位教师分别上不同周次，导入为两条课程各留自己的教师 · 周次跨过第 30 周只裁掉超出部分并提醒，整门超出的课点名",
+      "extracted": "fixtures/teacher-split.extracted.json",
+      "expected": "fixtures/teacher-split.expected.json"
+    },
+    {
+      "name": "合成用例：周次跨过第 30 周（25..35）裁到 30 · 整门都在第 30 周以后的课点名 · 课表超过校历时抬高总周数并提醒",
+      "extracted": "fixtures/weeks-trim.extracted.json",
+      "expected": "fixtures/weeks-trim.expected.json"
+    }
+  ]
+}

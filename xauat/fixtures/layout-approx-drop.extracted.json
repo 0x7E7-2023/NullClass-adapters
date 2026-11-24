@@ -1,0 +1,21 @@
+{
+  "term": { "id": "2026-2027-1", "label": "2026-2027学年第一学期", "pickedBy": "selected" },
+  "semesters": [ { "id": "2026-2027-1", "label": "2026-2027学年第一学期", "selected": true } ],
+  "semesterMeta": { "startDate": "2026-09-07", "endDate": "2027-01-10", "weekStartOnSunday": false },
+  "lessonList": [
+    { "id": 201, "courseName": "高等数学", "teacherNames": [] },
+    { "id": 202, "courseName": "大学英语", "teacherNames": [] },
+    { "id": 203, "courseName": "选修课", "teacherNames": [] }
+  ],
+  "scheduleList": [
+    { "lessonId": 201, "date": "2026-09-07", "weekIndex": 1, "startTime": 800, "endTime": 940, "personName": "张三", "room": "A101", "customPlace": null },
+    { "lessonId": 202, "date": "2026-09-08", "weekIndex": 1, "startTime": 1005, "endTime": 1040, "personName": "李四", "room": "B201", "customPlace": null },
+    { "lessonId": 203, "date": "2026-09-09", "weekIndex": 1, "startTime": 2300, "endTime": 2350, "personName": "赵某", "room": "C301", "customPlace": null }
+  ],
+  "courseUnitList": [
+    { "indexNo": 1, "startTime": 800, "endTime": 845 },
+    { "indexNo": 2, "startTime": 855, "endTime": 940 },
+    { "indexNo": 3, "startTime": 1000, "endTime": 1045 },
+    { "indexNo": 4, "startTime": 1055, "endTime": 1140 }
+  ]
+}

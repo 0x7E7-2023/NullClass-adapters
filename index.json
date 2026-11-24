@@ -1,7 +1,7 @@
 {
   "specVersion": 1,
   "name": "NullClass 官方适配器库",
-  "version": "2026.11.16.1",
+  "version": "2026.11.24.1",
   "homepage": "https://github.com/0x7E7-2023/NullClass-adapters",
   "adapters": [
     {
@@ -115,7 +115,7 @@
     {
       "key": "cqu",
       "name": "重庆大学",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "cqu"
     },
     {
@@ -173,6 +173,12 @@
       "path": "cupk"
     },
     {
+      "key": "cwnu",
+      "name": "西华师范大学",
+      "version": "1.0.0",
+      "path": "cwnu"
+    },
+    {
       "key": "cwxu",
       "name": "无锡学院",
       "version": "1.0.1",
@@ -225,6 +231,12 @@
       "name": "福州理工学院",
       "version": "1.0.1",
       "path": "fit"
+    },
+    {
+      "key": "fspt",
+      "name": "佛山职业技术学院",
+      "version": "1.0.0",
+      "path": "fspt"
     },
     {
       "key": "gdcp",
@@ -623,6 +635,12 @@
       "path": "jlu"
     },
     {
+      "key": "jluct",
+      "name": "吉林化工大学",
+      "version": "1.0.0",
+      "path": "jluct"
+    },
+    {
       "key": "jngcxy",
       "name": "济南工程职业技术学院",
       "version": "1.0.0",
@@ -763,7 +781,7 @@
     {
       "key": "nefu",
       "name": "东北林业大学",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "nefu"
     },
     {
@@ -891,6 +909,12 @@
       "name": "曲阜师范大学",
       "version": "1.0.0",
       "path": "qfnu"
+    },
+    {
+      "key": "qjnu",
+      "name": "曲靖师范学院",
+      "version": "1.0.0",
+      "path": "qjnu"
     },
     {
       "key": "qqhrit",
@@ -1115,6 +1139,12 @@
       "path": "tjau"
     },
     {
+      "key": "tjut",
+      "name": "天津理工大学",
+      "version": "1.0.0",
+      "path": "tjut"
+    },
+    {
       "key": "tongji",
       "name": "同济大学",
       "version": "1.0.0",
@@ -1237,7 +1267,7 @@
     {
       "key": "xauat",
       "name": "西安建筑科技大学",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "path": "xauat"
     },
     {

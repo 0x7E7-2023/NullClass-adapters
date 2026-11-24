@@ -1,0 +1,270 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 cwnu/extract.js 实际交出去的样子编造，课程与教师全部虚构。本例覆盖：夏令节次（5 月开学）、夏令第 6-7 节（15:00-16:30）、14:30-15:10 对不上夏令节次时按最接近的一节放入并提醒、体育缺教师缺教室、切到冬令的日期提醒。",
+  "term": {
+    "id": "1002",
+    "label": "2026-2027学年第二学期",
+    "pickedBy": "url"
+  },
+  "semesters": [
+    {
+      "id": "1002",
+      "label": "2026-2027学年第二学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": {
+    "id": "1002",
+    "startDate": "2027-05-03",
+    "endDate": "2027-08-29",
+    "weekStartOnSunday": false
+  },
+  "weekIndices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "lessonList": [
+    {
+      "id": 201,
+      "courseName": "计算机基础",
+      "teachers": [
+        "李想"
+      ],
+      "flag": null
+    },
+    {
+      "id": 202,
+      "courseName": "英语口语",
+      "teachers": [],
+      "flag": null
+    },
+    {
+      "id": 203,
+      "courseName": "体育(3)",
+      "teachers": [],
+      "flag": null
+    },
+    {
+      "id": 204,
+      "courseName": "日语(2)",
+      "teachers": [
+        "王悦"
+      ],
+      "flag": null
+    }
+  ],
+  "scheduleList": [
+    {
+      "lessonId": 201,
+      "weekday": 2,
+      "weekIndex": 1,
+      "startTime": "15:00",
+      "endTime": "16:30",
+      "personName": null,
+      "roomName": "东校区 机房2"
+    },
+    {
+      "lessonId": 201,
+      "weekday": 2,
+      "weekIndex": 2,
+      "startTime": "15:00",
+      "endTime": "16:30",
+      "personName": null,
+      "roomName": "东校区 机房2"
+    },
+    {
+      "lessonId": 201,
+      "weekday": 2,
+      "weekIndex": 3,
+      "startTime": "15:00",
+      "endTime": "16:30",
+      "personName": null,
+      "roomName": "东校区 机房2"
+    },
+    {
+      "lessonId": 201,
+      "weekday": 2,
+      "weekIndex": 4,
+      "startTime": "15:00",
+      "endTime": "16:30",
+      "personName": null,
+      "roomName": "东校区 机房2"
+    },
+    {
+      "lessonId": 201,
+      "weekday": 2,
+      "weekIndex": 5,
+      "startTime": "15:00",
+      "endTime": "16:30",
+      "personName": null,
+      "roomName": "东校区 机房2"
+    },
+    {
+      "lessonId": 201,
+      "weekday": 2,
+      "weekIndex": 6,
+      "startTime": "15:00",
+      "endTime": "16:30",
+      "personName": null,
+      "roomName": "东校区 机房2"
+    },
+    {
+      "lessonId": 201,
+      "weekday": 2,
+      "weekIndex": 7,
+      "startTime": "15:00",
+      "endTime": "16:30",
+      "personName": null,
+      "roomName": "东校区 机房2"
+    },
+    {
+      "lessonId": 201,
+      "weekday": 2,
+      "weekIndex": 8,
+      "startTime": "15:00",
+      "endTime": "16:30",
+      "personName": null,
+      "roomName": "东校区 机房2"
+    },
+    {
+      "lessonId": 202,
+      "weekday": 4,
+      "weekIndex": 1,
+      "startTime": "14:30",
+      "endTime": "15:10",
+      "personName": "赵老师",
+      "roomName": "线上"
+    },
+    {
+      "lessonId": 202,
+      "weekday": 4,
+      "weekIndex": 2,
+      "startTime": "14:30",
+      "endTime": "15:10",
+      "personName": "赵老师",
+      "roomName": "线上"
+    },
+    {
+      "lessonId": 202,
+      "weekday": 4,
+      "weekIndex": 3,
+      "startTime": "14:30",
+      "endTime": "15:10",
+      "personName": "赵老师",
+      "roomName": "线上"
+    },
+    {
+      "lessonId": 202,
+      "weekday": 4,
+      "weekIndex": 4,
+      "startTime": "14:30",
+      "endTime": "15:10",
+      "personName": "赵老师",
+      "roomName": "线上"
+    },
+    {
+      "lessonId": 202,
+      "weekday": 4,
+      "weekIndex": 5,
+      "startTime": "14:30",
+      "endTime": "15:10",
+      "personName": "赵老师",
+      "roomName": "线上"
+    },
+    {
+      "lessonId": 202,
+      "weekday": 4,
+      "weekIndex": 6,
+      "startTime": "14:30",
+      "endTime": "15:10",
+      "personName": "赵老师",
+      "roomName": "线上"
+    },
+    {
+      "lessonId": 203,
+      "weekday": 5,
+      "weekIndex": 1,
+      "startTime": "08:00",
+      "endTime": "09:30",
+      "personName": null,
+      "roomName": null
+    },
+    {
+      "lessonId": 203,
+      "weekday": 5,
+      "weekIndex": 3,
+      "startTime": "08:00",
+      "endTime": "09:30",
+      "personName": null,
+      "roomName": null
+    },
+    {
+      "lessonId": 203,
+      "weekday": 5,
+      "weekIndex": 5,
+      "startTime": "08:00",
+      "endTime": "09:30",
+      "personName": null,
+      "roomName": null
+    },
+    {
+      "lessonId": 203,
+      "weekday": 5,
+      "weekIndex": 7,
+      "startTime": "08:00",
+      "endTime": "09:30",
+      "personName": null,
+      "roomName": null
+    },
+    {
+      "lessonId": 204,
+      "weekday": 3,
+      "weekIndex": 1,
+      "startTime": "14:30",
+      "endTime": "16:00",
+      "personName": null,
+      "roomName": "教2-101"
+    },
+    {
+      "lessonId": 204,
+      "weekday": 3,
+      "weekIndex": 2,
+      "startTime": "14:30",
+      "endTime": "16:00",
+      "personName": null,
+      "roomName": "教2-101"
+    },
+    {
+      "lessonId": 204,
+      "weekday": 3,
+      "weekIndex": 3,
+      "startTime": "14:30",
+      "endTime": "16:00",
+      "personName": null,
+      "roomName": "教2-101"
+    },
+    {
+      "lessonId": 204,
+      "weekday": 3,
+      "weekIndex": 4,
+      "startTime": "14:30",
+      "endTime": "16:00",
+      "personName": null,
+      "roomName": "教2-101"
+    }
+  ]
+}

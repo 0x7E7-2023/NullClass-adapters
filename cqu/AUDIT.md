@@ -1,5 +1,7 @@
 # 安全审计 —— 重庆大学（智慧教务，my.cqu.edu.cn，自研 REST 接口）
 
+当前版本 **1.0.1**（2026-11-24 跟进上游 `391193b`，见 §10）；下文 §0–§9 是 1.0.0 的审计，除 §10 列出的改动外仍然有效。
+
 审计对象：`jw-adapters/cqu/` 下的 `manifest.json`、`extract.js`、`parse.js` 与 `fixtures/`。
 上游：`shiguang_warehouse` 的 `CQU/cqu.js`（MIT，`adapters.yaml` 维护者 茵符草）。
 上游快照 `baf83fa`（2026-11-09 对齐 origin/main）。任务卡写「上游最后提交 `2e1e720`」，
@@ -23,7 +25,7 @@
 ## 1. 请求域与请求清单（与代码逐条对应）
 
 请求主机只有一个：`window.location.origin`，而脚本在**发请求之前**已经检查
-`window.location.hostname === 'my.cqu.edu.cn'`（`extract.js` 第 169-187 行），不满足就报错、零请求。
+`window.location.hostname === 'my.cqu.edu.cn'`（`extract.js` 第 174-190 行），不满足就报错、零请求。
 所以实际主机就是 `loginUrl` 的 `my.cqu.edu.cn`。`allowHosts` 为 `["my.cqu.edu.cn"]`，无通配；
 代码里没有任何写死的主机名（只有注释里提到 `my.cqu.edu.cn`）。
 上游在任意页面都能执行，`scheduleUrlHint` 按主调度决定写门户首页 `https://my.cqu.edu.cn/`。
@@ -39,7 +41,7 @@
 - 全部请求 `credentials: 'include'`（让 WebView 按同源规则带 Cookie），并带
   `Authorization: Bearer <cqu_edu_ACCESS_TOKEN>`（从 `localStorage` 读出，只放进这一个请求头）。
 - 后三条是附加数据：任何失败（非 2xx、网络错误、JSON 解析失败）都吞成 `null`
-  （`optional()`，`extract.js` 第 105-112 行），由 parse.js 回落并把回落写进提醒。
+  （`optional()`，`extract.js` 第 109-116 行），由 parse.js 回落并把回落写进提醒。
 - 不重试、不翻页、不请求其它模块。`parse.js` 不发任何请求（Rhino 里实跑，纯函数）。
 
 ## 2. 读了什么、交出去什么（逐字段）
@@ -50,8 +52,8 @@
 | 开学日 | `session/info/<id>` 的 `data.beginDate` | 只取日期部分，带出为 `startDate` |
 | 学期文本 / 学年 / 学期 | `session/info/<id>` 的 `data.name`（或 `sessionName` / `showName`）、`data.year`、`data.term` | 带出为 `term.name` / `term.year` / `term.term`（三个键都是白名单） |
 | 学期总周数 | `maxWeek` 的 `data` | 带出为 `maxWeek` |
-| 节次时间 | `classPeriodVOS` | 只带 `periodOrder` / `startTime` / `endTime`（`SLOT_FIELDS`，`extract.js` 第 32 行） |
-| 排课行 | `classTimetableVOList` | 只带 `courseName` / `instructorName` / `position` / `roomName` / `weekDay` / `periodFormat` / `teachingWeek` 七个字段（`ROW_FIELDS`，`extract.js` 第 31 行） |
+| 节次时间 | `classPeriodVOS` | 只带 `periodOrder` / `startTime` / `endTime`（`SLOT_FIELDS`，`extract.js` 第 36 行） |
+| 排课行 | `classTimetableVOList` | 只带 `courseName` / `instructorName` / `position` / `roomName` / `weekDay` / `periodFormat` / `teachingWeek` 七个字段，1.0.1 起加 `period` / `timeIn` / `startTime` / `endTime`（共 11 个，`ROW_FIELDS`，`extract.js` 第 34-35 行） |
 | 本机日期 | 浏览器时钟 | 带出为 `today`，只用于学年 / 学期推不出来时的兜底 |
 | **登录令牌** | `localStorage['cqu_edu_ACCESS_TOKEN']`（去掉引号） | **不带出**：只进发往 `my.cqu.edu.cn` 的 `Authorization` 头；不写进报错、提醒、返回对象；冒烟逐字检索过 |
 | **学号** | 页面 `.trigger-user-name` 文本里的 `[学号]` | **不带出**：只在 `extract.js` 内存里当课表接口的请求体（`["2026..."]`），不进返回对象、不进提醒 / 报错。课上没有其它接口天然给学号，上游也是这么读的，没有更好的替代办法 |
@@ -59,18 +61,18 @@
 | 成绩 / 学籍 / 缴费 / 其它模块 | — | 不请求 |
 
 `parse.js` 实际使用的字段：`term.id/name/year/term`、`today`、`startDate`、`maxWeek`、`periodTimes[].periodOrder/startTime/endTime`、
-`rows[].courseName/instructorName/position/roomName/weekDay/periodFormat/teachingWeek`。
+`rows[].courseName/instructorName/position/roomName/weekDay/periodFormat/teachingWeek/period/timeIn/startTime/endTime`（后四个 1.0.1 起）。
 
 ## 3. 移植手册 §5 八条逐条
 
 | # | 检查项 | 结论 |
 |---|---|---|
 | 1 | 不碰凭据 | **过**。不读账号密码、不读登录表单值、不读 Cookie。`cqu_edu_ACCESS_TOKEN` 是本校接口要求的登录令牌，按手册例外只放进本校同源请求头；不交出、不外发、不进报错 / 提醒 |
-| 2 | 不外发 | **过**。全部 `fetch` 都在 `extract.js` 的 `requestJson`（第 74-103 行），地址由 `originOf()` 与固定路径拼成；无 `sendBeacon` / `WebSocket` / `EventSource` / `new Image().src` / 第三方域 |
+| 2 | 不外发 | **过**。全部 `fetch` 都在 `extract.js` 的 `requestJson`（第 78-107 行），地址由 `originOf()` 与固定路径拼成；无 `sendBeacon` / `WebSocket` / `EventSource` / `new Image().src` / 第三方域 |
 | 3 | 请求域可控 | **过**。发请求前限定 `hostname === 'my.cqu.edu.cn'`；`allowHosts` 只写这一个精确主机，无通配；代码里没有写死主机名，也不请求别的域 |
 | 4 | 只读课表 | **过**。五条请求分别是当前学期 id、学期详情（开学日）、最大周数、节次时间、个人课表；不碰成绩、学籍、个人信息、缴费。响应里夹带的学生信息按白名单丢弃 |
 | 5 | 不埋点 | **过**。没有统计、上报、遥测，也没有图片打点 |
-| 6 | 不 eval 远程代码 | **过**。没有 `eval` / `new Function`；只对教务自己的响应做 `JSON.parse`（第 95-101 行） |
+| 6 | 不 eval 远程代码 | **过**。没有 `eval` / `new Function`；只对教务自己的响应做 `JSON.parse`（第 100-104 行） |
 | 7 | 不写页面 | **过**。只读 `.trigger-user-name` 的文本与 `localStorage` 的一个键；不写 DOM、不改表单、不触发提交或点击，也不把 HTML 插进页面 |
 | 8 | 不依赖用户输入之外的秘密 | **过**。没有硬编码的密钥、令牌或他人学号。常量只有主机名、令牌键名与接口路径 |
 
@@ -122,7 +124,7 @@
 
 ## 7. fixtures 与自检
 
-9 对合成用例（`manifest.json` 每条都写了覆盖点；8、9 为 2026-11-10 复审修正新增）：
+9 对合成用例（`manifest.json` 每条都写了覆盖点；8、9 为 2026-11-10 复审修正新增；10–12 为 1.0.1 跟进上游新增，见 §10）：
 
 1. `basic` —— 基本路径：学年 + 学期代号拼学期名、周一开始日、教务 maxWeek、教务 `classPeriodVOS`；
    连堂与单节、单双周位串、缺教师、地点「待定」、完全重复的行。
@@ -134,6 +136,9 @@
 7. `maxweek-clamp` —— 周三开学回退到周一并说明、36 周按 30 周导入、没给学期名时按开学日推并说明。
 8. `term-name-summer` —— 教务给的学期名是「2026夏」（不含「学期」二字），必须原样使用，不能改说「教务没有给学期名称」。
 9. `start-july` —— 只能按开学日推学期名时，7 月开学推成「第三学期」（与 7 月 1 日的夏季学期锚点一致）。
+10. `period-bitmap` —— 节次位串（三节课 3-5、位串优先于 periodFormat、超出 20 节的位串整串不用退回 periodFormat、隔节两段）。
+11. `custom-time` —— 只有上课时间没有节次：离最近一节 ≤1 小时放进去并提醒；同名同星期只差时间的两行是两节课（rowKey 含时间）；超过 1 小时跳过并计数；周次写错的不进「按最近一节」提醒。
+12. `multi-teacher` —— 「;」「；」分隔的多位老师、占位词去掉、重名只留一个、括号备注不拆、全部缺教师计入提醒。
 
 自检：`node D:/NullClass/.test/port-batch5/tools/check.js D:/NullClass/jw-adapters/cqu` 最后一行 `RESULT: PASS`。
 
@@ -172,3 +177,77 @@
 ## 9. 签名
 
 0x7E7-2023（haiku 移植，2026-11-09）
+
+## 10. 1.0.1 跟进上游 `391193b`（2026-11-24）
+
+上游 `391193b`（2026-11-17，PR #934「适配重庆大学非正常节数课程与考表导入」，茵符草）改了 `CQU/cqu.js`（+80/−39）。
+快照 `f83288e` 与 `1dc9ac6` 对 `resources/CQU/` 内容一致，`baf83fa..f83288e` 之间只有这一个提交。只读比对，快照未改。
+
+### 10.1 上游每条改动：跟 / 不跟
+
+| 上游改动 | 决定 | 理由 |
+|---|---|---|
+| 节次改用 `period` 位串（`matchAll(/1+/g)`，第 1 位 = 第 1 节），支持三节课、隔节课 | **跟** | 课表数据正确性；位串优先，`periodFormat` 保留作回落（旧版接口或位串不认时不丢课） |
+| 无节次时用 `timeIn`（`HH:mm~HH:mm`）或 `startTime` / `endTime` 作自定义上课时间 | **跟，但按手册 §4.4 改写** | 上游把 `isCustomTime` 挂在课上，载荷没有这个字段；按开始时间找差不超过 1 小时的最近一节，找到放进去并提醒，找不到跳过并计数（不静默丢课） |
+| 教师按 `;` 拆成多位（每位取「-」前一段、去 `[..]`） | **跟** | 我们旧版只取第一个「-」前的整段，`甲-教授;乙-副教授` 会静默丢第二位老师；现在拆开、占位词去掉、重名只留一个 |
+| 地点回落 `hourType`（课程性质） | **不跟** | 「理论」「实验」不是地点，会误导学生；缺地点照常计数提醒 |
+| 周次 `split('')` 只认 `'1'`，其它字符静默忽略 | 不跟（我们已是对的） | 我们只认 0/1，出现别的字符整行计为「认不出的周次」并提醒，不静默少周 |
+| 周次为空或星期不对直接丢课（`return []`） | 不跟（我们已是对的） | 计数并进提醒 |
+| `getStartDate` 改用 `toLocaleDateString('sv-SE')` | 不跟（我们已是对的） | 我们直接截取教务字符串的年月日（`isoOfAny`），不经过 `Date`，没有时区换算问题 |
+| `baseFetch` 的错误处理、`toLocaleDate`、`padStart` 等写法 | 不跟 | 1.0.0 已修（读当前响应状态码）；我们是 ES5，不用可选链 / padStart |
+| `maxWeek` 与课表最晚周取大（`semesterTotalWeeks`） | 不跟（我们已是对的） | 1.0.0 的 `raisedBySchedule` 提醒同口径 |
+| `timeSlots` 时间规整为 `HH:mm` | 不跟（我们已是对的） | `timeOf` 同口径，越界时间交 null 回落 |
+| 学期详情（`Promise.allSettled` → `Promise.all`）失败整次报错 | 不跟 | 我们的附加接口失败吞成 null 并提醒，不让附加数据挡住课表（公共说明） |
+| `credit` 字段 | 不跟 | 载荷没有学分字段 |
+| 考试安排（`getExams` / `parseExams`，写成「[考试] …」课） | **不跟** | 空课规范没有考试载荷（任务卡与公共说明要求） |
+| 保存桥、`showToast`、`notifyTaskCompletion` | 不跟 | 同 1.0.0：空课由宿主保存 |
+
+### 10.2 改动落点
+
+- `extract.js`：`ROW_FIELDS` 增加 `period`、`timeIn`、`startTime`、`endTime`（共 11 个，都是排课时间字段，无个人信息）。请求清单、学号 / 令牌处理、白名单逻辑不变。
+- `parse.js`：`sectionsOf`（位串优先 → `periodFormat`）、`customStartOf` / `nearestPeriodOf`（上课时间回落）、`teacherOf`（多教师）、`rowKey`（节次与上课时间进去重键，同名同星期只差时间的两行不被合并掉）；节次基础表移到逐行处理之前（上课时间要找最近的一节），H3 补节次仍在行处理之后。
+- 新增提醒：「有 N 门课只有上课时间、没有标准节次，已按开始时间放进最近的一节（例如「…」）」与「上课时间离各节都超过 1 小时」计数（并入「有 N 行课表数据不全」）。
+- `shortcut:`（`parse.js`，`nearestPeriodOf` 上方）：自定义时间只放开始时间最近的一节，跨多节的课只占一节；载荷有按课自定义时间的字段时再改。
+
+### 10.3 差分测试
+
+- 改动前把 9 对旧 fixtures 与一份自造探针输入（`probe`，覆盖位串、上课时间、多教师、占位词、周次坏的晚课）的输出存到 `C:/Users/23703/AppData/Local/Temp/cqu-port38/base/`；改完后同样输入重跑。
+- 9 对旧 fixtures：输出**一字不差**（`cmp` 全部 SAME）。
+- 探针输入的有意修正（旧结果 → 新结果，依据上游 `391193b`）：
+  - 多教师课「甲老师-教授;乙老师-副教授[主讲]」：旧「甲老师」→ 新「甲老师,乙老师」（上游 `split(';')`）。
+  - 「非标三节」`period=0011100`、无 periodFormat：旧「缺节次跳过」→ 新第 3-5 节（上游位串）。
+  - 「位串优先」`period=01100000` + `periodFormat=5`：旧第 5 节 → 新第 2-3 节（上游只看位串）。
+  - 「自定义晚课」`timeIn=18:30~20:00`：旧「缺节次跳过」→ 新第 9 节 + 提醒（§4.4）。
+  - 「自定义起止字段」`startTime=19:55:00`：旧「缺节次跳过」→ 新第 10 节 + 提醒。
+  - 「自定义太早」`06:30~07:20`：旧「缺节次跳过」→ 新跳过，计入「上课时间离各节都超过 1 小时」。
+  - 「自定义且周次坏」`1x11`：旧计为「缺节次」→ 新计为「缺周次 / 认不出的周次」（上课时间先于周次检查，但只有周次不合法时才计入周次原因）。
+  - 「位串超范围」（第 26 节）、「占位教师」：与旧版一致。
+- 新增 3 对 fixture 的期望值是按规范与代码逻辑手工推出来的（先推 expected、再跑自检比对），自检 12 对全部 MATCH。
+
+### 10.4 变异测试（1.0.1 新增逻辑，在临时副本上改，跑完即删，本目录 parse.js 未改动）
+
+| # | 改坏哪一处 | 变红的用例 |
+|---|---|---|
+| 7 | `sectionsOf`：位串分支整段去掉（`if (false)`，等于不要位串） | 仅 `period-bitmap` DIFF |
+| 8 | `rowKey`：去掉 `period` / `timeIn` / `startTime` / `endTime` | 仅 `custom-time` DIFF（两行「晚课A」被合并成一节） |
+| 9 | `teacherOf`：不再按「;」「；」拆分 | 仅 `multi-teacher` DIFF |
+
+还原后自检 `RESULT: PASS`（12 对）。
+
+### 10.5 冒烟
+
+`python -I -X utf8 D:/NullClass/.test/port-batch38/cqu/smoke.py all`：10/10 OK。冒烟表里新增两行（节次位串 `0011100` 与上课时间 `18:30~20:00`），断言它们分别归到 3-5 节与 9 节；白名单扩到 11 个排课字段。
+
+### 10.6 已知风险
+
+- 位串、`timeIn`、`startTime` 的真实字段形状只按上游代码推断，本校真实接口没有抓过；`period` 为空而 `timeIn` 格式不同（例如带秒、带中文）时会计入「上课时间离各节都超过 1 小时」或直接缺节次，不会静默放错。
+- 自定义时间的课只占一节（最近的那节），跨多节的上课时间会少算后面的节次（见 `shortcut:`）。
+- 未验证：教务同时给出 `period` 与 `periodFormat` 且两者不一致时，以位串为准（与上游一致），本校是否存在这种情况未知。
+
+### 10.7 复审修正（主调度，2026-11-24）
+
+- 复审 B1：`customStartOf` 只要 `timeIn` 非空就不再看 `startTime` / `endTime`（上游 `timeIn?.split('~') ?? [...]` 也是这样），`timeIn` 写成「待定」时有效的起止字段被丢、整门课计入「数据不全」。
+  改为 `timeIn` 认不出时再试起止字段（`validStartOf`）。`custom-time` 用例补一行「待定时间课」（`timeIn` 待定、19:00 起 → 第 9 节，提醒计数 2 → 3）。
+- 变异：把回落去掉 → `custom-time` 变红；还原后 PASS。
+
+签名：0x7E7-2023（haiku 跟进上游，2026-11-24）

@@ -1,0 +1,27 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：字段形状照上游 CQU/cqu.js 1.0.1 跟进后读到的样子编造（period 节次位串、periodFormat），课程、教师、教室均为虚构，无真实个人信息。",
+  "_case": "节次位串（1.0.1 起）：三节课「0011100」→ 3-5 节；位串「0000001100」优先于 periodFormat「1-2」→ 7-8 节；位串超出 20 节整串不用，退回 periodFormat「9」；隔节位串「1010000000」→ 1 节与 3 节两段；periodFormat 单写「1-2」照旧",
+  "term": { "id": "201", "name": "2026-2027学年第一学期", "year": "2026-2027", "term": "1" },
+  "today": "2026-10-01",
+  "startDate": "2026-09-07",
+  "maxWeek": 16,
+  "periodTimes": [
+    { "periodOrder": 1, "startTime": "08:00", "endTime": "08:45" },
+    { "periodOrder": 2, "startTime": "08:55", "endTime": "09:40" },
+    { "periodOrder": 3, "startTime": "10:00", "endTime": "10:45" },
+    { "periodOrder": 4, "startTime": "10:55", "endTime": "11:40" },
+    { "periodOrder": 5, "startTime": "14:00", "endTime": "14:45" },
+    { "periodOrder": 6, "startTime": "14:55", "endTime": "15:40" },
+    { "periodOrder": 7, "startTime": "16:00", "endTime": "16:45" },
+    { "periodOrder": 8, "startTime": "16:55", "endTime": "17:40" },
+    { "periodOrder": 9, "startTime": "19:00", "endTime": "19:45" },
+    { "periodOrder": 10, "startTime": "19:55", "endTime": "20:40" }
+  ],
+  "rows": [
+    { "courseName": "物理实验", "instructorName": "甲老师", "position": "实验楼1-101", "roomName": "", "weekDay": 2, "period": "0011100", "periodFormat": "", "teachingWeek": "1111111111111111" },
+    { "courseName": "体育", "instructorName": "乙老师", "position": "体育馆", "roomName": "", "weekDay": 3, "period": "0000001100", "periodFormat": "1-2", "teachingWeek": "1111111111111111" },
+    { "courseName": "选修课", "instructorName": "丙老师", "position": "教学楼2-201", "roomName": "", "weekDay": 4, "period": "0000000000000000000001", "periodFormat": "9", "teachingWeek": "1111111111111111" },
+    { "courseName": "隔节课", "instructorName": "丁老师", "position": "教学楼2-202", "roomName": "", "weekDay": 5, "period": "1010000000", "periodFormat": "", "teachingWeek": "1111111111111111" },
+    { "courseName": "高等数学", "instructorName": "甲老师", "position": "教学楼1-101", "roomName": "教学楼1-101", "weekDay": 1, "period": "", "periodFormat": "1-2", "teachingWeek": "1111111111111111" }
+  ]
+}

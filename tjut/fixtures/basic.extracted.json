@@ -1,0 +1,20 @@
+{
+  "term": { "name": "2026-2027学年第一学期", "selection": "current", "startDate": "2026-09-07", "totalWeeks": "20" },
+  "today": "2026-11-03",
+  "courseRows": [
+    { "KBID": "K1", "KCM": "高等数学", "SKJS": "张三/李四", "JASMC": "教学楼A101", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "1111111111111111" },
+    { "KBID": "K2", "KCM": "大学英语", "SKJS": "未知", "JASMC": "待定", "SKXQ": "2", "KSJC": "3", "JSJC": "4", "SKZC": "1010101010101010" },
+    { "KBID": "K3", "KCM": "程序设计", "SKJS": "张三（外聘）", "JASMC": "", "SKXQ": 3, "KSJC": 5, "JSJC": 6, "SKZC": "0101010101010101" },
+    { "KBID": "K1", "KCM": "高等数学", "SKJS": "张三/李四", "JASMC": "教学楼A101", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "1111111111111111" },
+    { "KBID": "K5", "KCM": "缺星期课", "SKJS": "教师丙", "JASMC": "教学楼B1", "SKXQ": 0, "KSJC": 1, "JSJC": 2, "SKZC": "1111" },
+    { "KBID": "K6", "KCM": "缺节次课", "SKJS": "教师丁", "JASMC": "教学楼B2", "SKXQ": 4, "KSJC": 3, "JSJC": "", "SKZC": "1111" },
+    { "KBID": "K7", "KCM": "缺周次课", "SKJS": "教师戊", "JASMC": "教学楼B3", "SKXQ": 5, "KSJC": 7, "JSJC": 8, "SKZC": "00000000" },
+    { "KBID": "K8", "KCM": "", "SKJS": "教师己", "JASMC": "教学楼B4", "SKXQ": 5, "KSJC": 1, "JSJC": 2, "SKZC": "1111" },
+    { "KBID": "K1b", "KCM": "高等数学", "SKJS": "张三/李四", "JASMC": "教学楼A101", "SKXQ": 1, "KSJC": 3, "JSJC": 4, "SKZC": "1111111111111111" }
+  ],
+  "experimentRows": [
+    { "KBID": "K4", "KCM": "物理实验", "SYXMMC": "力学实验", "SKJS": "王五", "JASMC": "实验楼3", "SKXQ": 4, "KSJC": 7, "JSJC": 8, "SKZC": "1111111100000000" }
+  ],
+  "changeRows": [],
+  "periodRows": null
+}

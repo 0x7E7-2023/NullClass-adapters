@@ -1,0 +1,137 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：字段形状照上游 CQU/cqu.js 1.0.1 跟进后读到的样子编造（timeIn 或 startTime / endTime 上课时间，没有节次），课程、教师、教室均为虚构，无真实个人信息。",
+  "_case": "只有上课时间没有节次：18:30~20:00 离第 9 节（19:00）最近 → 第 9 节；同名同星期只差时间的两行是两节课，合成 9-10 节（rowKey 含时间）；startTime / endTime 字段 19:55 → 第 10 节；06:30 离各节都超过 1 小时 → 跳过并计数；周次写错的晚课不计入「按最近一节」的提醒；timeIn 写「待定」但 startTime / endTime 有效（19:00）→ 回落起止字段，第 9 节",
+  "term": {
+    "id": "202",
+    "name": "2026-2027学年第一学期",
+    "year": "2026-2027",
+    "term": "1"
+  },
+  "today": "2026-10-01",
+  "startDate": "2026-09-07",
+  "maxWeek": 16,
+  "periodTimes": [
+    {
+      "periodOrder": 1,
+      "startTime": "08:00",
+      "endTime": "08:45"
+    },
+    {
+      "periodOrder": 2,
+      "startTime": "08:55",
+      "endTime": "09:40"
+    },
+    {
+      "periodOrder": 3,
+      "startTime": "10:00",
+      "endTime": "10:45"
+    },
+    {
+      "periodOrder": 4,
+      "startTime": "10:55",
+      "endTime": "11:40"
+    },
+    {
+      "periodOrder": 5,
+      "startTime": "14:00",
+      "endTime": "14:45"
+    },
+    {
+      "periodOrder": 6,
+      "startTime": "14:55",
+      "endTime": "15:40"
+    },
+    {
+      "periodOrder": 7,
+      "startTime": "16:00",
+      "endTime": "16:45"
+    },
+    {
+      "periodOrder": 8,
+      "startTime": "16:55",
+      "endTime": "17:40"
+    },
+    {
+      "periodOrder": 9,
+      "startTime": "19:00",
+      "endTime": "19:45"
+    },
+    {
+      "periodOrder": 10,
+      "startTime": "19:55",
+      "endTime": "20:40"
+    }
+  ],
+  "rows": [
+    {
+      "courseName": "晚课A",
+      "instructorName": "甲老师",
+      "position": "教学楼4-303",
+      "roomName": "",
+      "weekDay": 1,
+      "period": "",
+      "periodFormat": "",
+      "timeIn": "18:30~20:00",
+      "teachingWeek": "1111111111111111"
+    },
+    {
+      "courseName": "晚课A",
+      "instructorName": "甲老师",
+      "position": "教学楼4-303",
+      "roomName": "",
+      "weekDay": 1,
+      "period": "",
+      "periodFormat": "",
+      "startTime": "19:55:00",
+      "endTime": "21:00:00",
+      "teachingWeek": "1111111111111111"
+    },
+    {
+      "courseName": "清晨课",
+      "instructorName": "乙老师",
+      "position": "教学楼4-304",
+      "roomName": "",
+      "weekDay": 5,
+      "period": "",
+      "periodFormat": "",
+      "timeIn": "06:30~07:20",
+      "teachingWeek": "1111111111111111"
+    },
+    {
+      "courseName": "起止字段课",
+      "instructorName": "丙老师",
+      "position": "教学楼5-101",
+      "roomName": "",
+      "weekDay": 6,
+      "period": "",
+      "periodFormat": "",
+      "startTime": "19:55:00",
+      "endTime": "21:00:00",
+      "teachingWeek": "1111111111111111"
+    },
+    {
+      "courseName": "周次坏的晚课",
+      "instructorName": "丁老师",
+      "position": "教学楼5-102",
+      "roomName": "",
+      "weekDay": 2,
+      "period": "",
+      "periodFormat": "",
+      "timeIn": "18:30~20:00",
+      "teachingWeek": "1x11"
+    },
+    {
+      "courseName": "待定时间课",
+      "instructorName": "戊老师",
+      "position": "教学楼5-103",
+      "roomName": "",
+      "weekDay": 7,
+      "period": "",
+      "periodFormat": "",
+      "timeIn": "待定",
+      "startTime": "19:00:00",
+      "endTime": "20:30:00",
+      "teachingWeek": "1111111111111111"
+    }
+  ]
+}

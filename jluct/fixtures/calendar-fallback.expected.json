@@ -1,0 +1,53 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "导入的是教务系统标记的当前学期（2025-2026学年第二学期）；要导入别的学期，请先在教务页面里切换到那个学期，再点「提取课表」",
+    "没取到教务系统的校历，开学日期与总周数按学期推算，请在学期管理里核对",
+    "教务系统没有给出开学日期，已按学期推算为 2026-02-16，请在学期管理里把它改成学校实际开学日",
+    "教务系统没有给出学期总周数，已按 20 周导入（课表里最晚排到第 16 周），如与实际不符可在学期管理里改",
+    "节次时间按学校统一作息导入（共 12 节，第 1 节 08:00-08:45，第 12 节 20:30-21:15），与学校实际不符时请在学期管理里核对",
+    "课表用到了第 13 节，现有的节次时间没有覆盖，已补上：第 13 节按前一节下课后课间 5 分钟、每节 45 分钟顺推，请在学期管理里核对"
+  ],
+  "terms": [
+    {
+      "name": "2025-2026学年第二学期",
+      "firstDay": "2026-02-16",
+      "totalWeeks": 20,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" },
+        { "periodIndex": 5, "start": "13:30", "end": "14:15" },
+        { "periodIndex": 6, "start": "14:25", "end": "15:10" },
+        { "periodIndex": 7, "start": "15:30", "end": "16:15" },
+        { "periodIndex": 8, "start": "16:25", "end": "17:10" },
+        { "periodIndex": 9, "start": "18:00", "end": "18:45" },
+        { "periodIndex": 10, "start": "18:45", "end": "19:30" },
+        { "periodIndex": 11, "start": "19:45", "end": "20:30" },
+        { "periodIndex": 12, "start": "20:30", "end": "21:15" },
+        { "periodIndex": 13, "start": "21:20", "end": "22:05" }
+      ],
+      "courses": [
+        {
+          "name": "高等代数",
+          "teacher": "刘一",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 16, "weekType": "ALL", "location": "M201" }
+          ]
+        },
+        {
+          "name": "晚自习辅导",
+          "teacher": "刘一",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 3, "startPeriod": 12, "endPeriod": 13, "startWeek": 1, "endWeek": 4, "weekType": "ALL", "location": "M301" }
+          ]
+        }
+      ]
+    }
+  ]
+}

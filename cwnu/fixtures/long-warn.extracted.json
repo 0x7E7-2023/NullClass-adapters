@@ -1,0 +1,116 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程名、教师全部虚构。本例覆盖：超过 20 字的课名（提醒里截到 20 字）、节次时间对不上的课（超过一小时的整门丢弃并点名）、未排课的课（点名最多 3 门）、缺教师缺教室，整条提醒不超过 200 字。",
+  "term": {
+    "id": "1001",
+    "label": "2026-2027学年第一学期",
+    "pickedBy": "url"
+  },
+  "semesters": [
+    {
+      "id": "1001",
+      "label": "2026-2027学年第一学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": {
+    "id": "1001",
+    "startDate": "2026-10-12",
+    "endDate": "2027-02-06",
+    "weekStartOnSunday": false
+  },
+  "weekIndices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "lessonList": [
+    {
+      "id": 501,
+      "courseName": "工程制图与计算机辅助设计基础实验课程第一部分",
+      "teachers": [],
+      "flag": null
+    },
+    {
+      "id": 502,
+      "courseName": "大学生职业发展与就业指导课程实践教学环节专题",
+      "teachers": [],
+      "flag": null
+    },
+    {
+      "id": 503,
+      "courseName": "中国近现代史纲要与社会实践专题研讨课程",
+      "teachers": [],
+      "flag": null
+    },
+    {
+      "id": 504,
+      "courseName": "马克思主义基本原理概论实践教学课程二",
+      "teachers": [],
+      "flag": null
+    },
+    {
+      "id": 505,
+      "courseName": "思想道德与法治实践教学专题",
+      "teachers": [],
+      "flag": null
+    },
+    {
+      "id": 506,
+      "courseName": "实验室安全教育与应急处置演练课程（夜间专项）",
+      "teachers": [],
+      "flag": null
+    }
+  ],
+  "scheduleList": [
+    {
+      "lessonId": 501,
+      "weekday": 2,
+      "weekIndex": 1,
+      "startTime": "10:35",
+      "endTime": "11:15",
+      "personName": null,
+      "roomName": null
+    },
+    {
+      "lessonId": 501,
+      "weekday": 2,
+      "weekIndex": 2,
+      "startTime": "10:35",
+      "endTime": "11:15",
+      "personName": null,
+      "roomName": null
+    },
+    {
+      "lessonId": 501,
+      "weekday": 2,
+      "weekIndex": 3,
+      "startTime": "10:35",
+      "endTime": "11:15",
+      "personName": null,
+      "roomName": null
+    },
+    {
+      "lessonId": 506,
+      "weekday": 6,
+      "weekIndex": 1,
+      "startTime": "22:30",
+      "endTime": "23:00",
+      "personName": null,
+      "roomName": null
+    }
+  ]
+}

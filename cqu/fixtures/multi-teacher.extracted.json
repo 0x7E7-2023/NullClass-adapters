@@ -1,0 +1,26 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：instructorName 按上游 CQU/cqu.js 1.0.1 的写法编造（多位老师用「;」或「；」隔开，每位「姓名-职称」），老师、课程、教室均为虚构，无真实个人信息。",
+  "_case": "多教师（1.0.1 起照上游按「;」拆开）：「甲老师-教授;乙老师-副教授[主讲];未知」→ 甲老师,乙老师（占位词去掉）；「丙老师-讲师;丙老师-副教授」→ 丙老师（重名只留一个）；「未知;暂无」→ null 并计入缺教师；全角「；」分隔、括号备注不拆 → 丁老师（外聘）,戊老师",
+  "term": { "id": "203", "name": "2026-2027学年第一学期", "year": "2026-2027", "term": "1" },
+  "today": "2026-10-01",
+  "startDate": "2026-09-07",
+  "maxWeek": 16,
+  "periodTimes": [
+    { "periodOrder": 1, "startTime": "08:00", "endTime": "08:45" },
+    { "periodOrder": 2, "startTime": "08:55", "endTime": "09:40" },
+    { "periodOrder": 3, "startTime": "10:00", "endTime": "10:45" },
+    { "periodOrder": 4, "startTime": "10:55", "endTime": "11:40" },
+    { "periodOrder": 5, "startTime": "14:00", "endTime": "14:45" },
+    { "periodOrder": 6, "startTime": "14:55", "endTime": "15:40" },
+    { "periodOrder": 7, "startTime": "16:00", "endTime": "16:45" },
+    { "periodOrder": 8, "startTime": "16:55", "endTime": "17:40" },
+    { "periodOrder": 9, "startTime": "19:00", "endTime": "19:45" },
+    { "periodOrder": 10, "startTime": "19:55", "endTime": "20:40" }
+  ],
+  "rows": [
+    { "courseName": "大学英语", "instructorName": "甲老师-教授;乙老师-副教授[主讲];未知", "position": "教学楼1-101", "roomName": "", "weekDay": 1, "periodFormat": "1-2", "teachingWeek": "1111111111111111" },
+    { "courseName": "线性代数", "instructorName": "丙老师-讲师;丙老师-副教授", "position": "教学楼1-102", "roomName": "", "weekDay": 2, "periodFormat": "3-4", "teachingWeek": "1111111111111111" },
+    { "courseName": "近代史", "instructorName": "未知;暂无", "position": "教学楼1-103", "roomName": "", "weekDay": 3, "periodFormat": "5", "teachingWeek": "1111111111111111" },
+    { "courseName": "体育", "instructorName": "丁老师（外聘）；戊老师", "position": "体育馆", "roomName": "", "weekDay": 4, "periodFormat": "7-8", "teachingWeek": "1111111111111111" }
+  ]
+}

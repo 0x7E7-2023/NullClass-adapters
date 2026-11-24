@@ -1,0 +1,37 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 cwnu/extract.js 实际交出去的样子编造，课程、教师、教室全部虚构。本例覆盖：找不到课程名的排课、星期不对、时间不对（开始晚于结束、时间文字认不出）、没有周次、整数 HHmm 时间、占位词教师与教室（未知、暂无教师、纯空白）、教务标为不公开的课点名。",
+  "term": {
+    "id": "1001",
+    "label": "2026-2027学年第一学期",
+    "pickedBy": "url"
+  },
+  "semesters": [
+    { "id": "1001", "label": "2026-2027学年第一学期", "selected": true }
+  ],
+  "semesterMeta": {
+    "id": "1001",
+    "startDate": "2026-10-12",
+    "endDate": "2027-02-06",
+    "weekStartOnSunday": false
+  },
+  "weekIndices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+  "lessonList": [
+    { "id": 801, "courseName": "大学物理A", "teachers": ["刘洋"], "flag": null },
+    { "id": 802, "courseName": "大学化学", "teachers": [], "flag": "publish" },
+    { "id": 803, "courseName": "思政", "teachers": ["思政老师"], "flag": "publish" },
+    { "id": 804, "courseName": "选修艺术鉴赏", "teachers": ["赵老师"], "flag": "hidden" }
+  ],
+  "scheduleList": [
+    { "lessonId": 801, "weekday": 2, "weekIndex": 1, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教4-102" },
+    { "lessonId": 801, "weekday": 2, "weekIndex": 2, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教4-102" },
+    { "lessonId": 999, "weekday": 2, "weekIndex": 1, "startTime": "08:00", "endTime": "08:40", "personName": null, "roomName": "教4-102" },
+    { "lessonId": 801, "weekday": 9, "weekIndex": 1, "startTime": "08:00", "endTime": "08:40", "personName": null, "roomName": "教4-102" },
+    { "lessonId": 801, "weekday": 3, "weekIndex": 1, "startTime": "abc", "endTime": "09:30", "personName": null, "roomName": "教4-102" },
+    { "lessonId": 801, "weekday": 3, "weekIndex": 1, "startTime": "10:00", "endTime": "09:00", "personName": null, "roomName": "教4-102" },
+    { "lessonId": 801, "weekday": 4, "weekIndex": 0, "startTime": "08:00", "endTime": "08:40", "personName": null, "roomName": "教4-102" },
+    { "lessonId": 802, "weekday": 3, "weekIndex": 3, "startTime": 1430, "endTime": 1510, "personName": "暂无教师", "roomName": "未知" },
+    { "lessonId": 802, "weekday": 3, "weekIndex": 5, "startTime": 1430, "endTime": 1510, "personName": "暂无教师", "roomName": "未知" },
+    { "lessonId": 803, "weekday": 5, "weekIndex": 1, "startTime": "10:35", "endTime": "12:05", "personName": null, "roomName": "   " },
+    { "lessonId": 804, "weekday": 1, "weekIndex": 1, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教4-102" }
+  ]
+}

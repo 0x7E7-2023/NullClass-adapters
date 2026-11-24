@@ -1,0 +1,11 @@
+{
+  "term": { "name": "2026-2027学年第一学期", "selection": "first", "startDate": "", "totalWeeks": "" },
+  "today": "2026-11-03",
+  "courseRows": [
+    { "KBID": "F1", "KCM": "形势与政策", "SKJS": "陈二", "JASMC": "E101", "SKXQ": 2, "KSJC": 12, "JSJC": 13, "SKZC": "11111111" },
+    { "KBID": "F2", "KCM": "体育选修", "SKJS": "何三", "JASMC": "体育馆", "SKXQ": 1, "KSJC": 11, "JSJC": 11, "SKZC": "1111111111111111" }
+  ],
+  "experimentRows": null,
+  "changeRows": null,
+  "periodRows": null
+}

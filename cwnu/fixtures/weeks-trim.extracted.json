@@ -1,0 +1,195 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：课程与教师全部虚构。本例覆盖：一门课的周次跨过第 30 周（25..35），只裁掉第 30 周以后的部分并提醒；另一门课的周次全在第 30 周以后，整门没有导入，也点名提醒；课表排到第 30 周，校历 17 周，抬高总周数并提醒。",
+  "term": {
+    "id": "1001",
+    "label": "2026-2027学年第一学期",
+    "pickedBy": "url"
+  },
+  "semesters": [
+    {
+      "id": "1001",
+      "label": "2026-2027学年第一学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": {
+    "id": "1001",
+    "startDate": "2026-10-12",
+    "endDate": "2027-02-06",
+    "weekStartOnSunday": false
+  },
+  "weekIndices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+  ],
+  "lessonList": [
+    {
+      "id": 1001,
+      "courseName": "大学数学",
+      "teachers": [
+        "丙老师"
+      ],
+      "flag": null
+    },
+    {
+      "id": 1002,
+      "courseName": "程序设计",
+      "teachers": [
+        "丁老师"
+      ],
+      "flag": null
+    }
+  ],
+  "scheduleList": [
+    {
+      "lessonId": 1001,
+      "weekday": 3,
+      "weekIndex": 25,
+      "startTime": "08:00",
+      "endTime": "08:40",
+      "personName": null,
+      "roomName": "教1-101"
+    },
+    {
+      "lessonId": 1001,
+      "weekday": 3,
+      "weekIndex": 26,
+      "startTime": "08:00",
+      "endTime": "08:40",
+      "personName": null,
+      "roomName": "教1-101"
+    },
+    {
+      "lessonId": 1001,
+      "weekday": 3,
+      "weekIndex": 27,
+      "startTime": "08:00",
+      "endTime": "08:40",
+      "personName": null,
+      "roomName": "教1-101"
+    },
+    {
+      "lessonId": 1001,
+      "weekday": 3,
+      "weekIndex": 28,
+      "startTime": "08:00",
+      "endTime": "08:40",
+      "personName": null,
+      "roomName": "教1-101"
+    },
+    {
+      "lessonId": 1001,
+      "weekday": 3,
+      "weekIndex": 29,
+      "startTime": "08:00",
+      "endTime": "08:40",
+      "personName": null,
+      "roomName": "教1-101"
+    },
+    {
+      "lessonId": 1001,
+      "weekday": 3,
+      "weekIndex": 30,
+      "startTime": "08:00",
+      "endTime": "08:40",
+      "personName": null,
+      "roomName": "教1-101"
+    },
+    {
+      "lessonId": 1001,
+      "weekday": 3,
+      "weekIndex": 31,
+      "startTime": "08:00",
+      "endTime": "08:40",
+      "personName": null,
+      "roomName": "教1-101"
+    },
+    {
+      "lessonId": 1001,
+      "weekday": 3,
+      "weekIndex": 32,
+      "startTime": "08:00",
+      "endTime": "08:40",
+      "personName": null,
+      "roomName": "教1-101"
+    },
+    {
+      "lessonId": 1001,
+      "weekday": 3,
+      "weekIndex": 33,
+      "startTime": "08:00",
+      "endTime": "08:40",
+      "personName": null,
+      "roomName": "教1-101"
+    },
+    {
+      "lessonId": 1001,
+      "weekday": 3,
+      "weekIndex": 34,
+      "startTime": "08:00",
+      "endTime": "08:40",
+      "personName": null,
+      "roomName": "教1-101"
+    },
+    {
+      "lessonId": 1001,
+      "weekday": 3,
+      "weekIndex": 35,
+      "startTime": "08:00",
+      "endTime": "08:40",
+      "personName": null,
+      "roomName": "教1-101"
+    },
+    {
+      "lessonId": 1002,
+      "weekday": 4,
+      "weekIndex": 31,
+      "startTime": "08:00",
+      "endTime": "08:40",
+      "personName": null,
+      "roomName": "教1-102"
+    },
+    {
+      "lessonId": 1002,
+      "weekday": 4,
+      "weekIndex": 32,
+      "startTime": "08:00",
+      "endTime": "08:40",
+      "personName": null,
+      "roomName": "教1-102"
+    }
+  ]
+}

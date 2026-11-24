@@ -1,0 +1,284 @@
+{
+  "term": {
+    "code": "2026-2027-1",
+    "name": "2026-2027学年第一学期",
+    "source": "api",
+    "listed": true
+  },
+  "today": "2026-11-03",
+  "calendarRows": [
+    {
+      "XN": "2026-2027",
+      "XQ": "1",
+      "XQKSRQ": "2026-09-07",
+      "ZZC": "20",
+      "ZJXZC": ""
+    }
+  ],
+  "sectionRows": [
+    {
+      "DM": "1",
+      "KSSJ": "08:00",
+      "JSSJ": "08:45"
+    },
+    {
+      "DM": "2",
+      "KSSJ": "08:55",
+      "JSSJ": "09:40"
+    },
+    {
+      "DM": "3",
+      "KSSJ": "10:00",
+      "JSSJ": "10:45"
+    },
+    {
+      "DM": "4",
+      "KSSJ": "10:55",
+      "JSSJ": "11:40"
+    },
+    {
+      "DM": "5",
+      "KSSJ": "14:00",
+      "JSSJ": "14:45"
+    },
+    {
+      "DM": "6",
+      "KSSJ": "14:55",
+      "JSSJ": "15:40"
+    },
+    {
+      "DM": "7",
+      "KSSJ": "16:00",
+      "JSSJ": "16:45"
+    },
+    {
+      "DM": "8",
+      "KSSJ": "16:55",
+      "JSSJ": "17:40"
+    }
+  ],
+  "rows": [
+    {
+      "KBID": "7001",
+      "KCM": "正常课",
+      "SKJS": "甲",
+      "JASMC": "G1",
+      "SKXQ": "1",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "1111111111111111"
+    },
+    {
+      "KBID": "7201",
+      "KCM": "坏写法课1",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X1"
+    },
+    {
+      "KBID": "7202",
+      "KCM": "坏写法课2",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X2"
+    },
+    {
+      "KBID": "7203",
+      "KCM": "坏写法课3",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X3"
+    },
+    {
+      "KBID": "7204",
+      "KCM": "坏写法课4",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X4"
+    },
+    {
+      "KBID": "7205",
+      "KCM": "坏写法课5",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X5"
+    },
+    {
+      "KBID": "7206",
+      "KCM": "坏写法课6",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X6"
+    },
+    {
+      "KBID": "7207",
+      "KCM": "坏写法课7",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X7"
+    },
+    {
+      "KBID": "7208",
+      "KCM": "坏写法课8",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X8"
+    },
+    {
+      "KBID": "7209",
+      "KCM": "坏写法课9",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X9"
+    },
+    {
+      "KBID": "7210",
+      "KCM": "坏写法课10",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X10"
+    },
+    {
+      "KBID": "7211",
+      "KCM": "坏写法课11",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X11"
+    },
+    {
+      "KBID": "7212",
+      "KCM": "坏写法课12",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X12"
+    },
+    {
+      "KBID": "7213",
+      "KCM": "坏写法课13",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X13"
+    },
+    {
+      "KBID": "7214",
+      "KCM": "坏写法课14",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X14"
+    },
+    {
+      "KBID": "7215",
+      "KCM": "坏写法课15",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X15"
+    },
+    {
+      "KBID": "7216",
+      "KCM": "坏写法课16",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X16"
+    },
+    {
+      "KBID": "7217",
+      "KCM": "坏写法课17",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X17"
+    },
+    {
+      "KBID": "7218",
+      "KCM": "坏写法课18",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X18"
+    },
+    {
+      "KBID": "7219",
+      "KCM": "坏写法课19",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X19"
+    },
+    {
+      "KBID": "7220",
+      "KCM": "坏写法课20",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X20"
+    },
+    {
+      "KBID": "7221",
+      "KCM": "坏写法课21",
+      "SKJS": "乙",
+      "JASMC": "G2",
+      "SKXQ": "2",
+      "KSJC": "1",
+      "JSJC": "2",
+      "SKZC": "X21"
+    }
+  ],
+  "experimentRows": [],
+  "changeRows": []
+}

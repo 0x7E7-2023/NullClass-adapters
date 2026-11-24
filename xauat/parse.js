@@ -1,16 +1,18 @@
 (function () {
     // 西安建筑科技大学（树维 for-std 平台）—— 取数结果转空课课表载荷。
     // 移植自 shiguang_warehouse 的 XAUAT/xauat.js
-    //   https://github.com/XingHeYuZhuan/shiguang_warehouse  （MIT，作者 Alph4rc）
-    //   上游快照：baf83fa，本校脚本最后一次修改 fc7a863（2026-09-09）
+    //   https://github.com/XingHeYuZhuan/shiguang_warehouse  （MIT，作者 Alph4rc、ZionPu）
+    //   上游快照：f83288e，本校脚本最后一次修改 893854b（2026-11-20，PR #941）；1.0.1 跟进其中的周次 / 节次修复
     //
     // 本校教务按「具体日期」给排课：scheduleList 每条 = 一门课在某一天、某个时段、某个教室。
     // 所以这里先按开学日把日期换算成「第几周 + 星期几」，跨学期的日期丢弃并计数。
-    //   · 开学日：学期起止接口的 startDate 回退到当周周一；没有就用最早一条排课日期推算
-    //     （上游做法，假设最早一节课在第 1 周），推算了什么一定写进提醒；
-    //   · 节次：载荷不支持自定义上下课时间（上游是交给拾光的 isCustomTime），这里改成按课表里
-    //     实际出现的开始时间排节次，节次时间就是当天实际的上下课时间；推导出来的一定要说；
-    //   · 周次：同一条排课的不同日期收集成周次集合，再切成极大段（ALL / ODD / EVEN）；
+    //   · 每周起始日：学期接口给 weekStartOnSunday 时以周日为第一天，否则周一；开学日先回退到当周起始日；
+    //   · 开学日：学期起止接口的 startDate；没有就用最早一条排课日期推算（上游做法，假设最早一节课在第 1 周），推算了一定写进提醒；
+    //   · 周次：采用教务给的 weekIndex；与日期算出的周次对不上的计数进提醒（以教务为准）；
+    //   · 节次：有作息表（timetable-layout）就用教务的节次（跳过不合法的行并计数提醒）；课时段的起止节按
+    //     开始 / 结束时间落进的那节取，落不进取最接近的一节（差 ≤60 分钟），首尾不对齐节次边界的计数提醒；
+    //     没有作息表就按课表里实际出现的开始时间排节次（推导出来的一定要说）；
+    //   · 同一周同一时间有多间教室：并排写出并提醒（上游同样合并）；教师缺失时回落到课程名单里的教师名；
     //   · 总周数：校历优先；没有校历用 20；课表排得更晚才抬高；上下限 16~25 周，动了就提醒；
     //   · 读不了的排课、跨学期的日期、没排上课时间的课、缺教师、缺教室，一律计数进提醒，不静默丢。
 
@@ -20,12 +22,17 @@
     var semesters = data.semesters || [];
     var lessonList = data.lessonList || [];
     var scheduleList = data.scheduleList || [];
+    var courseUnitList = data.courseUnitList || [];
 
     var SCHOOL_NAME = '西安建筑科技大学';
     var MAX_WEEKS = 25;
     var MIN_WEEKS = 16;
     var DEFAULT_TOTAL_WEEKS = 20;
+    var NEAREST_MINUTES = 60;
     var SEP = String.fromCharCode(0);
+    // 每周第一天：1 = 周一，7 = 周日（学期接口 weekStartOnSunday 为真时用周日）
+    var weekStartDow = meta.weekStartOnSunday === true ? 7 : 1;
+    var DAY_NAMES = ['', '周一', '周二', '周三', '周四', '周五', '周六', '周日'];
 
     var warnings = [];
     var MAX_WARNINGS = 20;
@@ -97,9 +104,9 @@
         return ((new Date(day * 86400000).getUTCDay() + 6) % 7) + 1;
     }
 
-    // 该日所在周的周一（每周起始日 = 周一，移植手册 §4.3）
-    function mondayOf(day) {
-        return day - (weekdayOfDay(day) - 1);
+    // 该日所在周的第一天（周一，或学期说以周日开头时的周日）；移植手册 §4.3
+    function weekStartOf(day) {
+        return day - ((weekdayOfDay(day) - weekStartDow + 7) % 7);
     }
 
     function todayDay() {
@@ -212,7 +219,7 @@
     var firstSource = 'meta';
     var startAligned = false;
     if (startDay !== null) {
-        firstDay = mondayOf(startDay);
+        firstDay = weekStartOf(startDay);
         startAligned = firstDay !== startDay;
     }
     if (firstDay === null) {
@@ -224,10 +231,10 @@
             if (earliest === null || eDay < earliest) earliest = eDay;
         }
         if (earliest !== null) {
-            firstDay = mondayOf(earliest);
+            firstDay = weekStartOf(earliest);
             firstSource = 'schedule';
         } else {
-            firstDay = mondayOf(todayDay());
+            firstDay = weekStartOf(todayDay());
             firstSource = 'today';
         }
     }
@@ -252,6 +259,7 @@
     }
     var lessonById = {};
     var lessonOrder = [];
+    var lessonTeachers = {};
     for (var li = 0; li < lessonList.length; li++) {
         var lesson = lessonList[li] || {};
         var lessonName = text(lesson.courseName);
@@ -260,6 +268,14 @@
         if (lessonById[lessonKey0]) continue;
         lessonById[lessonKey0] = lessonName;
         lessonOrder.push(lessonKey0);
+        // 课程名单里的教师名：排课上没写教师时回落用（占位词、括号备注同样处理）
+        var listedNames = lesson.teacherNames || [];
+        var cleanListed = [];
+        for (var ln = 0; ln < listedNames.length; ln++) {
+            var listedName = cleanPerson(listedNames[ln]);
+            if (listedName) addName(cleanListed, listedName);
+        }
+        lessonTeachers[lessonKey0] = cleanListed;
     }
     if (!lessonOrder.length) {
         throw new Error('教务返回的课程名单里没有课程名，读不出课程。请到课表页面核对后再提取。');
@@ -269,6 +285,7 @@
     var skip = { lesson: 0, date: 0, time: 0 };
     var beforeStart = 0;
     var tooLate = 0;
+    var weekDiff = 0;
     var scheduledLessons = {};
     var seenRow = {};
     var rows = [];
@@ -306,8 +323,18 @@
             tooLate++;
             continue;
         }
+        // 周次以教务给的 weekIndex 为准；与日期算出的周次对不上的计数进提醒（跨学期判断仍看日期）
+        var wIdx = intOf(s.weekIndex);
+        if (wIdx !== null && wIdx >= 1 && wIdx !== week) {
+            weekDiff++;
+            week = wIdx;
+            if (week > MAX_WEEKS) {
+                tooLate++;
+                continue;
+            }
+        }
         var teacher = cleanPerson(s.personName);
-        var place = cleanPlace(s.room);
+        var place = cleanPlace(s.room) || cleanPlace(s.customPlace);
         rows.push({
             lessonKey: courseKey,
             name: courseName,
@@ -332,57 +359,162 @@
             '。请到课表页面核对后再提取。');
     }
 
-    // ---------- 节次时间：按课表里实际出现的开始时间排 ----------
-    // 同一个开始时间算一节；下课时间取这一天里最晚的一个，有出入的计数进提醒。
-    var endOfStart = {};
-    var startList = [];
-    var conflictStarts = {};
-    var endConflict = 0;
-    for (var pi = 0; pi < rows.length; pi++) {
-        var st = rows[pi].startHM;
-        var en = rows[pi].endHM;
-        if (!endOfStart[st]) {
-            endOfStart[st] = en;
-            startList.push(st);
+    // ---------- 节次时间 ----------
+    // 教务作息表（courseUnitList）：逐行检查，跳过不合法的行（节次号 < 1、时间读不出、开始不早于结束，
+    // 如 0 号的休息行），用剩下的合法节次。合法节次号必须从 1 连续，否则整张不用；合法节次为空则回落。
+    var layoutTable = [];
+    var layoutSkipped = [];
+    for (var lu = 0; lu < courseUnitList.length; lu++) {
+        var lUnit = courseUnitList[lu] || {};
+        var lIdx = intOf(lUnit.indexNo);
+        var lStart = fmtTime(lUnit.startTime);
+        var lEnd = fmtTime(lUnit.endTime);
+        if (!(lIdx >= 1) || !lStart || !lEnd || minutesOf(lStart) >= minutesOf(lEnd)) {
+            if (lIdx >= 1) layoutSkipped.push(lIdx);
             continue;
         }
-        if (endOfStart[st] !== en) {
-            conflictStarts[st] = true;
-            if (minutesOf(en) > minutesOf(endOfStart[st])) endOfStart[st] = en;
+        layoutTable.push({ periodIndex: lIdx, start: lStart, end: lEnd });
+    }
+    var layoutOk = layoutTable.length > 0;
+    if (layoutOk) {
+        layoutTable.sort(function (a, b) { return a.periodIndex - b.periodIndex; });
+        for (var lk = 0; lk < layoutTable.length; lk++) {
+            if (layoutTable[lk].periodIndex !== lk + 1) {
+                layoutOk = false;
+                break;
+            }
         }
     }
-    for (var ck in conflictStarts) {
-        if (conflictStarts.hasOwnProperty(ck)) endConflict++;
-    }
-    startList.sort();
-    var periodOfStart = {};
+    var layoutInvalid = courseUnitList.length > 0 && !layoutOk;
+
+    // 没有可用作息表时：同一个开始时间算一节，下课时间取这一天里最晚的一个，有出入的计数进提醒
     var periodTimes = [];
-    for (var pj = 0; pj < startList.length; pj++) {
-        periodOfStart[startList[pj]] = pj + 1;
-        periodTimes.push({ periodIndex: pj + 1, start: startList[pj], end: endOfStart[startList[pj]] });
+    var periodOfStart = {};
+    var endConflict = 0;
+    if (layoutOk) {
+        periodTimes = layoutTable;
+    } else {
+        var endOfStart = {};
+        var startList = [];
+        var conflictStarts = {};
+        for (var pi = 0; pi < rows.length; pi++) {
+            var st = rows[pi].startHM;
+            var en = rows[pi].endHM;
+            if (!endOfStart[st]) {
+                endOfStart[st] = en;
+                startList.push(st);
+                continue;
+            }
+            if (endOfStart[st] !== en) {
+                conflictStarts[st] = true;
+                if (minutesOf(en) > minutesOf(endOfStart[st])) endOfStart[st] = en;
+            }
+        }
+        for (var ck in conflictStarts) {
+            if (conflictStarts.hasOwnProperty(ck)) endConflict++;
+        }
+        startList.sort();
+        for (var pj = 0; pj < startList.length; pj++) {
+            periodOfStart[startList[pj]] = pj + 1;
+            periodTimes.push({ periodIndex: pj + 1, start: startList[pj], end: endOfStart[startList[pj]] });
+        }
     }
 
-    // ---------- 排课明细 → 课程 ----------
-    var groups = {};
-    var groupOrder = [];
+    // 课时段 → 起止节次。起始节 = 开始时间落在其 [start, end] 内的那节，落不进就取开始时间最接近的一节；
+    // 结束节同理按结束时间取。两端都要找到（差 ≤ NEAREST_MINUTES）且起 ≤ 止，否则返回 null，由调用方跳过并点名。
+    // approx = 首尾没有正好对齐节次边界（要提醒）。没有作息表时只是把开始时间换成推导出的节次。
+    function nodeOf(hm, useEnd) {
+        var t = minutesOf(hm);
+        for (var i = 0; i < periodTimes.length; i++) {
+            var a = minutesOf(periodTimes[i].start);
+            var b = minutesOf(periodTimes[i].end);
+            if (t >= a && t <= b) return periodTimes[i];
+        }
+        var best = null;
+        var bestGap = Infinity;
+        for (var j = 0; j < periodTimes.length; j++) {
+            var edge = minutesOf(useEnd ? periodTimes[j].end : periodTimes[j].start);
+            var gap = Math.abs(edge - t);
+            if (gap < bestGap) {
+                bestGap = gap;
+                best = periodTimes[j];
+            }
+        }
+        return best && bestGap <= NEAREST_MINUTES ? best : null;
+    }
+
+    function sectionsOf(startHM, endHM) {
+        if (!layoutOk) {
+            var derived = periodOfStart[startHM];
+            return { start: derived, end: derived, approx: false };
+        }
+        var startNode = nodeOf(startHM, false);
+        var endNode = nodeOf(endHM, true);
+        if (!startNode || !endNode || startNode.periodIndex > endNode.periodIndex) return null;
+        var aligned = startNode.start === startHM && endNode.end === endHM;
+        return { start: startNode.periodIndex, end: endNode.periodIndex, approx: !aligned };
+    }
+
+    // ---------- 排课明细 → 一格（同一课、同一天、同一时间、同一周）----------
+    // 同一格多间教室并排写出（教务没标明你在哪间，上游也是这样合并的）；格里没有教师就回落到课程名单的教师。
+    var cells = {};
+    var cellOrder = [];
     for (var ri = 0; ri < rows.length; ri++) {
         var row = rows[ri];
-        var groupKey = [row.lessonKey, row.day, row.startHM, row.endHM, row.place || ''].join(SEP);
-        if (!groups[groupKey]) {
-            groups[groupKey] = {
+        var cellKey = [row.lessonKey, row.day, row.startHM, row.endHM, row.week].join(SEP);
+        if (!cells[cellKey]) {
+            cells[cellKey] = {
                 lessonKey: row.lessonKey,
                 name: row.name,
                 day: row.day,
-                period: periodOfStart[row.startHM],
-                place: row.place,
+                startHM: row.startHM,
+                endHM: row.endHM,
+                week: row.week,
+                rooms: [],
+                teachers: []
+            };
+            cellOrder.push(cellKey);
+        }
+        var cell = cells[cellKey];
+        if (row.place) addName(cell.rooms, row.place);
+        if (row.teacher) addName(cell.teachers, row.teacher);
+    }
+
+    // ---------- 格 → 节次段 → 分组（同一节次段、同一教室组合的周次并集）----------
+    var groups = {};
+    var groupOrder = [];
+    var parallelNames = [];
+    var sectionDropped = { count: 0, names: [] };
+    var approxNames = [];
+    for (var ci2 = 0; ci2 < cellOrder.length; ci2++) {
+        var cl = cells[cellOrder[ci2]];
+        var sections = sectionsOf(cl.startHM, cl.endHM);
+        if (!sections) {
+            sectionDropped.count++;
+            if (sectionDropped.names.length < 3) addName(sectionDropped.names, cl.name);
+            continue;
+        }
+        if (sections.approx) addName(approxNames, cl.name);
+        if (cl.rooms.length > 1) addName(parallelNames, cl.name);
+        var cellPlace = cl.rooms.length ? cl.rooms.join('/') : null;
+        var cellTeachers = cl.teachers.length ? cl.teachers : (lessonTeachers[cl.lessonKey] || []);
+        var groupKey = [cl.lessonKey, cl.day, cl.startHM, cl.endHM, cellPlace || ''].join(SEP);
+        if (!groups[groupKey]) {
+            groups[groupKey] = {
+                lessonKey: cl.lessonKey,
+                name: cl.name,
+                day: cl.day,
+                startPeriod: sections.start,
+                endPeriod: sections.end,
+                place: cellPlace,
                 teachers: [],
                 weeks: []
             };
             groupOrder.push(groupKey);
         }
         var grp = groups[groupKey];
-        if (row.teacher) addName(grp.teachers, row.teacher);
-        if (grp.weeks.indexOf(row.week) === -1) grp.weeks.push(row.week);
+        for (var cti = 0; cti < cellTeachers.length; cti++) addName(grp.teachers, cellTeachers[cti]);
+        if (grp.weeks.indexOf(cl.week) === -1) grp.weeks.push(cl.week);
     }
 
     var courseMap = {};
@@ -396,11 +528,12 @@
         }
         var course = courseMap[g.lessonKey];
         for (var ti = 0; ti < g.teachers.length; ti++) addName(course.teachers, g.teachers[ti]);
-        var slotKey = [g.day, g.period, g.place || ''].join(SEP);
+        var slotKey = [g.day, g.startPeriod, g.endPeriod, g.place || ''].join(SEP);
         if (!course.slots[slotKey]) {
             course.slots[slotKey] = {
                 day: g.day,
-                period: g.period,
+                startPeriod: g.startPeriod,
+                endPeriod: g.endPeriod,
                 place: g.place,
                 weeks: []
             };
@@ -430,8 +563,8 @@
                 if (run.end > maxWeek) maxWeek = run.end;
                 blocks.push({
                     dayOfWeek: slot.day,
-                    startPeriod: slot.period,
-                    endPeriod: slot.period,
+                    startPeriod: slot.startPeriod,
+                    endPeriod: slot.endPeriod,
                     startWeek: run.start,
                     endWeek: run.end,
                     weekType: run.weekType,
@@ -455,6 +588,9 @@
         });
     }
     if (!courses.length) {
+        if (sectionDropped.count) {
+            throw new Error('教务返回的排课时间都对不上节次时间，没有读出课程。请到课表页面核对后再提取。');
+        }
         throw new Error('教务返回的排课记录里都没有可导入的周次，没有读出课程。请到课表页面核对后再提取。');
     }
 
@@ -499,15 +635,15 @@
             ' 个学期，要导入别的学期请在教务页面切过去再点「提取课表」。');
     }
     if (startAligned) {
-        pushWarning('教务给的开学日期（' + isoOfDay(startDay) + '）不是周一，已对齐到当周周一 ' +
-            isoOfDay(firstDay) + ' 作为第 1 周的起点，请在学期管理里核对。');
+        pushWarning('教务给的开学日期（' + isoOfDay(startDay) + '）不是' + DAY_NAMES[weekStartDow] + '，已对齐到当周' +
+            DAY_NAMES[weekStartDow] + ' ' + isoOfDay(firstDay) + ' 作为第 1 周的起点，请在学期管理里核对。');
     }
     if (firstSource === 'schedule') {
         pushWarning('教务没有给出开学日期，已按最早的排课日期推算第 1 周从 ' + isoOfDay(firstDay) +
-            '（周一）开始，请在学期管理里核对成学校实际开学日。');
+            '（' + DAY_NAMES[weekStartDow] + '）开始，请在学期管理里核对成学校实际开学日。');
     } else if (firstSource === 'today') {
-        pushWarning('教务没有给出开学日期，也没有排课日期可以推算，已按本周周一 ' + isoOfDay(firstDay) +
-            ' 作为第 1 周，请在学期管理里改成学校实际开学日。');
+        pushWarning('教务没有给出开学日期，也没有排课日期可以推算，已按本周' + DAY_NAMES[weekStartDow] + ' ' +
+            isoOfDay(firstDay) + ' 作为第 1 周，请在学期管理里改成学校实际开学日。');
     }
     var skippedTotal = skip.lesson + skip.date + skip.time;
     if (skippedTotal > 0) {
@@ -524,12 +660,38 @@
     if (tooLate > 0) {
         pushWarning('有 ' + tooLate + ' 条排课落在第 ' + MAX_WEEKS + ' 周之后（可能是别的学期），已跳过。如发现少了课，请到课表页面核对。');
     }
+    if (weekDiff > 0) {
+        pushWarning('有 ' + weekDiff + ' 条排课的日期算出的周次和教务给的周次对不上，已按教务给的周次导入，请到课表页面核对。');
+    }
+    if (sectionDropped.count > 0) {
+        pushWarning('有 ' + sectionDropped.count + ' 个上课时段离所有节次都超过 ' + NEAREST_MINUTES +
+            ' 分钟，已跳过（涉及' + namesPhrase(sectionDropped.names) + '），请到课表页面核对。');
+    }
+    if (approxNames.length > 0) {
+        pushWarning('有 ' + approxNames.length + ' 门课的上课时间与节次时间对不上，已按最接近的节次放入（例如「' +
+            clipName(approxNames[0]) + '」），请在课表页面核对。');
+    }
+    if (layoutOk && layoutSkipped.length > 0) {
+        pushWarning('作息表里有 ' + layoutSkipped.length + ' 节的上下课时间读不出（第 ' + layoutSkipped.join('、') +
+            ' 节），已跳过，其余节次照常使用，请在学期管理里核对上下课时间。');
+    }
+    if (parallelNames.length) {
+        pushWarning('有 ' + parallelNames.length + ' 门课同一周同一时间排了多间教室，教务没标明你在哪间，已把教室并排写出（例如' +
+            namesPhrase(parallelNames) + '），请在这门课的「编辑课程」里按实际情况修改。');
+    }
     if (unscheduled.length) {
         pushWarning('另有 ' + unscheduled.length + ' 门课教务没有排上课时间（例如' + namesPhrase(unscheduled) +
             '），这些课没有导入。');
     }
-    pushWarning('教务系统没有给出节次时间，已按课表里每节课实际出现的开始时间排出 ' + periodTimes.length +
-        ' 节（最早 ' + periodTimes[0].start + ' 开始），请在学期管理里核对上下课时间。');
+    if (!layoutOk) {
+        if (layoutInvalid) {
+            pushWarning('教务给的节次时间格式不对，已按课表里每节课实际出现的开始时间排出 ' + periodTimes.length +
+                ' 节（最早 ' + periodTimes[0].start + ' 开始），请在学期管理里核对上下课时间。');
+        } else {
+            pushWarning('教务系统没有给出节次时间，已按课表里每节课实际出现的开始时间排出 ' + periodTimes.length +
+                ' 节（最早 ' + periodTimes[0].start + ' 开始），请在学期管理里核对上下课时间。');
+        }
+    }
     if (endConflict > 0) {
         pushWarning('有 ' + endConflict + ' 个开始时间的下课时间在课表里前后不一致，课表按最晚的下课时间显示，请到课表页面核对。');
     }

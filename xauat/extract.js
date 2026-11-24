@@ -2,14 +2,15 @@
     // 西安建筑科技大学教务适配器（树维 for-std 平台，swjw.xauat.edu.cn）
     // 移植自 shiguang_warehouse 的 XAUAT/xauat.js
     //   https://github.com/XingHeYuZhuan/shiguang_warehouse  （MIT，作者 Alph4rc；同目录 adapters.yaml 的 maintainer 为 Alph4rc）
-    //   上游快照：baf83fa（2026-11-09），本校脚本最后一次修改 fc7a863（2026-09-09）
+    //   上游快照：f83288e（2026-11-24），本校脚本最后一次修改 893854b（2026-11-20，PR #941）；1.0.1 跟进其中的周次 / 节次修复
     //
     // 取数链路（与上游 runImportFlow 一致，全部是同源相对路径）：
     //   ① GET  /student/for-std/course-table                                      HTML：学期下拉框 #semesters / #allSemesters
     //   ② GET  /student/for-std/course-table/get-data?bizTypeId=2&semesterId={id}&dataId=
-    //                                                                              JSON：lessonIds（本学期的课程 id）
+    //                                                                              JSON：lessonIds（本学期的课程 id）、timeTableLayoutId（作息表号）
     //   ③ POST /student/ws/schedule-table/datum                                    JSON：lessonList + scheduleList（按日期给的排课明细）
-    //   ④ GET  /student/ws/semester/get/{id}                                       JSON：startDate / endDate（取不到就不要）
+    //   ④ GET  /student/ws/semester/get/{id}                                       JSON：startDate / endDate / weekStartOnSunday（取不到就不要）
+    //   ⑤ POST /student/ws/schedule-table/timetable-layout                         JSON：courseUnitList（节次时间，取不到就不要）
     //
     // 移植改动（逐条对得上 AUDIT.md）：
     //   ① 去掉「选学期」弹窗：取用户此刻在教务页面上打开的学期（URL 里的学期号，其次下拉框里写了
@@ -20,6 +21,9 @@
     //   ④ studentId 传字符串 "null"、bizTypeId=2 是本校接口约定，照上游保留。
     //   ⑤ 不做任何计算：日期换周次、节次、开学日回退全在 parse.js（CI 只能跑 parse.js）。
     //   ⑥ 学期页 HTML 用 DOMParser 解析成独立文档，不插进当前页面（上游就是这样做的）。
+    //   ⑦ 跟进 893854b：请求作息表（⑤，取不到就交 null，parse.js 回落到按课表推导）；学期接口多带 weekStartOnSunday，
+    //      排课明细多带 weekIndex / customPlace，课名单多带教师名（只留 name），都只转交 parse.js 要用的字段。
+    //      上游「星期与日期对不上就中止」「学期接口取不到就中止」两条没搬：parse.js 以日期为准、写提醒，不丢整次导入。
     //
     // 只读课表：不请求成绩、学籍、个人信息、缴费、选课（写操作）类接口；不写页面、不提交表单、不外发。
 
@@ -198,18 +202,24 @@
         return null;
     }
 
-    // 课程名单：只留 id / 课程名（上游只用这两个字段）
+    // 课程名单：只留 id / 课程名、教师名（上游只用 id 和课程名；教师名只在排课里没有教师时回落用）
     function sanitizeLessons(rawList) {
         var out = [];
         var list = rawList || [];
         for (var i = 0; i < list.length; i++) {
             var l = list[i] || {};
-            out.push({ id: l.id, courseName: l.courseName || null });
+            var teacherNames = [];
+            var assigned = l.teacherAssignmentList || [];
+            for (var t = 0; t < assigned.length; t++) {
+                var tn = assigned[t] && assigned[t].name;
+                if (tn) teacherNames.push(String(tn));
+            }
+            out.push({ id: l.id, courseName: l.courseName || null, teacherNames: teacherNames });
         }
         return out;
     }
 
-    // 排课明细：只留 parse.js 用到的字段；教室统一成名字字符串（对象只取 nameZh）
+    // 排课明细：只留 parse.js 用到的字段；教室统一成名字字符串（对象只取 nameZh），自定义地点单独留
     function sanitizeSchedules(rawList) {
         var out = [];
         var list = rawList || [];
@@ -221,21 +231,35 @@
             out.push({
                 lessonId: s.lessonId,
                 date: s.date || null,
+                weekIndex: s.weekIndex,
                 startTime: s.startTime,
                 endTime: s.endTime,
                 personName: s.personName || null,
-                room: room
+                room: room,
+                customPlace: s.customPlace || null
             });
         }
         return out;
     }
 
-    // 学期日期：只留 startDate / endDate
+    // 作息表：只留 indexNo / startTime / endTime（节次号与起止时间）
+    function sanitizeUnits(rawList) {
+        if (!rawList || typeof rawList.length !== 'number') return null;
+        var out = [];
+        for (var i = 0; i < rawList.length; i++) {
+            var u = rawList[i] || {};
+            out.push({ indexNo: u.indexNo, startTime: u.startTime, endTime: u.endTime });
+        }
+        return out;
+    }
+
+    // 学期日期：只留 startDate / endDate / weekStartOnSunday
     function sanitizeMeta(raw) {
         if (!raw) return null;
         return {
             startDate: raw.startDate || null,
-            endDate: raw.endDate || null
+            endDate: raw.endDate || null,
+            weekStartOnSunday: raw.weekStartOnSunday === true
         };
     }
 
@@ -264,14 +288,21 @@
                 if (!lessonIds.length) {
                     throw new Error('这个学期还没有排课。如需导入别的学期，请在教务页面上切到那个学期后再点「提取课表」。');
                 }
+                // 作息表号是 get-data 给的；没有或不是正整数就不请求作息表，交 null
+                var layoutId = Number(getData.timeTableLayoutId);
+                var layoutPromise = (layoutId > 0 && layoutId % 1 === 0)
+                    ? optionalOf(postJson('/student/ws/schedule-table/timetable-layout', { timeTableLayoutId: layoutId }))
+                    : Promise.resolve(null);
                 return Promise.all([
                     postJson('/student/ws/schedule-table/datum', { studentId: 'null', lessonIds: lessonIds }),
-                    optionalOf(getJson('/student/ws/semester/get/' + semesterId))
+                    optionalOf(getJson('/student/ws/semester/get/' + semesterId)),
+                    layoutPromise
                 ]).then(function (results) {
                     var datum = results[0] && results[0].result;
                     if (!datum || !datum.lessonList || !datum.scheduleList) {
                         throw new Error('教务系统返回的课表数据不完整，可能没有登录或会话已过期，请重新登录后再试。');
                     }
+                    var layoutJson = results[2];
                     return JSON.stringify({
                         term: {
                             id: picked.id,
@@ -281,7 +312,8 @@
                         semesters: semesters,
                         semesterMeta: sanitizeMeta(results[1]),
                         lessonList: sanitizeLessons(datum.lessonList),
-                        scheduleList: sanitizeSchedules(datum.scheduleList)
+                        scheduleList: sanitizeSchedules(datum.scheduleList),
+                        courseUnitList: sanitizeUnits(layoutJson && layoutJson.result ? layoutJson.result.courseUnitList : null)
                     });
                 });
             });

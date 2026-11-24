@@ -3,16 +3,17 @@
   "key": "nefu",
   "name": "东北林业大学",
   "initial": "D",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "上游 Chr0n0stasis（MIT）；移植 0x7E7-2023",
   "homepage": "https://github.com/XingHeYuZhuan/shiguang_warehouse",
-  "loginUrl": "https://jwxt.nefu.edu.cn/jsxsd/",
-  "scheduleUrlHint": "https://jwxt.nefu.edu.cn/jsxsd/xskb/xskb_list.do",
+  "loginUrl": "https://jwxt-443.webvpn.nefu.edu.cn/",
+  "scheduleUrlHint": "https://jwxt-443.webvpn.nefu.edu.cn/jsxsd/xskb/xskb_list.do",
   "minAppVersionCode": 11,
   "extract": "extract.js",
   "parse": "parse.js",
   "allowHosts": [
-    "jwxt.nefu.edu.cn"
+    "jwxt.nefu.edu.cn",
+    "jwxt-443.webvpn.nefu.edu.cn"
   ],
   "fixtures": [
     {

@@ -1,0 +1,31 @@
+{
+  "term": { "name": "2026-2027学年第一学期", "selection": "current", "startDate": "2026-09-07", "totalWeeks": "20" },
+  "today": "2026-11-03",
+  "courseRows": [ { "KBID": "O1", "KCM": "高等数学", "SKJS": "张三", "JASMC": "A101", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "1111111111111111" } ],
+  "experimentRows": [],
+  "changeRows": [
+    { "KBID": "X1", "KCM": "补课1", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X2", "KCM": "补课2", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X3", "KCM": "补课3", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X4", "KCM": "补课4", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X5", "KCM": "补课5", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X6", "KCM": "补课6", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X7", "KCM": "补课7", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X8", "KCM": "补课8", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X9", "KCM": "补课9", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X10", "KCM": "补课10", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X11", "KCM": "补课11", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X12", "KCM": "补课12", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X13", "KCM": "补课13", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X14", "KCM": "补课14", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X15", "KCM": "补课15", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X16", "KCM": "补课16", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X17", "KCM": "补课17", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X18", "KCM": "补课18", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X19", "KCM": "补课19", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X20", "KCM": "补课20", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X21", "KCM": "补课21", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" },
+    { "KBID": "X22", "KCM": "补课22", "YSKJS": "", "SKZC": "1111", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" }
+  ],
+  "periodRows": null
+}

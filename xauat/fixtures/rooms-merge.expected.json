@@ -1,0 +1,32 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "有 1 门课同一周同一时间排了多间教室，教务没标明你在哪间，已把教室并排写出（例如「高等数学」），请在这门课的「编辑课程」里按实际情况修改。"
+  ],
+  "terms": [
+    {
+      "name": "2026-2027学年第一学期",
+      "firstDay": "2026-09-07",
+      "totalWeeks": 18,
+      "periodTimes": [
+        { "periodIndex": 1, "start": "08:00", "end": "08:45" },
+        { "periodIndex": 2, "start": "08:55", "end": "09:40" },
+        { "periodIndex": 3, "start": "10:00", "end": "10:45" },
+        { "periodIndex": 4, "start": "10:55", "end": "11:40" }
+      ],
+      "courses": [
+        {
+          "name": "高等数学",
+          "teacher": "张三",
+          "note": null,
+          "blocks": [
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 1, "weekType": "ALL", "location": "A101/A102" },
+            { "dayOfWeek": 1, "startPeriod": 1, "endPeriod": 2, "startWeek": 2, "endWeek": 2, "weekType": "ALL", "location": "A101" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 cwnu/extract.js 实际交出去的样子编造，课程与教师全部虚构。本例覆盖：学期页没给开学日与结束日（按 data.today 推算，这是夹具专用字段，extract 不传）、周日起算的每周起始日、页面没有标出当前学期而是取列表里的第一个（这里用 selected 那一项）、学期列表里还有别的学期（提醒只导当前）、教师缺失。",
+  "today": "2026-11-24",
+  "term": {
+    "id": "1004",
+    "label": "2026-2027学年第一学期",
+    "pickedBy": "selected"
+  },
+  "semesters": [
+    { "id": "1004", "label": "2026-2027学年第一学期", "selected": true },
+    { "id": "1000", "label": "2025-2026学年第二学期", "selected": false }
+  ],
+  "semesterMeta": {
+    "id": "1004",
+    "startDate": null,
+    "endDate": null,
+    "weekStartOnSunday": true
+  },
+  "weekIndices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+  "lessonList": [
+    { "id": 401, "courseName": "高等代数(1)", "teachers": ["陈平"], "flag": null },
+    { "id": 402, "courseName": "数学分析(2)", "teachers": [], "flag": null }
+  ],
+  "scheduleList": [
+    { "lessonId": 401, "weekday": 1, "weekIndex": 1, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 2, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 3, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 4, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 5, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 6, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 7, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 8, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 9, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 10, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 11, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 12, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 13, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 14, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 15, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 16, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 17, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 401, "weekday": 1, "weekIndex": 18, "startTime": "08:00", "endTime": "09:30", "personName": null, "roomName": "教3-305" },
+    { "lessonId": 402, "weekday": 4, "weekIndex": 1, "startTime": "14:30", "endTime": "15:10", "personName": null, "roomName": "教3-210" },
+    { "lessonId": 402, "weekday": 4, "weekIndex": 2, "startTime": "14:30", "endTime": "15:10", "personName": null, "roomName": "教3-210" },
+    { "lessonId": 402, "weekday": 4, "weekIndex": 3, "startTime": "14:30", "endTime": "15:10", "personName": null, "roomName": "教3-210" },
+    { "lessonId": 402, "weekday": 4, "weekIndex": 4, "startTime": "14:30", "endTime": "15:10", "personName": null, "roomName": "教3-210" }
+  ]
+}

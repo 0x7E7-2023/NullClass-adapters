@@ -1,0 +1,258 @@
+{
+  "_note": "合成 fixture（不是真实抓取）：形状照 cwnu/extract.js 实际交出去的样子编造，课程与教师全部虚构。本例覆盖：学期从夏令跨到冬令（10 月 1 日切换）、校历 19 周但课表排到第 20 周、教室缺失。",
+  "term": {
+    "id": "1003",
+    "label": "2026-2027学年第一学期",
+    "pickedBy": "url"
+  },
+  "semesters": [
+    {
+      "id": "1003",
+      "label": "2026-2027学年第一学期",
+      "selected": true
+    }
+  ],
+  "semesterMeta": {
+    "id": "1003",
+    "startDate": "2026-09-07",
+    "endDate": "2027-01-17",
+    "weekStartOnSunday": false
+  },
+  "weekIndices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "lessonList": [
+    {
+      "id": 301,
+      "courseName": "线性代数(1)",
+      "teachers": [
+        "周明"
+      ],
+      "flag": null
+    },
+    {
+      "id": 302,
+      "courseName": "大学物理(2)",
+      "teachers": [],
+      "flag": null
+    }
+  ],
+  "scheduleList": [
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 1,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 2,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 3,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 4,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 5,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 6,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 7,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 8,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 9,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 10,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 11,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 12,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 13,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 14,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 15,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 16,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 17,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 18,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 301,
+      "weekday": 3,
+      "weekIndex": 19,
+      "startTime": "17:30",
+      "endTime": "18:10",
+      "personName": null,
+      "roomName": "主楼A101"
+    },
+    {
+      "lessonId": 302,
+      "weekday": 1,
+      "weekIndex": 18,
+      "startTime": "19:30",
+      "endTime": "20:10",
+      "personName": "孙博",
+      "roomName": null
+    },
+    {
+      "lessonId": 302,
+      "weekday": 1,
+      "weekIndex": 19,
+      "startTime": "19:30",
+      "endTime": "20:10",
+      "personName": "孙博",
+      "roomName": null
+    },
+    {
+      "lessonId": 302,
+      "weekday": 1,
+      "weekIndex": 20,
+      "startTime": "19:30",
+      "endTime": "20:10",
+      "personName": "孙博",
+      "roomName": null
+    }
+  ]
+}

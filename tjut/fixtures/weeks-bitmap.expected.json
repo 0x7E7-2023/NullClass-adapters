@@ -1,0 +1,32 @@
+{
+  "specVersion": 1,
+  "kind": "schedule",
+  "ocrAssisted": false,
+  "warnings": [
+    "已导入教务标记的当前学期（2026-2027学年第一学期）；要导入别的学期，目前无法选择，请核对学年学期",
+    "课表里有第 30 周的课，超过原定的 20 周，学期总周数已按 30 周导入，请在学期管理里核对",
+    "已按教务给出的节次时间导入（共 4 节），学校调整后请在学期管理里核对",
+    "有 2 个周次超过第 30 周，超出的部分没有导入"
+  ],
+  "terms": [{
+    "name": "2026-2027学年第一学期",
+    "firstDay": "2026-09-07",
+    "totalWeeks": 30,
+    "periodTimes": [
+      { "periodIndex": 1, "start": "08:10", "end": "08:55" },
+      { "periodIndex": 2, "start": "09:05", "end": "09:50" },
+      { "periodIndex": 3, "start": "10:10", "end": "10:55" },
+      { "periodIndex": 4, "start": "11:05", "end": "11:50" }
+    ],
+    "courses": [
+      { "name": "位串课甲", "teacher": "钱七", "note": null, "blocks": [
+        { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 1, "endWeek": 3, "weekType": "ALL", "location": "B201" },
+        { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 6, "endWeek": 7, "weekType": "ALL", "location": "B201" },
+        { "dayOfWeek": 2, "startPeriod": 1, "endPeriod": 2, "startWeek": 9, "endWeek": 13, "weekType": "ODD", "location": "B201" }
+      ] },
+      { "name": "周次超长课", "teacher": "赵六", "note": null, "blocks": [
+        { "dayOfWeek": 5, "startPeriod": 1, "endPeriod": 1, "startWeek": 1, "endWeek": 30, "weekType": "ALL", "location": "A301" }
+      ] }
+    ]
+  }]
+}

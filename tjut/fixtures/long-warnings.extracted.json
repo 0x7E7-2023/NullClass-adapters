@@ -1,0 +1,20 @@
+{
+  "term": { "name": "2026-2027学年第一学期", "selection": "current", "startDate": "2026-09-07", "totalWeeks": "20" },
+  "today": "2026-11-03",
+  "courseRows": [
+    { "KBID": "G1", "KCM": "甲乙丙丁戊己庚辛壬癸子丑寅卯辰巳午未申酉戌亥一二三", "SKJS": "", "JSM": "", "JASMC": "", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "SKZC": "1111111111111111" },
+    { "KBID": "G2", "KCM": "一二三四五六七八九十壹贰叁肆伍陆柒捌玖拾甲乙丙丁", "SKJS": "", "JSM": "", "JASMC": "", "SKXQ": 2, "KSJC": 3, "JSJC": 4, "SKZC": "1111111111111111" },
+    { "KBID": "G3", "KCM": "春夏秋冬东南西北上下左右前后内外中心远近高低大小", "SKJS": "", "JSM": "", "JASMC": "", "SKXQ": 3, "KSJC": 5, "JSJC": 6, "SKZC": "1111111111111111" }
+  ],
+  "experimentRows": [],
+  "changeRows": [
+    { "KBID": "G9", "KCM": "甲乙丙丁戊己庚辛壬癸子丑寅卯辰巳午未申酉戌亥一二三", "YSKJS": "", "SKZC": "1000", "SKXQ": 1, "KSJC": 1, "JSJC": 2, "TKLXDM": "02", "XSKZC": "", "XSKXQ": "", "XKSJC": "", "XJSJC": "", "XSKJS": "", "JASMC": "", "XJASMC": "" }
+  ],
+  "periodRows": [
+    { "DM": "1", "KSSJ": "08:00", "JSSJ": "08:45" },
+    { "DM": "2", "KSSJ": "08:55", "JSSJ": "09:40" },
+    { "DM": "3", "KSSJ": "10:10", "JSSJ": "10:55" },
+    { "DM": "4", "KSSJ": "11:05", "JSSJ": "11:50" },
+    { "DM": "5", "KSSJ": "14:00", "JSSJ": "14:45" }
+  ]
+}
